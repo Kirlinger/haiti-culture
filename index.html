@@ -156,33 +156,605 @@
     }
 
     .btn-primary{
-      background:#ffd166;...
+      background:#ffd166;
+      color:#111827;
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-3px);
+      background:#ffc244;
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,0.14);
+      color:white;
+      border:1px solid rgba(255,255,255,0.2);
+    }
+
+    .btn-secondary:hover{
+      background:rgba(255,255,255,0.22);
+    }
+
+    section{
+      padding:90px 0;
+    }
+
+    .soft-bg{
+      background:linear-gradient(to right,#edf2ff,#fff3f5);
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:42px;
+      color:#00209f;
+      margin-bottom:14px;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      max-width:900px;
+      margin:0 auto 40px;
+      color:#475569;
+      font-size:18px;
+    }
+
+    .timeline{
+      display:grid;
+      gap:18px;
+      max-width:980px;
+      margin:auto;
+    }
+
+    .timeline-item{
+      background:white;
+      border-left:7px solid #d21034;
+      border-radius:16px;
+      padding:22px;
+      box-shadow:0 10px 24px rgba(0,0,0,0.06);
+    }
+
+    .timeline-item strong{
+      color:#00209f;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+    }
+
+    .card{
+      background:white;
+      padding:26px;
+      border-radius:20px;
+      box-shadow:0 12px 28px rgba(15,23,42,0.08);
+      border-top:5px solid #d21034;
+      transition:0.28s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card h3{
+      color:#d21034;
+      margin-bottom:12px;
+      font-size:24px;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+    }
+
+    .panel{
+      background:white;
+      border-radius:22px;
+      padding:28px;
+      box-shadow:0 12px 28px rgba(15,23,42,0.08);
+    }
+
+    .panel h3{
+      color:#00209f;
+      margin-bottom:12px;
+      font-size:26px;
+    }
+
+    .list{
+      list-style:none;
+      padding-left:0;
+    }
+
+    .list li{
+      background:#f1f5f9;
+      margin-bottom:10px;
+      padding:13px 14px;
+      border-radius:12px;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:22px;
+      margin-top:34px;
+    }
+
+    .stat{
+      background:white;
+      text-align:center;
+      padding:28px 20px;
+      border-radius:18px;
+      box-shadow:0 10px 22px rgba(0,0,0,0.06);
+    }
+
+    .stat h3{
+      font-size:38px;
+      color:#d21034;
+      margin-bottom:8px;
+    }
+
+    .quote{
+      background:linear-gradient(135deg,#00209f,#d21034);
+      color:white;
+      text-align:center;
+      padding:95px 20px;
+    }
+
+    .quote p{
+      max-width:920px;
+      margin:auto;
+      font-size:30px;
+      font-style:italic;
+      line-height:1.6;
+    }
+
+    .banner{
+      background:#111827;
+      color:white;
+      text-align:center;
+      padding:16px 20px;
+      font-weight:700;
+      letter-spacing:0.3px;
+    }
+
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:42px 20px;
+    }
+
+    footer p{
+      margin:8px 0;
+    }
+
+    .small{
+      font-size:14px;
+      color:#cbd5e1;
+    }
+
+    @media (max-width:900px){
+      .two-col{
+        grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      .section-title{
+        font-size:34px;
+      }
+    }
+
+    @media (max-width:640px){
+      nav{
+        gap:6px;
+      }
+
+      nav a{
+        font-size:13px;
+        padding:8px 10px;
+      }
+
+      .flag-wrap{
+        width:170px;
+      }
+
+      .hero h1{
+        font-size:34px;
+      }
     }
   </style>
 </head>
-<body>
+<body oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
+
   <header>
-    <div class="container">
-      <div class="nav">
-        <div class="logo">Haïti Culture</div>
-        <nav>
-          <a href="index.html">Accueil</a>
-          <a href="histoire.html">Histoire</a>
-          <a href="culture.html">Culture</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
+    <div class="container nav">
+      <div class="logo">🇭🇹 HAÏTI</div>
+      <nav>
+        <a href="#home">Accueil</a>
+        <a href="#history">Histoire</a>
+        <a href="#identity">Identité</a>
+        <a href="#vodou">Vodou</a>
+        <a href="#cuisine">Cuisine</a>
+        <a href="#society">Société</a>
+        <a href="#future">Avenir</a>
+      </nav>
     </div>
   </header>
-  <div class="hero">
+
+  <section class="hero" id="home">
     <div class="hero-content">
-      <h1>Bienvenue sur le site de la culture haïtienne</h1>
-      <p>Découvrez notre histoire, notre culture et notre héritage.</p>
+      <div class="badge">Première République noire indépendante </div>
+
+      <div class="flag-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Haiti.svg" alt="Drapeau d'Haïti">
+      </div>
+
+      <h1>Haïti, terre de mémoire, de culture et de grandeur</h1>
+      <p>
+        Haïti est bien plus qu’un pays. C’est une histoire de liberté, une conscience historique,
+        une force culturelle, une spiritualité profonde, un peuple résistant et une promesse toujours vivante.
+      </p>
+
       <div class="hero-buttons">
-        <button class="btn btn-primary">Explorer</button>
-        <button class="btn">En savoir plus</button>
+        <a href="#history" class="btn btn-primary">Découvrir Haïti</a>
+        <a href="#future" class="btn btn-secondary">Voir l’avenir</a>
       </div>
     </div>
+  </section>
+
+  <section id="history" class="soft-bg">
+    <div class="container">
+      <h2 class="section-title">Histoire d’Haïti</h2>
+      <p class="section-subtitle">
+        L’histoire d’Haïti est l’une des plus puissantes de la modernité. Elle raconte la colonisation,
+        la violence de l’esclavage, l’éveil révolutionnaire, l’indépendance et la naissance d’une nation
+        qui a changé le monde.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Avant la colonisation :</strong> L’île était habitée par les Taïnos, peuple autochtone des Caraïbes, avec sa propre organisation, sa spiritualité et son rapport à la terre.
+        </div>
+        <div class="timeline-item">
+          <strong>1492 :</strong> L’arrivée de Christophe Colomb marque le début du choc colonial, de l’exploitation et de la destruction progressive des sociétés autochtones.
+        </div>
+        <div class="timeline-item">
+          <strong>1697 :</strong> La partie ouest de l’île devient la colonie française de Saint-Domingue, qui deviendra l’une des colonies les plus riches du monde grâce au travail forcé des esclaves africains.
+        </div>
+        <div class="timeline-item">
+          <strong>XVIIIe siècle :</strong> Saint-Domingue produit sucre, café, indigo et coton. Cette richesse repose sur une cruauté extrême et une structure coloniale profondément violente.
+        </div>
+        <div class="timeline-item">
+          <strong>1791 :</strong> Début de la Révolution haïtienne, l’un des plus grands soulèvements de l’histoire humaine, porté par des esclaves refusant de vivre sans dignité.
+        </div>
+        <div class="timeline-item">
+          <strong>Toussaint Louverture :</strong> Il devient l’une des grandes figures politiques et militaires de cette révolution, symbole d’intelligence stratégique et de leadership noir.
+        </div>
+        <div class="timeline-item">
+          <strong>1804 :</strong> Jean-Jacques Dessalines proclame l’indépendance d’Haïti. Le pays devient la première République noire indépendante du monde.
+        </div>
+        <div class="timeline-item">
+          <strong>Impact mondial :</strong> L’indépendance d’Haïti bouleverse l’ordre colonial mondial. Elle inspire d’autres luttes, mais effraie aussi les puissances esclavagistes.
+        </div>
+        <div class="timeline-item">
+          <strong>Après l’indépendance :</strong> Haïti subit isolement, dettes imposées, pressions internationales, divisions internes et instabilité, malgré la grandeur de sa naissance historique.
+        </div>
+        <div class="timeline-item">
+          <strong>Haïti aujourd’hui :</strong> Malgré les crises, Haïti reste une mémoire debout, une nation qui continue de lutter, créer, transmettre et espérer.
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <h3>1804</h3>
+          <p>Année de l’indépendance</p>
+        </div>
+        <div class="stat">
+          <h3>1ère</h3>
+          <p>République noire indépendante</p>
+        </div>
+        <div class="stat">
+          <h3>∞</h3>
+          <p>Force historique et culturelle</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="identity">
+    <div class="container">
+      <h2 class="section-title">Culture et identité haïtiennes</h2>
+      <p class="section-subtitle">
+        L’identité haïtienne ne se résume pas à une seule dimension. Elle vit dans la langue,
+        les rites, la musique, la littérature, la foi, la mémoire familiale, l’humour, la douleur,
+        la dignité et la capacité à se relever.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Langue</h3>
+          <p>
+            Le créole haïtien est la langue du cœur populaire, de la proximité, de la mémoire et de la transmission.
+            Le français garde aussi une grande place dans la littérature, l’éducation, l’administration et les discours formels.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Musique</h3>
+          <p>
+            Haïti respire par sa musique : kompa, rara, mizik rasin, twoubadou, chants religieux, rap kreyòl et expressions régionales.
+            La musique haïtienne n’est pas seulement divertissement : elle est identité, mouvement et témoignage.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Art</h3>
+          <p>
+            La peinture haïtienne est célèbre pour ses couleurs, ses figures symboliques, sa force expressive et sa capacité à raconter
+            la vie quotidienne, le sacré, l’histoire et l’imaginaire du peuple.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Résilience</h3>
+          <p>
+            La résilience haïtienne est un fait culturel en soi. Elle se voit dans la créativité populaire, dans l’endurance,
+            dans la famille, dans l’esprit communautaire et dans l’obstination à continuer malgré les épreuves.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Littérature et pensée</h3>
+          <p>
+            Haïti a produit une tradition intellectuelle majeure, avec des penseurs, des écrivains, des poètes et des historiens
+            qui ont réfléchi sur la liberté, l’identité noire, la nation, la langue et la justice.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Patrimoine symbolique</h3>
+          <p>
+            Le drapeau, la date du 1er janvier, la soupe joumou, les héros de l’indépendance, la mémoire des ancêtres
+            et l’idée de liberté font partie du cœur symbolique de la nation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="vodou" class="soft-bg">
+    <div class="container">
+      <h2 class="section-title">Le Vodou haïtien</h2>
+      <p class="section-subtitle">
+        Le Vodou est une dimension centrale de la mémoire spirituelle et culturelle d’Haïti.
+        Il ne doit pas être réduit à des caricatures. Il s’agit d’un univers de symboles, de rites,
+        de chants, de communauté, d’ancêtres et de rapport au sacré.
+      </p>
+
+      <div class="two-col">
+        <div class="panel">
+          <h3>Une tradition spirituelle profonde</h3>
+          <p>
+            Le Vodou haïtien puise ses racines dans les traditions africaines, transformées par l’histoire coloniale,
+            le catholicisme populaire et l’expérience haïtienne. Il relie le visible et l’invisible, les vivants et les ancêtres,
+            le corps, la parole, le chant et la communauté.
+          </p>
+          <p style="margin-top:12px;">
+            Dans la mémoire collective, le Vodou a aussi joué un rôle important dans l’unité, dans la résistance symbolique,
+            et dans la manière de donner sens à la souffrance, à la lutte et à l’espérance.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3>Au-delà des préjugés</h3>
+          <p>
+            Beaucoup d’images fausses ont circulé sur le Vodou. Pourtant, il s’agit d’un système culturel et spirituel complexe,
+            porteur de sens, d’organisation symbolique et de profondeur philosophique.
+          </p>
+          <p style="margin-top:12px;">
+            Parler d’Haïti sans parler du Vodou, c’est ignorer une part essentielle de sa mémoire culturelle et de sa manière
+            d’habiter le monde.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cuisine">
+    <div class="container">
+      <h2 class="section-title">Cuisine haïtienne</h2>
+      <p class="section-subtitle">
+        La cuisine haïtienne est riche, parfumée, vivante et fortement liée à la famille, à la fête, à la rue,
+        aux régions et à la mémoire du pays.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Griot</h3>
+          <p>
+            Le griot est l’un des plats les plus emblématiques d’Haïti. Souvent servi avec bannann peze et pikliz,
+            il incarne la convivialité, le goût et la puissance culinaire populaire.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Soup Joumou</h3>
+          <p>
+            La soupe joumou n’est pas seulement un plat : elle est un symbole national. Consommée le 1er janvier,
+            elle rappelle la liberté conquise et la dignité du peuple haïtien.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Diri kole ak pwa</h3>
+          <p>
+            Plat fondamental du quotidien, il unit simplicité, équilibre et attachement au goût local. Il représente
+            une cuisine de tous les jours, mais profondément enracinée.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Fritay</h3>
+          <p>
+            Le fritay est tout un univers : griot, akra, marinad, boudin, patat, bannann, pikliz.
+            C’est une expression populaire, festive et très présente dans la rue et les rassemblements.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Régions et diversité</h3>
+          <p>
+            Chaque région du pays porte ses variantes, ses ingrédients, ses habitudes et ses techniques. La cuisine haïtienne
+            est aussi une géographie du goût.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Valeur culturelle</h3>
+          <p>
+            La cuisine transmet la famille, l’histoire, la fête, l’accueil et la continuité. Dans beaucoup de maisons,
+            cuisiner reste une manière de faire vivre la mémoire.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="society" class="soft-bg">
+    <div class="container">
+      <h2 class="section-title">Société haïtienne : forces et défis</h2>
+      <p class="section-subtitle">
+        Comprendre Haïti exige de voir ensemble sa grandeur culturelle et les difficultés réelles auxquelles le pays fait face.
+      </p>
+
+      <div class="two-col">
+        <div class="panel">
+          <h3>Forces d’Haïti</h3>
+          <ul class="list">
+            <li>Une histoire unique au monde</li>
+            <li>Une culture profondément vivante</li>
+            <li>Une jeunesse riche en potentiel</li>
+            <li>Une diaspora influente et engagée</li>
+            <li>Une créativité populaire remarquable</li>
+            <li>Une mémoire historique universelle</li>
+            <li>Une capacité de survie et d’adaptation exceptionnelle</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Défis d’Haïti</h3>
+          <ul class="list">
+            <li>Instabilité politique et institutionnelle</li>
+            <li>Inégalités sociales profondes</li>
+            <li>Accès limité à certains services essentiels</li>
+            <li>Fragilité économique</li>
+            <li>Pressions sécuritaires et sociales</li>
+            <li>Besoin de reconstruction durable</li>
+            <li>Valorisation insuffisante du patrimoine national</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="future">
+    <div class="container">
+      <h2 class="section-title">L’avenir d’Haïti</h2>
+      <p class="section-subtitle">
+        L’avenir d’Haïti ne peut être pensé sans l’éducation, la stabilité, la culture, la jeunesse,
+        la diaspora, l’investissement humain et la confiance dans les capacités du peuple haïtien.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Éducation</h3>
+          <p>
+            Former une génération consciente, technique, solide et visionnaire est l’une des bases majeures
+            d’un renouveau haïtien durable.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Leadership</h3>
+          <p>
+            Le pays a besoin de dirigeants responsables, enracinés dans l’intérêt national, capables d’unir vision,
+            éthique et action.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Culture comme force stratégique</h3>
+          <p>
+            La culture haïtienne n’est pas un décor. Elle peut être une force de reconstruction symbolique,
+            économique et identitaire.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Diaspora</h3>
+          <p>
+            La diaspora haïtienne représente une immense réserve de compétences, d’influence, de solidarité
+            et de rayonnement mondial.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Innovation</h3>
+          <p>
+            Technologie, entrepreneuriat, modernisation et nouveaux savoirs peuvent contribuer à une nouvelle page
+            de l’histoire nationale.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Fierté nationale</h3>
+          <p>
+            Réapprendre à raconter Haïti par sa vérité, sa grandeur, sa mémoire et son génie est aussi une tâche d’avenir.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <p>
+      “Haïti n’est pas un simple pays à observer. C’est une mémoire du monde, une leçon de liberté,
+      une blessure debout et une promesse encore vivante.”
+    </p>
+  </section>
+
+  <div class="banner">
+  Haiti Culture
   </div>
+
+  <footer>
+    <p><strong>Site culturel dédié à Haïti</strong></p>
+    <p>Designed &amp; Developed by <strong>Kirlinger357</strong></p>
+    <p class="small">Copyright © 2026 Kirlinger357. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("copy", function(e){ e.preventDefault(); });
+    document.addEventListener("cut", function(e){ e.preventDefault(); });
+
+    document.addEventListener("keydown", function(e){
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && ["I","J","C"].includes(e.key.toUpperCase())) ||
+        (e.ctrlKey && ["U","S","C","X"].includes(e.key.toUpperCase()))
+      ) {
+        e.preventDefault();
+      }
+    });
+  </script>
+
 </body>
 </html>
