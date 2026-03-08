@@ -181,6 +181,15 @@
     // Culture
     { title: 'Musique Haïtienne', url: 'about.html', section: 'Culture', keywords: 'kompa rara rasin musique haïti tambours folklore' },
     { title: 'Art Haïtien', url: 'about.html', section: 'Culture', keywords: 'art haïtien naïf peinture sculpture vèvè drapo vodou' },
+    // Nouvelles pages
+    { title: 'Constitution d\'Haïti', url: 'constitution.html', section: 'Histoire', keywords: 'constitution haïti loi droits libertés état démocratie 1987 toussaint dessalines' },
+    { title: 'Chronologie d\'Haïti', url: 'timeline.html', section: 'Histoire', keywords: 'chronologie haïti histoire dates événements taïno 1804 indépendance révolution' },
+    { title: 'Héros Nationaux', url: 'heroes.html', section: 'Histoire', keywords: 'héros révolution toussaint louverture dessalines christophe pétion sanité belair capois' },
+    { title: 'Jours Fériés en Haïti', url: 'holidays.html', section: 'Culture', keywords: 'jours fériés fêtes haïti indépendance carnaval drapeau vertières noël toussaint' },
+    { title: 'Culture Haïtienne', url: 'culture.html', section: 'Culture', keywords: 'culture haïti art musique danse littérature carnaval kompa rara kreyòl' },
+    { title: 'Gastronomie Haïtienne', url: 'gastronomy.html', section: 'Culture', keywords: 'gastronomie cuisine haïti griyo diri pikliz soup joumou bannann akra legim' },
+    { title: 'Archives Historiques', url: 'archives.html', section: 'Portail', keywords: 'archives documents constitution 1804 indépendance déclaration boisrond discours' },
+    { title: 'Encyclopédie d\'Haïti', url: 'encyclopedia.html', section: 'Portail', keywords: 'encyclopédie haïti artibonite bois caïman carnaval dessalines vodou citadelle' },
   ];
 
   function initSearch() {
@@ -276,6 +285,33 @@
     });
   }
 
+  /* ── Dropdown menus ─────────────────────────────────── */
+  function initDropdowns() {
+    document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
+      var btn = dropdown.querySelector('.nav-dropdown__btn');
+      if (!btn) return;
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var isOpen = dropdown.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(isOpen));
+        document.querySelectorAll('.nav-dropdown').forEach(function(other) {
+          if (other !== dropdown) {
+            other.classList.remove('open');
+            var otherBtn = other.querySelector('.nav-dropdown__btn');
+            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    });
+    document.addEventListener('click', function() {
+      document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
+        dropdown.classList.remove('open');
+        var btn = dropdown.querySelector('.nav-dropdown__btn');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
   /* ── Init ───────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', function () {
     initMobileNav();
@@ -286,5 +322,6 @@
     animateCounters();
     initSearch();
     initSmoothScroll();
+    initDropdowns();
   });
 })();

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🇭🇹 Haïti 🇭🇹 — Découvrir la Perle des Antilles</title>
+  <title>🇭🇹 Haïti 🇭🇹, Découvrir la Perle des Antilles</title>
   <meta name="description" content="Explorez la riche histoire d'Haïti, sa culture vibrante, ses lieux époustouflants et son peuple résilient. Votre portail vers la Perle des Antilles." />
   <meta name="author" content="Kirlinger357" />
   <link rel="stylesheet" href="css/style.css" />
@@ -28,10 +28,33 @@
         <nav class="navbar__nav" aria-label="Navigation principale">
           <a href="index.html">Accueil</a>
           <a href="about.html">À propos</a>
-          <a href="history.html">Histoire</a>
-          <a href="vodou.html">Vodou</a>
-          <a href="lwa.html">Les Lwa</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="constitution.html">Constitution</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
           <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+            </div>
+          </div>
           <a href="contact.html">Contact</a>
         </nav>
         <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
@@ -113,7 +136,7 @@
       <h2 class="section-title text-center">Tout ce que vous devez savoir</h2>
       <p class="section-subtitle text-center">
         De l'antique civilisation taïno à la première République noire, des vibrants
-        festivals Rara aux splendides plages caribéennes — Haïti a tout.
+        festivals Rara aux splendides plages caribéennes, Haïti a tout.
       </p>
 
       <div class="cards-grid">
@@ -143,7 +166,7 @@
             <h3 class="card__title">Histoire d'Haïti</h3>
             <p class="card__desc">
               Suivez le voyage épique du peuple taïno à la colonisation française,
-              à travers la lutte révolutionnaire pour l'indépendance en 1804 —
+              à travers la lutte révolutionnaire pour l'indépendance en 1804,
               un événement qui a changé le monde pour toujours.
             </p>
             <div class="card__footer">
@@ -251,7 +274,7 @@
           <div class="feature-card__icon">🍽️</div>
           <h3 class="feature-card__title">Cuisine Délicieuse</h3>
           <p class="feature-card__desc">
-            Griyo, diri ak djon djon, pikliz — la cuisine haïtienne est audacieuse,
+            Griyo, diri ak djon djon, pikliz, la cuisine haïtienne est audacieuse,
             savoureuse et profondément enracinée dans les traditions africaines et caribéennes.
           </p>
         </div>
@@ -273,10 +296,10 @@
   <div class="quote-block">
     <div class="container">
       <p class="quote-text">
-        « Liberté, Égalité, Fraternité » — les idéaux de la Révolution française ont été
+        « Liberté, Égalité, Fraternité », les idéaux de la Révolution française ont été
         rendus réalité par des hommes et des femmes haïtiens qui osèrent être libres.
       </p>
-      <p class="quote-author">— La Révolution Haïtienne, 1791–1804</p>
+      <p class="quote-author">, La Révolution Haïtienne, 1791–1804</p>
     </div>
   </div>
 
@@ -340,7 +363,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Kirlinger357 — 🇭🇹 Haïti 🇭🇹. Tous droits réservés.</span>
+        <span>© 2026 Kirlinger357, 🇭🇹 Haïti 🇭🇹. Tous droits réservés.</span>
         <span>Fait avec ❤️ pour Haïti</span>
       </div>
     </div>

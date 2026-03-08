@@ -1142,6 +1142,63 @@ ul {
   opacity: 0.6;
 }
 
+/* ── Dropdown Navigation ────────────────────────────── */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown__btn {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.88);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 9px 16px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  font-family: var(--font-sans);
+}
+
+.nav-dropdown__btn:hover,
+.nav-dropdown.open .nav-dropdown__btn {
+  background: rgba(255,255,255,0.15);
+  color: var(--white);
+}
+
+.nav-dropdown__menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  min-width: 220px;
+  padding: 8px 0;
+  z-index: 1001;
+}
+
+.nav-dropdown.open .nav-dropdown__menu {
+  display: block;
+}
+
+.nav-dropdown__menu a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--text) !important;
+  font-size: 14px;
+  font-weight: 600;
+  transition: var(--transition);
+  border-radius: 0;
+}
+
+.nav-dropdown__menu a:hover {
+  background: var(--bg-soft);
+  color: var(--blue) !important;
+}
+
 /* ── Responsive ─────────────────────────────────────── */
 @media (max-width: 1024px) {
   .footer-grid {
