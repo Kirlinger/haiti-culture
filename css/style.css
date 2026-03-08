@@ -308,7 +308,7 @@ ul {
   padding: 80px 24px;
   background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.60)),
-    linear-gradient(135deg, #001a73 0%, var(--blue) 40%, var(--red) 100%);
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Citadelle_Laferri%C3%A8re.jpg/1280px-Citadelle_Laferri%C3%A8re.jpg') center/cover no-repeat;
 }
 
 .hero__content {
@@ -1990,5 +1990,284 @@ ul {
 
   .lwa-profile__icon {
     font-size: 40px;
+  }
+}
+
+/* ── Image display improvements ─────────────────────── */
+.img-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.card__img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.destination-card__img img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.person-card__avatar img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.hero-img-block {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+/* ── Additional mobile improvements ─────────────────── */
+@media (max-width: 768px) {
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .img-block {
+    aspect-ratio: 16/9;
+    min-height: 220px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+    margin-bottom: 36px;
+  }
+
+  .stats-strip {
+    padding: 40px 0;
+  }
+
+  .stat-item__number {
+    font-size: 40px;
+  }
+
+  .cta-section {
+    padding: 56px 0;
+  }
+
+  .quote-block {
+    padding: 48px 0;
+  }
+
+  .destination-card__img {
+    height: 180px;
+  }
+
+  .destination-card__img img {
+    height: 180px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .feature-card {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .page-hero {
+    padding: 48px 0 40px;
+  }
+
+  .page-hero__title {
+    font-size: 28px;
+  }
+
+  .page-hero__desc {
+    font-size: 15px;
+  }
+
+  .hero__flag-emoji {
+    font-size: 80px;
+  }
+
+  .hero__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .lwa-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar__toggle {
+    display: flex;
+  }
+}
+
+/* ── Dark Mode (prefers-color-scheme: dark) ─────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:        #0f172a;
+    --bg-soft:   #1e293b;
+    --text:      #e2e8f0;
+    --text-muted:#94a3b8;
+    --border:    #334155;
+    --white:     #1e293b;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+    --shadow-md: 0 8px 24px rgba(0,0,0,0.4);
+    --shadow-lg: 0 16px 40px rgba(0,0,0,0.5);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  .card {
+    background: #1e293b;
+    border: 1px solid var(--border);
+  }
+
+  .feature-card {
+    background: #1e293b;
+    border: 1px solid var(--border);
+  }
+
+  .destination-card {
+    background: #1e293b;
+    border: 1px solid var(--border);
+  }
+
+  .person-card {
+    background: #1e293b;
+    border: 1px solid var(--border);
+  }
+
+  .nation-card {
+    background: #1e293b;
+    border: 1px solid var(--border);
+  }
+
+  .timeline-card {
+    background: #1e293b;
+    border: 1px solid var(--border);
+    border-left-color: var(--red);
+  }
+
+  .lwa-profile {
+    background: #1e293b;
+    border: 1px solid var(--border);
+  }
+
+  .lwa-preview-card {
+    background: #1e293b;
+    border-color: var(--border);
+  }
+
+  .lwa-nav-item {
+    background: #1e293b;
+    border-color: var(--border);
+  }
+
+  .lwa-index {
+    background: #1e293b;
+    border-color: var(--border);
+  }
+
+  .lwa-index__grid a {
+    background: #0f172a;
+    border-color: var(--border);
+    color: var(--text);
+  }
+
+  .lwa-index__grid a:hover {
+    background: var(--blue);
+    color: #ffffff;
+  }
+
+  .breadcrumb {
+    background: #1e293b;
+    border-color: var(--border);
+  }
+
+  .section--alt {
+    background: #1e293b;
+  }
+
+  .contact-form {
+    background: #1e293b;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: #0f172a;
+    border-color: var(--border);
+    color: var(--text);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    background: #1e293b;
+    border-color: var(--blue);
+  }
+
+  .search-overlay__inner {
+    background: #1e293b;
+  }
+
+  .search-input {
+    color: var(--text);
+    background: transparent;
+  }
+
+  .search-close {
+    background: #0f172a;
+    border-color: var(--border);
+    color: var(--text-muted);
+  }
+
+  .search-result__link:hover {
+    background: #0f172a;
+  }
+
+  .info-banner {
+    background: #1e293b;
+    border-left-color: var(--blue);
+  }
+
+  .nation-card--gede .nation-card__header {
+    background: linear-gradient(135deg, #2d2040, #1a0033);
+  }
+
+  .nation-card--kongo .nation-card__header {
+    background: linear-gradient(135deg, #003355, #006699);
   }
 }
