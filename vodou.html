@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vodou Haïtien — Religion, Origines &amp; Spiritualité | 🇭🇹 Haïti 🇭🇹</title>
+  <meta name="description" content="Découvrez le Vodou haïtien : ses origines africaines, le Bondye créateur, les nations Rada, Petro, Gede, les cérémonies, les vèvè et le rôle des Houngan et Mambo." />
+  <meta name="author" content="Kirlinger357" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
+          <span class="logo-emoji-flag">🇭🇹</span>
+          Haïti 🇭🇹
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <a href="history.html">Histoire</a>
+          <a href="vodou.html" class="active">Vodou</a>
+          <a href="lwa.html">Les Lwa</a>
+          <a href="tourism.html">Tourisme</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">✕</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero page-hero--vodou">
+    <div class="container">
+      <p class="page-hero__label">🕯️ Religion &amp; Spiritualité</p>
+      <h1 class="page-hero__title">Le Vodou Haïtien</h1>
+      <p class="page-hero__desc">
+        Né en Afrique de l'Ouest, forgé dans les souffrances de l'esclavage et transformé en acte
+        de résistance — le Vodou haïtien est une religion vivante, profonde et complexe qui unit
+        le peuple haïtien depuis plus de trois siècles.
+      </p>
+      <div class="page-hero__nav">
+        <a href="#origines" class="btn btn-outline btn-sm">Origines</a>
+        <a href="#bondye" class="btn btn-outline btn-sm">Bondye</a>
+        <a href="#nations" class="btn btn-outline btn-sm">Les Nations</a>
+        <a href="#ceremonies" class="btn btn-outline btn-sm">Cérémonies</a>
+        <a href="#musique" class="btn btn-outline btn-sm">Musique</a>
+        <a href="lwa.html" class="btn btn-primary btn-sm">Les Lwa →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <span>Vodou</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       INTRO
+  ═══════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div class="text-block">
+          <p class="section-label">Comprendre le Vodou</p>
+          <h2>Une Religion Mal Comprise, Profondément Humaine</h2>
+          <p>
+            Le Vodou haïtien (Vòdou en créole haïtien) est une religion afro-caribéenne qui
+            trouve ses racines dans les traditions spirituelles de l'Afrique de l'Ouest —
+            principalement les peuples Fon et Ewe du Dahomey (actuel Bénin), les Yoruba du
+            Nigeria et les peuples Kongo d'Afrique centrale.
+          </p>
+          <p>
+            Souvent caricaturé dans la culture populaire occidentale, le vrai Vodou n'a rien à
+            voir avec les représentations hollywoodiennes. C'est une tradition riche qui honore
+            Bondye (le Grand Dieu créateur), les esprits intermédiaires appelés Lwa, et les
+            ancêtres, à travers la musique, la danse, le rituel et la communauté.
+          </p>
+          <p>
+            En 2003, le Vodou a été officiellement reconnu comme religion nationale par le
+            gouvernement haïtien, au même titre que le catholicisme et le protestantisme.
+          </p>
+          <a href="lwa.html" class="btn btn-blue">Découvrir les Lwa →</a>
+        </div>
+        <div class="img-block card__img--purple" style="font-size:80px;">🕯️</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       ORIGINES AFRICAINES
+  ═══════════════════════════════════════════════ -->
+  <section class="section section--alt" id="origines">
+    <div class="container">
+      <p class="section-label text-center">Racines &amp; Héritage</p>
+      <h2 class="section-title text-center">Les Origines Africaines du Vodou</h2>
+      <p class="section-subtitle text-center">
+        Le Vodou haïtien est le fruit de la rencontre forcée de plusieurs grandes traditions
+        spirituelles d'Afrique sub-saharienne, transportées à travers l'Atlantique par des millions
+        d'Africains réduits en esclavage.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">🌍</div>
+          <h3 class="feature-card__title">La Tradition Fon &amp; Ewe (Dahomey)</h3>
+          <p class="feature-card__desc">
+            Le nom même « Vodou » (ou « Vodu ») vient de la langue Fon et signifie « esprit » ou
+            « divinité ». Les peuples Fon et Ewe du Dahomey (actuel Bénin et Togo) pratiquaient
+            une religion centrée sur les Vodoun — des forces spirituelles cosmiques gouvernant la
+            nature, la société et l'existence humaine. Leurs prêtres, leurs chants, leurs tambours
+            et leurs cérémonies ont formé le cœur du Vodou haïtien. Les divinités Fon comme
+            Legba (gardien des carrefours), Sakpata (maître de la terre et des maladies) et
+            Mawu-Lisa (divinité créatrice) se retrouvent dans le panthéon haïtien.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🌿</div>
+          <h3 class="feature-card__title">La Tradition Yoruba (Nigeria)</h3>
+          <p class="feature-card__desc">
+            Les Yoruba du Nigeria et du Bénin possédaient un panthéon élaboré d'Orishas — des
+            divinités personnifiées liées aux forces de la nature. Des milliers de Yoruba furent
+            déportés à Saint-Domingue, apportant avec eux leurs divinités : Ogun (dieu de la
+            guerre et du fer), Yemoja (déesse de la mer), Shango (dieu du tonnerre) et Oshun
+            (déesse de l'amour). Ces Orishas ont fusionné avec les esprits Fon pour donner
+            naissance aux Lwa de la nation Nago du Vodou haïtien.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🌊</div>
+          <h3 class="feature-card__title">La Tradition Kongo (Afrique Centrale)</h3>
+          <p class="feature-card__desc">
+            Les peuples BaKongo de l'actuelle République Démocratique du Congo, du Congo et de
+            l'Angola ont apporté le concept du « nkisi » — des esprits logés dans des objets
+            sacrés — ainsi qu'une cosmologie fondée sur le cycle vie-mort-renaissance symbolisé
+            par l'eau. Les Kongo ont fortement influencé la nation Kongo du Vodou, notamment
+            les rituels autour des cimetières, des croix et la relation avec les morts. Les Lwa
+            puissants associés à la mort et à la transformation portent souvent des traces
+            de l'héritage Kongo.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">⚡</div>
+          <h3 class="feature-card__title">Saint-Domingue : Le Creuset Colonial</h3>
+          <p class="feature-card__desc">
+            À Saint-Domingue (Haïti coloniale), les Africains de nations différentes furent
+            délibérément mélangés par les colons français pour prévenir la solidarité et la
+            révolte. Paradoxalement, cela poussa ces peuples à créer une nouvelle synthèse
+            spirituelle. Dans les plantations et les marrons (communautés d'esclaves fugitifs),
+            les traditions Fon, Yoruba, Kongo, Ibo et d'autres se fusionnèrent, absorbant aussi
+            des éléments du catholicisme romain imposé par les colons, créant le Vodou tel
+            qu'on le connaît aujourd'hui.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🔥</div>
+          <h3 class="feature-card__title">Bwa Kayiman — L'Étincelle de la Révolution</h3>
+          <p class="feature-card__desc">
+            Le 14 août 1791, dans la forêt de Bois Caïman, une cérémonie Vodou dirigée par le
+            prêtre Boukman Dutty et la prêtresse Cécile Fatiman déclencha la Révolution
+            haïtienne. Selon la tradition, les insurgés firent un pacte avec Ezili Dantor (Erzulie
+            Dantor) et d'autres Lwa, échangeant leur soumission aux esprits contre la liberté.
+            Douze jours plus tard, les révoltes éclatèrent, lançant la seule révolution
+            d'esclaves réussie de l'histoire qui mena à l'indépendance d'Haïti le 1er janvier 1804.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">⛪</div>
+          <h3 class="feature-card__title">Syncrétisme Catholique</h3>
+          <p class="feature-card__desc">
+            Sous l'esclavage, les Africains furent forcés de se convertir au catholicisme.
+            Astucieusement, ils associèrent leurs Lwa aux saints catholiques — Legba fut
+            associé à Saint Pierre, Ogou à Saint Jacques, Erzulie Freda à la Vierge Marie.
+            Ce syncrétisme permit de pratiquer le Vodou en secret sous couvert du catholicisme.
+            Aujourd'hui, de nombreux pratiquants se considèrent à la fois catholiques et
+            adeptes du Vodou, et les deux pratiques coexistent dans la vie quotidienne.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       BONDYE
+  ═══════════════════════════════════════════════ -->
+  <section class="section" id="bondye">
+    <div class="container">
+      <div class="two-col">
+        <div class="img-block card__img--gold" style="font-size:80px;">☀️</div>
+        <div class="text-block">
+          <p class="section-label">Le Créateur</p>
+          <h2>Bondye — Le Grand Dieu</h2>
+          <p>
+            Au sommet de la cosmologie Vodou se trouve <strong>Bondye</strong> (de « Bon Dieu »,
+            le Bon Dieu en français), le créateur suprême et omnipotent de l'univers. Bondye est
+            transcendant, infini et inaccessible directement aux êtres humains — trop grand
+            et trop distant pour s'occuper des affaires quotidiennes des mortels.
+          </p>
+          <p>
+            C'est précisément pourquoi les Lwa (les esprits) existent : ils servent d'intermédiaires
+            entre Bondye et les humains. Chaque Lwa représente un aspect de la création divine —
+            la mer, la mort, l'amour, la guerre, l'agriculture — et peut être contacté et
+            invoqué lors de cérémonies.
+          </p>
+          <p>
+            Cette structure théologique reflète une vision du monde où le divin est à la fois
+            universel (Bondye) et intimement présent dans les forces quotidiennes de la nature et
+            de la vie humaine (les Lwa). Le Vodou enseigne que tout dans l'univers est
+            interconnecté et que les humains peuvent vivre en harmonie avec ces forces
+            spirituelles à travers le rituel, le respect et la réciprocité.
+          </p>
+          <ul>
+            <li><strong>Bondye</strong> : Dieu suprême créateur, transcendant et omnipotent</li>
+            <li><strong>Les Lwa</strong> : Esprits intermédiaires, serviteurs et agents de Bondye</li>
+            <li><strong>Les Morts (Gede)</strong> : Ancêtres vénérés, gardiens entre les mondes</li>
+            <li><strong>Les Marasa</strong> : Les jumeaux sacrés, symboles de dualité divine</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       LES NATIONS
+  ═══════════════════════════════════════════════ -->
+  <section class="section section--alt" id="nations">
+    <div class="container">
+      <p class="section-label text-center">Organisation Spirituelle</p>
+      <h2 class="section-title text-center">Les Nations du Vodou</h2>
+      <p class="section-subtitle text-center">
+        Le Vodou haïtien est organisé en plusieurs « nations » (nasyon), chacune représentant
+        un groupe d'esprits Lwa partageant une origine géographique africaine, une énergie
+        commune et un style de culte particulier.
+      </p>
+
+      <div class="vodou-nations">
+
+        <div class="nation-card nation-card--rada">
+          <div class="nation-card__header">
+            <div class="nation-card__icon">🤍</div>
+            <h3 class="nation-card__title">Nation Rada</h3>
+            <span class="nation-card__badge">Douce &amp; Bienveillante</span>
+          </div>
+          <div class="nation-card__body">
+            <p>
+              La nation Rada est considérée comme la plus ancienne et la plus fondamentale du
+              Vodou haïtien. Son nom vient de la ville d'Allada (Arada) au Dahomey, d'où
+              provenaient de nombreux esclaves. Les Lwa Rada sont généralement doux, patients
+              et bienveillants — ce sont les « froids » (Lwa frèt), associés à l'eau douce,
+              au ciel et aux forces créatrices.
+            </p>
+            <p>
+              Les cérémonies Rada utilisent des tambours assotor et macoute, des drapeaux blancs
+              et bleus, et des offrandes de nourriture pure. La couleur blanche domine.
+            </p>
+            <ul>
+              <li>Papa Legba — gardien des carrefours</li>
+              <li>Damballah — serpent céleste, père de tous les Lwa</li>
+              <li>Ayida Wedo — arc-en-ciel, épouse de Damballah</li>
+              <li>Erzulie Freda — déesse de l'amour et de la beauté</li>
+              <li>Agwe — maître des mers</li>
+              <li>Loko — protecteur des Hounfor et des Houngans</li>
+              <li>Ayizan — patronne des initiés et des prêtresses</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nation-card nation-card--petro">
+          <div class="nation-card__header">
+            <div class="nation-card__icon">🔴</div>
+            <h3 class="nation-card__title">Nation Petro</h3>
+            <span class="nation-card__badge">Puissante &amp; Ardente</span>
+          </div>
+          <div class="nation-card__body">
+            <p>
+              La nation Petro (ou Pétro) est née en Haïti même — elle incarne l'esprit de
+              résistance, de survie et de colère des Africains réduits en esclavage. Le nom
+              vient du prêtre Don Pedro, un esclave hispanique qui aurait fondé ce rite au
+              18ème siècle. Les Lwa Petro sont « chauds » (Lwa cho) — ardents, exigeants et
+              puissants — capables d'une grande protection mais aussi de destruction.
+            </p>
+            <p>
+              Les cérémonies Petro sont plus intenses, utilisent la poudre à canon, le rhum
+              (kleren) craché sur le feu, et des couleurs rouges et noires. Elles sont souvent
+              pratiquées pour la protection, la guérison rapide ou la résolution de crises.
+            </p>
+            <ul>
+              <li>Erzulie Dantor — mère protectrice et guerrière</li>
+              <li>Ogou Feray — dieu de la guerre et du fer</li>
+              <li>Marinette — épouse de Ti Jean Petro</li>
+              <li>Ti Jean Petro — esprit ardent des buissons</li>
+              <li>Simbi Andezo — maître des eaux et de la magie</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nation-card nation-card--gede">
+          <div class="nation-card__header">
+            <div class="nation-card__icon">🖤</div>
+            <h3 class="nation-card__title">Nation Gede</h3>
+            <span class="nation-card__badge">La Mort &amp; La Vie</span>
+          </div>
+          <div class="nation-card__body">
+            <p>
+              La nation Gede représente la frontière entre les vivants et les morts. Les Lwa
+              Gede sont les maîtres des cimetières, des âmes des défunts et de la transition
+              entre la vie et la mort. Paradoxalement, ils sont aussi les gardiens de la vie,
+              de la sexualité et de la fertilité — rappelant que la mort et la naissance sont
+              les deux faces d'un même mystère.
+            </p>
+            <p>
+              Les Gede sont connus pour leur humour vulgaire, leurs blagues grivoises et leur
+              amour de la fête. Lors de la Fête des Morts (début novembre), les Gede prennent
+              possession de leurs fidèles dans les cimetières, portant chapeaux hauts-de-forme,
+              lunettes noires et manteaux sombres.
+            </p>
+            <ul>
+              <li>Baron Samedi — maître de la mort et des cimetières</li>
+              <li>Gran Brigitte — épouse de Baron, gardienne des ossements</li>
+              <li>Maman Brigitte — patronne des cimetières</li>
+              <li>Gede Nibo — premier mort, psychopompe</li>
+              <li>Baron Lacroix — la croix dans les cimetières</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nation-card nation-card--nago">
+          <div class="nation-card__header">
+            <div class="nation-card__icon">⚔️</div>
+            <h3 class="nation-card__title">Nation Nago</h3>
+            <span class="nation-card__badge">Guerrière &amp; Noble</span>
+          </div>
+          <div class="nation-card__body">
+            <p>
+              La nation Nago tire son origine des peuples Yoruba du Nigeria (appelés « Nago »
+              en Haïti). Ces esprits sont fiers, nobles et guerriers. Ils correspondent aux
+              Orishas Yoruba et sont particulièrement vénérés pour leur protection, leur
+              justice et leur puissance guerrière. Ogou est le Lwa le plus important de cette
+              nation, adoré comme protecteur des soldats, des forgerons et des travailleurs.
+            </p>
+            <ul>
+              <li>Ogou Feray — guerrier, protecteur des soldats</li>
+              <li>Ogou Badagris — diplomate et stratège</li>
+              <li>Ogou Saint-Jacques — associé à Saint-Jacques Majeur</li>
+              <li>Ogou Balindjo — guérisseur et sage</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nation-card nation-card--ibo">
+          <div class="nation-card__header">
+            <div class="nation-card__icon">🌾</div>
+            <h3 class="nation-card__title">Nation Ibo</h3>
+            <span class="nation-card__badge">Mystérieuse &amp; Ancienne</span>
+          </div>
+          <div class="nation-card__body">
+            <p>
+              La nation Ibo (ou Igbo) vient des peuples Igbo d'Afrique de l'Ouest (actuel
+              Nigeria oriental). Les Ibo sont parmi les esprits les plus mystérieux et
+              mélancoliques du Vodou. Selon la tradition, les Ibo avaient une telle résistance
+              à l'esclavage que beaucoup se jetaient à la mer plutôt que de vivre enchaînés —
+              leurs esprits habitent donc les eaux profondes. Les Lwa Ibo sont associés à la
+              connaissance secrète, à la mélancolie et à l'introspection.
+            </p>
+            <ul>
+              <li>Ibo Lele — esprit mélancolique des eaux</li>
+              <li>Gran Ibo — ancêtre sage et mystérieux</li>
+              <li>Ibo Rouge — aspect ardent de la nation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nation-card nation-card--kongo">
+          <div class="nation-card__header">
+            <div class="nation-card__icon">🌀</div>
+            <h3 class="nation-card__title">Nation Kongo</h3>
+            <span class="nation-card__badge">Eau &amp; Transformation</span>
+          </div>
+          <div class="nation-card__body">
+            <p>
+              La nation Kongo reflète l'héritage des peuples BaKongo d'Afrique centrale. Les
+              Lwa Kongo sont des esprits des eaux, de la magie et de la transformation. Ils
+              sont associés aux rivières, aux sources et aux forces invisibles de la nature.
+              La cosmologie Kongo est fondée sur le cycle vie-mort visualisé comme une spirale
+              à travers l'eau — les morts traversent le miroir de l'eau pour rejoindre le
+              monde des ancêtres, d'où ils peuvent revenir pour aider les vivants.
+            </p>
+            <ul>
+              <li>Simbi — maître des sources et des eaux douces</li>
+              <li>Simbi Andezo — entre deux eaux, maître de la magie</li>
+              <li>Simbi Makaya — magicien des carrefours nocturnes</li>
+              <li>Gran Simba — protecteur des enfants</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       CEREMONIES
+  ═══════════════════════════════════════════════ -->
+  <section class="section" id="ceremonies">
+    <div class="container">
+      <p class="section-label text-center">Pratique Religieuse</p>
+      <h2 class="section-title text-center">Les Cérémonies Vodou</h2>
+      <p class="section-subtitle text-center">
+        Les cérémonies Vodou sont des actes sacrés de communion entre le monde humain et
+        le monde des esprits — un espace de guérison, de protection, de gratitude et de
+        renouvellement communautaire.
+      </p>
+
+      <div class="cards-grid">
+
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--purple">🥁</div>
+          <div class="card__body">
+            <p class="card__tag">Rassemblement</p>
+            <h3 class="card__title">Le Fet (Fête des Lwa)</h3>
+            <p class="card__desc">
+              Une fête est une cérémonie organisée pour honorer un ou plusieurs Lwa. Elle
+              se tient généralement dans un Hounfor (temple Vodou) ou dans la cour d'une
+              famille. Elle peut durer toute la nuit et implique des chants sacrés,
+              des danses rituelles, des tambours, des offrandes de nourriture et de boissons
+              spécifiques à chaque Lwa invoqué. Lors de la fête, des initiés peuvent entrer
+              en transe (être montés par un Lwa) pour permettre à l'esprit de s'exprimer et
+              de bénir la communauté.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--blue">🌊</div>
+          <div class="card__body">
+            <p class="card__tag">Eau &amp; Purification</p>
+            <h3 class="card__title">Le Bain Rituel (Bèn)</h3>
+            <p class="card__desc">
+              Les bains rituels (bèn) sont essentiels dans la pratique Vodou. Préparés avec
+              des herbes sacrées, des fleurs, du parfum et des prières, ils servent à purifier
+              l'individu, à attirer la chance, à repousser le mal ou à se préparer à une
+              initiation. Chaque Lwa possède ses herbes et ses préparations particulières.
+              Ces bains peuvent être administrés par un Houngan ou une Mambo à des membres
+              de la communauté cherchant guérison ou protection.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--gold">⭐</div>
+          <div class="card__body">
+            <p class="card__tag">Initiation</p>
+            <h3 class="card__title">Le Kanzo — L'Initiation</h3>
+            <p class="card__desc">
+              Le Kanzo est la grande cérémonie d'initiation qui fait d'un pratiquant un membre
+              à part entière de la société Vodou. Il existe trois niveaux : Lave Tèt (lavage
+              de tête, entrée dans la communauté), Hounsi Bossal (novice initié), et
+              Houngan/Mambo Asogwe (prêtre ou prêtresse pleinement ordonnés). L'initiation
+              implique plusieurs jours de retraite, d'épreuves rituelles de feu et d'eau,
+              et la révélation de mystères sacrés.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--red">🕯️</div>
+          <div class="card__body">
+            <p class="card__tag">Mort &amp; Mémoire</p>
+            <h3 class="card__title">Les Rites Funéraires</h3>
+            <p class="card__desc">
+              Dans le Vodou, la mort n'est pas une fin mais une transformation. Quand quelqu'un
+              meurt, son Gros Bon Ange (l'âme universelle) retourne dans le cosmos, tandis que
+              son Ti Bon Ange (l'âme personnelle) peut errer pendant un an et un jour avant
+              d'être récupérée dans un pot sacré (govi) par un Houngan. La cérémonie du
+              « Dessounin » sépare ces deux âmes du corps, et les rites « Brûler Zin »
+              libèrent l'esprit pour qu'il rejoigne les ancêtres.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--green">🌾</div>
+          <div class="card__body">
+            <p class="card__tag">Fertilité &amp; Abondance</p>
+            <h3 class="card__title">Les Offrandes (Manje Lwa)</h3>
+            <p class="card__desc">
+              Les offrandes de nourriture (manje lwa, « nourrir les Lwa ») sont au cœur de
+              la pratique Vodou. Chaque Lwa a ses préférences : Papa Legba apprécie le maïs
+              grillé et les bonbons, Damballah préfère le lait et les œufs blancs, Ogou
+              aime le rhum et les bananes, Baron Samedi réclame du rhum pimenté. Ces
+              offrandes sont disposées sur des autels (pé) décorés des couleurs, images et
+              objets associés à chaque Lwa.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--blue">✨</div>
+          <div class="card__body">
+            <p class="card__tag">Transe &amp; Possession</p>
+            <h3 class="card__title">La Possession Sacrée (Monte)</h3>
+            <p class="card__desc">
+              La possession (être « monté » ou « chevauché » par un Lwa) est le moment
+              culminant d'une cérémonie Vodou. Le Lwa prend temporairement possession
+              d'un fidèle (le « cheval »), lui permettant de parler, conseiller, guérir et
+              bénir les membres de la communauté. La personne possédée n'a généralement
+              aucun souvenir de la possession. Ce phénomène est considéré comme la forme la
+              plus directe de communication entre les humains et les esprits.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       VEVE
+  ═══════════════════════════════════════════════ -->
+  <section class="section section--alt" id="veve">
+    <div class="container">
+      <div class="two-col">
+        <div class="text-block">
+          <p class="section-label">Symboles Sacrés</p>
+          <h2>Les Vèvè — L'Écriture des Dieux</h2>
+          <p>
+            Les vèvè sont des symboles géométriques sacrés, uniques à chaque Lwa. Tracés à
+            la farine de maïs, à la cendre ou au café sur le sol d'un Hounfor au début
+            d'une cérémonie, ils servent à invoquer et à « appeler » l'esprit correspondant.
+            Chaque vèvè est à la fois une carte identitaire du Lwa et un portail d'invocation.
+          </p>
+          <p>
+            Les vèvè combinent des formes géométriques complexes — cercles, étoiles, croix,
+            cœurs, spirales, serpents, ancres — reflétant les domaines et la personnalité
+            de chaque Lwa. Ils sont tracés avec une précision rituelle par le Houngan ou
+            la Mambo, souvent dans un état de concentration méditative.
+          </p>
+          <p>
+            Ces symboles ont inspiré une riche tradition artistique haïtienne. De nombreux
+            artistes haïtiens incorporent les vèvè dans leurs peintures et sculptures,
+            faisant de ces signes sacrés des icônes culturelles reconnues mondialement.
+          </p>
+          <ul>
+            <li><strong>Vèvè de Legba</strong> : croix au centre, passages et croisements</li>
+            <li><strong>Vèvè de Damballah</strong> : deux serpents entrelacés, spirales</li>
+            <li><strong>Vèvè d'Erzulie Freda</strong> : cœur avec une couronne et une épée</li>
+            <li><strong>Vèvè d'Agwe</strong> : bateau, ancre et poissons</li>
+            <li><strong>Vèvè de Baron Samedi</strong> : cercueil, croix et tête de mort</li>
+            <li><strong>Vèvè d'Ogou</strong> : épée, éclairs et symboles guerriers</li>
+          </ul>
+        </div>
+        <div class="img-block card__img--blue" style="font-size:80px;">✦</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       MUSIQUE & TAMBOURS
+  ═══════════════════════════════════════════════ -->
+  <section class="section" id="musique">
+    <div class="container">
+      <p class="section-label text-center">Rythme &amp; Son Sacré</p>
+      <h2 class="section-title text-center">Les Tambours et la Musique Sacrée</h2>
+      <p class="section-subtitle text-center">
+        Dans le Vodou haïtien, la musique n'est pas un simple accompagnement — c'est le
+        langage même des Lwa. Les tambours sont des instruments sacrés, vivants, qui ouvrent
+        les portes entre le monde humain et le monde des esprits.
+      </p>
+
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🥁</div>
+          <h3 class="feature-card__title">Les Tambours Rada</h3>
+          <p class="feature-card__desc">
+            La nation Rada utilise trois tambours sacrés : le <strong>Manman</strong> (la mère,
+            le plus grand), le <strong>Segon</strong> (le second) et le <strong>Boula</strong>
+            (le plus petit, qui maintient le rythme de base). Ces tambours sont consacrés
+            lors d'une cérémonie spéciale appelée « Brûler Tambour » et sont traités comme
+            des êtres vivants. Ils ont un régime alimentaire sacré, doivent être nourris
+            et respectés.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🔥</div>
+          <h3 class="feature-card__title">Les Tambours Petro</h3>
+          <p class="feature-card__desc">
+            La nation Petro utilise des tambours différents, notamment le <strong>Kata</strong>
+            et le <strong>Ti Baka</strong>, frappés avec un rythme plus rapide et plus intense
+            que les Rada. Les rythmes Petro sont plus urgents, plus brûlants, reflétant
+            l'énergie ardente des Lwa Petro. Un fouet (cravache) est souvent utilisé en
+            complément pour marquer le rythme lors des cérémonies Petro.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🎶</div>
+          <h3 class="feature-card__title">Les Chants Sacrés (Cantiques)</h3>
+          <p class="feature-card__desc">
+            Chaque Lwa possède des chants (cantiques) qui lui sont dédiés, chantés en créole
+            haïtien, en Fon ou dans d'autres langues africaines préservées à travers les
+            siècles. Ces chants narrent les histoires des Lwa, leurs exploits, leurs préférences
+            et leurs demandes. Connus des initiés et transmis oralement, ils constituent un
+            véritable répertoire de littérature orale sacrée d'une richesse extraordinaire.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">💃</div>
+          <h3 class="feature-card__title">La Danse Rituelle</h3>
+          <p class="feature-card__desc">
+            La danse est inséparable des cérémonies Vodou. Chaque Lwa a ses mouvements
+            caractéristiques : Damballah rampe sur le sol comme un serpent, Ogou marche
+            comme un soldat fier, Erzulie Freda danse avec une grâce coquette, Baron Samedi
+            effectue des mouvements comiques et obscènes. Ces danses rituelles permettent
+            au corps humain de « s'accorder » à la fréquence du Lwa invoqué, facilitant
+            ainsi la possession.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🎺</div>
+          <h3 class="feature-card__title">Les Instruments Sacrés</h3>
+          <p class="feature-card__desc">
+            Outre les tambours, d'autres instruments jouent un rôle central : l'<strong>Ason</strong>
+            (hochet sacré en calebasse garni de perles et d'ossements de serpent), insigne
+            du Houngan et de la Mambo ; la <strong>cloche en fer</strong> (clochette), utilisée
+            pour appeler les Lwa ; le <strong>vaccine</strong> (flûte de bambou) utilisé dans
+            les cérémonies Rara liées au Vodou. L'Ason est le symbole par excellence de
+            l'autorité spirituelle.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon">🌟</div>
+          <h3 class="feature-card__title">Le Rara — Musique des Rues</h3>
+          <p class="feature-card__desc">
+            Le Rara est la manifestation musicale publique du Vodou, se déroulant
+            principalement pendant le Carême catholique. Des bandes (mizik rara) parcourent
+            les rues la nuit en jouant des vaccines, des tambours et des grosse-caisses.
+            Profondément ancré dans la spiritualité Vodou, le Rara est à la fois musique
+            festive et processus rituel — une façon pour les Lwa de traverser les
+            communautés et de les bénir.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       HOUNGAN & MAMBO
+  ═══════════════════════════════════════════════ -->
+  <section class="section section--alt" id="pretres">
+    <div class="container">
+      <p class="section-label text-center">Les Officiants Sacrés</p>
+      <h2 class="section-title text-center">Houngan et Mambo</h2>
+      <p class="section-subtitle text-center">
+        Les prêtres et prêtresses du Vodou haïtien sont les gardiens de la tradition,
+        les guérisseurs de la communauté et les intermédiaires entre les humains et les esprits.
+      </p>
+
+      <div class="two-col">
+        <div class="text-block">
+          <p class="section-label">Le Prêtre Vodou</p>
+          <h2>Le Houngan — Serviteur des Lwa</h2>
+          <p>
+            Le <strong>Houngan</strong> (aussi orthographié Oungan) est le prêtre masculin du
+            Vodou haïtien. Le mot vient du Fon : « hun » (esprit) + « gan » (chef). Le Houngan
+            est un leader spirituel, un guérisseur, un conseiller et un intermédiaire entre
+            sa communauté et les Lwa. Il préside les cérémonies, prépare les remèdes
+            (médecines à base de plantes sacrées), diagnostique les maladies spirituelles
+            et administre les initiations.
+          </p>
+          <p>
+            Son insigne est l'<strong>Ason</strong>, le hochet sacré remis lors de son
+            ordination complète (grade Asogwe). Un Houngan peut aussi avoir le grade de
+            « Houngan Sur Pwen » (un niveau plus bas, pratiquant seul) ou « Houngan
+            Asogwe » (le rang le plus élevé, pouvant initier d'autres personnes).
+          </p>
+          <ul>
+            <li>Préside les cérémonies et fêtes des Lwa</li>
+            <li>Prépare des remèdes et bains rituels de guérison</li>
+            <li>Lit les signes et consulte les Lwa pour guider la communauté</li>
+            <li>Accompagne les mourants et préside les rites funéraires</li>
+            <li>Initie les nouveaux membres lors du Kanzo</li>
+          </ul>
+        </div>
+        <div class="text-block">
+          <p class="section-label">La Prêtresse Vodou</p>
+          <h2>La Mambo — Mère des Mystères</h2>
+          <p>
+            La <strong>Mambo</strong> est la prêtresse du Vodou haïtien. Elle possède les
+            mêmes pouvoirs et responsabilités que le Houngan, et dans certaines traditions,
+            les Mambo sont considérées comme ayant une relation encore plus directe avec
+            certains Lwa féminins comme Erzulie Freda et Gran Brigitte. Le Vodou est
+            remarquablement égalitaire dans le genre — les femmes ont toujours occupé
+            des positions de leadership spirituel à égalité avec les hommes.
+          </p>
+          <p>
+            La Mambo Asogwe est au sommet de la hiérarchie sacerdotale. Elle dirige son propre
+            Hounfor (temple), forme des disciples et peut initier d'autres Houngan et Mambo.
+            Son Ason est son signe d'autorité, et elle est respectée comme une figure
+            centrale de la communauté, souvent consultée pour des conseils au-delà des
+            affaires spirituelles.
+          </p>
+          <ul>
+            <li>Égale en autorité spirituelle au Houngan</li>
+            <li>Dirige son propre Hounfor et sa société initiatique</li>
+            <li>Spécialiste des Lwa féminins et de la guérison</li>
+            <li>Conservatrice de la tradition et des chants sacrés</li>
+            <li>Figure d'autorité morale dans la communauté</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="vodou-info-box">
+        <h3>Le Hounfor — Temple Sacré</h3>
+        <p>
+          Le <strong>Hounfor</strong> (ou Ounfò) est le temple Vodou, le lieu de rassemblement
+          de la société initiatique dirigée par un Houngan ou une Mambo. Il comprend un
+          péristyle (espace couvert ouvert pour les cérémonies et les danses), des chapelles
+          dédiées à chaque Lwa (Badji), des autels (Pé) richement décorés d'images de saints,
+          de bouteilles, de drapeaux et d'offrandes, le Poteau Mitan (poteau central sacré par
+          lequel les Lwa descendent), et des pièces d'initiation secrètes. Les drapeaux du
+          Hounfor (Drapo Vodou) sont des œuvres d'art textiles brodées de paillettes
+          représentant les vèvè et les symboles des Lwa — considérées aujourd'hui comme
+          un trésor de l'art haïtien.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       LWA PREVIEW
+  ═══════════════════════════════════════════════ -->
+  <section class="section" id="lwa-apercu">
+    <div class="container">
+      <p class="section-label text-center">Les Esprits</p>
+      <h2 class="section-title text-center">Quelques Lwa Fondamentaux</h2>
+      <p class="section-subtitle text-center">
+        Voici un aperçu de quelques Lwa majeurs. Pour des profils complets et détaillés,
+        visitez la page dédiée aux Lwa.
+      </p>
+
+      <div class="lwa-preview-grid">
+        <a href="lwa.html#legba" class="lwa-preview-card">
+          <div class="lwa-preview-card__icon">🔑</div>
+          <h3>Papa Legba</h3>
+          <p>Gardien des carrefours, ouvreur des portes</p>
+          <span class="lwa-preview-card__nation">Rada</span>
+        </a>
+        <a href="lwa.html#damballah" class="lwa-preview-card">
+          <div class="lwa-preview-card__icon">🐍</div>
+          <h3>Damballah</h3>
+          <p>Serpent céleste, père de tous les Lwa</p>
+          <span class="lwa-preview-card__nation">Rada</span>
+        </a>
+        <a href="lwa.html#ayida" class="lwa-preview-card">
+          <div class="lwa-preview-card__icon">🌈</div>
+          <h3>Ayida Wedo</h3>
+          <p>Arc-en-ciel céleste, épouse de Damballah</p>
+          <span class="lwa-preview-card__nation">Rada</span>
+        </a>
+        <a href="lwa.html#ogou" class="lwa-preview-card">
+          <div class="lwa-preview-card__icon">⚔️</div>
+          <h3>Ogou</h3>
+          <p>Dieu de la guerre, du fer et des soldats</p>
+          <span class="lwa-preview-card__nation lwa-preview-card__nation--petro">Nago/Petro</span>
+        </a>
+        <a href="lwa.html#erzulie-freda" class="lwa-preview-card">
+          <div class="lwa-preview-card__icon">💗</div>
+          <h3>Erzulie Freda</h3>
+          <p>Déesse de l'amour, de la beauté et du luxe</p>
+          <span class="lwa-preview-card__nation">Rada</span>
+        </a>
+        <a href="lwa.html#erzulie-dantor" class="lwa-preview-card">
+          <div class="lwa-preview-card__icon">🗡️</div>
+          <h3>Erzulie Dantor</h3>
+          <p>Mère guerrière et protectrice des enfants</p>
+          <span class="lwa-preview-card__nation lwa-preview-card__nation--petro">Petro</span>
+        </a>
+        <a href="lwa.html#baron" class="lwa-preview-card">
+          <div class="lwa-preview-card__icon">🎩</div>
+          <h3>Baron Samedi</h3>
+          <p>Maître de la mort, gardien des cimetières</p>
+          <span class="lwa-preview-card__nation lwa-preview-card__nation--gede">Gede</span>
+        </a>
+        <a href="lwa.html#gran-brigitte" class="lwa-preview-card">
+          <div class="lwa-preview-card__icon">🌑</div>
+          <h3>Gran Brigitte</h3>
+          <p>Épouse de Baron, gardienne des ossements</p>
+          <span class="lwa-preview-card__nation lwa-preview-card__nation--gede">Gede</span>
+        </a>
+        <a href="lwa.html#azaka" class="lwa-preview-card">
+          <div class="lwa-preview-card__icon">🌾</div>
+          <h3>Azaka</h3>
+          <p>Dieu de l'agriculture et des paysans</p>
+          <span class="lwa-preview-card__nation">Rada</span>
+        </a>
+        <a href="lwa.html#agwe" class="lwa-preview-card">
+          <div class="lwa-preview-card__icon">⚓</div>
+          <h3>Agwe</h3>
+          <p>Roi de la mer, protecteur des marins</p>
+          <span class="lwa-preview-card__nation">Rada</span>
+        </a>
+      </div>
+
+      <div style="text-align:center; margin-top: 48px;">
+        <a href="lwa.html" class="btn btn-blue">Voir Tous les Lwa en Détail →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       QUOTE
+  ═══════════════════════════════════════════════ -->
+  <div class="quote-block">
+    <div class="container">
+      <p class="quote-text">
+        « Lave men, siye atè » — Laver ses mains et les essuyer par terre.
+        Le Vodou enseigne que nous devons honorer nos ancêtres et les esprits,
+        sans quoi nos efforts resteront sans fondation.
+      </p>
+      <p class="quote-author">— Proverbe Vodou Haïtien</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       CTA
+  ═══════════════════════════════════════════════ -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Explorer les Lwa en Profondeur</h2>
+      <p>
+        Découvrez les profils détaillés de chaque grand Lwa du Vodou haïtien — leur histoire,
+        leurs attributs, leurs vèvè et leur rôle dans la vie spirituelle haïtienne.
+      </p>
+      <a href="lwa.html" class="btn btn-cta-white">Découvrir les Lwa →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <span class="logo-emoji-flag">🇭🇹</span>
+            Haïti 🇭🇹
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="lwa.html">Les Lwa</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Vodou</h4>
+          <ul>
+            <li><a href="vodou.html#origines">Origines Africaines</a></li>
+            <li><a href="vodou.html#bondye">Bondye</a></li>
+            <li><a href="vodou.html#nations">Les Nations</a></li>
+            <li><a href="vodou.html#ceremonies">Cérémonies</a></li>
+            <li><a href="vodou.html#veve">Vèvè</a></li>
+            <li><a href="vodou.html#pretres">Houngan &amp; Mambo</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Kirlinger357 — 🇭🇹 Haïti 🇭🇹. Tous droits réservés.</span>
+        <span>Fait avec ❤️ pour Haïti</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
