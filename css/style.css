@@ -307,8 +307,15 @@ ul {
   overflow: hidden;
   padding: 80px 24px;
   background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.60)),
-    url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Citadelle_Laferri%C3%A8re.jpg/1280px-Citadelle_Laferri%C3%A8re.jpg') center/cover no-repeat;
+    radial-gradient(ellipse at 20% 55%, rgba(0, 44, 179, 0.55) 0%, transparent 58%),
+    radial-gradient(ellipse at 80% 45%, rgba(210, 16, 52, 0.50) 0%, transparent 58%),
+    linear-gradient(135deg,
+      #001370 0%,
+      #00209F 22%,
+      #1a0d50 45%,
+      #6B0820 72%,
+      #D21034 100%
+    );
 }
 
 .hero__content {
