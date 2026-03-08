@@ -862,6 +862,25 @@ ul {
   color: var(--white);
   padding: 96px 0 80px;
   text-align: center;
+  position: relative;
+}
+
+.page-hero--about {
+  background:
+    linear-gradient(rgba(0,20,100,0.75), rgba(100,0,20,0.75)),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Haitian_woman_in_traditional_dress.jpg/1280px-Haitian_woman_in_traditional_dress.jpg') center/cover no-repeat;
+}
+
+.page-hero--history {
+  background:
+    linear-gradient(rgba(0,10,60,0.78), rgba(80,0,10,0.78)),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Citadelle_Laferri%C3%A8re.jpg/1280px-Citadelle_Laferri%C3%A8re.jpg') center/cover no-repeat;
+}
+
+.page-hero--tourism {
+  background:
+    linear-gradient(rgba(0,15,80,0.72), rgba(0,80,100,0.72)),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Citadelle_Laferri%C3%A8re.jpg/1280px-Citadelle_Laferri%C3%A8re.jpg') center/cover no-repeat;
 }
 
 .page-hero__label {
@@ -2138,7 +2157,6 @@ ul {
     --text:      #e2e8f0;
     --text-muted:#94a3b8;
     --border:    #334155;
-    --white:     #1e293b;
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
     --shadow-md: 0 8px 24px rgba(0,0,0,0.4);
     --shadow-lg: 0 16px 40px rgba(0,0,0,0.5);
@@ -2269,5 +2287,45 @@ ul {
 
   .nation-card--kongo .nation-card__header {
     background: linear-gradient(135deg, #003355, #006699);
+  }
+
+  /* Improve heading readability on dark backgrounds */
+  .section-title,
+  .card__title,
+  .feature-card__title,
+  .destination-card__title,
+  .person-card__name,
+  .text-block h2,
+  .timeline-card__title,
+  .lwa-preview-card h3,
+  .lwa-nav-item__name,
+  .lwa-profile__text h3,
+  .lwa-index h3,
+  .contact-info h3,
+  .contact-form h3 {
+    color: #93c5fd;
+  }
+
+  .section-label,
+  .card__tag,
+  .timeline-card__year,
+  .destination-card__location,
+  .page-hero__label {
+    color: #fca5a5;
+  }
+
+  /* Ensure footer stays legible */
+  .site-footer {
+    background: #070c1f;
+  }
+
+  /* Stats strip subtle adjustment */
+  .stats-strip {
+    background: linear-gradient(135deg, #070c1f 0%, #001a73 60%, #6b0018 100%);
+  }
+
+  /* Vodou info box - stays with its own gradient */
+  .vodou-info-box {
+    background: linear-gradient(135deg, #1a0033, #00209F);
   }
 }
