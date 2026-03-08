@@ -1262,3 +1262,733 @@ ul {
     gap: 20px;
   }
 }
+
+/* =====================================================
+   🕯️ VODOU & LWA PAGES — Additional Styles
+   ===================================================== */
+
+/* ── Search Toggle Button ────────────────────────────── */
+.search-toggle {
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.search-toggle:hover {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.6);
+}
+
+/* ── Search Overlay ──────────────────────────────────── */
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,15,40,0.88);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 16px 40px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.search-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.search-overlay__inner {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 680px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  transform: translateY(-20px);
+  transition: transform 0.25s ease;
+}
+
+.search-overlay.open .search-overlay__inner {
+  transform: translateY(0);
+}
+
+.search-overlay__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  color: var(--text-muted);
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: var(--text);
+  background: transparent;
+  flex: 1;
+  font-family: var(--font-sans);
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-close {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.search-close:hover {
+  background: var(--red);
+  color: var(--white);
+  border-color: var(--red);
+}
+
+.search-results {
+  padding: 16px 24px 24px;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.search-results__hint,
+.search-results__empty {
+  color: var(--text-muted);
+  font-size: 15px;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.search-results__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.search-result__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.search-result__link:hover {
+  background: var(--bg-soft);
+}
+
+.search-result__title {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 15px;
+}
+
+.search-result__section {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--red);
+  background: rgba(210,16,52,0.08);
+  padding: 3px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Page Hero Variants ──────────────────────────────── */
+.page-hero--vodou {
+  background: linear-gradient(135deg, #1a0033 0%, #3a0066 40%, #00209F 100%);
+}
+
+.page-hero--lwa {
+  background: linear-gradient(135deg, #003333 0%, #00209F 50%, #8B0000 100%);
+}
+
+.page-hero__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+  justify-content: center;
+}
+
+/* ── Vodou Nations Grid ──────────────────────────────── */
+.vodou-nations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+  margin-top: 52px;
+}
+
+.nation-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.nation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.nation-card__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px 16px;
+}
+
+.nation-card--rada { border-color: #e8f0fe; }
+.nation-card--rada .nation-card__header { background: linear-gradient(135deg, #e8f0fe, #c7d7fc); }
+
+.nation-card--petro { border-color: #fce8e8; }
+.nation-card--petro .nation-card__header { background: linear-gradient(135deg, #fce8e8, #f8c4c4); }
+
+.nation-card--gede { border-color: #e8e0f0; }
+.nation-card--gede .nation-card__header { background: linear-gradient(135deg, #2d2040, #1a0033); color: var(--white); }
+.nation-card--gede .nation-card__title { color: var(--white); }
+.nation-card--gede .nation-card__badge { background: rgba(255,255,255,0.2); color: #ddd; }
+
+.nation-card--nago { border-color: #fff0e0; }
+.nation-card--nago .nation-card__header { background: linear-gradient(135deg, #fff0e0, #ffd9a0); }
+
+.nation-card--ibo { border-color: #e0f0e8; }
+.nation-card--ibo .nation-card__header { background: linear-gradient(135deg, #e0f0e8, #b8dfc8); }
+
+.nation-card--kongo { border-color: #e0e8ff; }
+.nation-card--kongo .nation-card__header { background: linear-gradient(135deg, #003355, #006699); color: var(--white); }
+.nation-card--kongo .nation-card__title { color: var(--white); }
+.nation-card--kongo .nation-card__badge { background: rgba(255,255,255,0.2); color: #ddd; }
+
+.nation-card__icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.nation-card__title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--blue);
+  margin: 0;
+}
+
+.nation-card__badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(0,32,159,0.1);
+  color: var(--blue);
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.nation-card__body {
+  padding: 20px 24px 24px;
+}
+
+.nation-card__body p {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  line-height: 1.65;
+}
+
+.nation-card__body ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+.nation-card__body ul li {
+  font-size: 14px;
+  color: var(--text);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+  padding-left: 16px;
+  position: relative;
+}
+
+.nation-card__body ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: bold;
+}
+
+.nation-card__body ul li:last-child {
+  border-bottom: none;
+}
+
+/* ── Vodou Info Box ──────────────────────────────────── */
+.vodou-info-box {
+  background: linear-gradient(135deg, #1a0033, #00209F);
+  color: var(--white);
+  border-radius: var(--radius-md);
+  padding: 32px 40px;
+  margin-top: 48px;
+}
+
+.vodou-info-box h3 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--gold);
+}
+
+.vodou-info-box p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.88);
+}
+
+/* ── Lwa Preview Grid ────────────────────────────────── */
+.lwa-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.lwa-preview-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 16px;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 2px solid transparent;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  text-align: center;
+}
+
+.lwa-preview-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue);
+}
+
+.lwa-preview-card__icon {
+  font-size: 36px;
+}
+
+.lwa-preview-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--blue);
+  margin: 0;
+}
+
+.lwa-preview-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.lwa-preview-card__nation {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(0,32,159,0.08);
+  color: var(--blue);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.lwa-preview-card__nation--petro {
+  background: rgba(210,16,52,0.08);
+  color: var(--red);
+}
+
+.lwa-preview-card__nation--gede {
+  background: rgba(50,0,80,0.1);
+  color: #6b21a8;
+}
+
+/* ── Lwa Index ───────────────────────────────────────── */
+.lwa-index {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 32px 40px;
+  box-shadow: var(--shadow-sm);
+  margin-top: 40px;
+  border: 1px solid var(--border);
+}
+
+.lwa-index h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.lwa-index__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.lwa-index__grid a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  transition: var(--transition);
+  border: 1px solid var(--border);
+}
+
+.lwa-index__grid a:hover {
+  background: var(--blue);
+  color: var(--white);
+  border-color: var(--blue);
+}
+
+/* ── Lwa Profile ─────────────────────────────────────── */
+.lwa-section {
+  scroll-margin-top: 80px;
+}
+
+.lwa-profile {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.lwa-profile__header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  gap: 24px;
+  padding: 32px 40px;
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+  color: var(--white);
+}
+
+.lwa-profile__icon {
+  font-size: 52px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.lwa-profile__nation {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.2);
+  color: var(--gold);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.lwa-profile__nation--petro {
+  background: rgba(210,16,52,0.3);
+  color: #ffa0a0;
+}
+
+.lwa-profile__nation--gede {
+  background: rgba(80,0,120,0.4);
+  color: #d4a0ff;
+}
+
+.lwa-profile__name {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 900;
+  color: var(--white);
+  margin: 4px 0;
+  line-height: 1.1;
+}
+
+.lwa-profile__title {
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+  margin: 0;
+  font-style: italic;
+}
+
+.lwa-profile__attributes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 200px;
+}
+
+.lwa-attr {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lwa-attr span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+.lwa-attr strong {
+  font-size: 13px;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.lwa-profile__body {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+  padding: 36px 40px;
+}
+
+.lwa-profile__text h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--blue);
+  margin: 24px 0 10px;
+}
+
+.lwa-profile__text h3:first-child {
+  margin-top: 0;
+}
+
+.lwa-profile__text p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.lwa-profile__chant {
+  background: linear-gradient(160deg, #1a0033, #2a0055);
+  border-radius: var(--radius-md);
+  padding: 28px 28px 24px;
+  color: var(--white);
+  align-self: start;
+}
+
+.lwa-profile__chant h3 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.lwa-profile__chant blockquote {
+  border: none;
+  padding: 0;
+  margin: 0 0 16px;
+  font-style: italic;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.9);
+  font-size: 15px;
+}
+
+.lwa-profile__chant blockquote cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  font-style: normal;
+}
+
+.chant-translation {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  font-style: italic;
+  line-height: 1.6;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 12px;
+}
+
+/* ── Lwa Navigation Grid ─────────────────────────────── */
+.lwa-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.lwa-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 20px 12px;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: var(--text);
+  border: 2px solid transparent;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  text-align: center;
+}
+
+.lwa-nav-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue);
+}
+
+.lwa-nav-item--petro:hover { border-color: var(--red); }
+.lwa-nav-item--gede:hover { border-color: #6b21a8; }
+
+.lwa-nav-item__icon {
+  font-size: 28px;
+}
+
+.lwa-nav-item__name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.lwa-nav-item--petro .lwa-nav-item__name { color: var(--red); }
+.lwa-nav-item--gede .lwa-nav-item__name { color: #6b21a8; }
+
+.lwa-nav-item__nation {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+/* ── Responsive: Vodou / Lwa Pages ──────────────────── */
+@media (max-width: 900px) {
+  .lwa-profile__header {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .lwa-profile__attributes {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    min-width: auto;
+  }
+
+  .lwa-attr {
+    min-width: 140px;
+  }
+
+  .lwa-profile__body {
+    grid-template-columns: 1fr;
+    padding: 28px 24px;
+  }
+
+  .vodou-nations {
+    grid-template-columns: 1fr;
+  }
+
+  .vodou-info-box {
+    padding: 24px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lwa-profile__header {
+    padding: 24px;
+    gap: 16px;
+  }
+
+  .lwa-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lwa-index {
+    padding: 24px;
+  }
+
+  .page-hero__nav {
+    gap: 8px;
+  }
+
+  .search-overlay {
+    padding: 64px 12px 24px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .lwa-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lwa-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lwa-index__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lwa-profile__header {
+    grid-template-columns: 1fr;
+  }
+
+  .lwa-profile__icon {
+    font-size: 40px;
+  }
+}
