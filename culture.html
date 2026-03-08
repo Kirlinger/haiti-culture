@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Culture Haïtienne, Art, Musique et Traditions | 🇭🇹 Haïti 🇭🇹</title>
+  <meta name="description" content="Art, musique, danse, cuisine et traditions d'un peuple créatif et résilient." />
+  <meta name="author" content="Kirlinger357" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
+          <span class="logo-emoji-flag">🇭🇹</span>
+          Haïti 🇭🇹
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="constitution.html">Constitution</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--about">
+    <div class="container">
+      <p class="page-hero__label">🎨 Culture</p>
+      <h1 class="page-hero__title">La Culture Haïtienne</h1>
+      <p class="page-hero__desc">Art, musique, danse, cuisine et traditions d'un peuple créatif et résilient.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <span>Culture</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Un Carrefour de Civilisations</p>
+        <h2>Introduction à la Culture Haïtienne</h2>
+        <p>La culture haïtienne est un mélange riche et unique d'influences africaines, françaises, taïno et caribéennes. Elle s'exprime à travers un art vibrant, une musique envoûtante, une danse expressive, une littérature puissante et les traditions du quotidien. Malgré des défis économiques constants, la créativité haïtienne a conquis une reconnaissance internationale méritée.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <p class="section-label text-center">Son et Rythme</p>
+      <h2 class="section-title text-center">La Musique Haïtienne</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">🎵</div>
+          <h3 class="feature-card__title">Kompa</h3>
+          <p class="feature-card__desc">Musique populaire nationale créée dans les années 1950 par Nemours Jean-Baptiste, le Kompa (ou Compas) est le rythme festif par excellence des Haïtiens, dansé lors de toutes les célébrations.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🥁</div>
+          <h3 class="feature-card__title">Rara</h3>
+          <p class="feature-card__desc">Musique de procession rituelle jouée pendant le Carême, le Rara mêle chants, percussions et instruments à vent dans des défilés qui parcourent les rues et les routes de campagne.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🌿</div>
+          <h3 class="feature-card__title">Rasin</h3>
+          <p class="feature-card__desc">La musique racines (Rasin) combine les rythmes sacrés du Vodou avec des instruments modernes. Un genre puissant qui célèbre les racines africaines de la culture haïtienne.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🎸</div>
+          <h3 class="feature-card__title">Twoubadou</h3>
+          <p class="feature-card__desc">La tradition du troubadour haïtien offre des chansons romantiques et mélancoliques, souvent accompagnées de guitare, qui célèbrent l'amour, la nature et la vie quotidienne.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Expression Visuelle</p>
+        <h2>L'Art Haïtien, Célébré dans le Monde Entier</h2>
+        <p>La peinture haïtienne est mondialement reconnue pour son style naïf ou primitif, ses couleurs éclatantes et ses images saisissantes de la vie spirituelle et quotidienne. Le Centre d'Art de Port-au-Prince, fondé en 1944, a propulsé des artistes haïtiens sur la scène internationale. Des maîtres comme Hector Hyppolite, prêtre vodou et peintre visionnaire, Philomé Obin et Castera Bazile ont défini l'identité de l'art haïtien. La Cathédrale de la Sainte-Trinité de Port-au-Prince abrite de célèbres fresques. La sculpture en métal découpé dans des barils d'huile constitue une autre forme artistique haïtienne mondialement appréciée.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <p class="section-label text-center">Corps et Âme</p>
+      <h2 class="section-title text-center">La Danse Haïtienne</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">🕊️</div>
+          <h3 class="feature-card__title">Yanvalou</h3>
+          <p class="feature-card__desc">Danse sacrée du Vodou, le Yanvalou imite les ondulations du serpent sacré Damballah. C'est une danse de dévotion profonde, pratiquée lors des cérémonies rituelles.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🎭</div>
+          <h3 class="feature-card__title">Méringue Haïtienne</h3>
+          <p class="feature-card__desc">Danse nationale haïtienne, la méringue haïtienne se distingue de sa cousine dominicaine par ses propres rythmes et mouvements, profondément ancrés dans la tradition populaire.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🎊</div>
+          <h3 class="feature-card__title">Danses Rara</h3>
+          <p class="feature-card__desc">Associées aux processions Rara du Carême, ces danses énergiques et expressives accompagnent les groupes musicaux dans leurs défilés festifs et rituels.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Mots et Lettres</p>
+        <h2>La Littérature Haïtienne</h2>
+        <p>Haïti possède une tradition littéraire d'une grande richesse. Jean Price-Mars fonda le mouvement de l'Indigénisme dans les années 1920, en célébrant les racines africaines de la culture haïtienne. Jacques Roumain écrivit le roman fondateur Gouverneurs de la Rosée (1944), une oeuvre de portée universelle. Edwidge Danticat est l'auteure haïtienne contemporaine la plus lue dans le monde anglophone. La littérature haïtienne existe à la fois en français et en créole haïtien, deux langues qui coexistent et s'enrichissent mutuellement.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Fête et Identité</p>
+        <h2>Le Carnaval Haïtien</h2>
+        <p>Le Carnaval haïtien est l'une des célébrations les plus spectaculaires des Caraïbes. Organisé avant le Carême, il rassemble des millions de personnes autour de chars décorés, de costumes élaborés, de groupes musicaux géants et d'une énergie collective incomparable. Chaque ville a ses propres traditions : le Carnaval de Port-au-Prince est le plus grand, tandis que celui de Jacmel est réputé pour ses masques en papier mâché artisanaux.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Identité et Expression</p>
+        <h2>La Langue Créole</h2>
+        <p>Le créole haïtien (Kreyòl ayisyen) est parlé par la quasi-totalité des Haïtiens. Né durant la période coloniale de la fusion du français avec des langues d'Afrique de l'Ouest, il est l'une des deux langues officielles du pays depuis 1987. Le français est l'autre langue officielle, utilisée dans l'administration et l'enseignement formel. La littérature et la musique en créole ont connu un essor remarquable, donnant à cette langue une identité culturelle fierement revendiquée.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <span class="logo-emoji-flag">🇭🇹</span>
+            Haïti 🇭🇹
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="lwa.html">Les Lwa</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire</h4>
+          <ul>
+            <li><a href="history.html#revolution">La Révolution</a></li>
+            <li><a href="history.html#independence">Indépendance 1804</a></li>
+            <li><a href="history.html#figures">Personnages Clés</a></li>
+            <li><a href="history.html#modern">Haïti Moderne</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&#169; 2026 Kirlinger357 &#8212; 🇭🇹 Haïti 🇭🇹. Tous droits réservés.</span>
+        <span>Fait avec &#10084;&#65039; pour Haïti</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

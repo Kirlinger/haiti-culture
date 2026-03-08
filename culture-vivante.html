@@ -1,49 +1,193 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Culture Vivante d'Haïti</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        h1, h2 {
-            color: #2b7a4e;
-        }
-        a {
-            color: #2b7a4e;
-            text-decoration: none;
-        }
-        .return-link {
-            margin-top: 20px;
-            display: inline-block;
-            border: 1px solid #2b7a4e;
-            padding: 10px 15px;
-            border-radius: 5px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Culture Vivante d'Haïti | 🇭🇹 Haïti 🇭🇹</title>
+  <meta name="author" content="Kirlinger357" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <h1>La Culture Vivante d'Haïti</h1>
-    
-    <h2>Langue Créole</h2>
-    <p>La langue créole est une partie vitale de l'identité haïtienne, étant un mélange unique du français et des langues africaines...</p>
-    
-    <h2>Musique et Festivals</h2>
-    <p>La musique haïtienne, du Compas au Rara, témoigne de l'énergie et de la vitalité de l'esprit haïtien, surtout pendant les festivals...</p>
-    
-    <h2>Cuisine et Traditions</h2>
-    <p>La cuisine haïtienne est une fusion de saveurs, avec des plats comme le Griot et le Joumou reflétant la riche histoire du pays...</p>
-    
-    <h2>Arts Visuels et Littérature</h2>
-    <p>La scène des arts visuels et la littérature en Haïti racontent des histoires de résilience et de beauté, mettant en lumière des artistes comme...</p>
-    
-    <h2>La Culture comme Résistance</h2>
-    <p>Les expressions culturelles en Haïti servent de forme de résistance contre l'oppression, soulignant la force du peuple...</p>
-    
-    <a href="index.html" class="return-link">Retour à la Page d'Accueil</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
+          <span class="logo-emoji-flag">🇭🇹</span>
+          Haïti 🇭🇹
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="constitution.html">Constitution</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--about">
+    <div class="container">
+      <p class="page-hero__label">🎭 Culture Vivante</p>
+      <h1 class="page-hero__title">La Culture Vivante d'Haïti</h1>
+      <p class="page-hero__desc">Langue, musique, cuisine, arts visuels : une culture qui résiste, crée et inspire chaque jour.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <span>Culture Vivante</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Identité</p>
+        <h2>La Langue Créole</h2>
+        <p>Le créole haïtien est bien plus qu'un simple moyen de communication. C'est un symbole d'identité nationale, né de la résistance des esclaves africains, qui ont fusionné les langues européennes et africaines pour créer leur propre mode d'expression. Reconnu langue officielle en 1987, il est la langue du coeur de tous les Haïtiens.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Rythme et Célébration</p>
+        <h2>Musique et Festivals</h2>
+        <p>La musique haïtienne est une force vitale. Le Kompa, le Rara, le Rasin et le Troubadou rythment la vie quotidienne et les célébrations collectives. Le Carnaval haïtien, l'un des plus spectaculaires des Caraïbes, rassemble chaque année des millions de personnes dans une célébration joyeuse de l'identité nationale.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Saveurs et Traditions</p>
+        <h2>Cuisine et Traditions</h2>
+        <p>La cuisine haïtienne est un patrimoine vivant. La Soup Joumou, mangée chaque 1er janvier pour commémorer l'indépendance, est désormais reconnue par l'UNESCO. Le griyo, le diri ak pwa, le pikliz : chaque plat raconte une histoire de résistance, de créativité et de fierté.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Expression Artistique</p>
+        <h2>Arts Visuels et Littérature</h2>
+        <p>L'art haïtien est célébré dans les musées du monde entier. Les peintures naïves, les sculptures en métal et la littérature en créole et en français témoignent d'une créativité qui s'épanouit malgré les difficultés. Des auteurs comme Jacques Roumain, René Depestre et Edwidge Danticat ont porté la voix d'Haïti sur la scène internationale.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Résistance et Fierté</p>
+        <h2>La Culture comme Résistance</h2>
+        <p>Tout au long de son histoire, la culture haïtienne a été un instrument de résistance et de survie. Face à l'esclavage, à la colonisation, aux dictatures et aux catastrophes naturelles, le peuple haïtien a toujours trouvé dans sa culture la force de résister et de se reconstruire.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <span class="logo-emoji-flag">🇭🇹</span>
+            Haïti 🇭🇹
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="lwa.html">Les Lwa</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire</h4>
+          <ul>
+            <li><a href="history.html#revolution">La Révolution</a></li>
+            <li><a href="history.html#independence">Indépendance 1804</a></li>
+            <li><a href="history.html#figures">Personnages Clés</a></li>
+            <li><a href="history.html#modern">Haïti Moderne</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&#169; 2026 Kirlinger357 &#8212; 🇭🇹 Haïti 🇭🇹. Tous droits réservés.</span>
+        <span>Fait avec &#10084;&#65039; pour Haïti</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

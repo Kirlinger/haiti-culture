@@ -1,38 +1,183 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Capacité Exceptionnelle de Survie et d'Adaptation d'Haïti</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; }
-        header, footer { background: #333; color: #fff; padding: 10px 0; text-align: center; }
-        section { margin: 20px; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
-        a { color: #0066cc; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Résilience et l'Adaptation d'Haïti | 🇭🇹 Haïti 🇭🇹</title>
+  <meta name="author" content="Kirlinger357" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header>
-        <h1>La Capacité Exceptionnelle de Survie et d'Adaptation d'Haïti</h1>
-    </header>
-    <section id="historical-resilience">
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
+          <span class="logo-emoji-flag">🇭🇹</span>
+          Haïti 🇭🇹
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="constitution.html">Constitution</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--about">
+    <div class="container">
+      <p class="page-hero__label">💪 Résilience</p>
+      <h1 class="page-hero__title">La Capacité d'Adaptation d'Haïti</h1>
+      <p class="page-hero__desc">Un peuple qui a survécu à l'esclavage, aux tremblements de terre et aux crises multiples grâce à une résilience extraordinaire.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <span>Capacité d'Adaptation</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Une Histoire de Survie</p>
         <h2>Résilience Historique</h2>
-        <p>L'histoire d'Haïti est marquée par d'importants défis, mais l'esprit de son peuple a fait preuve d'une résilience remarquable face aux catastrophes naturelles et aux troubles socio-politiques.</p>
-    </section>
-    <section id="social-solidarity">
+        <p>Depuis la révolution contre l'esclavage jusqu'aux catastrophes naturelles du XXIe siècle, le peuple haïtien a démontré une capacité de résilience remarquable. Chaque épreuve a été surmontée grâce à une détermination collective profonde et à une foi inébranlable en l'avenir.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Entraide</p>
         <h2>Solidarité Sociale</h2>
-        <p>La force des liens sociaux entre Haïtiens a joué un rôle crucial dans la récupération communautaire, permettant aux réseaux de soutien de prospérer même dans l'adversité.</p>
-    </section>
-    <section id="adaptation-to-crises">
+        <p>Les mécanismes de solidarité sociale haïtiens, comme le "konbit" (travail collectif) et le "sòl" (tontine communautaire), illustrent la capacité du peuple à s'organiser collectivement face aux difficultés. Cette solidarité est une force culturelle profonde.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Face aux Crises</p>
         <h2>Adaptation aux Crises</h2>
-        <p>Les Haïtiens ont développé des stratégies innovantes pour s'adapter aux crises récurrentes, démontrant de la flexibilité et de l'ingéniosité pour trouver des solutions de vie durable.</p>
-    </section>
-    <section id="limits-of-resilience">
+        <p>Après le tremblement de terre de 2010, des millions d'Haïtiens ont reconstruit leurs vies avec des ressources minimales. La diaspora haïtienne, les organisations communautaires et la créativité individuelle ont joué un rôle crucial dans cette reconstruction.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Au-Delà de la Résilience</p>
         <h2>Limites de la Résilience sans Soutien Institutionnel</h2>
-        <p>Malgré la résilience démontrée, le manque de soutien institutionnel peut entraver la récupération à long terme, soulignant la nécessité d'une collaboration communautaire et gouvernementale pour surmonter les défis.</p>
-    </section>
-    <footer>
-        <p><a href="#">Retour en haut</a></p>
-    </footer>
+        <p>Si la résilience haïtienne est admirable, elle ne peut pas indéfiniment compenser l'absence de soutien institutionnel solide. Un État efficace, des investissements durables et une coopération internationale respectueuse sont nécessaires pour transformer cette résilience en développement pérenne.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <span class="logo-emoji-flag">🇭🇹</span>
+            Haïti 🇭🇹
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="lwa.html">Les Lwa</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire</h4>
+          <ul>
+            <li><a href="history.html#revolution">La Révolution</a></li>
+            <li><a href="history.html#independence">Indépendance 1804</a></li>
+            <li><a href="history.html#figures">Personnages Clés</a></li>
+            <li><a href="history.html#modern">Haïti Moderne</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&#169; 2026 Kirlinger357 &#8212; 🇭🇹 Haïti 🇭🇹. Tous droits réservés.</span>
+        <span>Fait avec &#10084;&#65039; pour Haïti</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

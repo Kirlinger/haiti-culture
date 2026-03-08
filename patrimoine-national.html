@@ -1,1 +1,183 @@
-<!DOCTYPE html>\n<html lang="fr">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Patrimoine National</title>\n    <style>\n        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px; }\n        h1 { color: #333; }\n        h2 { color: #555; }\n        p { line-height: 1.6; }\n        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }\n        a { color: #007BFF; }\n        a:hover { text-decoration: underline; }\n    </style>\n</head>\n<body>\n    <div class="container">\n        <h1>Valorisation Insuffisante du Patrimoine National en Haïti</h1>\n        <h2>Formes du Patrimoine Haïtien</h2>\n        <p>Haïti est riche en patrimoine culturel, englobant une variété de formes telles que les sites historiques, la musique traditionnelle, les arts culinaires et les artisanats uniques. Ces éléments ne sont pas seulement des artefacts mais des représentations vivantes de notre identité.</p>\n        <h2>Risques de Perte ou d'Oubli</h2>\n        <p>Avec la modernisation et la mondialisation, le patrimoine haïtien risque d'être éclipsé. De nombreuses traditions ont commencé à s'estomper, conduisant à une perte potentielle d'identité culturelle. Il est vital de préserver ces éléments pour les générations futures.</p>\n        <h2>Rôle de l'École et de la Culture</h2>\n        <p>Le système éducatif joue un rôle crucial dans la promotion et la préservation de la culture haïtienne. L'intégration du patrimoine national dans les programmes scolaires peut sensibiliser les jeunes, en s'assurant qu'ils apprécient et comprennent l'importance de leurs racines.</p>\n        <h2>La Valorisation Patrimoniale comme Projet National</h2>\n        <p>La valorisation de notre patrimoine national devrait être un effort collectif. Des initiatives doivent être prises aux niveaux gouvernemental et communautaire pour promouvoir la valorisation patrimoniale, en créant des projets qui impliquent le public et favorisent un sentiment de fierté dans notre patrimoine.</p>\n        <p><a href="#">Retour en Haut</a></p>\n    </div>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patrimoine National d'Haïti | 🇭🇹 Haïti 🇭🇹</title>
+  <meta name="author" content="Kirlinger357" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
+          <span class="logo-emoji-flag">🇭🇹</span>
+          Haïti 🇭🇹
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="constitution.html">Constitution</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--about">
+    <div class="container">
+      <p class="page-hero__label">🏛️ Patrimoine</p>
+      <h1 class="page-hero__title">Valorisation du Patrimoine National</h1>
+      <p class="page-hero__desc">Les richesses culturelles, historiques et naturelles d'Haïti, un héritage précieux pour les générations futures.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <span>Patrimoine National</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label text-center">Un Trésor à Préserver</p>
+      <h2 class="section-title text-center">Le Patrimoine Haïtien</h2>
+      <p class="section-subtitle text-center">Haïti possède un patrimoine culturel et naturel exceptionnel qui mérite d'être connu, protégé et valorisé, tant pour les Haïtiens que pour le monde entier.</p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">🏰</div>
+          <h3 class="feature-card__title">Patrimoine UNESCO</h3>
+          <p class="feature-card__desc">La Citadelle Laferrière, le Palais Sans-Souci et les Ramiers forment le Parc National Historique, classé au patrimoine mondial de l'UNESCO depuis 1982.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🎨</div>
+          <h3 class="feature-card__title">Art et Culture</h3>
+          <p class="feature-card__desc">La peinture naïve haïtienne, les sculptures en métal, la musique vodou et la littérature créole constituent un patrimoine artistique d'une richesse extraordinaire.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🌿</div>
+          <h3 class="feature-card__title">Patrimoine Naturel</h3>
+          <p class="feature-card__desc">Les massifs montagneux, les zones côtières et la biodiversité haïtienne, malgré la déforestation, représentent un patrimoine naturel qui mérite protection et restauration.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">📜</div>
+          <h3 class="feature-card__title">Archives Historiques</h3>
+          <p class="feature-card__desc">Les documents fondateurs de la République, les archives coloniales et révolutionnaires constituent une mémoire irremplaçable pour comprendre l'histoire haïtienne et mondiale.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🥘</div>
+          <h3 class="feature-card__title">Patrimoine Culinaire</h3>
+          <p class="feature-card__desc">La cuisine haïtienne, notamment la Soup Joumou reconnue par l'UNESCO, est un patrimoine culturel immatériel qui raconte l'histoire de l'indépendance et de la liberté.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🥁</div>
+          <h3 class="feature-card__title">Traditions Vivantes</h3>
+          <p class="feature-card__desc">Le Vodou, le Rara, le Carnaval et les traditions orales sont des patrimoines vivants qui continuent d'être pratiqués et transmis de génération en génération.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <span class="logo-emoji-flag">🇭🇹</span>
+            Haïti 🇭🇹
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="lwa.html">Les Lwa</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire</h4>
+          <ul>
+            <li><a href="history.html#revolution">La Révolution</a></li>
+            <li><a href="history.html#independence">Indépendance 1804</a></li>
+            <li><a href="history.html#figures">Personnages Clés</a></li>
+            <li><a href="history.html#modern">Haïti Moderne</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&#169; 2026 Kirlinger357 &#8212; 🇭🇹 Haïti 🇭🇹. Tous droits réservés.</span>
+        <span>Fait avec &#10084;&#65039; pour Haïti</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

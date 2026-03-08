@@ -1,43 +1,193 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Potentiel de la Jeunesse en Haïti</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            color: #3498db;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Jeunesse Haïtienne | 🇭🇹 Haïti 🇭🇹</title>
+  <meta name="author" content="Kirlinger357" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <h1>Le Potentiel de la Jeunesse en Haïti</h1>
-    
-    <h2>Talents de la Jeunesse</h2>
-    <p>La jeunesse haïtienne regorge de talents allant des arts et de la musique à l'athlétisme. Ces talents sont essentiels pour l'expression culturelle et la fierté nationale.</p>
-    
-    <h2>Obstacles</h2>
-    <p>Malgré leur potentiel, les jeunes haïtiens font face à de nombreux obstacles, notamment la pauvreté, le manque de ressources et l'accès limité aux opportunités.</p>
-    
-    <h2>Éducation et Formation</h2>
-    <p>Investir dans l'éducation et la formation professionnelle est crucial. Les programmes axés sur le développement des compétences peuvent permettre aux jeunes de surmonter les obstacles.</p>
-    
-    <h2>Innovation Numérique et Entrepreneuriat</h2>
-    <p>L'essor de la technologie numérique offre de nouvelles voies pour l'entrepreneuriat. De nombreux jeunes Haïtiens exploitent la technologie pour créer des startups et innover des solutions.</p>
-    
-    <h2>La Jeunesse comme Moteur de Transformation</h2>
-    <p>La jeunesse a le potentiel de conduire le changement sociétal. En les engageant dans le développement communautaire et les rôles de leadership, Haïti peut exploiter leur énergie pour une transformation positive.</p>
-    
-    <a href="#top">Retour en Haut</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
+          <span class="logo-emoji-flag">🇭🇹</span>
+          Haïti 🇭🇹
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="constitution.html">Constitution</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--about">
+    <div class="container">
+      <p class="page-hero__label">🌱 Jeunesse</p>
+      <h1 class="page-hero__title">Le Potentiel de la Jeunesse</h1>
+      <p class="page-hero__desc">La jeunesse haïtienne, moteur d'innovation et d'espoir, porte en elle l'avenir de la nation.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <span>Jeunesse</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Un Potentiel Immense</p>
+        <h2>Les Talents de la Jeunesse</h2>
+        <p>La jeunesse haïtienne est dynamique, créative et résiliente. Artistes, entrepreneurs, militants, étudiants : les jeunes Haïtiens font preuve d'une énergie et d'une détermination remarquables pour construire un avenir meilleur, malgré les obstacles considérables qui jalonnent leur parcours.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Défis</p>
+        <h2>Les Obstacles à Surmonter</h2>
+        <p>Les jeunes Haïtiens font face à de nombreux défis : chômage élevé, accès limité à une éducation de qualité, insécurité chronique et manque d'opportunités économiques. Ces obstacles poussent de nombreux jeunes talentueux à l'émigration, creusant le fossé de la fuite des cerveaux.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Formation</p>
+        <h2>Éducation et Formation</h2>
+        <p>Investir dans l'éducation de la jeunesse haïtienne est la condition première du développement du pays. Des écoles de qualité, des programmes de formation professionnelle adaptés aux besoins du marché et des bourses d'études sont indispensables pour libérer le potentiel de la prochaine génération.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Innovation</p>
+        <h2>Innovation Numérique et Entrepreneuriat</h2>
+        <p>Malgré les difficultés, une nouvelle génération d'entrepreneurs et d'innovateurs haïtiens émerge, portée par les technologies numériques. Des startups, des initiatives sociales et des projets culturels démontrent que la jeunesse haïtienne est capable de créer des solutions innovantes aux défis de son pays.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">L'Espoir</p>
+        <h2>La Jeunesse comme Moteur de Transformation</h2>
+        <p>La jeunesse haïtienne est le moteur principal de la transformation du pays. En lui donnant les outils, les opportunités et la confiance dont elle a besoin, Haïti peut transformer son potentiel humain exceptionnel en un véritable levier de développement et de renouveau national.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <span class="logo-emoji-flag">🇭🇹</span>
+            Haïti 🇭🇹
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="lwa.html">Les Lwa</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire</h4>
+          <ul>
+            <li><a href="history.html#revolution">La Révolution</a></li>
+            <li><a href="history.html#independence">Indépendance 1804</a></li>
+            <li><a href="history.html#figures">Personnages Clés</a></li>
+            <li><a href="history.html#modern">Haïti Moderne</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&#169; 2026 Kirlinger357 &#8212; 🇭🇹 Haïti 🇭🇹. Tous droits réservés.</span>
+        <span>Fait avec &#10084;&#65039; pour Haïti</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chronologie d'Haïti | 🇭�� Haïti 🇭🇹</title>
+  <meta name="description" content="De l'ère taïno à nos jours, explorez les moments qui ont façonné l'histoire d'Haïti." />
+  <meta name="author" content="Kirlinger357" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
+          <span class="logo-emoji-flag">🇭🇹</span>
+          Haïti 🇭🇹
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="constitution.html">Constitution</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">📅 Histoire</p>
+      <h1 class="page-hero__title">Chronologie d'Haïti</h1>
+      <p class="page-hero__desc">De l'ère taïno à nos jours, explorez les moments qui ont façonné l'histoire d'Haïti.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <span>Chronologie</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label text-center">De l'Ère Taïno à Nos Jours</p>
+      <h2 class="section-title text-center">Les Grands Moments de l'Histoire Haïtienne</h2>
+      <p class="section-subtitle text-center">Cette chronologie retrace les événements fondateurs qui ont façonné la nation haïtienne depuis ses origines préhistoriques jusqu'à l'époque contemporaine.</p>
+      <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">~5 000 av. J.-C.</p>
+          <h3 class="timeline-card__title">Premiers Habitants</h3>
+          <p class="timeline-card__desc">Les premiers habitants de l'île d'Hispaniola s'installent, ancêtres des populations indigènes qui peuplèrent l'île pendant des millénaires.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">~700 apr. J.-C.</p>
+          <h3 class="timeline-card__title">Civilisation Taïno</h3>
+          <p class="timeline-card__desc">La civilisation taïno s'épanouit sur l'île. Ce peuple amérindien développe une culture riche, organisée en cacicats, vivant de l'agriculture, de la pêche et de l'artisanat.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">5 décembre 1492</p>
+          <h3 class="timeline-card__title">Arrivée de Christophe Colomb</h3>
+          <p class="timeline-card__desc">Christophe Colomb arrive sur l'île le 5 décembre 1492 et la baptise Hispaniola. Cette rencontre marque le début de la colonisation européenne et le déclin rapide de la population taïno.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">1503</p>
+          <h3 class="timeline-card__title">Début de la Traite des Esclaves</h3>
+          <p class="timeline-card__desc">Les premières personnes réduites en esclavage sont amenées d'Afrique à Hispaniola pour remplacer la main-d'oeuvre indigène décimée par les maladies et les conditions de travail brutales.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">1697</p>
+          <h3 class="timeline-card__title">Traité de Ryswick</h3>
+          <p class="timeline-card__desc">L'Espagne cède le tiers occidental de l'île à la France par le Traité de Ryswick. La colonie française de Saint-Domingue devient l'une des plus riches du monde grâce au travail forcé des esclaves africains.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">14 août 1791</p>
+          <h3 class="timeline-card__title">Cérémonie du Bois Caïman</h3>
+          <p class="timeline-card__desc">La cérémonie du Bois Caïman, dirigée par Dutty Boukman et une mambo, marque le début de la Révolution haïtienne. Des centaines de milliers d'esclaves se soulèvent contre leurs oppresseurs.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">1801</p>
+          <h3 class="timeline-card__title">Première Constitution</h3>
+          <p class="timeline-card__desc">Toussaint Louverture promulgue la première constitution de Saint-Domingue, qui abolit l'esclavage et le nomme gouverneur à vie. Un acte révolutionnaire sans précédent dans l'histoire coloniale.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">18 novembre 1803</p>
+          <h3 class="timeline-card__title">Bataille de Vertières</h3>
+          <p class="timeline-card__desc">La bataille de Vertières est la victoire décisive des forces haïtiennes commandées par Jean-Jacques Dessalines contre les troupes napoléoniennes. Elle scelle l'indépendance du pays.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">1er janvier 1804</p>
+          <h3 class="timeline-card__title">Indépendance d'Haïti</h3>
+          <p class="timeline-card__desc">Jean-Jacques Dessalines déclare l'indépendance d'Haïti à Gonaïves. Haïti devient la première République noire du monde et la deuxième nation indépendante des Amériques après les États-Unis.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">1805</p>
+          <h3 class="timeline-card__title">Constitution de 1805</h3>
+          <p class="timeline-card__desc">L'Empereur Dessalines promulgue la Constitution de 1805. Ce texte fondateur déclare que tous les Haïtiens sont « noirs », quelles que soient leur couleur de peau, un acte de défiance radical contre le racisme colonial.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">17 octobre 1806</p>
+          <h3 class="timeline-card__title">Assassinat de Dessalines</h3>
+          <p class="timeline-card__desc">Jean-Jacques Dessalines, père fondateur de la nation, est assassiné. Sa mort plonge Haïti dans une période de divisions entre le nord, dirigé par Henri Christophe, et le sud, dirigé par Alexandre Pétion.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">1820</p>
+          <h3 class="timeline-card__title">Fin du Royaume du Nord</h3>
+          <p class="timeline-card__desc">Henri Christophe, roi du nord d'Haïti, se suicide après une révolte de ses généraux. L'unification du pays sous la présidence de Jean-Pierre Boyer suit peu après.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">1825</p>
+          <h3 class="timeline-card__title">Reconnaissance par la France</h3>
+          <p class="timeline-card__desc">La France reconnaît l'indépendance haïtienne en échange d'une indemnité colossale de 150 millions de francs. Cette dette financière pèsera lourdement sur l'économie haïtienne pendant plus d'un siècle.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">1844</p>
+          <h3 class="timeline-card__title">Indépendance Dominicaine</h3>
+          <p class="timeline-card__desc">La partie orientale de l'île se sépare d'Haïti et proclame son indépendance en tant que République Dominicaine, marquant la division définitive d'Hispaniola en deux nations.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">1915-1934</p>
+          <h3 class="timeline-card__title">Occupation Américaine</h3>
+          <p class="timeline-card__desc">Les États-Unis occupent militairement Haïti de 1915 à 1934, contrôlant ses finances et son administration. Cette période laisse des séquelles profondes sur l'autonomie et la souveraineté nationale.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">1937</p>
+          <h3 class="timeline-card__title">Massacre du Persil</h3>
+          <p class="timeline-card__desc">Des dizaines de milliers d'Haïtiens travaillant en République Dominicaine sont massacrés sur ordre du dictateur Trujillo. Ce génocide demeure l'une des pages les plus sombres de l'histoire caribéenne.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">1957</p>
+          <h3 class="timeline-card__title">Accession au Pouvoir de Duvalier</h3>
+          <p class="timeline-card__desc">François Duvalier, dit « Papa Doc », accède à la présidence. Son régime, soutenu par la milice des Tonton Macoutes, instaure une dictature brutale qui marquera durablement le pays.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">1964</p>
+          <h3 class="timeline-card__title">Duvalier Président à Vie</h3>
+          <p class="timeline-card__desc">François Duvalier se proclame Président à vie, consolidant un régime de terreur qui écrase toute opposition politique et provoque l'exode de nombreux intellectuels et professionnels haïtiens.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">1971</p>
+          <h3 class="timeline-card__title">Jean-Claude Duvalier au Pouvoir</h3>
+          <p class="timeline-card__desc">À la mort de son père, Jean-Claude Duvalier, dit « Baby Doc », lui succède à 19 ans. Son régime, moins violent mais tout aussi corrompu, s'étend jusqu'en 1986.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">7 février 1986</p>
+          <h3 class="timeline-card__title">Chute du Régime Duvalier</h3>
+          <p class="timeline-card__desc">Sous la pression d'un soulèvement populaire, Jean-Claude Duvalier quitte Haïti à bord d'un avion américain, mettant fin à 29 ans de dictature familiale.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">29 mars 1987</p>
+          <h3 class="timeline-card__title">Nouvelle Constitution</h3>
+          <p class="timeline-card__desc">Une nouvelle constitution démocratique est adoptée par référendum populaire. Ce texte fondateur établit la séparation des pouvoirs, la liberté de la presse et des élections libres.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">16 décembre 1990</p>
+          <h3 class="timeline-card__title">Élection d'Aristide</h3>
+          <p class="timeline-card__desc">Jean-Bertrand Aristide est élu président lors des premières élections libres et démocratiques de l'histoire d'Haïti, remportant plus de 67 % des suffrages au premier tour.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">1991</p>
+          <h3 class="timeline-card__title">Coup d'État Militaire</h3>
+          <p class="timeline-card__desc">Un coup d'État militaire dirigé par le général Raoul Cédras renverse le président Aristide. La communauté internationale décrète un embargo contre les putschistes.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">1994</p>
+          <h3 class="timeline-card__title">Retour d'Aristide</h3>
+          <p class="timeline-card__desc">Aristide est rétabli dans ses fonctions présidentielles avec l'appui d'une intervention militaire internationale, après trois ans d'exil aux États-Unis.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">1er janvier 2004</p>
+          <h3 class="timeline-card__title">Bicentenaire de l'Indépendance</h3>
+          <p class="timeline-card__desc">Haïti célèbre le bicentenaire de son indépendance. Cependant, une nouvelle crise politique conduit à l'exile du président Aristide en Afrique du Sud, marquant une période de turbulences renouvelées.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">12 janvier 2010</p>
+          <h3 class="timeline-card__title">Séisme Dévastateur</h3>
+          <p class="timeline-card__desc">Un séisme de magnitude 7,0 ravage la région de Port-au-Prince. Plus de 200 000 personnes trouvent la mort et 1,5 million de personnes se retrouvent sans abri dans l'une des plus grandes catastrophes naturelles de l'histoire moderne.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">7 juillet 2021</p>
+          <h3 class="timeline-card__title">Assassinat du Président Moïse</h3>
+          <p class="timeline-card__desc">Le président Jovenel Moïse est assassiné à son domicile à Port-au-Prince dans la nuit du 6 au 7 juillet 2021. Cet acte brutal plonge le pays dans une nouvelle période d'incertitude politique profonde.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">2024</p>
+          <h3 class="timeline-card__title">Crise Sécuritaire</h3>
+          <p class="timeline-card__desc">La violence des gangs armés s'intensifie dans tout le pays, en particulier dans la capitale. Une mission multinationale de soutien à la sécurité est déployée pour aider la Police Nationale d'Haïti à rétablir l'ordre.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-card">
+          <p class="timeline-card__year">2025</p>
+          <h3 class="timeline-card__title">Transition et Espoir</h3>
+          <p class="timeline-card__desc">Un conseil présidentiel de transition et un Premier ministre s'efforcent de stabiliser le pays et de préparer le terrain pour de nouvelles élections. La communauté internationale continue d'apporter son soutien à la reconstruction des institutions haïtiennes.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <span class="logo-emoji-flag">🇭🇹</span>
+            Haïti 🇭🇹
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="lwa.html">Les Lwa</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire</h4>
+          <ul>
+            <li><a href="history.html#revolution">La Révolution</a></li>
+            <li><a href="history.html#independence">Indépendance 1804</a></li>
+            <li><a href="history.html#figures">Personnages Clés</a></li>
+            <li><a href="history.html#modern">Haïti Moderne</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&#169; 2026 Kirlinger357 &#8212; 🇭🇹 Haïti 🇭🇹. Tous droits réservés.</span>
+        <span>Fait avec &#10084;&#65039; pour Haïti</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

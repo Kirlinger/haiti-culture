@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archives Historiques d'Haïti | 🇭🇹 Haïti 🇭🇹</title>
+  <meta name="description" content="Documents fondateurs, discours historiques et textes qui ont forgé l'identité haïtienne." />
+  <meta name="author" content="Kirlinger357" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
+          <span class="logo-emoji-flag">🇭🇹</span>
+          Haïti 🇭🇹
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="constitution.html">Constitution</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">📚 Archives</p>
+      <h1 class="page-hero__title">Archives Historiques</h1>
+      <p class="page-hero__desc">Documents fondateurs, discours historiques et textes qui ont forgé l'identité haïtienne.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <span>Archives</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Mémoire et Identité</p>
+        <h2>Introduction aux Archives Historiques</h2>
+        <p>Ces archives numériques rassemblent des documents fondateurs, des textes historiques et des discours essentiels liés à Haïti. Ces textes constituent le socle de l'identité et de la mémoire haïtiennes. Ils témoignent de la lutte pour la liberté, de la construction de l'État et de la voix de ceux qui ont façonné la nation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <p class="section-label text-center">Textes Fondateurs</p>
+      <h2 class="section-title text-center">Documents Historiques</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--blue">📜</div>
+          <div class="card__body">
+            <p class="card__tag">1er janvier 1804</p>
+            <h3 class="card__title">Acte de l'Indépendance</h3>
+            <p class="card__desc">La déclaration officielle d'indépendance signée par Dessalines et les chefs révolutionnaires. L'original était présumé perdu, mais une copie a été redécouverte en 2010 aux Archives nationales britanniques, suscitant une immense émotion en Haïti et dans le monde.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--blue">📜</div>
+          <div class="card__body">
+            <p class="card__tag">Toussaint Louverture</p>
+            <h3 class="card__title">Constitution de 1801</h3>
+            <p class="card__desc">Première constitution de Saint-Domingue, rédigée sous l'autorité de Toussaint Louverture. Elle abolissait l'esclavage sur tout le territoire et nommait Toussaint gouverneur à vie, un acte d'une audace politique extraordinaire dans le contexte colonial de l'époque.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--blue">📜</div>
+          <div class="card__body">
+            <p class="card__tag">Sous l'Empereur Dessalines</p>
+            <h3 class="card__title">Constitution de 1805</h3>
+            <p class="card__desc">Première constitution d'Haïti indépendant, rédigée sous l'autorité de l'Empereur Dessalines. Ce texte fondateur déclarait tous les Haïtiens « noirs », quelle que soit leur couleur de peau, un acte de rupture radical et délibéré avec l'idéologie raciste de la colonisation.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--blue">📜</div>
+          <div class="card__body">
+            <p class="card__tag">1804</p>
+            <h3 class="card__title">Proclamation de Boisrond-Tonnerre</h3>
+            <p class="card__desc">Texte officiel de la déclaration d'indépendance, rédigé par Boisrond-Tonnerre avec une virulence révolutionnaire assumée. Ce document constitue une rupture totale et définitive avec la France coloniale et un appel à la dignité de tous les peuples opprimés.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--blue">📣</div>
+          <div class="card__body">
+            <p class="card__tag">29 novembre 1803</p>
+            <h3 class="card__title">Acte de Gonaïves</h3>
+            <p class="card__desc">Acte formel proclamant l'indépendance de la partie occidentale d'Hispaniola, signé un mois avant la date officielle de l'indépendance. Ce document préfigure la naissance de la nation haïtienne et scelle la victoire irréversible de la Révolution.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--blue">📣</div>
+          <div class="card__body">
+            <p class="card__tag">1804</p>
+            <h3 class="card__title">Discours de Jean-Jacques Dessalines</h3>
+            <p class="card__desc">Discours majeurs du père fondateur appelant à l'unité nationale, à la liberté et à la fierté haïtienne. Ces textes révèlent la vision politique et la détermination d'un homme qui rompit pour toujours avec l'ordre colonial.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label text-center">Voix de la Nation</p>
+      <h2 class="section-title text-center">Discours et Textes Importants</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--red">📣</div>
+          <div class="card__body">
+            <p class="card__tag">Henri Christophe</p>
+            <h3 class="card__title">Discours sur la Construction de la Nation (1811)</h3>
+            <p class="card__desc">Henri Ier développe sa vision d'un État haïtien prospère et souverain, capable de démontrer au monde la capacité des Noirs à se gouverner et à bâtir une grande civilisation.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--red">📣</div>
+          <div class="card__body">
+            <p class="card__tag">Alexandre Pétion</p>
+            <h3 class="card__title">Sur la Démocratie et la Réforme Agraire (1809)</h3>
+            <p class="card__desc">Pétion expose les fondements de sa politique sociale progressiste, dont la redistribution des terres aux anciens esclaves et aux soldats de la Révolution.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--red">📣</div>
+          <div class="card__body">
+            <p class="card__tag">Jean Price-Mars</p>
+            <h3 class="card__title">Ainsi Parla l'Oncle (1928)</h3>
+            <p class="card__desc">Texte fondateur du mouvement indigéniste haïtien. Price-Mars appelle les intellectuels haïtiens à valoriser les cultures africaines et la tradition vodou comme socle d'une identité nationale authentique.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--red">📣</div>
+          <div class="card__body">
+            <p class="card__tag">Jean-Bertrand Aristide</p>
+            <h3 class="card__title">Premier Discours d'Investiture (1991)</h3>
+            <p class="card__desc">Premier président démocratiquement élu d'Haïti, Aristide exprime sa vision d'une Haïti juste et équitable, fondée sur la participation populaire et la dignité de tous les citoyens.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Ressources</p>
+        <h2>Consulter les Archives Originales</h2>
+        <p>Pour accéder aux documents originaux, les chercheurs peuvent consulter les Archives Nationales d'Haïti à Port-au-Prince ainsi que les Archives Nationales Britanniques à Londres, où une copie de l'Acte d'Indépendance de 1804 a été retrouvée en 2010. De nombreuses universités américaines et européennes conservent également des collections de documents historiques haïtiens.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <span class="logo-emoji-flag">🇭🇹</span>
+            Haïti 🇭🇹
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="lwa.html">Les Lwa</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire</h4>
+          <ul>
+            <li><a href="history.html#revolution">La Révolution</a></li>
+            <li><a href="history.html#independence">Indépendance 1804</a></li>
+            <li><a href="history.html#figures">Personnages Clés</a></li>
+            <li><a href="history.html#modern">Haïti Moderne</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&#169; 2026 Kirlinger357 &#8212; 🇭🇹 Haïti 🇭🇹. Tous droits réservés.</span>
+        <span>Fait avec &#10084;&#65039; pour Haïti</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
