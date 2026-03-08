@@ -1895,111 +1895,117 @@ ul {
 
 /* ── Per-Lwa Color Schemes ───────────────────────────── */
 
-/* Papa Legba — Noir & Rouge (carrefours, terre, feu) */
+/* Papa Legba — Noir & Rouge-Brun (carrefours, terre, feu) */
 .lwa-profile--legba .lwa-profile__header {
-  background: linear-gradient(135deg, #1c0500 0%, #5a1500 55%, #880800 100%);
+  background: linear-gradient(135deg, #0d0000 0%, #420000 50%, #7a1000 100%);
 }
 .lwa-profile--legba .lwa-profile__chant {
-  background: linear-gradient(160deg, #180400, #4a1000);
+  background: linear-gradient(160deg, #0d0000, #350000);
 }
-.lwa-profile--legba .lwa-profile__text h3 { color: #8B0000; }
-.lwa-profile--legba .lwa-profile__chant h3 { color: #e07050; }
+.lwa-profile--legba .lwa-profile__text h3 { color: #b01000; }
+.lwa-profile--legba .lwa-profile__chant h3 { color: #ff8060; }
 
-/* Damballah Wedo — Blanc & Argent (pureté, ciel, lune) */
+/* Damballah Wedo — Argent & Blanc (pureté, serpent céleste, lune) */
 .lwa-profile--damballah .lwa-profile__header {
-  background: linear-gradient(135deg, #1e2d3d 0%, #2e4a6a 55%, #3a6080 100%);
+  background: linear-gradient(135deg, #0a0e0c 0%, #181e1a 50%, #242c26 100%);
 }
 .lwa-profile--damballah .lwa-profile__chant {
-  background: linear-gradient(160deg, #152030, #234460);
+  background: linear-gradient(160deg, #080c0a, #141c14);
 }
-.lwa-profile--damballah .lwa-profile__text h3 { color: #2e4a6a; }
-.lwa-profile--damballah .lwa-profile__chant h3 { color: #a0cce0; }
+.lwa-profile--damballah .lwa-profile__text h3 { color: #3a6a52; }
+.lwa-profile--damballah .lwa-profile__chant h3 { color: #b8dcc8; }
 
-/* Ayida Wedo — Blanc & Arc-en-ciel (ciel, eau, fertilité) */
+/* Ayida Wedo — Arc-en-Ciel (ciel, pluie, fertilité céleste) */
 .lwa-profile--ayida .lwa-profile__header {
-  background: linear-gradient(135deg, #1a3050 0%, #1a5060 40%, #2a3a6a 100%);
+  background: linear-gradient(135deg,
+    #300060 0%,
+    #001068 20%,
+    #003840 40%,
+    #3a2800 60%,
+    #601010 80%,
+    #380050 100%);
 }
 .lwa-profile--ayida .lwa-profile__chant {
-  background: linear-gradient(160deg, #0f2030, #1a3850);
+  background: linear-gradient(160deg, #1e0040, #002a3a);
 }
-.lwa-profile--ayida .lwa-profile__text h3 { color: #1a5060; }
-.lwa-profile--ayida .lwa-profile__chant h3 { color: #80d0e0; }
+.lwa-profile--ayida .lwa-profile__text h3 { color: #2a8a6a; }
+.lwa-profile--ayida .lwa-profile__chant h3 { color: #90e8c8; }
 
-/* Ogou Feray — Rouge & Noir (guerre, fer, feu) */
+/* Ogou Feray — Rouge Militaire & Noir (guerre, fer, feu) */
 .lwa-profile--ogou .lwa-profile__header {
-  background: linear-gradient(135deg, #1a0000 0%, #700000 55%, #900010 100%);
+  background: linear-gradient(135deg, #1a0000 0%, #780000 45%, #b80000 100%);
 }
 .lwa-profile--ogou .lwa-profile__chant {
-  background: linear-gradient(160deg, #150000, #520000);
+  background: linear-gradient(160deg, #140000, #600000);
 }
-.lwa-profile--ogou .lwa-profile__text h3 { color: #8B0000; }
-.lwa-profile--ogou .lwa-profile__chant h3 { color: #e07070; }
+.lwa-profile--ogou .lwa-profile__text h3 { color: #c01000; }
+.lwa-profile--ogou .lwa-profile__chant h3 { color: #ff9090; }
 
-/* Erzulie Freda — Rose & Or (amour, beauté, luxe) */
+/* Erzulie Freda — Rose Profond & Or (amour, beauté, désir) */
 .lwa-profile--erzulie-freda .lwa-profile__header {
-  background: linear-gradient(135deg, #4a0030 0%, #8b0055 55%, #a0006a 100%);
+  background: linear-gradient(135deg, #1e0810 0%, #681535 50%, #a02850 100%);
 }
 .lwa-profile--erzulie-freda .lwa-profile__chant {
-  background: linear-gradient(160deg, #3a0025, #700040);
+  background: linear-gradient(160deg, #180610, #501025);
 }
-.lwa-profile--erzulie-freda .lwa-profile__text h3 { color: #8b0055; }
-.lwa-profile--erzulie-freda .lwa-profile__chant h3 { color: #f0a0d0; }
+.lwa-profile--erzulie-freda .lwa-profile__text h3 { color: #b82855; }
+.lwa-profile--erzulie-freda .lwa-profile__chant h3 { color: #ffb0c8; }
 
-/* Erzulie Dantor — Bleu & Or (mère guerrière, protection) */
+/* Erzulie Dantor — Bleu Royal & Or (mère guerrière, Vierge Noire) */
 .lwa-profile--erzulie-dantor .lwa-profile__header {
-  background: linear-gradient(135deg, #080f30 0%, #162060 55%, #0e1e78 100%);
+  background: linear-gradient(135deg, #040c28 0%, #0c2070 55%, #1030a0 100%);
 }
 .lwa-profile--erzulie-dantor .lwa-profile__chant {
-  background: linear-gradient(160deg, #060c24, #101848);
+  background: linear-gradient(160deg, #030920, #0a1860);
 }
-.lwa-profile--erzulie-dantor .lwa-profile__text h3 { color: #162060; }
-.lwa-profile--erzulie-dantor .lwa-profile__chant h3 { color: #90b0f0; }
+.lwa-profile--erzulie-dantor .lwa-profile__text h3 { color: #2244cc; }
+.lwa-profile--erzulie-dantor .lwa-profile__chant h3 { color: #b0c8ff; }
 
-/* Baron Samedi — Noir & Violet (mort, cimetières) */
+/* Baron Samedi — Noir Absolu & Violet (mort, cimetières, humour macabre) */
 .lwa-profile--baron .lwa-profile__header {
-  background: linear-gradient(135deg, #060010 0%, #200040 55%, #330060 100%);
+  background: linear-gradient(135deg, #000000 0%, #120028 55%, #1e0040 100%);
 }
 .lwa-profile--baron .lwa-profile__chant {
-  background: linear-gradient(160deg, #050008, #1a0030);
+  background: linear-gradient(160deg, #000000, #0e001e);
 }
-.lwa-profile--baron .lwa-profile__text h3 { color: #5b21a8; }
-.lwa-profile--baron .lwa-profile__chant h3 { color: #c090f0; }
+.lwa-profile--baron .lwa-profile__text h3 { color: #7c3aed; }
+.lwa-profile--baron .lwa-profile__chant h3 { color: #c4b5fd; }
 
-/* Gran Brigitte — Noir & Violet (mort, guérison, mémoire) */
+/* Gran Brigitte — Violet & Noir (gardienne des morts, guérisseuse) */
 .lwa-profile--gran-brigitte .lwa-profile__header {
-  background: linear-gradient(135deg, #080018 0%, #220048 55%, #36005a 100%);
+  background: linear-gradient(135deg, #100020 0%, #380060 55%, #500080 100%);
 }
 .lwa-profile--gran-brigitte .lwa-profile__chant {
-  background: linear-gradient(160deg, #060012, #1a0038);
+  background: linear-gradient(160deg, #0e001a, #2e0052);
 }
-.lwa-profile--gran-brigitte .lwa-profile__text h3 { color: #5b21a8; }
-.lwa-profile--gran-brigitte .lwa-profile__chant h3 { color: #c090f0; }
+.lwa-profile--gran-brigitte .lwa-profile__text h3 { color: #9c2dd0; }
+.lwa-profile--gran-brigitte .lwa-profile__chant h3 { color: #e0b0ff; }
 
-/* Azaka Mede — Bleu & Blanc chambray (agriculture, paysans) */
+/* Azaka Mede — Bleu Chambray & Vert Terre (agriculture, paysans) */
 .lwa-profile--azaka .lwa-profile__header {
-  background: linear-gradient(135deg, #0f2a4a 0%, #1a4878 55%, #1e5592 100%);
+  background: linear-gradient(135deg, #0e1a08 0%, #1a3018 45%, #1e3c5a 100%);
 }
 .lwa-profile--azaka .lwa-profile__chant {
-  background: linear-gradient(160deg, #0b2038, #163a68);
+  background: linear-gradient(160deg, #0a1408, #153020);
 }
-.lwa-profile--azaka .lwa-profile__text h3 { color: #1a4878; }
-.lwa-profile--azaka .lwa-profile__chant h3 { color: #80b8e8; }
+.lwa-profile--azaka .lwa-profile__text h3 { color: #2070a0; }
+.lwa-profile--azaka .lwa-profile__chant h3 { color: #8ed4f4; }
 
-/* Agwe Tawoyo — Bleu & Vert marine (mer, océan, pêcheurs) */
+/* Agwe Tawoyo — Bleu Océan & Vert Marin (mer, océan, pêcheurs) */
 .lwa-profile--agwe .lwa-profile__header {
-  background: linear-gradient(135deg, #002a44 0%, #00445a 50%, #005566 100%);
+  background: linear-gradient(135deg, #001428 0%, #003858 40%, #005040 100%);
 }
 .lwa-profile--agwe .lwa-profile__chant {
-  background: linear-gradient(160deg, #002036, #003350);
+  background: linear-gradient(160deg, #001020, #003040);
 }
-.lwa-profile--agwe .lwa-profile__text h3 { color: #005566; }
-.lwa-profile--agwe .lwa-profile__chant h3 { color: #70c8d8; }
+.lwa-profile--agwe .lwa-profile__text h3 { color: #007860; }
+.lwa-profile--agwe .lwa-profile__chant h3 { color: #70d8c0; }
 
 /* Per-lwa image placeholder colors */
-.card__img--legba         { background: linear-gradient(135deg, #3b1000, #780800); }
-.card__img--damballah     { background: linear-gradient(135deg, #1e3a55, #2e5a80); }
-.card__img--erzulie-freda { background: linear-gradient(135deg, #6b0045, #a00065); }
-.card__img--baron         { background: linear-gradient(135deg, #100020, #2a0055); }
+.card__img--legba         { background: linear-gradient(135deg, #1a0000, #6a0000); }
+.card__img--damballah     { background: linear-gradient(135deg, #0c120e, #1c2820); }
+.card__img--erzulie-freda { background: linear-gradient(135deg, #3a0818, #882040); }
+.card__img--baron         { background: linear-gradient(135deg, #000000, #180030); }
 
 /* ── Lwa Navigation Grid ─────────────────────────────── */
 .lwa-nav-grid {
