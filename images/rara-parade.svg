@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a00"/>
+      <stop offset="100%" style="stop-color:#3a1500"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <!-- Festive background lights -->
+  <circle cx="150" cy="80" r="25" fill="#FFD700" opacity="0.5"/>
+  <circle cx="300" cy="60" r="18" fill="#D21034" opacity="0.6"/>
+  <circle cx="500" cy="70" r="22" fill="#00209F" opacity="0.5"/>
+  <circle cx="650" cy="85" r="20" fill="#FF6B35" opacity="0.6"/>
+  <!-- Musicians/parade figures (simplified) -->
+  <!-- Figure 1 - drummer -->
+  <ellipse cx="180" cy="200" rx="30" ry="35" fill="#3d2b1f"/>
+  <rect x="155" y="230" width="50" height="100" rx="5" fill="#D21034"/>
+  <!-- Drum -->
+  <rect x="165" y="270" width="30" height="40" rx="5" fill="#8B4513"/>
+  <ellipse cx="180" cy="270" rx="15" ry="6" fill="#D2691E"/>
+  <!-- Figure 2 - horn player -->
+  <ellipse cx="340" cy="190" rx="30" ry="35" fill="#3d2b1f"/>
+  <rect x="315" y="220" width="50" height="110" rx="5" fill="#00209F"/>
+  <!-- Horn -->
+  <path d="M360,210 Q400,200 420,220" stroke="#FFD700" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <!-- Figure 3 - dancer (center) -->
+  <ellipse cx="400" cy="185" rx="35" ry="40" fill="#3d2b1f"/>
+  <path d="M365,225 Q340,260 320,330 Q350,345 380,330 L395,280 L410,330 Q440,345 470,330 Q450,260 425,225 Z" fill="#FFD700"/>
+  <!-- Arms raised in dance -->
+  <line x1="365" y1="240" x2="330" y2="190" stroke="#3d2b1f" stroke-width="15" stroke-linecap="round"/>
+  <line x1="435" y1="240" x2="470" y2="190" stroke="#3d2b1f" stroke-width="15" stroke-linecap="round"/>
+  <!-- Figure 4 -->
+  <ellipse cx="560" cy="195" rx="30" ry="35" fill="#3d2b1f"/>
+  <rect x="535" y="225" width="50" height="105" rx="5" fill="#D21034"/>
+  <!-- Figure 5 -->
+  <ellipse cx="700" cy="200" rx="28" ry="33" fill="#3d2b1f"/>
+  <rect x="677" y="228" width="46" height="100" rx="5" fill="#00209F"/>
+  <!-- Ground / street -->
+  <rect x="0" y="380" width="800" height="120" fill="#2a1500"/>
+  <!-- Confetti -->
+  <rect x="200" y="150" width="8" height="15" fill="#D21034" transform="rotate(30,200,150)"/>
+  <rect x="450" y="130" width="8" height="15" fill="#FFD700" transform="rotate(-15,450,130)"/>
+  <rect x="600" y="160" width="8" height="15" fill="#00209F" transform="rotate(45,600,160)"/>
+  <rect x="100" y="170" width="8" height="15" fill="#FF6B35" transform="rotate(-30,100,170)"/>
+  <!-- Text -->
+  <rect x="100" y="420" width="600" height="60" rx="8" fill="rgba(0,0,0,0.7)"/>
+  <text x="400" y="447" font-family="Georgia, serif" font-size="22" fill="#FFD700" text-anchor="middle" font-weight="bold">Rara — Musique et Parade Haïtienne</text>
+  <text x="400" y="470" font-family="Georgia, serif" font-size="13" fill="#cccccc" text-anchor="middle">Célébration Culturelle Traditionnelle</text>
+</svg>

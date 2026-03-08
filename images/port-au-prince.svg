@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1565C0"/>
+      <stop offset="100%" style="stop-color:#42A5F5"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0077b6"/>
+      <stop offset="100%" style="stop-color:#003466"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <!-- Hills in background -->
+  <polygon points="0,220 100,150 250,220" fill="#1a5e1a"/>
+  <polygon points="150,220 300,140 450,220" fill="#236b23"/>
+  <polygon points="400,220 550,155 700,220" fill="#1a5e1a"/>
+  <polygon points="600,220 720,160 800,220" fill="#236b23"/>
+  <!-- Sea/harbor -->
+  <rect x="0" y="330" width="800" height="170" fill="url(#sea)"/>
+  <!-- Waves -->
+  <path d="M0,345 Q100,335 200,345 Q300,355 400,345 Q500,335 600,345 Q700,355 800,345" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="none"/>
+  <!-- Ground/waterfront -->
+  <rect x="0" y="300" width="800" height="50" fill="#8B7355"/>
+  <!-- City buildings - Port-au-Prince skyline -->
+  <!-- Building 1 (tall - government) -->
+  <rect x="60" y="180" width="65" height="130" fill="#D21034"/>
+  <rect x="72" y="192" width="20" height="28" rx="2" fill="#87CEEB"/>
+  <rect x="100" y="192" width="20" height="28" rx="2" fill="#87CEEB"/>
+  <rect x="72" y="235" width="20" height="28" rx="2" fill="#87CEEB"/>
+  <rect x="100" y="235" width="20" height="28" rx="2" fill="#87CEEB"/>
+  <rect x="82" y="280" width="24" height="30" fill="#7B1C1C"/>
+  <polygon points="60,180 92,150 125,180" fill="#B71C1C"/>
+  <!-- Building 2 -->
+  <rect x="145" y="205" width="75" height="105" fill="#00209F"/>
+  <rect x="158" y="218" width="22" height="30" rx="2" fill="#87CEEB"/>
+  <rect x="188" y="218" width="22" height="30" rx="2" fill="#87CEEB"/>
+  <rect x="158" y="262" width="22" height="25" rx="2" fill="#87CEEB"/>
+  <rect x="188" y="262" width="22" height="25" rx="2" fill="#87CEEB"/>
+  <rect x="170" y="290" width="26" height="20" fill="#1A237E"/>
+  <!-- Building 3 (cathedral-like) -->
+  <rect x="240" y="170" width="100" height="140" fill="#ECEFF1"/>
+  <rect x="253" y="185" width="28" height="40" rx="2" fill="#87CEEB"/>
+  <rect x="300" y="185" width="28" height="40" rx="2" fill="#87CEEB"/>
+  <rect x="265" y="250" width="54" height="60" fill="#B0BEC5"/>
+  <polygon points="240,170 290,130 340,170" fill="#CFD8DC"/>
+  <!-- Twin towers/spires -->
+  <rect x="250" y="115" width="18" height="60" fill="#B0BEC5"/>
+  <rect x="315" y="115" width="18" height="60" fill="#B0BEC5"/>
+  <polygon points="250,115 259,95 268,115" fill="#90A4AE"/>
+  <polygon points="315,115 324,95 333,115" fill="#90A4AE"/>
+  <!-- Building 4 -->
+  <rect x="360" y="195" width="80" height="115" fill="#FF9800"/>
+  <rect x="372" y="210" width="22" height="30" rx="2" fill="#87CEEB"/>
+  <rect x="404" y="210" width="22" height="30" rx="2" fill="#87CEEB"/>
+  <rect x="380" y="270" width="28" height="40" fill="#E65100"/>
+  <polygon points="360,195 400,165 440,195" fill="#F57C00"/>
+  <!-- Building 5 -->
+  <rect x="460" y="215" width="70" height="95" fill="#4CAF50"/>
+  <rect x="470" y="228" width="20" height="28" rx="2" fill="#87CEEB"/>
+  <rect x="500" y="228" width="20" height="28" rx="2" fill="#87CEEB"/>
+  <rect x="478" y="270" width="22" height="40" fill="#388E3C"/>
+  <!-- Building 6 -->
+  <rect x="550" y="205" width="75" height="105" fill="#9C27B0"/>
+  <rect x="562" y="218" width="20" height="28" rx="2" fill="#87CEEB"/>
+  <rect x="592" y="218" width="20" height="28" rx="2" fill="#87CEEB"/>
+  <rect x="570" y="270" width="26" height="40" fill="#6A1B9A"/>
+  <polygon points="550,205 587,175 625,205" fill="#7B1FA2"/>
+  <!-- Building 7 -->
+  <rect x="650" y="220" width="65" height="90" fill="#00BCD4"/>
+  <rect x="660" y="235" width="18" height="25" rx="2" fill="#87CEEB"/>
+  <rect x="686" y="235" width="18" height="25" rx="2" fill="#87CEEB"/>
+  <rect x="665" y="270" width="22" height="40" fill="#00838F"/>
+  <!-- Boats in harbor -->
+  <path d="M100,345 Q130,338 160,345 L157,358 Q130,362 103,358 Z" fill="white"/>
+  <path d="M600,348 Q625,342 650,348 L648,360 Q625,364 602,360 Z" fill="white"/>
+  <!-- Text -->
+  <rect x="100" y="430" width="600" height="55" rx="8" fill="rgba(0,0,0,0.65)"/>
+  <text x="400" y="456" font-family="Georgia, serif" font-size="22" fill="#FFD700" text-anchor="middle" font-weight="bold">Port-au-Prince, Haïti</text>
+  <text x="400" y="476" font-family="Georgia, serif" font-size="13" fill="#cccccc" text-anchor="middle">Capitale de la République d'Haïti</text>
+</svg>

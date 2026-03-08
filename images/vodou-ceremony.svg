@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <radialGradient id="fire" cx="50%" cy="80%" r="60%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="40%" style="stop-color:#FF6B00"/>
+      <stop offset="100%" style="stop-color:#1a0a00"/>
+    </radialGradient>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#050510"/>
+      <stop offset="100%" style="stop-color:#1a0a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <!-- Stars -->
+  <circle cx="100" cy="50" r="2" fill="white" opacity="0.7"/>
+  <circle cx="250" cy="30" r="2" fill="white" opacity="0.6"/>
+  <circle cx="550" cy="45" r="2" fill="white" opacity="0.7"/>
+  <circle cx="700" cy="25" r="2" fill="white" opacity="0.5"/>
+  <circle cx="650" cy="80" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="150" cy="90" r="1.5" fill="white" opacity="0.5"/>
+  <!-- Central fire -->
+  <ellipse cx="400" cy="320" rx="60" ry="15" fill="#FF4500" opacity="0.7"/>
+  <path d="M360,320 Q370,260 390,220 Q400,200 410,220 Q430,260 440,320 Z" fill="#FF6B00"/>
+  <path d="M375,320 Q380,270 395,235 Q400,215 405,235 Q420,270 425,320 Z" fill="#FF9500"/>
+  <path d="M385,320 Q390,280 400,255 Q410,280 415,320 Z" fill="#FFD700"/>
+  <!-- Veve symbol (voodoo drawing) on ground -->
+  <circle cx="400" cy="340" r="100" fill="none" stroke="rgba(255,215,0,0.3)" stroke-width="2"/>
+  <line x1="400" y1="240" x2="400" y2="440" stroke="rgba(255,215,0,0.3)" stroke-width="2"/>
+  <line x1="300" y1="340" x2="500" y2="340" stroke="rgba(255,215,0,0.3)" stroke-width="2"/>
+  <line x1="330" y1="270" x2="470" y2="410" stroke="rgba(255,215,0,0.2)" stroke-width="1"/>
+  <line x1="470" y1="270" x2="330" y2="410" stroke="rgba(255,215,0,0.2)" stroke-width="1"/>
+  <!-- Ceremonial figures around fire -->
+  <ellipse cx="250" cy="300" rx="22" ry="25" fill="#2a1a0a"/>
+  <rect x="230" y="320" width="40" height="70" rx="5" fill="#5a2a0a"/>
+  <ellipse cx="550" cy="295" rx="22" ry="25" fill="#2a1a0a"/>
+  <rect x="530" y="315" width="40" height="70" rx="5" fill="#5a2a0a"/>
+  <ellipse cx="170" cy="310" rx="20" ry="23" fill="#2a1a0a"/>
+  <rect x="152" y="328" width="36" height="65" rx="5" fill="#7a1a1a"/>
+  <ellipse cx="630" cy="305" rx="20" ry="23" fill="#2a1a0a"/>
+  <rect x="612" y="323" width="36" height="65" rx="5" fill="#1a1a7a"/>
+  <!-- Drums -->
+  <rect x="80" y="360" width="25" height="35" rx="4" fill="#8B4513"/>
+  <rect x="690" y="355" width="25" height="40" rx="4" fill="#8B4513"/>
+  <!-- Text -->
+  <rect x="100" y="420" width="600" height="60" rx="8" fill="rgba(0,0,0,0.7)"/>
+  <text x="400" y="447" font-family="Georgia, serif" font-size="22" fill="#FFD700" text-anchor="middle" font-weight="bold">Cérémonie Vodou Haïtienne</text>
+  <text x="400" y="470" font-family="Georgia, serif" font-size="13" fill="#cccccc" text-anchor="middle">Religion Afro-Caribéenne • Tradition Spirituelle</text>
+</svg>

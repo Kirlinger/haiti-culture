@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0277BD"/>
+      <stop offset="60%" style="stop-color:#4FC3F7"/>
+      <stop offset="100%" style="stop-color:#B3E5FC"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00838F"/>
+      <stop offset="100%" style="stop-color:#006064"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff3b0"/>
+      <stop offset="100%" style="stop-color:#f0d880"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <!-- Sun -->
+  <circle cx="660" cy="90" r="52" fill="#FFEE58" opacity="0.95"/>
+  <!-- Island in the distance -->
+  <ellipse cx="400" cy="240" rx="300" ry="60" fill="#2E7D32"/>
+  <ellipse cx="400" cy="235" rx="270" ry="50" fill="#388E3C"/>
+  <!-- Sea surrounding island -->
+  <rect x="0" y="260" width="800" height="130" fill="url(#sea)"/>
+  <!-- Waves -->
+  <path d="M0,270 Q100,262 200,270 Q300,278 400,270 Q500,262 600,270 Q700,278 800,270" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none"/>
+  <path d="M0,285 Q80,278 160,285 Q240,292 320,285 Q400,278 480,285 Q560,292 640,285 Q720,292 800,285" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="none"/>
+  <!-- Beach/shore of island -->
+  <path d="M100,260 Q400,245 700,260 Q700,280 400,275 Q100,280 100,260 Z" fill="url(#sand)"/>
+  <!-- Palm trees on island -->
+  <line x1="230" y1="260" x2="245" y2="185" stroke="#5d4037" stroke-width="9"/>
+  <ellipse cx="247" cy="182" rx="45" ry="20" fill="#1b5e20" transform="rotate(-8,247,182)"/>
+  <ellipse cx="241" cy="178" rx="40" ry="16" fill="#2e7d32" transform="rotate(12,241,178)"/>
+  <line x1="400" y1="255" x2="400" y2="165" stroke="#5d4037" stroke-width="9"/>
+  <ellipse cx="400" cy="162" rx="48" ry="22" fill="#1b5e20"/>
+  <ellipse cx="400" cy="158" rx="42" ry="18" fill="#2e7d32"/>
+  <line x1="580" y1="258" x2="565" y2="180" stroke="#5d4037" stroke-width="9"/>
+  <ellipse cx="563" cy="177" rx="45" ry="20" fill="#1b5e20" transform="rotate(8,563,177)"/>
+  <ellipse cx="568" cy="173" rx="40" ry="16" fill="#2e7d32" transform="rotate(-12,568,173)"/>
+  <!-- Small beach hut -->
+  <rect x="300" y="228" width="60" height="35" fill="#BCAAA4"/>
+  <polygon points="285,230 330,205 375,230" fill="#8D6E63"/>
+  <!-- Foreground beach -->
+  <path d="M0,390 Q200,375 400,380 Q600,385 800,375 L800,500 L0,500 Z" fill="url(#sand)"/>
+  <!-- Coconuts on beach -->
+  <circle cx="150" cy="400" r="12" fill="#8D6E63"/>
+  <circle cx="165" cy="405" r="12" fill="#795548"/>
+  <!-- Text -->
+  <rect x="100" y="430" width="600" height="55" rx="8" fill="rgba(0,0,0,0.6)"/>
+  <text x="400" y="456" font-family="Georgia, serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Île-à-Vache, Haïti</text>
+  <text x="400" y="476" font-family="Georgia, serif" font-size="13" fill="#aaeeff" text-anchor="middle">Île tropicale • Eaux turquoise • Havre de paix</text>
+</svg>
