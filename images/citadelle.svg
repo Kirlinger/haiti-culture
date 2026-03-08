@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a6e"/>
+      <stop offset="70%" style="stop-color:#4a7fba"/>
+      <stop offset="100%" style="stop-color:#6aaa8a"/>
+    </linearGradient>
+    <linearGradient id="mountain" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a5a2a"/>
+      <stop offset="100%" style="stop-color:#2a3a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <!-- Mountains -->
+  <polygon points="0,380 150,200 300,380" fill="url(#mountain)"/>
+  <polygon points="100,380 280,180 460,380" fill="#2a4a1a"/>
+  <polygon points="300,380 500,160 700,380" fill="#1a3a0a"/>
+  <polygon points="500,380 680,220 800,380" fill="#2a4a1a"/>
+  <!-- Mountain top cloud -->
+  <ellipse cx="500" cy="158" rx="40" ry="15" fill="rgba(255,255,255,0.3)"/>
+  <!-- Citadelle fortress (on mountain top) -->
+  <rect x="440" y="100" width="120" height="80" fill="#8a7a5a"/>
+  <rect x="430" y="80" width="20" height="40" fill="#9a8a6a"/>
+  <rect x="545" y="75" width="25" height="45" fill="#9a8a6a"/>
+  <rect x="435" y="60" width="10" height="25" fill="#7a6a4a"/>
+  <rect x="550" y="55" width="10" height="25" fill="#7a6a4a"/>
+  <!-- Battlements -->
+  <rect x="440" y="90" width="12" height="15" fill="#9a8a6a"/>
+  <rect x="458" y="90" width="12" height="15" fill="#9a8a6a"/>
+  <rect x="476" y="90" width="12" height="15" fill="#9a8a6a"/>
+  <rect x="494" y="90" width="12" height="15" fill="#9a8a6a"/>
+  <rect x="512" y="90" width="12" height="15" fill="#9a8a6a"/>
+  <rect x="530" y="90" width="12" height="15" fill="#9a8a6a"/>
+  <!-- Haitian flag on top -->
+  <line x1="500" y1="55" x2="500" y2="30" stroke="#555" stroke-width="2"/>
+  <rect x="500" y="30" width="25" height="8" fill="#00209F"/>
+  <rect x="500" y="38" width="25" height="8" fill="#D21034"/>
+  <!-- Ground/vegetation -->
+  <rect x="0" y="380" width="800" height="120" fill="#1a3a0a"/>
+  <ellipse cx="150" cy="380" rx="80" ry="25" fill="#2a5a1a"/>
+  <ellipse cx="650" cy="380" rx="70" ry="20" fill="#2a5a1a"/>
+  <!-- Text -->
+  <rect x="100" y="420" width="600" height="60" rx="8" fill="rgba(0,0,0,0.7)"/>
+  <text x="400" y="448" font-family="Georgia, serif" font-size="22" fill="#FFD700" text-anchor="middle" font-weight="bold">Citadelle Laferrière</text>
+  <text x="400" y="470" font-family="Georgia, serif" font-size="13" fill="#cccccc" text-anchor="middle">Patrimoine mondial de l'UNESCO • Cap-Haïtien</text>
+</svg>
