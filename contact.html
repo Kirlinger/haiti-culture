@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Haïti Culture</title>
+  <meta name="description" content="Get in touch with Haïti Culture. Ask questions about Haitian history, culture, tourism, or send us your story." />
+  <meta name="author" content="Kirlinger357" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Haiti Culture Home">
+          <div class="logo-flag">
+            <div class="flag-top"></div>
+            <div class="flag-bottom"></div>
+          </div>
+          Haïti Culture
+        </a>
+        <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="history.html">History</a>
+          <a href="tourism.html">Tourism</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero__label">✉️ Get in Touch</p>
+      <h1 class="page-hero__title">Contact Us</h1>
+      <p class="page-hero__desc">
+        Have a question about Haiti, its history, culture, or tourism?
+        We would love to hear from you. Reach out and let's connect!
+      </p>
+    </div>
+  </section>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Contact</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section class="section" id="form">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3>Let's Connect</h3>
+          <p style="color:var(--text-muted);margin-bottom:32px;font-size:15px;">
+            Whether you're planning a trip, researching Haitian history, or just
+            want to share your love for Haiti — we're here to help.
+          </p>
+
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">📍</div>
+            <div>
+              <p class="contact-info-item__label">Location</p>
+              <p class="contact-info-item__value">Port-au-Prince, Republic of Haiti</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">✉️</div>
+            <div>
+              <p class="contact-info-item__label">Email</p>
+              <p class="contact-info-item__value">info@haiticulture.ht</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">📞</div>
+            <div>
+              <p class="contact-info-item__label">Phone</p>
+              <p class="contact-info-item__value">+509 3600 0000</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">🕐</div>
+            <div>
+              <p class="contact-info-item__label">Response Time</p>
+              <p class="contact-info-item__value">We reply within 24–48 hours</p>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div style="margin-top:40px;">
+            <h4 style="font-size:16px;font-weight:800;color:var(--blue);margin-bottom:16px;">Quick Links</h4>
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <a href="about.html" class="btn btn-blue btn-sm" style="text-align:center;">About Haiti →</a>
+              <a href="history.html" class="btn btn-red btn-sm" style="text-align:center;">Haitian History →</a>
+              <a href="tourism.html" class="btn btn-blue btn-sm" style="text-align:center;">Tourism &amp; Travel →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Jean" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Pierre" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="jean.pierre@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select a topic...</option>
+                <option value="culture">Haitian Culture</option>
+                <option value="history">History &amp; Heritage</option>
+                <option value="tourism">Tourism &amp; Travel</option>
+                <option value="education">Education &amp; Research</option>
+                <option value="media">Media &amp; Press</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message *</label>
+              <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-blue" style="width:100%;justify-content:center;">
+              Send Message ✉️
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section section--alt">
+    <div class="container">
+      <p class="section-label text-center">FAQ</p>
+      <h2 class="section-title text-center">Frequently Asked Questions</h2>
+      <p class="section-subtitle text-center">
+        Common questions about Haiti, its culture, and visiting the country.
+      </p>
+
+      <div class="cards-grid">
+
+        <div class="card">
+          <div class="card__body">
+            <p class="card__tag">Travel</p>
+            <h3 class="card__title">Is Haiti safe to visit?</h3>
+            <p class="card__desc">
+              Like any destination, safety depends on where you go and how you
+              prepare. Many areas of Haiti — especially tourist sites like Labadee,
+              Jacmel, and Cap-Haïtien — are visited regularly. Always check current
+              travel advisories and travel with a reputable local guide.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__body">
+            <p class="card__tag">Visa</p>
+            <h3 class="card__title">Do I need a visa for Haiti?</h3>
+            <p class="card__desc">
+              Citizens of many countries do not need a visa for stays under 90 days.
+              A valid passport and return ticket are typically required.
+              Check your country's official travel information for current requirements.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__body">
+            <p class="card__tag">Language</p>
+            <h3 class="card__title">Do I need to speak French or Creole?</h3>
+            <p class="card__desc">
+              In tourist areas, English is often spoken. French is useful, but
+              learning a few words of Haitian Creole ("Bonjou" = Hello,
+              "Mèsi" = Thank you) will go a long way and delight the locals!
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__body">
+            <p class="card__tag">Money</p>
+            <h3 class="card__title">What currency does Haiti use?</h3>
+            <p class="card__desc">
+              Haiti uses the Haitian Gourde (HTG). US Dollars are widely accepted
+              in tourist areas, hotels, and larger establishments. It's good to
+              carry local currency for markets and street vendors.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__body">
+            <p class="card__tag">Culture</p>
+            <h3 class="card__title">What is Vodou exactly?</h3>
+            <p class="card__desc">
+              Haitian Vodou is a legitimate religious system, not the Hollywood
+              stereotype. It honors ancestors and spirits (Lwa) through ritual,
+              music, and dance. It was officially recognized as a religion in Haiti
+              in 2003 and played a key role in the Revolution.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__body">
+            <p class="card__tag">Food</p>
+            <h3 class="card__title">What should I eat in Haiti?</h3>
+            <p class="card__desc">
+              Don't miss griyo (fried pork), diri ak djon djon (black mushroom rice),
+              soup joumou (a symbol of independence), and the spicy condiment pikliz.
+              Fresh tropical fruits and seafood are also exceptional.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <div class="quote-block">
+    <div class="container">
+      <p class="quote-text">
+        "Ayiti chéri" — My dear Haiti.
+        Every Haitian carries a love for their homeland wherever they go in the world.
+      </p>
+      <p class="quote-author">— Haitian Folk Song</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <div class="logo-flag">
+              <div class="flag-top" style="background:#00209F;flex:1;"></div>
+              <div class="flag-bottom" style="background:#D21034;flex:1;"></div>
+            </div>
+            Haïti Culture
+          </div>
+          <p>
+            A celebration of Haiti's extraordinary history, vibrant culture,
+            and beautiful people. Dedicated to sharing the story of the world's
+            first Black republic.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Haiti</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="tourism.html">Tourism</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>History</h4>
+          <ul>
+            <li><a href="history.html#revolution">The Revolution</a></li>
+            <li><a href="history.html#independence">Independence 1804</a></li>
+            <li><a href="history.html#figures">Key Figures</a></li>
+            <li><a href="history.html#modern">Modern Haiti</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html#form">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Kirlinger357 — Haïti Culture. All rights reserved.</span>
+        <span>Built with ❤️ for Haiti</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
