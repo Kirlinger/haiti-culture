@@ -276,6 +276,57 @@
     });
   }
 
+  /* ── Content Protection (deterrent) ─────────────────── */
+  function initContentProtection() {
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+      return false;
+    });
+
+    // Disable copy and cut outside of form fields
+    function isFormField(el) {
+      var tag = (el && el.tagName) ? el.tagName.toLowerCase() : '';
+      return tag === 'input' || tag === 'textarea' || tag === 'select';
+    }
+
+    document.addEventListener('copy', function (e) {
+      if (!isFormField(e.target)) { e.preventDefault(); return false; }
+    });
+
+    document.addEventListener('cut', function (e) {
+      if (!isFormField(e.target)) { e.preventDefault(); return false; }
+    });
+
+    // Disable text selection outside of form fields
+    document.addEventListener('selectstart', function (e) {
+      if (!isFormField(e.target)) { e.preventDefault(); return false; }
+    });
+
+    // Disable image/link drag
+    document.addEventListener('dragstart', function (e) {
+      e.preventDefault();
+      return false;
+    });
+
+    // Block dev-tool and view-source keyboard shortcuts
+    document.addEventListener('keydown', function (e) {
+      var ctrl = e.ctrlKey || e.metaKey;
+      // F12 — DevTools
+      if (e.key === 'F12') { e.preventDefault(); return false; }
+      // Ctrl/Cmd+U — View Source
+      if (ctrl && e.key.toLowerCase() === 'u') { e.preventDefault(); return false; }
+      // Ctrl/Cmd+S — Save Page
+      if (ctrl && e.key.toLowerCase() === 's') { e.preventDefault(); return false; }
+      // Ctrl/Cmd+Shift+I — Inspector
+      if (ctrl && e.shiftKey && e.key.toLowerCase() === 'i') { e.preventDefault(); return false; }
+      // Ctrl/Cmd+Shift+J — Console
+      if (ctrl && e.shiftKey && e.key.toLowerCase() === 'j') { e.preventDefault(); return false; }
+      // Ctrl/Cmd+Shift+C — Element picker
+      if (ctrl && e.shiftKey && e.key.toLowerCase() === 'c') { e.preventDefault(); return false; }
+    });
+  }
+
   /* ── Init ───────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', function () {
     initMobileNav();
@@ -286,5 +337,6 @@
     animateCounters();
     initSearch();
     initSmoothScroll();
+    initContentProtection();
   });
 })();
