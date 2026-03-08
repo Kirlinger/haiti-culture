@@ -183,7 +183,9 @@
     { title: 'Art Haïtien', url: 'about.html', section: 'Culture', keywords: 'art haïtien naïf peinture sculpture vèvè drapo vodou' },
     // Nouvelles pages
     { title: 'Constitution d\'Haïti', url: 'constitution.html', section: 'Histoire', keywords: 'constitution haïti loi droits libertés état démocratie 1987 toussaint dessalines' },
-    { title: 'Chronologie d\'Haïti', url: 'timeline.html', section: 'Histoire', keywords: 'chronologie haïti histoire dates événements taïno 1804 indépendance révolution' },
+    { title: 'Chronologie d\'Haïti', url: 'timeline.html', section: 'Histoire', keywords: 'chronologie haïti histoire dates événements taïno 1804 indépendance révolution duvalier occupation américaine' },
+    { title: 'Catastrophes et Crises', url: 'timeline.html#catastrophes', section: 'Histoire', keywords: 'catastrophes séisme 2010 ouragan matthew choléra inondations gangs crise sécuritaire violence politique' },
+    { title: 'Leaders d\'Haïti', url: 'leaders.html', section: 'Histoire', keywords: 'leaders chefs état présidents haïti toussaint louverture dessalines christophe pétion boyer duvalier aristide préval martelly moïse' },
     { title: 'Héros Nationaux', url: 'heroes.html', section: 'Histoire', keywords: 'héros révolution toussaint louverture dessalines christophe pétion sanité belair capois' },
     { title: 'Jours Fériés en Haïti', url: 'holidays.html', section: 'Culture', keywords: 'jours fériés fêtes haïti indépendance carnaval drapeau vertières noël toussaint' },
     { title: 'Culture Haïtienne', url: 'culture.html', section: 'Culture', keywords: 'culture haïti art musique danse littérature carnaval kompa rara kreyòl' },
