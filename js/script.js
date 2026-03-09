@@ -288,33 +288,6 @@
     });
   }
 
-  /* ── Dropdown menus ─────────────────────────────────── */
-  function initDropdowns() {
-    document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
-      var btn = dropdown.querySelector('.nav-dropdown__btn');
-      if (!btn) return;
-      btn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        var isOpen = dropdown.classList.toggle('open');
-        btn.setAttribute('aria-expanded', String(isOpen));
-        document.querySelectorAll('.nav-dropdown').forEach(function(other) {
-          if (other !== dropdown) {
-            other.classList.remove('open');
-            var otherBtn = other.querySelector('.nav-dropdown__btn');
-            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
-          }
-        });
-      });
-    });
-    document.addEventListener('click', function() {
-      document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
-        dropdown.classList.remove('open');
-        var btn = dropdown.querySelector('.nav-dropdown__btn');
-        if (btn) btn.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-
   /* ── Init ───────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', function () {
     initMobileNav();
@@ -325,6 +298,5 @@
     animateCounters();
     initSearch();
     initSmoothScroll();
-    initDropdowns();
   });
 })();
