@@ -890,21 +890,15 @@ ul {
 }
 
 .page-hero--about {
-  background:
-    linear-gradient(rgba(0,20,100,0.75), rgba(100,0,20,0.75)),
-    url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Haitian_woman_in_traditional_dress.jpg/1280px-Haitian_woman_in_traditional_dress.jpg') center/cover no-repeat;
+  background: linear-gradient(135deg, #001a6e 0%, var(--blue) 55%, var(--red) 100%);
 }
 
 .page-hero--history {
-  background:
-    linear-gradient(rgba(0,10,60,0.78), rgba(80,0,10,0.78)),
-    url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Citadelle_Laferri%C3%A8re.jpg/1280px-Citadelle_Laferri%C3%A8re.jpg') center/cover no-repeat;
+  background: linear-gradient(135deg, #000a3c 0%, #00106e 55%, #6e0012 100%);
 }
 
 .page-hero--tourism {
-  background:
-    linear-gradient(rgba(0,15,80,0.72), rgba(0,80,100,0.72)),
-    url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Citadelle_Laferri%C3%A8re.jpg/1280px-Citadelle_Laferri%C3%A8re.jpg') center/cover no-repeat;
+  background: linear-gradient(135deg, #00206e 0%, #005080 55%, #003050 100%);
 }
 
 .page-hero__label {
@@ -1154,62 +1148,6 @@ ul {
   opacity: 0.6;
 }
 
-/* ── Dropdown Navigation ────────────────────────────── */
-.nav-dropdown {
-  position: relative;
-}
-
-.nav-dropdown__btn {
-  background: none;
-  border: none;
-  color: rgba(255,255,255,0.88);
-  font-weight: 600;
-  font-size: 15px;
-  padding: 9px 16px;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: var(--transition);
-  white-space: nowrap;
-  font-family: var(--font-sans);
-}
-
-.nav-dropdown__btn:hover,
-.nav-dropdown.open .nav-dropdown__btn {
-  background: rgba(255,255,255,0.15);
-  color: var(--white);
-}
-
-.nav-dropdown__menu {
-  display: none;
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 0;
-  background: #fff;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-lg);
-  min-width: 220px;
-  padding: 8px 0;
-  z-index: 1001;
-}
-
-.nav-dropdown.open .nav-dropdown__menu {
-  display: block;
-}
-
-.nav-dropdown__menu a {
-  display: block;
-  padding: 10px 20px;
-  color: var(--text) !important;
-  font-size: 14px;
-  font-weight: 600;
-  transition: var(--transition);
-  border-radius: 0;
-}
-
-.nav-dropdown__menu a:hover {
-  background: var(--bg-soft);
-  color: var(--blue) !important;
-}
 
 /* ── Responsive ─────────────────────────────────────── */
 @media (max-width: 1024px) {
