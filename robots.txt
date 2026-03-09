@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Block access to configuration and source files
+Disallow: /js/haiti-admin.js
+
+Sitemap: https://kirlinger.github.io/haiti-culture/sitemap.xml

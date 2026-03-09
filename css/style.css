@@ -2775,3 +2775,9 @@ ul {
     color: var(--gold) !important;
   }
 }
+
+/* ── Card icon emoji ────────────────────────────────── */
+.card__icon-emoji {
+  font-size: 52px;
+}
+
