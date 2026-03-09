@@ -222,19 +222,14 @@ ul {
 }
 
 .hero__flag {
-  width: 280px;
-  height: 187px;
   margin: 0 auto 32px;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.45), 0 0 0 3px rgba(255,255,255,0.18);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.hero__flag img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.hero__flag-emoji {
+  font-size: 120px;
+  line-height: 1;
 }
 
 .navbar__nav {
@@ -1389,9 +1384,8 @@ ul {
     font-size: 36px;
   }
 
-  .hero__flag {
-    width: 160px;
-    height: 100px;
+  .hero__flag-emoji {
+    font-size: 80px;
   }
 
   .cards-grid {
