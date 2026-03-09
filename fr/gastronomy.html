@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gastronomie Haïtienne : Saveurs et Traditions | 🇭🇹 Haïti 🇭🇹</title>
+  <meta name="description" content="Des saveurs africaines, françaises et caribéennes qui racontent l'histoire d'un peuple." />
+  <meta name="author" content="Kirlinger357" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
+          <span class="logo-emoji-flag">🇭🇹</span>
+          Haïti 🇭🇹
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+          <div class="nav-dropdown lang-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">🇫🇷 Français ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="../fr/gastronomy.html" class="lang-active" hreflang="fr">🇫🇷 Français</a>
+              <a href="../ht/gastronomy.html" hreflang="ht">🇭🇹 Kreyòl</a>
+              <a href="../en/gastronomy.html" hreflang="en">🇺🇸 English</a>
+              <a href="../es/gastronomy.html" hreflang="es">🇪🇸 Español</a>
+            </div>
+          </div>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--about">
+    <div class="container">
+      <p class="page-hero__label">🍽️ Gastronomie</p>
+      <h1 class="page-hero__title">La Cuisine Haïtienne</h1>
+      <p class="page-hero__desc">Des saveurs africaines, françaises et caribéennes qui racontent l'histoire d'un peuple.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <span>Gastronomie</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">Saveurs d'Haïti</p>
+        <h2>Introduction à la Cuisine Haïtienne</h2>
+        <p>La cuisine haïtienne est audacieuse, généreuse et profondément ancrée dans les traditions africaines et caribéennes. Façonnée par des siècles d'histoire, elle utilise des ingrédients locaux frais et un mélange d'épices savamment dosées. Un repas haïtien est toujours une célébration de la vie et du patrimoine.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <p class="section-label text-center">Les Plats Essentiels</p>
+      <h2 class="section-title text-center">La Table Haïtienne</h2>
+      <p class="section-subtitle text-center">Des recettes transmises de génération en génération, chargées d'histoire et de saveurs incomparables.</p>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--gold">🍲</div>
+          <div class="card__body">
+            <p class="card__tag">Soupe de giraumon mangée chaque 1er janvier</p>
+            <h3 class="card__title">Soup Joumou</h3>
+            <p class="card__desc">Ce potage royal à base de giraumon (courge), de boeuf, de légumes, de pâtes et d'épices était réservé aux maîtres esclavagistes sous la colonisation. Après l'indépendance, les Haïtiens se l'approprièrent comme symbole de liberté. Dégustée chaque 1er janvier, elle est désormais inscrite au patrimoine immatériel de l'UNESCO.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--gold">🥩</div>
+          <div class="card__body">
+            <p class="card__tag">Porc frit mariné aux agrumes</p>
+            <h3 class="card__title">Griyo</h3>
+            <p class="card__desc">L'un des plats les plus populaires d'Haïti : du porc mariné dans du jus de citron et des épices haïtiennes, mijoté lentement puis frit jusqu'à devenir croustillant et doré. Souvent servi avec du pikliz et du riz aux haricots.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--gold">🍚</div>
+          <div class="card__body">
+            <p class="card__tag">Riz et haricots, le plat du quotidien</p>
+            <h3 class="card__title">Diri ak Pwa</h3>
+            <p class="card__desc">La combinaison emblématique de la cuisine haïtienne. Le riz est cuit avec des haricots rouges ou noirs, du lait de coco, des herbes aromatiques et de l'ail. Un plat réconfortant, nutritif et profondément ancré dans la tradition culinaire haïtienne.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--gold">🍄</div>
+          <div class="card__body">
+            <p class="card__tag">Riz aux champignons noirs du Nord</p>
+            <h3 class="card__title">Diri ak Djon Djon</h3>
+            <p class="card__desc">Un met de fête préparé avec des champignons séchés noirs originaires du nord d'Haïti, qui donnent au riz une couleur noire caractéristique et un parfum terreux unique. Ce plat est servi lors des grandes occasions et des célébrations familiales.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--gold">🌶️</div>
+          <div class="card__body">
+            <p class="card__tag">Condiment pimenté incontournable</p>
+            <h3 class="card__title">Pikliz</h3>
+            <p class="card__desc">Légumes marinés dans du vinaigre avec du chou, des carottes, des oignons et des piments forts haïtiens (bonnet écossais). Le pikliz est le condiment par excellence de la cuisine haïtienne, accompagnant presque tous les plats. Attention, sa puissance peut surprendre les non-initiés !</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--gold">🍗</div>
+          <div class="card__body">
+            <p class="card__tag">Poulet mijoté dans une riche sauce tomate</p>
+            <h3 class="card__title">Poulet en Sauce</h3>
+            <p class="card__desc">Du poulet braisé dans une sauce riche à base de tomates, de poivrons, d'oignons et d'épices haïtiennes. Le plat familial du dimanche par excellence. La sauce, épaisse et parfumée, est idéale pour arroser un bon riz blanc.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--gold">🍌</div>
+          <div class="card__body">
+            <p class="card__tag">Bananes plantains frites deux fois</p>
+            <h3 class="card__title">Bannann Peze</h3>
+            <p class="card__desc">Des rondelles de bananes plantains vertes frites une première fois, aplaties, puis replongées dans l'huile jusqu'à devenir dorées et croustillantes. Une garniture universellement appréciée qui accompagne tous les repas haïtiens.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--gold">🥙</div>
+          <div class="card__body">
+            <p class="card__tag">Beignets de malanga au piment</p>
+            <h3 class="card__title">Akra</h3>
+            <p class="card__desc">Beignets croustillants préparés à base de malanga (taro) râpé, de piment fort et d'herbes aromatiques. Un incontournable de la cuisine de rue haïtienne et une entrée populaire lors des fêtes et des réceptions.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--gold">🥬</div>
+          <div class="card__body">
+            <p class="card__tag">Ragoût épais de légumes et viande</p>
+            <h3 class="card__title">Légim</h3>
+            <p class="card__desc">Un ragoût nutritif et savoureux préparé avec de l'aubergine, du chou, des carottes, du cresson et de la viande. Un plat traditionnel qui exprime toute la richesse des légumes locaux et le savoir-faire culinaire haïtien.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--gold">🍌</div>
+          <div class="card__body">
+            <p class="card__tag">Bouillie de banane verte, petit-déjeuner traditionnel</p>
+            <h3 class="card__title">Labouyi Bannann</h3>
+            <p class="card__desc">Une bouillie crémeuse préparée avec des bananes vertes râpées, du lait, de la cannelle et de la vanille. Petit-déjeuner traditionnel haïtien, nourrissant et parfumé, particulièrement apprécié des enfants.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label text-center">Boissons</p>
+      <h2 class="section-title text-center">Les Boissons Haïtiennes</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">🥃</div>
+          <h3 class="feature-card__title">Rhum Barbancourt</h3>
+          <p class="feature-card__desc">Le rhum haïtien Barbancourt est salué par les connaisseurs du monde entier pour sa finesse et sa complexité aromatique. Produit depuis 1862 selon des méthodes françaises de distillation, il est l'ambassadeur gastronomique d'Haïti.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🥤</div>
+          <h3 class="feature-card__title">Kola-Champagne</h3>
+          <p class="feature-card__desc">La boisson gazeuse nationale haïtienne, au goût sucré et légèrement vanillé, est présente dans toutes les fêtes et réunions familiales. Un incontournable de la culture populaire haïtienne.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🌿</div>
+          <h3 class="feature-card__title">Jus de Canne</h3>
+          <p class="feature-card__desc">Le jus de canne à sucre fraîchement pressé est une boisson de rue rafraîchissante, vendue dans tout le pays. Naturellement sucré et énergisant, c'est un délice accessible à tous.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">☕</div>
+          <h3 class="feature-card__title">Café Haïtien</h3>
+          <p class="feature-card__desc">Cultivé dans les montagnes du sud du pays, le café haïtien est d'une richesse et d'un arôme exceptionnels. Peu connu à l'international, il mérite amplement sa réputation parmi les connaisseurs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <span class="logo-emoji-flag">🇭🇹</span>
+            Haïti 🇭🇹
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="lwa.html">Les Lwa</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire</h4>
+          <ul>
+            <li><a href="history.html#revolution">La Révolution</a></li>
+            <li><a href="history.html#independence">Indépendance 1804</a></li>
+            <li><a href="history.html#figures">Personnages Clés</a></li>
+            <li><a href="history.html#modern">Haïti Moderne</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger357, 🇭🇹 Haïti 🇭🇹. Tous droits réservés.</span>
+        <span>Fait avec &#10084;&#65039; pour Haïti</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

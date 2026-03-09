@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leaders et Chefs d'État d'Haïti | 🇭🇹 Haïti 🇭🇹</title>
+  <meta name="description" content="De Toussaint Louverture aux présidents contemporains, découvrez les grands leaders qui ont dirigé Haïti à travers son histoire." />
+  <meta name="author" content="Kirlinger357" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
+          <span class="logo-emoji-flag">🇭🇹</span>
+          Haïti 🇭🇹
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+          <div class="nav-dropdown lang-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">🇫🇷 Français ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="../fr/leaders.html" class="lang-active" hreflang="fr">🇫🇷 Français</a>
+              <a href="../ht/leaders.html" hreflang="ht">🇭🇹 Kreyòl</a>
+              <a href="../en/leaders.html" hreflang="en">🇺🇸 English</a>
+              <a href="../es/leaders.html" hreflang="es">🇪🇸 Español</a>
+            </div>
+          </div>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">👑 Gouvernance</p>
+      <h1 class="page-hero__title">Les Leaders d'Haïti</h1>
+      <p class="page-hero__desc">Des pères fondateurs de la nation aux présidents contemporains, ces hommes et ces femmes ont dirigé Haïti à travers les grandeurs et les épreuves.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <a href="history.html">Histoire</a>
+        <span>/</span>
+        <span>Leaders</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- PÈRES FONDATEURS -->
+  <section class="section" id="fondateurs">
+    <div class="container">
+      <p class="section-label text-center">1791 – 1820</p>
+      <h2 class="section-title text-center">Les Pères Fondateurs de la Nation</h2>
+      <p class="section-subtitle text-center">Ces figures révolutionnaires ont mené Haïti de l'esclavage colonial à l'indépendance, forgeant la première République noire du monde et posant les bases d'un État souverain.</p>
+      <div class="cards-grid">
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #001370 0%, #00209F 100%);">👑</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Toussaint Louverture</h3>
+            <p class="person-card__role">1743 – 1803 &bull; Chef révolutionnaire, Gouverneur</p>
+            <p class="person-card__desc">Né en esclavage, Toussaint Louverture devint le plus grand stratège militaire de la Révolution haïtienne. Il battit successivement les armées espagnole, britannique et française, puis se proclama gouverneur à vie dans la Constitution de 1801. Capturé par traîtrise par Napoléon, il mourut dans la prison du Fort de Joux en France. Sa vision et son courage ont ouvert la voie à l'indépendance qu'il n'a pas vécu à voir.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #D21034 0%, #f04060 100%);">⚔️</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Jean-Jacques Dessalines</h3>
+            <p class="person-card__role">1758 – 1806 &bull; Empereur Jacques I, Père de la Nation</p>
+            <p class="person-card__desc">Né dans l'esclavage, Dessalines devint le général qui vainquit les forces napoléoniennes à Vertières en 1803. Le 1er janvier 1804, à Gonaïves, il proclama l'indépendance d'Haïti. Devenu l'Empereur Jacques I, il promulgua la Constitution de 1805 déclarant tous les Haïtiens "noirs" quelles que soient leur couleur de peau. Assassiné en octobre 1806, il reste le père fondateur incontesté de la nation haïtienne.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #001370 0%, #00209F 100%);">🏰</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Henri Christophe</h3>
+            <p class="person-card__role">1767 – 1820 &bull; Roi Henri I du nord d'Haïti</p>
+            <p class="person-card__desc">Général de la Révolution, Henri Christophe dirigea le nord d'Haïti après la mort de Dessalines. Il se proclama Roi Henri I en 1811 et fit bâtir la majestueuse Citadelle Laferrière et le Palais Sans-Souci, classés aujourd'hui au patrimoine mondial de l'UNESCO. Administrateur visionnaire, il cherchait à bâtir un État prospère et souverain. En 1820, face à une révolte de ses généraux, il se suicida dans son palais.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #D21034 0%, #f04060 100%);">🤝</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Alexandre Pétion</h3>
+            <p class="person-card__role">1770 – 1818 &bull; Président de la République du Sud</p>
+            <p class="person-card__desc">Après la mort de Dessalines, Pétion dirigea la partie méridionale d'Haïti en tant que président républicain. Homme d'État aux convictions démocratiques profondes, il mit en oeuvre une réforme agraire généreuse distribuant des terres aux paysans. Il soutint Simón Bolívar en lui fournissant troupes et ressources pour libérer l'Amérique du Sud. Sa générosité et son humanisme lui valent le surnom de "Pétion le Grand".</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LE XIXe SIECLE -->
+  <section class="section section--alt" id="xixeme">
+    <div class="container">
+      <p class="section-label text-center">1818 – 1915</p>
+      <h2 class="section-title text-center">Le XIXe Siècle : Construction et Crises</h2>
+      <p class="section-subtitle text-center">Après la mort des pères fondateurs, Haïti traverse un siècle marqué par des successions politiques souvent violentes, la lourde dette imposée par la France et des tentatives de modernisation.</p>
+      <div class="cards-grid">
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #475569 0%, #0f172a 100%);">📜</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Jean-Pierre Boyer</h3>
+            <p class="person-card__role">1776 – 1850 &bull; Président 1818 – 1843</p>
+            <p class="person-card__desc">Successeur de Pétion, Boyer réunit les deux parties d'Haïti en 1820 après la mort de Christophe. En 1822, il annexa la partie orientale de l'île, unissant toute Hispaniola sous un seul gouvernement haïtien pendant 22 ans. En 1825, sous la pression de la flotte de guerre française, il accepta de payer 150 millions de francs à la France en échange de la reconnaissance de l'indépendance haïtienne, une dette écrasante qui pèsera sur le pays pendant plus d'un siècle.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #475569 0%, #0f172a 100%);">👑</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Faustin Soulouque</h3>
+            <p class="person-card__role">1782 – 1867 &bull; Président puis Empereur Faustin I (1847 – 1859)</p>
+            <p class="person-card__desc">Officier militaire issu de l'esclavage, Faustin Soulouque devint président en 1847 puis se proclama Empereur Faustin I en 1849, créant une cour impériale somptueuse. Son règne fut marqué par la répression politique et deux tentatives infructueuses de reprendre la partie orientale de l'île. Renversé en 1859, il vécut le reste de sa vie en exil en France.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #475569 0%, #0f172a 100%);">🏛️</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Lysius Salomon</h3>
+            <p class="person-card__role">1815 – 1888 &bull; Président 1879 – 1888</p>
+            <p class="person-card__desc">Intellectuel et homme d'État expérimenté, Lysius Salomon accéda à la présidence à l'âge de 64 ans. Son mandat fut marqué par la fondation de la Banque Nationale d'Haïti en 1880 et des tentatives de modernisation économique. Il dut cependant faire face à de violentes résistances politiques. Victime d'une insurrection en 1888, il mourut en exil à Paris quelques semaines après sa destitution.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #475569 0%, #0f172a 100%);">⚖️</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Florvil Hyppolite</h3>
+            <p class="person-card__role">1828 – 1896 &bull; Président 1889 – 1896</p>
+            <p class="person-card__desc">Arrivé au pouvoir à la suite d'une guerre civile, Florvil Hyppolite présida à une période de relative stabilité et de développement des infrastructures. Son gouvernement négocia avec les États-Unis au sujet de la base navale de Môle-Saint-Nicolas, demande qu'il refusa fermement, défendant la souveraineté nationale. Il mourut d'une crise cardiaque en 1896 alors qu'il chevauchait vers les troupes rebelles.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #475569 0%, #0f172a 100%);">🎖️</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Nord Alexis</h3>
+            <p class="person-card__role">1820 – 1910 &bull; Président 1902 – 1908</p>
+            <p class="person-card__desc">Général de 81 ans lorsqu'il accéda à la présidence, Nord Alexis est l'un des derniers présidents haïtiens à avoir connu personnellement des révolutionnaires de 1804. Son mandat fut marqué par la stabilité relative et par la reconnaissance de son grand âge comme gage de sagesse et d'expérience. Il fut renversé en 1908 et mourut deux ans plus tard en Jamaïque.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #475569 0%, #0f172a 100%);">🚨</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Jean Vilbrun Guillaume Sam</h3>
+            <p class="person-card__role">Né vers 1859 – 1915 &bull; Président février – juillet 1915</p>
+            <p class="person-card__desc">Dernier président haïtien avant l'occupation américaine, Guillaume Sam n'exerça le pouvoir que quelques mois. Face à une insurrection politique, il ordonna le massacre de plus de 160 prisonniers politiques dans les geôles de Port-au-Prince. En représailles, une foule en colère le lyncha dans l'enceinte de la légation française où il s'était réfugié. Sa mort dramatique servit de prétexte à l'intervention militaire des États-Unis quelques jours plus tard.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- OCCUPATION AMÉRICAINE -->
+  <section class="section" id="occupation">
+    <div class="container">
+      <p class="section-label text-center">1915 – 1957</p>
+      <h2 class="section-title text-center">Sous Occupation et Après</h2>
+      <p class="section-subtitle text-center">De 1915 à 1934, les États-Unis occupent militairement Haïti. Les présidents de cette période exercent un pouvoir limité sous la tutelle américaine. Après le départ des troupes, Haïti cherche à rebâtir son autonomie.</p>
+      <div class="cards-grid">
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #475569 0%, #64748b 100%);">🇺🇸</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Philippe Sudre Dartiguenave</h3>
+            <p class="person-card__role">1863 – 1926 &bull; Président 1915 – 1922</p>
+            <p class="person-card__desc">Sénateur haïtien élu président sous la pression directe des marines américains en 1915, Dartiguenave signa le traité qui plaça Haïti sous la tutelle des États-Unis pour vingt ans. Son gouvernement collaborateur fut vivement critiqué par les nationalistes haïtiens. Il présida néanmoins à la rédaction d'une nouvelle constitution en 1918, rédigée en partie par Franklin D. Roosevelt, alors sous-secrétaire de la Marine américaine.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #475569 0%, #64748b 100%);">📋</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Louis Borno</h3>
+            <p class="person-card__role">1865 – 1942 &bull; Président 1922 – 1930</p>
+            <p class="person-card__desc">Successeur de Dartiguenave, Louis Borno dirigea Haïti pendant huit ans dans le cadre de l'occupation américaine. Juriste et homme cultivé, il développa les infrastructures du pays grâce aux investissements américains tout en restreignant les libertés politiques. Son régime fit face à la répression des mouvements nationalistes. Il quitta le pouvoir en 1930 sous la pression d'une commission américaine qui reconnut l'impopularité croissante de l'occupation.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #056835 0%, #07a352 100%);">🗝️</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Sténio Vincent</h3>
+            <p class="person-card__role">1874 – 1959 &bull; Président 1930 – 1941</p>
+            <p class="person-card__desc">Sténio Vincent est le président qui négocia le départ définitif des troupes américaines en 1934, mettant fin à 19 ans d'occupation. Nationaliste affiché, il fut acclamé comme un libérateur par le peuple haïtien. Son mandat fut néanmoins assombri par le massacre de dizaines de milliers d'Haïtiens en République Dominicaine en 1937 sur ordre de Trujillo, et par sa réponse jugée trop modérée face à ce génocide.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #475569 0%, #64748b 100%);">🏗️</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Paul Eugène Magloire</h3>
+            <p class="person-card__role">1907 – 2001 &bull; Président 1950 – 1956</p>
+            <p class="person-card__desc">Militaire populaire, Paul Magloire accéda à la présidence en 1950 lors du premier scrutin universel masculin en Haïti. Son mandat, marqué par une relative prospérité économique, vit la construction d'infrastructures et l'accueil des Jeux du Bicentenaire de Port-au-Prince en 1950. Le passage du cyclone Hazel en 1954 causa de lourds dégâts. Contraint à l'exil en 1956 par une grève générale, il revint vivre en Haïti en 1986 et mourut à 93 ans.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LES DUVALIER -->
+  <section class="section section--alt" id="duvalier">
+    <div class="container">
+      <p class="section-label text-center">1957 – 1986</p>
+      <h2 class="section-title text-center">La Dictature des Duvalier</h2>
+      <p class="section-subtitle text-center">Père et fils gouvernèrent Haïti pendant 29 ans. Une période de terreur politique, de corruption et d'exode massif qui laissa des cicatrices profondes dans la société haïtienne.</p>
+      <div class="cards-grid">
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">💀</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">François Duvalier</h3>
+            <p class="person-card__role">1907 – 1971 &bull; Président puis Président à Vie (1957 – 1971)</p>
+            <p class="person-card__desc">Médecin de campagne surnommé "Papa Doc", François Duvalier fut élu président en 1957. Il instaura rapidement une dictature totale, s'appuyant sur les Tonton Macoutes, une milice paramilitaire qui terrorisait la population. En 1964, il se proclama Président à Vie. Son régime fit assassiner, torturer ou pousser à l'exil des milliers d'opposants, d'intellectuels et de professionnels. Il mourut en 1971 et transmit le pouvoir à son fils de 19 ans.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">💸</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Jean-Claude Duvalier</h3>
+            <p class="person-card__role">1951 – 2014 &bull; Président à Vie (1971 – 1986)</p>
+            <p class="person-card__desc">Surnommé "Baby Doc", Jean-Claude Duvalier hérita du pouvoir à 19 ans à la mort de son père. Son régime, moins meurtrier mais profondément corrompu, s'ouvrit au tourisme et aux investissements étrangers tout en maintenant la répression politique. La misère croissante, les inégalités criantes et la résistance populaire conduisirent à son renversement le 7 février 1986. Il s'exile en France pendant 25 ans avant de rentrer en Haïti en 2011, où il mourut en 2014.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- APRÈS 1986 -->
+  <section class="section" id="apres1986">
+    <div class="container">
+      <p class="section-label text-center">1986 – Aujourd'hui</p>
+      <h2 class="section-title text-center">L'Ère Démocratique et Ses Turbulences</h2>
+      <p class="section-subtitle text-center">Depuis la chute de Duvalier, Haïti cherche à construire une démocratie stable. Ce chemin est semé d'embûches: coups d'État, crises politiques, catastrophes naturelles et instabilité chronique.</p>
+      <div class="cards-grid">
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #475569 0%, #64748b 100%);">🪖</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Henri Namphy</h3>
+            <p class="person-card__role">1932 – 2018 &bull; Chef du Conseil National de Gouvernement (1986 – 1988)</p>
+            <p class="person-card__desc">Général de l'armée haïtienne, Henri Namphy prit la tête du Conseil National de Gouvernement (CNG) après la fuite de Duvalier. Son régime de transition fut marqué par des violences politiques graves, notamment le massacre d'électeurs lors des élections de novembre 1987. Brièvement président en 1988, il fut renversé par un autre coup d'État militaire après seulement quelques mois au pouvoir.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #475569 0%, #64748b 100%);">🎓</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Ertha Pascal-Trouillot</h3>
+            <p class="person-card__role">1943 – 2023 &bull; Présidente Provisoire (1990 – 1991)</p>
+            <p class="person-card__desc">Première femme à accéder à la présidence d'Haïti, Ertha Pascal-Trouillot était une juriste et juge respectée. Nommée présidente provisoire en mars 1990, elle organisa les premières élections libres et transparentes de l'histoire du pays, remportées par Jean-Bertrand Aristide. Elle transmit pacifiquement le pouvoir et représenta un moment historique pour la démocratie haïtienne et pour les droits des femmes.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #056835 0%, #07a352 100%);">✊</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Jean-Bertrand Aristide</h3>
+            <p class="person-card__role">Né en 1953 &bull; Président (1991, 1994 – 1995, 2001 – 2004)</p>
+            <p class="person-card__desc">Prêtre catholique de la théologie de la libération, Aristide fut élu en décembre 1990 avec plus de 67 % des voix lors des premières élections libres haïtiennes. Renversé par un coup d'État militaire en 1991, il fut rétabli dans ses fonctions en 1994 grâce à une intervention internationale. Réélu en 2001, il quitta le pouvoir en 2004 dans des circonstances controversées, lors d'une nouvelle crise politique. Il vit aujourd'hui en Haïti.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #056835 0%, #07a352 100%);">🌱</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">René Préval</h3>
+            <p class="person-card__role">1943 – 2017 &bull; Président (1996 – 2001, 2006 – 2011)</p>
+            <p class="person-card__desc">René Préval est le seul président haïtien à avoir effectué deux mandats complets et à avoir transmis pacifiquement le pouvoir à deux reprises. Discret et pragmatique, il fut l'allié puis l'adversaire d'Aristide. Son second mandat fut dominé par la gestion du séisme dévastateur de 2010 qui tua plus de 200 000 personnes. Il mourut en 2017 et reste l'une des figures politiques les plus respectées de l'ère post-Duvalier.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #475569 0%, #64748b 100%);">🎵</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Michel Martelly</h3>
+            <p class="person-card__role">Né en 1961 &bull; Président (2011 – 2016)</p>
+            <p class="person-card__desc">Chanteur populaire de kompa connu sous le nom de "Sweet Micky", Michel Martelly remporta la présidence en 2011 dans le contexte difficile de la reconstruction post-séisme. Son mandat fut marqué par l'initiative "Ede Pèp" visant à relancer l'économie, des programmes de logement et de scolarisation, mais aussi par des accusations de corruption, des tensions politiques et une crise constitutionnelle à la fin de son mandat.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #D21034 0%, #f04060 100%);">🔴</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Jovenel Moïse</h3>
+            <p class="person-card__role">1968 – 2021 &bull; Président (2017 – 2021)</p>
+            <p class="person-card__desc">Entrepreneur agricole surnommé "Nèg Bannann" (l'homme à la banane), Jovenel Moïse fut élu en 2016. Son mandat fut marqué par des protestations massives, des accusations de corruption, une crise économique grave et une insécurité grandissante. Dans la nuit du 6 au 7 juillet 2021, il fut assassiné à son domicile à Port-au-Prince par un commando armé. Ce crime plongea Haïti dans une nouvelle spirale de chaos politique et sécuritaire.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #475569 0%, #64748b 100%);">🏥</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Ariel Henry</h3>
+            <p class="person-card__role">Né en 1959 &bull; Premier Ministre et leader de transition (2021 – 2024)</p>
+            <p class="person-card__desc">Neurochirurgien et homme politique, Ariel Henry fut nommé Premier ministre par Jovenel Moïse peu avant l'assassinat de ce dernier. Il assuma de facto la direction du pays sans être élu, dans un contexte de vide constitutionnel total. Sous sa direction, l'insécurité liée aux gangs armés atteignit des sommets inédits, notamment en 2024. Contraint de démissionner en mars 2024 sous la pression internationale et des gangs qui bloquaient son retour au pays, il ceda place à un conseil de transition.</p>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-card__avatar" style="background: linear-gradient(135deg, #056835 0%, #07a352 100%);">🌅</div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Conseil Présidentiel de Transition</h3>
+            <p class="person-card__role">2024 – Présent &bull; Gouvernance collective</p>
+            <p class="person-card__desc">Mis en place en 2024 avec le soutien de la communauté internationale, le Conseil Présidentiel de Transition regroupe des représentants des grands partis politiques haïtiens. Il a pour mission de stabiliser le pays, de soutenir la Mission Multinationale de Soutien à la Sécurité (MMSHS) déployée par le Kenya et d'autres nations, et de préparer les conditions pour des élections libres. Haïti n'a pas tenu d'élection depuis 2016.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Découvrez l'Histoire Complète d'Haïti</h2>
+      <p>Plongez dans la chronologie détaillée des événements qui ont façonné la nation haïtienne, de l'ère taïno à nos jours.</p>
+      <a href="timeline.html" class="btn btn-cta-white">Voir la Chronologie →</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <span class="logo-emoji-flag">🇭🇹</span>
+            Haïti 🇭🇹
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="lwa.html">Les Lwa</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire</h4>
+          <ul>
+            <li><a href="timeline.html">Chronologie</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="heroes.html">Héros Nationaux</a></li>
+            <li><a href="history.html#revolution">La Révolution</a></li>
+            <li><a href="history.html#independence">Indépendance 1804</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger357, 🇭🇹 Haïti 🇭🇹. Tous droits réservés.</span>
+        <span>Fait avec &#10084;&#65039; pour Haïti</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
