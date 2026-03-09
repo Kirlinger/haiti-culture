@@ -97,7 +97,8 @@
       e.preventDefault();
       var btn = form.querySelector('[type="submit"]');
       var original = btn.textContent;
-      btn.textContent = '✓ Message Envoyé !';
+      var successText = btn.dataset.success || '✓ Message Envoyé !';
+      btn.textContent = successText;
       btn.disabled = true;
       btn.style.background = '#056835';
 

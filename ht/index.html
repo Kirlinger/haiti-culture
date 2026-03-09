@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🇭🇹 Haïti 🇭🇹, Discover the Pearl of the Antilles</title>
+  <meta name="description" content="Explore the rich history of Haiti, its vibrant culture, stunning places and resilient people. Your portal to the Pearl of the Antilles." />
+  <meta name="author" content="Kirlinger357" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       HEADER / NAVBAR
+  ═══════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Home">
+          <span class="logo-emoji-flag">🇭🇹</span>
+          Haïti 🇭🇹
+        </a>
+
+        <button class="navbar__toggle" aria-label="Ouvri meni" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+          <a href="index.html">Akèy</a>
+          <a href="about.html">Sou nou</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Istwa Jeneral</a>
+              <a href="timeline.html">Kronoloji</a>
+              <a href="heroes.html">Ewo Nasyonal</a>
+              <a href="leaders.html">Lidè</a>
+              <a href="constitution.html">Konstitisyon</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Kilti &amp; Atis</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Lwa yo</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jou Ferye</a>
+            </div>
+          </div>
+          <a href="tourism.html">Touris</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Ansiklopedi</a>
+              <a href="archives.html">Achiv</a>
+            </div>
+          </div>
+          <a href="contact.html">Kontak</a>
+          <div class="nav-dropdown lang-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">🇭🇹 Kreyòl ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="../fr/index.html" hreflang="fr">🇫🇷 Français</a>
+              <a href="../ht/index.html" hreflang="ht" class="lang-active">🇭🇹 Kreyòl</a>
+              <a href="../en/index.html" hreflang="en">🇺🇸 English</a>
+              <a href="../es/index.html" hreflang="es">🇪🇸 Español</a>
+            </div>
+          </div>
+        </nav>
+        <button class="search-toggle" aria-label="Chèche" title="Search the site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Chèche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Chèche: Lwa, seremoni, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fèmen rechèch">✕</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero__content">
+      <div class="hero__badge">🌴 Pearl of the Antilles</div>
+      <div class="hero__flag-emoji">🇭🇹</div>
+      <h1 class="hero__title">
+        Discover <span>Haiti</span><br/>
+        Land of Freedom &amp; Beauty
+      </h1>
+      <p class="hero__desc">
+        The first Black Republic in the world, a nation of extraordinary history,
+        vibrant culture, breathtaking landscapes and an unbreakable spirit.
+        Travel through the past and present of this remarkable Caribbean island.
+      </p>
+      <div class="hero__buttons">
+        <a href="about.html" class="btn btn-primary">Explore Culture</a>
+        <a href="history.html" class="btn btn-outline">Our History</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       STATS STRIP
+  ═══════════════════════════════════════════════ -->
+  <div class="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-item__number" data-count="1804" data-suffix="">1804</div>
+          <div class="stat-item__label">Year of Independence</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item__number" data-count="11" data-suffix="M+">11M+</div>
+          <div class="stat-item__label">Inhabitants</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item__number" data-count="220" data-suffix="+">220+</div>
+          <div class="stat-item__label">Years of History</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item__number" data-count="27750" data-suffix="">27,750</div>
+          <div class="stat-item__label">km² Territory</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       FEATURED SECTIONS (Cards)
+  ═══════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label text-center">Explore Haiti</p>
+      <h2 class="section-title text-center">Everything you need to know</h2>
+      <p class="section-subtitle text-center">
+        From the ancient Taino civilization to the first Black Republic, from vibrant Rara
+        festivals to splendid Caribbean beaches, Haiti has it all.
+      </p>
+
+      <div class="cards-grid">
+
+        <!-- About Card -->
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--blue">🎨</div>
+          <div class="card__body">
+            <p class="card__tag">Culture &amp; People</p>
+            <h3 class="card__title">Sou Ayiti</h3>
+            <p class="card__desc">
+              Discover Haitian art, music, language, cuisine and traditions.
+              From Vodou ceremonies to Carnival celebrations, culture is alive
+              in every corner of this vibrant nation.
+            </p>
+            <div class="card__footer">
+              <a href="about.html" class="btn btn-blue btn-sm">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- History Card -->
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--red">🏴</div>
+          <div class="card__body">
+            <p class="card__tag">Heritage</p>
+            <h3 class="card__title">History of Haiti</h3>
+            <p class="card__desc">
+              Follow the epic journey from the Taino people to French colonization,
+              through the revolutionary struggle for independence in 1804,
+              an event that changed the world forever.
+            </p>
+            <div class="card__footer">
+              <a href="history.html" class="btn btn-red btn-sm">Explore History →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tourism Card -->
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--gold">🏰</div>
+          <div class="card__body">
+            <p class="card__tag">Travel &amp; Tourism</p>
+            <h3 class="card__title">Places to Visit</h3>
+            <p class="card__desc">
+              From the Citadelle La Ferrière to the crystal waters of Labadee and Île-à-Vache,
+              Haiti offers unique and breathtaking destinations for every traveler.
+            </p>
+            <div class="card__footer">
+              <a href="tourism.html" class="btn btn-blue btn-sm">Discover Places →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       ABOUT SNIPPET
+  ═══════════════════════════════════════════════ -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-block">
+        <p class="section-label">A Nation Like No Other</p>
+        <h2>The Heart of the Antilles</h2>
+        <p>
+          Haiti, officially the Republic of Haiti, occupies the western third of the island
+          of Hispaniola in the Caribbean Sea. Sharing the island with the Dominican Republic,
+          Haiti has over 11 million inhabitants and a rich cultural heritage shaped by African,
+          French and indigenous Taino influences.
+        </p>
+        <p>
+          Haitian Creole (Kreyòl ayisyen) and French are the official languages.
+          The people are known for their warmth, artistic talent and extraordinary
+          resilience in the face of adversity.
+        </p>
+        <ul>
+          <li>Capital: Port-au-Prince</li>
+          <li>Official languages: Haitian Creole &amp; French</li>
+          <li>Independence declared: January 1, 1804</li>
+          <li>First Black Republic in the world</li>
+        </ul>
+        <a href="about.html" class="btn btn-blue">Learn More About Haiti</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       HIGHLIGHTS / FEATURE ICONS
+  ═══════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label text-center">Why Visit Haiti</p>
+      <h2 class="section-title text-center">Unique Experiences Await You</h2>
+      <p class="section-subtitle text-center">
+        Haiti offers a rare blend of history, nature, art and authentic culture
+        that you will find nowhere else in the Caribbean.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">🏰</div>
+          <h3 class="feature-card__title">World Heritage</h3>
+          <p class="feature-card__desc">
+            The Citadelle Laferrière and the Sans-Souci Palace are world heritage sites
+            and symbols of Haiti's glorious revolutionary past.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🎶</div>
+          <h3 class="feature-card__title">Vibrant Music</h3>
+          <p class="feature-card__desc">
+            Kompa, Rara and Rasin music fill the streets. Haitian music has
+            influenced Caribbean and world music for centuries.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🎨</div>
+          <h3 class="feature-card__title">World-Renowned Art</h3>
+          <p class="feature-card__desc">
+            Haitian art is celebrated internationally. From naïve paintings to intricate
+            metal sculptures, Haitian artists captivate the world.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🌊</div>
+          <h3 class="feature-card__title">Beautiful Beaches</h3>
+          <p class="feature-card__desc">
+            The beaches of Labadee, Île-à-Vache and Jacmel offer pristine sands and
+            turquoise waters rivaling any Caribbean destination.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🍽️</div>
+          <h3 class="feature-card__title">Delicious Cuisine</h3>
+          <p class="feature-card__desc">
+            Griyo, diri ak djon djon, pikliz, Haitian cuisine is bold, flavorful and
+            deeply rooted in African and Caribbean traditions.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🎭</div>
+          <h3 class="feature-card__title">Festivals &amp; Carnival</h3>
+          <p class="feature-card__desc">
+            Haitian Carnival is one of the most spectacular in the Caribbean.
+            Rara festivals bring communities together in joyful celebration.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       QUOTE
+  ═══════════════════════════════════════════════ -->
+  <div class="quote-block">
+    <div class="container">
+      <p class="quote-text">
+        "Liberty, Equality, Fraternity", the ideals of the French Revolution were made
+        reality by Haitian men and women who dared to be free.
+      </p>
+      <p class="quote-author">The Haitian Revolution, 1791–1804</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       CTA
+  ═══════════════════════════════════════════════ -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Plan Your Trip to Haiti</h2>
+      <p>
+        Discover all the incredible places to visit, activities to do and cultural
+        experiences awaiting you in the Pearl of the Antilles.
+      </p>
+      <a href="tourism.html" class="btn btn-cta-white">Explore Tourism →</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <span class="logo-emoji-flag">🇭🇹</span>
+            Haïti 🇭🇹
+          </div>
+          <p>
+            A celebration of Haiti's extraordinary history, its vibrant culture and its
+            remarkable people. Dedicated to sharing the story of the first Black Republic
+            in the world.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Eksplore</h4>
+          <ul>
+            <li><a href="index.html">Akèy</a></li>
+            <li><a href="about.html">Sou Ayiti</a></li>
+            <li><a href="history.html">Istwa</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="lwa.html">Lwa yo</a></li>
+            <li><a href="tourism.html">Touris</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Istwa</h4>
+          <ul>
+            <li><a href="timeline.html">Kronoloji</a></li>
+            <li><a href="leaders.html">Lidè</a></li>
+            <li><a href="heroes.html">Ewo Nasyonal</a></li>
+            <li><a href="timeline.html#catastrophes">Katastwòf</a></li>
+            <li><a href="history.html#revolution">Revolisyon an</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakte Nou</h4>
+          <ul>
+            <li><a href="contact.html">Kontakte Nou</a></li>
+            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Kirlinger357, 🇭🇹 Haïti 🇭🇹. Tout dwa rezève.</span>
+        <span>Fè avèk ❤️ pou Ayiti</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

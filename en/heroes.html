@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>National Heroes of Haiti | 🇭🇹 Haïti 🇭🇹</title>
+  <meta name="description" content="These men and women fought for freedom and changed the course of history." />
+  <meta name="author" content="Kirlinger357" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Home">
+          <span class="logo-emoji-flag">🇭🇹</span>
+          Haïti 🇭🇹
+        </a>
+        <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">History &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">General History</a>
+              <a href="timeline.html">Timeline</a>
+              <a href="heroes.html">National Heroes</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">The Lwa</a>
+              <a href="gastronomy.html">Gastronomy</a>
+              <a href="holidays.html">Holidays</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourism</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portal &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopedia</a>
+              <a href="archives.html">Archives</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+          <div class="nav-dropdown lang-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">🇺🇸 English ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="../fr/heroes.html" hreflang="fr">🇫🇷 Français</a>
+              <a href="../ht/heroes.html" hreflang="ht">🇭🇹 Kreyòl</a>
+              <a href="../en/heroes.html" class="lang-active" hreflang="en">🇺🇸 English</a>
+              <a href="../es/heroes.html" hreflang="es">🇪🇸 Español</a>
+            </div>
+          </div>
+        </nav>
+        <button class="search-toggle" aria-label="Search" title="Search the site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Search: Lwa, ceremonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Close search">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">⚔️ Heritage</p>
+      <h1 class="page-hero__title">Heroes of the Revolution</h1>
+      <p class="page-hero__desc">These men and women fought for freedom and changed the course of history.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>National Heroes</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label text-center">Exceptional Men and Women</p>
+      <h2 class="section-title text-center">Heroes of the Haitian Revolution</h2>
+      <p class="section-subtitle text-center">These historical figures dedicated their lives to the struggle for freedom and changed the course of world history. Their memory lives on in the heart of every Haitian.</p>
+      <div class="cards-grid">
+        <div class="person-card">
+          <div class="person-card__avatar"></div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Toussaint Louverture</h3>
+            <p class="person-card__role">1743 – 1803 &ndash; Father of the Revolution</p>
+            <p class="person-card__desc">A former enslaved man who became the greatest military and political leader of the Haitian Revolution, Toussaint Louverture was a brilliant strategist who successively defeated the Spanish, British and French armies. Captured through treachery by the French, he died in the Fort de Joux prison. His courage and vision paved the way for Haitian independence.</p>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-card__avatar"></div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Jean-Jacques Dessalines</h3>
+            <p class="person-card__role">1758 – 1806 &ndash; Founding Father of the Nation</p>
+            <p class="person-card__desc">Born into slavery, he became the general who proclaimed Haiti's independence on January 1, 1804, in Gonaïves. Crowned Emperor Jacques I of Haiti, this unyielding military leader definitively defeated Napoleonic forces at Vertières. Assassinated in 1806, he remains the uncontested founding father of the Haitian nation.</p>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-card__avatar"></div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Henri Christophe</h3>
+            <p class="person-card__role">1767 – 1820 &ndash; Builder King of the North</p>
+            <p class="person-card__desc">A general of the Revolution, Henri Christophe became King Henri I of northern Haiti. He is the builder of the majestic Citadelle Laferrière and the Sans-Souci Palace, both listed as UNESCO World Heritage Sites. A remarkable administrator, he sought to establish a prosperous and sovereign state capable of resisting any new invasion.</p>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-card__avatar"></div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Alexandre Pétion</h3>
+            <p class="person-card__role">1770 – 1818 &ndash; President of the Republic of the South</p>
+            <p class="person-card__desc">President of the Republic of Haiti for the southern part of the country, Pétion was a statesman with deep democratic convictions. He implemented a generous land reform and supported Simón Bolívar by providing troops and weapons for the liberation of South America. He is remembered for his generosity and humanism.</p>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-card__avatar"></div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Marie-Claire Heureuse Félicité</h3>
+            <p class="person-card__role">1758 – 1858 &ndash; Heroine and Symbol of Compassion</p>
+            <p class="person-card__desc">Wife of Jean-Jacques Dessalines, she was a heroine of the Revolution recognized for her courage, compassion and care for wounded soldiers. She is credited with saving many lives during the conflicts. A national symbol of strength and kindness, she is celebrated as one of the most important female figures in Haitian history.</p>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-card__avatar"></div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Boisrond-Tonnerre</h3>
+            <p class="person-card__role">1776 – 1806 &ndash; Author of the Declaration of Independence</p>
+            <p class="person-card__desc">Secretary to Dessalines, Boisrond-Tonnerre was the author of the official text of the Declaration of Independence. His fiery pen and bold formulations make him a symbol of revolutionary defiance. He embodied the total and irreversible break with the French colonial order.</p>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-card__avatar"></div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Sanité Belair</h3>
+            <p class="person-card__role">1781 – 1802 &ndash; First Female Officer of the Revolution</p>
+            <p class="person-card__desc">A revolutionary officer, Sanité Belair fought alongside her husband Charles Belair. Arrested by French forces, she was executed with admirable dignity, refusing to be blindfolded. She is considered one of the first female officers of any American revolution, and her courage remains a symbol of female bravery.</p>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-card__avatar"></div>
+          <div class="person-card__body">
+            <h3 class="person-card__name">Capois la Mort</h3>
+            <p class="person-card__role">1766 – 1806 &ndash; The Hero of Vertières</p>
+            <p class="person-card__desc">A legendary general at the Battle of Vertières, Capois la Mort distinguished himself with extraordinary bravery. He charged enemy lines repeatedly despite his wounds, inspiring his troops with his absolute fearlessness. His nickname, meaning "Capois Death," speaks to his total disregard for danger — a quality that earned him admiration from fighters on both sides.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <span class="logo-emoji-flag">🇭🇹</span>
+            Haïti 🇭🇹
+          </div>
+          <p>
+            A celebration of Haiti's extraordinary history, its vibrant culture and its
+            remarkable people. Dedicated to sharing the story of the first Black Republic
+            in the world.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Haiti</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="lwa.html">The Lwa</a></li>
+            <li><a href="tourism.html">Tourism</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>History</h4>
+          <ul>
+            <li><a href="history.html#revolution">The Revolution</a></li>
+            <li><a href="history.html#independence">Independence 1804</a></li>
+            <li><a href="history.html#figures">Key Figures</a></li>
+            <li><a href="history.html#modern">Modern Haiti</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html#form">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger357, 🇭🇹 Haïti 🇭🇹. All rights reserved.</span>
+        <span>Made with &#10084;&#65039; for Haiti</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

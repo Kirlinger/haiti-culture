@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakte Nou | 🇭🇹 Haïti 🇭🇹</title>
+  <meta name="description" content="Kontakte 🇭🇹 Haïti 🇭🇹. Poze kesyon sou istwa, kilti, touris Ayiti, oswa pataje istwa ou avèk nou." />
+  <meta name="author" content="Kirlinger357" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Home">
+          <span class="logo-emoji-flag">🇭🇹</span>
+          Haïti 🇭🇹
+        </a>
+        <button class="navbar__toggle" aria-label="Ouvri meni" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+          <a href="index.html">Akèy</a>
+          <a href="about.html">Sou nou</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Istwa Jeneral</a>
+              <a href="timeline.html">Kronoloji</a>
+              <a href="heroes.html">Ewo Nasyonal</a>
+              <a href="leaders.html">Lidè</a>
+              <a href="constitution.html">Konstitisyon</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Kilti &amp; Atis</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Lwa yo</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jou Ferye</a>
+            </div>
+          </div>
+          <a href="tourism.html">Touris</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Ansiklopedi</a>
+              <a href="archives.html">Achiv</a>
+            </div>
+          </div>
+          <a href="contact.html">Kontak</a>
+          <div class="nav-dropdown lang-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">🇭🇹 Kreyòl ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="../fr/contact.html" hreflang="fr">🇫🇷 Français</a>
+              <a href="../ht/contact.html" hreflang="ht" class="lang-active">🇭🇹 Kreyòl</a>
+              <a href="../en/contact.html" hreflang="en">🇺🇸 English</a>
+              <a href="../es/contact.html" hreflang="es">🇪🇸 Español</a>
+            </div>
+          </div>
+        </nav>
+        <button class="search-toggle" aria-label="Chèche" title="Search the site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Chèche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Chèche: Lwa, seremoni, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fèmen rechèch">✕</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero__label">✉️ Kontakte Nou</p>
+      <h1 class="page-hero__title">Kontakte Nou</h1>
+      <p class="page-hero__desc">
+        Èske ou gen yon kesyon sou Ayiti, istwa li, kilti li oswa touris li?
+        Nou ta renmen tande ou. Kontakte nou e ann konekte!
+      </p>
+    </div>
+  </section>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Akèy</a>
+        <span>/</span>
+        <span>Kontak</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section class="section" id="form">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Enfòmasyon Kontak</h3>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">📍</div>
+            <div>
+              <p class="contact-info-item__label">Kote</p>
+              <p class="contact-info-item__value">Pòtoprens, Ayiti</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">🌐</div>
+            <div>
+              <p class="contact-info-item__label">Platfòm</p>
+              <p class="contact-info-item__value">Haïti Culture — premye Repiblik Nwa nan lemonn</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">🇭🇹</div>
+            <div>
+              <p class="contact-info-item__label">Misyon Nou</p>
+              <p class="contact-info-item__value">Selebre epi pataje richès kiltirèl, istorik ak espirityèl Ayiti ak tout mond lan.</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">💬</div>
+            <div>
+              <p class="contact-info-item__label">Lang</p>
+              <p class="contact-info-item__value">Français · English · Español · Kreyòl Ayisyen</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Voye yon Mesaj</h3>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Non *</label>
+                <input type="text" id="contactName" name="name" placeholder="Non ou" required />
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Imèl *</label>
+                <input type="email" id="contactEmail" name="email" placeholder="ou@imel.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Sijè *</label>
+              <input type="text" id="contactSubject" name="subject" placeholder="Sijè mesaj ou" required />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Mesaj *</label>
+              <textarea id="contactMessage" name="message" placeholder="Mesaj ou…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-blue" data-success="✓ Mesaj Voye!">Voye Mesaj ✉️</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <span class="logo-emoji-flag">🇭🇹</span>
+            Haïti 🇭🇹
+          </div>
+          <p>
+            A celebration of Haiti's extraordinary history, its vibrant culture and its
+            remarkable people. Dedicated to sharing the story of the first Black Republic
+            in the world.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Eksplore</h4>
+          <ul>
+            <li><a href="index.html">Akèy</a></li>
+            <li><a href="about.html">Sou Ayiti</a></li>
+            <li><a href="history.html">Istwa</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="lwa.html">Lwa yo</a></li>
+            <li><a href="tourism.html">Touris</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Istwa</h4>
+          <ul>
+            <li><a href="history.html#revolution">Revolisyon an</a></li>
+            <li><a href="history.html#independence">Endepandans 1804</a></li>
+            <li><a href="history.html#figures">Pèsonaj Kle</a></li>
+            <li><a href="history.html#modern">Ayiti Modèn</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakte Nou</h4>
+          <ul>
+            <li><a href="contact.html">Kontakte Nou</a></li>
+            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Kirlinger357, 🇭🇹 Haïti 🇭🇹. Tout dwa rezève.</span>
+        <span>Fè avèk ❤️ pou Ayiti</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
