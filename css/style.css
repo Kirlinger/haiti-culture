@@ -221,14 +221,19 @@ ul {
   line-height: 1;
 }
 
-.hero__image-placeholder {
+.hero__flag {
   width: 280px;
-  height: 180px;
+  height: 187px;
   margin: 0 auto 32px;
-  border-radius: var(--radius-lg);
-  border: 2px dashed rgba(255,255,255,0.3);
-  background: rgba(255,255,255,0.07);
-  backdrop-filter: blur(4px);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45), 0 0 0 3px rgba(255,255,255,0.18);
+  display: block;
+}
+.hero__flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -340,32 +345,6 @@ ul {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin-bottom: 28px;
-}
-
-.hero__flag {
-  width: 200px;
-  height: 130px;
-  margin: 0 auto 32px;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
-  display: flex;
-  flex-direction: column;
-  background: var(--white);
-  padding: 10px;
-  gap: 4px;
-}
-
-.hero__flag .flag-blue {
-  flex: 1;
-  background: var(--blue);
-  border-radius: 6px;
-}
-
-.hero__flag .flag-red {
-  flex: 1;
-  background: var(--red);
-  border-radius: 6px;
 }
 
 .hero__title {
@@ -1974,15 +1953,15 @@ ul {
 .lwa-profile--legba .lwa-profile__text h3 { color: #b01000; }
 .lwa-profile--legba .lwa-profile__chant h3 { color: #ff8060; }
 
-/* Damballah Wedo — Argent & Blanc (pureté, serpent céleste, lune) */
+/* Damballah Wedo — Blanc & Argent (pureté, serpent céleste, lumière divine) */
 .lwa-profile--damballah .lwa-profile__header {
-  background: linear-gradient(135deg, #0a0e0c 0%, #181e1a 50%, #242c26 100%);
+  background: linear-gradient(135deg, #08090f 0%, #131824 50%, #1c2438 100%);
 }
 .lwa-profile--damballah .lwa-profile__chant {
-  background: linear-gradient(160deg, #080c0a, #141c14);
+  background: linear-gradient(160deg, #06070c, #0f1420);
 }
-.lwa-profile--damballah .lwa-profile__text h3 { color: #3a6a52; }
-.lwa-profile--damballah .lwa-profile__chant h3 { color: #b8dcc8; }
+.lwa-profile--damballah .lwa-profile__text h3 { color: #c0cce0; }
+.lwa-profile--damballah .lwa-profile__chant h3 { color: #e8f0fa; }
 
 /* Ayida Wedo — Arc-en-Ciel (ciel, pluie, fertilité céleste) */
 .lwa-profile--ayida .lwa-profile__header {
@@ -2040,15 +2019,15 @@ ul {
 .lwa-profile--baron .lwa-profile__text h3 { color: #7c3aed; }
 .lwa-profile--baron .lwa-profile__chant h3 { color: #c4b5fd; }
 
-/* Gran Brigitte — Violet & Noir (gardienne des morts, guérisseuse) */
+/* Gran Brigitte — Violet, Noir & Doré (gardienne des morts, guérisseuse, épouse du Baron) */
 .lwa-profile--gran-brigitte .lwa-profile__header {
-  background: linear-gradient(135deg, #100020 0%, #380060 55%, #500080 100%);
+  background: linear-gradient(135deg, #100020 0%, #380060 45%, #503010 80%, #604020 100%);
 }
 .lwa-profile--gran-brigitte .lwa-profile__chant {
   background: linear-gradient(160deg, #0e001a, #2e0052);
 }
-.lwa-profile--gran-brigitte .lwa-profile__text h3 { color: #9c2dd0; }
-.lwa-profile--gran-brigitte .lwa-profile__chant h3 { color: #e0b0ff; }
+.lwa-profile--gran-brigitte .lwa-profile__text h3 { color: #c090e8; }
+.lwa-profile--gran-brigitte .lwa-profile__chant h3 { color: #ddc090; }
 
 /* Azaka Mede — Bleu Chambray & Vert Terre (agriculture, paysans) */
 .lwa-profile--azaka .lwa-profile__header {
@@ -2060,19 +2039,19 @@ ul {
 .lwa-profile--azaka .lwa-profile__text h3 { color: #2070a0; }
 .lwa-profile--azaka .lwa-profile__chant h3 { color: #8ed4f4; }
 
-/* Agwe Tawoyo — Bleu Océan & Vert Marin (mer, océan, pêcheurs) */
+/* Agwe Tawoyo — Bleu Marine & Blanc (mer, océan, marins, diaspora) */
 .lwa-profile--agwe .lwa-profile__header {
-  background: linear-gradient(135deg, #001428 0%, #003858 40%, #005040 100%);
+  background: linear-gradient(135deg, #001428 0%, #003870 40%, #005890 100%);
 }
 .lwa-profile--agwe .lwa-profile__chant {
-  background: linear-gradient(160deg, #001020, #003040);
+  background: linear-gradient(160deg, #001020, #003060);
 }
-.lwa-profile--agwe .lwa-profile__text h3 { color: #007860; }
-.lwa-profile--agwe .lwa-profile__chant h3 { color: #70d8c0; }
+.lwa-profile--agwe .lwa-profile__text h3 { color: #5ab0e8; }
+.lwa-profile--agwe .lwa-profile__chant h3 { color: #c0e0f8; }
 
 /* Per-lwa image placeholder colors */
 .card__img--legba         { background: linear-gradient(135deg, #1a0000, #6a0000); }
-.card__img--damballah     { background: linear-gradient(135deg, #0c120e, #1c2820); }
+.card__img--damballah     { background: linear-gradient(135deg, #080a10, #1a2038); }
 .card__img--erzulie-freda { background: linear-gradient(135deg, #3a0818, #882040); }
 .card__img--baron         { background: linear-gradient(135deg, #000000, #180030); }
 
