@@ -51,6 +51,29 @@
           </div>
           <a href="tourism.html">Tourisme</a>
           <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Société ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture-vivante.html">Culture Vivante</a>
+              <a href="creativite-populaire.html">Créativité Populaire</a>
+              <a href="diaspora-engagee.html">Diaspora Engagée</a>
+              <a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a>
+              <a href="memoire-universelle.html">Mémoire Universelle</a>
+              <a href="patrimoine-national.html">Patrimoine National</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Enjeux ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Fragilité Économique</a>
+              <a href="inegalites-sociales.html">Inégalités Sociales</a>
+              <a href="instabilite-politique.html">Instabilité Politique</a>
+              <a href="pressions-securitaires.html">Pressions Sécuritaires</a>
+              <a href="services-essentiels.html">Services Essentiels</a>
+              <a href="capacite-adaptation.html">Capacité d'Adaptation</a>
+              <a href="reconstruction-durable.html">Reconstruction Durable</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
             <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
             <div class="nav-dropdown__menu">
               <a href="encyclopedia.html">Encyclopédie</a>
@@ -147,7 +170,9 @@
 
         <!-- About Card -->
         <div class="card">
-          <div class="card__img card__img--placeholder card__img--blue"></div>
+          <div class="card__img card__img--placeholder card__img--blue">
+            <span style="font-size:52px;">🇭🇹</span>
+          </div>
           <div class="card__body">
             <p class="card__tag">Culture &amp; Peuple</p>
             <h3 class="card__title">À propos d'Haïti</h3>
@@ -164,7 +189,9 @@
 
         <!-- History Card -->
         <div class="card">
-          <div class="card__img card__img--placeholder card__img--red"></div>
+          <div class="card__img card__img--placeholder card__img--red">
+            <span style="font-size:52px;">📜</span>
+          </div>
           <div class="card__body">
             <p class="card__tag">Patrimoine</p>
             <h3 class="card__title">Histoire d'Haïti</h3>
@@ -181,7 +208,9 @@
 
         <!-- Tourism Card -->
         <div class="card">
-          <div class="card__img card__img--placeholder card__img--gold"></div>
+          <div class="card__img card__img--placeholder card__img--gold">
+            <span style="font-size:52px;">🏰</span>
+          </div>
           <div class="card__body">
             <p class="card__tag">Voyage &amp; Tourisme</p>
             <h3 class="card__title">Lieux à Visiter</h3>
@@ -191,6 +220,60 @@
             </p>
             <div class="card__footer">
               <a href="tourism.html" class="btn btn-blue btn-sm">Découvrir les Lieux →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vodou Card -->
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--purple">
+            <span style="font-size:52px;">🥁</span>
+          </div>
+          <div class="card__body">
+            <p class="card__tag">Spiritualité</p>
+            <h3 class="card__title">Vodou Haïtien</h3>
+            <p class="card__desc">
+              Religion aux origines africaines profondes, le Vodou est au cœur de l'identité
+              haïtienne. Cérémonies, Lwa, vèvè — découvrez une spiritualité riche et complexe.
+            </p>
+            <div class="card__footer">
+              <a href="vodou.html" class="btn btn-blue btn-sm">Découvrir le Vodou →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Culture Card -->
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--teal">
+            <span style="font-size:52px;">🎨</span>
+          </div>
+          <div class="card__body">
+            <p class="card__tag">Art &amp; Expression</p>
+            <h3 class="card__title">Culture &amp; Arts</h3>
+            <p class="card__desc">
+              Musique Kompa, peinture naïve, littérature créole, Carnaval : la culture haïtienne
+              est une explosion permanente de créativité portée par tout un peuple.
+            </p>
+            <div class="card__footer">
+              <a href="culture.html" class="btn btn-blue btn-sm">Explorer la Culture →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diaspora Card -->
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--green">
+            <span style="font-size:52px;">🌍</span>
+          </div>
+          <div class="card__body">
+            <p class="card__tag">Diaspora</p>
+            <h3 class="card__title">Diaspora Engagée</h3>
+            <p class="card__desc">
+              Des millions d'Haïtiens dans le monde sont les ambassadeurs de leur culture
+              et un soutien économique vital, envoyant plus de 3 milliards de dollars par an.
+            </p>
+            <div class="card__footer">
+              <a href="diaspora-engagee.html" class="btn btn-blue btn-sm">Découvrir →</a>
             </div>
           </div>
         </div>
@@ -295,6 +378,207 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════
+       HAÏTI AUJOURD'HUI — Société
+  ═══════════════════════════════════════════════ -->
+  <section class="section section--alt">
+    <div class="container">
+      <p class="section-label text-center">Haïti Aujourd'hui</p>
+      <h2 class="section-title text-center">Société, Culture &amp; Identité</h2>
+      <p class="section-subtitle text-center">
+        Découvrez les dimensions vivantes de la société haïtienne : sa créativité,
+        sa diaspora engagée, sa jeunesse prometteuse et son patrimoine unique.
+      </p>
+
+      <div class="cards-grid cards-grid--6">
+
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--teal">
+            <span style="font-size:52px;">🌱</span>
+          </div>
+          <div class="card__body">
+            <p class="card__tag">Vivante</p>
+            <h3 class="card__title">Culture Vivante</h3>
+            <p class="card__desc">
+              La culture haïtienne n'est pas seulement un héritage — elle est vivante,
+              en mouvement, exprimée chaque jour dans la musique, la danse, l'art et les rituels.
+            </p>
+            <div class="card__footer">
+              <a href="culture-vivante.html" class="btn btn-blue btn-sm">Découvrir →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--gold">
+            <span style="font-size:52px;">🎨</span>
+          </div>
+          <div class="card__body">
+            <p class="card__tag">Créativité</p>
+            <h3 class="card__title">Créativité Populaire</h3>
+            <p class="card__desc">
+              L'art populaire haïtien, du fer recyclé aux peintures naïves, est reconnu
+              internationalement comme un trésor culturel unique et authentique.
+            </p>
+            <div class="card__footer">
+              <a href="creativite-populaire.html" class="btn btn-blue btn-sm">Découvrir →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--blue">
+            <span style="font-size:52px;">🌍</span>
+          </div>
+          <div class="card__body">
+            <p class="card__tag">Diaspora</p>
+            <h3 class="card__title">Diaspora Engagée</h3>
+            <p class="card__desc">
+              Plus de 3 milliards de dollars de remises annuelles. La diaspora haïtienne,
+              ambassadrice de sa culture, est un pilier économique et culturel du pays.
+            </p>
+            <div class="card__footer">
+              <a href="diaspora-engagee.html" class="btn btn-blue btn-sm">Découvrir →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--green">
+            <span style="font-size:52px;">🌟</span>
+          </div>
+          <div class="card__body">
+            <p class="card__tag">Avenir</p>
+            <h3 class="card__title">Jeunesse &amp; Potentiel</h3>
+            <p class="card__desc">
+              60 % de la population haïtienne a moins de 25 ans. Cette jeunesse dynamique
+              représente le moteur d'un renouveau possible pour la nation.
+            </p>
+            <div class="card__footer">
+              <a href="jeunesse-potentiel.html" class="btn btn-blue btn-sm">Découvrir →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--purple">
+            <span style="font-size:52px;">📚</span>
+          </div>
+          <div class="card__body">
+            <p class="card__tag">Héritage</p>
+            <h3 class="card__title">Mémoire Universelle</h3>
+            <p class="card__desc">
+              La Révolution haïtienne de 1804 a inspiré des mouvements de libération
+              à travers le monde. Cette mémoire appartient à toute l'humanité.
+            </p>
+            <div class="card__footer">
+              <a href="memoire-universelle.html" class="btn btn-blue btn-sm">Découvrir →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__img card__img--placeholder card__img--red">
+            <span style="font-size:52px;">🏛️</span>
+          </div>
+          <div class="card__body">
+            <p class="card__tag">Patrimoine</p>
+            <h3 class="card__title">Patrimoine National</h3>
+            <p class="card__desc">
+              De la Citadelle Laferrière au Palais Sans-Souci, le patrimoine haïtien
+              témoigne d'une grandeur historique reconnue par l'UNESCO.
+            </p>
+            <div class="card__footer">
+              <a href="patrimoine-national.html" class="btn btn-blue btn-sm">Découvrir →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       DÉFIS & VISION D'AVENIR
+  ═══════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label text-center">Comprendre &amp; Agir</p>
+      <h2 class="section-title text-center">Défis &amp; Vision d'Avenir</h2>
+      <p class="section-subtitle text-center">
+        Pour comprendre Haïti en profondeur, il faut aussi affronter ses défis actuels
+        et explorer les voies vers un avenir plus juste et prospère.
+      </p>
+
+      <div class="enjeux-grid">
+
+        <a href="fragilite-economique.html" class="enjeu-card">
+          <div class="enjeu-card__icon">💰</div>
+          <div class="enjeu-card__body">
+            <h3>Fragilité Économique</h3>
+            <p>PIB parmi les plus bas des Amériques, dépendance aux dons internationaux et aux remises de la diaspora.</p>
+          </div>
+          <span class="enjeu-card__arrow">→</span>
+        </a>
+
+        <a href="inegalites-sociales.html" class="enjeu-card">
+          <div class="enjeu-card__icon">⚖️</div>
+          <div class="enjeu-card__body">
+            <h3>Inégalités Sociales</h3>
+            <p>Un fossé profond entre une élite concentrant les richesses et une majorité vivant dans la précarité.</p>
+          </div>
+          <span class="enjeu-card__arrow">→</span>
+        </a>
+
+        <a href="instabilite-politique.html" class="enjeu-card">
+          <div class="enjeu-card__icon">🏛️</div>
+          <div class="enjeu-card__body">
+            <h3>Instabilité Politique</h3>
+            <p>Cycles répétés de crises politiques, coups d'État et difficultés à instaurer une gouvernance stable.</p>
+          </div>
+          <span class="enjeu-card__arrow">→</span>
+        </a>
+
+        <a href="pressions-securitaires.html" class="enjeu-card">
+          <div class="enjeu-card__icon">🛡️</div>
+          <div class="enjeu-card__body">
+            <h3>Pressions Sécuritaires</h3>
+            <p>La montée des gangs armés et l'insécurité généralisée constituent un défi majeur pour la stabilité.</p>
+          </div>
+          <span class="enjeu-card__arrow">→</span>
+        </a>
+
+        <a href="services-essentiels.html" class="enjeu-card">
+          <div class="enjeu-card__icon">🏥</div>
+          <div class="enjeu-card__body">
+            <h3>Services Essentiels</h3>
+            <p>Accès limité à l'eau potable, aux soins de santé et à l'éducation pour une large partie de la population.</p>
+          </div>
+          <span class="enjeu-card__arrow">→</span>
+        </a>
+
+        <a href="capacite-adaptation.html" class="enjeu-card enjeu-card--positive">
+          <div class="enjeu-card__icon">💪</div>
+          <div class="enjeu-card__body">
+            <h3>Capacité d'Adaptation</h3>
+            <p>Malgré tout, le peuple haïtien démontre une résilience et une solidarité remarquables face à l'adversité.</p>
+          </div>
+          <span class="enjeu-card__arrow">→</span>
+        </a>
+
+        <a href="reconstruction-durable.html" class="enjeu-card enjeu-card--positive">
+          <div class="enjeu-card__icon">🔨</div>
+          <div class="enjeu-card__body">
+            <h3>Reconstruction Durable</h3>
+            <p>Des voies concrètes existent pour reconstruire Haïti durablement — institutions solides et investissements responsables.</p>
+          </div>
+          <span class="enjeu-card__arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
        QUOTE
   ═══════════════════════════════════════════════ -->
   <div class="quote-block">
@@ -344,19 +628,32 @@
             <li><a href="index.html">Accueil</a></li>
             <li><a href="about.html">À propos d'Haïti</a></li>
             <li><a href="history.html">Histoire</a></li>
-            <li><a href="vodou.html">Vodou</a></li>
-            <li><a href="lwa.html">Les Lwa</a></li>
             <li><a href="tourism.html">Tourisme</a></li>
+            <li><a href="encyclopedia.html">Encyclopédie</a></li>
+            <li><a href="archives.html">Archives</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Histoire</h4>
+          <h4>Culture &amp; Société</h4>
+          <ul>
+            <li><a href="culture.html">Culture &amp; Arts</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastronomie</a></li>
+            <li><a href="culture-vivante.html">Culture Vivante</a></li>
+            <li><a href="creativite-populaire.html">Créativité Populaire</a></li>
+            <li><a href="diaspora-engagee.html">Diaspora Engagée</a></li>
+            <li><a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire &amp; Enjeux</h4>
           <ul>
             <li><a href="timeline.html">Chronologie</a></li>
-            <li><a href="leaders.html">Leaders</a></li>
             <li><a href="heroes.html">Héros Nationaux</a></li>
-            <li><a href="timeline.html#catastrophes">Catastrophes</a></li>
-            <li><a href="history.html#revolution">La Révolution</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="patrimoine-national.html">Patrimoine National</a></li>
+            <li><a href="memoire-universelle.html">Mémoire Universelle</a></li>
+            <li><a href="reconstruction-durable.html">Reconstruction Durable</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -368,7 +665,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Kirlinger357, 🇭🇹 Haïti 🇭🇹. Tous droits réservés.</span>
+        <span>&copy; 2026 Kirlinger357, 🇭🇹 Haïti 🇭🇹. Tous droits réservés.</span>
         <span>Fait avec ❤️ pour Haïti</span>
       </div>
     </div>
