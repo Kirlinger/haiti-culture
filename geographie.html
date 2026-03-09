@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Géographie d'Haïti : Carte, Départements &amp; Reliefs | 🇭🇹Haïti🇭🇹</title>
+  <title>Géographie d'Haïti : Carte, Départements &amp; Reliefs | 🇭🇹HAITI🇭🇹</title>
   <meta name="description" content="Découvrez la géographie d'Haïti : localisation dans les Caraïbes, île d'Hispaniola, frontière avec la République dominicaine, carte, dix départements, montagnes, rivières, climat et ressources naturelles." />
   <meta name="author" content="Kirlinger357" />
   <link rel="stylesheet" href="css/style.css" />
@@ -489,10 +489,7 @@
   <header class="site-header">
     <div class="container">
       <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
-          <span class="logo-emoji-flag">🇭🇹</span>
-          Haïti 🇭🇹
-        </a>
+        <a href="index.html" class="navbar__logo" aria-label="Accueil Haiti">🇭🇹HAITI🇭🇹</a>
         <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -749,150 +746,6 @@
   </section>
 
   <!-- ── 4. CARTE D'HAÏTI ──────────────────────────── -->
-  <section class="section section--alt" id="carte">
-    <div class="container">
-      <p class="section-label text-center">Carte Interactive</p>
-      <h2 class="section-title text-center">Carte d'Haïti</h2>
-      <p class="section-subtitle text-center">
-        Vue d'ensemble du territoire haïtien : la péninsule du Nord, la péninsule du Sud,
-        les dix départements et les principales villes.
-      </p>
-
-      <div class="map-container" style="margin-top:36px;">
-        <!-- SVG schematic map of Haiti -->
-        <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carte schématique d'Haïti montrant ses départements et principales villes" style="max-width:700px;width:100%;">
-          <title>Carte schématique d'Haïti</title>
-          <defs>
-            <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#a8d8f0"/>
-              <stop offset="100%" stop-color="#6bb8e0"/>
-            </linearGradient>
-            <linearGradient id="landGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#4a9e58"/>
-              <stop offset="100%" stop-color="#2e7a3c"/>
-            </linearGradient>
-          </defs>
-
-          <!-- Sea background -->
-          <rect width="700" height="380" fill="url(#seaGrad)" rx="12"/>
-
-          <!-- Haiti landmass (simplified outline) -->
-          <!-- Northern peninsula + main body + southern peninsula -->
-          <path d="
-            M 110,80
-            C 130,60 180,55 230,58
-            C 280,62 330,58 380,62
-            C 430,66 470,62 510,68
-            C 550,74 570,80 575,90
-            C 580,100 570,115 555,120
-            C 540,125 520,122 505,128
-            C 490,134 480,145 475,160
-            C 470,175 472,190 468,205
-            C 464,220 455,230 445,235
-            C 435,240 422,238 412,242
-            C 402,246 395,255 385,260
-            C 375,265 360,265 348,262
-            C 336,259 328,250 318,245
-            C 308,240 296,238 285,235
-            C 274,232 264,226 255,220
-            C 246,214 238,206 228,202
-            C 218,198 206,198 196,200
-            C 186,202 178,208 170,212
-            C 162,216 155,218 148,215
-            C 141,212 136,204 132,196
-            C 128,188 127,178 124,168
-            C 121,158 115,150 112,140
-            C 109,130 108,110 110,80
-            Z
-          " fill="url(#landGrad)" stroke="#1a5e28" stroke-width="1.5"/>
-
-          <!-- Golfe de la Gonâve (bay) -->
-          <path d="M 200,195 C 220,215 280,230 310,225 C 340,220 360,210 375,200 C 390,190 395,175 390,165 C 385,155 370,148 355,150 C 340,152 325,158 310,162 C 295,166 278,168 262,165 C 246,162 232,155 222,152 C 212,149 204,150 200,155 Z" fill="url(#seaGrad)" opacity="0.85"/>
-
-          <!-- Île de la Gonâve -->
-          <ellipse cx="240" cy="190" rx="30" ry="14" fill="#5ab068" stroke="#1a5e28" stroke-width="1" transform="rotate(-15 240 190)"/>
-          <text x="225" y="196" font-size="9" fill="#fff" font-family="sans-serif">Gonâve</text>
-
-          <!-- Department borders (approximate) -->
-          <line x1="340" y1="68" x2="338" y2="220" stroke="rgba(255,255,255,0.55)" stroke-width="1.2" stroke-dasharray="5,3"/>
-          <line x1="240" y1="72" x2="240" y2="200" stroke="rgba(255,255,255,0.55)" stroke-width="1.2" stroke-dasharray="5,3"/>
-          <line x1="440" y1="74" x2="438" y2="200" stroke="rgba(255,255,255,0.55)" stroke-width="1.2" stroke-dasharray="5,3"/>
-          <line x1="115" y1="140" x2="560" y2="140" stroke="rgba(255,255,255,0.55)" stroke-width="1.2" stroke-dasharray="5,3"/>
-          <line x1="115" y1="175" x2="390" y2="175" stroke="rgba(255,255,255,0.55)" stroke-width="1.2" stroke-dasharray="5,3"/>
-
-          <!-- Border with Dominican Republic -->
-          <line x1="540" y1="68" x2="520" y2="90" stroke="#e63946" stroke-width="2.5" stroke-dasharray="7,4"/>
-          <line x1="520" y1="90" x2="510" y2="115" stroke="#e63946" stroke-width="2.5" stroke-dasharray="7,4"/>
-          <line x1="510" y1="115" x2="505" y2="145" stroke="#e63946" stroke-width="2.5" stroke-dasharray="7,4"/>
-          <line x1="505" y1="145" x2="490" y2="175" stroke="#e63946" stroke-width="2.5" stroke-dasharray="7,4"/>
-          <line x1="490" y1="175" x2="478" y2="205" stroke="#e63946" stroke-width="2.5" stroke-dasharray="7,4"/>
-          <line x1="478" y1="205" x2="468" y2="240" stroke="#e63946" stroke-width="2.5" stroke-dasharray="7,4"/>
-
-          <!-- Cities -->
-          <!-- Port-au-Prince -->
-          <circle cx="310" cy="168" r="7" fill="#e63946" stroke="#fff" stroke-width="1.5"/>
-          <text x="318" y="165" font-size="11" font-weight="bold" fill="#fff" font-family="sans-serif">Port-au-Prince</text>
-
-          <!-- Cap-Haïtien -->
-          <circle cx="390" cy="70" r="5" fill="#f4a261" stroke="#fff" stroke-width="1.5"/>
-          <text x="398" y="73" font-size="10" fill="#fff" font-family="sans-serif">Cap-Haïtien</text>
-
-          <!-- Gonaïves -->
-          <circle cx="290" cy="108" r="4.5" fill="#f4a261" stroke="#fff" stroke-width="1.5"/>
-          <text x="298" y="112" font-size="10" fill="#fff" font-family="sans-serif">Gonaïves</text>
-
-          <!-- Les Cayes -->
-          <circle cx="330" cy="248" r="4.5" fill="#f4a261" stroke="#fff" stroke-width="1.5"/>
-          <text x="338" y="252" font-size="10" fill="#fff" font-family="sans-serif">Les Cayes</text>
-
-          <!-- Jacmel -->
-          <circle cx="370" cy="230" r="4" fill="#f4a261" stroke="#fff" stroke-width="1.5"/>
-          <text x="378" y="234" font-size="10" fill="#fff" font-family="sans-serif">Jacmel</text>
-
-          <!-- Hinche -->
-          <circle cx="430" cy="128" r="4" fill="#f4a261" stroke="#fff" stroke-width="1.5"/>
-          <text x="438" y="132" font-size="10" fill="#fff" font-family="sans-serif">Hinche</text>
-
-          <!-- Jeremie -->
-          <circle cx="150" cy="218" r="4" fill="#f4a261" stroke="#fff" stroke-width="1.5"/>
-          <text x="110" y="213" font-size="10" fill="#fff" font-family="sans-serif">Jérémie</text>
-
-          <!-- Legend -->
-          <rect x="30" y="300" width="200" height="65" rx="8" fill="rgba(0,0,0,0.45)"/>
-          <text x="42" y="318" font-size="11" fill="#fff" font-family="sans-serif" font-weight="bold">Légende</text>
-          <circle cx="44" cy="332" r="5" fill="#e63946" stroke="#fff" stroke-width="1"/>
-          <text x="54" y="336" font-size="10" fill="#fff" font-family="sans-serif">Capitale nationale</text>
-          <circle cx="44" cy="350" r="4" fill="#f4a261" stroke="#fff" stroke-width="1"/>
-          <text x="54" y="354" font-size="10" fill="#fff" font-family="sans-serif">Ville importante</text>
-          <line x1="35" y1="365" x2="52" y2="365" stroke="#e63946" stroke-width="2" stroke-dasharray="4,2"/>
-          <text x="57" y="368" font-size="10" fill="#fff" font-family="sans-serif">Frontière RD</text>
-
-          <!-- Compass rose -->
-          <g transform="translate(640,50)">
-            <circle r="20" fill="rgba(0,0,0,0.35)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-            <text x="0" y="-8" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold" font-family="sans-serif">N</text>
-            <text x="0" y="17" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="sans-serif">S</text>
-            <text x="-14" y="4" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="sans-serif">O</text>
-            <text x="14" y="4" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)" font-family="sans-serif">E</text>
-            <polygon points="0,-15 3,-5 -3,-5" fill="#e63946"/>
-            <polygon points="0,15 3,5 -3,5" fill="rgba(255,255,255,0.5)"/>
-          </g>
-
-          <!-- Dominican Republic label -->
-          <text x="590" y="130" font-size="11" fill="rgba(255,255,255,0.7)" font-family="sans-serif" font-style="italic" text-anchor="middle">Rép.</text>
-          <text x="590" y="144" font-size="11" fill="rgba(255,255,255,0.7)" font-family="sans-serif" font-style="italic" text-anchor="middle">Dominicaine</text>
-
-          <!-- Atlantic Ocean label -->
-          <text x="350" y="40" font-size="12" fill="rgba(255,255,255,0.75)" font-family="sans-serif" font-style="italic" text-anchor="middle">Océan Atlantique</text>
-
-          <!-- Caribbean Sea label -->
-          <text x="200" y="340" font-size="12" fill="rgba(255,255,255,0.75)" font-family="sans-serif" font-style="italic" text-anchor="middle">Mer des Caraïbes</text>
-        </svg>
-        <p class="map-caption">Carte schématique d'Haïti avec les principales villes, la frontière avec la République dominicaine et les mers environnantes.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- ── 5. LES DIX DÉPARTEMENTS ───────────────────── -->
   <section class="section" id="departements">
     <div class="container">
@@ -975,7 +828,7 @@
       <h2 class="section-title text-center">Structure Administrative Complète</h2>
       <p class="section-subtitle text-center">
         Explorez la hiérarchie officielle du territoire haïtien : cliquez sur un département pour
-        voir ses arrondissements, puis ses communes et leurs sections communales.
+        voir ses arrondissements, puis ses communes.
       </p>
 
       <!-- Stats row -->
@@ -983,7 +836,6 @@
         <div class="admin-stat-pill"><span>10</span> Départements</div>
         <div class="admin-stat-pill"><span>42</span> Arrondissements</div>
         <div class="admin-stat-pill"><span>140+</span> Communes</div>
-        <div class="admin-stat-pill"><span>495+</span> Sections Communales</div>
       </div>
 
       <!-- Breadcrumb navigation -->
@@ -999,14 +851,9 @@
         <div class="admin-grid" id="adminGrid"></div>
       </div>
 
-      <!-- Commune detail panel -->
-      <div class="commune-detail" id="communeDetail" role="region" aria-label="Détail de la commune">
-        <button class="admin-back-btn" id="communeBackBtn" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-          Retour aux communes
-        </button>
-        <div id="communeDetailContent"></div>
-      </div>
+      <p style="margin-top:28px;text-align:center;font-size:15px;color:var(--text-muted,#666);">
+        Haïti compte au total <strong>495 sections communales</strong> réparties dans l'ensemble des communes du pays.
+      </p>
     </div>
   </section>
 
@@ -1239,14 +1086,14 @@
             dans la région nord-est du pays :
           </p>
           <div class="resource-list">
-            <span class="resource-pill">⚡ Or</span>
-            <span class="resource-pill">🔩 Cuivre</span>
-            <span class="resource-pill">🪨 Calcaire</span>
-            <span class="resource-pill">⚙️ Fer</span>
-            <span class="resource-pill">💎 Argent</span>
-            <span class="resource-pill">🏗️ Bauxite</span>
-            <span class="resource-pill">🔵 Cobalt</span>
-            <span class="resource-pill">🟤 Marbre</span>
+            <span class="resource-pill">Or</span>
+            <span class="resource-pill">Cuivre</span>
+            <span class="resource-pill">Calcaire</span>
+            <span class="resource-pill">Fer</span>
+            <span class="resource-pill">Argent</span>
+            <span class="resource-pill">Bauxite</span>
+            <span class="resource-pill">Cobalt</span>
+            <span class="resource-pill">Marbre</span>
           </div>
           <p style="margin-top:18px;">
             Des études géologiques estiment que le nord-est d'Haïti contient l'un des
@@ -1347,10 +1194,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-brand__logo">
-            <span class="logo-emoji-flag">🇭🇹</span>
-            Haïti 🇭🇹
-          </div>
+          <div class="footer-brand__logo">🇭🇹HAITI🇭🇹</div>
           <p>
             Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
             vibrante et de son peuple remarquable. Dédié à partager l'histoire de
@@ -1401,7 +1245,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Kirlinger357, 🇭🇹 Haïti 🇭🇹. Tous droits réservés.</span>
+        <span>&copy; 2026 Kirlinger357, 🇭🇹HAITI🇭🇹. Tous droits réservés.</span>
         <span>Fait avec ❤️ pour Haïti</span>
       </div>
     </div>
@@ -1425,9 +1269,6 @@
     var panelTitle= document.getElementById('adminPanelTitle');
     var grid      = document.getElementById('adminGrid');
     var breadcrumb= document.getElementById('adminBreadcrumb');
-    var detailBox = document.getElementById('communeDetail');
-    var detailContent = document.getElementById('communeDetailContent');
-    var communeBackBtn = document.getElementById('communeBackBtn');
 
     if (!panel || !grid || !HAITI_ADMIN) return;
 
@@ -1441,7 +1282,6 @@
     function renderDepartments() {
       state.level = 'departments';
       state.dept = state.arrond = state.commune = null;
-      detailBox.classList.remove('visible');
       panel.style.display = '';
 
       panelTitle.textContent = '10 Départements — cliquez pour explorer';
@@ -1473,7 +1313,6 @@
       state.level = 'arrondissements';
       state.dept  = dept;
       state.arrond = state.commune = null;
-      detailBox.classList.remove('visible');
       panel.style.display = '';
 
       panelTitle.textContent = 'Arrondissements du département ' + dept.name + ' — cliquez pour voir les communes';
@@ -1507,87 +1346,25 @@
       state.level = 'communes';
       state.arrond = arr;
       state.commune = null;
-      detailBox.classList.remove('visible');
       panel.style.display = '';
 
-      panelTitle.textContent = 'Communes de l\'arrondissement de ' + arr.name + ' — cliquez pour les détails';
+      panelTitle.textContent = 'Communes de l\'arrondissement de ' + arr.name;
 
       var html = '';
       arr.communes.forEach(function (com) {
         var badges = '';
         if (com.chefLieuDepartement) badges += '<span class="admin-card__badge admin-card__badge--blue">Chef-lieu de département</span> ';
         if (com.chefLieuArrondissement && !com.chefLieuDepartement) badges += '<span class="admin-card__badge">Chef-lieu d\'arrond.</span> ';
-        html += '<div class="admin-card" tabindex="0" role="button"'
+        html += '<div class="admin-card"'
           + ' aria-label="Commune ' + esc(com.name) + '"'
-          + ' data-commune-id="' + esc(com.id) + '"'
-          + ' style="border-left: 4px solid ' + esc(state.dept.color) + '">'
+          + ' style="border-left: 4px solid ' + esc(state.dept.color) + ';cursor:default;">'
           + '<div class="admin-card__label">Commune</div>'
           + '<div class="admin-card__name">' + esc(com.name) + '</div>'
           + '<div class="admin-card__capital">' + esc(com.population) + '</div>'
           + (badges ? '<div style="margin-top:6px;">' + badges + '</div>' : '')
-          + '<div class="admin-card__count">' + com.sections.length + ' section' + (com.sections.length > 1 ? 's' : '') + ' communale' + (com.sections.length > 1 ? 's' : '') + '</div>'
-          + '<span class="admin-card__arrow">›</span>'
           + '</div>';
       });
       grid.innerHTML = html;
-      updateBreadcrumb();
-      bindCardClicks();
-      scrollToPanel();
-    }
-
-    /* ── Render commune detail ──────────────────────────── */
-    function renderCommuneDetail(communeId) {
-      var com = null;
-      state.arrond.communes.forEach(function (c) {
-        if (c.id === communeId) com = c;
-      });
-      if (!com) return;
-      state.level = 'commune';
-      state.commune = com;
-      panel.style.display = 'none';
-
-      var statusBadges = '';
-      if (com.chefLieuDepartement) {
-        statusBadges += '<span class="commune-detail__tag commune-detail__tag--blue">Chef-lieu de département</span>';
-      }
-      if (com.chefLieuArrondissement) {
-        statusBadges += '<span class="commune-detail__tag commune-detail__tag--gold">Chef-lieu d\'arrondissement</span>';
-      }
-
-      var sectionsHtml = '';
-      com.sections.forEach(function (s) {
-        sectionsHtml += '<span class="commune-section-tag">' + esc(s) + '</span>';
-      });
-
-      detailContent.innerHTML = ''
-        + '<div class="commune-detail__header">'
-        +   '<div class="commune-detail__color-bar" style="background:' + esc(state.dept.color) + '"></div>'
-        +   '<div style="flex:1;">'
-        +     '<div style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Commune</div>'
-        +     '<div class="commune-detail__title">' + esc(com.name) + '</div>'
-        +     '<div class="commune-detail__meta">'
-        +       '<span class="commune-detail__tag">Dép. ' + esc(com.department) + '</span>'
-        +       '<span class="commune-detail__tag">Arr. ' + esc(com.arrondissement) + '</span>'
-        +       statusBadges
-        +     '</div>'
-        +   '</div>'
-        + '</div>'
-        + '<div class="commune-detail__body">'
-        +   '<div class="commune-detail__section">'
-        +     '<h4>Population</h4>'
-        +     '<p>' + esc(com.population) + '</p>'
-        +     '<h4 style="margin-top:18px;">Description</h4>'
-        +     '<p>' + esc(com.description) + '</p>'
-        +   '</div>'
-        +   '<div class="commune-detail__section">'
-        +     '<h4>Caractéristiques</h4>'
-        +     '<p>' + esc(com.characteristics) + '</p>'
-        +     '<h4 style="margin-top:18px;">Sections Communales (' + com.sections.length + ')</h4>'
-        +     '<div class="commune-sections-list">' + sectionsHtml + '</div>'
-        +   '</div>'
-        + '</div>';
-
-      detailBox.classList.add('visible');
       updateBreadcrumb();
       scrollToPanel();
     }
@@ -1605,13 +1382,7 @@
         } else {
           html += '<button type="button" data-nav="arrondissements">' + esc(state.dept.name) + '</button>';
           html += '</div><span class="admin-breadcrumb__sep">›</span><div class="admin-breadcrumb__item">';
-          if (state.level === 'communes') {
-            html += '<span class="admin-breadcrumb__current">Arr. ' + esc(state.arrond.name) + '</span>';
-          } else {
-            html += '<button type="button" data-nav="communes">Arr. ' + esc(state.arrond.name) + '</button>';
-            html += '</div><span class="admin-breadcrumb__sep">›</span><div class="admin-breadcrumb__item">';
-            html += '<span class="admin-breadcrumb__current">' + esc(state.commune.name) + '</span>';
-          }
+          html += '<span class="admin-breadcrumb__current">Arr. ' + esc(state.arrond.name) + '</span>';
         }
       }
       html += '</div>';
@@ -1622,7 +1393,6 @@
           var nav = btn.getAttribute('data-nav');
           if (nav === 'departments') renderDepartments();
           else if (nav === 'arrondissements') renderArrondissements(state.dept.id);
-          else if (nav === 'communes') renderCommunes(state.arrond.id);
         });
       });
     }
@@ -1633,10 +1403,8 @@
         function activate() {
           var deptId   = card.getAttribute('data-dept-id');
           var arrondId = card.getAttribute('data-arrond-id');
-          var comId    = card.getAttribute('data-commune-id');
           if (deptId)   renderArrondissements(deptId);
           else if (arrondId) renderCommunes(arrondId);
-          else if (comId)    renderCommuneDetail(comId);
         }
         card.addEventListener('click', activate);
         card.addEventListener('keydown', function (e) {
@@ -1645,18 +1413,9 @@
       });
     }
 
-    /* ── Commune back button ────────────────────────────── */
-    communeBackBtn.addEventListener('click', function () {
-      detailBox.classList.remove('visible');
-      panel.style.display = '';
-      state.level = 'communes';
-      renderCommunes(state.arrond.id);
-    });
-
     /* ── Scroll helper ──────────────────────────────────── */
     function scrollToPanel() {
-      var target = detailBox.classList.contains('visible') ? detailBox : panel;
-      var top = target.getBoundingClientRect().top + window.scrollY - 100;
+      var top = panel.getBoundingClientRect().top + window.scrollY - 100;
       window.scrollTo({ top: top, behavior: 'smooth' });
     }
 
