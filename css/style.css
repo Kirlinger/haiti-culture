@@ -381,6 +381,10 @@ ul {
   gap: 28px;
 }
 
+.cards-grid--6 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
 .card {
   background: var(--white);
   border-radius: var(--radius-lg);
@@ -406,7 +410,7 @@ ul {
 }
 
 .card__img--placeholder {
-  height: 200px;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1067,10 +1071,79 @@ ul {
   padding: 72px 0 0;
 }
 
+/* ── Enjeux Grid ─────────────────────────────────────── */
+.enjeux-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.enjeu-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 24px;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+  border-left: 5px solid var(--red);
+}
+
+.enjeu-card--positive {
+  border-left-color: #056835;
+}
+
+.enjeu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.enjeu-card__icon {
+  font-size: 36px;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.enjeu-card__body {
+  flex: 1;
+}
+
+.enjeu-card__body h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.enjeu-card__body p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.enjeu-card__arrow {
+  font-size: 20px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  align-self: center;
+  transition: var(--transition);
+}
+
+.enjeu-card:hover .enjeu-card__arrow {
+  color: var(--blue);
+  transform: translateX(4px);
+}
+
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 36px;
   padding-bottom: 48px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
@@ -1191,9 +1264,19 @@ ul {
 }
 
 /* ── Responsive ─────────────────────────────────────── */
+
+/* Compact navbar for medium screens with more nav items */
+@media (max-width: 1280px) {
+  .navbar__nav a,
+  .nav-dropdown__btn {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+}
+
 @media (max-width: 1024px) {
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 32px;
   }
   .two-col {
@@ -1242,6 +1325,8 @@ ul {
     gap: 4px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
     border-top: 1px solid rgba(255,255,255,0.1);
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
   }
 
   .navbar__nav.open {
@@ -1251,11 +1336,44 @@ ul {
   .navbar__nav a {
     padding: 12px 16px;
     border-radius: var(--radius-sm);
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .navbar__toggle {
     display: flex;
+  }
+
+  /* Mobile dropdowns — show inline, not floating */
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-dropdown__btn {
+    width: 100%;
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+
+  .nav-dropdown__menu {
+    position: static;
+    box-shadow: none;
+    background: rgba(255,255,255,0.08);
+    border-radius: var(--radius-sm);
+    margin: 4px 0 4px 12px;
+    padding: 4px 0;
+    min-width: unset;
+  }
+
+  .nav-dropdown__menu a {
+    color: rgba(255,255,255,0.85) !important;
+    font-size: 14px;
+    padding: 9px 16px;
+  }
+
+  .nav-dropdown__menu a:hover {
+    background: rgba(255,255,255,0.12);
+    color: var(--gold) !important;
   }
 
   .site-header {
@@ -2498,5 +2616,34 @@ ul {
   /* Vodou info box - stays with its own gradient */
   .vodou-info-box {
     background: linear-gradient(135deg, #1a0033, #00209F);
+  }
+
+  /* Enjeux cards dark mode */
+  .enjeu-card {
+    background: #1e293b;
+    border: 1px solid var(--border);
+    border-left-color: var(--red);
+  }
+
+  .enjeu-card--positive {
+    border-left-color: #056835;
+  }
+
+  .enjeu-card__body h3 {
+    color: #93c5fd;
+  }
+
+  .nav-dropdown__menu {
+    background: #1e293b;
+    border: 1px solid var(--border);
+  }
+
+  .nav-dropdown__menu a {
+    color: var(--text) !important;
+  }
+
+  .nav-dropdown__menu a:hover {
+    background: #0f172a;
+    color: var(--gold) !important;
   }
 }

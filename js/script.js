@@ -193,6 +193,21 @@
     { title: 'Gastronomie Haïtienne', url: 'gastronomy.html', section: 'Culture', keywords: 'gastronomie cuisine haïti griyo diri pikliz soup joumou bannann akra legim' },
     { title: 'Archives Historiques', url: 'archives.html', section: 'Portail', keywords: 'archives documents constitution 1804 indépendance déclaration boisrond discours' },
     { title: 'Encyclopédie d\'Haïti', url: 'encyclopedia.html', section: 'Portail', keywords: 'encyclopédie haïti artibonite bois caïman carnaval dessalines vodou citadelle' },
+    // Société
+    { title: 'Culture Vivante d\'Haïti', url: 'culture-vivante.html', section: 'Société', keywords: 'culture vivante haïti musique danse art traditions quotidien créativité expression populaire' },
+    { title: 'Créativité Populaire', url: 'creativite-populaire.html', section: 'Société', keywords: 'créativité populaire art haïtien fer recyclé peintures naïves artisanat sculpture internationalement reconnu' },
+    { title: 'Diaspora Engagée', url: 'diaspora-engagee.html', section: 'Société', keywords: 'diaspora haïtienne remises milliards états-unis canada france engagement culturel économique réseau' },
+    { title: 'Jeunesse & Potentiel', url: 'jeunesse-potentiel.html', section: 'Société', keywords: 'jeunesse haïtienne potentiel éducation avenir 25 ans développement renouveau formation' },
+    { title: 'Mémoire Universelle', url: 'memoire-universelle.html', section: 'Société', keywords: 'mémoire universelle révolution haïtienne inspiration libération humanité 1804 héritage mondial' },
+    { title: 'Patrimoine National', url: 'patrimoine-national.html', section: 'Société', keywords: 'patrimoine national haïti citadelle laferrière sans-souci unesco mondial culture héritage' },
+    // Enjeux
+    { title: 'Fragilité Économique', url: 'fragilite-economique.html', section: 'Enjeux', keywords: 'fragilité économique haïti pib pauvreté dons internationaux remises diaspora développement' },
+    { title: 'Inégalités Sociales', url: 'inegalites-sociales.html', section: 'Enjeux', keywords: 'inégalités sociales haïti élite pauvreté fossé classes sociales précarité répartition richesses' },
+    { title: 'Instabilité Politique', url: 'instabilite-politique.html', section: 'Enjeux', keywords: 'instabilité politique haïti coups état crises gouvernance démocratie présidents assassinat' },
+    { title: 'Pressions Sécuritaires', url: 'pressions-securitaires.html', section: 'Enjeux', keywords: 'sécurité haïti gangs armés insécurité violence port-au-prince quartiers crise humanitaire' },
+    { title: 'Services Essentiels', url: 'services-essentiels.html', section: 'Enjeux', keywords: 'services essentiels haïti eau potable santé éducation électricité hôpitaux écoles accès' },
+    { title: 'Capacité d\'Adaptation', url: 'capacite-adaptation.html', section: 'Enjeux', keywords: 'résilience adaptation haïti séisme 2010 konbit sòl solidarité survie reconstruction communautaire' },
+    { title: 'Reconstruction Durable', url: 'reconstruction-durable.html', section: 'Enjeux', keywords: 'reconstruction durable haïti développement institutions investissements responsables avenir solutions' },
   ];
 
   function initSearch() {
