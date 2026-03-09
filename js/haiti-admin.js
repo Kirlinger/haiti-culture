@@ -1,6 +1,6 @@
 /* =====================================================
    Haiti Administrative Structure Data
-   10 départements · 42 arrondissements · 146 communes
+   10 départements · 42 arrondissements · ~140 communes · ~495 sections communales
    ===================================================== */
 
 var HAITI_ADMIN = [

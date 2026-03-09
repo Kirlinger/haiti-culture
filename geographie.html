@@ -926,7 +926,7 @@
           <div class="dept-card__number">Département 04</div>
           <div class="dept-card__name">Nord-Ouest</div>
           <div class="dept-card__capital">Chef-lieu : <strong>Port-de-Paix</strong></div>
-          <p style="font-size:13px;color:#555;margin-top:8px;">Bordé par le canal du Vent, avec l'île de la Tortue et l'île de la Gonâve sur son littoral.</p>
+          <p style="font-size:13px;color:#555;margin-top:8px;">Bordé par le canal du Vent, avec l'île de la Tortue sur son littoral. Région de pêche et d'agriculture.</p>
         </div>
         <div class="dept-card">
           <div class="dept-card__number">Département 05</div>
@@ -982,8 +982,8 @@
       <div class="admin-stats-row">
         <div class="admin-stat-pill"><span>10</span> Départements</div>
         <div class="admin-stat-pill"><span>42</span> Arrondissements</div>
-        <div class="admin-stat-pill"><span>146</span> Communes</div>
-        <div class="admin-stat-pill"><span>571</span> Sections Communales</div>
+        <div class="admin-stat-pill"><span>140+</span> Communes</div>
+        <div class="admin-stat-pill"><span>495+</span> Sections Communales</div>
       </div>
 
       <!-- Breadcrumb navigation -->
@@ -1454,7 +1454,7 @@
           + ' aria-label="Département ' + esc(dept.name) + '"'
           + ' data-dept-id="' + esc(dept.id) + '"'
           + ' style="border-left-color:' + esc(dept.color) + '">'
-          + '<div class="admin-card__label">Département 0' + (idx < 9 ? (idx + 1) : (idx + 1)) + '</div>'
+          + '<div class="admin-card__label">Département ' + (idx + 1 < 10 ? '0' + (idx + 1) : (idx + 1)) + '</div>'
           + '<div class="admin-card__name">' + esc(dept.name) + '</div>'
           + '<div class="admin-card__capital">Chef-lieu : <strong>' + esc(dept.capital) + '</strong></div>'
           + '<div class="admin-card__count">' + arrCount + ' arrond. · ' + comCount + ' communes</div>'
