@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | 🇭🇹 Haïti 🇭🇹</title>
-  <meta name="description" content="Contact 🇭🇹 Haïti 🇭🇹. Ask questions about Haitian history, culture, tourism, or share your story with us." />
+  <title>Contáctenos | 🇭🇹 Haïti 🇭🇹</title>
+  <meta name="description" content="Contáctenos 🇭🇹 Haïti 🇭🇹. Haga preguntas sobre la historia, cultura y turismo de Haití, o comparta su historia con nosotros." />
   <meta name="author" content="Kirlinger357" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
@@ -87,11 +87,11 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <p class="page-hero__label">✉️ Contact Us</p>
+      <p class="page-hero__label">✉️ Contáctenos</p>
       <h1 class="page-hero__title">Contáctenos</h1>
       <p class="page-hero__desc">
-        Do you have a question about Haiti, its history, culture or tourism?
-        We would love to hear from you. Contact us and let's connect!
+        ¿Tiene una pregunta sobre Haití, su historia, cultura o turismo?
+        Nos encantaría saber de usted. ¡Contáctenos y conectemos!
       </p>
     </div>
   </section>
@@ -109,18 +109,64 @@
 
   <!-- CONTACT SECTION -->
   <section class="section" id="form">
-    <div class="container" style="text-align:center;padding-top:60px;padding-bottom:60px;">
-      <p style="font-size:48px;margin-bottom:24px;">🕐</p>
-      <h2 style="font-size:28px;font-weight:800;color:var(--blue);margin-bottom:20px;">Coming Soon</h2>
-      <p style="font-size:17px;color:var(--text-muted);max-width:600px;margin:0 auto 16px;">
-        The contact section will be available very soon.
-      </p>
-      <p style="font-size:17px;color:var(--text-muted);max-width:600px;margin:0 auto 16px;">
-        We are currently finalizing some improvements to offer you a better experience.
-      </p>
-      <p style="font-size:17px;color:var(--text-muted);max-width:600px;margin:0 auto;">
-        Thank you for your patience and interest in this platform dedicated to Haiti.
-      </p>
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Información de Contacto</h3>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">📍</div>
+            <div>
+              <p class="contact-info-item__label">Ubicación</p>
+              <p class="contact-info-item__value">Puerto Príncipe, Haití</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">🌐</div>
+            <div>
+              <p class="contact-info-item__label">Plataforma</p>
+              <p class="contact-info-item__value">Haïti Culture — la primera República Negra del mundo</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">🇭🇹</div>
+            <div>
+              <p class="contact-info-item__label">Nuestra Misión</p>
+              <p class="contact-info-item__value">Celebrar y compartir la riqueza cultural, histórica y espiritual de Haití con todo el mundo.</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">💬</div>
+            <div>
+              <p class="contact-info-item__label">Idiomas</p>
+              <p class="contact-info-item__value">Français · English · Español · Kreyòl Ayisyen</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Enviar un Mensaje</h3>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Nombre *</label>
+                <input type="text" id="contactName" name="name" placeholder="Su nombre" required />
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Correo *</label>
+                <input type="email" id="contactEmail" name="email" placeholder="su@correo.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Asunto *</label>
+              <input type="text" id="contactSubject" name="subject" placeholder="Asunto de su mensaje" required />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Mensaje *</label>
+              <textarea id="contactMessage" name="message" placeholder="Su mensaje…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-blue" data-success="✓ ¡Mensaje Enviado!">Enviar Mensaje ✉️</button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 

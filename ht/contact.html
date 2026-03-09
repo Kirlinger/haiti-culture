@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | 🇭🇹 Haïti 🇭🇹</title>
-  <meta name="description" content="Contact 🇭🇹 Haïti 🇭🇹. Ask questions about Haitian history, culture, tourism, or share your story with us." />
+  <title>Kontakte Nou | 🇭🇹 Haïti 🇭🇹</title>
+  <meta name="description" content="Kontakte 🇭🇹 Haïti 🇭🇹. Poze kesyon sou istwa, kilti, touris Ayiti, oswa pataje istwa ou avèk nou." />
   <meta name="author" content="Kirlinger357" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
@@ -87,11 +87,11 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <p class="page-hero__label">✉️ Contact Us</p>
+      <p class="page-hero__label">✉️ Kontakte Nou</p>
       <h1 class="page-hero__title">Kontakte Nou</h1>
       <p class="page-hero__desc">
-        Do you have a question about Haiti, its history, culture or tourism?
-        We would love to hear from you. Contact us and let's connect!
+        Èske ou gen yon kesyon sou Ayiti, istwa li, kilti li oswa touris li?
+        Nou ta renmen tande ou. Kontakte nou e ann konekte!
       </p>
     </div>
   </section>
@@ -109,18 +109,64 @@
 
   <!-- CONTACT SECTION -->
   <section class="section" id="form">
-    <div class="container" style="text-align:center;padding-top:60px;padding-bottom:60px;">
-      <p style="font-size:48px;margin-bottom:24px;">🕐</p>
-      <h2 style="font-size:28px;font-weight:800;color:var(--blue);margin-bottom:20px;">Coming Soon</h2>
-      <p style="font-size:17px;color:var(--text-muted);max-width:600px;margin:0 auto 16px;">
-        The contact section will be available very soon.
-      </p>
-      <p style="font-size:17px;color:var(--text-muted);max-width:600px;margin:0 auto 16px;">
-        We are currently finalizing some improvements to offer you a better experience.
-      </p>
-      <p style="font-size:17px;color:var(--text-muted);max-width:600px;margin:0 auto;">
-        Thank you for your patience and interest in this platform dedicated to Haiti.
-      </p>
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Enfòmasyon Kontak</h3>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">📍</div>
+            <div>
+              <p class="contact-info-item__label">Kote</p>
+              <p class="contact-info-item__value">Pòtoprens, Ayiti</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">🌐</div>
+            <div>
+              <p class="contact-info-item__label">Platfòm</p>
+              <p class="contact-info-item__value">Haïti Culture — premye Repiblik Nwa nan lemonn</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">🇭🇹</div>
+            <div>
+              <p class="contact-info-item__label">Misyon Nou</p>
+              <p class="contact-info-item__value">Selebre epi pataje richès kiltirèl, istorik ak espirityèl Ayiti ak tout mond lan.</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">💬</div>
+            <div>
+              <p class="contact-info-item__label">Lang</p>
+              <p class="contact-info-item__value">Français · English · Español · Kreyòl Ayisyen</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Voye yon Mesaj</h3>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Non *</label>
+                <input type="text" id="contactName" name="name" placeholder="Non ou" required />
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Imèl *</label>
+                <input type="email" id="contactEmail" name="email" placeholder="ou@imel.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Sijè *</label>
+              <input type="text" id="contactSubject" name="subject" placeholder="Sijè mesaj ou" required />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Mesaj *</label>
+              <textarea id="contactMessage" name="message" placeholder="Mesaj ou…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-blue" data-success="✓ Mesaj Voye!">Voye Mesaj ✉️</button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 

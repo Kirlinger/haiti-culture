@@ -100,18 +100,64 @@
 
   <!-- CONTACT SECTION -->
   <section class="section" id="form">
-    <div class="container" style="text-align:center;padding-top:60px;padding-bottom:60px;">
-      <p style="font-size:48px;margin-bottom:24px;">🕐</p>
-      <h2 style="font-size:28px;font-weight:800;color:var(--blue);margin-bottom:20px;">Bientôt Disponible</h2>
-      <p style="font-size:17px;color:var(--text-muted);max-width:600px;margin:0 auto 16px;">
-        La section de contact sera disponible très prochainement.
-      </p>
-      <p style="font-size:17px;color:var(--text-muted);max-width:600px;margin:0 auto 16px;">
-        Nous finalisons actuellement certaines améliorations afin de vous offrir une meilleure expérience.
-      </p>
-      <p style="font-size:17px;color:var(--text-muted);max-width:600px;margin:0 auto;">
-        Merci pour votre patience et votre intérêt envers cette plateforme dédiée à Haïti.
-      </p>
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Informations de Contact</h3>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">📍</div>
+            <div>
+              <p class="contact-info-item__label">Localisation</p>
+              <p class="contact-info-item__value">Port-au-Prince, Haïti</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">🌐</div>
+            <div>
+              <p class="contact-info-item__label">Plateforme</p>
+              <p class="contact-info-item__value">Haïti Culture — première République noire du monde</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">🇭🇹</div>
+            <div>
+              <p class="contact-info-item__label">Notre Mission</p>
+              <p class="contact-info-item__value">Célébrer et partager la richesse culturelle, historique et spirituelle d'Haïti avec le monde entier.</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">💬</div>
+            <div>
+              <p class="contact-info-item__label">Langues</p>
+              <p class="contact-info-item__value">Français · English · Español · Kreyòl Ayisyen</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Envoyer un Message</h3>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Nom *</label>
+                <input type="text" id="contactName" name="name" placeholder="Votre nom" required />
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email *</label>
+                <input type="email" id="contactEmail" name="email" placeholder="votre@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Sujet *</label>
+              <input type="text" id="contactSubject" name="subject" placeholder="Objet de votre message" required />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message *</label>
+              <textarea id="contactMessage" name="message" placeholder="Votre message…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-blue" data-success="✓ Message Envoyé !">Envoyer le Message ✉️</button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
