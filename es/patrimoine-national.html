@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>National Heritage of Haiti | 🇭🇹 Haïti 🇭🇹</title>
+  <meta name="author" content="Kirlinger357" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Home">
+          <span class="logo-emoji-flag">🇭🇹</span>
+          Haïti 🇭🇹
+        </a>
+        <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="about.html">Acerca de</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">History &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Historia General</a>
+              <a href="timeline.html">Cronología</a>
+              <a href="heroes.html">Héroes Nacionales</a>
+              <a href="leaders.html">Líderes</a>
+              <a href="constitution.html">Constitución</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Cultura &amp; Artes</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Los Lwa</a>
+              <a href="gastronomy.html">Gastronomía</a>
+              <a href="holidays.html">Días Festivos</a>
+            </div>
+          </div>
+          <a href="tourism.html">Turismo</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portal &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Enciclopedia</a>
+              <a href="archives.html">Archivos</a>
+            </div>
+          </div>
+          <a href="contact.html">Contacto</a>
+          <div class="nav-dropdown lang-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">🇪🇸 Español ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="../fr/patrimoine-national.html" hreflang="fr">🇫🇷 Français</a>
+              <a href="../ht/patrimoine-national.html" hreflang="ht">🇭🇹 Kreyòl</a>
+              <a href="../en/patrimoine-national.html" hreflang="en">🇺🇸 English</a>
+              <a href="../es/patrimoine-national.html" hreflang="es" class="lang-active">🇪🇸 Español</a>
+            </div>
+          </div>
+        </nav>
+        <button class="search-toggle" aria-label="Buscar" title="Search the site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Buscar">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Buscar: Lwa, ceremonias, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Cerrar búsqueda">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--about">
+    <div class="container">
+      <p class="page-hero__label">🏛️ Heritage</p>
+      <h1 class="page-hero__title">Celebrating National Heritage</h1>
+      <p class="page-hero__desc">Haiti's cultural, historical, and natural riches — a precious legacy for future generations.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Inicio</a>
+        <span>/</span>
+        <span>National Heritage</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label text-center">A Treasure to Preserve</p>
+      <h2 class="section-title text-center">Haitian Heritage</h2>
+      <p class="section-subtitle text-center">Haiti possesses an exceptional cultural and natural heritage that deserves to be known, protected, and celebrated — both para Haitíans and for the world at large.</p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">🏰</div>
+          <h3 class="feature-card__title">UNESCO Heritage</h3>
+          <p class="feature-card__desc">The Citadelle Laferrière, the Sans-Souci Palace, and the Ramiers together form the National Historic Park, listed as a UNESCO World Heritage Site since 1982.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🎨</div>
+          <h3 class="feature-card__title">Art and Culture</h3>
+          <p class="feature-card__desc">Haitian naïve painting, metal sculptures, Vodou music, and Creole literature constitute an artistic heritage of extraordinary richness.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🌿</div>
+          <h3 class="feature-card__title">Natural Heritage</h3>
+          <p class="feature-card__desc">Haiti's mountain ranges, coastal areas, and biodiversity — despite deforestation — represent a natural heritage that deserves protection and restoration.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">📜</div>
+          <h3 class="feature-card__title">Historical Archives</h3>
+          <p class="feature-card__desc">The founding documents of the Republic, along with colonial and revolutionary archives, constitute an irreplaceable memory for understanding Haitian and world history.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🥘</div>
+          <h3 class="feature-card__title">Culinary Heritage</h3>
+          <p class="feature-card__desc">Haitian cuisine, notably Soup Joumou recognized by UNESCO, is an intangible cultural heritage that tells the story of independence and freedom.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🥁</div>
+          <h3 class="feature-card__title">Living Traditions</h3>
+          <p class="feature-card__desc">Vodou, Rara, Carnival, and oral traditions are living heritages that continue to be practiced and passed down from generation to generation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <span class="logo-emoji-flag">🇭🇹</span>
+            Haïti 🇭🇹
+          </div>
+          <p>
+            A celebration of Haiti's extraordinary history, its vibrant culture and its remarkable people. Dedicated to sharing the story of the first Black Republic in the world.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorar</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Sobre Haití</a></li>
+            <li><a href="history.html">Historia</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="lwa.html">Los Lwa</a></li>
+            <li><a href="tourism.html">Turismo</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Historia</h4>
+          <ul>
+            <li><a href="history.html#revolution">La Revolución</a></li>
+            <li><a href="history.html#independence">Independencia 1804</a></li>
+            <li><a href="history.html#figures">Figuras Clave</a></li>
+            <li><a href="history.html#modern">Haití Moderno</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contáctenos</h4>
+          <ul>
+            <li><a href="contact.html">Contáctenos</a></li>
+            <li><a href="contact.html#form">Enviar un Mensaje</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger357, 🇭🇹 Haïti 🇭🇹. Todos los derechos reservados.</span>
+        <span>Hecho con &#10084;&#65039; para Haití</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

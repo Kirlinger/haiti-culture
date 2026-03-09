@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timeline of Haitian History | 🇭🇹 Haïti 🇭🇹</title>
+  <meta name="description" content="From the Taino era to the present day, explore the moments that shaped Haiti's history, its crises and its disasters." />
+  <meta name="author" content="Kirlinger357" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Home">
+          <span class="logo-emoji-flag">🇭🇹</span>
+          Haïti 🇭🇹
+        </a>
+        <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="about.html">Acerca de</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">History &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Historia General</a>
+              <a href="timeline.html">Cronología</a>
+              <a href="heroes.html">Héroes Nacionales</a>
+              <a href="leaders.html">Líderes</a>
+              <a href="constitution.html">Constitución</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Cultura &amp; Artes</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Los Lwa</a>
+              <a href="gastronomy.html">Gastronomía</a>
+              <a href="holidays.html">Días Festivos</a>
+            </div>
+          </div>
+          <a href="tourism.html">Turismo</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portal &#9662;</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Enciclopedia</a>
+              <a href="archives.html">Archivos</a>
+            </div>
+          </div>
+          <a href="contact.html">Contacto</a>
+          <div class="nav-dropdown lang-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">🇪🇸 Español ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="../fr/timeline.html" hreflang="fr">🇫🇷 Français</a>
+              <a href="../ht/timeline.html" hreflang="ht">🇭🇹 Kreyòl</a>
+              <a href="../en/timeline.html" hreflang="en">🇺🇸 English</a>
+              <a href="../es/timeline.html" hreflang="es" class="lang-active">🇪🇸 Español</a>
+            </div>
+          </div>
+        </nav>
+        <button class="search-toggle" aria-label="Buscar" title="Search the site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Buscar">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Buscar: Lwa, ceremonias, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Cerrar búsqueda">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">📅 History</p>
+      <h1 class="page-hero__title">Timeline of Haiti</h1>
+      <p class="page-hero__desc">From the Taino era to the present day, explore the events that shaped Haiti's history, its heights and its trials.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Inicio</a>
+        <span>/</span>
+        <a href="history.html">Historia</a>
+        <span>/</span>
+        <span>Cronología</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- SECTION 1: CHRONOLOGICAL HISTORY -->
+  <section class="section" id="chronologie">
+    <div class="container">
+      <p class="section-label text-center">From Origins to the Present Day</p>
+      <h2 class="section-title text-center">The Great Moments of Haitian History</h2>
+      <p class="section-subtitle text-center">This timeline traces the foundational events that shaped the Haitian nation from its prehistoric origins to the contemporary era.</p>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">~5,000 BC</p>
+            <h3 class="timeline-card__title">First Inhabitants</h3>
+            <p class="timeline-card__desc">The first inhabitants of the island of Hispaniola settle. These peoples, coming from Central America and the South American continent, lived by hunting, fishing, and gathering, forming the deep roots of the indigenous populations that would thrive for millennia.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">~700 AD</p>
+            <h3 class="timeline-card__title">Taino Civilization</h3>
+            <p class="timeline-card__desc">The Taino civilization flourishes on the island, which they call "Ayiti" (land of high mountains) or "Kiskeya." Organized into chiefdoms led by caciques, the Tainos cultivate cassava and corn, practice fishing, and develop rich art and spirituality. Their population is estimated at between 300,000 and one million at the time of European arrival.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">December 5, 1492</p>
+            <h3 class="timeline-card__title">Arrival of Christopher Columbus</h3>
+            <p class="timeline-card__desc">Christopher Columbus arrives on the island on December 5, 1492 and names it Hispaniola. The cacique Guacanagarix welcomes the Spanish with hospitality. With the wreck of the Santa María, Columbus founds Fort Navidad, the first European settlement in the Americas. This encounter marks the beginning of colonization and the onset of the Taino population's decline.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1495 – 1510</p>
+            <h3 class="timeline-card__title">Extermination of the Tainos</h3>
+            <p class="timeline-card__desc">The Spanish conquerors enslave the Tainos in gold mines. European diseases to which they have no immunity, massacres, and inhuman working conditions decimate the population in less than thirty years. From several hundred thousand, the Tainos are reduced to a few thousand by 1510, then virtually exterminated before 1540.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1503 – 1600</p>
+            <h3 class="timeline-card__title">Beginning of the Slave Trade</h3>
+            <p class="timeline-card__desc">To replace the vanished indigenous workforce, the Spanish bring the first enslaved people from sub-Saharan Africa. This brutal human trafficking intensifies throughout the 16th century. Millions of Africans, torn from their families, languages, and cultures, are deported to the Americas under appalling crossing conditions.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1697</p>
+            <h3 class="timeline-card__title">Treaty of Ryswick: Birth of Saint-Domingue</h3>
+            <p class="timeline-card__desc">Spain cedes the western third of the island to France by the Treaty of Ryswick. The French colony of Saint-Domingue becomes the "Pearl of the Antilles" and the most profitable colony in the world. It produces more than half of the sugar and coffee consumed in Europe, entirely through the forced labor of hundreds of thousands of enslaved Africans living in conditions of extreme cruelty.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">18th century</p>
+            <h3 class="timeline-card__title">The Plantation Economy and Slavery</h3>
+            <p class="timeline-card__desc">At the peak of its wealth, Saint-Domingue has approximately 500,000 enslaved Africans against only 40,000 white colonists and 30,000 "affranchis" (free people of color). The enslaved work in dehumanizing conditions on sugar, coffee, indigo, and cotton plantations. Resistance is constant, whether through marronage (flight into the mountains), poisoning, or local insurrections.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">August 14, 1791</p>
+            <h3 class="timeline-card__title">Bois Caïman Ceremony</h3>
+            <p class="timeline-card__desc">In the forest of Bois Caïman, on the night of August 14, 1791, a Vodou ceremony brings together hundreds of enslaved people. Led by the houngan Dutty Boukman and a mambo, this ceremony seals a pact of resistance. Days later, thousands of enslaved people simultaneously rise up throughout the northern plain, burning plantations and marking the beginning of the only successful slave revolution in world history.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1791 – 1798</p>
+            <h3 class="timeline-card__title">The Haitian Revolution</h3>
+            <p class="timeline-card__desc">The Haitian Revolution sees complex coalitions form and dissolve. Toussaint Louverture, first allied with the Spanish then with the French after the abolition of slavery in 1794, defeats the British armies that attempted to annex the colony between 1793 and 1798. France officially abolishes slavery in all its colonies in 1794 — the first abolition in modern history — but Napoleon would attempt to restore it in 1802.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1801</p>
+            <h3 class="timeline-card__title">Toussaint's Constitution</h3>
+            <p class="timeline-card__desc">Toussaint Louverture promulgates the first constitution of Saint-Domingue, which definitively abolishes slavery and names him governor for life. This revolutionary text declares "There can be no slaves on this territory" and grants civil equality to all. Napoleon sees it as an unacceptable affront and sends a military expedition commanded by his brother-in-law Leclerc to retake control of the colony.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1802 – 1803</p>
+            <h3 class="timeline-card__title">Resistance to the Napoleonic Army</h3>
+            <p class="timeline-card__desc">Toussaint Louverture is captured by treachery in June 1802 and deported to France where he dies in the prison of Fort de Joux in April 1803. But resistance continues with even greater vigor. Yellow fever decimates the French army. Jean-Jacques Dessalines, Henri Christophe, and Alexandre Pétion unite their forces and annihilate the last Napoleonic troops.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">November 18, 1803</p>
+            <h3 class="timeline-card__title">Battle of Vertières</h3>
+            <p class="timeline-card__desc">The Battle of Vertières, near Cap-Haïtien, is the decisive and final victory of Haitian forces against the Napoleonic troops. Dessalines commands the general assault, and General Capois-la-Mort distinguishes himself with legendary bravery, charging enemy lines despite his wounds. The French capitulate and leave the island. This battle seals Haiti's independence and marks the end of Napoleon's colonial empire in America.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">January 1, 1804</p>
+            <h3 class="timeline-card__title">Independence of Haiti</h3>
+            <p class="timeline-card__desc">In Gonaïves, Jean-Jacques Dessalines declares Haiti's independence and restores the nation's original Taino name. Haiti becomes the first Black Republic in the world and the second nation in the Americas to gain independence after the United States. This event upends the world order and inspires abolitionist movements worldwide, while terrifying the slaveholding colonial powers.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1805</p>
+            <h3 class="timeline-card__title">Constitution of the Empire</h3>
+            <p class="timeline-card__desc">Emperor Dessalines promulgates the Constitution of 1805, a foundational text of rare boldness. It declares that all Haitians, regardless of skin color, are legally "Black," radically rejecting colonial racial hierarchies. It prohibits white people from owning land in Haiti. This visionary text was one of the first to proclaim absolute racial equality in the modern world.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">October 17, 1806</p>
+            <h3 class="timeline-card__title">Assassination of Dessalines</h3>
+            <p class="timeline-card__desc">Jean-Jacques Dessalines is assassinated in an ambush at Pont-Rouge, at the entrance to Port-au-Prince. His body is mutilated. His death causes a lasting fracture: the north of Haiti falls under the authority of Henri Christophe while the south is led by Alexandre Pétion. This division permanently weakens the young nation and inaugurates a century of political turbulence.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1811 – 1820</p>
+            <h3 class="timeline-card__title">The Kingdom of the North</h3>
+            <p class="timeline-card__desc">Henri Christophe proclaims himself King Henri I and governs northern Haiti as a kingdom. He builds the Citadelle Laferrière, a monumental fortress perched on a mountaintop, and the Palais Sans-Souci, a royal residence of splendor comparable to the greatest European palaces. These monuments, listed as UNESCO World Heritage sites, testify to the grandeur and ambition of the young Haitian nation.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1820</p>
+            <h3 class="timeline-card__title">Reunification of Haiti</h3>
+            <p class="timeline-card__desc">Henri Christophe, struck by apoplexy and weakened, faces a revolt by his generals. He takes his own life in his palace in October 1820. His successor Jean-Pierre Boyer reunifies the north and south of Haiti. Two years later, in 1822, Boyer annexes the eastern part of the island, placing all of Hispaniola under Haitian control for 22 years, until Dominican independence in 1844.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1825</p>
+            <h3 class="timeline-card__title">The Independence Debt to France</h3>
+            <p class="timeline-card__desc">Under the threat of a French war fleet of 14 ships of the line, President Boyer agrees to pay 150 million gold francs to France in exchange for official recognition of Haitian independence. This colossal sum, representing compensation for the former slave-owning colonists, would be repaid over more than 122 years and was finally settled only in 1947. This debt profoundly compromised Haiti's economic development.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1844</p>
+            <h3 class="timeline-card__title">Dominican Independence</h3>
+            <p class="timeline-card__desc">The eastern part of the island rises up and proclaims its independence as the Dominican Republic on February 27, 1844. Haiti attempts to reconquer this territory several times but fails. This separation marks the definitive division of Hispaniola into two nations with distinct destinies, which share the same island but develop profoundly different national identities.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1879 – 1911</p>
+            <h3 class="timeline-card__title">Chronic Political Instability</h3>
+            <p class="timeline-card__desc">The late 19th and early 20th centuries are marked by a rapid succession of presidents, most overthrown by coups or armed insurrections. Between 1843 and 1915, Haiti has more than 20 heads of state, many remaining in power for only a few months. This chronic political turmoil impoverishes the country and weakens its institutions, opening the way for foreign interference.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1915 – 1934</p>
+            <h3 class="timeline-card__title">American Occupation</h3>
+            <p class="timeline-card__desc">Following the massacre of political prisoners and the lynching of President Guillaume Sam, the United States lands its Marines and militarily occupies Haiti. For 19 years, Washington controls the country's finances, directs its constabulary, and imposes its political priorities. Armed resistance led by Charlemagne Péralte (killed in 1919) and Benoît Batraville opposes this occupation, which leaves lasting damage on national sovereignty.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1937</p>
+            <h3 class="timeline-card__title">Parsley Massacre</h3>
+            <p class="timeline-card__desc">From October 2 to 8, 1937, Dominican soldiers massacre between 15,000 and 35,000 Haitians living in the border region, on orders from dictator Rafael Trujillo. This genocide, sadly nicknamed "El Corte" (the cutting) or the Parsley Massacre because soldiers tested the pronunciation of the word "perejil" to identify Haitians, remains one of the darkest pages of Caribbean history. The Haitian response of the Vincent government was judged scandalously timid.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1957</p>
+            <h3 class="timeline-card__title">Duvalier Takes Power</h3>
+            <p class="timeline-card__desc">François Duvalier, a country doctor known for his work against yaws, is elected president with the support of Black and popular circles. He quickly transforms his mandate into a dictatorship. His Tonton Macoutes, a paramilitary militia operating with total impunity, spread terror. Opponents are assassinated, tortured, or forced into exile. Thousands of intellectuals, doctors, and teachers leave Haiti forever.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1964</p>
+            <h3 class="timeline-card__title">Duvalier: President for Life</h3>
+            <p class="timeline-card__desc">François Duvalier proclaims himself President for Life by referendum. His reign of terror crushes all opposition, destroys the army as a counterpower, controls the Catholic Church, and secures the loyalty of local elites. The brain drain of Haitians to the United States, Canada, and Europe accelerates. At his death in 1971, he designates his son Jean-Claude, then 19 years old, as his successor.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1971 – 1986</p>
+            <h3 class="timeline-card__title">Baby Doc's Regime</h3>
+            <p class="timeline-card__desc">Jean-Claude Duvalier "Baby Doc" maintains the dictatorship inherited from his father, but with less open violence. He opens the country to foreign investment and tourism while preserving systemic corruption. His 1980 marriage to Michèle Bennett, a wealthy mixed-race woman, causes an outcry. The economic crisis, glaring inequalities, and a popular uprising "Dechoukaj" force him to flee to France on February 7, 1986.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">March 29, 1987</p>
+            <h3 class="timeline-card__title">New Democratic Constitution</h3>
+            <p class="timeline-card__desc">Approved by popular referendum with an overwhelming majority, the Constitution of 1987 is an ambitious democratic text. It establishes the separation of powers, guarantees fundamental rights, prohibits anyone from serving more than two presidential terms, decentralizes administration, and recognizes Haitian Creole as an official language alongside French. This constitution, though often violated, remains the fundamental law of the country.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">December 16, 1990</p>
+            <h3 class="timeline-card__title">Election of Aristide</h3>
+            <p class="timeline-card__desc">Jean-Bertrand Aristide, a liberation theology priest, is elected president in Haiti's first free and fair elections, with more than 67% of votes in the first round. His election generates immense hope in working-class neighborhoods. Representing the dispossessed against the traditional elites, he embodies for many the promise of a more just Haiti.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1991</p>
+            <h3 class="timeline-card__title">Military Coup</h3>
+            <p class="timeline-card__desc">Only seven months after taking office, Aristide is overthrown by a military coup led by General Raoul Cédras. The international community condemns the coup and imposes a trade embargo. Under the junta, thousands of Aristide supporters are assassinated. The country sinks into repression and poverty. Aristide takes refuge in the United States.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1994</p>
+            <h3 class="timeline-card__title">Return of Aristide</h3>
+            <p class="timeline-card__desc">After three years in exile, Aristide is restored to office with the support of an international military force of 20,000 soldiers led by the United States. The junta relinquishes power. It is the first time in Caribbean history that an international force is used to restore a democratically elected president. Aristide demobilizes the Haitian army, a decision that will have lasting consequences for the country's security.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">2000 – 2004</p>
+            <h3 class="timeline-card__title">Political Crisis and Aristide's Second Exile</h3>
+            <p class="timeline-card__desc">Re-elected in 2000 in elections boycotted by the opposition, Aristide governs in a context of growing political paralysis. International aid is suspended. In 2004, as the bicentennial of independence approaches, an armed rebellion advances from the north of the country. In still-disputed circumstances, Aristide leaves Haiti on February 29, 2004 aboard an American plane. He says he was forced to leave; Washington denies it.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">2006 – 2011</p>
+            <h3 class="timeline-card__title">René Préval's Second Term</h3>
+            <p class="timeline-card__desc">René Préval, the only Haitian president to have completed two full terms, is re-elected in 2006. His second term aims for stabilization and development. He must, however, manage the 2008 food crisis (hunger riots), devastating hurricanes, and the 2010 earthquake. His calm and discretion contrast with the political storms shaking the country, but his management of the 2010 catastrophe is often criticized for its slowness.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">January 1, 2004</p>
+            <h3 class="timeline-card__title">Bicentennial of Independence</h3>
+            <p class="timeline-card__desc">Haiti celebrates the bicentennial of its independence. Official ceremonies are organized in Gonaïves despite the political crisis. This date prompts worldwide reflection on the legacy of the Haitian Revolution and on the impact that the debt imposed by France had on the country's development. Calls for France to repay these sums emerge in international debate.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">2011 – 2016</p>
+            <h3 class="timeline-card__title">Martelly Presidency</h3>
+            <p class="timeline-card__desc">Michel Martelly, a popular kompas singer nicknamed "Sweet Micky," wins the presidency in 2011 with American support. His term sees investments in post-earthquake schools and housing, but also corruption allegations, the inability to hold legislative elections, and a grave constitutional crisis. At the end of his term in 2016, the absence of elections leaves a dangerous institutional void.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">2017 – 2021</p>
+            <h3 class="timeline-card__title">Jovenel Moïse Presidency</h3>
+            <p class="timeline-card__desc">Jovenel Moïse, an agricultural entrepreneur nicknamed "Nèg Bannann," is elected in 2016 and takes office in 2017. His term is marked by the massive protests of the "PetroCaribe Challenge" movement (2018–2019) denouncing corruption in the management of Venezuelan funds. Security deteriorates, armed gangs extend their territorial control, and the country sinks into a multidimensional crisis.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">July 7, 2021</p>
+            <h3 class="timeline-card__title">Assassination of President Moïse</h3>
+            <p class="timeline-card__desc">In the night of July 6–7, 2021, President Jovenel Moïse is assassinated at his home in Pèlerin 5, in the hills above Port-au-Prince. An armed commando of about a dozen men forces its way into his residence and shoots him with about a dozen bullets. His wife Martine is seriously wounded. This brutal murder plunges Haiti into a new spiral of political uncertainty and security anarchy. The intellectual authors of the crime have never been clearly established.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">2022 – 2024</p>
+            <h3 class="timeline-card__title">Gang Domination and Humanitarian Crisis</h3>
+            <p class="timeline-card__desc">After Moïse's assassination, armed gangs extend their control over a large part of the territory. In 2024, the gang coalition "Viv Ansanm" (Living Together), led by gang leader Jimmy "Barbecue" Chérizier, attacks national prisons and releases thousands of detainees, then besieges the Port-au-Prince airport. Hundreds of thousands of people are displaced. Famine threatens entire areas of the capital.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">2024 – 2025</p>
+            <h3 class="timeline-card__title">Transition and International Mission</h3>
+            <p class="timeline-card__desc">Under international pressure, Prime Minister Ariel Henry resigns in March 2024. A Presidential Transitional Council is put in place grouping several political parties. The Multinational Security Support Mission (MSSM), led by Kenya and approved by the UN, begins deploying police forces to support the Haitian National Police. The country seeks, in an extremely difficult context, to find its way back toward elections and stability.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: DISASTERS AND CRISES -->
+  <section class="section section--alt" id="catastrophes">
+    <div class="container">
+      <p class="section-label text-center">Trials and Resilience</p>
+      <h2 class="section-title text-center">Disasters, Crises, and National Tragedies</h2>
+      <p class="section-subtitle text-center">Throughout its history, Haiti has suffered devastating natural disasters, health crises, and political violence of exceptional scale. Faced with each of these trials, the Haitian people have shown remarkable resilience.</p>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">1954 &bull; Hurricane</p>
+            <h3 class="timeline-card__title">Hurricane Hazel</h3>
+            <p class="timeline-card__desc">In October 1954, Hurricane Hazel strikes Haiti with extreme violence. More than 1,000 people lose their lives, thousands of homes are destroyed, and agricultural crops are devastated. It is one of the deadliest natural disasters of the 20th century in Haiti, occurring in a country still marked by the economic consequences of the American occupation and the debt imposed by France.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">1963 &bull; Hurricane</p>
+            <h3 class="timeline-card__title">Hurricane Flora</h3>
+            <p class="timeline-card__desc">In October 1963, Hurricane Flora strikes southern Haiti with cataclysmic intensity. More than 6,000 people are killed, making it one of the most deadly natural disasters in Haitian history. Entire villages are wiped off the map. Reconstruction is made difficult by structural poverty and the lack of institutions capable of coordinating aid.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">November 28, 1987 &bull; Political Violence</p>
+            <h3 class="timeline-card__title">1987 Election Massacre</h3>
+            <p class="timeline-card__desc">During the first elections held after the fall of Duvalier, armed men attack polling stations in Port-au-Prince, massacring dozens of voters who had come to exercise their civic right for the first time. This deliberate violence forces the cancellation of the elections. The act, attributed to still-active Duvalierist militias, illustrates the resistance of conservative forces to any genuine democratic transition.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">1991 – 1994 &bull; Repression</p>
+            <h3 class="timeline-card__title">Terror Under the Military Junta</h3>
+            <p class="timeline-card__desc">During the three years of Raoul Cédras' military regime, following the coup against Aristide, between 3,000 and 5,000 civilians are killed by the army and FRAPH paramilitaries. Thousands of activists in working-class neighborhoods are arrested, tortured, or murdered. Thousands of Haitian refugees flee by sea toward the United States; many drown or are intercepted and returned by the US Coast Guard.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">2004 &bull; Floods</p>
+            <h3 class="timeline-card__title">Mapou and Fonds-Verrettes Floods</h3>
+            <p class="timeline-card__desc">In May 2004, torrential rains cause catastrophic flooding in southern Haiti and in the western department. More than 2,000 people perish in the towns of Mapou and Fonds-Verrettes. The massive deforestation that has stripped Haiti's mountains considerably increases the risk of flooding. This tragedy highlights the country's critical environmental vulnerability.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">September 2008 &bull; Hurricanes</p>
+            <h3 class="timeline-card__title">2008 Hurricane Season</h3>
+            <p class="timeline-card__desc">Within three weeks of September 2008, four consecutive tropical cyclones (Fay, Gustav, Hanna, and Ike) strike Haiti. More than 800 people die, 60% of crops are destroyed, and hundreds of thousands of people are left homeless. The city of Gonaïves is submerged under several meters of mud. The cost of damages represents 70% of the national GDP and plunges the country into a serious food crisis.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">January 12, 2010 &bull; Earthquake</p>
+            <h3 class="timeline-card__title">The Great Earthquake of 2010</h3>
+            <p class="timeline-card__desc">At 4:53 PM local time, a magnitude 7.0 earthquake strikes 25 km west of Port-au-Prince. In seconds, an entire city collapses. More than 220,000 people lose their lives by estimates, 300,000 are injured, and 1.5 million are left homeless. The National Palace, the Port-au-Prince cathedral, hospitals, schools, and entire ministries collapse. It is one of the worst natural disasters in the history of the Western Hemisphere.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">2010 – 2019 &bull; Epidemic</p>
+            <h3 class="timeline-card__title">Cholera Epidemic</h3>
+            <p class="timeline-card__desc">In October 2010, a few months after the earthquake, a cholera epidemic breaks out in the Artibonite department. It spreads rapidly across the country. Scientific investigations establish that the strain was introduced by soldiers from the UN peacekeeping mission (MINUSTAH) from Nepal. More than 820,000 people are infected and approximately 10,000 die. The UN belatedly acknowledged its responsibility in 2016, without effective reparations.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">October 4, 2016 &bull; Hurricane</p>
+            <h3 class="timeline-card__title">Hurricane Matthew</h3>
+            <p class="timeline-card__desc">Hurricane Matthew, one of the most powerful in Atlantic history, strikes southern Haiti on October 4, 2016 with winds of 230 km/h. More than 546 people die, cities such as Les Cayes, Jérémie, and the entire Southern Peninsula are devastated. Hundreds of thousands of people are displaced and agricultural infrastructure is annihilated. Reconstruction is slow, hampered by chronic political instability.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">August 14, 2021 &bull; Earthquake</p>
+            <h3 class="timeline-card__title">2021 Grand Sud Earthquake</h3>
+            <p class="timeline-card__desc">A magnitude 7.2 earthquake strikes the Sud and Grand'Anse departments on August 14, 2021, just six weeks after the assassination of President Moïse. More than 2,248 people die, 12,000 are injured, and more than 130,000 homes are destroyed or damaged. The humanitarian response is complicated by political instability, distrust of the government, and the presence of armed gangs that sometimes block the delivery of aid.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">2018 – Present &bull; Insecurity</p>
+            <h3 class="timeline-card__title">Security Crisis and Gang Control</h3>
+            <p class="timeline-card__desc">From 2018, armed gangs progressively extend their control over Port-au-Prince and other regions. In 2023 and 2024, gang coalitions control more than 80% of the capital. Kidnappings for ransom reach unprecedented levels, targeting both foreigners and ordinary Haitians. The road linking Port-au-Prince to cities in the north is regularly cut off. Hundreds of thousands of people are internally displaced.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--blue);">
+            <p class="timeline-card__year">2024 – 2025 &bull; Hope</p>
+            <h3 class="timeline-card__title">Multinational Mission and Transition</h3>
+            <p class="timeline-card__desc">In 2024, a Multinational Security Support Mission, authorized by the UN Security Council and led by Kenya, begins deploying police forces to support the Haitian National Police. A Presidential Transitional Council attempts to stabilize institutions. Despite extraordinarily difficult conditions, Haiti continues to seek its path toward peace, democracy, and development, carried forward by the resilience of its people.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Discover the Leaders of Haitian History</h2>
+      <p>From Toussaint Louverture to contemporary presidents, dive into portraits of the men and women who led Haiti.</p>
+      <a href="leaders.html" class="btn btn-cta-white">See the Leaders →</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <span class="logo-emoji-flag">🇭🇹</span>
+            Haïti 🇭🇹
+          </div>
+          <p>
+            A celebration of Haiti's extraordinary history, its vibrant culture and its remarkable people.
+            Dedicated to sharing the story of the first Black Republic in the world.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorar</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Sobre Haití</a></li>
+            <li><a href="history.html">Historia</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="lwa.html">Los Lwa</a></li>
+            <li><a href="tourism.html">Turismo</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Historia</h4>
+          <ul>
+            <li><a href="timeline.html">Cronología</a></li>
+            <li><a href="leaders.html">Líderes</a></li>
+            <li><a href="heroes.html">Héroes Nacionales</a></li>
+            <li><a href="timeline.html#catastrophes">Desastres</a></li>
+            <li><a href="history.html#revolution">La Revolución</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contáctenos</h4>
+          <ul>
+            <li><a href="contact.html">Contáctenos</a></li>
+            <li><a href="contact.html#form">Enviar un Mensaje</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger357, 🇭🇹 Haïti 🇭🇹. Todos los derechos reservados.</span>
+        <span>Hecho con &#10084;&#65039; para Haití</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
