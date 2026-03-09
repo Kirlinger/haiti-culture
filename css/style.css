@@ -979,6 +979,13 @@ ul {
   margin-bottom: 24px;
 }
 
+.contact-unavailable__title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 16px;
+}
+
 .contact-unavailable__message {
   font-size: 17px;
   line-height: 1.8;
