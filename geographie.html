@@ -186,6 +186,293 @@
       letter-spacing: 0.5px;
     }
 
+    /* ── Interactive Administrative Hierarchy ────────── */
+    .admin-section {
+      background: var(--bg-soft);
+    }
+    .admin-stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .admin-stat-pill {
+      background: var(--blue-dark, #0d2b6e);
+      color: #fff;
+      border-radius: 50px;
+      padding: 10px 22px;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .admin-stat-pill span {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--gold, #FFD166);
+    }
+
+    /* Breadcrumb nav */
+    .admin-breadcrumb {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .admin-breadcrumb__item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .admin-breadcrumb__item button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--blue);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: background 0.2s;
+      font-family: inherit;
+    }
+    .admin-breadcrumb__item button:hover {
+      background: rgba(0,32,159,0.08);
+    }
+    .admin-breadcrumb__sep {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    .admin-breadcrumb__current {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    /* Level panels */
+    .admin-panel {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      min-height: 280px;
+    }
+    .admin-panel__title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+    }
+    .admin-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 14px;
+    }
+    .admin-card {
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 14px;
+      cursor: pointer;
+      transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s, background 0.18s;
+      position: relative;
+      background: var(--white);
+    }
+    .admin-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.11);
+      border-color: var(--blue);
+      background: #f0f4ff;
+    }
+    .admin-card:focus {
+      outline: 3px solid var(--blue);
+      outline-offset: 2px;
+    }
+    .admin-card--dept {
+      border-left-width: 5px;
+    }
+    .admin-card__label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .admin-card__name {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .admin-card__capital {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .admin-card__capital strong {
+      color: var(--text);
+    }
+    .admin-card__badge {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      border-radius: 50px;
+      padding: 2px 8px;
+      font-size: 10px;
+      font-weight: 700;
+      margin-top: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .admin-card__badge--dept {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+    .admin-card__count {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .admin-card__arrow {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--blue);
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.18s;
+    }
+    .admin-card:hover .admin-card__arrow {
+      opacity: 1;
+    }
+
+    /* Commune detail panel */
+    .commune-detail {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      display: none;
+    }
+    .commune-detail.visible {
+      display: block;
+    }
+    .commune-detail__header {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--border);
+    }
+    .commune-detail__color-bar {
+      width: 8px;
+      min-height: 80px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      background: var(--blue);
+    }
+    .commune-detail__title {
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+    .commune-detail__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .commune-detail__tag {
+      background: var(--bg-soft);
+      border-radius: 50px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .commune-detail__tag--gold {
+      background: #fef3c7;
+      color: #92400e;
+    }
+    .commune-detail__tag--blue {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+    .commune-detail__body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .commune-detail__section h4 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .commune-detail__section p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .commune-sections-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .commune-section-tag {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 5px 12px;
+      font-size: 12px;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .admin-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+      margin-bottom: 24px;
+      font-family: inherit;
+    }
+    .admin-back-btn:hover {
+      background: var(--bg-soft);
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    @media (max-width: 640px) {
+      .admin-grid { grid-template-columns: 1fr 1fr; }
+      .commune-detail__body { grid-template-columns: 1fr; }
+      .admin-panel { padding: 20px 16px; }
+    }
+    @media (max-width: 400px) {
+      .admin-grid { grid-template-columns: 1fr; }
+    }
     @media (max-width: 640px) {
       .dept-grid { grid-template-columns: 1fr 1fr; }
       .climate-grid { grid-template-columns: 1fr 1fr; }
@@ -290,7 +577,7 @@
   <!-- PAGE HERO -->
   <section class="page-hero page-hero--geographie">
     <div class="container">
-      <p class="page-hero__label">🗺️ Géographie</p>
+      <p class="page-hero__label">Géographie</p>
       <h1 class="page-hero__title">La Géographie d'Haïti</h1>
       <p class="page-hero__desc">
         Un territoire montagneux au cœur des Caraïbes, partagé entre la mer et le ciel,
@@ -619,61 +906,61 @@
       <div class="dept-grid">
         <div class="dept-card">
           <div class="dept-card__number">Département 01</div>
-          <div class="dept-card__name">🏙️ Ouest</div>
+          <div class="dept-card__name">Ouest</div>
           <div class="dept-card__capital">Chef-lieu : <strong>Port-au-Prince</strong></div>
           <p style="font-size:13px;color:#555;margin-top:8px;">Le département le plus peuplé, incluant la capitale nationale et la zone métropolitaine.</p>
         </div>
         <div class="dept-card">
           <div class="dept-card__number">Département 02</div>
-          <div class="dept-card__name">🌊 Nord</div>
+          <div class="dept-card__name">Nord</div>
           <div class="dept-card__capital">Chef-lieu : <strong>Cap-Haïtien</strong></div>
           <p style="font-size:13px;color:#555;margin-top:8px;">Berceau historique de la Révolution haïtienne, site de la Citadelle Laferrière.</p>
         </div>
         <div class="dept-card">
           <div class="dept-card__number">Département 03</div>
-          <div class="dept-card__name">🌿 Nord-Est</div>
+          <div class="dept-card__name">Nord-Est</div>
           <div class="dept-card__capital">Chef-lieu : <strong>Fort-Liberté</strong></div>
           <p style="font-size:13px;color:#555;margin-top:8px;">Région frontalière avec la République dominicaine, connue pour la baie de Fort-Liberté.</p>
         </div>
         <div class="dept-card">
           <div class="dept-card__number">Département 04</div>
-          <div class="dept-card__name">🌾 Nord-Ouest</div>
+          <div class="dept-card__name">Nord-Ouest</div>
           <div class="dept-card__capital">Chef-lieu : <strong>Port-de-Paix</strong></div>
-          <p style="font-size:13px;color:#555;margin-top:8px;">Bordé par le canal du Vent, avec les îles Tortue et La Gonâve sur son littoral.</p>
+          <p style="font-size:13px;color:#555;margin-top:8px;">Bordé par le canal du Vent, avec l'île de la Tortue et l'île de la Gonâve sur son littoral.</p>
         </div>
         <div class="dept-card">
           <div class="dept-card__number">Département 05</div>
-          <div class="dept-card__name">🌾 Artibonite</div>
+          <div class="dept-card__name">Artibonite</div>
           <div class="dept-card__capital">Chef-lieu : <strong>Gonaïves</strong></div>
           <p style="font-size:13px;color:#555;margin-top:8px;">Le plus grand département, grenier à riz d'Haïti, traversé par le fleuve Artibonite.</p>
         </div>
         <div class="dept-card">
           <div class="dept-card__number">Département 06</div>
-          <div class="dept-card__name">🏔️ Centre</div>
+          <div class="dept-card__name">Centre</div>
           <div class="dept-card__capital">Chef-lieu : <strong>Hinche</strong></div>
           <p style="font-size:13px;color:#555;margin-top:8px;">Région centrale de l'île, traversée par la chaîne des Matheux et le fleuve Artibonite.</p>
         </div>
         <div class="dept-card">
           <div class="dept-card__number">Département 07</div>
-          <div class="dept-card__name">🌸 Sud-Est</div>
+          <div class="dept-card__name">Sud-Est</div>
           <div class="dept-card__capital">Chef-lieu : <strong>Jacmel</strong></div>
           <p style="font-size:13px;color:#555;margin-top:8px;">Réputé pour son architecture coloniale, ses plages et son festival de carnaval unique.</p>
         </div>
         <div class="dept-card">
           <div class="dept-card__number">Département 08</div>
-          <div class="dept-card__name">☀️ Sud</div>
+          <div class="dept-card__name">Sud</div>
           <div class="dept-card__capital">Chef-lieu : <strong>Les Cayes</strong></div>
-          <p style="font-size:13px;color:#555;margin-top:8px;">Deuxième ville du pays, porte d'entrée de la péninsule du Sud et de l'île-à-Vache.</p>
+          <p style="font-size:13px;color:#555;margin-top:8px;">Porte d'entrée de la péninsule du Sud, avec les Cayes, Port-Salut et l'île-à-Vache.</p>
         </div>
         <div class="dept-card">
           <div class="dept-card__number">Département 09</div>
-          <div class="dept-card__name">🌴 Grande-Anse</div>
+          <div class="dept-card__name">Grande-Anse</div>
           <div class="dept-card__capital">Chef-lieu : <strong>Jérémie</strong></div>
           <p style="font-size:13px;color:#555;margin-top:8px;">Surnommée « Cité des Poètes », au bout de la péninsule du Sud, forêts et plages sauvages.</p>
         </div>
         <div class="dept-card">
           <div class="dept-card__number">Département 10</div>
-          <div class="dept-card__name">⛰️ Nippes</div>
+          <div class="dept-card__name">Nippes</div>
           <div class="dept-card__capital">Chef-lieu : <strong>Miragoâne</strong></div>
           <p style="font-size:13px;color:#555;margin-top:8px;">Le plus jeune département (créé en 2003), situé au cœur de la péninsule du Sud.</p>
         </div>
@@ -681,7 +968,49 @@
     </div>
   </section>
 
-  <!-- ── 6. MONTAGNES ET PLAINES ───────────────────── -->
+  <!-- ── 6. STRUCTURE ADMINISTRATIVE INTERACTIVE ─────── -->
+  <section class="section admin-section" id="structure-administrative">
+    <div class="container">
+      <p class="section-label text-center">Organisation Territoriale</p>
+      <h2 class="section-title text-center">Structure Administrative Complète</h2>
+      <p class="section-subtitle text-center">
+        Explorez la hiérarchie officielle du territoire haïtien : cliquez sur un département pour
+        voir ses arrondissements, puis ses communes et leurs sections communales.
+      </p>
+
+      <!-- Stats row -->
+      <div class="admin-stats-row">
+        <div class="admin-stat-pill"><span>10</span> Départements</div>
+        <div class="admin-stat-pill"><span>42</span> Arrondissements</div>
+        <div class="admin-stat-pill"><span>146</span> Communes</div>
+        <div class="admin-stat-pill"><span>571</span> Sections Communales</div>
+      </div>
+
+      <!-- Breadcrumb navigation -->
+      <nav class="admin-breadcrumb" id="adminBreadcrumb" aria-label="Navigation hiérarchique">
+        <div class="admin-breadcrumb__item">
+          <span class="admin-breadcrumb__current">Tous les Départements</span>
+        </div>
+      </nav>
+
+      <!-- Dynamic hierarchy panel -->
+      <div class="admin-panel" id="adminPanel">
+        <div class="admin-panel__title" id="adminPanelTitle">Sélectionnez un département</div>
+        <div class="admin-grid" id="adminGrid"></div>
+      </div>
+
+      <!-- Commune detail panel -->
+      <div class="commune-detail" id="communeDetail" role="region" aria-label="Détail de la commune">
+        <button class="admin-back-btn" id="communeBackBtn" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          Retour aux communes
+        </button>
+        <div id="communeDetailContent"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 7. MONTAGNES ET PLAINES ───────────────────── -->
   <section class="section section--alt" id="relief">
     <div class="container">
       <p class="section-label text-center">Relief &amp; Topographie</p>
@@ -1078,6 +1407,262 @@
     </div>
   </footer>
 
+  <script src="js/haiti-admin.js"></script>
   <script src="js/script.js"></script>
+  <script>
+  /* ── Interactive Administrative Hierarchy ─────────────── */
+  (function () {
+    'use strict';
+
+    var state = {
+      level: 'departments',  // departments | arrondissements | communes | commune
+      dept: null,
+      arrond: null,
+      commune: null
+    };
+
+    var panel     = document.getElementById('adminPanel');
+    var panelTitle= document.getElementById('adminPanelTitle');
+    var grid      = document.getElementById('adminGrid');
+    var breadcrumb= document.getElementById('adminBreadcrumb');
+    var detailBox = document.getElementById('communeDetail');
+    var detailContent = document.getElementById('communeDetailContent');
+    var communeBackBtn = document.getElementById('communeBackBtn');
+
+    if (!panel || !grid || !HAITI_ADMIN) return;
+
+    function esc(str) {
+      var d = document.createElement('div');
+      d.appendChild(document.createTextNode(str));
+      return d.innerHTML;
+    }
+
+    /* ── Render departments ─────────────────────────────── */
+    function renderDepartments() {
+      state.level = 'departments';
+      state.dept = state.arrond = state.commune = null;
+      detailBox.classList.remove('visible');
+      panel.style.display = '';
+
+      panelTitle.textContent = '10 Départements — cliquez pour explorer';
+
+      var html = '';
+      HAITI_ADMIN.forEach(function (dept, idx) {
+        var arrCount = dept.arrondissements.length;
+        var comCount = dept.arrondissements.reduce(function (s, a) { return s + a.communes.length; }, 0);
+        html += '<div class="admin-card admin-card--dept" tabindex="0" role="button"'
+          + ' aria-label="Département ' + esc(dept.name) + '"'
+          + ' data-dept-id="' + esc(dept.id) + '"'
+          + ' style="border-left-color:' + esc(dept.color) + '">'
+          + '<div class="admin-card__label">Département 0' + (idx < 9 ? (idx + 1) : (idx + 1)) + '</div>'
+          + '<div class="admin-card__name">' + esc(dept.name) + '</div>'
+          + '<div class="admin-card__capital">Chef-lieu : <strong>' + esc(dept.capital) + '</strong></div>'
+          + '<div class="admin-card__count">' + arrCount + ' arrond. · ' + comCount + ' communes</div>'
+          + '<span class="admin-card__arrow">›</span>'
+          + '</div>';
+      });
+      grid.innerHTML = html;
+      updateBreadcrumb();
+      bindCardClicks();
+    }
+
+    /* ── Render arrondissements ─────────────────────────── */
+    function renderArrondissements(deptId) {
+      var dept = HAITI_ADMIN.find(function (d) { return d.id === deptId; });
+      if (!dept) return;
+      state.level = 'arrondissements';
+      state.dept  = dept;
+      state.arrond = state.commune = null;
+      detailBox.classList.remove('visible');
+      panel.style.display = '';
+
+      panelTitle.textContent = 'Arrondissements du département ' + dept.name + ' — cliquez pour voir les communes';
+
+      var html = '';
+      dept.arrondissements.forEach(function (arr) {
+        html += '<div class="admin-card" tabindex="0" role="button"'
+          + ' aria-label="Arrondissement ' + esc(arr.name) + '"'
+          + ' data-arrond-id="' + esc(arr.id) + '"'
+          + ' style="border-left: 4px solid ' + esc(dept.color) + '">'
+          + '<div class="admin-card__label">Arrondissement</div>'
+          + '<div class="admin-card__name">' + esc(arr.name) + '</div>'
+          + '<div class="admin-card__capital">Chef-lieu : <strong>' + esc(arr.capital) + '</strong></div>'
+          + '<div class="admin-card__count">' + arr.communes.length + ' commune' + (arr.communes.length > 1 ? 's' : '') + '</div>'
+          + '<span class="admin-card__arrow">›</span>'
+          + '</div>';
+      });
+      grid.innerHTML = html;
+      updateBreadcrumb();
+      bindCardClicks();
+      scrollToPanel();
+    }
+
+    /* ── Render communes ────────────────────────────────── */
+    function renderCommunes(arrondId) {
+      var arr = null;
+      state.dept.arrondissements.forEach(function (a) {
+        if (a.id === arrondId) arr = a;
+      });
+      if (!arr) return;
+      state.level = 'communes';
+      state.arrond = arr;
+      state.commune = null;
+      detailBox.classList.remove('visible');
+      panel.style.display = '';
+
+      panelTitle.textContent = 'Communes de l\'arrondissement de ' + arr.name + ' — cliquez pour les détails';
+
+      var html = '';
+      arr.communes.forEach(function (com) {
+        var badges = '';
+        if (com.chefLieuDepartement) badges += '<span class="admin-card__badge admin-card__badge--blue">Chef-lieu de département</span> ';
+        if (com.chefLieuArrondissement && !com.chefLieuDepartement) badges += '<span class="admin-card__badge">Chef-lieu d\'arrond.</span> ';
+        html += '<div class="admin-card" tabindex="0" role="button"'
+          + ' aria-label="Commune ' + esc(com.name) + '"'
+          + ' data-commune-id="' + esc(com.id) + '"'
+          + ' style="border-left: 4px solid ' + esc(state.dept.color) + '">'
+          + '<div class="admin-card__label">Commune</div>'
+          + '<div class="admin-card__name">' + esc(com.name) + '</div>'
+          + '<div class="admin-card__capital">' + esc(com.population) + '</div>'
+          + (badges ? '<div style="margin-top:6px;">' + badges + '</div>' : '')
+          + '<div class="admin-card__count">' + com.sections.length + ' section' + (com.sections.length > 1 ? 's' : '') + ' communale' + (com.sections.length > 1 ? 's' : '') + '</div>'
+          + '<span class="admin-card__arrow">›</span>'
+          + '</div>';
+      });
+      grid.innerHTML = html;
+      updateBreadcrumb();
+      bindCardClicks();
+      scrollToPanel();
+    }
+
+    /* ── Render commune detail ──────────────────────────── */
+    function renderCommuneDetail(communeId) {
+      var com = null;
+      state.arrond.communes.forEach(function (c) {
+        if (c.id === communeId) com = c;
+      });
+      if (!com) return;
+      state.level = 'commune';
+      state.commune = com;
+      panel.style.display = 'none';
+
+      var statusBadges = '';
+      if (com.chefLieuDepartement) {
+        statusBadges += '<span class="commune-detail__tag commune-detail__tag--blue">Chef-lieu de département</span>';
+      }
+      if (com.chefLieuArrondissement) {
+        statusBadges += '<span class="commune-detail__tag commune-detail__tag--gold">Chef-lieu d\'arrondissement</span>';
+      }
+
+      var sectionsHtml = '';
+      com.sections.forEach(function (s) {
+        sectionsHtml += '<span class="commune-section-tag">' + esc(s) + '</span>';
+      });
+
+      detailContent.innerHTML = ''
+        + '<div class="commune-detail__header">'
+        +   '<div class="commune-detail__color-bar" style="background:' + esc(state.dept.color) + '"></div>'
+        +   '<div style="flex:1;">'
+        +     '<div style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px;">Commune</div>'
+        +     '<div class="commune-detail__title">' + esc(com.name) + '</div>'
+        +     '<div class="commune-detail__meta">'
+        +       '<span class="commune-detail__tag">Dép. ' + esc(com.department) + '</span>'
+        +       '<span class="commune-detail__tag">Arr. ' + esc(com.arrondissement) + '</span>'
+        +       statusBadges
+        +     '</div>'
+        +   '</div>'
+        + '</div>'
+        + '<div class="commune-detail__body">'
+        +   '<div class="commune-detail__section">'
+        +     '<h4>Population</h4>'
+        +     '<p>' + esc(com.population) + '</p>'
+        +     '<h4 style="margin-top:18px;">Description</h4>'
+        +     '<p>' + esc(com.description) + '</p>'
+        +   '</div>'
+        +   '<div class="commune-detail__section">'
+        +     '<h4>Caractéristiques</h4>'
+        +     '<p>' + esc(com.characteristics) + '</p>'
+        +     '<h4 style="margin-top:18px;">Sections Communales (' + com.sections.length + ')</h4>'
+        +     '<div class="commune-sections-list">' + sectionsHtml + '</div>'
+        +   '</div>'
+        + '</div>';
+
+      detailBox.classList.add('visible');
+      updateBreadcrumb();
+      scrollToPanel();
+    }
+
+    /* ── Breadcrumb ─────────────────────────────────────── */
+    function updateBreadcrumb() {
+      var html = '<div class="admin-breadcrumb__item">';
+      if (state.level === 'departments') {
+        html += '<span class="admin-breadcrumb__current">Tous les Départements</span>';
+      } else {
+        html += '<button type="button" data-nav="departments">Départements</button>';
+        html += '</div><span class="admin-breadcrumb__sep">›</span><div class="admin-breadcrumb__item">';
+        if (state.level === 'arrondissements') {
+          html += '<span class="admin-breadcrumb__current">' + esc(state.dept.name) + '</span>';
+        } else {
+          html += '<button type="button" data-nav="arrondissements">' + esc(state.dept.name) + '</button>';
+          html += '</div><span class="admin-breadcrumb__sep">›</span><div class="admin-breadcrumb__item">';
+          if (state.level === 'communes') {
+            html += '<span class="admin-breadcrumb__current">Arr. ' + esc(state.arrond.name) + '</span>';
+          } else {
+            html += '<button type="button" data-nav="communes">Arr. ' + esc(state.arrond.name) + '</button>';
+            html += '</div><span class="admin-breadcrumb__sep">›</span><div class="admin-breadcrumb__item">';
+            html += '<span class="admin-breadcrumb__current">' + esc(state.commune.name) + '</span>';
+          }
+        }
+      }
+      html += '</div>';
+      breadcrumb.innerHTML = html;
+
+      breadcrumb.querySelectorAll('button[data-nav]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var nav = btn.getAttribute('data-nav');
+          if (nav === 'departments') renderDepartments();
+          else if (nav === 'arrondissements') renderArrondissements(state.dept.id);
+          else if (nav === 'communes') renderCommunes(state.arrond.id);
+        });
+      });
+    }
+
+    /* ── Card click handlers ────────────────────────────── */
+    function bindCardClicks() {
+      grid.querySelectorAll('.admin-card').forEach(function (card) {
+        function activate() {
+          var deptId   = card.getAttribute('data-dept-id');
+          var arrondId = card.getAttribute('data-arrond-id');
+          var comId    = card.getAttribute('data-commune-id');
+          if (deptId)   renderArrondissements(deptId);
+          else if (arrondId) renderCommunes(arrondId);
+          else if (comId)    renderCommuneDetail(comId);
+        }
+        card.addEventListener('click', activate);
+        card.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
+        });
+      });
+    }
+
+    /* ── Commune back button ────────────────────────────── */
+    communeBackBtn.addEventListener('click', function () {
+      detailBox.classList.remove('visible');
+      panel.style.display = '';
+      state.level = 'communes';
+      renderCommunes(state.arrond.id);
+    });
+
+    /* ── Scroll helper ──────────────────────────────────── */
+    function scrollToPanel() {
+      var target = detailBox.classList.contains('visible') ? detailBox : panel;
+      var top = target.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }
+
+    /* ── Init ───────────────────────────────────────────── */
+    renderDepartments();
+  })();
+  </script>
 </body>
 </html>
