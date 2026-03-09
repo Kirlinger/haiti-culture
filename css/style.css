@@ -402,6 +402,9 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(135deg, #001370 0%, #00209F 100%);
+  overflow: hidden;
+  position: relative;
 }
 
 .card__img--placeholder {
@@ -607,6 +610,7 @@ ul {
   align-items: center;
   justify-content: center;
   position: relative;
+  background: linear-gradient(135deg, #001370 0%, #00209F 100%);
 }
 
 .text-block h2 {
@@ -707,7 +711,7 @@ ul {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  position: relative;
+  background: linear-gradient(135deg, #001370 0%, #00209F 100%);
 }
 
 .destination-card__badge {
@@ -996,6 +1000,7 @@ ul {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #001370 0%, #00209F 100%);
 }
 
 .person-card__body {
