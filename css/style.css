@@ -578,6 +578,123 @@ ul {
   line-height: 1.65;
 }
 
+/* ── Interactive Complete Timeline ─────────────────── */
+.itl-list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.itl-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  margin-bottom: 8px;
+  overflow: hidden;
+  transition: box-shadow var(--transition);
+}
+
+.itl-item:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.itl-item--open {
+  box-shadow: var(--shadow-md);
+}
+
+.itl-item__header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+  font-family: inherit;
+  transition: background var(--transition);
+}
+
+.itl-item__header:hover {
+  background: var(--bg-soft);
+}
+
+.itl-item--open .itl-item__header {
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--border);
+}
+
+.itl-item__year {
+  flex-shrink: 0;
+  min-width: 60px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--white);
+  background: var(--red);
+  border-radius: 4px;
+  padding: 3px 8px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  line-height: 1.6;
+  margin-top: 2px;
+}
+
+.itl-item__meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.itl-item__title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.itl-item__short {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.itl-item__toggle {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+  border-radius: 50%;
+  background: var(--bg-soft);
+  transition: transform var(--transition), background var(--transition);
+  margin-top: 2px;
+}
+
+.itl-item--open .itl-item__toggle {
+  transform: rotate(180deg);
+  background: var(--blue);
+  color: var(--white);
+}
+
+.itl-item__panel {
+  display: none;
+  padding: 20px 20px 20px calc(60px + 16px + 20px);
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.75;
+  background: var(--white);
+}
+
+.itl-item--open .itl-item__panel {
+  display: block;
+}
+
 /* ── Leadership Chronology Table ───────────────────── */
 .leader-era {
   margin-bottom: 48px;

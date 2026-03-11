@@ -330,6 +330,22 @@
     });
   }
 
+  /* ── Interactive Timeline Accordion ────────────────── */
+  function initInteractiveTimeline() {
+    document.querySelectorAll('.itl-item__header').forEach(function (header) {
+      header.addEventListener('click', function () {
+        var item = header.closest('.itl-item');
+        if (!item) return;
+        var isOpen = item.classList.toggle('itl-item--open');
+        header.setAttribute('aria-expanded', String(isOpen));
+        var panel = item.querySelector('.itl-item__panel');
+        if (panel) {
+          panel.setAttribute('aria-hidden', String(!isOpen));
+        }
+      });
+    });
+  }
+
   /* ── Init ───────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', function () {
     initMobileNav();
@@ -341,5 +357,6 @@
     initSearch();
     initSmoothScroll();
     initDropdowns();
+    initInteractiveTimeline();
   });
 })();
