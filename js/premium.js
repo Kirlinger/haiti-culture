@@ -359,6 +359,11 @@
     initCardTilt();
     initQuoteReveal();
     initSectionOrnaments();
+    initInteractiveMap();
+    initGalleryLightbox();
+    initTimelineAnimation();
+    initMemoryWall();
+    initFiguresReveal();
   }
 
   if (document.readyState === 'loading') {
@@ -366,5 +371,261 @@
   } else {
     init();
   }
+
+
+  /* ══════════════════════════════════════════════════
+     9. INTERACTIVE MAP
+     ══════════════════════════════════════════════════ */
+  var MAP_LOCATIONS = {
+    pap: {
+      emoji: '🏙️',
+      title: 'Port-au-Prince',
+      badge: 'Capitale',
+      desc: 'Capitale et métropole d\'Haïti, fondée en 1749. Cœur économique, politique et culturel du pays avec plus de 3 millions d\'habitants. Siège du gouvernement et carrefour de la vie nationale.',
+      link: 'geographie.html'
+    },
+    cap: {
+      emoji: '⚓',
+      title: 'Cap-Haïtien',
+      badge: 'Capitale du Nord',
+      desc: 'Fondée en 1670 sous le nom du Cap-Français, elle fut la capitale coloniale la plus prospère des Caraïbes. Berceau de la Révolution haïtienne et porte d\'accès à la Citadelle Laferrière.',
+      link: 'geographie.html'
+    },
+    jacmel: {
+      emoji: '🎭',
+      title: 'Jacmel',
+      badge: 'Capitale Culturelle',
+      desc: 'Joyau architectural du Sud, Jacmel est réputée pour son carnaval créatif, son art naïf et son architecture coloniale française. Ville UNESCO désignée ville créative, elle attire artistes et voyageurs du monde entier.',
+      link: 'geographie.html'
+    },
+    citadelle: {
+      emoji: '🏰',
+      title: 'Citadelle Laferrière',
+      badge: 'Patrimoine UNESCO',
+      desc: 'Érigée entre 1805 et 1820 par le roi Henri Christophe, cette forteresse massive dominant les montagnes du nord est le plus grand château de l\'hémisphère occidental. Symbole de la souveraineté haïtienne, classée au Patrimoine Mondial de l\'UNESCO.',
+      link: 'tourism.html'
+    },
+    vache: {
+      emoji: '🏝️',
+      title: 'Île-à-Vache',
+      badge: 'Île Préservée',
+      desc: 'Île enchanteresse du département du Sud, Île-à-Vache est un paradis préservé aux eaux turquoise, aux plages immaculées et aux récifs coralliens. Un joyau naturel de la Caraïbe haïtienne.',
+      link: 'tourism.html'
+    },
+    labadie: {
+      emoji: '🌊',
+      title: 'Labadée',
+      badge: 'Paradis Côtier',
+      desc: 'Presqu\'île enchanteresse au nord d\'Haïti, Labadée est réputée pour ses plages de sable fin, ses eaux cristallines et sa forêt luxuriante. Une destination balnéaire unique aux portes de Cap-Haïtien.',
+      link: 'tourism.html'
+    }
+  };
+
+  function initInteractiveMap() {
+    var markers = document.querySelectorAll('.map-marker');
+    var panel = document.getElementById('mapInfoPanel');
+    if (!markers.length || !panel) return;
+
+    var defaultPane = panel.querySelector('.map-info-panel__default');
+    var contentPane = panel.querySelector('.map-info-panel__content');
+    var emojiEl  = document.getElementById('mapLocEmoji');
+    var titleEl  = document.getElementById('mapLocTitle');
+    var badgeEl  = document.getElementById('mapLocBadge');
+    var descEl   = document.getElementById('mapLocDesc');
+    var linkEl   = document.getElementById('mapLocLink');
+
+    function showLocation(locId) {
+      var data = MAP_LOCATIONS[locId];
+      if (!data) return;
+
+      if (emojiEl)  emojiEl.textContent  = data.emoji;
+      if (titleEl)  titleEl.textContent  = data.title;
+      if (badgeEl)  badgeEl.textContent  = data.badge;
+      if (descEl)   descEl.textContent   = data.desc;
+      if (linkEl) {
+        linkEl.href = data.link;
+        linkEl.textContent = 'Explorer ' + data.title + ' →';
+      }
+
+      if (defaultPane) defaultPane.style.display = 'none';
+      if (contentPane) {
+        contentPane.style.display = 'block';
+        /* Accessing offsetHeight forces a browser reflow, which allows the
+           animation to reset so it replays from the start on the next frame. */
+        contentPane.offsetHeight; /* trigger reflow */
+        contentPane.style.animation = '';
+      }
+
+      /* Deactivate all markers, activate clicked */
+      markers.forEach(function (m) { m.classList.remove('active'); });
+      var activeMarker = document.querySelector('.map-marker[data-loc="' + locId + '"]');
+      if (activeMarker) activeMarker.classList.add('active');
+    }
+
+    markers.forEach(function (marker) {
+      marker.addEventListener('click', function () {
+        showLocation(marker.getAttribute('data-loc'));
+      });
+      marker.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          showLocation(marker.getAttribute('data-loc'));
+        }
+      });
+    });
+  }
+
+  /* ══════════════════════════════════════════════════
+     10. GALLERY LIGHTBOX
+     ══════════════════════════════════════════════════ */
+  function initGalleryLightbox() {
+    var galleryItems = document.querySelectorAll('.gallery-item');
+    var lightbox     = document.getElementById('lightbox');
+    var imgWrap      = document.getElementById('lightboxImg');
+    var captionEl    = document.getElementById('lightboxCaption');
+    var closeBtn     = document.getElementById('lightboxClose');
+    var prevBtn      = document.getElementById('lightboxPrev');
+    var nextBtn      = document.getElementById('lightboxNext');
+
+    if (!lightbox || !galleryItems.length) return;
+
+    var currentIndex = 0;
+    var items = Array.from(galleryItems);
+
+    function openLightbox(index) {
+      currentIndex = index;
+      var item = items[index];
+      var caption = item.getAttribute('data-caption') || '';
+      var imgDiv = item.querySelector('.gallery-item__img');
+      var imgClass = imgDiv ? imgDiv.className : '';
+
+      /* Clone the image block into the lightbox */
+      if (imgWrap) {
+        imgWrap.innerHTML = '<div class="' + imgClass + '" style="width:100%;min-height:400px;max-height:68vh;display:flex;align-items:center;justify-content:center;border-radius:12px;"></div>';
+      }
+      if (captionEl) captionEl.textContent = caption;
+
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function navigate(dir) {
+      currentIndex = (currentIndex + dir + items.length) % items.length;
+      openLightbox(currentIndex);
+    }
+
+    items.forEach(function (item, i) {
+      item.addEventListener('click', function () { openLightbox(i); });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (prevBtn)  prevBtn.addEventListener('click', function () { navigate(-1); });
+    if (nextBtn)  nextBtn.addEventListener('click', function () { navigate(1); });
+
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape')     closeLightbox();
+      if (e.key === 'ArrowLeft')  navigate(-1);
+      if (e.key === 'ArrowRight') navigate(1);
+    });
+  }
+
+  /* ══════════════════════════════════════════════════
+     11. TIMELINE SCROLL ANIMATION
+     ══════════════════════════════════════════════════ */
+  function initTimelineAnimation() {
+    if (!('IntersectionObserver' in window)) return;
+
+    var items = document.querySelectorAll('.timeline-item');
+    if (!items.length) return;
+
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('timeline-item--visible');
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+
+    items.forEach(function (item, i) {
+      item.style.opacity  = '0';
+      item.style.transform = 'translateY(20px)';
+      item.style.transition = 'opacity 0.55s ease ' + (i * 60) + 'ms, transform 0.55s ease ' + (i * 60) + 'ms';
+      obs.observe(item);
+    });
+
+    /* Inject a style rule to reset the visible state */
+    var styleEl = document.createElement('style');
+    styleEl.textContent = '.timeline-item--visible { opacity: 1 !important; transform: translateY(0) !important; }';
+    document.head.appendChild(styleEl);
+  }
+
+  /* ══════════════════════════════════════════════════
+     12. MEMORY WALL REVEAL
+     ══════════════════════════════════════════════════ */
+  function initMemoryWall() {
+    if (!('IntersectionObserver' in window)) return;
+
+    var grid = document.querySelector('.memory-grid');
+    if (!grid) return;
+
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var cards = entry.target.querySelectorAll('.memory-card');
+        cards.forEach(function (card, i) {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(24px) scale(0.97)';
+          card.style.transition = 'opacity 0.5s ease ' + (i * 70) + 'ms, transform 0.5s ease ' + (i * 70) + 'ms';
+          setTimeout(function () {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0) scale(1)';
+          }, 10 + i * 70);
+        });
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.1 });
+
+    obs.observe(grid);
+  }
+
+  /* ══════════════════════════════════════════════════
+     13. FIGURES SECTION REVEAL
+     ══════════════════════════════════════════════════ */
+  function initFiguresReveal() {
+    if (!('IntersectionObserver' in window)) return;
+
+    var grid = document.querySelector('.figures-grid');
+    if (!grid) return;
+
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var cards = entry.target.querySelectorAll('.figure-card');
+        cards.forEach(function (card, i) {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(28px)';
+          card.style.transition = 'opacity 0.6s ease ' + (i * 90) + 'ms, transform 0.6s ease ' + (i * 90) + 'ms, box-shadow 0.38s ease, border-color 0.3s ease';
+          setTimeout(function () {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 15 + i * 90);
+        });
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.08 });
+
+    obs.observe(grid);
+  }
+
 
 })();
