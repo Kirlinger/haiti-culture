@@ -1,5 +1,5 @@
 /* =====================================================
-   🇭🇹 République d'Haïti — Premium JS v2
+   République d'Haïti — Premium JS v2
    Particles · Navbar · Progress · Back-to-top · Tilt
    ===================================================== */
 
@@ -378,42 +378,36 @@
      ══════════════════════════════════════════════════ */
   var MAP_LOCATIONS = {
     pap: {
-      emoji: '🏙️',
       title: 'Port-au-Prince',
       badge: 'Capitale',
       desc: 'Capitale et métropole d\'Haïti, fondée en 1749. Cœur économique, politique et culturel du pays avec plus de 3 millions d\'habitants. Siège du gouvernement et carrefour de la vie nationale.',
       link: 'geographie.html'
     },
     cap: {
-      emoji: '⚓',
       title: 'Cap-Haïtien',
       badge: 'Capitale du Nord',
       desc: 'Fondée en 1670 sous le nom du Cap-Français, elle fut la capitale coloniale la plus prospère des Caraïbes. Berceau de la Révolution haïtienne et porte d\'accès à la Citadelle Laferrière.',
       link: 'geographie.html'
     },
     jacmel: {
-      emoji: '🎭',
       title: 'Jacmel',
       badge: 'Capitale Culturelle',
       desc: 'Joyau architectural du Sud, Jacmel est réputée pour son carnaval créatif, son art naïf et son architecture coloniale française. Ville UNESCO désignée ville créative, elle attire artistes et voyageurs du monde entier.',
       link: 'geographie.html'
     },
     citadelle: {
-      emoji: '🏰',
       title: 'Citadelle Laferrière',
       badge: 'Patrimoine UNESCO',
       desc: 'Érigée entre 1805 et 1820 par le roi Henri Christophe, cette forteresse massive dominant les montagnes du nord est le plus grand château de l\'hémisphère occidental. Symbole de la souveraineté haïtienne, classée au Patrimoine Mondial de l\'UNESCO.',
       link: 'tourism.html'
     },
     vache: {
-      emoji: '🏝️',
       title: 'Île-à-Vache',
       badge: 'Île Préservée',
       desc: 'Île enchanteresse du département du Sud, Île-à-Vache est un paradis préservé aux eaux turquoise, aux plages immaculées et aux récifs coralliens. Un joyau naturel de la Caraïbe haïtienne.',
       link: 'tourism.html'
     },
     labadie: {
-      emoji: '🌊',
       title: 'Labadée',
       badge: 'Paradis Côtier',
       desc: 'Presqu\'île enchanteresse au nord d\'Haïti, Labadée est réputée pour ses plages de sable fin, ses eaux cristallines et sa forêt luxuriante. Une destination balnéaire unique aux portes de Cap-Haïtien.',
@@ -428,7 +422,7 @@
 
     var defaultPane = panel.querySelector('.map-info-panel__default');
     var contentPane = panel.querySelector('.map-info-panel__content');
-    var emojiEl  = document.getElementById('mapLocEmoji');
+    var iconEl   = document.getElementById('mapLocIcon');
     var titleEl  = document.getElementById('mapLocTitle');
     var badgeEl  = document.getElementById('mapLocBadge');
     var descEl   = document.getElementById('mapLocDesc');
@@ -438,7 +432,6 @@
       var data = MAP_LOCATIONS[locId];
       if (!data) return;
 
-      if (emojiEl)  emojiEl.textContent  = data.emoji;
       if (titleEl)  titleEl.textContent  = data.title;
       if (badgeEl)  badgeEl.textContent  = data.badge;
       if (descEl)   descEl.textContent   = data.desc;

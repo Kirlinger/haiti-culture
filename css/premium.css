@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* =====================================================
-   🇭🇹 République d'Haïti — Premium Visual Theme v2
+   République d'Haïti — Premium Visual Theme v2
    Cinematic · Historical · Prestigious · Elegant
    ===================================================== */
 
@@ -777,8 +777,13 @@ h1, h2, h3, h4 {
 .card__img--teal   { background: linear-gradient(145deg, #033D4C, #075B6E); }
 
 .card__icon-emoji {
-  font-size: 44px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35));
+  color: #fff;
 }
 
 .card__body { padding: 22px 24px 24px; }
@@ -896,10 +901,14 @@ h1, h2, h3, h4 {
 .feature-card:hover::before { opacity: 1; }
 
 .feature-card__icon {
-  font-size: 40px;
+  width: 44px;
+  height: 44px;
   margin-bottom: 18px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   filter: drop-shadow(0 2px 6px rgba(0,0,0,0.1));
+  color: var(--navy);
 }
 
 .feature-card__title {
@@ -968,9 +977,14 @@ h1, h2, h3, h4 {
 }
 
 .enjeu-card__icon {
-  font-size: 32px;
+  width: 36px;
+  height: 36px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   filter: drop-shadow(0 1px 4px rgba(0,0,0,0.1));
+  color: var(--crimson);
 }
 
 .enjeu-card__body h3 {
@@ -1728,9 +1742,17 @@ h1, h2, h3, h4 {
 }
 
 .timeline-item__icon {
-  font-size: 16px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1;
+  color: var(--navy);
 }
+
+.timeline-item--highlight .timeline-item__icon,
+.timeline-item--gold .timeline-item__icon { color: rgba(255,255,255,0.90); }
 
 .timeline-item__content {
   background: var(--ivory);
@@ -2013,10 +2035,14 @@ h1, h2, h3, h4 {
 }
 
 .map-info-panel__icon {
-  font-size: 52px;
-  margin-bottom: 20px;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0.5;
-  filter: grayscale(0.5);
+  color: rgba(255,255,255,0.7);
 }
 
 .map-info-panel__default h3 {
@@ -2033,10 +2059,14 @@ h1, h2, h3, h4 {
   line-height: 1.72;
 }
 
-.map-info__emoji {
-  font-size: 48px;
+.map-info__icon {
+  width: 56px;
+  height: 56px;
   margin-bottom: 16px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.8);
 }
 
 .map-info__title {
@@ -2144,65 +2174,50 @@ h1, h2, h3, h4 {
   transform: scale(1.07);
 }
 
-/* Inline SVG image backgrounds for each location */
+/* SVG illustration backgrounds for gallery items */
 .gallery-img--citadelle {
-  background: linear-gradient(150deg,
-    #1a0810 0%, #2a1228 30%, #1e3060 60%, #0a1840 100%);
+  background-image: url('../images/citadelle.svg');
+  background-size: cover;
+  background-position: center top;
 }
 .gallery-img--pap {
-  background: linear-gradient(150deg,
-    #0a1848 0%, #0e2468 40%, #1e1040 70%, #380818 100%);
+  background-image: url('../images/port-au-prince.svg');
+  background-size: cover;
+  background-position: center;
 }
 .gallery-img--labadie {
-  background: linear-gradient(160deg,
-    #041a30 0%, #063a60 30%, #048060 55%, #023a28 100%);
+  background-image: url('../images/labadie.svg');
+  background-size: cover;
+  background-position: center;
 }
 .gallery-img--art {
-  background: linear-gradient(140deg,
-    #3a0418 0%, #6a1028 25%, #b8342a 50%, #d44820 75%, #c88020 100%);
+  background-image: url('../images/haitian-art.svg');
+  background-size: cover;
+  background-position: center;
 }
 .gallery-img--jacmel {
-  background: linear-gradient(145deg,
-    #101838 0%, #1a2a5a 30%, #4a1a30 60%, #2a0e20 100%);
+  background-image: url('../images/jacmel.svg');
+  background-size: cover;
+  background-position: center;
 }
 .gallery-img--ilevache {
-  background: linear-gradient(160deg,
-    #041a28 0%, #063848 30%, #04806a 55%, #026040 100%);
+  background-image: url('../images/ile-a-vache.svg');
+  background-size: cover;
+  background-position: center;
 }
 .gallery-img--woman {
-  background: linear-gradient(150deg,
-    #2a0820 0%, #4a1038 30%, #1a2060 60%, #0a3040 100%);
+  background-image: url('../images/haitian-woman.svg');
+  background-size: cover;
+  background-position: center top;
 }
 .gallery-img--landscape {
-  background: linear-gradient(145deg,
-    #0a1e10 0%, #1a4020 30%, #2a6028 55%, #0e3010 100%);
+  background-image: url('../images/haiti-landscape.svg');
+  background-size: cover;
+  background-position: center;
 }
 
-/* Embedded SVG visual indicator for each gallery item */
-.gallery-img--citadelle::before  { content: '🏰'; }
-.gallery-img--pap::before        { content: '🏙️'; }
-.gallery-img--labadie::before    { content: '🌊'; }
-.gallery-img--art::before        { content: '🎨'; }
-.gallery-img--jacmel::before     { content: '🌆'; }
-.gallery-img--ilevache::before   { content: '🏝️'; }
-.gallery-img--woman::before      { content: '👩🏾'; }
-.gallery-img--landscape::before  { content: '⛰️'; }
-
-.gallery-item__img::before {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
-  font-size: 56px;
-  opacity: 0.55;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
-  z-index: 1;
-  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease;
-}
-
-.gallery-item:hover .gallery-item__img::before {
-  transform: translate(-50%,-54%);
-  opacity: 0.35;
-}
+/* No pseudo-element overlay */
+.gallery-item__img::before { content: none; display: none; }
 
 .gallery-item__overlay {
   position: absolute;
@@ -2219,11 +2234,13 @@ h1, h2, h3, h4 {
 .gallery-item:hover .gallery-item__overlay { opacity: 1; }
 
 .gallery-item__zoom {
-  font-size: 28px;
+  width: 32px;
+  height: 32px;
   opacity: 0.9;
   transform: scale(0.8);
   transition: transform 0.3s ease;
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+  color: #fff;
 }
 
 .gallery-item:hover .gallery-item__zoom { transform: scale(1); }
@@ -2423,10 +2440,14 @@ h1, h2, h3, h4 {
 }
 
 .memory-card__icon {
-  font-size: 38px;
+  width: 44px;
+  height: 44px;
   margin-bottom: 16px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+  color: rgba(255,255,255,0.75);
 }
 
 .memory-card__title {
