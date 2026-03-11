@@ -330,6 +330,34 @@
     });
   }
 
+  /* ── Premium scroll-reveal animations ───────────────── */
+  function initPremiumAnimations() {
+    if (!('IntersectionObserver' in window)) {
+      // Fallback: show everything immediately
+      document.querySelectorAll('[data-animate], [data-animate-stagger]').forEach(function(el) {
+        el.classList.add('is-visible');
+      });
+      return;
+    }
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      // Trigger 60px before the element fully enters the viewport bottom edge
+      rootMargin: '0px 0px -60px 0px'
+    });
+
+    document.querySelectorAll('[data-animate], [data-animate-stagger]').forEach(function(el) {
+      observer.observe(el);
+    });
+  }
+
   /* ── Init ───────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', function () {
     initMobileNav();
@@ -341,5 +369,6 @@
     initSearch();
     initSmoothScroll();
     initDropdowns();
+    initPremiumAnimations();
   });
 })();
