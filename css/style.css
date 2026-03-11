@@ -6,22 +6,25 @@
 
 /* ── Variables ─────────────────────────────────────── */
 :root {
-  --blue:      #00209F;
-  --blue-dark: #001370;
-  --red:       #D21034;
-  --red-light: #f04060;
-  --gold:      #FFD166;
-  --gold-dark: #c89800;
-  --white:     #ffffff;
-  --bg:        #f8fafc;
-  --bg-soft:   #eef2ff;
-  --text:      #0f172a;
-  --text-muted:#475569;
-  --border:    #e2e8f0;
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.07);
-  --shadow-md: 0 8px 28px rgba(0,0,0,0.11);
-  --shadow-lg: 0 20px 50px rgba(0,0,0,0.16);
-  --shadow-xl: 0 32px 80px rgba(0,0,0,0.22);
+  --blue:        #00209F;
+  --blue-dark:   #001370;
+  --blue-bright: #3f6fff;
+  --red:         #D21034;
+  --red-light:   #f04060;
+  --gold:        #FFD166;
+  --gold-dark:   #c89800;
+  --white:       #ffffff;
+  /* ── Dark cinematic defaults ── */
+  --bg:          #07091a;
+  --bg-soft:     #0c1228;
+  --bg-card:     #0f1733;
+  --text:        #e2e8f8;
+  --text-muted:  #8394b0;
+  --border:      #1c2a48;
+  --shadow-sm:   0 2px 8px rgba(0,0,0,0.5);
+  --shadow-md:   0 8px 28px rgba(0,0,0,0.6);
+  --shadow-lg:   0 20px 50px rgba(0,0,0,0.7);
+  --shadow-xl:   0 32px 80px rgba(0,0,0,0.8);
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
@@ -2803,215 +2806,119 @@ ul {
   }
 }
 
-/* ── Dark Mode (prefers-color-scheme: dark) ─────────── */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:        #0f172a;
-    --bg-soft:   #1e293b;
-    --text:      #e2e8f0;
-    --text-muted:#94a3b8;
-    --border:    #334155;
-    --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
-    --shadow-md: 0 8px 28px rgba(0,0,0,0.45);
-    --shadow-lg: 0 20px 50px rgba(0,0,0,0.55);
-    --shadow-xl: 0 32px 80px rgba(0,0,0,0.65);
-  }
+/* ── Dark Cinematic Theme — Component Overrides ────── */
+/* Base is always dark cinematic. Cards, forms,           */
+/* tables, dropdowns, overlays — all use dark vars.       */
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-  }
+/* ── Card & component backgrounds ───────────────── */
+.card              { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.07); }
+.feature-card      { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.07); }
+.destination-card  { background: var(--bg-card); }
+.person-card       { background: var(--bg-card); }
+.timeline-card     { background: var(--bg-card); border-left-color: var(--red); }
+.leader-table      { background: var(--bg-card); }
+.lwa-profile       { background: var(--bg-card); }
+.lwa-preview-card  { background: var(--bg-card); border-color: var(--border); }
+.lwa-nav-item      { background: var(--bg-card); border-color: var(--border); }
+.lwa-index         { background: var(--bg-card); border-color: var(--border); }
+.breadcrumb        { background: var(--bg-card); border-color: var(--border); }
+.nation-card       { background: var(--bg-card); }
+.enjeu-card        { background: var(--bg-card); border-color: var(--border); }
+.contact-form      { background: var(--bg-card); }
+.contact-unavailable { background: var(--bg-card); }
+.nav-dropdown__menu  { background: var(--bg-card); border: 1px solid var(--border); }
+.search-overlay__inner { background: var(--bg-card); }
+.search-close          { background: var(--bg); border-color: var(--border); color: var(--text-muted); }
+.info-banner           { background: var(--bg-soft); border-left-color: var(--gold); }
+.section--alt          { background: var(--bg-soft); }
 
-  .card {
-    background: #1e293b;
-    border: 1px solid var(--border);
-  }
+/* ── Heading & title colors for dark bg ──────────── */
+.section-title             { color: #e8eeff; }
 
-  .feature-card {
-    background: #1e293b;
-    border: 1px solid var(--border);
-  }
+.card__title,
+.destination-card__title,
+.person-card__name,
+.timeline-card__title,
+.enjeu-card__body h3,
+.lwa-preview-card h3,
+.lwa-nav-item__name,
+.lwa-profile__text h3      { color: var(--gold); }
 
-  .destination-card {
-    background: #1e293b;
-    border: 1px solid var(--border);
-  }
+.feature-card__title,
+.nation-card__title,
+.contact-info h3,
+.contact-form h3,
+.lwa-index h3              { color: #e8eeff; }
 
-  .person-card {
-    background: #1e293b;
-    border: 1px solid var(--border);
-  }
+/* ── Form inputs on dark ─────────────────────────── */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--bg);
+  border-color: var(--border);
+  color: var(--text);
+}
 
-  .nation-card {
-    background: #1e293b;
-    border: 1px solid var(--border);
-  }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  background: var(--bg-card);
+  border-color: var(--blue-bright);
+}
 
-  .timeline-card {
-    background: #1e293b;
-    border: 1px solid var(--border);
-    border-left-color: var(--red);
-  }
+/* ── Dropdown links on dark ──────────────────────── */
+.nav-dropdown__menu a       { color: var(--text) !important; }
+.nav-dropdown__menu a:hover { background: var(--bg); color: var(--gold) !important; }
 
-  .lwa-profile {
-    background: #1e293b;
-    border: 1px solid var(--border);
-  }
+/* ── Search on dark ──────────────────────────────── */
+.search-result__link:hover  { background: var(--bg); }
+.search-input               { color: var(--text); background: transparent; }
 
-  .lwa-preview-card {
-    background: #1e293b;
-    border-color: var(--border);
-  }
+/* ── Leader era title on dark ────────────────────── */
+.leader-era__title          { background: var(--bg-soft); border-left-color: var(--gold); color: var(--gold); }
+.leader-table tbody tr:hover { background: var(--bg-soft); }
 
-  .lwa-nav-item {
-    background: #1e293b;
-    border-color: var(--border);
-  }
+/* ── Lwa index grid on dark ──────────────────────── */
+.lwa-index__grid a          { background: var(--bg); border-color: var(--border); color: var(--text); }
+.lwa-index__grid a:hover    { background: var(--blue); color: #ffffff; }
 
-  .lwa-index {
-    background: #1e293b;
-    border-color: var(--border);
-  }
+/* ── Feature card icon enhanced for dark ────────── */
+.feature-card__icon {
+  background: linear-gradient(135deg, rgba(0,32,159,0.3), rgba(210,16,52,0.18));
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+.feature-card:hover .feature-card__icon {
+  background: linear-gradient(135deg, rgba(0,32,159,0.45), rgba(210,16,52,0.28));
+}
 
-  .lwa-index__grid a {
-    background: #0f172a;
-    border-color: var(--border);
-    color: var(--text);
-  }
+/* ── Leader badges on dark ───────────────────────── */
+.lb-president   { background: rgba(0,80,200,0.22);   color: #93c5fd; }
+.lb-provisional { background: rgba(255,209,102,0.22); color: var(--gold); }
+.lb-military    { background: rgba(150,150,160,0.22); color: #cbd5e1; }
+.lb-pm          { background: rgba(5,104,53,0.22);    color: #6ee7b7; }
+.lb-emperor     { background: rgba(210,16,52,0.22);   color: #fca5a5; }
+.lb-king        { background: rgba(210,16,52,0.22);   color: #fca5a5; }
+.lb-collective  { background: rgba(0,32,159,0.18);   color: #93c5fd; }
 
-  .lwa-index__grid a:hover {
-    background: var(--blue);
-    color: #ffffff;
-  }
+/* ── Nation card gradients (retained) ────────────── */
+.nation-card--gede .nation-card__header  { background: linear-gradient(135deg, #2d2040, #1a0033); color: var(--white); }
+.nation-card--gede .nation-card__title   { color: var(--white); }
+.nation-card--gede .nation-card__badge   { background: rgba(255,255,255,0.2); color: #ddd; }
+.nation-card--kongo .nation-card__header { background: linear-gradient(135deg, #003355, #006699); color: var(--white); }
+.nation-card--kongo .nation-card__title  { color: var(--white); }
+.nation-card--kongo .nation-card__badge  { background: rgba(255,255,255,0.2); color: #ddd; }
 
-  .breadcrumb {
-    background: #1e293b;
-    border-color: var(--border);
-  }
+/* ── Vodou info box (retained) ───────────────────── */
+.vodou-info-box { background: linear-gradient(135deg, #1a0033, #00209F); }
 
-  .section--alt {
-    background: #1e293b;
-  }
+/* ── Footer intensified ──────────────────────────── */
+.site-footer {
+  background: linear-gradient(180deg, #040812 0%, #07091a 100%);
+}
 
-  .contact-form {
-    background: #1e293b;
-  }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    background: #0f172a;
-    border-color: var(--border);
-    color: var(--text);
-  }
-
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus {
-    background: #1e293b;
-    border-color: var(--blue);
-  }
-
-  .search-overlay__inner {
-    background: #1e293b;
-  }
-
-  .search-input {
-    color: var(--text);
-    background: transparent;
-  }
-
-  .search-close {
-    background: #0f172a;
-    border-color: var(--border);
-    color: var(--text-muted);
-  }
-
-  .search-result__link:hover {
-    background: #0f172a;
-  }
-
-  .info-banner {
-    background: #1e293b;
-    border-left-color: var(--blue);
-  }
-
-  .nation-card--gede .nation-card__header {
-    background: linear-gradient(135deg, #2d2040, #1a0033);
-  }
-
-  .nation-card--kongo .nation-card__header {
-    background: linear-gradient(135deg, #003355, #006699);
-  }
-
-  /* Improve heading readability on dark backgrounds */
-  .section-title,
-  .card__title,
-  .feature-card__title,
-  .destination-card__title,
-  .person-card__name,
-  .text-block h2,
-  .timeline-card__title,
-  .lwa-preview-card h3,
-  .lwa-nav-item__name,
-  .lwa-profile__text h3,
-  .lwa-index h3,
-  .contact-info h3,
-  .contact-form h3 {
-    color: #93c5fd;
-  }
-
-  .section-label,
-  .card__tag,
-  .timeline-card__year,
-  .destination-card__location,
-  .page-hero__label {
-    color: #fca5a5;
-  }
-
-  /* Ensure footer stays legible */
-  .site-footer {
-    background: #070c1f;
-  }
-
-  /* Stats strip subtle adjustment */
-  .stats-strip {
-    background: linear-gradient(135deg, #070c1f 0%, #001a73 60%, #6b0018 100%);
-  }
-
-  /* Vodou info box - stays with its own gradient */
-  .vodou-info-box {
-    background: linear-gradient(135deg, #1a0033, #00209F);
-  }
-
-  /* Enjeux cards dark mode */
-  .enjeu-card {
-    background: #1e293b;
-    border: 1px solid var(--border);
-    border-left-color: var(--red);
-  }
-
-  .enjeu-card--positive {
-    border-left-color: #056835;
-  }
-
-  .enjeu-card__body h3 {
-    color: #93c5fd;
-  }
-
-  .nav-dropdown__menu {
-    background: #1e293b;
-    border: 1px solid var(--border);
-  }
-
-  .nav-dropdown__menu a {
-    color: var(--text) !important;
-  }
-
-  .nav-dropdown__menu a:hover {
-    background: #0f172a;
-    color: var(--gold) !important;
-  }
+/* ── Stats strip deepened ────────────────────────── */
+.stats-strip {
+  background: linear-gradient(135deg, #040610 0%, #001060 55%, #4b0016 100%);
 }
 
 /* ── Card icon emoji ────────────────────────────────── */
@@ -3120,7 +3027,7 @@ ul {
 
 /* ── Enhanced section backgrounds ──────────────────── */
 .section--alt {
-  background: linear-gradient(180deg, var(--bg-soft) 0%, #f0f4ff 100%);
+  background: var(--bg-soft);
   position: relative;
 }
 
@@ -3129,12 +3036,13 @@ ul {
   font-family: var(--font-display);
   font-size: clamp(26px, 3.5vw, 40px);
   font-weight: 700;
-  color: var(--blue);
+  color: #e8eeff;
   margin-bottom: 18px;
   line-height: 1.2;
 }
 
 /* ── Enjeu card icon circles ────────────────────────── */
+/* Enjeu card icon — layout + dark cinematic visuals */
 .enjeu-card__icon {
   font-size: 32px;
   flex-shrink: 0;
@@ -3144,15 +3052,15 @@ ul {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(0,32,159,0.08), rgba(210,16,52,0.06));
+  background: linear-gradient(135deg, rgba(0,32,159,0.22), rgba(210,16,52,0.14));
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
   line-height: 1;
   margin-top: 0;
-  box-shadow: 0 2px 10px rgba(0,32,159,0.1);
   transition: var(--transition);
 }
 
 .enjeu-card:hover .enjeu-card__icon {
-  background: linear-gradient(135deg, rgba(0,32,159,0.15), rgba(210,16,52,0.1));
+  background: linear-gradient(135deg, rgba(0,32,159,0.35), rgba(210,16,52,0.22));
   transform: scale(1.1);
 }
 
