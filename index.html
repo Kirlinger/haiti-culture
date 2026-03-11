@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -17,12 +18,240 @@
   <link rel="canonical" href="https://republiquehaiti.org/" />
   <link rel="stylesheet" href="css/style.css" />
 
+  <style>
+    /* ── HERO WITH SLIDESHOW ── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero__slideshow {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero__slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+
+    .hero__slide.active {
+      opacity: 1;
+    }
+
+    .hero__slide::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.45) 0%,
+        rgba(0,32,159,0.35) 60%,
+        rgba(0,0,0,0.65) 100%
+      );
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Slide indicators */
+    .hero__indicators {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.5rem;
+      z-index: 3;
+    }
+
+    .hero__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      padding: 0;
+    }
+
+    .hero__dot.active {
+      background: #fff;
+      transform: scale(1.3);
+    }
+
+    /* ── PHOTO GALLERY SECTION ── */
+    .gallery-section {
+      padding: 4rem 0;
+      background: #0a0a0a;
+    }
+
+    .gallery-section .section-label {
+      color: #d4af37;
+    }
+
+    .gallery-section .section-title {
+      color: #fff;
+    }
+
+    .gallery-section .section-subtitle {
+      color: rgba(255,255,255,0.65);
+    }
+
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 260px 260px;
+      gap: 6px;
+      margin-top: 2.5rem;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .photo-gallery__item {
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .photo-gallery__item:nth-child(1) { grid-column: 1 / 6; grid-row: 1 / 2; }
+    .photo-gallery__item:nth-child(2) { grid-column: 6 / 9; grid-row: 1 / 2; }
+    .photo-gallery__item:nth-child(3) { grid-column: 9 / 13; grid-row: 1 / 2; }
+    .photo-gallery__item:nth-child(4) { grid-column: 1 / 4; grid-row: 2 / 3; }
+    .photo-gallery__item:nth-child(5) { grid-column: 4 / 8; grid-row: 2 / 3; }
+    .photo-gallery__item:nth-child(6) { grid-column: 8 / 13; grid-row: 2 / 3; }
+
+    .photo-gallery__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+      display: block;
+    }
+
+    .photo-gallery__item:hover img {
+      transform: scale(1.06);
+    }
+
+    .photo-gallery__caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.75));
+      color: #fff;
+      font-size: 0.78rem;
+      padding: 1.5rem 0.75rem 0.6rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .photo-gallery__item:hover .photo-gallery__caption {
+      opacity: 1;
+    }
+
+    /* ── CARD IMAGES — replace placeholders ── */
+    .card__img--photo {
+      height: 180px;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .card__img--photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover .card__img--photo img {
+      transform: scale(1.05);
+    }
+
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.93);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox__img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 0 0 60px rgba(0,0,0,0.8);
+    }
+
+    .lightbox__close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .lightbox__caption {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.75);
+      font-size: 0.85rem;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .photo-gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 200px);
+      }
+      .photo-gallery__item:nth-child(1) { grid-column: 1 / 3; grid-row: 1; }
+      .photo-gallery__item:nth-child(2) { grid-column: 1 / 2; grid-row: 2; }
+      .photo-gallery__item:nth-child(3) { grid-column: 2 / 3; grid-row: 2; }
+      .photo-gallery__item:nth-child(4) { grid-column: 1 / 2; grid-row: 3; }
+      .photo-gallery__item:nth-child(5) { grid-column: 2 / 3; grid-row: 3; }
+      .photo-gallery__item:nth-child(6) { display: none; }
+    }
+  </style>
+
 </head>
 <body>
 
   <!-- ═══════════════════════════════════════════════
        HEADER / NAVBAR
   ═══════════════════════════════════════════════ -->
+
   <header class="site-header">
     <div class="container">
       <div class="navbar">
@@ -31,76 +260,80 @@
           Haïti 🇭🇹
         </a>
 
-        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+```
+    <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-        <nav class="navbar__nav" aria-label="Navigation principale">
-          <a href="index.html">Accueil</a>
-          <a href="about.html">À propos</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="history.html">Histoire Générale</a>
-              <a href="timeline.html">Chronologie</a>
-              <a href="heroes.html">Héros Nationaux</a>
-              <a href="leaders.html">Leaders</a>
-              <a href="constitution.html">Constitution</a>
-              <a href="institutions.html">Institutions</a>
-            </div>
-          </div>
-          <a href="geographie.html">Géographie</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="culture.html">Culture &amp; Arts</a>
-              <a href="vodou.html">Vodou</a>
-              <a href="lwa.html">Les Lwa</a>
-              <a href="gastronomy.html">Gastronomie</a>
-              <a href="holidays.html">Jours Fériés</a>
-            </div>
-          </div>
-          <a href="tourism.html">Tourisme</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Société ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="culture-vivante.html">Culture Vivante</a>
-              <a href="creativite-populaire.html">Créativité Populaire</a>
-              <a href="diaspora-engagee.html">Diaspora Engagée</a>
-              <a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a>
-              <a href="memoire-universelle.html">Mémoire Universelle</a>
-              <a href="patrimoine-national.html">Patrimoine National</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Enjeux ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="fragilite-economique.html">Fragilité Économique</a>
-              <a href="inegalites-sociales.html">Inégalités Sociales</a>
-              <a href="instabilite-politique.html">Instabilité Politique</a>
-              <a href="pressions-securitaires.html">Pressions Sécuritaires</a>
-              <a href="services-essentiels.html">Services Essentiels</a>
-              <a href="capacite-adaptation.html">Capacité d'Adaptation</a>
-              <a href="reconstruction-durable.html">Reconstruction Durable</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="encyclopedia.html">Encyclopédie</a>
-              <a href="archives.html">Archives</a>
-            </div>
-          </div>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
+    <nav class="navbar__nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="about.html">À propos</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
+        <div class="nav-dropdown__menu">
+          <a href="history.html">Histoire Générale</a>
+          <a href="timeline.html">Chronologie</a>
+          <a href="heroes.html">Héros Nationaux</a>
+          <a href="leaders.html">Leaders</a>
+          <a href="constitution.html">Constitution</a>
+          <a href="institutions.html">Institutions</a>
+        </div>
       </div>
-    </div>
+      <a href="geographie.html">Géographie</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
+        <div class="nav-dropdown__menu">
+          <a href="culture.html">Culture &amp; Arts</a>
+          <a href="vodou.html">Vodou</a>
+          <a href="lwa.html">Les Lwa</a>
+          <a href="gastronomy.html">Gastronomie</a>
+          <a href="holidays.html">Jours Fériés</a>
+        </div>
+      </div>
+      <a href="tourism.html">Tourisme</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown__btn" aria-expanded="false">Société ▾</button>
+        <div class="nav-dropdown__menu">
+          <a href="culture-vivante.html">Culture Vivante</a>
+          <a href="creativite-populaire.html">Créativité Populaire</a>
+          <a href="diaspora-engagee.html">Diaspora Engagée</a>
+          <a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a>
+          <a href="memoire-universelle.html">Mémoire Universelle</a>
+          <a href="patrimoine-national.html">Patrimoine National</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown__btn" aria-expanded="false">Enjeux ▾</button>
+        <div class="nav-dropdown__menu">
+          <a href="fragilite-economique.html">Fragilité Économique</a>
+          <a href="inegalites-sociales.html">Inégalités Sociales</a>
+          <a href="instabilite-politique.html">Instabilité Politique</a>
+          <a href="pressions-securitaires.html">Pressions Sécuritaires</a>
+          <a href="services-essentiels.html">Services Essentiels</a>
+          <a href="capacite-adaptation.html">Capacité d'Adaptation</a>
+          <a href="reconstruction-durable.html">Reconstruction Durable</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
+        <div class="nav-dropdown__menu">
+          <a href="encyclopedia.html">Encyclopédie</a>
+          <a href="archives.html">Archives</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+  </div>
+</div>
+```
+
   </header>
 
   <!-- SEARCH OVERLAY -->
+
   <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
     <div class="search-overlay__inner">
       <div class="search-overlay__header">
@@ -115,33 +348,59 @@
   </div>
 
   <!-- ═══════════════════════════════════════════════
-       HERO
+       HERO — with background slideshow
   ═══════════════════════════════════════════════ -->
+
   <section class="hero">
-    <div class="hero__content">
-      <div class="hero__badge">Perle des Antilles</div>
-      <div class="hero__flag" aria-label="Drapeau national d'Haïti">
-        <span class="hero__flag-emoji">🇭🇹</span>
-      </div>
-      <h1 class="hero__title">
-        Découvrir <span>Haïti</span><br/>
-        Terre de Liberté, d'Histoire et de Culture
-      </h1>
-      <p class="hero__desc">
-        Un portail complet pour explorer l'histoire, la géographie, la culture et les
-        institutions de la première république noire du monde.
-      </p>
-      <div class="hero__buttons">
-        <a href="history.html" class="btn btn-primary">Explorer l'Histoire</a>
-        <a href="culture.html" class="btn btn-outline">Découvrir la Culture</a>
-        <a href="geographie.html" class="btn btn-outline">Explorer la Géographie</a>
-      </div>
-    </div>
+
+```
+<!-- Slideshow background -->
+<div class="hero__slideshow" aria-hidden="true">
+  <!-- Citadelle Laferrière -->
+  <div class="hero__slide active" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/thirty/Citadelle_Laferriere.jpg/1280px-Citadelle_Laferriere.jpg'), url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Citadelle_Haiti.jpg/1280px-Citadelle_Haiti.jpg'), linear-gradient(135deg,#00209F,#D21034);"></div>
+  <!-- Jacmel coast / Caribbean coast Haiti -->
+  <div class="hero__slide" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Haiti_landscape.jpg/1280px-Haiti_landscape.jpg'), linear-gradient(135deg,#00209F,#006400);"></div>
+  <!-- Port-au-Prince / Haiti mountains -->
+  <div class="hero__slide" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Haiti_from_the_ISS.jpg/1280px-Haiti_from_the_ISS.jpg'), linear-gradient(135deg,#1a1a2e,#00209F);"></div>
+  <!-- Haitian art / culture -->
+  <div class="hero__slide" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Haitian_Carnival_2010.jpg/1280px-Haitian_Carnival_2010.jpg'), linear-gradient(135deg,#D21034,#00209F);"></div>
+</div>
+
+<div class="hero__content">
+  <div class="hero__badge">Perle des Antilles</div>
+  <div class="hero__flag" aria-label="Drapeau national d'Haïti">
+    <span class="hero__flag-emoji">🇭🇹</span>
+  </div>
+  <h1 class="hero__title">
+    Découvrir <span>Haïti</span><br/>
+    Terre de Liberté, d'Histoire et de Culture
+  </h1>
+  <p class="hero__desc">
+    Un portail complet pour explorer l'histoire, la géographie, la culture et les
+    institutions de la première république noire du monde.
+  </p>
+  <div class="hero__buttons">
+    <a href="history.html" class="btn btn-primary">Explorer l'Histoire</a>
+    <a href="culture.html" class="btn btn-outline">Découvrir la Culture</a>
+    <a href="geographie.html" class="btn btn-outline">Explorer la Géographie</a>
+  </div>
+</div>
+
+<!-- Slide dots -->
+<div class="hero__indicators" aria-hidden="true">
+  <button class="hero__dot active" data-slide="0"></button>
+  <button class="hero__dot" data-slide="1"></button>
+  <button class="hero__dot" data-slide="2"></button>
+  <button class="hero__dot" data-slide="3"></button>
+</div>
+```
+
   </section>
 
   <!-- ═══════════════════════════════════════════════
        STATS STRIP
   ═══════════════════════════════════════════════ -->
+
   <div class="stats-strip">
     <div class="container">
       <div class="stats-grid">
@@ -166,8 +425,9 @@
   </div>
 
   <!-- ═══════════════════════════════════════════════
-       FEATURED SECTIONS (Cards)
+       FEATURED SECTIONS (Cards) — with real images
   ═══════════════════════════════════════════════ -->
+
   <section class="section">
     <div class="container">
       <p class="section-label text-center">Explorer Haïti</p>
@@ -177,125 +437,159 @@
         festivals Rara aux splendides plages caribéennes, Haïti a tout.
       </p>
 
-      <div class="cards-grid">
+```
+  <div class="cards-grid">
 
-        <!-- About Card -->
-        <div class="card">
-          <div class="card__img card__img--placeholder card__img--blue">
-            <span class="card__icon-emoji">🇭🇹</span>
-          </div>
-          <div class="card__body">
-            <p class="card__tag">Culture &amp; Peuple</p>
-            <h3 class="card__title">À propos d'Haïti</h3>
-            <p class="card__desc">
-              Découvrez l'art, la musique, la langue, la cuisine et les traditions haïtiennes.
-              Des cérémonies Vodou aux célébrations du Carnaval, la culture est vivante
-              dans chaque recoin de cette nation vibrante.
-            </p>
-            <div class="card__footer">
-              <a href="about.html" class="btn btn-blue btn-sm">Lire Plus →</a>
-            </div>
-          </div>
+    <!-- About Card -->
+    <div class="card">
+      <div class="card__img card__img--photo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Haiti_Jacmel_art_festival.jpg/640px-Haiti_Jacmel_art_festival.jpg"
+          alt="Culture et peuple haïtien — Jacmel"
+          loading="lazy"
+          onerror="this.parentElement.innerHTML='<span class=\'card__icon-emoji\' style=\'font-size:3rem;display:flex;align-items:center;justify-content:center;height:100%;background:#1a3a6e;\'>🇭🇹</span>'"
+        />
+      </div>
+      <div class="card__body">
+        <p class="card__tag">Culture &amp; Peuple</p>
+        <h3 class="card__title">À propos d'Haïti</h3>
+        <p class="card__desc">
+          Découvrez l'art, la musique, la langue, la cuisine et les traditions haïtiennes.
+          Des cérémonies Vodou aux célébrations du Carnaval, la culture est vivante
+          dans chaque recoin de cette nation vibrante.
+        </p>
+        <div class="card__footer">
+          <a href="about.html" class="btn btn-blue btn-sm">Lire Plus →</a>
         </div>
-
-        <!-- History Card -->
-        <div class="card">
-          <div class="card__img card__img--placeholder card__img--red">
-            <span class="card__icon-emoji">📜</span>
-          </div>
-          <div class="card__body">
-            <p class="card__tag">Patrimoine</p>
-            <h3 class="card__title">Histoire d'Haïti</h3>
-            <p class="card__desc">
-              Suivez le voyage épique du peuple taïno à la colonisation française,
-              à travers la lutte révolutionnaire pour l'indépendance en 1804,
-              un événement qui a changé le monde pour toujours.
-            </p>
-            <div class="card__footer">
-              <a href="history.html" class="btn btn-red btn-sm">Explorer l'Histoire →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tourism Card -->
-        <div class="card">
-          <div class="card__img card__img--placeholder card__img--gold">
-            <span class="card__icon-emoji">🏰</span>
-          </div>
-          <div class="card__body">
-            <p class="card__tag">Voyage &amp; Tourisme</p>
-            <h3 class="card__title">Lieux à Visiter</h3>
-            <p class="card__desc">
-              De la citadelle La Ferrière aux eaux cristallines de Labadée et d'Île-à-Vache,
-              Haïti offre des destinations uniques et époustouflantes pour chaque voyageur.
-            </p>
-            <div class="card__footer">
-              <a href="tourism.html" class="btn btn-blue btn-sm">Découvrir les Lieux →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Vodou Card -->
-        <div class="card">
-          <div class="card__img card__img--placeholder card__img--purple">
-            <span class="card__icon-emoji">🥁</span>
-          </div>
-          <div class="card__body">
-            <p class="card__tag">Spiritualité</p>
-            <h3 class="card__title">Vodou Haïtien</h3>
-            <p class="card__desc">
-              Religion aux origines africaines profondes, le Vodou est au cœur de l'identité
-              haïtienne. Cérémonies, Lwa, vèvè — découvrez une spiritualité riche et complexe.
-            </p>
-            <div class="card__footer">
-              <a href="vodou.html" class="btn btn-blue btn-sm">Découvrir le Vodou →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Culture Card -->
-        <div class="card">
-          <div class="card__img card__img--placeholder card__img--teal">
-            <span class="card__icon-emoji">🎨</span>
-          </div>
-          <div class="card__body">
-            <p class="card__tag">Art &amp; Expression</p>
-            <h3 class="card__title">Culture &amp; Arts</h3>
-            <p class="card__desc">
-              Musique Kompa, peinture naïve, littérature créole, Carnaval : la culture haïtienne
-              est une explosion permanente de créativité portée par tout un peuple.
-            </p>
-            <div class="card__footer">
-              <a href="culture.html" class="btn btn-blue btn-sm">Explorer la Culture →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Diaspora Card -->
-        <div class="card">
-          <div class="card__img card__img--placeholder card__img--green">
-            <span class="card__icon-emoji">🌍</span>
-          </div>
-          <div class="card__body">
-            <p class="card__tag">Diaspora</p>
-            <h3 class="card__title">Diaspora Engagée</h3>
-            <p class="card__desc">
-              Des millions d'Haïtiens dans le monde sont les ambassadeurs de leur culture
-              et un soutien économique vital, envoyant plus de 3 milliards de dollars par an.
-            </p>
-            <div class="card__footer">
-              <a href="diaspora-engagee.html" class="btn btn-blue btn-sm">Découvrir →</a>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
+
+    <!-- History Card -->
+    <div class="card">
+      <div class="card__img card__img--photo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Citadelle_Haiti.jpg/640px-Citadelle_Haiti.jpg"
+          alt="Citadelle Laferrière — symbole de la Révolution haïtienne"
+          loading="lazy"
+          onerror="this.parentElement.innerHTML='<span class=\'card__icon-emoji\' style=\'font-size:3rem;display:flex;align-items:center;justify-content:center;height:100%;background:#6e1a1a;\'>📜</span>'"
+        />
+      </div>
+      <div class="card__body">
+        <p class="card__tag">Patrimoine</p>
+        <h3 class="card__title">Histoire d'Haïti</h3>
+        <p class="card__desc">
+          Suivez le voyage épique du peuple taïno à la colonisation française,
+          à travers la lutte révolutionnaire pour l'indépendance en 1804,
+          un événement qui a changé le monde pour toujours.
+        </p>
+        <div class="card__footer">
+          <a href="history.html" class="btn btn-red btn-sm">Explorer l'Histoire →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tourism Card -->
+    <div class="card">
+      <div class="card__img card__img--photo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Labadee_beach_haiti.jpg/640px-Labadee_beach_haiti.jpg"
+          alt="Plage de Labadée, Haïti"
+          loading="lazy"
+          onerror="this.parentElement.innerHTML='<span class=\'card__icon-emoji\' style=\'font-size:3rem;display:flex;align-items:center;justify-content:center;height:100%;background:#6e5a1a;\'>🏰</span>'"
+        />
+      </div>
+      <div class="card__body">
+        <p class="card__tag">Voyage &amp; Tourisme</p>
+        <h3 class="card__title">Lieux à Visiter</h3>
+        <p class="card__desc">
+          De la citadelle La Ferrière aux eaux cristallines de Labadée et d'Île-à-Vache,
+          Haïti offre des destinations uniques et époustouflantes pour chaque voyageur.
+        </p>
+        <div class="card__footer">
+          <a href="tourism.html" class="btn btn-blue btn-sm">Découvrir les Lieux →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vodou Card -->
+    <div class="card">
+      <div class="card__img card__img--photo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Voodoo_ceremony_haiti.jpg/640px-Voodoo_ceremony_haiti.jpg"
+          alt="Cérémonie Vodou haïtien"
+          loading="lazy"
+          onerror="this.parentElement.innerHTML='<span class=\'card__icon-emoji\' style=\'font-size:3rem;display:flex;align-items:center;justify-content:center;height:100%;background:#3a1a6e;\'>🥁</span>'"
+        />
+      </div>
+      <div class="card__body">
+        <p class="card__tag">Spiritualité</p>
+        <h3 class="card__title">Vodou Haïtien</h3>
+        <p class="card__desc">
+          Religion aux origines africaines profondes, le Vodou est au cœur de l'identité
+          haïtienne. Cérémonies, Lwa, vèvè — découvrez une spiritualité riche et complexe.
+        </p>
+        <div class="card__footer">
+          <a href="vodou.html" class="btn btn-blue btn-sm">Découvrir le Vodou →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Culture Card -->
+    <div class="card">
+      <div class="card__img card__img--photo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Haitian_naive_art.jpg/640px-Haitian_naive_art.jpg"
+          alt="Art naïf haïtien"
+          loading="lazy"
+          onerror="this.parentElement.innerHTML='<span class=\'card__icon-emoji\' style=\'font-size:3rem;display:flex;align-items:center;justify-content:center;height:100%;background:#1a6e5a;\'>🎨</span>'"
+        />
+      </div>
+      <div class="card__body">
+        <p class="card__tag">Art &amp; Expression</p>
+        <h3 class="card__title">Culture &amp; Arts</h3>
+        <p class="card__desc">
+          Musique Kompa, peinture naïve, littérature créole, Carnaval : la culture haïtienne
+          est une explosion permanente de créativité portée par tout un peuple.
+        </p>
+        <div class="card__footer">
+          <a href="culture.html" class="btn btn-blue btn-sm">Explorer la Culture →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diaspora Card -->
+    <div class="card">
+      <div class="card__img card__img--photo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Haitian_diaspora_march.jpg/640px-Haitian_diaspora_march.jpg"
+          alt="Diaspora haïtienne dans le monde"
+          loading="lazy"
+          onerror="this.parentElement.innerHTML='<span class=\'card__icon-emoji\' style=\'font-size:3rem;display:flex;align-items:center;justify-content:center;height:100%;background:#1a6e1a;\'>🌍</span>'"
+        />
+      </div>
+      <div class="card__body">
+        <p class="card__tag">Diaspora</p>
+        <h3 class="card__title">Diaspora Engagée</h3>
+        <p class="card__desc">
+          Des millions d'Haïtiens dans le monde sont les ambassadeurs de leur culture
+          et un soutien économique vital, envoyant plus de 3 milliards de dollars par an.
+        </p>
+        <div class="card__footer">
+          <a href="diaspora-engagee.html" class="btn btn-blue btn-sm">Découvrir →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+```
+
   </section>
 
   <!-- ═══════════════════════════════════════════════
        ABOUT SNIPPET
   ═══════════════════════════════════════════════ -->
+
   <section class="section section--alt">
     <div class="container">
       <div class="text-block">
@@ -326,6 +620,7 @@
   <!-- ═══════════════════════════════════════════════
        HIGHLIGHTS / FEATURE ICONS
   ═══════════════════════════════════════════════ -->
+
   <section class="section">
     <div class="container">
       <p class="section-label text-center">Pourquoi Visiter Haïti</p>
@@ -335,62 +630,141 @@
         authentique que vous ne trouverez nulle part ailleurs dans les Caraïbes.
       </p>
 
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-card__icon">🏰</div>
-          <h3 class="feature-card__title">Patrimoine Mondial</h3>
-          <p class="feature-card__desc">
-            La Citadelle Laferrière et le Palais Sans-Souci sont des sites du patrimoine
-            mondial et des symboles du glorieux passé révolutionnaire d'Haïti.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-card__icon">🎶</div>
-          <h3 class="feature-card__title">Musique Vibrante</h3>
-          <p class="feature-card__desc">
-            La musique Kompa, Rara et Rasin emplit les rues. La musique haïtienne a
-            influencé la musique caribéenne et mondiale depuis des siècles.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-card__icon">🎨</div>
-          <h3 class="feature-card__title">Art de Renommée Mondiale</h3>
-          <p class="feature-card__desc">
-            L'art haïtien est célébré internationalement. Des peintures naïves aux
-            sculptures métalliques complexes, les artistes haïtiens captivent le monde.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-card__icon">🌊</div>
-          <h3 class="feature-card__title">Plages Magnifiques</h3>
-          <p class="feature-card__desc">
-            Les plages de Labadée, Île-à-Vache et Jacmel offrent des sables immaculés et
-            des eaux turquoise rivalisant avec n'importe quelle destination caribéenne.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-card__icon">🍽️</div>
-          <h3 class="feature-card__title">Cuisine Délicieuse</h3>
-          <p class="feature-card__desc">
-            Griyo, diri ak djon djon, pikliz, la cuisine haïtienne est audacieuse,
-            savoureuse et profondément enracinée dans les traditions africaines et caribéennes.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-card__icon">🎭</div>
-          <h3 class="feature-card__title">Festivals &amp; Carnaval</h3>
-          <p class="feature-card__desc">
-            Le Carnaval haïtien est l'un des plus spectaculaires des Caraïbes.
-            Les festivals Rara rassemblent les communautés dans une joyeuse célébration.
-          </p>
-        </div>
-      </div>
+```
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-card__icon">🏰</div>
+      <h3 class="feature-card__title">Patrimoine Mondial</h3>
+      <p class="feature-card__desc">
+        La Citadelle Laferrière et le Palais Sans-Souci sont des sites du patrimoine
+        mondial et des symboles du glorieux passé révolutionnaire d'Haïti.
+      </p>
     </div>
+    <div class="feature-card">
+      <div class="feature-card__icon">🎶</div>
+      <h3 class="feature-card__title">Musique Vibrante</h3>
+      <p class="feature-card__desc">
+        La musique Kompa, Rara et Rasin emplit les rues. La musique haïtienne a
+        influencé la musique caribéenne et mondiale depuis des siècles.
+      </p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card__icon">🎨</div>
+      <h3 class="feature-card__title">Art de Renommée Mondiale</h3>
+      <p class="feature-card__desc">
+        L'art haïtien est célébré internationalement. Des peintures naïves aux
+        sculptures métalliques complexes, les artistes haïtiens captivent le monde.
+      </p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card__icon">🌊</div>
+      <h3 class="feature-card__title">Plages Magnifiques</h3>
+      <p class="feature-card__desc">
+        Les plages de Labadée, Île-à-Vache et Jacmel offrent des sables immaculés et
+        des eaux turquoise rivalisant avec n'importe quelle destination caribéenne.
+      </p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card__icon">🍽️</div>
+      <h3 class="feature-card__title">Cuisine Délicieuse</h3>
+      <p class="feature-card__desc">
+        Griyo, diri ak djon djon, pikliz, la cuisine haïtienne est audacieuse,
+        savoureuse et profondément enracinée dans les traditions africaines et caribéennes.
+      </p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card__icon">🎭</div>
+      <h3 class="feature-card__title">Festivals &amp; Carnaval</h3>
+      <p class="feature-card__desc">
+        Le Carnaval haïtien est l'un des plus spectaculaires des Caraïbes.
+        Les festivals Rara rassemblent les communautés dans une joyeuse célébration.
+      </p>
+    </div>
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       PHOTO GALLERY — NEW SECTION
+  ═══════════════════════════════════════════════ -->
+
+  <section class="gallery-section">
+    <div class="container">
+      <p class="section-label text-center">Galerie</p>
+      <h2 class="section-title text-center" style="color:#fff;">Haïti en Images</h2>
+      <p class="section-subtitle text-center" style="color:rgba(255,255,255,0.65);">
+        De la Citadelle aux plages turquoise, découvrez la beauté d'Haïti à travers ses paysages, son histoire et sa culture.
+      </p>
+
+```
+  <div class="photo-gallery">
+
+    <div class="photo-gallery__item" data-caption="Citadelle Laferrière — Patrimoine UNESCO">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Citadelle_Haiti.jpg/800px-Citadelle_Haiti.jpg"
+        alt="Citadelle Laferrière, Haïti"
+        loading="lazy"
+      />
+      <div class="photo-gallery__caption">Citadelle Laferrière</div>
+    </div>
+
+    <div class="photo-gallery__item" data-caption="Palais Sans-Souci — Cap-Haïtien">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Sans-Souci_Palace%2C_Haiti.jpg/800px-Sans-Souci_Palace%2C_Haiti.jpg"
+        alt="Palais Sans-Souci, Haïti"
+        loading="lazy"
+      />
+      <div class="photo-gallery__caption">Palais Sans-Souci</div>
+    </div>
+
+    <div class="photo-gallery__item" data-caption="Paysage montagneux d'Haïti">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Haiti_Landscape_mountains.jpg/800px-Haiti_Landscape_mountains.jpg"
+        alt="Montagnes d'Haïti"
+        loading="lazy"
+      />
+      <div class="photo-gallery__caption">Les Montagnes d'Haïti</div>
+    </div>
+
+    <div class="photo-gallery__item" data-caption="Marché haïtien coloré">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Haiti_market.jpg/800px-Haiti_market.jpg"
+        alt="Marché en Haïti"
+        loading="lazy"
+      />
+      <div class="photo-gallery__caption">Marché Haïtien</div>
+    </div>
+
+    <div class="photo-gallery__item" data-caption="Kanaval Ayisyen — Explosion de couleurs">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Haitian_Carnival.jpg/800px-Haitian_Carnival.jpg"
+        alt="Carnaval haïtien"
+        loading="lazy"
+      />
+      <div class="photo-gallery__caption">Kanaval Ayisyen</div>
+    </div>
+
+    <div class="photo-gallery__item" data-caption="Côte caribéenne d'Haïti">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Haiti_coast.jpg/800px-Haiti_coast.jpg"
+        alt="Côte d'Haïti"
+        loading="lazy"
+      />
+      <div class="photo-gallery__caption">Côte Caribéenne</div>
+    </div>
+
+  </div>
+</div>
+```
+
   </section>
 
   <!-- ═══════════════════════════════════════════════
        HAÏTI AUJOURD'HUI — Société
   ═══════════════════════════════════════════════ -->
+
   <section class="section section--alt">
     <div class="container">
       <p class="section-label text-center">Haïti Aujourd'hui</p>
@@ -400,117 +774,121 @@
         sa diaspora engagée, sa jeunesse prometteuse et son patrimoine unique.
       </p>
 
-      <div class="cards-grid cards-grid--6">
+```
+  <div class="cards-grid cards-grid--6">
 
-        <div class="card">
-          <div class="card__img card__img--placeholder card__img--teal">
-            <span class="card__icon-emoji">🌱</span>
-          </div>
-          <div class="card__body">
-            <p class="card__tag">Vivante</p>
-            <h3 class="card__title">Culture Vivante</h3>
-            <p class="card__desc">
-              La culture haïtienne n'est pas seulement un héritage — elle est vivante,
-              en mouvement, exprimée chaque jour dans la musique, la danse, l'art et les rituels.
-            </p>
-            <div class="card__footer">
-              <a href="culture-vivante.html" class="btn btn-blue btn-sm">Découvrir →</a>
-            </div>
-          </div>
+    <div class="card">
+      <div class="card__img card__img--photo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Haiti_music_street.jpg/640px-Haiti_music_street.jpg" alt="Musique dans les rues d'Haïti" loading="lazy" onerror="this.parentElement.style.background='#1a4a3a';this.parentElement.innerHTML='<span style=\'font-size:3rem;display:flex;align-items:center;justify-content:center;height:100%;\'>🌱</span>'" />
+      </div>
+      <div class="card__body">
+        <p class="card__tag">Vivante</p>
+        <h3 class="card__title">Culture Vivante</h3>
+        <p class="card__desc">
+          La culture haïtienne n'est pas seulement un héritage — elle est vivante,
+          en mouvement, exprimée chaque jour dans la musique, la danse, l'art et les rituels.
+        </p>
+        <div class="card__footer">
+          <a href="culture-vivante.html" class="btn btn-blue btn-sm">Découvrir →</a>
         </div>
-
-        <div class="card">
-          <div class="card__img card__img--placeholder card__img--gold">
-            <span class="card__icon-emoji">🎨</span>
-          </div>
-          <div class="card__body">
-            <p class="card__tag">Créativité</p>
-            <h3 class="card__title">Créativité Populaire</h3>
-            <p class="card__desc">
-              L'art populaire haïtien, du fer recyclé aux peintures naïves, est reconnu
-              internationalement comme un trésor culturel unique et authentique.
-            </p>
-            <div class="card__footer">
-              <a href="creativite-populaire.html" class="btn btn-blue btn-sm">Découvrir →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__img card__img--placeholder card__img--blue">
-            <span class="card__icon-emoji">🌍</span>
-          </div>
-          <div class="card__body">
-            <p class="card__tag">Diaspora</p>
-            <h3 class="card__title">Diaspora Engagée</h3>
-            <p class="card__desc">
-              Plus de 3 milliards de dollars de remises annuelles. La diaspora haïtienne,
-              ambassadrice de sa culture, est un pilier économique et culturel du pays.
-            </p>
-            <div class="card__footer">
-              <a href="diaspora-engagee.html" class="btn btn-blue btn-sm">Découvrir →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__img card__img--placeholder card__img--green">
-            <span class="card__icon-emoji">🌟</span>
-          </div>
-          <div class="card__body">
-            <p class="card__tag">Avenir</p>
-            <h3 class="card__title">Jeunesse &amp; Potentiel</h3>
-            <p class="card__desc">
-              60 % de la population haïtienne a moins de 25 ans. Cette jeunesse dynamique
-              représente le moteur d'un renouveau possible pour la nation.
-            </p>
-            <div class="card__footer">
-              <a href="jeunesse-potentiel.html" class="btn btn-blue btn-sm">Découvrir →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__img card__img--placeholder card__img--purple">
-            <span class="card__icon-emoji">📚</span>
-          </div>
-          <div class="card__body">
-            <p class="card__tag">Héritage</p>
-            <h3 class="card__title">Mémoire Universelle</h3>
-            <p class="card__desc">
-              La Révolution haïtienne de 1804 a inspiré des mouvements de libération
-              à travers le monde. Cette mémoire appartient à toute l'humanité.
-            </p>
-            <div class="card__footer">
-              <a href="memoire-universelle.html" class="btn btn-blue btn-sm">Découvrir →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__img card__img--placeholder card__img--red">
-            <span class="card__icon-emoji">🏛️</span>
-          </div>
-          <div class="card__body">
-            <p class="card__tag">Patrimoine</p>
-            <h3 class="card__title">Patrimoine National</h3>
-            <p class="card__desc">
-              De la Citadelle Laferrière au Palais Sans-Souci, le patrimoine haïtien
-              témoigne d'une grandeur historique reconnue par l'UNESCO.
-            </p>
-            <div class="card__footer">
-              <a href="patrimoine-national.html" class="btn btn-blue btn-sm">Découvrir →</a>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
+
+    <div class="card">
+      <div class="card__img card__img--photo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Haitian_metal_art.jpg/640px-Haitian_metal_art.jpg" alt="Art en métal recyclé haïtien" loading="lazy" onerror="this.parentElement.style.background='#4a3a0a';this.parentElement.innerHTML='<span style=\'font-size:3rem;display:flex;align-items:center;justify-content:center;height:100%;\'>🎨</span>'" />
+      </div>
+      <div class="card__body">
+        <p class="card__tag">Créativité</p>
+        <h3 class="card__title">Créativité Populaire</h3>
+        <p class="card__desc">
+          L'art populaire haïtien, du fer recyclé aux peintures naïves, est reconnu
+          internationalement comme un trésor culturel unique et authentique.
+        </p>
+        <div class="card__footer">
+          <a href="creativite-populaire.html" class="btn btn-blue btn-sm">Découvrir →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__img card__img--photo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Little_haiti_miami.jpg/640px-Little_haiti_miami.jpg" alt="Little Haiti — Miami" loading="lazy" onerror="this.parentElement.style.background='#0a1a4a';this.parentElement.innerHTML='<span style=\'font-size:3rem;display:flex;align-items:center;justify-content:center;height:100%;\'>🌍</span>'" />
+      </div>
+      <div class="card__body">
+        <p class="card__tag">Diaspora</p>
+        <h3 class="card__title">Diaspora Engagée</h3>
+        <p class="card__desc">
+          Plus de 3 milliards de dollars de remises annuelles. La diaspora haïtienne,
+          ambassadrice de sa culture, est un pilier économique et culturel du pays.
+        </p>
+        <div class="card__footer">
+          <a href="diaspora-engagee.html" class="btn btn-blue btn-sm">Découvrir →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__img card__img--photo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Haiti_youth_school.jpg/640px-Haiti_youth_school.jpg" alt="Jeunesse haïtienne" loading="lazy" onerror="this.parentElement.style.background='#0a3a1a';this.parentElement.innerHTML='<span style=\'font-size:3rem;display:flex;align-items:center;justify-content:center;height:100%;\'>🌟</span>'" />
+      </div>
+      <div class="card__body">
+        <p class="card__tag">Avenir</p>
+        <h3 class="card__title">Jeunesse &amp; Potentiel</h3>
+        <p class="card__desc">
+          60 % de la population haïtienne a moins de 25 ans. Cette jeunesse dynamique
+          représente le moteur d'un renouveau possible pour la nation.
+        </p>
+        <div class="card__footer">
+          <a href="jeunesse-potentiel.html" class="btn btn-blue btn-sm">Découvrir →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__img card__img--photo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Haitian_Revolution_painting.jpg/640px-Haitian_Revolution_painting.jpg" alt="Révolution haïtienne 1804" loading="lazy" onerror="this.parentElement.style.background='#2a0a4a';this.parentElement.innerHTML='<span style=\'font-size:3rem;display:flex;align-items:center;justify-content:center;height:100%;\'>📚</span>'" />
+      </div>
+      <div class="card__body">
+        <p class="card__tag">Héritage</p>
+        <h3 class="card__title">Mémoire Universelle</h3>
+        <p class="card__desc">
+          La Révolution haïtienne de 1804 a inspiré des mouvements de libération
+          à travers le monde. Cette mémoire appartient à toute l'humanité.
+        </p>
+        <div class="card__footer">
+          <a href="memoire-universelle.html" class="btn btn-blue btn-sm">Découvrir →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card__img card__img--photo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Citadelle_Haiti.jpg/640px-Citadelle_Haiti.jpg" alt="Citadelle Laferrière — Patrimoine UNESCO" loading="lazy" onerror="this.parentElement.style.background='#4a0a0a';this.parentElement.innerHTML='<span style=\'font-size:3rem;display:flex;align-items:center;justify-content:center;height:100%;\'>🏛️</span>'" />
+      </div>
+      <div class="card__body">
+        <p class="card__tag">Patrimoine</p>
+        <h3 class="card__title">Patrimoine National</h3>
+        <p class="card__desc">
+          De la Citadelle Laferrière au Palais Sans-Souci, le patrimoine haïtien
+          témoigne d'une grandeur historique reconnue par l'UNESCO.
+        </p>
+        <div class="card__footer">
+          <a href="patrimoine-national.html" class="btn btn-blue btn-sm">Découvrir →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+```
+
   </section>
 
   <!-- ═══════════════════════════════════════════════
        DÉFIS & VISION D'AVENIR
   ═══════════════════════════════════════════════ -->
+
   <section class="section">
     <div class="container">
       <p class="section-label text-center">Comprendre &amp; Agir</p>
@@ -520,78 +898,82 @@
         et explorer les voies vers un avenir plus juste et prospère.
       </p>
 
-      <div class="enjeux-grid">
+```
+  <div class="enjeux-grid">
 
-        <a href="fragilite-economique.html" class="enjeu-card">
-          <div class="enjeu-card__icon">💰</div>
-          <div class="enjeu-card__body">
-            <h3>Fragilité Économique</h3>
-            <p>PIB parmi les plus bas des Amériques, dépendance aux dons internationaux et aux remises de la diaspora.</p>
-          </div>
-          <span class="enjeu-card__arrow">→</span>
-        </a>
-
-        <a href="inegalites-sociales.html" class="enjeu-card">
-          <div class="enjeu-card__icon">⚖️</div>
-          <div class="enjeu-card__body">
-            <h3>Inégalités Sociales</h3>
-            <p>Un fossé profond entre une élite concentrant les richesses et une majorité vivant dans la précarité.</p>
-          </div>
-          <span class="enjeu-card__arrow">→</span>
-        </a>
-
-        <a href="instabilite-politique.html" class="enjeu-card">
-          <div class="enjeu-card__icon">🏛️</div>
-          <div class="enjeu-card__body">
-            <h3>Instabilité Politique</h3>
-            <p>Cycles répétés de crises politiques, coups d'État et difficultés à instaurer une gouvernance stable.</p>
-          </div>
-          <span class="enjeu-card__arrow">→</span>
-        </a>
-
-        <a href="pressions-securitaires.html" class="enjeu-card">
-          <div class="enjeu-card__icon">🛡️</div>
-          <div class="enjeu-card__body">
-            <h3>Pressions Sécuritaires</h3>
-            <p>La montée des gangs armés et l'insécurité généralisée constituent un défi majeur pour la stabilité.</p>
-          </div>
-          <span class="enjeu-card__arrow">→</span>
-        </a>
-
-        <a href="services-essentiels.html" class="enjeu-card">
-          <div class="enjeu-card__icon">🏥</div>
-          <div class="enjeu-card__body">
-            <h3>Services Essentiels</h3>
-            <p>Accès limité à l'eau potable, aux soins de santé et à l'éducation pour une large partie de la population.</p>
-          </div>
-          <span class="enjeu-card__arrow">→</span>
-        </a>
-
-        <a href="capacite-adaptation.html" class="enjeu-card enjeu-card--positive">
-          <div class="enjeu-card__icon">💪</div>
-          <div class="enjeu-card__body">
-            <h3>Capacité d'Adaptation</h3>
-            <p>Malgré tout, le peuple haïtien démontre une résilience et une solidarité remarquables face à l'adversité.</p>
-          </div>
-          <span class="enjeu-card__arrow">→</span>
-        </a>
-
-        <a href="reconstruction-durable.html" class="enjeu-card enjeu-card--positive">
-          <div class="enjeu-card__icon">🔨</div>
-          <div class="enjeu-card__body">
-            <h3>Reconstruction Durable</h3>
-            <p>Des voies concrètes existent pour reconstruire Haïti durablement — institutions solides et investissements responsables.</p>
-          </div>
-          <span class="enjeu-card__arrow">→</span>
-        </a>
-
+    <a href="fragilite-economique.html" class="enjeu-card">
+      <div class="enjeu-card__icon">💰</div>
+      <div class="enjeu-card__body">
+        <h3>Fragilité Économique</h3>
+        <p>PIB parmi les plus bas des Amériques, dépendance aux dons internationaux et aux remises de la diaspora.</p>
       </div>
-    </div>
+      <span class="enjeu-card__arrow">→</span>
+    </a>
+
+    <a href="inegalites-sociales.html" class="enjeu-card">
+      <div class="enjeu-card__icon">⚖️</div>
+      <div class="enjeu-card__body">
+        <h3>Inégalités Sociales</h3>
+        <p>Un fossé profond entre une élite concentrant les richesses et une majorité vivant dans la précarité.</p>
+      </div>
+      <span class="enjeu-card__arrow">→</span>
+    </a>
+
+    <a href="instabilite-politique.html" class="enjeu-card">
+      <div class="enjeu-card__icon">🏛️</div>
+      <div class="enjeu-card__body">
+        <h3>Instabilité Politique</h3>
+        <p>Cycles répétés de crises politiques, coups d'État et difficultés à instaurer une gouvernance stable.</p>
+      </div>
+      <span class="enjeu-card__arrow">→</span>
+    </a>
+
+    <a href="pressions-securitaires.html" class="enjeu-card">
+      <div class="enjeu-card__icon">🛡️</div>
+      <div class="enjeu-card__body">
+        <h3>Pressions Sécuritaires</h3>
+        <p>La montée des gangs armés et l'insécurité généralisée constituent un défi majeur pour la stabilité.</p>
+      </div>
+      <span class="enjeu-card__arrow">→</span>
+    </a>
+
+    <a href="services-essentiels.html" class="enjeu-card">
+      <div class="enjeu-card__icon">🏥</div>
+      <div class="enjeu-card__body">
+        <h3>Services Essentiels</h3>
+        <p>Accès limité à l'eau potable, aux soins de santé et à l'éducation pour une large partie de la population.</p>
+      </div>
+      <span class="enjeu-card__arrow">→</span>
+    </a>
+
+    <a href="capacite-adaptation.html" class="enjeu-card enjeu-card--positive">
+      <div class="enjeu-card__icon">💪</div>
+      <div class="enjeu-card__body">
+        <h3>Capacité d'Adaptation</h3>
+        <p>Malgré tout, le peuple haïtien démontre une résilience et une solidarité remarquables face à l'adversité.</p>
+      </div>
+      <span class="enjeu-card__arrow">→</span>
+    </a>
+
+    <a href="reconstruction-durable.html" class="enjeu-card enjeu-card--positive">
+      <div class="enjeu-card__icon">🔨</div>
+      <div class="enjeu-card__body">
+        <h3>Reconstruction Durable</h3>
+        <p>Des voies concrètes existent pour reconstruire Haïti durablement — institutions solides et investissements responsables.</p>
+      </div>
+      <span class="enjeu-card__arrow">→</span>
+    </a>
+
+  </div>
+</div>
+```
+
   </section>
 
   <!-- ═══════════════════════════════════════════════
        QUOTE
   ═══════════════════════════════════════════════ -->
+
   <div class="quote-block">
     <div class="container">
       <p class="quote-text">
@@ -605,6 +987,7 @@
   <!-- ═══════════════════════════════════════════════
        CTA
   ═══════════════════════════════════════════════ -->
+
   <section class="cta-section">
     <div class="container">
       <h2>Planifiez votre Voyage en Haïti</h2>
@@ -619,6 +1002,7 @@
   <!-- ═══════════════════════════════════════════════
        FOOTER
   ═══════════════════════════════════════════════ -->
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -683,6 +1067,81 @@
     </div>
   </footer>
 
+  <!-- LIGHTBOX -->
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Agrandissement photo">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Fermer">&#x2715;</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+    <p class="lightbox__caption" id="lightboxCaption"></p>
+  </div>
+
   <script src="js/script.js"></script>
+
+  <script>
+    /* ── HERO SLIDESHOW ── */
+    (function() {
+      const slides = document.querySelectorAll('.hero__slide');
+      const dots   = document.querySelectorAll('.hero__dot');
+      let current  = 0;
+      let timer;
+
+      function goTo(n) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (n + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+
+      function next() { goTo(current + 1); }
+
+      function startTimer() { timer = setInterval(next, 5000); }
+      function resetTimer()  { clearInterval(timer); startTimer(); }
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+          goTo(parseInt(this.dataset.slide));
+          resetTimer();
+        });
+      });
+
+      startTimer();
+    })();
+
+    /* ── PHOTO GALLERY LIGHTBOX ── */
+    (function() {
+      const items     = document.querySelectorAll('.photo-gallery__item');
+      const lightbox  = document.getElementById('lightbox');
+      const lbImg     = document.getElementById('lightboxImg');
+      const lbCaption = document.getElementById('lightboxCaption');
+      const lbClose   = document.getElementById('lightboxClose');
+
+      items.forEach(item => {
+        item.addEventListener('click', function() {
+          const img = this.querySelector('img');
+          lbImg.src = img.src;
+          lbImg.alt = img.alt;
+          lbCaption.textContent = this.dataset.caption || img.alt;
+          lightbox.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+        lbImg.src = '';
+      }
+
+      lbClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    })();
+  </script>
+
 </body>
 </html>
