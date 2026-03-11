@@ -2585,6 +2585,7 @@ h1, h2, h3, h4 {
   border: 3px solid var(--ivory);
   box-shadow: 0 0 0 2px rgba(0,32,159,0.30);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: timeline-dot-pulse-blue 2.8s ease-in-out infinite;
   z-index: 1;
 }
 
