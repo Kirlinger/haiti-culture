@@ -621,4 +621,44 @@
   }
 
 
+  /* ══════════════════════════════════════════════════
+     14. CHRONOLOGIE COMPLÈTE — Accordion toggle
+     ══════════════════════════════════════════════════ */
+  function initEvtTimeline() {
+    var headers = document.querySelectorAll('.evt-header');
+    if (!headers.length) return;
+
+    headers.forEach(function (header) {
+      header.setAttribute('role', 'button');
+      header.setAttribute('tabindex', '0');
+
+      function toggle() {
+        var item = header.closest('.evt-item');
+        var isOpen = item.classList.contains('is-open');
+
+        // Close all others
+        document.querySelectorAll('.evt-item.is-open').forEach(function (openItem) {
+          openItem.classList.remove('is-open');
+          openItem.querySelector('.evt-header').setAttribute('aria-expanded', 'false');
+        });
+
+        // Toggle clicked item
+        if (!isOpen) {
+          item.classList.add('is-open');
+          header.setAttribute('aria-expanded', 'true');
+        }
+      }
+
+      header.addEventListener('click', toggle);
+      header.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggle();
+        }
+      });
+    });
+  }
+
+  initEvtTimeline();
+
 })();
