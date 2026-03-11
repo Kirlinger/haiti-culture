@@ -381,19 +381,19 @@
       title: 'Port-au-Prince',
       badge: 'Capitale',
       desc: 'Capitale et métropole d\'Haïti, fondée en 1749. Cœur économique, politique et culturel du pays avec plus de 3 millions d\'habitants. Siège du gouvernement et carrefour de la vie nationale.',
-      link: 'geographie.html'
+      link: 'tourism.html'
     },
     cap: {
       title: 'Cap-Haïtien',
       badge: 'Capitale du Nord',
       desc: 'Fondée en 1670 sous le nom du Cap-Français, elle fut la capitale coloniale la plus prospère des Caraïbes. Berceau de la Révolution haïtienne et porte d\'accès à la Citadelle Laferrière.',
-      link: 'geographie.html'
+      link: 'tourism.html'
     },
     jacmel: {
       title: 'Jacmel',
       badge: 'Capitale Culturelle',
       desc: 'Joyau architectural du Sud, Jacmel est réputée pour son carnaval créatif, son art naïf et son architecture coloniale française. Ville UNESCO désignée ville créative, elle attire artistes et voyageurs du monde entier.',
-      link: 'geographie.html'
+      link: 'tourism.html'
     },
     citadelle: {
       title: 'Citadelle Laferrière',
