@@ -2538,3 +2538,172 @@ h1, h2, h3, h4 {
   .btn-outline-dark { color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.18); }
   .btn-outline-dark:hover { background: rgba(255,255,255,0.08); }
 }
+
+/* ══════════════════════════════════════════════════════
+   CHRONOLOGIE COMPLÈTE — Interactive Accordion Timeline
+   ══════════════════════════════════════════════════════ */
+
+.evt-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 56px auto 0;
+  padding-left: 52px;
+}
+
+/* Vertical connector line */
+.evt-timeline::before {
+  content: '';
+  position: absolute;
+  left: 17px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(0,32,159,0.35) 6%,
+    rgba(0,32,159,0.35) 94%,
+    transparent 100%);
+  border-radius: 2px;
+}
+
+/* Individual event wrapper */
+.evt-item {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+/* Dot on the connector line */
+.evt-item::before {
+  content: '';
+  position: absolute;
+  left: -52px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--blue);
+  border: 3px solid var(--ivory);
+  box-shadow: 0 0 0 2px rgba(0,32,159,0.30);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  z-index: 1;
+}
+
+.evt-item:hover::before,
+.evt-item.is-open::before {
+  transform: scale(1.35);
+  box-shadow: 0 0 0 4px rgba(0,32,159,0.18);
+}
+
+/* Clickable header row */
+.evt-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.evt-header:hover {
+  background: #f0f4ff;
+  border-color: rgba(0,32,159,0.20);
+  box-shadow: var(--shadow-sm);
+}
+
+.evt-item.is-open .evt-header {
+  background: #eef1ff;
+  border-color: rgba(0,32,159,0.28);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: none;
+}
+
+.evt-year {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--blue);
+  white-space: nowrap;
+  min-width: 60px;
+}
+
+.evt-title {
+  font-family: var(--font-serif);
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--navy);
+  flex: 1;
+  line-height: 1.4;
+}
+
+.evt-short {
+  font-size: 13px;
+  color: var(--text-muted);
+  flex: 1.4;
+  line-height: 1.5;
+  display: none;
+}
+
+.evt-chevron {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--blue);
+  transition: transform 0.3s ease;
+  opacity: 0.65;
+}
+
+.evt-item.is-open .evt-chevron {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+/* Expandable details panel */
+.evt-details {
+  display: none;
+  background: #f7f9ff;
+  border: 1px solid rgba(0,32,159,0.18);
+  border-top: none;
+  border-bottom-left-radius: var(--radius-sm);
+  border-bottom-right-radius: var(--radius-sm);
+  padding: 18px 24px 20px;
+  font-size: 14px;
+  color: var(--text-mid, #334455);
+  line-height: 1.78;
+}
+
+.evt-item.is-open .evt-details {
+  display: block;
+  animation: evt-expand 0.25s ease;
+}
+
+@keyframes evt-expand {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Desktop layout: show short description inline */
+@media (min-width: 700px) {
+  .evt-short { display: block; }
+  .evt-year  { min-width: 56px; }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .evt-header          { background: #0E1420; border-color: rgba(255,255,255,0.07); }
+  .evt-header:hover    { background: #141c30; border-color: rgba(100,140,255,0.25); }
+  .evt-item.is-open .evt-header { background: #141c30; border-color: rgba(100,140,255,0.30); }
+  .evt-title           { color: #E2E8F0; }
+  .evt-year            { color: #7BA3FF; }
+  .evt-short           { color: #7A8FA8; }
+  .evt-details         { background: #0b1020; border-color: rgba(100,140,255,0.18); color: #8FA5C0; }
+  .evt-item::before    { background: #7BA3FF; border-color: #0E1420; }
+  .evt-timeline::before { background: linear-gradient(to bottom, transparent 0%, rgba(100,140,255,0.35) 6%, rgba(100,140,255,0.35) 94%, transparent 100%); }
+}
