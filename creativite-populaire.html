@@ -5,18 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#00209F" />
-  <title>La Créativité Populaire d'Haïti | 🇭🇹 Haïti 🇭🇹</title>
+  <title>La Créativité Populaire d'Haïti | </title>
   <meta name="author" content="RépubliqueHaïti.org" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
 </head>
 <body>
 
-  <header class="site-header">
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+    <header class="site-header">
     <div class="container">
       <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
-          <span class="logo-emoji-flag">🇭🇹</span>
-          Haïti 🇭🇹
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
         </a>
         <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -35,7 +41,6 @@
               <a href="institutions.html">Institutions</a>
             </div>
           </div>
-          <a href="geographie.html">Géographie</a>
           <div class="nav-dropdown">
             <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
             <div class="nav-dropdown__menu">
@@ -101,7 +106,7 @@
 
   <section class="page-hero page-hero--about">
     <div class="container">
-      <p class="page-hero__label">🎨 Créativité</p>
+      <p class="page-hero__label">Créativité</p>
       <h1 class="page-hero__title">La Créativité Populaire d'Haïti</h1>
       <p class="page-hero__desc">L'ingéniosité, l'art populaire et la richesse créative d'un peuple qui transforme l'adversité en beauté.</p>
     </div>
@@ -122,32 +127,26 @@
       <div class="feature-grid">
 
         <div class="feature-card">
-          <div class="feature-card__icon">🖼️</div>
           <h3 class="feature-card__title">Peinture Naïve</h3>
           <p class="feature-card__desc">Reconnue dans les musées internationaux, la peinture naïve haïtienne célèbre la spiritualité et le quotidien.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">⚙️</div>
           <h3 class="feature-card__title">Sculptures en Métal</h3>
           <p class="feature-card__desc">Fabriquées à partir de bidons recyclés, les sculptures haïtiennes transforment l'ordinaire en art.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🧺</div>
           <h3 class="feature-card__title">Artisanat Traditionnel</h3>
           <p class="feature-card__desc">Vannerie, broderie, poterie : chaque objet artisanal raconte une histoire de savoir-faire transmis.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">😄</div>
           <h3 class="feature-card__title">Humour et Proverbes</h3>
           <p class="feature-card__desc">Les proverbes créoles et l'humour populaire véhiculent la sagesse et la résistance culturelle.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🤝</div>
           <h3 class="feature-card__title">Ingéniosité Sociale</h3>
           <p class="feature-card__desc">Face aux crises, les Haïtiens innovent : konbit, sòl, réseaux d'entraide — la solidarité comme art de vivre.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🌟</div>
           <h3 class="feature-card__title">Richesse Culturelle</h3>
           <p class="feature-card__desc">Reconnue à l'international, la créativité haïtienne est un atout économique et culturel majeur.</p>
         </div>
@@ -210,8 +209,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-brand__logo">
-            <span class="logo-emoji-flag">🇭🇹</span>
-            Haïti 🇭🇹
+            République d'Haïti
           </div>
           <p>
             Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
@@ -263,12 +261,13 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 R&eacute;publiqueHa&iuml;ti.org &mdash; Tous droits r&eacute;serv&eacute;s.</span>
-        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 🇭🇹</span>
+        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 </span>
         <span>Portail d&rsquo;information et de connaissance sur Ha&iuml;ti</span>
       </div>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
 </body>
 </html>

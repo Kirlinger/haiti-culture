@@ -5,19 +5,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#00209F" />
-  <title>Gastronomie Haïtienne : Saveurs et Traditions | 🇭🇹 Haïti 🇭🇹</title>
+  <title>Gastronomie Haïtienne : Saveurs et Traditions | </title>
   <meta name="description" content="Des saveurs africaines, françaises et caribéennes qui racontent l'histoire d'un peuple." />
   <meta name="author" content="RépubliqueHaïti.org" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
 </head>
 <body>
 
-  <header class="site-header">
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+    <header class="site-header">
     <div class="container">
       <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
-          <span class="logo-emoji-flag">🇭🇹</span>
-          Haïti 🇭🇹
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
         </a>
         <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -36,7 +42,6 @@
               <a href="institutions.html">Institutions</a>
             </div>
           </div>
-          <a href="geographie.html">Géographie</a>
           <div class="nav-dropdown">
             <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
             <div class="nav-dropdown__menu">
@@ -102,7 +107,7 @@
 
   <section class="page-hero page-hero--about">
     <div class="container">
-      <p class="page-hero__label">🍽️ Gastronomie</p>
+      <p class="page-hero__label"> Gastronomie</p>
       <h1 class="page-hero__title">La Cuisine Haïtienne</h1>
       <p class="page-hero__desc">Des saveurs africaines, françaises et caribéennes qui racontent l'histoire d'un peuple.</p>
     </div>
@@ -224,22 +229,18 @@
       <h2 class="section-title text-center">Les Boissons Haïtiennes</h2>
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="feature-card__icon">🥃</div>
           <h3 class="feature-card__title">Rhum Barbancourt</h3>
           <p class="feature-card__desc">Le rhum haïtien Barbancourt est salué par les connaisseurs du monde entier pour sa finesse et sa complexité aromatique. Produit depuis 1862 selon des méthodes françaises de distillation, il est l'ambassadeur gastronomique d'Haïti.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🥤</div>
           <h3 class="feature-card__title">Kola-Champagne</h3>
           <p class="feature-card__desc">La boisson gazeuse nationale haïtienne, au goût sucré et légèrement vanillé, est présente dans toutes les fêtes et réunions familiales. Un incontournable de la culture populaire haïtienne.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🌿</div>
           <h3 class="feature-card__title">Jus de Canne</h3>
           <p class="feature-card__desc">Le jus de canne à sucre fraîchement pressé est une boisson de rue rafraîchissante, vendue dans tout le pays. Naturellement sucré et énergisant, c'est un délice accessible à tous.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">☕</div>
           <h3 class="feature-card__title">Café Haïtien</h3>
           <p class="feature-card__desc">Cultivé dans les montagnes du sud du pays, le café haïtien est d'une richesse et d'un arôme exceptionnels. Peu connu à l'international, il mérite amplement sa réputation parmi les connaisseurs.</p>
         </div>
@@ -252,8 +253,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-brand__logo">
-            <span class="logo-emoji-flag">🇭🇹</span>
-            Haïti 🇭🇹
+            République d'Haïti
           </div>
           <p>
             Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
@@ -305,12 +305,13 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 R&eacute;publiqueHa&iuml;ti.org &mdash; Tous droits r&eacute;serv&eacute;s.</span>
-        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 🇭🇹</span>
+        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 </span>
         <span>Portail d&rsquo;information et de connaissance sur Ha&iuml;ti</span>
       </div>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
 </body>
 </html>

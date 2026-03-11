@@ -16,9 +16,16 @@
   <meta property="og:locale" content="fr_HT" />
   <link rel="canonical" href="https://republiquehaiti.org/" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
 
 </head>
 <body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
 
   <!-- ═══════════════════════════════════════════════
        HEADER / NAVBAR
@@ -26,9 +33,8 @@
   <header class="site-header">
     <div class="container">
       <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
-          <span class="logo-emoji-flag">🇭🇹</span>
-          Haïti 🇭🇹
+        <a href="index.html" class="navbar__logo" aria-label="République d'Haïti - Accueil">
+          République d'Haïti
         </a>
 
         <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
@@ -49,7 +55,6 @@
               <a href="institutions.html">Institutions</a>
             </div>
           </div>
-          <a href="geographie.html">Géographie</a>
           <div class="nav-dropdown">
             <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
             <div class="nav-dropdown__menu">
@@ -118,10 +123,12 @@
        HERO
   ═══════════════════════════════════════════════ -->
   <section class="hero">
+    <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
     <div class="hero__content">
       <div class="hero__badge">Perle des Antilles</div>
+
       <div class="hero__flag" aria-label="Drapeau national d'Haïti">
-        <span class="hero__flag-emoji">🇭🇹</span>
+        <span class="hero__flag-colors"></span>
       </div>
       <h1 class="hero__title">
         Découvrir <span>Haïti</span><br/>
@@ -134,7 +141,6 @@
       <div class="hero__buttons">
         <a href="history.html" class="btn btn-primary">Explorer l'Histoire</a>
         <a href="culture.html" class="btn btn-outline">Découvrir la Culture</a>
-        <a href="geographie.html" class="btn btn-outline">Explorer la Géographie</a>
       </div>
     </div>
   </section>
@@ -182,7 +188,9 @@
         <!-- About Card -->
         <div class="card">
           <div class="card__img card__img--placeholder card__img--blue">
-            <span class="card__icon-emoji">🇭🇹</span>
+            <span class="card__icon-emoji" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22,6 26,16 37,16 28,23 31,33 22,27 13,33 16,23 7,16 18,16"/></svg>
+            </span>
           </div>
           <div class="card__body">
             <p class="card__tag">Culture &amp; Peuple</p>
@@ -201,7 +209,9 @@
         <!-- History Card -->
         <div class="card">
           <div class="card__img card__img--placeholder card__img--red">
-            <span class="card__icon-emoji">📜</span>
+            <span class="card__icon-emoji" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="10" width="28" height="26" rx="2"/><polyline points="14,10 14,6 30,6 30,10"/><line x1="14" y1="20" x2="30" y2="20"/><line x1="14" y1="26" x2="24" y2="26"/></svg>
+            </span>
           </div>
           <div class="card__body">
             <p class="card__tag">Patrimoine</p>
@@ -220,7 +230,9 @@
         <!-- Tourism Card -->
         <div class="card">
           <div class="card__img card__img--placeholder card__img--gold">
-            <span class="card__icon-emoji">🏰</span>
+            <span class="card__icon-emoji" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="16" width="24" height="22"/><polyline points="10,16 10,12 14,12 14,8 16,8 16,12 28,12 28,8 30,8 30,12 34,12 34,16"/><rect x="17" y="26" width="10" height="12"/></svg>
+            </span>
           </div>
           <div class="card__body">
             <p class="card__tag">Voyage &amp; Tourisme</p>
@@ -238,7 +250,9 @@
         <!-- Vodou Card -->
         <div class="card">
           <div class="card__img card__img--placeholder card__img--purple">
-            <span class="card__icon-emoji">🥁</span>
+            <span class="card__icon-emoji" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="22" cy="26" rx="12" ry="8"/><ellipse cx="22" cy="26" rx="5" ry="3"/><line x1="10" y1="26" x2="8" y2="20"/><line x1="34" y1="26" x2="36" y2="20"/><line x1="22" y1="18" x2="22" y2="12"/></svg>
+            </span>
           </div>
           <div class="card__body">
             <p class="card__tag">Spiritualité</p>
@@ -256,7 +270,9 @@
         <!-- Culture Card -->
         <div class="card">
           <div class="card__img card__img--placeholder card__img--teal">
-            <span class="card__icon-emoji">🎨</span>
+            <span class="card__icon-emoji" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="20" r="8"/><circle cx="28" cy="28" r="6"/><line x1="22" y1="12" x2="34" y2="8"/><line x1="28" y1="8" x2="34" y2="8"/></svg>
+            </span>
           </div>
           <div class="card__body">
             <p class="card__tag">Art &amp; Expression</p>
@@ -274,7 +290,9 @@
         <!-- Diaspora Card -->
         <div class="card">
           <div class="card__img card__img--placeholder card__img--green">
-            <span class="card__icon-emoji">🌍</span>
+            <span class="card__icon-emoji" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="22" r="14"/><ellipse cx="22" cy="22" rx="6" ry="14"/><line x1="8" y1="22" x2="36" y2="22"/><path d="M12 14 Q22 18 32 14"/><path d="M12 30 Q22 26 32 30"/></svg>
+            </span>
           </div>
           <div class="card__body">
             <p class="card__tag">Diaspora</p>
@@ -337,7 +355,9 @@
 
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="feature-card__icon">🏰</div>
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="16" width="24" height="22"/><polyline points="10,16 10,12 14,12 14,8 16,8 16,12 28,12 28,8 30,8 30,12 34,12 34,16"/><rect x="17" y="26" width="10" height="12"/></svg>
+          </div>
           <h3 class="feature-card__title">Patrimoine Mondial</h3>
           <p class="feature-card__desc">
             La Citadelle Laferrière et le Palais Sans-Souci sont des sites du patrimoine
@@ -345,7 +365,9 @@
           </p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🎶</div>
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 24 Q18 20 22 24 Q26 28 30 24"/><path d="M14 18 Q18 14 22 18 Q26 22 30 18"/><line x1="22" y1="8" x2="22" y2="34"/></svg>
+          </div>
           <h3 class="feature-card__title">Musique Vibrante</h3>
           <p class="feature-card__desc">
             La musique Kompa, Rara et Rasin emplit les rues. La musique haïtienne a
@@ -353,7 +375,9 @@
           </p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🎨</div>
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="20" r="8"/><circle cx="28" cy="28" r="6"/><line x1="22" y1="12" x2="34" y2="8"/><line x1="28" y1="8" x2="34" y2="8"/></svg>
+          </div>
           <h3 class="feature-card__title">Art de Renommée Mondiale</h3>
           <p class="feature-card__desc">
             L'art haïtien est célébré internationalement. Des peintures naïves aux
@@ -361,7 +385,9 @@
           </p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🌊</div>
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 28 Q10 22 14 28 Q18 34 22 28 Q26 22 30 28 Q34 34 38 28"/><path d="M8 36 Q12 30 16 36 Q20 42 24 36 Q28 30 32 36"/></svg>
+          </div>
           <h3 class="feature-card__title">Plages Magnifiques</h3>
           <p class="feature-card__desc">
             Les plages de Labadée, Île-à-Vache et Jacmel offrent des sables immaculés et
@@ -369,7 +395,9 @@
           </p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🍽️</div>
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="22" r="12"/><line x1="12" y1="26" x2="32" y2="26"/><line x1="8" y1="22" x2="12" y2="22"/><line x1="32" y1="22" x2="36" y2="22"/><line x1="22" y1="10" x2="22" y2="16"/></svg>
+          </div>
           <h3 class="feature-card__title">Cuisine Délicieuse</h3>
           <p class="feature-card__desc">
             Griyo, diri ak djon djon, pikliz, la cuisine haïtienne est audacieuse,
@@ -377,7 +405,9 @@
           </p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🎭</div>
+          <div class="feature-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 8 C14 8 8 14 8 20 L8 36 L22 28 L36 36 L36 20 C36 14 30 8 22 8Z"/><circle cx="22" cy="20" r="5"/></svg>
+          </div>
           <h3 class="feature-card__title">Festivals &amp; Carnaval</h3>
           <p class="feature-card__desc">
             Le Carnaval haïtien est l'un des plus spectaculaires des Caraïbes.
@@ -404,7 +434,9 @@
 
         <div class="card">
           <div class="card__img card__img--placeholder card__img--teal">
-            <span class="card__icon-emoji">🌱</span>
+            <span class="card__icon-emoji" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6 C22 6 12 12 12 20 C12 26 17 30 22 32 C27 30 32 26 32 20 C32 12 22 6 22 6Z"/><line x1="22" y1="18" x2="22" y2="32"/><line x1="17" y1="22" x2="22" y2="18"/></svg>
+            </span>
           </div>
           <div class="card__body">
             <p class="card__tag">Vivante</p>
@@ -421,7 +453,9 @@
 
         <div class="card">
           <div class="card__img card__img--placeholder card__img--gold">
-            <span class="card__icon-emoji">🎨</span>
+            <span class="card__icon-emoji" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="20" r="8"/><circle cx="28" cy="28" r="6"/><line x1="22" y1="12" x2="34" y2="8"/><line x1="28" y1="8" x2="34" y2="8"/></svg>
+            </span>
           </div>
           <div class="card__body">
             <p class="card__tag">Créativité</p>
@@ -438,7 +472,9 @@
 
         <div class="card">
           <div class="card__img card__img--placeholder card__img--blue">
-            <span class="card__icon-emoji">🌍</span>
+            <span class="card__icon-emoji" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="22" r="14"/><ellipse cx="22" cy="22" rx="6" ry="14"/><line x1="8" y1="22" x2="36" y2="22"/><path d="M12 14 Q22 18 32 14"/><path d="M12 30 Q22 26 32 30"/></svg>
+            </span>
           </div>
           <div class="card__body">
             <p class="card__tag">Diaspora</p>
@@ -455,7 +491,9 @@
 
         <div class="card">
           <div class="card__img card__img--placeholder card__img--green">
-            <span class="card__icon-emoji">🌟</span>
+            <span class="card__icon-emoji" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22,6 26,16 37,16 28,23 31,33 22,27 13,33 16,23 7,16 18,16"/></svg>
+            </span>
           </div>
           <div class="card__body">
             <p class="card__tag">Avenir</p>
@@ -472,7 +510,9 @@
 
         <div class="card">
           <div class="card__img card__img--placeholder card__img--purple">
-            <span class="card__icon-emoji">📚</span>
+            <span class="card__icon-emoji" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="32" width="28" height="4" rx="1"/><rect x="10" y="26" width="6" height="6"/><rect x="19" y="22" width="6" height="10"/><rect x="28" y="18" width="6" height="14"/></svg>
+            </span>
           </div>
           <div class="card__body">
             <p class="card__tag">Héritage</p>
@@ -489,7 +529,9 @@
 
         <div class="card">
           <div class="card__img card__img--placeholder card__img--red">
-            <span class="card__icon-emoji">🏛️</span>
+            <span class="card__icon-emoji" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="10" y1="34" x2="10" y2="12"/><line x1="34" y1="34" x2="34" y2="12"/><line x1="10" y1="12" x2="34" y2="12"/><line x1="10" y1="22" x2="34" y2="22"/><line x1="10" y1="34" x2="34" y2="34"/><rect x="18" y="26" width="8" height="8"/></svg>
+            </span>
           </div>
           <div class="card__body">
             <p class="card__tag">Patrimoine</p>
@@ -523,7 +565,9 @@
       <div class="enjeux-grid">
 
         <a href="fragilite-economique.html" class="enjeu-card">
-          <div class="enjeu-card__icon">💰</div>
+          <div class="enjeu-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="14"/><line x1="18" y1="8" x2="18" y2="10"/><line x1="18" y1="26" x2="18" y2="28"/><path d="M14 13 C14 11 16 10 18 10 C20 10 22 11 22 13 C22 15 20 16 18 17 C16 18 14 19 14 21 C14 23 16 24 18 24 C20 24 22 23 22 21"/></svg>
+          </div>
           <div class="enjeu-card__body">
             <h3>Fragilité Économique</h3>
             <p>PIB parmi les plus bas des Amériques, dépendance aux dons internationaux et aux remises de la diaspora.</p>
@@ -532,7 +576,9 @@
         </a>
 
         <a href="inegalites-sociales.html" class="enjeu-card">
-          <div class="enjeu-card__icon">⚖️</div>
+          <div class="enjeu-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="18" y2="30"/><line x1="8" y1="16" x2="18" y2="16"/><line x1="18" y1="20" x2="28" y2="20"/><path d="M8 16 L4 22 L12 22 Z"/><path d="M28 20 L24 26 L32 26 Z"/></svg>
+          </div>
           <div class="enjeu-card__body">
             <h3>Inégalités Sociales</h3>
             <p>Un fossé profond entre une élite concentrant les richesses et une majorité vivant dans la précarité.</p>
@@ -541,7 +587,9 @@
         </a>
 
         <a href="instabilite-politique.html" class="enjeu-card">
-          <div class="enjeu-card__icon">🏛️</div>
+          <div class="enjeu-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="30" x2="8" y2="12"/><line x1="28" y1="30" x2="28" y2="12"/><line x1="8" y1="12" x2="28" y2="12"/><line x1="8" y1="20" x2="28" y2="20"/><line x1="8" y1="30" x2="28" y2="30"/><rect x="14" y="22" width="8" height="8"/></svg>
+          </div>
           <div class="enjeu-card__body">
             <h3>Instabilité Politique</h3>
             <p>Cycles répétés de crises politiques, coups d'État et difficultés à instaurer une gouvernance stable.</p>
@@ -550,7 +598,9 @@
         </a>
 
         <a href="pressions-securitaires.html" class="enjeu-card">
-          <div class="enjeu-card__icon">🛡️</div>
+          <div class="enjeu-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4 L30 10 L30 20 C30 26 24 30 18 32 C12 30 6 26 6 20 L6 10 Z"/></svg>
+          </div>
           <div class="enjeu-card__body">
             <h3>Pressions Sécuritaires</h3>
             <p>La montée des gangs armés et l'insécurité généralisée constituent un défi majeur pour la stabilité.</p>
@@ -559,7 +609,9 @@
         </a>
 
         <a href="services-essentiels.html" class="enjeu-card">
-          <div class="enjeu-card__icon">🏥</div>
+          <div class="enjeu-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="10" width="20" height="18" rx="2"/><line x1="18" y1="14" x2="18" y2="24"/><line x1="13" y1="19" x2="23" y2="19"/><line x1="18" y1="8" x2="18" y2="10"/><line x1="14" y1="8" x2="22" y2="8"/></svg>
+          </div>
           <div class="enjeu-card__body">
             <h3>Services Essentiels</h3>
             <p>Accès limité à l'eau potable, aux soins de santé et à l'éducation pour une large partie de la population.</p>
@@ -568,7 +620,9 @@
         </a>
 
         <a href="capacite-adaptation.html" class="enjeu-card enjeu-card--positive">
-          <div class="enjeu-card__icon">💪</div>
+          <div class="enjeu-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8,26 14,18 20,22 26,12 32,16"/><polyline points="26,10 32,10 32,16"/></svg>
+          </div>
           <div class="enjeu-card__body">
             <h3>Capacité d'Adaptation</h3>
             <p>Malgré tout, le peuple haïtien démontre une résilience et une solidarité remarquables face à l'adversité.</p>
@@ -577,7 +631,9 @@
         </a>
 
         <a href="reconstruction-durable.html" class="enjeu-card enjeu-card--positive">
-          <div class="enjeu-card__icon">🔨</div>
+          <div class="enjeu-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="10" y1="26" x2="26" y2="10"/><polyline points="22,6 30,6 30,14"/><line x1="16" y1="28" x2="20" y2="28"/><line x1="12" y1="32" x2="16" y2="28"/></svg>
+          </div>
           <div class="enjeu-card__body">
             <h3>Reconstruction Durable</h3>
             <p>Des voies concrètes existent pour reconstruire Haïti durablement — institutions solides et investissements responsables.</p>
@@ -585,6 +641,422 @@
           <span class="enjeu-card__arrow">→</span>
         </a>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       HISTORICAL FIGURES
+  ═══════════════════════════════════════════════ -->
+  <section class="section section--dark figures-section" id="figures">
+    <div class="container">
+      <p class="section-label text-center">Héros &amp; Pionniers</p>
+      <h2 class="section-title text-center">Figures Historiques d'Haïti</h2>
+      <p class="section-subtitle text-center">
+        Des hommes et des femmes exceptionnels qui ont forgé l'identité de la première
+        République noire du monde.
+      </p>
+
+      <div class="figures-grid">
+
+        <a href="heroes.html" class="figure-card glass-card">
+          <div class="figure-card__avatar" style="background: linear-gradient(145deg,#1a0a40,#3a1880);">
+            <span class="figure-card__initial">TL</span>
+          </div>
+          <div class="figure-card__body">
+            <h3 class="figure-card__name">Toussaint Louverture</h3>
+            <span class="figure-card__role">Père de la Nation · 1743–1803</span>
+            <p class="figure-card__desc">
+              Esclave affranchi devenu général révolutionnaire, il mena la première phase
+              de la Révolution haïtienne et est considéré comme le père fondateur d'Haïti.
+            </p>
+          </div>
+          <div class="figure-card__glow"></div>
+        </a>
+
+        <a href="heroes.html" class="figure-card glass-card">
+          <div class="figure-card__avatar" style="background: linear-gradient(145deg,#3a0810,#880c20);">
+            <span class="figure-card__initial">JD</span>
+          </div>
+          <div class="figure-card__body">
+            <h3 class="figure-card__name">Jean-Jacques Dessalines</h3>
+            <span class="figure-card__role">Premier Empereur · 1758–1806</span>
+            <p class="figure-card__desc">
+              Commandant militaire qui acheva la révolution et proclama l'indépendance
+              d'Haïti le 1er janvier 1804, devenant le premier chef d'état d'Haïti libre.
+            </p>
+          </div>
+          <div class="figure-card__glow"></div>
+        </a>
+
+        <a href="heroes.html" class="figure-card glass-card">
+          <div class="figure-card__avatar" style="background: linear-gradient(145deg,#002060,#003a9a);">
+            <span class="figure-card__initial">HC</span>
+          </div>
+          <div class="figure-card__body">
+            <h3 class="figure-card__name">Henri Christophe</h3>
+            <span class="figure-card__role">Bâtisseur de Nation · 1767–1820</span>
+            <p class="figure-card__desc">
+              Roi du nord d'Haïti, il fit ériger la Citadelle Laferrière — chef-d'œuvre
+              architectural et symbole de la souveraineté haïtienne, inscrit à l'UNESCO.
+            </p>
+          </div>
+          <div class="figure-card__glow"></div>
+        </a>
+
+        <a href="heroes.html" class="figure-card glass-card">
+          <div class="figure-card__avatar" style="background: linear-gradient(145deg,#1a4020,#247030);">
+            <span class="figure-card__initial">AP</span>
+          </div>
+          <div class="figure-card__body">
+            <h3 class="figure-card__name">Alexandre Pétion</h3>
+            <span class="figure-card__role">Fondateur de la République · 1770–1818</span>
+            <p class="figure-card__desc">
+              Président du Sud d'Haïti, fondateur de la République d'Haïti, il libéra
+              Simón Bolívar et finança la révolution de l'Amérique du Sud.
+            </p>
+          </div>
+          <div class="figure-card__glow"></div>
+        </a>
+
+        <a href="heroes.html" class="figure-card glass-card">
+          <div class="figure-card__avatar" style="background: linear-gradient(145deg,#3a1040,#7a2090);">
+            <span class="figure-card__initial">CF</span>
+          </div>
+          <div class="figure-card__body">
+            <h3 class="figure-card__name">Catherine Flon</h3>
+            <span class="figure-card__role">Héroïne Nationale · 1772–1831</span>
+            <p class="figure-card__desc">
+              Fille adoptive de Dessalines, elle cousit le premier drapeau haïtien à
+              Arcahaie en 1803, arrachant le blanc du drapeau tricolore français.
+            </p>
+          </div>
+          <div class="figure-card__glow"></div>
+        </a>
+
+        <a href="heroes.html" class="figure-card glass-card figure-card--all">
+          <div class="figure-card__avatar figure-card__avatar--all">
+            <svg aria-hidden="true" viewBox="0 0 44 44" width="44" height="44" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="4" x2="22" y2="40"/><path d="M8 12 L22 18 L36 12"/><path d="M8 28 L22 34 L36 28"/></svg>
+          </div>
+          <div class="figure-card__body">
+            <h3 class="figure-card__name">Tous les Héros</h3>
+            <span class="figure-card__role">Héros Nationaux d'Haïti</span>
+            <p class="figure-card__desc">
+              Découvrez tous les héros, révolutionnaires, artistes et pionniers
+              qui ont façonné l'histoire et l'identité d'Haïti.
+            </p>
+          </div>
+          <div class="figure-card__glow"></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       INTERACTIVE TIMELINE
+  ═══════════════════════════════════════════════ -->
+  <section class="section section--alt timeline-section" id="timeline-preview">
+    <div class="container">
+      <p class="section-label text-center">5 000 Ans d'Histoire</p>
+      <h2 class="section-title text-center">Chronologie d'Haïti</h2>
+      <p class="section-subtitle text-center">
+        Des premières civilisations Taïno à la République d'aujourd'hui — les grands
+        moments qui ont forgé une nation unique au monde.
+      </p>
+
+      <div class="timeline-track" role="list">
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-item__dot">
+            <span class="timeline-item__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 14 C5 11 3 8 4 5.5 C5 3 8 2 11.5 4.5 C11 8 9.5 12 8 14Z"/><line x1="8" y1="14" x2="8" y2="6"/></svg>
+            </span>
+          </div>
+          <div class="timeline-item__content glass-card">
+            <div class="timeline-item__year">~3000 av. J.C.</div>
+            <h3 class="timeline-item__title">Civilisation Taïno</h3>
+            <p class="timeline-item__desc">
+              Les Taïno, peuple arawak originaire d'Amérique du Sud, s'établissent
+              sur l'île qu'ils nomment <em>Ayiti</em> — « Terre des hautes montagnes ».
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-item__dot">
+            <span class="timeline-item__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="6"/><line x1="8" y1="2" x2="8" y2="14"/><line x1="2" y1="8" x2="14" y2="8"/><circle cx="8" cy="8" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </span>
+          </div>
+          <div class="timeline-item__content glass-card">
+            <div class="timeline-item__year">1492</div>
+            <h3 class="timeline-item__title">Arrivée de Christophe Colomb</h3>
+            <p class="timeline-item__desc">
+              Colomb débarque le 5 décembre 1492, renommant l'île Hispaniola. La
+              colonisation espagnole décime la population Taïno en quelques décennies.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-item__dot">
+            <span class="timeline-item__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="1" y="6" width="5" height="4" rx="2"/><rect x="10" y="6" width="5" height="4" rx="2"/><line x1="6" y1="8" x2="10" y2="8" stroke-dasharray="1.5,1.5"/></svg>
+            </span>
+          </div>
+          <div class="timeline-item__content glass-card">
+            <div class="timeline-item__year">1625–1789</div>
+            <h3 class="timeline-item__title">Saint-Domingue Française</h3>
+            <p class="timeline-item__desc">
+              La France colonise l'ouest de l'île. Saint-Domingue devient la colonie
+              la plus profitable du monde grâce au travail forcé de 500 000 esclaves africains.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item timeline-item--highlight" role="listitem">
+          <div class="timeline-item__dot">
+            <span class="timeline-item__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1 C7 4 5 6 5 9 C5 12 6.5 14.5 8 15 C9.5 14.5 11 12 11 9 C11 7 10 5 9 3 C9 5 8.5 6.5 8 7.5 C7.5 6 8 4 8 1Z"/></svg>
+            </span>
+          </div>
+          <div class="timeline-item__content glass-card">
+            <div class="timeline-item__year">1791</div>
+            <h3 class="timeline-item__title">Cérémonie de Bois Caïman</h3>
+            <p class="timeline-item__desc">
+              La nuit du 14 août 1791, Boukman et Cécile Fatiman lancent le signal de
+              la plus grande révolte d'esclaves de l'histoire — la Révolution haïtienne est née.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item timeline-item--highlight timeline-item--gold" role="listitem">
+          <div class="timeline-item__dot">
+            <span class="timeline-item__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><polygon points="8,1 10.2,6.2 15.5,6.2 11.2,9.8 12.7,15.5 8,12.2 3.3,15.5 4.8,9.8 0.5,6.2 5.8,6.2"/></svg>
+            </span>
+          </div>
+          <div class="timeline-item__content glass-card">
+            <div class="timeline-item__year">1 Janvier 1804</div>
+            <h3 class="timeline-item__title">Indépendance d'Haïti</h3>
+            <p class="timeline-item__desc">
+              Jean-Jacques Dessalines proclame l'indépendance à Gonaïves. Haïti devient
+              la première République noire libre du monde — un événement sans précédent dans l'histoire de l'humanité.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-item__dot">
+            <span class="timeline-item__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><rect x="3" y="7" width="10" height="8"/><rect x="2" y="4" width="2" height="4"/><rect x="7" y="4" width="2" height="4"/><rect x="12" y="4" width="2" height="4"/><rect x="6" y="11" width="4" height="4"/></svg>
+            </span>
+          </div>
+          <div class="timeline-item__content glass-card">
+            <div class="timeline-item__year">1804–1820</div>
+            <h3 class="timeline-item__title">Construction de la Citadelle</h3>
+            <p class="timeline-item__desc">
+              Le roi Henri Christophe fait ériger la Citadelle Laferrière — forteresse
+              monumentale symbole de la souveraineté et de la fierté haïtiennes.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-item__dot">
+            <span class="timeline-item__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><ellipse cx="8" cy="8" rx="3" ry="6"/><line x1="2" y1="8" x2="14" y2="8"/></svg>
+            </span>
+          </div>
+          <div class="timeline-item__content glass-card">
+            <div class="timeline-item__year">1915–1934</div>
+            <h3 class="timeline-item__title">Occupation Américaine</h3>
+            <p class="timeline-item__desc">
+              Les États-Unis occupent Haïti pendant 19 ans, laissant des cicatrices
+              profondes dans la souveraineté et l'économie haïtienne.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-item__dot">
+            <span class="timeline-item__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M1 9 C1 6.5 4 5 7 5 L12 5 C14 5 15 6 15 7.5 C15 9 14 10 12 10 L10 10 L14 15 L8 11 L7 11 C4 11 1 11.5 1 9Z"/></svg>
+            </span>
+          </div>
+          <div class="timeline-item__content glass-card">
+            <div class="timeline-item__year">1986</div>
+            <h3 class="timeline-item__title">Chute de la Dictature</h3>
+            <p class="timeline-item__desc">
+              Jean-Claude Duvalier (Baby Doc) est renversé après 29 ans de dictature
+              Duvaliériste. Haïti s'engage sur le chemin de la démocratie.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-item__dot">
+            <span class="timeline-item__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2 L15 14 L1 14 Z"/><line x1="8" y1="7" x2="8" y2="10"/><circle cx="8" cy="12.5" r="0.6" fill="currentColor" stroke="none"/></svg>
+            </span>
+          </div>
+          <div class="timeline-item__content glass-card">
+            <div class="timeline-item__year">12 Janvier 2010</div>
+            <h3 class="timeline-item__title">Séisme Dévastateur</h3>
+            <p class="timeline-item__desc">
+              Un séisme de magnitude 7,0 dévaste Port-au-Prince et ses environs,
+              faisant plus de 300 000 victimes. La solidarité mondiale se manifeste.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-item__dot">
+            <span class="timeline-item__icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="3" fill="currentColor" stroke="none"/><line x1="8" y1="1" x2="8" y2="3"/><line x1="8" y1="13" x2="8" y2="15"/><line x1="1" y1="8" x2="3" y2="8"/><line x1="13" y1="8" x2="15" y2="8"/><line x1="3.2" y1="3.2" x2="4.6" y2="4.6"/><line x1="11.4" y1="11.4" x2="12.8" y2="12.8"/><line x1="12.8" y1="3.2" x2="11.4" y2="4.6"/><line x1="4.6" y1="11.4" x2="3.2" y2="12.8"/></svg>
+            </span>
+          </div>
+          <div class="timeline-item__content glass-card">
+            <div class="timeline-item__year">Aujourd'hui</div>
+            <h3 class="timeline-item__title">Haïti Demain</h3>
+            <p class="timeline-item__desc">
+              Malgré les défis, le peuple haïtien continue de bâtir son avenir avec
+              résilience, créativité et fierté. La première République noire du monde persiste.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center" style="margin-top:52px;">
+        <a href="timeline.html" class="btn btn-outline-dark">Voir la Chronologie Complète →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       MEMORY WALL
+  ═══════════════════════════════════════════════ -->
+  <section class="section section--dark memory-wall" id="memory">
+    <div class="container">
+      <p class="section-label text-center" style="color:var(--gold-light);">Mémoire Collective</p>
+      <h2 class="section-title text-center" style="color:#fff;">Mur de Mémoire</h2>
+      <p class="section-subtitle text-center" style="color:rgba(255,255,255,0.60);">
+        Les événements qui ont marqué l'âme haïtienne — douleurs et triomphes gravés
+        dans la mémoire collective d'un peuple extraordinaire.
+      </p>
+
+      <div class="memory-grid">
+
+        <div class="memory-card memory-card--triumph">
+          <div class="memory-card__year">1791</div>
+          <div class="memory-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="currentColor"><path d="M22 4 C20 10 16 14 16 20 C16 26 19 31 22 33 C25 31 28 26 28 20 C28 16 26 12 24 8 C24 12 23 15 22 17 C21 14 22 10 22 4Z"/></svg>
+          </div>
+          <h3 class="memory-card__title">Révolte des Esclaves</h3>
+          <p class="memory-card__desc">
+            La nuit de Bois Caïman : Boukman lance la plus grande révolte d'esclaves
+            de l'histoire. Une flamme qui illumina le monde entier.
+          </p>
+          <div class="memory-card__glow"></div>
+        </div>
+
+        <div class="memory-card memory-card--triumph memory-card--gold">
+          <div class="memory-card__year">1804</div>
+          <div class="memory-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="currentColor"><polygon points="22,4 27,17 41,17 30,26 34,39 22,31 10,39 14,26 3,17 17,17"/></svg>
+          </div>
+          <h3 class="memory-card__title">Indépendance</h3>
+          <p class="memory-card__desc">
+            Le 1er janvier 1804, Haïti devient la première République noire libre
+            du monde — un défi au système esclavagiste mondial.
+          </p>
+          <div class="memory-card__glow"></div>
+        </div>
+
+        <div class="memory-card">
+          <div class="memory-card__year">1825</div>
+          <div class="memory-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="22" cy="22" r="14"/><line x1="22" y1="10" x2="22" y2="12"/><line x1="22" y1="32" x2="22" y2="34"/><path d="M17 16 C17 14 19 13 22 13 C25 13 27 14 27 16 C27 18 25 19 22 20 C19 21 17 22 17 24 C17 26 19 27 22 27 C25 27 27 26 27 24"/></svg>
+          </div>
+          <h3 class="memory-card__title">La Dette de l'Indépendance</h3>
+          <p class="memory-card__desc">
+            La France exige 150 millions de francs-or en échange de la reconnaissance
+            d'Haïti — une dette coloniale que le pays mettra 122 ans à rembourser.
+          </p>
+          <div class="memory-card__glow"></div>
+        </div>
+
+        <div class="memory-card">
+          <div class="memory-card__year">1915–1934</div>
+          <div class="memory-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="22" cy="22" r="16"/><ellipse cx="22" cy="22" rx="8" ry="16"/><line x1="6" y1="22" x2="38" y2="22"/><path d="M9 13 Q22 18 35 13"/><path d="M9 31 Q22 26 35 31"/></svg>
+          </div>
+          <h3 class="memory-card__title">Occupation Américaine</h3>
+          <p class="memory-card__desc">
+            19 ans d'occupation militaire américaine qui laissent des traces profondes
+            dans la souveraineté et l'économie haïtiennes.
+          </p>
+          <div class="memory-card__glow"></div>
+        </div>
+
+        <div class="memory-card">
+          <div class="memory-card__year">1957–1986</div>
+          <div class="memory-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="16" width="14" height="12" rx="5"/><rect x="26" y="16" width="14" height="12" rx="5"/><line x1="18" y1="22" x2="26" y2="22"/></svg>
+          </div>
+          <h3 class="memory-card__title">Ère Duvaliériste</h3>
+          <p class="memory-card__desc">
+            29 ans de dictature familiale sous Papa Doc puis Baby Doc. Les Tontons
+            Macoutes sèment la terreur. Exil de milliers d'Haïtiens.
+          </p>
+          <div class="memory-card__glow"></div>
+        </div>
+
+        <div class="memory-card memory-card--triumph">
+          <div class="memory-card__year">1986</div>
+          <div class="memory-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="currentColor"><path d="M4 22 C4 16 10 12 16 12 L28 12 C32 12 36 14 36 18 C36 22 32 25 28 25 L22 25 L32 38 L18 27 L16 27 C10 27 4 28 4 22Z"/></svg>
+          </div>
+          <h3 class="memory-card__title">Fin de la Dictature</h3>
+          <p class="memory-card__desc">
+            Le peuple haïtien se soulève et force Duvalier à l'exil. Haïti s'engage
+            sur le chemin de la démocratie et de la liberté retrouvée.
+          </p>
+          <div class="memory-card__glow"></div>
+        </div>
+
+        <div class="memory-card">
+          <div class="memory-card__year">12 jan. 2010</div>
+          <div class="memory-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4 L40 38 L4 38 Z"/><line x1="22" y1="16" x2="22" y2="26"/><circle cx="22" cy="32" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <h3 class="memory-card__title">Séisme de 2010</h3>
+          <p class="memory-card__desc">
+            Un séisme de magnitude 7,0 ravage Port-au-Prince. Plus de 300 000 morts,
+            1,5 million de déplacés. La solidarité mondiale se manifeste.
+          </p>
+          <div class="memory-card__glow"></div>
+        </div>
+
+        <div class="memory-card memory-card--triumph">
+          <div class="memory-card__year">Toujours</div>
+          <div class="memory-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="22" cy="22" r="8" fill="currentColor" stroke="none"/><line x1="22" y1="4" x2="22" y2="8"/><line x1="22" y1="36" x2="22" y2="40"/><line x1="4" y1="22" x2="8" y2="22"/><line x1="36" y1="22" x2="40" y2="22"/><line x1="8.8" y1="8.8" x2="11.6" y2="11.6"/><line x1="32.4" y1="32.4" x2="35.2" y2="35.2"/><line x1="35.2" y1="8.8" x2="32.4" y2="11.6"/><line x1="11.6" y1="32.4" x2="8.8" y2="35.2"/></svg>
+          </div>
+          <h3 class="memory-card__title">Résilience Haïtienne</h3>
+          <p class="memory-card__desc">
+            À chaque épreuve, le peuple haïtien se relève. Cette résilience
+            extraordinaire est l'essence même de l'identité haïtienne.
+          </p>
+          <div class="memory-card__glow"></div>
+        </div>
+
+      </div>
+
+      <div class="text-center" style="margin-top:52px;">
+        <a href="history.html" class="btn btn-outline-gold">Explorer l'Histoire Complète →</a>
       </div>
     </div>
   </section>
@@ -624,8 +1096,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-brand__logo">
-            <span class="logo-emoji-flag">🇭🇹</span>
-            Haïti 🇭🇹
+            République d'Haïti
           </div>
           <p>
             Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
@@ -677,12 +1148,13 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 R&eacute;publiqueHa&iuml;ti.org &mdash; Tous droits r&eacute;serv&eacute;s.</span>
-        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 🇭🇹</span>
+        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357</span>
         <span>Portail d&rsquo;information et de connaissance sur Ha&iuml;ti</span>
       </div>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
 </body>
 </html>

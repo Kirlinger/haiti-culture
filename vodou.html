@@ -5,20 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#00209F" />
-  <title>Vodou Haïtien, Religion, Origines &amp; Spiritualité | 🇭🇹 Haïti 🇭🇹</title>
+  <title>Vodou Haïtien, Religion, Origines &amp; Spiritualité | </title>
   <meta name="description" content="Découvrez le Vodou haïtien : ses origines africaines, le Bondye créateur, les nations Rada, Petro, Gede, les cérémonies, les vèvè et le rôle des Houngan et Mambo." />
   <meta name="author" content="RépubliqueHaïti.org" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+    <!-- HEADER -->
   <header class="site-header">
     <div class="container">
       <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
-          <span class="logo-emoji-flag">🇭🇹</span>
-          Haïti 🇭🇹
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
         </a>
         <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -37,7 +43,6 @@
               <a href="institutions.html">Institutions</a>
             </div>
           </div>
-          <a href="geographie.html">Géographie</a>
           <div class="nav-dropdown">
             <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
             <div class="nav-dropdown__menu">
@@ -105,7 +110,7 @@
   <!-- PAGE HERO -->
   <section class="page-hero page-hero--vodou">
     <div class="container">
-      <p class="page-hero__label">🕯️ Religion &amp; Spiritualité</p>
+      <p class="page-hero__label"> Religion &amp; Spiritualité</p>
       <h1 class="page-hero__title">Le Vodou Haïtien</h1>
       <p class="page-hero__desc">
         Né en Afrique de l'Ouest, forgé dans les souffrances de l'esclavage et transformé en acte
@@ -181,7 +186,6 @@
 
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="feature-card__icon">🌍</div>
           <h3 class="feature-card__title">La Tradition Fon &amp; Ewe (Dahomey)</h3>
           <p class="feature-card__desc">
             Le nom même « Vodou » (ou « Vodu ») vient de la langue Fon et signifie « esprit » ou
@@ -195,7 +199,6 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-card__icon">🌿</div>
           <h3 class="feature-card__title">La Tradition Yoruba (Nigeria)</h3>
           <p class="feature-card__desc">
             Les Yoruba du Nigeria et du Bénin possédaient un panthéon élaboré d'Orishas, des
@@ -208,7 +211,6 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-card__icon">🌊</div>
           <h3 class="feature-card__title">La Tradition Kongo (Afrique Centrale)</h3>
           <p class="feature-card__desc">
             Les peuples BaKongo de l'actuelle République Démocratique du Congo, du Congo et de
@@ -222,7 +224,6 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-card__icon">⚡</div>
           <h3 class="feature-card__title">Saint-Domingue : Le Creuset Colonial</h3>
           <p class="feature-card__desc">
             À Saint-Domingue (Haïti coloniale), les Africains de nations différentes furent
@@ -236,7 +237,6 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-card__icon">🔥</div>
           <h3 class="feature-card__title">Bwa Kayiman, L'Étincelle de la Révolution</h3>
           <p class="feature-card__desc">
             Le 14 août 1791, dans la forêt de Bois Caïman, une cérémonie Vodou dirigée par le
@@ -249,7 +249,6 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-card__icon">⛪</div>
           <h3 class="feature-card__title">Syncrétisme Catholique</h3>
           <p class="feature-card__desc">
             Sous l'esclavage, les Africains furent forcés de se convertir au catholicisme.
@@ -321,7 +320,6 @@
 
         <div class="nation-card nation-card--rada">
           <div class="nation-card__header">
-            <div class="nation-card__icon">🤍</div>
             <h3 class="nation-card__title">Nation Rada</h3>
             <span class="nation-card__badge">Douce &amp; Bienveillante</span>
           </div>
@@ -351,7 +349,6 @@
 
         <div class="nation-card nation-card--petro">
           <div class="nation-card__header">
-            <div class="nation-card__icon">🔴</div>
             <h3 class="nation-card__title">Nation Petro</h3>
             <span class="nation-card__badge">Puissante &amp; Ardente</span>
           </div>
@@ -380,7 +377,6 @@
 
         <div class="nation-card nation-card--gede">
           <div class="nation-card__header">
-            <div class="nation-card__icon">🖤</div>
             <h3 class="nation-card__title">Nation Gede</h3>
             <span class="nation-card__badge">La Mort &amp; La Vie</span>
           </div>
@@ -410,7 +406,6 @@
 
         <div class="nation-card nation-card--nago">
           <div class="nation-card__header">
-            <div class="nation-card__icon">⚔️</div>
             <h3 class="nation-card__title">Nation Nago</h3>
             <span class="nation-card__badge">Guerrière &amp; Noble</span>
           </div>
@@ -433,7 +428,6 @@
 
         <div class="nation-card nation-card--ibo">
           <div class="nation-card__header">
-            <div class="nation-card__icon">🌾</div>
             <h3 class="nation-card__title">Nation Ibo</h3>
             <span class="nation-card__badge">Mystérieuse &amp; Ancienne</span>
           </div>
@@ -456,7 +450,6 @@
 
         <div class="nation-card nation-card--kongo">
           <div class="nation-card__header">
-            <div class="nation-card__icon">🌀</div>
             <h3 class="nation-card__title">Nation Kongo</h3>
             <span class="nation-card__badge">Eau &amp; Transformation</span>
           </div>
@@ -651,7 +644,6 @@
       <div class="feature-grid">
 
         <div class="feature-card">
-          <div class="feature-card__icon">🥁</div>
           <h3 class="feature-card__title">Les Tambours Rada</h3>
           <p class="feature-card__desc">
             La nation Rada utilise trois tambours sacrés : le <strong>Manman</strong> (la mère,
@@ -664,7 +656,6 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-card__icon">🔥</div>
           <h3 class="feature-card__title">Les Tambours Petro</h3>
           <p class="feature-card__desc">
             La nation Petro utilise des tambours différents, notamment le <strong>Kata</strong>
@@ -676,7 +667,6 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-card__icon">🎶</div>
           <h3 class="feature-card__title">Les Chants Sacrés (Cantiques)</h3>
           <p class="feature-card__desc">
             Chaque Lwa possède des chants (cantiques) qui lui sont dédiés, chantés en créole
@@ -688,7 +678,6 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-card__icon">💃</div>
           <h3 class="feature-card__title">La Danse Rituelle</h3>
           <p class="feature-card__desc">
             La danse est inséparable des cérémonies Vodou. Chaque Lwa a ses mouvements
@@ -701,7 +690,6 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-card__icon">🎺</div>
           <h3 class="feature-card__title">Les Instruments Sacrés</h3>
           <p class="feature-card__desc">
             Outre les tambours, d'autres instruments jouent un rôle central : l'<strong>Ason</strong>
@@ -714,7 +702,6 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-card__icon">🌟</div>
           <h3 class="feature-card__title">Le Rara, Musique des Rues</h3>
           <p class="feature-card__desc">
             Le Rara est la manifestation musicale publique du Vodou, se déroulant
@@ -827,61 +814,51 @@
 
       <div class="lwa-preview-grid">
         <a href="lwa.html#legba" class="lwa-preview-card">
-          <div class="lwa-preview-card__icon">🔑</div>
           <h3>Papa Legba</h3>
           <p>Gardien des carrefours, ouvreur des portes</p>
           <span class="lwa-preview-card__nation">Rada</span>
         </a>
         <a href="lwa.html#damballah" class="lwa-preview-card">
-          <div class="lwa-preview-card__icon">🐍</div>
           <h3>Damballah</h3>
           <p>Serpent céleste, père de tous les Lwa</p>
           <span class="lwa-preview-card__nation">Rada</span>
         </a>
         <a href="lwa.html#ayida" class="lwa-preview-card">
-          <div class="lwa-preview-card__icon">🌈</div>
           <h3>Ayida Wedo</h3>
           <p>Arc-en-ciel céleste, épouse de Damballah</p>
           <span class="lwa-preview-card__nation">Rada</span>
         </a>
         <a href="lwa.html#ogou" class="lwa-preview-card">
-          <div class="lwa-preview-card__icon">⚔️</div>
           <h3>Ogou</h3>
           <p>Dieu de la guerre, du fer et des soldats</p>
           <span class="lwa-preview-card__nation lwa-preview-card__nation--petro">Nago/Petro</span>
         </a>
         <a href="lwa.html#erzulie-freda" class="lwa-preview-card">
-          <div class="lwa-preview-card__icon">💗</div>
           <h3>Erzulie Freda</h3>
           <p>Déesse de l'amour, de la beauté et du luxe</p>
           <span class="lwa-preview-card__nation">Rada</span>
         </a>
         <a href="lwa.html#erzulie-dantor" class="lwa-preview-card">
-          <div class="lwa-preview-card__icon">🗡️</div>
           <h3>Erzulie Dantor</h3>
           <p>Mère guerrière et protectrice des enfants</p>
           <span class="lwa-preview-card__nation lwa-preview-card__nation--petro">Petro</span>
         </a>
         <a href="lwa.html#baron" class="lwa-preview-card">
-          <div class="lwa-preview-card__icon">🎩</div>
           <h3>Baron Samedi</h3>
           <p>Maître de la mort, gardien des cimetières</p>
           <span class="lwa-preview-card__nation lwa-preview-card__nation--gede">Gede</span>
         </a>
         <a href="lwa.html#gran-brigitte" class="lwa-preview-card">
-          <div class="lwa-preview-card__icon">🌑</div>
           <h3>Gran Brigitte</h3>
           <p>Épouse de Baron, gardienne des ossements</p>
           <span class="lwa-preview-card__nation lwa-preview-card__nation--gede">Gede</span>
         </a>
         <a href="lwa.html#azaka" class="lwa-preview-card">
-          <div class="lwa-preview-card__icon">🌾</div>
           <h3>Azaka</h3>
           <p>Dieu de l'agriculture et des paysans</p>
           <span class="lwa-preview-card__nation">Rada</span>
         </a>
         <a href="lwa.html#agwe" class="lwa-preview-card">
-          <div class="lwa-preview-card__icon">⚓</div>
           <h3>Agwe</h3>
           <p>Roi de la mer, protecteur des marins</p>
           <span class="lwa-preview-card__nation">Rada</span>
@@ -928,8 +905,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-brand__logo">
-            <span class="logo-emoji-flag">🇭🇹</span>
-            Haïti 🇭🇹
+            République d'Haïti
           </div>
           <p>
             Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
@@ -981,12 +957,13 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 R&eacute;publiqueHa&iuml;ti.org &mdash; Tous droits r&eacute;serv&eacute;s.</span>
-        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 🇭🇹</span>
+        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 </span>
         <span>Portail d&rsquo;information et de connaissance sur Ha&iuml;ti</span>
       </div>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#00209F" />
-  <title>Histoire d'Haïti, Des Taïnos à Aujourd'hui | 🇭🇹 Haïti 🇭🇹</title>
+  <title>Histoire d'Haïti, Des Taïnos à Aujourd'hui | République d'Haïti</title>
   <meta name="description" content="Explorez la remarquable et complète histoire d'Haïti : de la civilisation taïno à la Révolution de 1804, des Duvalier aux crises contemporaines jusqu'en 2025." />
   <meta name="author" content="RépubliqueHaïti.org" />
   <meta property="og:type" content="website" />
@@ -16,16 +16,22 @@
   <meta property="og:locale" content="fr_HT" />
   <link rel="canonical" href="https://republiquehaiti.org/history.html" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+    <!-- HEADER -->
   <header class="site-header">
     <div class="container">
       <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
-          <span class="logo-emoji-flag">🇭🇹</span>
-          Haïti 🇭🇹
+        <a href="index.html" class="navbar__logo" aria-label="République d'Haïti - Accueil">
+          République d'Haïti
         </a>
         <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -44,7 +50,6 @@
               <a href="institutions.html">Institutions</a>
             </div>
           </div>
-          <a href="geographie.html">Géographie</a>
           <div class="nav-dropdown">
             <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
             <div class="nav-dropdown__menu">
@@ -112,7 +117,7 @@
   <!-- PAGE HERO -->
   <section class="page-hero page-hero--history">
     <div class="container">
-      <p class="page-hero__label">⚔️ Patrimoine</p>
+      <p class="page-hero__label">Patrimoine</p>
       <h1 class="page-hero__title">L'Histoire d'Haïti</h1>
       <p class="page-hero__desc">
         Du paradis taïno à la première République noire du monde, des révolutions
@@ -366,7 +371,7 @@
         <div class="timeline-item">
           <div class="timeline-card">
             <p class="timeline-card__year">1er janvier 1804</p>
-            <h3 class="timeline-card__title" id="independence">Indépendance Déclarée ! 🇭🇹</h3>
+            <h3 class="timeline-card__title" id="independence">Indépendance Déclarée</h3>
             <p class="timeline-card__desc">
               À Gonaïves, Jean-Jacques Dessalines proclama solennellement l'indépendance
               d'Haïti, restaurant l'ancien nom taïno de l'île. Haïti devint ainsi la première
@@ -937,8 +942,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-brand__logo">
-            <span class="logo-emoji-flag">🇭🇹</span>
-            Haïti 🇭🇹
+            République d'Haïti
           </div>
           <p>
             Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
@@ -990,12 +994,13 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 R&eacute;publiqueHa&iuml;ti.org &mdash; Tous droits r&eacute;serv&eacute;s.</span>
-        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 🇭🇹</span>
+        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357</span>
         <span>Portail d&rsquo;information et de connaissance sur Ha&iuml;ti</span>
       </div>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
 </body>
 </html>

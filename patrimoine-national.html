@@ -5,18 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#00209F" />
-  <title>Patrimoine National d'Haïti | 🇭🇹 Haïti 🇭🇹</title>
+  <title>Patrimoine National d'Haïti | </title>
   <meta name="author" content="RépubliqueHaïti.org" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
 </head>
 <body>
 
-  <header class="site-header">
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+    <header class="site-header">
     <div class="container">
       <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
-          <span class="logo-emoji-flag">🇭🇹</span>
-          Haïti 🇭🇹
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
         </a>
         <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -35,7 +41,6 @@
               <a href="institutions.html">Institutions</a>
             </div>
           </div>
-          <a href="geographie.html">Géographie</a>
           <div class="nav-dropdown">
             <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
             <div class="nav-dropdown__menu">
@@ -101,7 +106,7 @@
 
   <section class="page-hero page-hero--about">
     <div class="container">
-      <p class="page-hero__label">🏛️ Patrimoine</p>
+      <p class="page-hero__label"> Patrimoine</p>
       <h1 class="page-hero__title">Valorisation du Patrimoine National</h1>
       <p class="page-hero__desc">Les richesses culturelles, historiques et naturelles d'Haïti, un héritage précieux pour les générations futures.</p>
     </div>
@@ -122,32 +127,26 @@
       <div class="feature-grid">
 
         <div class="feature-card">
-          <div class="feature-card__icon">🏰</div>
           <h3 class="feature-card__title">Citadelle Laferrière</h3>
           <p class="feature-card__desc">Forteresse monumentale construite après l'indépendance, classée au patrimoine mondial de l'UNESCO.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🏛️</div>
           <h3 class="feature-card__title">Palais Sans-Souci</h3>
           <p class="feature-card__desc">Résidence royale du roi Henri Christophe, symbole de la grandeur d'Haïti après l'indépendance.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🌄</div>
           <h3 class="feature-card__title">Parcs Naturels</h3>
           <p class="feature-card__desc">Le Parc National Pic Macaya et d'autres espaces protégés abritent une biodiversité unique aux Caraïbes.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🍲</div>
           <h3 class="feature-card__title">Soup Joumou UNESCO</h3>
           <p class="feature-card__desc">La soupe du 1er janvier, inscrite au patrimoine culturel immatériel de l'UNESCO en 2021.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🥁</div>
           <h3 class="feature-card__title">Musique Traditionnelle</h3>
           <p class="feature-card__desc">Le Rara et les cérémonies Vodou représentent un patrimoine sonore vivant et protégé.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🎨</div>
           <h3 class="feature-card__title">Art Patrimonial</h3>
           <p class="feature-card__desc">Les peintures du Centre d'Art de Port-au-Prince et les fresques des cathédrales sont des trésors culturels.</p>
         </div>
@@ -162,32 +161,26 @@
       <p class="section-subtitle text-center">Haïti possède un patrimoine culturel et naturel exceptionnel qui mérite d'être connu, protégé et valorisé, tant pour les Haïtiens que pour le monde entier.</p>
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="feature-card__icon">🏰</div>
           <h3 class="feature-card__title">Patrimoine UNESCO</h3>
           <p class="feature-card__desc">La Citadelle Laferrière, le Palais Sans-Souci et les Ramiers forment le Parc National Historique, classé au patrimoine mondial de l'UNESCO depuis 1982.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🎨</div>
           <h3 class="feature-card__title">Art et Culture</h3>
           <p class="feature-card__desc">La peinture naïve haïtienne, les sculptures en métal, la musique vodou et la littérature créole constituent un patrimoine artistique d'une richesse extraordinaire.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🌿</div>
           <h3 class="feature-card__title">Patrimoine Naturel</h3>
           <p class="feature-card__desc">Les massifs montagneux, les zones côtières et la biodiversité haïtienne, malgré la déforestation, représentent un patrimoine naturel qui mérite protection et restauration.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">📜</div>
           <h3 class="feature-card__title">Archives Historiques</h3>
           <p class="feature-card__desc">Les documents fondateurs de la République, les archives coloniales et révolutionnaires constituent une mémoire irremplaçable pour comprendre l'histoire haïtienne et mondiale.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🥘</div>
           <h3 class="feature-card__title">Patrimoine Culinaire</h3>
           <p class="feature-card__desc">La cuisine haïtienne, notamment la Soup Joumou reconnue par l'UNESCO, est un patrimoine culturel immatériel qui raconte l'histoire de l'indépendance et de la liberté.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🥁</div>
           <h3 class="feature-card__title">Traditions Vivantes</h3>
           <p class="feature-card__desc">Le Vodou, le Rara, le Carnaval et les traditions orales sont des patrimoines vivants qui continuent d'être pratiqués et transmis de génération en génération.</p>
         </div>
@@ -200,8 +193,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-brand__logo">
-            <span class="logo-emoji-flag">🇭🇹</span>
-            Haïti 🇭🇹
+            République d'Haïti
           </div>
           <p>
             Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
@@ -253,12 +245,13 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 R&eacute;publiqueHa&iuml;ti.org &mdash; Tous droits r&eacute;serv&eacute;s.</span>
-        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 🇭🇹</span>
+        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 </span>
         <span>Portail d&rsquo;information et de connaissance sur Ha&iuml;ti</span>
       </div>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
 </body>
 </html>

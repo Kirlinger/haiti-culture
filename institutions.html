@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#00209F" />
-  <title>Institutions d'Haïti : Gouvernement et Structure Politique | 🇭🇹 Haïti 🇭🇹</title>
+  <title>Institutions d'Haïti : Gouvernement et Structure Politique | </title>
   <meta name="description" content="Découvrez les institutions politiques d'Haïti : pouvoir exécutif, législatif et judiciaire, constitution de 1987, organisation de l'État et structure gouvernementale." />
   <meta name="author" content="RépubliqueHaïti.org" />
   <meta property="og:type" content="website" />
@@ -16,16 +16,22 @@
   <meta property="og:locale" content="fr_HT" />
   <link rel="canonical" href="https://republiquehaiti.org/institutions.html" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+    <!-- HEADER -->
   <header class="site-header">
     <div class="container">
       <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
-          <span class="logo-emoji-flag">🇭🇹</span>
-          Haïti 🇭🇹
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
         </a>
         <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -44,7 +50,6 @@
               <a href="institutions.html">Institutions</a>
             </div>
           </div>
-          <a href="geographie.html">Géographie</a>
           <div class="nav-dropdown">
             <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
             <div class="nav-dropdown__menu">
@@ -112,7 +117,7 @@
   <!-- PAGE HERO -->
   <section class="page-hero page-hero--history">
     <div class="container">
-      <p class="page-hero__label">🏛️ Gouvernance</p>
+      <p class="page-hero__label">Gouvernance</p>
       <h1 class="page-hero__title">Les Institutions d'Haïti</h1>
       <p class="page-hero__desc">
         La structure politique et gouvernementale de la République d'Haïti : pouvoirs exécutif,
@@ -159,7 +164,6 @@
       </p>
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="feature-card__icon">👤</div>
           <h3 class="feature-card__title">Pouvoir Exécutif</h3>
           <p class="feature-card__desc">
             Le pouvoir exécutif est exercé par le Président de la République, élu au suffrage
@@ -169,7 +173,6 @@
           </p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🏛️</div>
           <h3 class="feature-card__title">Pouvoir Législatif</h3>
           <p class="feature-card__desc">
             Le Parlement haïtien est bicaméral : il est composé du Sénat (30 sénateurs élus
@@ -179,7 +182,6 @@
           </p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">⚖️</div>
           <h3 class="feature-card__title">Pouvoir Judiciaire</h3>
           <p class="feature-card__desc">
             Le pouvoir judiciaire est indépendant de l'exécutif et du législatif. La Cour de
@@ -358,7 +360,6 @@
       </p>
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="feature-card__icon">🗳️</div>
           <h3 class="feature-card__title">Conseil Électoral Provisoire (CEP)</h3>
           <p class="feature-card__desc">
             Organisme chargé de l'organisation et de la supervision des élections en Haïti.
@@ -368,7 +369,6 @@
           </p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🏦</div>
           <h3 class="feature-card__title">Banque de la République d'Haïti (BRH)</h3>
           <p class="feature-card__desc">
             Banque centrale de la République d'Haïti, la BRH est chargée de la politique
@@ -378,7 +378,6 @@
           </p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🔍</div>
           <h3 class="feature-card__title">Cour Supérieure des Comptes (CSC)</h3>
           <p class="feature-card__desc">
             Institution de contrôle financier de l'État, la Cour Supérieure des Comptes et
@@ -387,7 +386,6 @@
           </p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🌍</div>
           <h3 class="feature-card__title">Ministère des Affaires Étrangères</h3>
           <p class="feature-card__desc">
             Responsable de la politique étrangère d'Haïti et des relations diplomatiques
@@ -397,7 +395,6 @@
           </p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🎓</div>
           <h3 class="feature-card__title">Ministère de l'Éducation Nationale</h3>
           <p class="feature-card__desc">
             Le MENFP (Ministère de l'Éducation Nationale et de la Formation Professionnelle)
@@ -407,7 +404,6 @@
           </p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🏥</div>
           <h3 class="feature-card__title">Ministère de la Santé Publique</h3>
           <p class="feature-card__desc">
             Le MSPP (Ministère de la Santé Publique et de la Population) supervise le
@@ -452,8 +448,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-brand__logo">
-            <span class="logo-emoji-flag">🇭🇹</span>
-            Haïti 🇭🇹
+            République d'Haïti
           </div>
           <p>
             Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
@@ -505,12 +500,13 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 R&eacute;publiqueHa&iuml;ti.org &mdash; Tous droits r&eacute;serv&eacute;s.</span>
-        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 🇭🇹</span>
+        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 </span>
         <span>Portail d&rsquo;information et de connaissance sur Ha&iuml;ti</span>
       </div>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
 </body>
 </html>

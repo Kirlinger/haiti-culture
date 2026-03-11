@@ -5,18 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#00209F" />
-  <title>Services Essentiels en Haïti | 🇭🇹 Haïti 🇭🇹</title>
+  <title>Services Essentiels en Haïti | </title>
   <meta name="author" content="RépubliqueHaïti.org" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
 </head>
 <body>
 
-  <header class="site-header">
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+    <header class="site-header">
     <div class="container">
       <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
-          <span class="logo-emoji-flag">🇭🇹</span>
-          Haïti 🇭🇹
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
         </a>
         <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -35,7 +41,6 @@
               <a href="institutions.html">Institutions</a>
             </div>
           </div>
-          <a href="geographie.html">Géographie</a>
           <div class="nav-dropdown">
             <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
             <div class="nav-dropdown__menu">
@@ -101,7 +106,7 @@
 
   <section class="page-hero page-hero--history">
     <div class="container">
-      <p class="page-hero__label">🏥 Services Publics</p>
+      <p class="page-hero__label">Services Publics</p>
       <h1 class="page-hero__title">Services Essentiels en Haïti</h1>
       <p class="page-hero__desc">L'état des services fondamentaux, les défis d'accès et les besoins urgents de la population haïtienne.</p>
     </div>
@@ -122,32 +127,26 @@
       <div class="feature-grid">
 
         <div class="feature-card">
-          <div class="feature-card__icon">💧</div>
           <h3 class="feature-card__title">Eau Potable</h3>
           <p class="feature-card__desc">Seulement une fraction de la population a accès à de l'eau potable sécurisée et régulière.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🏥</div>
           <h3 class="feature-card__title">Santé Précaire</h3>
           <p class="feature-card__desc">Le système de santé manque cruellement de médecins, d'hôpitaux équipés et de médicaments.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">📚</div>
           <h3 class="feature-card__title">Éducation à Deux Vitesses</h3>
           <p class="feature-card__desc">L'enseignement public est sous-financé, forçant les familles à recourir à des écoles privées coûteuses.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">⚡</div>
           <h3 class="feature-card__title">Électricité Insuffisante</h3>
           <p class="feature-card__desc">L'accès à l'électricité reste limité et intermittent pour une majorité des Haïtiens.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🚎</div>
           <h3 class="feature-card__title">Transport Défaillant</h3>
           <p class="feature-card__desc">Le réseau routier dégradé et le manque de transports publics freinent le développement.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🌞</div>
           <h3 class="feature-card__title">Énergie Renouvelable</h3>
           <p class="feature-card__desc">Des projets solaires et hydroélectriques offrent des solutions prometteuses pour électrifier le pays.</p>
         </div>
@@ -162,32 +161,26 @@
       <p class="section-subtitle text-center">En Haïti, l'accès aux services essentiels demeure un défi quotidien pour une grande partie de la population, en particulier dans les zones rurales et les quartiers défavorisés.</p>
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="feature-card__icon">💧</div>
           <h3 class="feature-card__title">Eau Potable</h3>
           <p class="feature-card__desc">L'accès à l'eau potable est insuffisant dans de nombreuses régions. Les populations rurales parcourent souvent de longues distances pour s'approvisionner en eau de qualité douteuse.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">⚡</div>
           <h3 class="feature-card__title">Électricité</h3>
           <p class="feature-card__desc">La couverture électrique reste très limitée. Port-au-Prince ne bénéficie que de quelques heures d'électricité par jour, et les zones rurales sont souvent totalement dépourvues du réseau.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🏥</div>
           <h3 class="feature-card__title">Santé</h3>
           <p class="feature-card__desc">Le système de santé manque de ressources, de personnel qualifié et d'équipements. Les hôpitaux publics sont souvent débordés, et les soins privés restent inabordables pour la majorité.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">📚</div>
           <h3 class="feature-card__title">Éducation</h3>
           <p class="feature-card__desc">Bien que la scolarisation ait progressé, la qualité de l'enseignement et les taux d'abandon restent préoccupants. Les frais de scolarité constituent une barrière pour les familles les plus pauvres.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🚰</div>
           <h3 class="feature-card__title">Assainissement</h3>
           <p class="feature-card__desc">Les infrastructures d'assainissement sont défaillantes dans la plupart des villes. L'absence de systèmes adéquats favorise la propagation de maladies et nuit à la qualité de vie.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🗺️</div>
           <h3 class="feature-card__title">Inégalités Territoriales</h3>
           <p class="feature-card__desc">Les disparités entre la capitale et les provinces sont profondes. Les départements ruraux souffrent d'un manque criant d'investissement public et d'infrastructures de base.</p>
         </div>
@@ -210,8 +203,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-brand__logo">
-            <span class="logo-emoji-flag">🇭🇹</span>
-            Haïti 🇭🇹
+            République d'Haïti
           </div>
           <p>
             Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
@@ -263,12 +255,13 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 R&eacute;publiqueHa&iuml;ti.org &mdash; Tous droits r&eacute;serv&eacute;s.</span>
-        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 🇭🇹</span>
+        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 </span>
         <span>Portail d&rsquo;information et de connaissance sur Ha&iuml;ti</span>
       </div>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
 </body>
 </html>

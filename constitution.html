@@ -5,19 +5,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#00209F" />
-  <title>La Constitution d'Haïti | 🇭🇹 Haïti 🇭🇹</title>
+  <title>La Constitution d'Haïti | </title>
   <meta name="description" content="Découvrez les fondements juridiques et démocratiques qui guident la République d'Haïti." />
   <meta name="author" content="RépubliqueHaïti.org" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
 </head>
 <body>
 
-  <header class="site-header">
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+    <header class="site-header">
     <div class="container">
       <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="🇭🇹 Haïti 🇭🇹 Accueil">
-          <span class="logo-emoji-flag">🇭🇹</span>
-          Haïti 🇭🇹
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
         </a>
         <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -36,7 +42,6 @@
               <a href="institutions.html">Institutions</a>
             </div>
           </div>
-          <a href="geographie.html">Géographie</a>
           <div class="nav-dropdown">
             <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
             <div class="nav-dropdown__menu">
@@ -102,7 +107,7 @@
 
   <section class="page-hero page-hero--history">
     <div class="container">
-      <p class="page-hero__label">⚖️ Droit &amp; République</p>
+      <p class="page-hero__label"> Droit &amp; République</p>
       <h1 class="page-hero__title">La Constitution d'Haïti</h1>
       <p class="page-hero__desc">Découvrez les fondements juridiques et démocratiques qui guident la République d'Haïti.</p>
     </div>
@@ -144,32 +149,26 @@
       <h2 class="section-title text-center">Principes Constitutionnels Fondamentaux</h2>
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="feature-card__icon">🏛️</div>
           <h3 class="feature-card__title">État Républicain et Démocratique</h3>
           <p class="feature-card__desc">Haïti est une république indivisible, souveraine, indépendante, coopératiste, libre, démocratique et sociale.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">⚖️</div>
           <h3 class="feature-card__title">Séparation des Pouvoirs</h3>
           <p class="feature-card__desc">Les pouvoirs exécutif, législatif et judiciaire sont séparés et indépendants les uns des autres, ce qui garantit l'équilibre institutionnel.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🕊️</div>
           <h3 class="feature-card__title">Droits Fondamentaux</h3>
           <p class="feature-card__desc">La Constitution garantit les droits et libertés fondamentaux de chaque citoyen, notamment la liberté d'expression, de religion et d'association.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🤝</div>
           <h3 class="feature-card__title">Pluralisme et Tolérance</h3>
           <p class="feature-card__desc">Le pluralisme politique, culturel et religieux est reconnu et protégé. Aucune discrimination fondée sur la race, le sexe ou la religion n'est permise.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">🗺️</div>
           <h3 class="feature-card__title">Décentralisation</h3>
           <p class="feature-card__desc">La décentralisation administrative et territoriale vise à rapprocher l'État des citoyens et à donner aux collectivités locales les moyens de leur développement.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-card__icon">✊</div>
           <h3 class="feature-card__title">Abolition des Privilèges</h3>
           <p class="feature-card__desc">La Constitution prohibe expressément tout privilège fondé sur la naissance, les titres ou les distinctions héréditaires, affirmant l'égalité de tous devant la loi.</p>
         </div>
@@ -225,8 +224,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-brand__logo">
-            <span class="logo-emoji-flag">🇭🇹</span>
-            Haïti 🇭🇹
+            République d'Haïti
           </div>
           <p>
             Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
@@ -278,12 +276,13 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 R&eacute;publiqueHa&iuml;ti.org &mdash; Tous droits r&eacute;serv&eacute;s.</span>
-        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 🇭🇹</span>
+        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 </span>
         <span>Portail d&rsquo;information et de connaissance sur Ha&iuml;ti</span>
       </div>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
 </body>
 </html>
