@@ -779,6 +779,7 @@ h1, h2, h3, h4 {
 .card__icon-emoji {
   width: 44px;
   height: 44px;
+  font-size: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -903,6 +904,7 @@ h1, h2, h3, h4 {
 .feature-card__icon {
   width: 44px;
   height: 44px;
+  font-size: 0;
   margin-bottom: 18px;
   display: flex;
   align-items: center;
@@ -979,6 +981,7 @@ h1, h2, h3, h4 {
 .enjeu-card__icon {
   width: 36px;
   height: 36px;
+  font-size: 0;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -1754,6 +1757,20 @@ h1, h2, h3, h4 {
 .timeline-item--highlight .timeline-item__icon,
 .timeline-item--gold .timeline-item__icon { color: rgba(255,255,255,0.90); }
 
+/* Ensure SVG icons fill their containers consistently across all icon types */
+.card__icon-emoji svg,
+.feature-card__icon svg,
+.enjeu-card__icon svg,
+.timeline-item__icon svg,
+.memory-card__icon svg,
+.map-info-panel__icon svg,
+.map-info__icon svg,
+.gallery-item__zoom svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .timeline-item__content {
   background: var(--ivory);
   border: 1px solid var(--border);
@@ -2442,6 +2459,7 @@ h1, h2, h3, h4 {
 .memory-card__icon {
   width: 44px;
   height: 44px;
+  font-size: 0;
   margin-bottom: 16px;
   display: flex;
   align-items: center;
