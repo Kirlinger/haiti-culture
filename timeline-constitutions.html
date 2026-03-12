@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Chronologie des Constitutions d'Haïti | République d'Haïti</title>
+  <meta name="description" content="Les grandes étapes constitutionnelles et institutionnelles d'Haïti, de la première Constitution de 1801 à la Constitution démocratique de 1987." />
+  <meta name="author" content="RépubliqueHaïti.org" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+</head>
+<body>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+    <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+              <a href="institutions.html">Institutions</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Société ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture-vivante.html">Culture Vivante</a>
+              <a href="creativite-populaire.html">Créativité Populaire</a>
+              <a href="diaspora-engagee.html">Diaspora Engagée</a>
+              <a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a>
+              <a href="memoire-universelle.html">Mémoire Universelle</a>
+              <a href="patrimoine-national.html">Patrimoine National</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Enjeux ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Fragilité Économique</a>
+              <a href="inegalites-sociales.html">Inégalités Sociales</a>
+              <a href="instabilite-politique.html">Instabilité Politique</a>
+              <a href="pressions-securitaires.html">Pressions Sécuritaires</a>
+              <a href="services-essentiels.html">Services Essentiels</a>
+              <a href="capacite-adaptation.html">Capacité d'Adaptation</a>
+              <a href="reconstruction-durable.html">Reconstruction Durable</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Institutions</p>
+      <h1 class="page-hero__title">Chronologie des Constitutions et Institutions</h1>
+      <p class="page-hero__desc">Les grandes étapes constitutionnelles et institutionnelles d'Haïti, de la première Constitution de 1801 à la Constitution démocratique de 1987.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <a href="history.html">Histoire</a>
+        <span>/</span>
+        <a href="timeline.html">Chronologie</a>
+        <span>/</span>
+        <span>Constitutions &amp; Institutions</span>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container" style="padding-top:1rem;">
+    <a href="timeline.html" class="btn btn-outline" style="font-size:0.9rem;">← Retour à la Chronologie</a>
+  </div>
+
+  <section class="section" id="constitutions">
+    <div class="container">
+      <p class="section-label text-center">1801 – Présent</p>
+      <h2 class="section-title text-center">Les Grandes Constitutions d'Haïti</h2>
+      <p class="section-subtitle text-center">Haïti a eu plus de vingt constitutions au cours de son histoire, reflétant l'instabilité politique chronique mais aussi la permanence d'une aspiration à l'État de droit. Voici les jalons constitutionnels les plus significatifs.</p>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1801 &bull; Saint-Domingue</p>
+            <h3 class="timeline-card__title">Constitution de Toussaint Louverture</h3>
+            <p class="timeline-card__desc">Première constitution de l'île, adoptée par l'Assemblée centrale de Saint-Domingue sous l'autorité de Toussaint Louverture. Elle abolit définitivement l'esclavage sur l'ensemble de l'île et proclame l'égalité de tous les habitants. Toussaint s'y nomme Gouverneur à vie avec pouvoir de désigner son successeur. Bien que formellement sous souveraineté française, cette constitution représente le premier acte d'autonomie constitutionnelle de Saint-Domingue et l'une des premières abolitions légales de l'esclavage dans l'histoire moderne.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">20 mai 1805 &bull; Empire d'Haïti</p>
+            <h3 class="timeline-card__title">Constitution Impériale de Dessalines</h3>
+            <p class="timeline-card__desc">Première constitution de la République d'Haïti indépendante, promulguée par l'Empereur Jacques Ier (Dessalines). Elle proclame que tous les Haïtiens, quelle que soit leur couleur de peau, sont légalement « noirs » — un acte révolutionnaire destiné à effacer les distinctions raciales héritées de l'esclavage. Elle interdit formellement aux Blancs de posséder des terres en Haïti. Cette constitution affirme une souveraineté totale et une identité nationale noire revendiquée avec fierté, en rupture radicale avec l'ordre colonial mondial.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">27 décembre 1806 &bull; République du Sud</p>
+            <h3 class="timeline-card__title">Constitution Républicaine de 1806</h3>
+            <p class="timeline-card__desc">Après l'assassinat de Dessalines, les élites mulâtres et certains généraux noirs du Sud et de l'Ouest adoptent une nouvelle constitution républicaine. Elle instaure un système bicaméral avec un Sénat puissant et un exécutif affaibli, pour éviter tout retour à l'autoritarisme. Alexandre Pétion est élu président. Cette constitution représente une tentative de gouvernement libéral, même si elle perpétue en réalité le pouvoir des élites de couleur au détriment des masses paysannes noires.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1816 &bull; République</p>
+            <h3 class="timeline-card__title">Constitution d'Alexandre Pétion</h3>
+            <p class="timeline-card__desc">Nouvelle constitution libérale adoptée sous la présidence de Pétion, qui établit notamment la présidence à vie pour le président en exercice. Pétion est connu pour sa politique de redistribution des terres aux soldats et anciens esclaves, créant une classe de petits propriétaires ruraux. Cette constitution marque une étape vers une gouvernance plus libérale et sociale dans la partie sud du pays, en contraste avec le régime autoritaire du Royaume du Nord de Christophe.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1843 &bull; République Réunifiée</p>
+            <h3 class="timeline-card__title">Constitution de 1843</h3>
+            <p class="timeline-card__desc">Après la chute du président Boyer (qui avait gouverné 25 ans), une nouvelle constitution libérale est adoptée avec des garanties renforcées des libertés civiles et une limitation des pouvoirs exécutifs. Elle représente une tentative de démocratisation après les longues présidences autoritaires. Cependant, l'instabilité politique qui suit sa promulgation illustre le fossé entre les textes constitutionnels progressistes et la réalité du pouvoir en Haïti.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1849 – 1859 &bull; Second Empire</p>
+            <h3 class="timeline-card__title">Constitution Impériale de Faustin Ier</h3>
+            <p class="timeline-card__desc">En 1849, le général Faustin Soulouque se fait proclamer Empereur Faustin Ier et adopte une nouvelle constitution impériale, instaurant une monarchie héréditaire avec une cour nobiliaire. C'est la dernière tentative de régime monarchique en Haïti. En 1859, une révolte militaire renverse l'Empire et restaure la République, avec l'adoption d'une nouvelle constitution républicaine sous le général Geffrard, rejetant définitivement tout régime monarchique.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1879 &bull; Troisième République</p>
+            <h3 class="timeline-card__title">Constitution de 1879</h3>
+            <p class="timeline-card__desc">Adoptée sous la présidence de Lysius Salomon, la constitution de 1879 tente d'établir des institutions stables. Elle maintient un régime républicain avec un Parlement bicaméral. Cette période de la Troisième République haïtienne est marquée par des luttes politiques entre partis libéraux et nationaux, des coups d'État à répétition et une instabilité chronique qui verra défiler de nombreux présidents en peu d'années.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">1918 &bull; Occupation Américaine</p>
+            <h3 class="timeline-card__title">Constitution de 1918 (Constitution Américaine)</h3>
+            <p class="timeline-card__desc">Imposée pendant l'occupation américaine, cette constitution controversée est notamment rédigée par Franklin D. Roosevelt (alors Secrétaire adjoint à la Marine). Sa disposition la plus contestée autorise les étrangers à posséder des terres en Haïti, renversant l'interdiction fondamentale issue de la Constitution de 1805. Le Parlement haïtien ayant refusé de l'adopter, il est dissous et la constitution est ratifiée par un plébiscite. Elle symbolise la subordination de la souveraineté haïtienne aux intérêts américains.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">1932 – 1935 &bull; Post-Occupation</p>
+            <h3 class="timeline-card__title">Constitutions Post-Occupation</h3>
+            <p class="timeline-card__desc">Dans les années qui suivent le retrait progressif des troupes américaines (complété en 1934), Haïti adopte de nouvelles constitutions en 1932 et 1935. Elles cherchent à restaurer la souveraineté nationale et à renforcer les institutions haïtiennes. La constitution de 1935, sous Sténio Vincent, rétablit notamment l'interdiction pour les étrangers de posséder des terres. Ces textes témoignent de la volonté haïtienne de reconstruire une identité constitutionnelle souveraine après l'occupation.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">1957 – 1964 &bull; Duvalierisme</p>
+            <h3 class="timeline-card__title">Modifications Constitutionnelles Duvalieristes</h3>
+            <p class="timeline-card__desc">François Duvalier, arrivé au pouvoir en 1957, procède à des modifications constitutionnelles successives pour concentrer le pouvoir. En 1964, une nouvelle constitution le proclame officiellement Président à vie, avec le droit de désigner son successeur. Ces changements éliminent tout contre-pouvoir constitutionnel et permettent à Duvalier d'exercer un pouvoir absolu. À sa mort en 1971, son fils Jean-Claude lui succède à 19 ans en vertu de ces dispositions, illustrant la perversion des textes constitutionnels à des fins dynastiques.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--green, #27ae60);">
+            <p class="timeline-card__year">29 mars 1987 &bull; Démocratie</p>
+            <h3 class="timeline-card__title">Constitution Démocratique de 1987</h3>
+            <p class="timeline-card__desc">Adoptée par référendum après la chute de Jean-Claude Duvalier, la Constitution de 1987 est la plus progressiste de l'histoire d'Haïti. Elle établit : la séparation des pouvoirs entre exécutif, législatif et judiciaire ; la limitation du mandat présidentiel à deux mandats non consécutifs de 5 ans ; le créole haïtien comme langue officielle au même titre que le français ; l'interdiction pour tout président de se représenter après son mandat ; la création d'un Conseil Électoral Permanent (CEP) ; et une Charte des droits fondamentaux. Elle demeure la constitution en vigueur, bien que souvent suspendue ou contournée dans les faits.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <p class="timeline-card__year">2011 &bull; Amendements</p>
+            <h3 class="timeline-card__title">Amendements Constitutionnels de 2011</h3>
+            <p class="timeline-card__desc">En 2011, le Parlement haïtien adopte des amendements constitutionnels significatifs, notamment : la reconnaissance de la double nationalité (permettant à des Haïtiens de la diaspora d'accéder à des fonctions publiques), la création d'une Cour constitutionnelle (jamais effectivement mise en place), et diverses modifications institutionnelles. Ces amendements reflètent la volonté de moderniser les institutions, mais leur mise en œuvre demeure partielle en raison de l'instabilité politique persistante.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">2021 &bull; Référendum Contesté</p>
+            <h3 class="timeline-card__title">Projet de Nouvelle Constitution de Moïse</h3>
+            <p class="timeline-card__desc">En 2021, le président Jovenel Moïse propose une nouvelle constitution par voie référendaire, prévoyant un renforcement des pouvoirs présidentiels et des modifications institutionnelles profondes. Le projet est largement contesté par l'opposition, les organisations de la société civile et les milieux juridiques, qui dénoncent une tentative d'augmenter les pouvoirs exécutifs. L'assassinat de Moïse en juillet 2021 met fin à ce projet. La Constitution de 1987 (avec ses amendements de 2011) demeure le texte de référence.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="institutions-cles">
+    <div class="container">
+      <p class="section-label text-center">Institutions</p>
+      <h2 class="section-title text-center">Les Institutions Clés de l'État Haïtien</h2>
+      <p class="section-subtitle text-center">Les principales institutions constitutionnelles qui structurent l'État haïtien depuis 1987.</p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card__body">
+            <span class="card__tag">Exécutif</span>
+            <h3 class="card__title">Présidence de la République</h3>
+            <p class="card__desc">Chef de l'État élu au suffrage universel pour un mandat de 5 ans, non renouvelable consécutivement. Le président nomme le Premier ministre, dirige la politique étrangère et est commandant en chef des Forces armées. La Constitution de 1987 limite strictement les pouvoirs présidentiels pour prévenir tout retour à l'autoritarisme.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__body">
+            <span class="card__tag">Législatif</span>
+            <h3 class="card__title">Parlement (Assemblée Nationale)</h3>
+            <p class="card__desc">Parlement bicaméral composé du Sénat (30 sénateurs élus pour 6 ans) et de la Chambre des Députés (119 députés élus pour 4 ans). Le Parlement vote les lois, adopte le budget et peut engager la responsabilité du gouvernement. L'absence d'élections régulières a souvent conduit à des périodes de fonctionnement sans Parlement.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__body">
+            <span class="card__tag">Judiciaire</span>
+            <h3 class="card__title">Cour de Cassation</h3>
+            <p class="card__desc">Plus haute juridiction de l'ordre judiciaire haïtien, équivalent de la Cour suprême. Elle veille à l'application uniforme des lois et statue en dernier ressort sur les décisions des juridictions inférieures. La Constitution de 1987 prévoyait la création d'une Cour constitutionnelle distincte, mais celle-ci n'a jamais été effectivement instituée.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__body">
+            <span class="card__tag">Élections</span>
+            <h3 class="card__title">Conseil Électoral Permanent (CEP)</h3>
+            <p class="card__desc">Organisme constitutionnel indépendant chargé d'organiser et de superviser toutes les élections en Haïti. En pratique, il a souvent fonctionné de façon provisoire (comme Conseil Électoral Provisoire), sa composition et son indépendance faisant régulièrement l'objet de controverses politiques. Le CEP représente un enjeu stratégique majeur dans chaque cycle électoral haïtien.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Voir la Constitution Actuelle</h2>
+      <p>Découvrez en détail la Constitution de 1987, ses dispositions essentielles et son application contemporaine.</p>
+      <a href="constitution.html" class="btn btn-cta-white">Voir la Constitution Actuelle →</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            République d'Haïti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+            <li><a href="encyclopedia.html">Encyclopédie</a></li>
+            <li><a href="archives.html">Archives</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Culture &amp; Société</h4>
+          <ul>
+            <li><a href="culture.html">Culture &amp; Arts</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastronomie</a></li>
+            <li><a href="culture-vivante.html">Culture Vivante</a></li>
+            <li><a href="creativite-populaire.html">Créativité Populaire</a></li>
+            <li><a href="diaspora-engagee.html">Diaspora Engagée</a></li>
+            <li><a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire &amp; Institutions</h4>
+          <ul>
+            <li><a href="timeline.html">Chronologie</a></li>
+            <li><a href="heroes.html">Héros Nationaux</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="constitution.html">Constitution</a></li>
+            <li><a href="institutions.html">Institutions</a></li>
+            <li><a href="patrimoine-national.html">Patrimoine National</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 R&eacute;publiqueHa&iuml;ti.org &mdash; Tous droits r&eacute;serv&eacute;s.</span>
+        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 </span>
+        <span>Portail d&rsquo;information et de connaissance sur Ha&iuml;ti</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
+</body>
+</html>
