@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Chronologie des Crises Nationales | République d'Haïti</title>
+  <meta name="description" content="Catastrophes naturelles, coups d'État, épidémies, violences politiques — les grandes épreuves traversées par le peuple haïtien à travers l'histoire." />
+  <meta name="author" content="RépubliqueHaïti.org" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+</head>
+<body>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+    <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+              <a href="institutions.html">Institutions</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Société ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture-vivante.html">Culture Vivante</a>
+              <a href="creativite-populaire.html">Créativité Populaire</a>
+              <a href="diaspora-engagee.html">Diaspora Engagée</a>
+              <a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a>
+              <a href="memoire-universelle.html">Mémoire Universelle</a>
+              <a href="patrimoine-national.html">Patrimoine National</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Enjeux ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Fragilité Économique</a>
+              <a href="inegalites-sociales.html">Inégalités Sociales</a>
+              <a href="instabilite-politique.html">Instabilité Politique</a>
+              <a href="pressions-securitaires.html">Pressions Sécuritaires</a>
+              <a href="services-essentiels.html">Services Essentiels</a>
+              <a href="capacite-adaptation.html">Capacité d'Adaptation</a>
+              <a href="reconstruction-durable.html">Reconstruction Durable</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Crises &amp; Résilience</p>
+      <h1 class="page-hero__title">Chronologie des Crises Nationales</h1>
+      <p class="page-hero__desc">Catastrophes naturelles, coups d'État, épidémies, violences politiques — les grandes épreuves traversées par le peuple haïtien à travers l'histoire.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <a href="history.html">Histoire</a>
+        <span>/</span>
+        <a href="timeline.html">Chronologie</a>
+        <span>/</span>
+        <span>Crises Nationales</span>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container" style="padding-top:1rem;">
+    <a href="timeline.html" class="btn btn-outline" style="font-size:0.9rem;">← Retour à la Chronologie</a>
+  </div>
+
+  <section class="section" id="catastrophes">
+    <div class="container">
+      <p class="section-label text-center">Épreuves et Résilience</p>
+      <h2 class="section-title text-center">Catastrophes, Crises et Tragédies Nationales</h2>
+      <p class="section-subtitle text-center">Au fil de son histoire, Haïti a subi des catastrophes naturelles dévastatrices, des crises sanitaires et des violences politiques d'une ampleur exceptionnelle. Face à chacune de ces épreuves, le peuple haïtien a montré une résilience remarquable.</p>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">1954 &bull; Ouragan</p>
+            <h3 class="timeline-card__title">Cyclone Hazel</h3>
+            <p class="timeline-card__desc">En octobre 1954, l'ouragan Hazel frappe Haïti avec une violence extrême. Plus de 1 000 personnes perdent la vie, des milliers de foyers sont détruits et les récoltes agricoles ravagées. C'est l'une des catastrophes naturelles les plus meurtrières du XXe siècle en Haïti, survenant dans un pays encore marqué par les séquelles économiques de l'occupation américaine et de la dette imposée par la France.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">1963 &bull; Cyclone</p>
+            <h3 class="timeline-card__title">Cyclone Flora</h3>
+            <p class="timeline-card__desc">En octobre 1963, le cyclone Flora s'abat sur le sud d'Haïti avec une intensité cataclysmique. Plus de 6 000 personnes trouvent la mort, ce qui en fait l'une des catastrophes naturelles les plus meurtrières de l'histoire haïtienne. Des villages entiers sont rayés de la carte. La reconstruction est rendue difficile par la pauvreté structurelle et le manque d'institutions capables de coordonner l'aide.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">28 novembre 1987 &bull; Violence Politique</p>
+            <h3 class="timeline-card__title">Massacre des Élections de 1987</h3>
+            <p class="timeline-card__desc">Lors des premières élections organisées après la chute de Duvalier, des hommes armés attaquent les bureaux de vote à Port-au-Prince, massacrant des dizaines d'électeurs venus exercer leur droit civique pour la première fois. Cette violence délibérée force l'annulation des élections. L'acte, attribué aux milices Duvalieristes encore actives, illustre la résistance des forces conservatrices à toute transition démocratique réelle.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">1991 – 1994 &bull; Répression</p>
+            <h3 class="timeline-card__title">Terreur sous la Junte Militaire</h3>
+            <p class="timeline-card__desc">Pendant les trois années du régime militaire de Raoul Cédras, après le coup d'État contre Aristide, plus de 3 000 à 5 000 civils sont tués par l'armée et les paramilitaires FRAPH. Des milliers de militants des quartiers populaires sont arrêtés, torturés ou assassinés. Des milliers de réfugiés haïtiens fuient par mer vers les États-Unis; beaucoup se noient ou sont interceptés et renvoyés par les garde-côtes américains.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">2004 &bull; Inondations</p>
+            <h3 class="timeline-card__title">Inondations de Mapou et Fonds-Verrettes</h3>
+            <p class="timeline-card__desc">En mai 2004, des pluies torrentielles provoquent des inondations catastrophiques dans le sud d'Haïti et dans le département de l'Ouest. Plus de 2 000 personnes périssent dans les villes de Mapou et Fonds-Verrettes. La déforestation massive qui a dénudé les montagnes haïtiennes aggrave considérablement les risques d'inondation. Ce drame remet en lumière la vulnérabilité environnementale critique du pays.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">Septembre 2008 &bull; Ouragans</p>
+            <h3 class="timeline-card__title">Saison des Ouragans 2008</h3>
+            <p class="timeline-card__desc">En l'espace de trois semaines de septembre 2008, quatre cyclones tropicaux consécutifs (Fay, Gustav, Hanna et Ike) frappent Haïti. Plus de 800 personnes meurent, 60 % des récoltes sont détruites et des centaines de milliers de personnes se retrouvent sans abri. La ville de Gonaïves est submergée sous plusieurs mètres de boue. Le coût des dommages représente 70 % du PIB national et plonge le pays dans une crise alimentaire grave.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">12 janvier 2010 &bull; Séisme</p>
+            <h3 class="timeline-card__title">Le Grand Séisme de 2010</h3>
+            <p class="timeline-card__desc">A 16h53 heure locale, un séisme de magnitude 7,0 frappe à 25 km à l'ouest de Port-au-Prince. En quelques secondes, une ville entière s'effondre. Plus de 220 000 personnes perdent la vie selon les estimations, 300 000 sont blessées et 1,5 million se retrouvent sans abri. Le Palais National, la cathédrale de Port-au-Prince, des hôpitaux, des écoles et des ministères entiers s'effondrent. C'est l'une des pires catastrophes naturelles de l'histoire de l'hémisphère occidental.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">2010 – 2019 &bull; Épidémie</p>
+            <h3 class="timeline-card__title">Épidémie de Choléra</h3>
+            <p class="timeline-card__desc">En octobre 2010, quelques mois après le séisme, une épidémie de choléra éclate dans le département de l'Artibonite. Elle se répand rapidement dans tout le pays. Des enquêtes scientifiques établissent que la souche a été introduite par des soldats de la mission de paix onusienne (MINUSTAH) venus du Népal. Plus de 820 000 personnes sont contaminées et environ 10 000 meurent. L'ONU reconnaît tardivement sa responsabilité en 2016, sans réparations effectives.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">4 octobre 2016 &bull; Cyclone</p>
+            <h3 class="timeline-card__title">Ouragan Matthew</h3>
+            <p class="timeline-card__desc">L'ouragan Matthew, l'un des plus puissants de l'histoire de l'Atlantique, frappe le sud d'Haïti le 4 octobre 2016 avec des vents de 230 km/h. Plus de 546 personnes meurent, des villes comme Les Cayes, Jérémie et toute la Péninsule du Sud sont dévastées. Des centaines de milliers de personnes sont déplacées et les infrastructures agricoles anéanties. La reconstruction est lente, freinée par l'instabilité politique chronique.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">14 août 2021 &bull; Séisme</p>
+            <h3 class="timeline-card__title">Séisme du Grand Sud 2021</h3>
+            <p class="timeline-card__desc">Un séisme de magnitude 7,2 frappe le département du Sud et la Grande-Anse le 14 août 2021, soit six semaines seulement après l'assassinat du président Moïse. Plus de 2 248 personnes meurent, 12 000 sont blessées et plus de 130 000 maisons sont détruites ou endommagées. La réponse humanitaire est compliquée par l'instabilité politique, la méfiance envers le gouvernement et la présence de gangs armés qui bloquent parfois l'acheminement de l'aide.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">2018 – Présent &bull; Insécurité</p>
+            <h3 class="timeline-card__title">Crise Sécuritaire et Emprise des Gangs</h3>
+            <p class="timeline-card__desc">A partir de 2018, des gangs armés étendent progressivement leur contrôle sur Port-au-Prince et d'autres régions. En 2023 et 2024, des coalitions de gangs contrôlent plus de 80 % de la capitale. Les enlèvements contre rançon atteignent des niveaux inédits, ciblant aussi bien des étrangers que des Haïtiens ordinaires. L'axe reliant Port-au-Prince aux villes du nord est régulièrement coupé. Des centaines de milliers de personnes sont déplacées à l'intérieur du pays.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--blue);">
+            <p class="timeline-card__year">2024 – 2025 &bull; Espoir</p>
+            <h3 class="timeline-card__title">Mission Multinationale et Transition</h3>
+            <p class="timeline-card__desc">En 2024, une Mission Multinationale de Soutien à la Sécurité, autorisée par le Conseil de Sécurité de l'ONU et conduite par le Kenya, commence à déployer des forces policières pour soutenir la Police Nationale d'Haïti. Un Conseil Présidentiel de Transition tente de stabiliser les institutions. Malgré des conditions extraordinairement difficiles, Haïti continue de chercher son chemin vers la paix, la démocratie et le développement, portée par la résilience de son peuple.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional political crises section -->
+  <section class="section section--alt" id="crises-politiques">
+    <div class="container">
+      <p class="section-label text-center">Crises Politiques</p>
+      <h2 class="section-title text-center">Les Grandes Crises Politiques de l'Histoire Haïtienne</h2>
+      <p class="section-subtitle text-center">Au-delà des catastrophes naturelles, Haïti a traversé de profondes crises politiques qui ont façonné son destin national.</p>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">1791 &bull; Révolution</p>
+            <h3 class="timeline-card__title">Cérémonie du Bois Caïman</h3>
+            <p class="timeline-card__desc">Le 14 août 1791, la cérémonie du Bois Caïman marque le début officiel de la Révolution haïtienne. Cette nuit, des esclaves conduits par Dutty Boukman et Cécile Fatiman tiennent une cérémonie vodou secrète dans la forêt du Bois Caïman. Le soulèvement qui s'ensuit embrase la colonie de Saint-Domingue et lance la plus grande révolte d'esclaves de l'histoire, qui aboutira, treize ans plus tard, à la création de la première République noire du monde.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">1806 &bull; Crise Politique</p>
+            <h3 class="timeline-card__title">Assassinat de Dessalines</h3>
+            <p class="timeline-card__desc">Le 17 octobre 1806, le père fondateur de la nation haïtienne, Jean-Jacques Dessalines, est assassiné dans une embuscade à Pont-Rouge. Son assassinat provoque la division du pays en deux entités rivales — le Royaume du Nord d'Henri Christophe et la République du Sud d'Alexandre Pétion — et inaugure une longue période d'instabilité politique qui marquera durablement l'histoire d'Haïti.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">1825 &bull; Crise Économique</p>
+            <h3 class="timeline-card__title">La Dette de l'Indépendance</h3>
+            <p class="timeline-card__desc">Sous la menace d'une flotte de guerre française, le président Boyer accepte de verser à la France une indemnité de 150 millions de francs-or (ramenée à 90 millions en 1838) en compensation pour les biens des anciens colons. Haïti est ainsi le seul pays de l'histoire moderne contraint de payer une rançon pour sa propre indépendance. Cette dette colossale, remboursée jusqu'en 1947, a profondément hypothéqué le développement économique du pays pendant plus d'un siècle.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">1915 – 1934 &bull; Occupation</p>
+            <h3 class="timeline-card__title">Occupation Américaine</h3>
+            <p class="timeline-card__desc">En juillet 1915, les Marines américains débarquent en Haïti sous prétexte de maintenir l'ordre après l'assassinat du président Guillaume Sam. L'occupation dure 19 ans. Elle entraîne la dissolution du Parlement haïtien, l'imposition d'une nouvelle constitution autorisant les étrangers à posséder des terres, le travail forcé (corvée), la suppression de la presse libre et la résistance armée des Cacos menée par Charlemagne Péralte. L'occupation laisse des séquelles durables dans la société haïtienne.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">Octobre 1937 &bull; Massacre</p>
+            <h3 class="timeline-card__title">Massacre du Persil (Parsley Massacre)</h3>
+            <p class="timeline-card__desc">En octobre 1937, le dictateur dominicain Rafael Trujillo ordonne le massacre systématique des Haïtiens vivant à la frontière dominicaine. Entre 15 000 et 35 000 personnes sont tuées en quelques jours, souvent à la machette. Les soldats dominicains identifiaient les Haïtiens en leur demandant de prononcer le mot "perejil" (persil en espagnol), que les créolophones prononçaient différemment. Ce génocide reste l'une des pages les plus sombres de l'histoire des relations haïtiano-dominicaines.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">1957 – 1986 &bull; Dictature</p>
+            <h3 class="timeline-card__title">La Dictature des Duvalier</h3>
+            <p class="timeline-card__desc">François "Papa Doc" Duvalier prend le pouvoir en 1957 et instaure une dictature brutale fondée sur la terreur. Ses Tontons Macoutes — milice paramilitaire — sèment la terreur dans tout le pays. En 1964, il se proclame président à vie. À sa mort en 1971, son fils Jean-Claude "Baby Doc" Duvalier lui succède. Sous leur règne, des dizaines de milliers d'opposants sont tués, torturés ou contraints à l'exil. La dynasty duvalieriste prend fin en 1986 avec la fuite de Jean-Claude vers la France.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">29 septembre 1991 &bull; Coup d'État</p>
+            <h3 class="timeline-card__title">Coup d'État militaire contre Aristide</h3>
+            <p class="timeline-card__desc">Le président Jean-Bertrand Aristide, premier président démocratiquement élu d'Haïti, est renversé par un coup d'État militaire conduit par le général Raoul Cédras. Aristide part en exil. La junte militaire qui s'empare du pouvoir impose un régime de terreur : plus de 3 000 personnes sont tuées, des milliers arrêtées et torturées. Un embargo international est imposé à Haïti. En 1994, sous pression américaine, la junte accepte de céder le pouvoir et Aristide est rétabli dans ses fonctions.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card" style="border-left-color: var(--red);">
+            <p class="timeline-card__year">7 juillet 2021 &bull; Assassinat</p>
+            <h3 class="timeline-card__title">Assassinat du Président Jovenel Moïse</h3>
+            <p class="timeline-card__desc">Dans la nuit du 6 au 7 juillet 2021, le président haïtien Jovenel Moïse est assassiné à son domicile privé de Pétion-Ville par un commando armé. Sa femme Martine est grièvement blessée. Cet acte sans précédent dans l'histoire récente d'Haïti plonge le pays dans une crise politique profonde. Le contexte est déjà marqué par une insécurité grandissante, une profonde division politique et une légitimité contestée de Moïse lui-même. L'enquête sur les commanditaires reste incomplète.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Voir les Jalons Constitutionnels</h2>
+      <p>Découvrez les grandes étapes constitutionnelles et institutionnelles qui ont structuré l'État haïtien.</p>
+      <a href="timeline-constitutions.html" class="btn btn-cta-white">Voir les Constitutions →</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            République d'Haïti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+            <li><a href="encyclopedia.html">Encyclopédie</a></li>
+            <li><a href="archives.html">Archives</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Culture &amp; Société</h4>
+          <ul>
+            <li><a href="culture.html">Culture &amp; Arts</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastronomie</a></li>
+            <li><a href="culture-vivante.html">Culture Vivante</a></li>
+            <li><a href="creativite-populaire.html">Créativité Populaire</a></li>
+            <li><a href="diaspora-engagee.html">Diaspora Engagée</a></li>
+            <li><a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire &amp; Institutions</h4>
+          <ul>
+            <li><a href="timeline.html">Chronologie</a></li>
+            <li><a href="heroes.html">Héros Nationaux</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="constitution.html">Constitution</a></li>
+            <li><a href="institutions.html">Institutions</a></li>
+            <li><a href="patrimoine-national.html">Patrimoine National</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 R&eacute;publiqueHa&iuml;ti.org &mdash; Tous droits r&eacute;serv&eacute;s.</span>
+        <span>Site con&ccedil;u et d&eacute;velopp&eacute; par Kirlinger357 </span>
+        <span>Portail d&rsquo;information et de connaissance sur Ha&iuml;ti</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
+</body>
+</html>
