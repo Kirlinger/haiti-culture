@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Haïti vu de l'Étranger | RépubliqueHaïti.org</title>
+  <meta name="description" content="Comment les écrivains, historiens et voyageurs étrangers ont écrit sur Haïti au fil des siècles — et comment ces représentations ont façonné l'image internationale d'une nation que trop peu ont vraiment comprise." />
+  <meta name="author" content="RépubliqueHaïti.org" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">République d'Haïti</a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+              <a href="institutions.html">Institutions</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Société ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture-vivante.html">Culture Vivante</a>
+              <a href="creativite-populaire.html">Créativité Populaire</a>
+              <a href="diaspora-engagee.html">Diaspora Engagée</a>
+              <a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a>
+              <a href="memoire-universelle.html">Mémoire Universelle</a>
+              <a href="patrimoine-national.html">Patrimoine National</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Enjeux ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Fragilité Économique</a>
+              <a href="inegalites-sociales.html">Inégalités Sociales</a>
+              <a href="instabilite-politique.html">Instabilité Politique</a>
+              <a href="pressions-securitaires.html">Pressions Sécuritaires</a>
+              <a href="services-essentiels.html">Services Essentiels</a>
+              <a href="capacite-adaptation.html">Capacité d'Adaptation</a>
+              <a href="reconstruction-durable.html">Reconstruction Durable</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+              <a href="bibliography.html">Bibliographie</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Perception &amp; Représentation</p>
+      <h1 class="page-hero__title">Haïti vu de l'Étranger</h1>
+      <p class="page-hero__desc">Comment les écrivains, historiens et voyageurs étrangers ont écrit sur Haïti au fil des siècles — et comment ces représentations ont façonné l'image internationale d'une nation que trop peu ont vraiment comprise.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <span>Haïti vu de l'Étranger</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Historiographie &amp; Représentation</p>
+      <h2>Le regard extérieur sur Haïti</h2>
+
+      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Introduction : Le problème de la représentation</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Michel-Rolph Trouillot a formulé, dans <em>Silencing the Past</em> (1995), le concept de la « révolution impensable » : les cadres intellectuels occidentaux ne pouvaient pas traiter le fait que des Africains réduits en esclavage avaient accompli ce qu'ils avaient accompli. En conséquence, la révolution haïtienne a été minimisée, déformée ou simplement éludée dans l'historiographie européenne contemporaine. Ce silence n'était pas de l'ignorance ; c'était une erasure active, un refus de laisser les faits déranger les théories dominantes sur la race et la civilisation.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Ce schéma de la représentation biaisée ne s'est pas limité à la période révolutionnaire. Il s'est reproduit à travers différents moments historiques et différents médias : les récits de voyageurs du XIXe siècle, la presse de l'occupation américaine, le discours du « failed state » des années 2000, la couverture du tremblement de terre de 2010. Chaque époque a produit ses propres distorsions, adaptées à ses propres justifications politiques.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Comprendre comment Haïti a été représentée de l'extérieur est indispensable pour comprendre Haïti elle-même — parce que ces représentations ont eu des effets réels : elles ont justifié des interventions militaires, orienté des politiques d'aide, façonné l'opinion publique internationale, et influencé même les Haïtiens dans leur rapport à leur propre identité nationale.
+      </p>
+
+      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Les voyageurs et coloniaux français (XVIIIe–XIXe siècle)</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        La <em>Description topographique, physique, civile, politique et historique de la partie française de l'isle Saint-Domingue</em> de Moreau de Saint-Méry (1797) est à la fois le document le plus précieux et le plus problématique sur Saint-Domingue colonial. Encyclopédique dans ses détails — géographie, démographie, agriculture, mœurs — il reste fondamentalement structuré par la conviction de son auteur en l'infériorité naturelle des esclaves. Saint-Méry est indispensable comme source factuelle et dangereux comme interprète. Lire Saint-Méry exige une vigilance constante.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Le Baron de Vastey offre le contre-exemple haïtien : son <em>Le Système colonial dévoilé</em> (1814) est une réfutation dévastatrice de l'idéologie coloniale, écrite depuis l'intérieur de l'État haïtien nouvellement indépendant. Secrétaire du roi Henri Christophe, Vastey démonte point par point les arguments racistes des colons et des philosophes européens, en citant leurs propres textes contre eux. C'est l'un des premiers textes de décolonisation intellectuelle de l'ère moderne.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Victor Hugo utilise Haïti comme toile de fond romantique dans <em>Bug-Jargal</em> (1826), son roman de jeunesse sur la Révolution de Saint-Domingue. Le personnage titre — un chef rebelle noble et généreux — est dépeint avec sympathie, mais la psychologie complexe, la vie intérieure, les motivations politiques réelles des insurgés haïtiens sont absentes. Haïti sert de décor exotique à une réflexion française sur la grandeur et la tragédie ; elle n'est pas le sujet de son propre récit.
+      </p>
+
+      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Spencer St. John et le regard britannique (XIXe siècle)</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Spencer St. John servit comme consul britannique en Haïti de 1863 à 1874. Son <em>Haïti, or the Black Republic</em> (1884) est peut-être le texte le plus nuisible jamais publié en anglais sur Haïti. Il y rapporte — en les inventant ou en les amplifiant considérablement — des accusations de cannibalisme, de sacrifices humains dans le cadre du Vodou, et d'incapacité structurelle des Noirs à se gouverner. Sa thèse centrale est que l'indépendance haïtienne avait conduit à une régression vers la « barbarie africaine ».
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        L'influence de ce livre fut considérable et durable. Réédité plusieurs fois, il fut cité dans la presse américaine lors de l'invasion de 1915 pour justifier l'occupation au nom de la « civilisation ». Les sénateurs américains qui débattirent de l'intervention invoquaient les affirmations de St. John sur le désordre et la sauvagerie haïtiens. Un consul britannique rancunier, écrivant vingt ans après avoir quitté le pays, avait fourni aux impérialistes américains leur argumentaire idéologique.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Le livre de St. John est un cas d'école dans la façon dont les « témoignages oculaires » racistes fonctionnent politiquement. L'autorité du témoin direct — « j'y étais, j'ai vu » — confère une crédibilité apparente à des affirmations qui ne résistent pas à l'examen critique. Les historiens haïtiens ont depuis longtemps réfuté ses accusations spécifiques, mais le dommage causé à la réputation internationale d'Haïti a été durable et partiellement irréparable.
+      </p>
+
+      <aside class="researcher-note" aria-label="Note de recherche">
+        <strong>Note de recherche — L'influence de St. John sur la justification idéologique de l'occupation :</strong> Les historiens Hans Schmidt (<em>The United States Occupation of Haiti, 1915–1934</em>, 1971) et Mary Renda (<em>Taking Haiti</em>, 2001) ont documenté comment le discours de la « République noire » incapable de se gouverner — directement hérité de St. John — a structuré la rhétorique officielle de l'occupation américaine. Les marines qui débarquèrent à Port-au-Prince en juillet 1915 arrivaient avec une image d'Haïti formée en partie par ce type de littérature coloniale. Ce n'est pas un détail : l'idéologie préfigure toujours l'action.
+      </aside>
+
+      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Le regard américain (XIXe–XXe siècle)</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Frederick Douglass — ancien esclave, ambassadeur des États-Unis en Haïti de 1889 à 1891 — prononça en 1893, lors de l'Exposition universelle de Chicago, le discours le plus important jamais tenu par un Américain en défense de la dignité haïtienne. Face à la condescendance blanche américaine qui accusait Haïti de désordre et d'ingouvernabilité, Douglass répondit point par point, rappelant le rôle central d'Haïti dans l'histoire de la liberté noire à travers le monde. Un homme autrefois esclave défendant une République noire contre l'arrogance blanche — la symétrie était parfaite et délibérée.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        La presse américaine de l'occupation (1915-1934) produisit une iconographie dégradante qu'on trouve dans le <em>National Geographic</em>, <em>Harper's Magazine</em> et les grands quotidiens. Les photographies présentaient Haïti comme primitive et désordonnée ; les articles soulignaient la « sauvagerie » du Vodou et l'incompétence des gouvernements haïtiens. Cette couverture servait à rassurer le public américain que l'occupation était bienveillante et nécessaire — une mission civilisatrice, pas un impérialisme.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        <em>The Haitian People</em> (1941) du sociologue américain James Leyburn constitua une tentative plus sérieuse et plus honnête que la plupart. Leyburn reconnut les inégalités de classe haïtiennes et les effets de l'occupation. Mais son cadre d'analyse restait paternaliste dans ses hypothèses fondamentales sur ce que le « progrès » signifiait pour Haïti et sur la capacité haïtienne à y parvenir sans guidance extérieure. Même la bienveillance étrangère porte souvent les marques de ses propres limites intellectuelles.
+      </p>
+
+      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Le regard africain et caribéen</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        C. L. R. James, intellectuel trinidadien, publia <em>The Black Jacobins</em> en 1938 — le premier ouvrage à replacer la révolution haïtienne dans son contexte mondial, comme événement central de l'histoire atlantique et préfiguration des luttes anticoloniales du XXe siècle. Écrit depuis la perspective d'un intellectuel caribéen noir qui voyait dans Haïti un miroir de sa propre condition coloniale, le livre de James est catégoriquement différent de ce que produisaient les historiens européens et américains : Haïti n'y est pas une curiosité ou un problème, mais un modèle et une inspiration.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Aimé Césaire (Martinique) visita Haïti en 1944 au faîte de sa reconnaissance littéraire. Il y rencontra Jacques Roumain — mort cette même année — et fut accueilli comme une figure d'importance extraordinaire par des intellectuels haïtiens qui reconnaissaient dans la Négritude un écho de leur propre indigénisme. Sa biographie <em>Toussaint Louverture : La Révolution française et le problème colonial</em> (1961), écrite au moment des indépendances africaines, argumentait explicitement que 1804 préfigurait 1960.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Sur le continent africain, Kwame Nkrumah puisait directement dans l'exemple haïtien pour sa vision d'un panafricanisme politique. Ces perspectives caribéennes et africaines constituent une tradition de lecture d'Haïti fondamentalement différente de la tradition européenne et américaine : elles voient dans Haïti non pas un objet d'étude, mais un ancêtre politique, une preuve que ce qu'elles aspiraient à accomplir avait déjà été accompli.
+      </p>
+
+      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Le regard contemporain</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        <em>The Uses of Haiti</em> (1994) de Paul Farmer est l'un des textes contemporains les plus importants sur Haïti écrits par un étranger. Médecin et anthropologue, Farmer analyse avec rigueur le rôle des politiques américaines dans la pauvreté haïtienne. Mais même ce livre, dans sa compassion sincère, encadre Haïti principalement à travers ses souffrances et les échecs de la politique étrangère américaine. Haïti comme sujet de sa propre histoire, comme productrice de sa propre culture et de ses propres solutions, reste en retrait.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Le discours de l'« État en faillite » (<em>failed state</em>), omniprésent dans les rapports onusiens, les journaux de politique étrangère et les colonnes de <em>The Economist</em> depuis les années 2000, construit Haïti par l'absence : absence d'institutions, absence d'État de droit, absence d'ordre. Ce vocabulaire efface systématiquement la présence : la continuité culturelle remarquable, la résilience populaire, l'économie créative, les institutions communautaires qui ont survécu à tout. Il centre le regard extérieur au détriment de tout ce que ce regard ne sait pas voir.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        La couverture médiatique du séisme de 2010 illustre ce problème de façon paroxystique. Le narratif des « pillards » dans les premières heures suivant la catastrophe — des personnes cherchant à survivre dans un pays où l'État avait littéralement effondré — fut répercuté sans analyse critique. Le commentaire de Pat Robertson sur un prétendu « pacte avec le diable » en 1804 fit le tour du monde. L'écart entre la résilience réelle de la population haïtienne et le récit médiatique dominant n'a peut-être jamais été aussi béant qu'en janvier 2010.
+      </p>
+
+      <aside class="researcher-note" aria-label="Note de recherche">
+        <strong>Note de recherche — Le discours du « failed state » et ses bénéficiaires politiques :</strong> Le concept d'« État en faillite » n'est pas une description neutre ; c'est un cadre analytique qui a des effets politiques précis. Il légitime l'intervention extérieure, justifie la tutelle internationale, et décharge les puissances étrangères de leur responsabilité historique dans la création des conditions qu'il prétend décrire. Dans le cas haïtien, ce discours efface délibérément le rôle de la dette de l'indépendance imposée par la France (1825), de l'occupation américaine (1915-1934), des embargos, des coups d'État soutenus de l'extérieur, et des politiques d'ajustement structurel. Nommer Haïti « État en faillite » sans nommer ces causes, c'est pratiquer une forme de désinformation analytique.
+      </aside>
+
+      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Quatre biais récurrents</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        <strong>(a) L'exceptionnalisme négatif</strong> — Haïti comme cas unique d'échec, uniquement maudit. Ce cadrage efface les causes externes des difficultés haïtiennes — la dette d'indépendance, l'occupation, les embargos, les coups d'État soutenus de l'extérieur — et présente comme destin ce qui est en réalité une construction historique.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        <strong>(b) La victimisation</strong> — Haïti comme récepteur passif de la souffrance. Ce cadrage efface l'agentivité haïtienne : les mobilisations populaires, les résistances culturelles, les innovations institutionnelles, la créativité économique dans l'adversité. Il réduit une nation à son malheur.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        <strong>(c) L'exotisme</strong> — Le sensationnalisme du Vodou, le primitivisme, la réduction d'une religion complexe et philosophiquement riche à un spectacle. Ce biais sert à maintenir Haïti dans une altérité radicale, incompréhensible et inquiétante pour le regard occidental.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        <strong>(d) Le paternalisme</strong> — Haïti a besoin d'aide extérieure, ne peut pas s'en sortir seule. Ce biais a justifié chaque forme d'intervention depuis 1915 jusqu'aux présentes. Il perpétue une tutelle qui contredit dans les faits les principes démocratiques que les intervenants prétendent vouloir instaurer.
+      </p>
+
+      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Vers une représentation plus juste</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Les voix haïtiennes occupent progressivement une place croissante dans les médias internationaux. Yanick Lahens, lauréate du Prix Femina 2014 pour <em>Bain de lune</em>, porte une Haïti profonde et complexe dans la littérature francophone mondiale. Dany Laferrière, élu à l'Académie française en 2013, parle d'Haïti depuis le centre même de l'institution littéraire française. Edwidge Danticat, MacArthur Fellow et romancière de renommée internationale, témoigne de l'expérience haïtienne en anglais pour un public américain.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Les journalistes haïtiens rapportant depuis l'intérieur, sur les réseaux sociaux et dans des médias indépendants, court-circuitent la médiation étrangère qui a longtemps filtré l'image d'Haïti vers le monde. Cette désintermédiation ne résout pas tout — les biais algorithmiques et les dynamiques d'attention médiatique internationale restent défavorables — mais elle ouvre un espace nouveau pour des récits non filtrés.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Sur le plan académique, la décolonisation des études haïtiennes progresse : le <em>Journal of Haitian Studies</em>, le Center for the Study of Slavery and Justice de l'Université Brown, et une nouvelle génération de chercheurs haïtiens et haïtiano-américains produisent une historiographie qui centre les perspectives haïtiennes. Ce mouvement est lent et fait face à des résistances institutionnelles, mais son orientation est irréversible.
+      </p>
+
+      <aside class="researcher-note" aria-label="Note de recherche">
+        <strong>Note de recherche — Le défi méthodologique des sources coloniales :</strong> Une tension fondamentale structure la recherche sur Haïti précoloniale et coloniale : les seules sources écrites disponibles sur de nombreux aspects de la société de Saint-Domingue ont été produites par des colons et des administrateurs dont les biais sont documentés et évidents. Comment utiliser Moreau de Saint-Méry quand on sait ce qu'il croit ? La réponse n'est pas de l'ignorer — ce serait abandonner des informations précieuses — mais de lire « à rebrousse-poil », comme Walter Benjamin l'aurait dit : chercher dans le document colonial les traces d'une réalité que son auteur ne voulait pas montrer, mais qu'il ne pouvait pas entièrement dissimuler. Les marges, les contradictions internes, les détails apparemment anodins sont souvent plus révélateurs que le propos central.
+      </aside>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">République d'Haïti</div>
+          <p>Une célébration de l'extraordinaire histoire d'Haïti, de sa culture vibrante et de son peuple remarquable. Dédié à partager l'histoire de la première République noire du monde.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+            <li><a href="encyclopedia.html">Encyclopédie</a></li>
+            <li><a href="archives.html">Archives</a></li>
+            <li><a href="bibliography.html">Bibliographie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Culture &amp; Société</h4>
+          <ul>
+            <li><a href="culture.html">Culture &amp; Arts</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastronomie</a></li>
+            <li><a href="culture-vivante.html">Culture Vivante</a></li>
+            <li><a href="creativite-populaire.html">Créativité Populaire</a></li>
+            <li><a href="diaspora-engagee.html">Diaspora Engagée</a></li>
+            <li><a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire &amp; Institutions</h4>
+          <ul>
+            <li><a href="timeline.html">Chronologie</a></li>
+            <li><a href="heroes.html">Héros Nationaux</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="constitution.html">Constitution</a></li>
+            <li><a href="institutions.html">Institutions</a></li>
+            <li><a href="patrimoine-national.html">Patrimoine National</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+            <li><a href="license.html">Mentions L&eacute;gales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est n&eacute; d&apos;une frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti sont &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les sources ha&iuml;tiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pendant.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
+</body>
+</html>

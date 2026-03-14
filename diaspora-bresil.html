@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>La Diaspora Haïtienne au Brésil | RépubliqueHaïti.org</title>
+  <meta name="description" content="La présence haïtienne au Brésil est récente mais saisissante — une migration déclenchée par le séisme de 2010 qui a créé une communauté de plus de 150 000 personnes en une décennie." />
+  <meta name="author" content="RépubliqueHaïti.org" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+              <a href="institutions.html">Institutions</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Société ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture-vivante.html">Culture Vivante</a>
+              <a href="creativite-populaire.html">Créativité Populaire</a>
+              <a href="diaspora-engagee.html">Diaspora Engagée</a>
+              <a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a>
+              <a href="memoire-universelle.html">Mémoire Universelle</a>
+              <a href="patrimoine-national.html">Patrimoine National</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Enjeux ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Fragilité Économique</a>
+              <a href="inegalites-sociales.html">Inégalités Sociales</a>
+              <a href="instabilite-politique.html">Instabilité Politique</a>
+              <a href="pressions-securitaires.html">Pressions Sécuritaires</a>
+              <a href="services-essentiels.html">Services Essentiels</a>
+              <a href="capacite-adaptation.html">Capacité d'Adaptation</a>
+              <a href="reconstruction-durable.html">Reconstruction Durable</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+              <a href="bibliography.html">Bibliographie</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Diaspora Haïtienne</p>
+      <h1 class="page-hero__title">La Diaspora Haïtienne au Brésil</h1>
+      <p class="page-hero__desc">La présence haïtienne au Brésil est récente mais saisissante — une migration déclenchée par le séisme de 2010 qui a créé une communauté de plus de 150 000 personnes en une décennie.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <a href="diaspora-engagee.html">Diaspora Engagée</a>
+        <span>/</span>
+        <span>Diaspora au Brésil</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Migration &amp; Intégration</p>
+      <h2>Une migration déclenchée par la catastrophe</h2>
+
+      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Contexte de la migration (2010–2012)</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Le séisme du 12 janvier 2010 a détruit non seulement des infrastructures mais des moyens de subsistance entiers. Dans ce vide, le Brésil apparaissait comme une destination de remplacement porteuse d'espoir : le pays se préparait fiévreusement à la Coupe du Monde 2014 et aux Jeux Olympiques de 2016, générant une demande massive de main-d'œuvre dans la construction. Ce contexte économique favorable constituait une attraction puissante pour des migrants à la recherche d'une insertion rapide.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        La MINUSTAH — la Mission des Nations Unies pour la Stabilisation en Haïti, déployée depuis 2004 — était commandée par le Brésil sous la direction du général Augusto Heleno. Cette présence militaire brésilienne avait créé des réseaux de connaissance et une familiarité entre les deux pays. Des Haïtiens avaient travaillé avec des soldats brésiliens, appris quelques mots de portugais, entendu parler des villes du Sud. Cette familiarité, si ténue soit-elle, a joué un rôle dans l'orientation des flux migratoires.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        L'itinéraire migratoire était éprouvant : Port-au-Prince → République dominicaine → Colombie → Équateur ou Pérou → Bolivie → Brésil, avec une entrée par l'état d'Acre, aux postes-frontières de Tabatinga et d'Epitaciolândia/Brasiléia. Ce trajet transcontinental prenait plusieurs semaines, impliquait des passeurs, des risques physiques considérables en zone jungle, et un coût financier ruineux pour des familles déjà appauvries par le séisme. Il révèle une détermination remarquable chez ceux qui l'ont emprunté.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Ce n'était pas une migration spontanée et désorganisée. Des réseaux de proches, des informations transmises via les diaspora de New York et de Montréal, des agents recruteurs informels — tout un système parallèle structurait les déplacements. Chaque migrant arrivé à São Paulo ou à Porto Alegre devenait un point de contact pour ceux restés à Haïti, une preuve que le voyage était possible et que l'installation était envisageable.
+      </p>
+
+      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Le corridor Acre</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Entre 2011 et 2013, des images de centaines de migrants haïtiens entassés dans des campements de fortune à Brasiléia, dans l'état d'Acre, ont choqué l'opinion publique brésilienne. Des familles dormaient dans des gymnases improvisés, sous la chaleur amazonienne, sans eau courante ni accès aux soins. Le gouvernement local était dépassé ; les ressources municipales d'une ville de quelques dizaines de milliers d'habitants ne pouvaient absorber des afflux de plusieurs centaines de personnes par semaine.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        C'est la société civile qui prit le relais dans l'urgence : les ONG locales, la Caritas et l'Église catholique apportèrent une aide alimentaire et sanitaire de base. Leur engagement mit le gouvernement fédéral sous pression. En janvier 2012, le gouvernement Dilma Rousseff répondit par une mesure inédite : la création d'un visa humanitaire spécifique pour les Haïtiens. C'était la première utilisation formelle de cet instrument juridique dans le cadre de la nouvelle loi migratoire brésilienne en cours d'élaboration.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Ce visa humanitaire régularisa le statut de dizaines de milliers de personnes qui auraient autrement été en situation irrégulière. Il donna à la diaspora haïtienne au Brésil une base légale pour accéder au marché du travail formel, à la sécurité sociale, aux établissements scolaires. C'était une décision politiquement courageuse dans un contexte où la xénophobie populaire existait et où certains secteurs politiques s'y opposaient.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Le corridor Acre est aujourd'hui une page de l'histoire migratoire latino-américaine. Il a mis en évidence les lacunes d'un système régional sans mécanisme de coordination pour les flux humanitaires non conventionnels — des migrants qui n'étaient pas des réfugiés au sens juridique strict du terme mais qui fuyaient un désastre d'une ampleur que peu de sociétés auraient survécu.
+      </p>
+
+      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Communautés brésiliennes</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        En 2023, on estimait entre 150 000 et 200 000 Haïtiens résidant au Brésil, bien que les chiffres réels soient difficiles à établir en raison des mobilités intra-brésiliennes et des re-migrations vers d'autres pays. São Paulo constitue le principal pôle, notamment le quartier de Bom Retiro — historiquement une zone d'accueil des immigrants, successivement italiens, juifs, coréens, et désormais haïtiens. Le tissu commercial et religieux du quartier a été transformé par cette présence.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Dans le sud du Brésil, les États de Santa Catarina et du Rio Grande do Sul ont accueilli de fortes concentrations haïtiennes : Porto Alegre, Curitiba, Joinville, Balneário Camboriú. Cette géographie s'explique par l'emploi : les <em>frigoríficos</em> — les abattoirs et usines de transformation de viande — constituent le premier employeur de la main-d'œuvre haïtienne dans ces régions. Le travail y est dur, physiquement épuisant, souvent nocturne, et exposé à des températures extrêmes. Les migrants haïtiens ont accepté ces conditions faute d'alternatives.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        D'autres secteurs d'emploi incluent la construction (particulièrement dans la phase 2012-2016 du boom olympique), les services de nettoyage et d'entretien, la logistique et la distribution. Une minorité plus instruite a réussi à s'insérer dans des postes qualifiés, notamment dans l'enseignement, les professions de santé et l'administration. Mais cette ascension sociale reste l'exception dans une communauté dont la majorité est arrivée sans diplômes reconnus et sans maîtrise du portugais.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Manaus, dans l'état d'Amazonas, est un cas particulier : sa proximité géographique avec l'entrée par Acre en a fait un premier point d'installation pour beaucoup, avant une migration secondaire vers le sud plus industrialisé. La ville a développé des services spécifiques pour la communauté haïtienne, et des Haïtiens se sont intégrés à l'économie informelle du port fluvial.
+      </p>
+
+      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Défis d'intégration</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        La barrière linguistique est le premier obstacle. Le portugais brésilien est distinct du français et du créole haïtien, bien que certains migrants francophones trouvent des points d'accroche. L'apprentissage du portugais en situation de travail précaire est lent et souvent incomplet — les travailleurs des abattoirs n'ont ni le temps ni l'énergie d'assister à des cours du soir après dix heures de travail physique. Cette limitation linguistique ferme des portes professionnelles et sociales qui restent autrement inaccessibles.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Le racisme anti-Noir est une réalité que le Brésil reconnaît mal dans son rapport à lui-même. Malgré sa propre population afro-brésilienne considérable — la plus grande hors d'Afrique — le pays maintient une hiérarchie raciale implicite où les travailleurs noirs sont cantonnés aux emplois les moins valorisés. Les Haïtiens ont été victimes de discriminations à l'embauche, dans le logement, et dans les rapports quotidiens. Des incidents xénophobes ont été documentés, notamment dans des villes du sud à tradition européenne comme Caxias do Sul.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        La récession économique brésilienne de 2015-2017 a frappé durement une communauté déjà fragile. Les licenciements dans la construction et dans l'industrie ont touché les travailleurs étrangers en premier. Face au chômage, beaucoup ont choisi de re-migrer vers le Chili, où le boom minier créait de la demande, ou vers l'Argentine. D'autres ont envisagé d'atteindre les États-Unis, empruntant la route venezuelienne à travers l'Amérique centrale — une décision qui conduira des milliers d'entre eux au campement de Del Rio, Texas, en 2021.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        La précarité du logement est une autre dimension de cette vulnérabilité. Beaucoup de migrants haïtiens vivent dans des logements collectifs surpeuplés — des <em>repúblicas</em> — où une chambre est partagée entre plusieurs travailleurs pour réduire les coûts. Ces conditions de vie compromettent la santé et rendent difficile la vie familiale normale. Les enfants qui grandissent dans ces environnements subissent des perturbations scolaires importantes.
+      </p>
+
+      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Culture et adaptation</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Les Églises évangéliques haïtiennes ont constitué le pilier institutionnel le plus important de la communauté au Brésil. Beaucoup de migrants, qu'ils aient toujours été évangéliques ou qu'ils se soient convertis après leur arrivée, ont trouvé dans ces communautés religieuses un soutien moral, des réseaux d'emploi informels et une structure sociale dans un environnement étranger. La foi est devenue un mécanisme de résilience collective, pas seulement individuelle.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Les réseaux de créole haïtien — groupes WhatsApp, pages Facebook, associations informelles — fonctionnent comme des agences d'emploi parallèles. Une offre de travail à Joinville circule en quelques heures dans les réseaux haïtiens de Porto Alegre et de Curitiba. Cette capacité d'auto-organisation, héritée d'une culture de débrouillardise forgée dans l'adversité, est l'un des traits les plus remarquables de la diaspora haïtienne partout dans le monde.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Les enfants haïtiens nés ou scolarisés au Brésil constituent la première génération d'une identité hybride : bilingues en portugais et en créole, imprégnés à la fois de la culture haïtienne transmise à la maison et de la culture brésilienne absorbée à l'école et dans la rue. Leur trajectoire sera déterminante pour la question de savoir si la présence haïtienne au Brésil deviendra une diaspora installée ou restera une population de passage.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Les échanges culturels brésilo-haïtiens sont réels, même s'ils restent asymétriques. Le football — passion commune — est un terrain de rencontre authentique. La musique haïtienne, le <em>konpa</em> notamment, a trouvé des oreilles brésiliennes. Inversement, le funk carioca et le forró ont pénétré les fêtes haïtiennes de São Paulo. Ces échanges culturels ne résolvent pas les inégalités structurelles, mais ils témoignent d'une vie sociale réelle et d'une intégration qui dépasse la simple insertion économique.
+      </p>
+
+      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Dimension politique et humanitaire</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Le visa humanitaire brésilien de 2012 est devenu un modèle de référence pour la politique migratoire latino-américaine. Le Chili et l'Équateur ont adopté des mécanismes similaires dans les années suivantes pour gérer leurs propres flux haïtiens. Cette innovation juridique brésilienne a montré qu'il était possible de régulariser des situations migratoires hors du cadre strict de la Convention de Genève sur les réfugiés, en créant une catégorie intermédiaire adaptée aux catastrophes naturelles et à la désorganisation étatique.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        En septembre 2021, la crise de Del Rio, Texas, a braqué les projecteurs sur le phénomène de la re-migration haïtienne. Plus de 15 000 Haïtiens — dont beaucoup avaient vécu au Brésil ou au Chili pendant des années — campèrent sous le pont international de Del Rio dans des conditions inhumaines. L'administration Biden utilisa le Titre 42 (mesure sanitaire héritée de la période COVID) pour expulser des milliers d'entre eux directement vers Haïti, un pays qu'ils avaient quitté dix ans plus tôt et qu'ils ne connaissaient plus.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+        Ces expulsions furent largement critiquées : elles renvoyaient vers un pays en crise politique aiguë (l'assassinat du président Moïse venait d'avoir lieu en juillet 2021) des personnes qui avaient reconstruit leur vie ailleurs et dont les enfants, souvent nés au Brésil ou au Chili, détenaient des citoyennetés étrangères. La brutalité des images — des agents à cheval de la Border Patrol utilisant des rênes comme fouets — provoqua une indignation internationale et la démission du représentant spécial américain pour Haïti, Daniel Foote.
+      </p>
+
+      <aside class="researcher-note" aria-label="Note de recherche">
+        <strong>Note de recherche — Le phénomène de l'échelle migratoire :</strong> La trajectoire Haïti → Brésil → Chili → États-Unis illustre ce que les chercheurs en migrations appellent une « échelle migratoire » : chaque étape constitue à la fois une installation provisoire et un tremplin vers une destination perçue comme plus stable ou plus prospère. Ce que ce schéma révèle avant tout, c'est l'extraordinaire capacité d'adaptation des migrants haïtiens — capables d'apprendre le portugais, puis l'espagnol, de s'intégrer dans des marchés du travail successifs, de reconstruire des réseaux sociaux depuis zéro. Il révèle également, et de façon accablante, l'échec collectif des pays d'accueil à offrir une protection durable. Aucun des pays de cette chaîne — Brésil, Chili, États-Unis — n'a proposé de mécanisme de stabilisation à long terme. Les Haïtiens ont continué à bouger parce que chaque station de l'échelle s'est révélée, à terme, insuffisamment sûre ou viable.
+      </aside>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            République d'Haïti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+            <li><a href="encyclopedia.html">Encyclopédie</a></li>
+            <li><a href="archives.html">Archives</a></li>
+            <li><a href="bibliography.html">Bibliographie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Culture &amp; Société</h4>
+          <ul>
+            <li><a href="culture.html">Culture &amp; Arts</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastronomie</a></li>
+            <li><a href="culture-vivante.html">Culture Vivante</a></li>
+            <li><a href="creativite-populaire.html">Créativité Populaire</a></li>
+            <li><a href="diaspora-engagee.html">Diaspora Engagée</a></li>
+            <li><a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire &amp; Institutions</h4>
+          <ul>
+            <li><a href="timeline.html">Chronologie</a></li>
+            <li><a href="heroes.html">Héros Nationaux</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="constitution.html">Constitution</a></li>
+            <li><a href="institutions.html">Institutions</a></li>
+            <li><a href="patrimoine-national.html">Patrimoine National</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+            <li><a href="license.html">Mentions L&eacute;gales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est n&eacute; d&apos;une frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti sont &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les sources ha&iuml;tiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pendant.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
+</body>
+</html>
