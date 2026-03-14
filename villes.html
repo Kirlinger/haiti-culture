@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Les Villes d'Haïti | RépubliqueHaïti.org</title>
+  <meta name="description" content="Un panorama des villes et communes haïtiennes — leur histoire, leur identité culturelle, leur rôle dans la géographie nationale." />
+  <meta name="author" content="RépubliqueHaïti.org" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+              <a href="institutions.html">Institutions</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Société ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture-vivante.html">Culture Vivante</a>
+              <a href="creativite-populaire.html">Créativité Populaire</a>
+              <a href="diaspora-engagee.html">Diaspora Engagée</a>
+              <a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a>
+              <a href="memoire-universelle.html">Mémoire Universelle</a>
+              <a href="patrimoine-national.html">Patrimoine National</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Enjeux ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Fragilité Économique</a>
+              <a href="inegalites-sociales.html">Inégalités Sociales</a>
+              <a href="instabilite-politique.html">Instabilité Politique</a>
+              <a href="pressions-securitaires.html">Pressions Sécuritaires</a>
+              <a href="services-essentiels.html">Services Essentiels</a>
+              <a href="capacite-adaptation.html">Capacité d'Adaptation</a>
+              <a href="reconstruction-durable.html">Reconstruction Durable</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+              <a href="bibliography.html">Bibliographie</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Géographie</p>
+      <h1 class="page-hero__title">Les Villes d'Haïti</h1>
+      <p class="page-hero__desc">Un panorama des villes et communes haïtiennes — leur histoire, leur identité culturelle, leur rôle dans la géographie nationale.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <span>Villes d'Haïti</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Organisation territoriale</p>
+      <h2>Géographie administrative et urbaine</h2>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        Haïti est organisée en dix départements géographiques — Artibonite, Centre, Grand'Anse, Nippes, Nord, Nord-Est, Nord-Ouest, Ouest, Sud et Sud-Est — eux-mêmes subdivisés en arrondissements, puis en communes. Le pays compte environ 145 communes, dont la superficie et la population varient considérablement. Cette architecture administrative reflète en partie les découpages coloniaux français, en partie les reconfigurations de l'État haïtien au XIXe siècle, et en partie des réalités géographiques — massifs montagneux, péninsules, plaines irrigables — qui ont toujours conditionné les équilibres régionaux.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:2.5rem;">
+        Le contraste le plus saillant de la géographie urbaine haïtienne est la domination écrasante de Port-au-Prince. Avec une aire métropolitaine de près de 3,5 millions d'habitants — sur une population nationale d'environ 11 millions — la capitale concentre une part disproportionnée des institutions publiques, des universités, des hôpitaux de référence, des activités commerciales et des flux migratoires internes. Cette primauté urbaine n'est pas une exception haïtienne ; c'est un phénomène courant dans les pays à développement inégal. Mais elle atteint en Haïti une intensité particulière, héritée de siècles de centralisation politique et aggravée par les catastrophes successives qui ont dépeuplé les régions et grossi les bidonvilles de la capitale.
+
+      </p>
+
+      <aside class="researcher-note" aria-label="Note de recherche">
+        La domination de Port-au-Prince sur la vie nationale haïtienne est à la fois une réalité démographique et une pathologie politique. Les présidents ont été élus et renversés dans la capitale ; les crises ont rarement eu d'écho national proportionnel à leur impact réel sur les provinces. Les villes secondaires — Cap-Haïtien, Gonaïves, Les Cayes — ont souvent eu des dynamiques politiques propres que les récits centrés sur Port-au-Prince ne restituent pas fidèlement. Écrire une histoire urbaine d'Haïti qui ne soit pas une histoire de la capitale est un chantier historiographique à peine commencé.
+      </aside>
+
+      <!-- ==================== GRANDES VILLES ==================== -->
+      <p class="section-label" style="margin-top:3rem;">Les Grandes Villes</p>
+      <h2>Portraits urbains</h2>
+
+      <!-- Port-au-Prince -->
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Port-au-Prince</h3>
+          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Fondée 1749 · Capitale · Département de l'Ouest</p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Port-au-Prince fut fondée en 1749 par les autorités coloniales françaises sur les bords d'une baie naturelle du golfe de la Gonâve — un site choisi pour ses avantages portuaires plutôt que pour sa topographie, qui rendait difficile toute expansion urbaine rationalisée. La ville devint rapidement le centre administratif de la colonie de Saint-Domingue, rivalisant avec Cap-Français pour l'influence politique et commerciale. Après l'indépendance de 1804, elle fut confirmée comme capitale de la nouvelle République d'Haïti.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Au cours du XXe siècle, Port-au-Prince connut une expansion urbaine rapide et largement non planifiée. Cité Soleil — aujourd'hui l'un des quartiers les plus densément peuplés de l'hémisphère occidental — s'est développée à partir des années 1960. Pétionville, dans les hauteurs, est devenue la résidence des classes supérieures et de la communauté internationale. Tabarre abrite les infrastructures diplomatiques et onusiennes. Le Champ de Mars constituait le centre civique de la ville, avec le Palais National — symbole de la souveraineté haïtienne — jusqu'au séisme du 12 janvier 2010.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Ce séisme de magnitude 7,0 tua entre 100 000 et 300 000 personnes selon les estimations (les chiffres restent débattus), en détruisant le Palais National, la Cathédrale de Port-au-Prince — dont les ruines sont restées en place comme mémorial involontaire — et des quartiers entiers. Port-au-Prince avant 2010 et Port-au-Prince après 2010 sont deux villes superposées dans la même topographie : l'une dans les archives photographiques et les mémoires personnelles, l'autre en reconstruction permanente.
+          </p>
+          <p style="font-size:14px;font-style:italic;color:var(--blue,#0038A8);margin-bottom:0.5rem;"><a href="port-au-prince.html">→ Page complète sur Port-au-Prince</a></p>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Fondée 1749 par les Français</li>
+              <li>· Capitale depuis l'indépendance (1804)</li>
+              <li>· ~3,5 millions d'hab. (aire métropolitaine)</li>
+              <li>· Département de l'Ouest</li>
+              <li>· Séisme dévastateur : 12 janvier 2010</li>
+              <li>· Quartiers : Cité Soleil, Pétionville, Tabarre</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cap-Haïtien -->
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Cap-Haïtien</h3>
+          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Fondée 1670 · Capitale culturelle du Nord · Département du Nord</p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Cap-Haïtien — fondée en 1670 sous le nom de Cap-Français — fut pendant l'ère coloniale la capitale administrative de Saint-Domingue et l'une des villes les plus prospères des Amériques. On la surnommait « la Paris des Antilles » : ses théâtres, ses salons, sa vie intellectuelle et commerciale attiraient des visiteurs de toute l'Europe. C'est dans sa plaine que la révolution haïtienne éclata en août 1791, et c'est en face de ses côtes que l'armée de Napoléon, ravagée par la fièvre jaune et les combats, commença à se désintégrer.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            C'est à Cap-Haïtien — ou dans ses environs immédiats — que Dessalines proclama l'indépendance d'Haïti le 1er janvier 1804. La ville conserve aujourd'hui une architecture coloniale partiellement préservée, notable dans le contexte caribéen où les destructions successives ont effacé la plupart des bâtiments d'époque. Elle est le principal point de départ pour les visiteurs qui souhaitent accéder à la Citadelle Laferrière et au Palais Sans-Souci, inscrits au patrimoine mondial de l'UNESCO — les deux monuments les plus impressionnants du patrimoine bâti haïtien.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Avec environ 300 000 habitants, Cap-Haïtien est la deuxième ville du pays. Elle revendique avec une certaine fierté régionale son statut de capitale culturelle et historique du Nord — une identité qui entre parfois en tension symbolique avec la domination politique de Port-au-Prince.
+          </p>
+          <p style="font-size:14px;font-style:italic;color:var(--blue,#0038A8);margin-bottom:0.5rem;"><a href="cap-haitien.html">→ Page complète sur Cap-Haïtien</a></p>
+        </div>
+        <div>
+          <div style="background:var(--red,#D21034);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:#fff;text-transform:uppercase;margin-bottom:1rem;opacity:0.8;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Fondée 1670 comme Cap-Français</li>
+              <li>· « Paris des Antilles » à l'époque coloniale</li>
+              <li>· Berceau de la révolution haïtienne (1791)</li>
+              <li>· Proclamation d'indépendance (1er jan. 1804)</li>
+              <li>· Accès à la Citadelle Laferrière (UNESCO)</li>
+              <li>· ~300 000 habitants</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gonaïves -->
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Gonaïves</h3>
+          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Cité de l'Indépendance · Département de l'Artibonite</p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Gonaïves porte le titre de « Cité de l'Indépendance » : c'est dans cette ville de l'Artibonite que Jean-Jacques Dessalines proclama officiellement l'indépendance d'Haïti le 1er janvier 1804, mettant fin à deux siècles de colonisation française et à près de deux siècles d'esclavage transatlantique sur l'île. Ce moment fondateur — qui fit d'Haïti la première République noire du monde et la seule colonie à avoir obtenu son indépendance par la révolution des esclaves — est la raison pour laquelle Gonaïves occupe une place symbolique sans équivalent dans la mémoire nationale.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Avec environ 300 000 habitants, Gonaïves est la troisième ville du pays. Située dans une plaine basse et vulnérable aux inondations, elle a été frappée de manière répétée par des catastrophes naturelles, dont les ouragans de 2004 (Jeanne) et 2008 (Ike, Hanna, Gustav) qui causèrent des milliers de morts et détruisirent des infrastructures que la ville peine encore à reconstruire. Cette vulnérabilité géographique est aggravée par la déforestation de l'arrière-pays et l'insuffisance chronique des investissements publics dans la région.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Malgré ces difficultés économiques et environnementales, son rôle dans la mémoire nationale demeure intact. Chaque 1er janvier, Gonaïves est le centre des commémorations nationales de l'indépendance — un moment de fierté collective qui transcende les divisions politiques ordinaires.
+          </p>
+          <p style="font-size:14px;font-style:italic;color:var(--blue,#0038A8);margin-bottom:0.5rem;"><a href="gonaives.html">→ Page complète sur Gonaïves</a></p>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Proclamation de l'indépendance, 1er jan. 1804</li>
+              <li>· « Cité de l'Indépendance »</li>
+              <li>· ~300 000 habitants</li>
+              <li>· Département de l'Artibonite</li>
+              <li>· Inondations majeures : 2004, 2008</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Les Cayes -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Les Cayes</strong> — Capitale du département du Sud, Les Cayes est une ville portuaire fondée au XVIIe siècle dont l'histoire économique est indissociable du café et du cacao — deux cultures qui ont longtemps fait de la région l'une des plus productives du pays. La ville et sa région furent le théâtre du soulèvement des Piquets (1843-1848), mouvement paysan et de basse extraction sociale mené par Louis Jean-Jacques Acaau, qui contestait l'ordre politique mulâtre issu de la période post-révolutionnaire. Le Massacre de Cayes de 1869, lors des troubles politiques qui entourèrent la présidence de Nissage Saget, rappelle que cette ville côtière n'a jamais été à l'écart des convulsions de l'histoire nationale. <a href="les-cayes.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sur Les Cayes</a>
+      </p>
+
+      <!-- Jacmel -->
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Jacmel</h3>
+          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Fondée 1698 · Joyau culturel du Sud · Département du Sud-Est</p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Jacmel est peut-être la ville haïtienne dont le caractère est le plus immédiatement saisissable pour un visiteur extérieur. Ses maisons à balcons de fer forgé, héritées de l'architecture victorienne du XIXe siècle — certaines parmi les plus belles du monde caribéen — lui confèrent une physionomie unique. Fondée en 1698, elle fut l'un des ports les plus actifs de l'île pour l'exportation du café, et sa prospérité coloniale puis post-révolutionnaire se lit encore dans la taille et l'ornement de ses demeures bourgeoises.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Jacmel est aussi un centre artistique reconnu. Le peintre naïf Préfète Duffaut, dont les toiles représentent une Jacmel imaginaire en colimaçons et spirales, a contribué à inscrire la ville dans la cartographie de l'art haïtien. Le Carnaval de Jacmel — organisé en février, quelques semaines avant celui de Port-au-Prince — est considéré par beaucoup comme le plus élaboré et le plus authentiquement artisanal d'Haïti : ses mascarons en papier mâché, ses chars à thèmes historiques et ses processions nocturnes ont une qualité théâtrale que les carnavals plus spectaculaires de la capitale n'égalent pas nécessairement.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Le séisme de 2010 a touché Jacmel de manière significative, détruisant plusieurs des bâtiments historiques du centre-ville. Une partie du patrimoine architectural a été préservée ou est en cours de restauration, mais la vulnérabilité de ce tissu urbain irremplaçable reste une préoccupation constante pour les acteurs du patrimoine.
+          </p>
+          <p style="font-size:14px;font-style:italic;color:var(--blue,#0038A8);margin-bottom:0.5rem;"><a href="jacmel.html">→ Page complète sur Jacmel</a></p>
+        </div>
+        <div>
+          <div style="background:var(--red,#D21034);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:#fff;text-transform:uppercase;margin-bottom:1rem;opacity:0.8;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Fondée 1698</li>
+              <li>· Architecture victorienne, balcons de fer forgé</li>
+              <li>· Port caféier historique</li>
+              <li>· Carnaval : le plus artisanal d'Haïti</li>
+              <li>· Centre artistique (Préfète Duffaut)</li>
+              <li>· ~200 000 habitants</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jérémie -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Jérémie — La Cité des Poètes</strong> — Capitale du département de la Grand'Anse, Jérémie porte le surnom de « Cité des Poètes » avec une légitimité que peu de villes caribéennes peuvent revendiquer. C'est dans cette ville — ou dans ses environs — que naquit le père d'Alexandre Dumas, Thomas-Alexandre Davy de la Pailleterie, dit Dumas père, dont le fils Alexandre Dumas allait devenir l'un des romanciers les plus lus du XIXe siècle français. Cette ascendance haïtienne de Dumas est encore mal connue du grand public francophone. Jérémie est accessible principalement par avion ou par mer, ce qui l'a longtemps isolée économiquement tout en préservant son caractère distinct — une ville de lettres et d'intériorité, à l'écart des flux de la mondialisation. <a href="jeremie.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sur Jérémie</a>
+      </p>
+
+      <!-- Hinche -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Hinche</strong> — Capitale du département du Centre, Hinche est le cœur du plateau central haïtien, une région agricole et d'élevage qui fut l'un des territoires les plus affectés par l'occupation américaine de 1915-1934. Les autorités d'occupation américaine démantelèrent les structures d'exploitation paysanne traditionnelles pour les remplacer par des domaines d'élevage extensif au bénéfice de la HASCO et d'autres compagnies américaines — expulsant des paysans haïtiens de leurs terres pour nourrir des marchés nord-américains. Cette spoliation est l'une des sources documentées de la résistance paysanne qui culmina dans la guérilla cacos, notamment sous le commandement de Charlemagne Péralte. <a href="hinche.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sur Hinche</a>
+      </p>
+
+      <!-- Saint-Marc -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Saint-Marc</strong> — Ville portuaire de l'Artibonite, Saint-Marc est l'un des centres commerciaux provinciaux les plus actifs d'Haïti. Son port joue un rôle significatif dans la distribution des marchandises vers les villes de l'intérieur. Historiquement, elle fut l'une des villes les plus prospères de la province au XIXe siècle, et le théâtre de l'affaire Bagabosse de 1908 — un épisode de violence politique révélateur des tensions entre factions régionales qui structuraient la vie politique haïtienne de l'époque. <a href="saint-marc.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sur Saint-Marc</a>
+      </p>
+
+      <!-- Miragoâne -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Miragoâne</strong> — Capitale du département des Nippes, Miragoâne est un port de la péninsule méridionale dont l'histoire économique est liée à l'exportation du café et du bois. Historiquement importante dans les circuits commerciaux de la côte sud, elle est aujourd'hui l'une des villes moyennes haïtiennes confrontées aux défis communs de l'enclavement relatif, du manque d'investissements infrastructurels et de la fragmentation administrative. <a href="miragoane.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sur Miragoâne</a>
+      </p>
+
+      <!-- Fort-Liberté -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:2.5rem;">
+        <strong>Fort-Liberté</strong> — Fondée en 1731 sous le nom de Fort-Dauphin, cette ville du Nord-Est est l'une des cités haïtiennes qui conserve le mieux les traces de son architecture coloniale fortifiée. Elle fut le théâtre de combats significatifs pendant la Révolution haïtienne, et le lieu de plusieurs épisodes de brutalité documentée — dont le massacre organisé par Dessalines en 1805, événement complexe et controversé que l'historiographie haïtienne n'a pas encore pleinement intégré. Sa baie naturelle est l'une des mieux préservées du pays. <a href="fort-liberte.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sur Fort-Liberté</a>
+      </p>
+
+      <!-- ==================== VILLES ET MÉMOIRE ==================== -->
+      <p class="section-label" style="margin-top:2rem;">Géographie de la mémoire</p>
+      <h2>Villes et Mémoire nationale</h2>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        Les villes haïtiennes ne sont pas seulement des entités administratives ou des centres économiques : elles sont des lieux de mémoire au sens que Pierre Nora a donné à cette expression — des espaces où la nation se souvient d'elle-même, négocie son passé, fabrique ses mythes fondateurs. Chaque grande ville haïtienne encode un moment ou un registre particulier de l'identité nationale.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Cap-Haïtien</strong> est la mémoire de la colonisation et de la révolution — la ville qui a vu naître et s'effondrer l'ordre colonial français, et dans laquelle l'indépendance a été proclamée. Elle est à la fois le symbole de ce qu'Haïti a détruit pour naître et de ce que cette naissance a coûté. La Citadelle Laferrière, visible depuis ses environs, est un monument à la fois à la liberté et à la paranoïa du pouvoir : Henri Christophe la fit construire pour défendre une indépendance déjà acquise contre une reconquête qui ne vint jamais.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Gonaïves</strong> est la mémoire de la rupture fondatrice — le 1er janvier 1804, le moment où un peuple anciennement réduit en esclavage déclara sa liberté au monde. Chaque cérémonie nationale haïtienne revient à Gonaïves comme à un point d'origine irréductible. Dans les périodes de crise politique, les leaders qui se rendent à Gonaïves font un geste symbolique de retour aux sources — légitime ou instrumentalisé selon les circonstances.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Jacmel</strong> est la mémoire de la culture et de l'art — la ville qui a su préserver une continuité esthétique dans un pays traversé par des discontinuités politiques violentes. Son carnaval, son architecture, ses peintres naïfs représentent une autre façon d'être haïtien : plus contemplatif, plus artisanal, moins épique. C'est une contre-mémoire dans un pays dont les mémoires officielles sont presque toujours militaires.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Jérémie</strong> est la mémoire de la littérature et de l'intériorité — la ville qui a produit des écrivains et des poètes, qui a maintenu une tradition intellectuelle indépendante malgré son isolement géographique. Dans un pays où l'écriture a souvent été un acte politique, la vocation littéraire de Jérémie est aussi une forme de résistance — la résistance de ceux qui choisissent les mots plutôt que les armes pour dire ce qu'est Haïti.
+      </p>
+
+      <aside class="researcher-note" aria-label="Note de recherche">
+        Écrire l'histoire urbaine d'Haïti se heurte à un obstacle documentaire considérable : la destruction répétée des archives municipales. Le grand incendie du Cap-Français en 1793, lors de la Révolution, détruisit une part irremplaçable des registres coloniaux du Nord. Le séisme du 12 janvier 2010 détruisit ou dispersa des décennies d'archives de Port-au-Prince, de Jacmel et d'autres villes du Sud et de l'Ouest. Entre les deux, les troubles politiques répétés — incendies, pillages, destructions délibérées lors des changements de régime — ont fragmenté le tissu documentaire de pratiquement toutes les villes haïtiennes. Écrire l'histoire locale d'Haïti oblige donc à une archéologie de sources dispersées : presse ancienne conservée à l'étranger (Bibliothèque nationale de France, Library of Congress), mémoires personnelles, archives notariales partiellement conservées, enquêtes orales. C'est un travail nécessaire et encore largement à faire.
+      </aside>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            République d'Haïti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+            <li><a href="encyclopedia.html">Encyclopédie</a></li>
+            <li><a href="archives.html">Archives</a></li>
+            <li><a href="bibliography.html">Bibliographie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Culture &amp; Société</h4>
+          <ul>
+            <li><a href="culture.html">Culture &amp; Arts</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastronomie</a></li>
+            <li><a href="culture-vivante.html">Culture Vivante</a></li>
+            <li><a href="creativite-populaire.html">Créativité Populaire</a></li>
+            <li><a href="diaspora-engagee.html">Diaspora Engagée</a></li>
+            <li><a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire &amp; Institutions</h4>
+          <ul>
+            <li><a href="timeline.html">Chronologie</a></li>
+            <li><a href="heroes.html">Héros Nationaux</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="constitution.html">Constitution</a></li>
+            <li><a href="institutions.html">Institutions</a></li>
+            <li><a href="patrimoine-national.html">Patrimoine National</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+            <li><a href="license.html">Mentions L&eacute;gales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est n&eacute; d&apos;une frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti sont &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les sources ha&iuml;tiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pendant.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
+</body>
+</html>
