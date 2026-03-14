@@ -208,6 +208,8 @@
     { title: 'Services Essentiels', url: 'services-essentiels.html', section: 'Enjeux', keywords: 'services essentiels haïti eau potable santé éducation électricité hôpitaux écoles accès' },
     { title: 'Capacité d\'Adaptation', url: 'capacite-adaptation.html', section: 'Enjeux', keywords: 'résilience adaptation haïti séisme 2010 konbit sòl solidarité survie reconstruction communautaire' },
     { title: 'Reconstruction Durable', url: 'reconstruction-durable.html', section: 'Enjeux', keywords: 'reconstruction durable haïti développement institutions investissements responsables avenir solutions' },
+    // Bibliographie
+    { title: 'Bibliographie & Sources', url: 'bibliography.html', section: 'Portail', keywords: 'bibliographie sources références historiens haïtiens madiou ardouin trouillot price-mars fouchard casimir hurbon léger castor académique archives' },
   ];
 
   function initSearch() {
