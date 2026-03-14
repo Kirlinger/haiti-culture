@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Bibliographie Annotée sur Haïti | République d'Haïti</title>
+  <meta name="description" content="Un guide du lecteur annoté pour naviguer dans la littérature académique et littéraire sur Haïti. Chaque entrée explique ce que l'ouvrage couvre, sa perspective, et à qui il est le plus utile." />
+  <meta name="author" content="RépubliqueHaïti.org" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+  <style>
+    .bib-section { margin-bottom: 2.5rem; }
+    .bib-section h3 { color: var(--blue, #00209F); margin-bottom: 1rem; border-bottom: 2px solid var(--blue, #00209F); padding-bottom: 0.4rem; }
+    .bib-list { list-style: none; padding: 0; }
+    .bib-list li { padding: 0.75rem 0; border-bottom: 1px solid #e8e8e8; line-height: 1.7; }
+    .bib-list li:last-child { border-bottom: none; }
+    .bib-author { font-weight: 700; color: #1a1a2e; }
+    .bib-title { font-style: italic; }
+    .bib-note { font-size: 0.88rem; color: #666; display: block; margin-top: 0.25rem; }
+    .bib-tag { display: inline-block; font-size: 0.75rem; font-weight: 600; background: #e8eaf6; color: #3949ab; border-radius: 3px; padding: 0.1rem 0.5rem; margin-left: 0.5rem; vertical-align: middle; }
+    .research-note { background: #f0f4ff; border-left: 4px solid #00209F; padding: 1.2rem 1.5rem; border-radius: 0 6px 6px 0; margin-bottom: 2rem; }
+
+    /* Annotated bibliography specific styles */
+    .ann-category { margin-bottom: 3rem; }
+    .ann-category h2 { color: var(--blue, #00209F); font-size: clamp(20px,2.5vw,26px); border-bottom: 2px solid var(--blue, #00209F); padding-bottom: 0.4rem; margin-bottom: 0.5rem; }
+    .ann-category .cat-desc { font-size: 15px; color: #555; margin-bottom: 1.5rem; font-style: italic; }
+    .ann-entry { padding: 1.5rem 0; border-bottom: 1px solid #e8e8e8; }
+    .ann-entry:last-child { border-bottom: none; }
+    .ann-title { font-style: italic; font-size: 17px; font-weight: 700; color: #1a1a2e; }
+    .ann-meta { font-size: 13px; color: #888; margin: 0.2rem 0 0.7rem; }
+    .ann-desc { font-size: 15px; line-height: 1.8; margin-bottom: 0.5rem; }
+    .ann-for { font-size: 13px; color: #555; }
+    .ann-for strong { color: #00209F; }
+    .ann-level { display: inline-block; font-size: 0.72rem; font-weight: 700; border-radius: 3px; padding: 0.15rem 0.5rem; margin-left: 0.4rem; vertical-align: middle; }
+    .ann-level--intro { background:#e8f5e9; color:#2e7d32; }
+    .ann-level--inter { background:#fff3e0; color:#e65100; }
+    .ann-level--adv { background:#fce4ec; color:#880e4f; }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+              <a href="institutions.html">Institutions</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Société ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture-vivante.html">Culture Vivante</a>
+              <a href="creativite-populaire.html">Créativité Populaire</a>
+              <a href="diaspora-engagee.html">Diaspora Engagée</a>
+              <a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a>
+              <a href="memoire-universelle.html">Mémoire Universelle</a>
+              <a href="patrimoine-national.html">Patrimoine National</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Enjeux ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Fragilité Économique</a>
+              <a href="inegalites-sociales.html">Inégalités Sociales</a>
+              <a href="instabilite-politique.html">Instabilité Politique</a>
+              <a href="pressions-securitaires.html">Pressions Sécuritaires</a>
+              <a href="services-essentiels.html">Services Essentiels</a>
+              <a href="capacite-adaptation.html">Capacité d'Adaptation</a>
+              <a href="reconstruction-durable.html">Reconstruction Durable</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+              <a href="bibliography.html">Bibliographie</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Portail de Recherche</p>
+      <h1 class="page-hero__title">Bibliographie Annotée sur Haïti</h1>
+      <p class="page-hero__desc">
+        Un guide du lecteur — pas une simple liste — pour naviguer dans la littérature académique et littéraire sur Haïti.
+        Chaque entrée explique ce que l'ouvrage couvre, sa perspective, et à qui il est le plus utile.
+      </p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <span>Bibliographie Annotée</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="research-note">
+        <p><strong>Critères de sélection.</strong> Les ouvrages retenus ont été choisis pour leur rigueur académique, leur centralité dans les études haïtiennes, ou leur capacité exceptionnelle à rendre Haïti accessible aux lecteurs non spécialistes. La priorité est accordée aux sources écrites par des auteurs haïtiens. Les badges indiquent le niveau de lecture recommandé : <span class="ann-level ann-level--intro">Introductif</span> pour les débutants et le grand public, <span class="ann-level ann-level--inter">Intermédiaire</span> pour les étudiants et les lecteurs curieux ayant déjà quelques repères, <span class="ann-level ann-level--adv">Avancé</span> pour les chercheurs et spécialistes. Ce guide n'est pas exhaustif ; il vise à orienter, non à cataloguer.</p>
+      </div>
+
+      <!-- ============================================================
+           1. FONDEMENTS DE L'HISTOIRE HAÏTIENNE
+           ============================================================ -->
+      <div class="ann-category" id="fondements-histoire">
+        <p class="section-label">Catégorie 1</p>
+        <h2>Fondements de l'Histoire Haïtienne</h2>
+        <p class="cat-desc">
+          Ces ouvrages constituent le socle incontournable de l'historiographie haïtienne — des récits fondateurs
+          écrits dans la foulée des événements jusqu'aux synthèses modernes qui en renouvellent la lecture. Tout
+          lecteur sérieux sur la Révolution haïtienne finira par croiser chacun de ces titres.
+        </p>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Histoire d'Haïti</span>
+            <span class="ann-level ann-level--adv">Avancé</span>
+          </div>
+          <p class="ann-meta">Thomas Madiou · 8 volumes · Imprimerie de J. Courtois, Port-au-Prince, 1847–1848 (réédition Henri Deschamps, 1987–1991)</p>
+          <p class="ann-desc">
+            Première grande histoire narrative d'Haïti rédigée par un Haïtien, l'<em>Histoire d'Haïti</em> de Thomas Madiou demeure un monument incontournable pour tout chercheur s'intéressant à la période révolutionnaire et aux premières décennies de l'indépendance. Madiou écrit dans la mémoire vivante des événements — il recueille des témoignages directs de participants à la Révolution — ce qui lui confère une valeur de source primaire autant que d'analyse. Son récit est forcément partial : Madiou est un fils d'élite mulâtre et cela teinte sa lecture de Dessalines notamment. Mais la densité factuelle, l'ampleur de la couverture chronologique (de 1492 à 1843) et la qualité de l'écriture en font une référence irremplaçable. La réédition des années 1980 est plus accessible que les originaux du XIXe siècle. Lire Madiou, c'est entendre une voix haïtienne du XIXe siècle parler à ses contemporains de ce qu'ils venaient de vivre ensemble.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> chercheurs en histoire haïtienne, historiens comparatistes, spécialistes des révolutions atlantiques.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Études sur l'Histoire d'Haïti</span>
+            <span class="ann-level ann-level--adv">Avancé</span>
+          </div>
+          <p class="ann-meta">Beaubrun Ardouin · 11 volumes · Dezobry et Magdeleine, Paris, 1853–1860</p>
+          <p class="ann-desc">
+            Ardouin, sénateur et diplomate, apporte une perspective institutionnelle et politique que Madiou, plus narratif, ne développe pas avec autant de rigueur. Les deux hommes se détestaient cordialement et ne s'accordaient pas sur Dessalines : Madiou est plus favorable au fondateur de la nation ; Ardouin, représentant de l'élite du Sud, tend à le noircir. Lire les deux en parallèle est une leçon de méthode historique — la même révolution vue par deux contemporains haïtiens donne deux récits profondément différents. Les <em>Études</em> couvrent la période coloniale, la Révolution et les premières décennies post-indépendance avec un souci du détail institutionnel qui reste précieux pour les historiens du droit et des institutions. L'ensemble des onze volumes est dense et exige un lecteur patient. Ardouin est indispensable, pas forcément agréable.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> chercheurs en histoire politique et institutionnelle d'Haïti, historiens comparant les récits fondateurs.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">The Haitian Revolution, 1789–1804</span>
+            <span class="ann-level ann-level--intro">Introductif</span>
+          </div>
+          <p class="ann-meta">Thomas Ott · University of Tennessee Press, 1973</p>
+          <p class="ann-desc">
+            Synthèse solide et fiable de la période révolutionnaire en anglais, utile pour les lecteurs anglophones qui abordent le sujet pour la première fois. Ott s'appuie sur les sources secondaires disponibles à son époque et offre un récit chronologique clair des principaux événements de 1789 à 1804. L'ouvrage n'a pas la profondeur analytique de James ou la richesse archivistique de Dubois, mais il a l'avantage de la clarté et de la concision. Il reste une porte d'entrée honnête et bien construite pour les étudiants de premier cycle en histoire. Depuis sa parution, l'historiographie de la Révolution haïtienne s'est considérablement enrichie, et Ott doit être complété plutôt que lu seul.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> étudiants anglophones de premier cycle, enseignants du secondaire, journalistes souhaitant un cadrage factuel rapide.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">The Black Jacobins : Toussaint L'Ouverture and the San Domingo Revolution</span>
+            <span class="ann-level ann-level--inter">Intermédiaire</span>
+          </div>
+          <p class="ann-meta">C.L.R. James · Secker &amp; Warburg, Londres, 1938 (édition révisée : Vintage, New York, 1963)</p>
+          <p class="ann-desc">
+            Il serait difficile de surestimer l'importance de ce livre. James, intellectuel trinidadien marxiste, fut le premier à inscrire la Révolution haïtienne dans l'histoire mondiale — non comme une curiosité régionale mais comme l'événement révolutionnaire le plus radical de son siècle, précédant et conditionnant la décolonisation africaine. Son analyse de Toussaint comme figure tragique — pris entre la logique révolutionnaire et ses compromis avec la France — reste l'une des plus pénétrantes jamais écrites. L'appendice de 1963, rédigé à l'heure des indépendances africaines, place la Révolution haïtienne en dialogue direct avec Nkrumah et les luttes de libération nationale : c'est un chef-d'œuvre à part entière. Après 85 ans, <em>The Black Jacobins</em> reste essentiel non seulement pour comprendre Haïti, mais pour comprendre comment les opprimés font l'histoire.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> étudiants en sciences politiques et en histoire, lecteurs intéressés par les études postcoloniales et panafricaines, tout lecteur sérieux sur la Révolution.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Avengers of the New World : The Story of the Haitian Revolution</span>
+            <span class="ann-level ann-level--intro">Introductif</span>
+          </div>
+          <p class="ann-meta">Laurent Dubois · Belknap Press / Harvard University Press, Cambridge, 2004</p>
+          <p class="ann-desc">
+            La meilleure synthèse moderne de la Révolution haïtienne en anglais, et probablement le livre le plus accessible pour un large public cultivé. Dubois, historien américain spécialiste du monde atlantique, travaille avec les archives françaises et haïtiennes et produit un récit à la fois rigoureux et remarquablement lisible. Il donne voix à des acteurs souvent absents des récits traditionnels — femmes, soldats ordinaires, gens de couleur libres — et situe la révolution dans les courants politiques et économiques de l'Atlantique du XVIIIe siècle. Le livre évite les deux pièges habituels : la glorification naïve et la condescendance exotisante. C'est un point de départ idéal avant d'aborder des textes plus analytiquement exigeants comme James.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> grand public, étudiants de premier cycle, enseignants, journalistes, quiconque commence à s'intéresser à Haïti.</p>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           2. HAÏTI POST-INDÉPENDANCE
+           ============================================================ -->
+      <div class="ann-category" id="post-independance">
+        <p class="section-label">Catégorie 2</p>
+        <h2>Haïti Post-Indépendance (XIXe–XXe siècle)</h2>
+        <p class="cat-desc">
+          La période 1804–1986 — de l'indépendance à la chute de Jean-Claude Duvalier — est couverte par des travaux
+          très inégaux en qualité et en accessibilité. Les ouvrages ci-dessous constituent les références analytiques
+          les plus solides pour comprendre la trajectoire politique et sociale du pays sur le long terme.
+        </p>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">From Dessalines to Duvalier : Race, Colour and National Independence in Haiti</span>
+            <span class="ann-level ann-level--inter">Intermédiaire</span>
+          </div>
+          <p class="ann-meta">David Nicholls · Cambridge University Press, 1979 (édition révisée : Macmillan, 1996)</p>
+          <p class="ann-desc">
+            C'est l'ouvrage analytique de référence sur la politique haïtienne de 1804 à l'ère Duvalier. Nicholls organise son analyse autour de la question des couleurs — le clivage entre les élites mulâtres et la classe politique noire — et démontre comment cette tension a structuré l'idéologie, les alliances et les conflits politiques sur un siècle et demi. Aucun autre volume unique n'atteint ce niveau de rigueur analytique sur cette période aussi longue. L'édition révisée de 1996 intègre les débats historiographiques des années 1980–1990. Nicholls n'est pas haïtien, mais son honnêteté intellectuelle et la finesse de son analyse compensent largement cette distance. C'est un livre que l'on relit différemment selon le moment où on l'ouvre.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> étudiants en sciences politiques et en histoire moderne, chercheurs en études caribéennes et africaines-américaines.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Éventail d'histoire vivante d'Haïti</span>
+            <span class="ann-level ann-level--adv">Avancé</span>
+          </div>
+          <p class="ann-meta">Leslie Manigat · 5 volumes · CHUDAC, Port-au-Prince, 2001–2007</p>
+          <p class="ann-desc">
+            Un monument d'érudition politique par un homme qui fut à la fois historien sérieux et acteur de l'histoire haïtienne — Leslie Manigat a été président d'Haïti pendant quelques mois en 1988, puis s'est retrouvé en exil. Cette double position — le chercheur et le témoin — donne à son œuvre une profondeur et parfois une tension singulière : on sent que l'historien ne peut toujours pas entièrement se détacher du politique. Les cinq volumes couvrent l'histoire politique, les institutions, les classes sociales et les partis avec une densité encyclopédique impressionnante. L'accès à ces volumes reste difficile en dehors d'Haïti et de certaines bibliothèques universitaires spécialisées. Pour le lecteur qui les trouve, c'est une mine.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> historiens spécialisés, chercheurs en science politique haïtienne, lecteurs ayant déjà une solide connaissance du sujet.</p>
+        </div>
+
+        <aside class="research-note" aria-label="Note de recherche">
+          <p><strong>Note sur le contexte politique des sources.</strong> Plusieurs ouvrages de référence sur l'histoire haïtienne ont été écrits en exil : Manigat rédigeait depuis Caracas et Trinidad, Suzy Castor depuis Mexico. Ce contexte façonne inévitablement leur rapport aux sources disponibles et leur positionnement dans les débats internes haïtiens. Ce n'est pas une raison de les disqualifier — c'est une raison de les lire en conscience.</p>
+        </aside>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Histoire du peuple haïtien (1492–1952)</span>
+            <span class="ann-level ann-level--inter">Intermédiaire</span>
+          </div>
+          <p class="ann-meta">Dantès Bellegarde · Lausanne, 1953</p>
+          <p class="ann-desc">
+            Dantès Bellegarde est le grand diplomate-historien haïtien du XXe siècle — représentant d'Haïti à la Société des Nations, figure respectée sur la scène internationale. Son <em>Histoire du peuple haïtien</em> est une synthèse écrite pour un public international cultivé, avec le souci de présenter Haïti de manière digne et rigoureuse dans un contexte où les représentations extérieures étaient souvent condescendantes ou caricaturales. Le ton est parfois un peu apologétique — Bellegarde cherche à convaincre un lecteur occidental — mais la qualité analytique reste haute. C'est une fenêtre précieuse sur ce que l'élite haïtienne pensait d'elle-même et de son histoire au milieu du XXe siècle. À lire avec Trouillot pour en mesurer les angles morts.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> étudiants en histoire diplomatique, lecteurs s'intéressant à la représentation d'Haïti dans le contexte de la décolonisation.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Haiti in the World Economy : Class, Race and Underdevelopment since 1700</span>
+            <span class="ann-level ann-level--inter">Intermédiaire</span>
+          </div>
+          <p class="ann-meta">Alex Dupuy · Westview Press, Boulder, 1989</p>
+          <p class="ann-desc">
+            Dupuy, sociologue haïtiano-américain, applique le cadre de la théorie de la dépendance à l'histoire politique et économique haïtienne depuis la période coloniale. Son argument central est que la pauvreté haïtienne n'est pas le produit de facteurs culturels internes mais de son insertion structurelle dans l'économie mondiale — dette coloniale, occupation américaine, investissements extractifs. C'est la meilleure analyse disponible des mécanismes par lesquels les pressions extérieures ont façonné les politiques internes. Le cadre théorique est clairement marqué, mais l'argumentation empirique est solide. Un contrepoids nécessaire aux lectures culturalistes de la situation haïtienne.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> étudiants en économie politique, sociologie du développement, études caribéennes.</p>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           3. SOCIÉTÉ, CULTURE ET ANTHROPOLOGIE
+           ============================================================ -->
+      <div class="ann-category" id="societe-culture">
+        <p class="section-label">Catégorie 3</p>
+        <h2>Société, Culture et Anthropologie</h2>
+        <p class="cat-desc">
+          L'anthropologie haïtienne produit certains des travaux les plus novateurs des études caribéennes.
+          Cette catégorie regroupe des ouvrages qui portent sur la culture populaire, le Vodou, la paysannerie
+          et les structures sociales — un domaine où Haïtiens et étrangers ont produit des œuvres fondamentales.
+        </p>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Ainsi parla l'oncle : Essais d'ethnographie</span>
+            <span class="ann-level ann-level--inter">Intermédiaire</span>
+          </div>
+          <p class="ann-meta">Jean Price-Mars · Imprimerie de Compiègne, 1928 (réédition : Leméac, Montréal, 1973)</p>
+          <p class="ann-desc">
+            Ce livre a changé la manière dont les intellectuels haïtiens pensaient leur propre culture. Price-Mars, médecin et diplomate formé à Paris, publie en 1928 un manifeste ethnographique qui réhabilite le Vodou, les pratiques paysannes et l'héritage africain contre le mépris des élites haïtiennes francophones qui se définissaient essentiellement par rapport à la France. Le concept central — le <em>bovarysme collectif</em> d'une élite qui se prend pour ce qu'elle n'est pas — reste l'une des formulations les plus justes de la schizophrénie identitaire haïtienne. L'<em>Oncle</em> a directement inspiré la Négritude de Césaire et Senghor. C'est un texte fondateur non seulement pour Haïti mais pour la pensée afro-diasporique du XXe siècle.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> étudiants en anthropologie culturelle, études postcoloniales, francophonie, histoire des idées.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Le Vaudou haïtien</span>
+            <span class="ann-level ann-level--inter">Intermédiaire</span>
+          </div>
+          <p class="ann-meta">Alfred Métraux · Gallimard, Paris, 1958 (Bibliothèque des sciences humaines)</p>
+          <p class="ann-desc">
+            L'étude ethnographique la plus rigoureuse jamais produite sur le Vodou haïtien reste ce livre d'un anthropologue suisse qui passa plusieurs années en Haïti, notamment dans la vallée de Marbial, en collaboration avec l'ethnologue haïtien Lorimer Denis. Métraux décrit avec précision les rituels, les lwa, les cérémonies, les objets de culte et les structures sociales du Vodou sans le condescendance exotisante ni la fascination romantique qui caractérisent nombre d'études contemporaines. Le livre montre le Vodou comme un système religieux cohérent, ancré dans l'histoire et dans des conditions sociales précises. Malgré son âge, il reste la référence standard — tout chercheur sur le Vodou doit commencer ici.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> étudiants en anthropologie religieuse, chercheurs sur les religions africaines-américaines, quiconque veut comprendre le Vodou sérieusement.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Mama Lola : A Vodou Priestess in Brooklyn</span>
+            <span class="ann-level ann-level--intro">Introductif</span>
+          </div>
+          <p class="ann-meta">Karen McCarthy Brown · University of California Press, Berkeley, 1991</p>
+          <p class="ann-desc">
+            Brown, anthropologue américaine, suit pendant deux décennies une mambo haïtienne — Mama Lola, de son vrai nom Alourdes Margaux — dans son temple du quartier de Flatbush à Brooklyn. La méthode est délibérément immersive : Brown finit elle-même par être initiée et pratiquante. Ce choix méthodologique, qui a fait débat dans la discipline, produit un livre extraordinaire sur ce que le Vodou signifie concrètement dans la vie des gens — comment il gère les angoisses, soude les familles, donne sens aux épreuves. C'est la meilleure introduction à la dimension vécue du Vodou, en particulier dans le contexte de la diaspora haïtienne américaine. Plus accessible que Métraux, plus ancré dans la pratique que la plupart des études théoriques.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> grand public, étudiants en anthropologie, enseignants souhaitant aborder le Vodou de manière non caricaturale.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Caribbean Transformations</span>
+            <span class="ann-level ann-level--adv">Avancé</span>
+          </div>
+          <p class="ann-meta">Sidney Mintz · Aldine, Chicago, 1974</p>
+          <p class="ann-desc">
+            Mintz, anthropologue américain spécialiste de la Caraïbe et coauteur avec Eric Wolf de travaux fondateurs sur les plantations, rassemble dans ce recueil des analyses qui éclairent de manière indirecte mais essentielle l'économie paysanne haïtienne. Le chapitre sur les marchés ruraux caribéens et le rôle des femmes dans le commerce reste une des meilleures analyses structurelles de l'économie informelle dans la Caraïbe. Pour comprendre le monde paysan haïtien — les <em>madan sara</em>, les marchés, la polyculture — Mintz offre des outils conceptuels que peu d'autres ont égalés. Ce n'est pas un livre sur Haïti uniquement, mais il est plus utile pour comprendre Haïti que beaucoup de livres spécifiquement haïtiens.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> anthropologues, économistes s'intéressant aux marchés informels, chercheurs en études caribéennes comparatives.</p>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           4. RACE ET IDENTITÉ
+           ============================================================ -->
+      <div class="ann-category" id="race-identite">
+        <p class="section-label">Catégorie 4</p>
+        <h2>La Question de la Race et de l'Identité</h2>
+        <p class="cat-desc">
+          Haïti est au cœur de certaines des réflexions les plus importantes sur la race, l'identité et l'histoire
+          dans la pensée atlantique. Ces ouvrages s'attaquent directement à la manière dont la race a été construite,
+          instrumentalisée et combattue — et comment Haïti est systématiquement mal représentée dans l'historiographie occidentale.
+        </p>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">De l'égalité des races humaines : Anthropologie positive</span>
+            <span class="ann-level ann-level--inter">Intermédiaire</span>
+          </div>
+          <p class="ann-meta">Anténor Firmin · F. Pichon, Paris, 1885</p>
+          <p class="ann-desc">
+            Publié à Paris en 1885, ce livre est une réfutation scientifique rigoureuse et courageuse des thèses de Gobineau sur la hiérarchie des races, écrite par un diplomate haïtien de 35 ans vivant dans la capitale de la France coloniale. Firmin mobilise les données de l'anthropologie physique, de la linguistique, de l'histoire et de l'archéologie pour démontrer l'absence de fondement scientifique aux théories racistes alors dominantes dans les cercles académiques européens. Il précède le travail de Franz Boas de plusieurs années. L'ouvrage fut largement ignoré par l'Occident académique — preuve par l'exemple de sa propre thèse — et n'a été redécouvert qu'à la fin du XXe siècle grâce notamment aux travaux de l'anthropologue Carolyn Fluehr-Lobban. Sa lecture en 2025 reste une leçon d'humilité épistémologique.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> philosophes, anthropologues, historiens des idées, étudiants en études raciales et postcoloniales.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Silencing the Past : Power and the Production of History</span>
+            <span class="ann-level ann-level--inter">Intermédiaire</span>
+          </div>
+          <p class="ann-meta">Michel-Rolph Trouillot · Beacon Press, Boston, 1995</p>
+          <p class="ann-desc">
+            Ce livre a redéfini la façon dont on pense la production historique dans les sciences sociales anglophones. Trouillot, anthropologue haïtien enseignant à Chicago puis à Johns Hopkins, part d'une question simple : pourquoi la Révolution haïtienne est-elle systématiquement sous-représentée, mal comprise ou carrément absente des grands récits historiques occidentaux alors qu'elle est objectivement l'un des événements révolutionnaires les plus importants de l'ère moderne ? Sa réponse — que l'histoire est produite à des moments de silence, dans des archives, des récits et des commémorations contrôlés par ceux qui ont le pouvoir — est devenue un cadre théorique de référence dans toute l'historiographie critique. Le chapitre sur Alamo vs. la Révolution haïtienne dans la mémoire américaine est d'une acuité saisissante. Trouillot est le penseur haïtien le plus cité dans les sciences humaines anglophones.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> tout lecteur engagé — historiens, anthropologues, sociologues, professeurs — qui veut comprendre pourquoi Haïti est mal connue et pourquoi cela n'est pas un accident.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">L'occupation américaine d'Haïti</span>
+            <span class="ann-level ann-level--inter">Intermédiaire</span>
+          </div>
+          <p class="ann-meta">Suzy Castor · Henri Deschamps, Port-au-Prince, 1988</p>
+          <p class="ann-desc">
+            Suzy Castor, historienne haïtienne et fondatrice du CRESFED (Centre de Recherche et de Formation Économique et Sociale pour le Développement), offre dans cet ouvrage l'analyse haïtienne de référence sur l'occupation américaine de 1915–1934. Elle travaille systématiquement avec des archives haïtiennes rarement exploitées dans les études anglophones sur la même période. Son cadre analytique est clairement ancré dans une perspective anti-impérialiste, mais la documentation est solide et les conclusions résistent à l'examen critique. L'occupation américaine est souvent étudiée du point de vue américain ou de manière purement militaire ; Castor montre ses effets sur la société haïtienne, la paysannerie et les structures politiques internes. À lire en contrepoint avec les travaux américains sur la période.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> historiens des relations internationales, spécialistes de l'histoire américaine en Caraïbe, chercheurs en études postcoloniales.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">La culture opprimée</span>
+            <span class="ann-level ann-level--adv">Avancé</span>
+          </div>
+          <p class="ann-meta">Jean Casimir · Lakansièl, Port-au-Prince, 1981</p>
+          <p class="ann-desc">
+            Jean Casimir, sociologue haïtien et diplomate, développe dans cet ouvrage complexe et exigeant une thèse originale : la culture paysanne haïtienne ne doit pas être lue comme le résidu d'une incapacité au développement, mais comme une forme structurée de résistance à la domination de l'État et des élites. Les paysans haïtiens ont développé au fil des siècles des stratégies de survie et d'autonomie — économiques, spirituelles, linguistiques — qui constituent une contre-culture au sens plein du terme. Ce cadre, proche de celui de James Scott sur les <em>weapons of the weak</em>, offre une lecture radicalement différente de celle des économistes du développement. Le livre est exigeant et parfois ardu, mais il récompense le lecteur patient d'une vision qui renouvelle profondément la compréhension de la société haïtienne.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> sociologues, anthropologues, chercheurs en études de résistance et en développement alternatif.</p>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           5. ÉCONOMIE ET DÉVELOPPEMENT
+           ============================================================ -->
+      <div class="ann-category" id="economie-developpement">
+        <p class="section-label">Catégorie 5</p>
+        <h2>Économie et Développement</h2>
+        <p class="cat-desc">
+          La littérature sur l'économie haïtienne est dominée par des auteurs étrangers — économistes d'institutions
+          multilatérales, chercheurs américains, médecins-anthropologues. Cela est en soi révélateur et doit être
+          lu comme un symptôme autant que comme une source d'information.
+        </p>
+
+        <aside class="research-note" aria-label="Note de recherche">
+          <p><strong>La rareté des voix haïtiennes en économie et en médecine.</strong> Il est frappant de constater que les deux domaines où la production académique haïtienne est la plus mince sont précisément ceux qui déterminent le plus directement les conditions de vie de la majorité : l'économie du développement et la santé publique. Ce vide n'est pas culturel — c'est le résultat de décennies de fuite des cerveaux, de sous-financement des universités haïtiennes et d'un système international d'aide qui préfère souvent envoyer ses propres experts que financer la formation de chercheurs locaux. Les ouvrages ci-dessous, presque tous écrits de l'extérieur, doivent être lus avec cette conscience.</p>
+        </aside>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">The Uses of Haiti</span>
+            <span class="ann-level ann-level--intro">Introductif</span>
+          </div>
+          <p class="ann-meta">Paul Farmer · Common Courage Press, Monroe (ME), 1994 (3e éd. révisée, 2006)</p>
+          <p class="ann-desc">
+            Paul Farmer, médecin et anthropologue médical cofondateur de Partners in Health, a passé plus de temps en Haïti que la plupart des « experts » qui écrivent sur ce pays. <em>The Uses of Haiti</em> est une critique documentée et polémique de la manière dont la politique américaine — depuis l'occupation de 1915 jusqu'aux interventions des années 1990 — a systématiquement façonné la pauvreté haïtienne à son profit. Le livre est ouvertement militant, et Farmer ne s'en cache pas. Mais son argumentation est empiriquement fondée et ses sources sont impeccables. C'est le livre le plus efficace pour comprendre le lien entre politique étrangère américaine et sous-développement haïtien, et pour déconstruire le récit selon lequel la pauvreté haïtienne serait endogène. À lire avant tout reportage sur l'aide internationale en Haïti.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> grand public, journalistes, praticiens du développement, étudiants en santé internationale et en études américaines.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">The Prophet and Power : Jean-Bertrand Aristide, the International Community, and Haiti</span>
+            <span class="ann-level ann-level--inter">Intermédiaire</span>
+          </div>
+          <p class="ann-meta">Alex Dupuy · Rowman &amp; Littlefield, Lanham, 2007</p>
+          <p class="ann-desc">
+            L'analyse la plus rigoureuse des années Aristide et de l'intervention internationale en Haïti dans les années 1990–2000. Dupuy, à la fois sympathisant initial d'Aristide et critique de ses compromis ultérieurs, produit un travail qui évite les deux versants habituels : ni la hagiographie d'une gauche qui voyait en Aristide un messie, ni la diabolisation d'une droite américaine qui le traitait comme une menace. Il analyse comment la conditionnalité internationale a contraint les options politiques disponibles et comment Aristide a navigué — et parfois capitulé — dans cet espace contraint. La conclusion sur les limites structurelles de toute politique progressiste dans un pays sous forte dépendance externe est d'une lucidité qui dépasse largement le cas haïtien.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> politologues, chercheurs sur les relations internationales Caraïbe–États-Unis, étudiants en développement politique.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Haiti : Toward a New Narrative</span>
+            <span class="ann-level ann-level--intro">Introductif</span>
+          </div>
+          <p class="ann-meta">Banque mondiale · Washington D.C., 2015 (Systematic Country Diagnostic)</p>
+          <p class="ann-desc">
+            Document de diagnostic institutionnel produit par la Banque mondiale, cet ouvrage est précieux avant tout pour ses données statistiques actualisées sur la pauvreté, les inégalités, l'accès aux services, la gouvernance et les flux de remises. Il ne faut pas s'attendre à une analyse critique des structures d'aide internationale — la Banque mondiale ne s'auto-critique pas dans ses diagnostics officiels — mais les chiffres compilés sont utiles comme point de départ factuel pour tout chercheur ou journaliste. À lire avec un regard critique sur le cadre narratif qui l'entoure : la rhétorique du « nouveau récit » masque souvent une reconduction des mêmes prescriptions. Farmer ou Dupuy permettront de prendre la distance nécessaire.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> journalistes souhaitant des données, praticiens du développement, étudiants cherchant un panorama statistique de la situation haïtienne.</p>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           6. LITTÉRATURE HAÏTIENNE
+           ============================================================ -->
+      <div class="ann-category" id="litterature">
+        <p class="section-label">Catégorie 6</p>
+        <h2>Littérature Haïtienne</h2>
+        <p class="cat-desc">
+          La littérature haïtienne est l'une des plus riches du monde francophone et pourtant l'une des moins lues
+          en dehors d'Haïti et de la diaspora. Elle documente, comme aucune discipline académique ne pourrait le
+          faire, l'expérience intime de la violence, de l'exil, de l'identité et de la résistance.
+        </p>
+
+        <aside class="research-note" aria-label="Note de recherche">
+          <p><strong>Le gouffre de la traduction.</strong> La majorité de la littérature haïtienne de langue française — et presque toute la littérature en créole haïtien — n'est pas traduite en anglais. Cela signifie que le lecteur anglophone n'a accès qu'à une fraction de la production littéraire haïtienne, essentiellement filtrée par les choix des éditeurs américains et les auteurs de la diaspora déjà intégrés dans les circuits anglo-saxons. Jacques Stephen Alexis, René Depestre, Jean Métellus et bien d'autres sont virtuellement inconnus du public anglophone. Ce fossé de traduction est un acte politique autant qu'un accident éditorial.</p>
+        </aside>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Gouverneurs de la Rosée</span>
+            <span class="ann-level ann-level--intro">Introductif</span>
+          </div>
+          <p class="ann-meta">Jacques Roumain · Les Éditeurs Français Réunis, Paris, 1944</p>
+          <p class="ann-desc">
+            Le roman haïtien le plus célèbre, traduit dans au moins vingt langues — dont une version anglaise de Langston Hughes lui-même — et écrit en trois semaines par un auteur qui mourra à 37 ans. Manuel, paysan migrant revenu d'un long exil à Cuba, tente de réconcilier deux familles déchirées par une vieille querelle dans un village assoiffé de la plaine du Cul-de-Sac. Roumain mêle le lyrisme d'un créole haïtien stylisé, la densité symbolique de la terre et de l'eau, et une conscience politique clairement marxiste sans que le roman ne devienne jamais un tract. C'est un chef-d'œuvre au sens propre : un livre qui dit quelque chose de vrai sur la condition humaine tout en restant profondément haïtien. Point de départ idéal pour toute personne voulant découvrir la littérature haïtienne.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> tout lecteur ; cours de littérature francophone, lycées, universités, clubs de lecture.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Compère Général Soleil</span>
+            <span class="ann-level ann-level--inter">Intermédiaire</span>
+          </div>
+          <p class="ann-meta">Jacques Stephen Alexis · Gallimard, Paris, 1955 (coll. « La Croix du Sud »)</p>
+          <p class="ann-desc">
+            Le roman épique d'Alexis — médecin, communiste et futur martyr de la dictature duvaliériste — suit le parcours d'Hilarion Hilarius, un jeune Haïtien des bas-fonds de Port-au-Prince, à travers la Grande Dépression, la politique haïtienne des années 1930 et le massacre des Haïtiens par l'armée dominicaine en 1937, qui fit entre 15 000 et 20 000 morts en quelques jours. Alexis invente un réalisme qu'il appelle lui-même « réalisme merveilleux » — une manière de mêler le quotidien haïtien, le Vodou et la lutte des classes en un récit total. Il disparut en 1961, capturé par les tontons macoutes de Duvalier en tentant de rentrer clandestinement en Haïti. Ce roman est un témoignage autant qu'une fiction.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> lecteurs ayant quelques repères sur l'histoire haïtienne ; cours sur la littérature caribéenne, les massacres de 1937, les relations haïtiano-dominicaines.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Breath, Eyes, Memory &amp; The Farming of Bones</span>
+            <span class="ann-level ann-level--intro">Introductif</span>
+          </div>
+          <p class="ann-meta">Edwidge Danticat · Soho Press, New York, 1994 &amp; 1998</p>
+          <p class="ann-desc">
+            Danticat est la voix la plus connue de la diaspora haïtienne anglophone. Née à Port-au-Prince, élevée en partie à Brooklyn, elle écrit en anglais pour un public américain tout en restant profondément ancrée dans l'expérience haïtienne. <em>Breath, Eyes, Memory</em>, son premier roman, explore la transmission intergénérationnelle du traumatisme à travers une famille haïtienne entre Haïti et New York. <em>The Farming of Bones</em> est son œuvre la plus ambitieuse historiquement : une reconstitution du massacre dominicain de 1937 vu par une domestique haïtienne en République Dominicaine. Émotionnellement bouleversant, accessible, internationalement reconnu. Une porte d'entrée idéale pour le lecteur anglophone sur l'expérience haïtienne contemporaine.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> grand public anglophone, lycées et universités américains, cercles de lecture, toute personne voulant comprendre la diaspora haïtienne par la fiction.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Comment faire l'amour avec un Nègre sans se fatiguer &amp; L'énigme du retour</span>
+            <span class="ann-level ann-level--intro">Introductif</span>
+          </div>
+          <p class="ann-meta">Dany Laferrière · VLB éditeur, Montréal, 1985 &amp; Grasset, Paris, 2009 (Prix Médicis)</p>
+          <p class="ann-desc">
+            Laferrière est l'écrivain haïtien vivant le plus célébré sur la scène internationale francophone — membre de l'Académie française depuis 2013, premier Canadien à y siéger. Son premier roman, provoquant et drôle, fit scandale à Montréal en 1985. Mais c'est <em>L'énigme du retour</em>, publié vingt-quatre ans plus tard, qui constitue son œuvre la plus mûre : un long poème en prose sur le retour en Haïti après la mort du père, sur le vieillissement, l'exil et ce qui reste d'une identité divisée entre plusieurs pays et plusieurs langues. Le titre joue sur le titre du poème de son oncle Davertige et sur le retour de l'Enfant prodigue. C'est une méditation sur l'appartenance qui parle à tout exilé, haïtien ou non.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> grand public francophone, lecteurs de poésie en prose, quiconque s'intéresse à l'identité diasporique et à l'exil.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Hadriana dans tous mes rêves</span>
+            <span class="ann-level ann-level--intro">Introductif</span>
+          </div>
+          <p class="ann-meta">René Depestre · Gallimard, Paris, 1988 (Prix Renaudot)</p>
+          <p class="ann-desc">
+            Depestre, poète et romancier haïtien qui vécut au Cuba de Castro et dans le Lot français, offre avec ce roman une lettre d'amour à Jacmel, la ville haïtienne du carnaval et des fêtes. Le roman suit Hadriana, jeune femme française transformée en zombie le jour de ses noces, à travers une narrative de réalisme magique qui emprunte autant à la tradition du Vodou qu'au surréalisme. Depestre en fait une célébration sensuelle et mélancolique de la culture haïtienne dans ce qu'elle a de plus vivant — la fête, le désir, la mort apprivoisée. C'est un roman de plaisir autant qu'un document culturel : rare combinaison dans la littérature qui traite d'Haïti.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> amateurs de réalisme magique, lecteurs intéressés par la culture de Jacmel, grand public francophone.</p>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           7. LA DIASPORA HAÏTIENNE
+           ============================================================ -->
+      <div class="ann-category" id="diaspora">
+        <p class="section-label">Catégorie 7</p>
+        <h2>La Diaspora Haïtienne</h2>
+        <p class="cat-desc">
+          La diaspora haïtienne — estimée entre 1,5 et 2 millions de personnes aux États-Unis seuls — envoie plus
+          d'argent en Haïti chaque année que l'aide internationale totale. Les études sur la diaspora constituent
+          un domaine en croissance rapide, à l'intersection de la sociologie, de l'anthropologie et des études
+          migratoires.
+        </p>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Georges Woke Up Laughing : Long-Distance Nationalism and the Search for Home</span>
+            <span class="ann-level ann-level--inter">Intermédiaire</span>
+          </div>
+          <p class="ann-meta">Nina Glick Schiller &amp; Georges Eugène Fouron · Duke University Press, Durham, 2001</p>
+          <p class="ann-desc">
+            C'est le meilleur compte rendu ethnographique du transnationalisme haïtien. Glick Schiller, anthropologue américaine, co-écrit le livre avec son informateur principal devenu co-auteur — Georges Fouron, Haïtien installé à New York — un choix méthodologique qui rapproche le livre de la co-production que des chercheurs haïtiens auraient pu faire seuls. Le livre suit la famille Fouron entre New York et Haïti sur plusieurs années et théorise le concept de « nationalisme à longue distance » : la manière dont les migrants maintiennent une appartenance politique et affective à leur pays d'origine tout en construisant leur vie ailleurs. C'est une analyse de la double loyauté, de l'appartenance fractionnée et de la citoyenneté comme pratique transnationale. Un classique des études migratoires.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> sociologues, anthropologues, spécialistes des migrations, étudiants en études caribéennes-américaines.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Haitian Immigrants in Black America : A Sociological and Sociolinguistic Portrait</span>
+            <span class="ann-level ann-level--inter">Intermédiaire</span>
+          </div>
+          <p class="ann-meta">Flore Zéphir · Bergin &amp; Garvey, Westport, 1996</p>
+          <p class="ann-desc">
+            Zéphir, sociolinguiste haïtiano-américaine, examine comment les immigrants haïtiens négocient leur identité au sein de la communauté noire américaine — un terrain de tension peu visible mais réel, où les différences de langue, de religion, de rapports à la « noirceur » et d'histoire créent des frictions et des solidarités complexes. L'étude, basée sur des enquêtes de terrain dans plusieurs communautés haïtiennes américaines, documente les stratégies d'intégration, de distinction et d'invisibilisation adoptées par les migrants. C'est un des rares ouvrages à traiter la diaspora haïtienne dans ses rapports internes à la communauté afro-américaine plutôt que seulement dans son rapport à la société blanche dominante.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> sociologues, spécialistes des études afro-américaines, chercheurs sur les migrations caribéennes aux États-Unis.</p>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           8. RESSOURCES EN LIGNE ET ARCHIVES
+           ============================================================ -->
+      <div class="ann-category" id="ressources-archives">
+        <p class="section-label">Catégorie 8</p>
+        <h2>Ressources en Ligne et Archives</h2>
+        <p class="cat-desc">
+          Les ressources numériques ont radicalement transformé l'accès aux sources primaires sur Haïti. Plusieurs
+          collections majeures sont désormais accessibles en ligne, même si les lacunes restent importantes —
+          notamment pour les archives haïtiennes internes, dont beaucoup ont été endommagées ou perdues lors des
+          catastrophes successives.
+        </p>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Bibliothèque Nationale de la République d'Haïti (BNRH)</span>
+          </div>
+          <p class="ann-meta">Port-au-Prince · <a href="https://bnrhaiti.org" rel="noopener noreferrer" target="_blank">bnrhaiti.org</a></p>
+          <p class="ann-desc">
+            La BNRH est le dépôt légal national d'Haïti et détient une collection unique de publications haïtiennes depuis le XIXe siècle. Sa collection numérisée, encore partielle, est progressivement mise en ligne. Les fonds comprennent des journaux haïtiens anciens, des brochures politiques, des partitions de musique et des documents officiels introuvables ailleurs. L'accès physique à la bibliothèque reste la méthode principale pour les chercheurs travaillant sur des sources haïtiennes non numérisées. La collection a subi des dommages lors du séisme de 2010 ; les efforts de reconstruction et de numérisation se poursuivent.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> chercheurs travaillant sur des sources primaires haïtiennes du XIXe–XXe siècle.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Digital Library of the Caribbean (dLOC)</span>
+          </div>
+          <p class="ann-meta">Consortium international · <a href="https://dloc.com" rel="noopener noreferrer" target="_blank">dloc.com</a></p>
+          <p class="ann-desc">
+            dLOC est la plus grande collection numérique de sources historiques caribéennes, incluant une part substantielle de fonds haïtiens : journaux du XIXe siècle, cartes, photographies, documents officiels, enregistrements audio. La collection est le résultat d'un partenariat entre l'Université de Floride, l'Université d'État d'Haïti et des dizaines d'institutions partenaires caribéennes. Tout chercheur travaillant sur Haïti avant de se rendre physiquement dans les archives doit explorer dLOC — on y trouve des sources qui auraient autrefois nécessité un déplacement à Port-au-Prince, Kingston ou Paris. L'interface de recherche est performante et l'accès est libre.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> tout chercheur ou étudiant cherchant des sources primaires haïtiennes numérisées.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Bibliothèque Haïtienne des Pères du Saint-Esprit (BHPSE)</span>
+          </div>
+          <p class="ann-meta">Port-au-Prince, Haïti</p>
+          <p class="ann-desc">
+            Fonds d'archives exceptionnel conservé par la congrégation spiritaine à Port-au-Prince, la BHPSE détient une collection de manuscrits de l'époque coloniale, de documents ecclésiastiques et de sources sur l'histoire sociale et religieuse d'Haïti depuis le XVIIIe siècle. L'accès est sur rendez-vous et réservé aux chercheurs accrédités. La collection n'est pas entièrement cataloguée et une partie reste peu explorée dans la littérature académique. Les chercheurs travaillant sur le catholicisme haïtien, les missions, et l'histoire sociale rurale y trouveront des sources irremplaçables.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> historiens de la religion, chercheurs sur l'histoire coloniale et le XIXe siècle haïtien.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Collections Haïtiennes de Yale University</span>
+          </div>
+          <p class="ann-meta">Yale University Library, New Haven · <a href="https://library.yale.edu" rel="noopener noreferrer" target="_blank">library.yale.edu</a></p>
+          <p class="ann-desc">
+            Yale possède l'une des collections les plus importantes de sources haïtiennes du XIXe siècle accessibles aux États-Unis, notamment pour les correspondances diplomatiques, les publications officielles haïtiennes et les fonds de voyageurs et observateurs étrangers de l'époque. La Beinecke Rare Book &amp; Manuscript Library conserve des documents précieux sur la période révolutionnaire et post-indépendance. Les collections sont partiellement numérisées et accessibles en ligne via le catalogue de Yale.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> chercheurs nord-américains travaillant sur l'histoire diplomatique et politique haïtienne du XIXe siècle.</p>
+        </div>
+
+        <div class="ann-entry">
+          <div>
+            <span class="ann-title">Revues académiques spécialisées</span>
+          </div>
+          <p class="ann-meta">JSTOR · Project MUSE · Accès variable selon les institutions</p>
+          <p class="ann-desc">
+            Deux revues sont particulièrement importantes pour la recherche sur Haïti. Le <em>Journal of Haitian Studies</em> (fondé en 1995, Université de Californie à Santa Barbara) est la revue académique anglophone de référence pour les études haïtiennes, couvrant histoire, littérature, anthropologie et sciences politiques. <em>Caribbean Quarterly</em> (Université des Indes occidentales) offre une perspective plus large sur la Caraïbe mais publie régulièrement des travaux de qualité sur Haïti. Pour les sources francophones, <em>Conjonction</em> — revue franco-haïtienne publiée à Port-au-Prince — est un outil précieux pour la littérature et la culture, avec une longue continuité depuis 1946.
+          </p>
+          <p class="ann-for"><strong>Idéal pour :</strong> chercheurs et étudiants à la recherche d'articles académiques récents sur Haïti.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            République d'Haïti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+            <li><a href="encyclopedia.html">Encyclopédie</a></li>
+            <li><a href="archives.html">Archives</a></li>
+            <li><a href="bibliography.html">Bibliographie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Culture &amp; Société</h4>
+          <ul>
+            <li><a href="culture.html">Culture &amp; Arts</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastronomie</a></li>
+            <li><a href="culture-vivante.html">Culture Vivante</a></li>
+            <li><a href="creativite-populaire.html">Créativité Populaire</a></li>
+            <li><a href="diaspora-engagee.html">Diaspora Engagée</a></li>
+            <li><a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire &amp; Institutions</h4>
+          <ul>
+            <li><a href="timeline.html">Chronologie</a></li>
+            <li><a href="heroes.html">Héros Nationaux</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="constitution.html">Constitution</a></li>
+            <li><a href="institutions.html">Institutions</a></li>
+            <li><a href="patrimoine-national.html">Patrimoine National</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+            <li><a href="license.html">Mentions L&eacute;gales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est n&eacute; d&apos;une frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti sont &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les sources ha&iuml;tiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pendant.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
+</body>
+</html>
