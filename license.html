@@ -5,27 +5,105 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#00209F" />
-  <title>License | République d'Haïti</title>
-  <meta name="description" content="License terms for the content published on RépubliqueHaïti.org. This website's historical and educational content is licensed under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)." />
-  <meta name="author" content="RépubliqueHaïti.org" />
+  <title>Legal &amp; License | République d'Haïti</title>
+  <meta name="description" content="Legal notice and license information for RépubliqueHaïti.org. Source code is licensed under the MIT License. Website content is protected by full copyright — all rights reserved." />
+  <meta name="author" content="Kirlinger Jeune" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/premium.css" />
   <style>
-    .license-section { margin-bottom: 2.5rem; }
-    .license-section h3 { color: var(--blue, #00209F); margin-bottom: 1rem; border-bottom: 2px solid var(--blue, #00209F); padding-bottom: 0.4rem; }
-    .license-highlight { background: #f0f4ff; border-left: 4px solid #00209F; padding: 1.2rem 1.5rem; border-radius: 0 6px 6px 0; margin-bottom: 2rem; }
-    .license-badge { display: inline-flex; align-items: center; gap: 12px; background: #fff; border: 2px solid #e2e8f0; border-radius: 8px; padding: 1rem 1.5rem; margin-bottom: 2rem; font-weight: 600; color: var(--text, #0f172a); text-decoration: none; transition: border-color 0.2s; }
-    .license-badge:hover { border-color: var(--blue, #00209F); }
-    .license-badge svg { flex-shrink: 0; }
-    .license-terms { list-style: none; padding: 0; }
-    .license-terms li { display: flex; gap: 14px; padding: 1rem 0; border-bottom: 1px solid #e8e8e8; line-height: 1.7; }
-    .license-terms li:last-child { border-bottom: none; }
-    .license-terms li .term-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.1rem; }
-    .license-terms li strong { display: block; margin-bottom: 0.2rem; }
-    .license-code { background: #0a0f2e; color: rgba(255,255,255,0.85); border-radius: 8px; padding: 1.2rem 1.5rem; font-family: monospace; font-size: 0.9rem; line-height: 1.8; margin-bottom: 2rem; }
-    .license-code a { color: var(--gold, #FFD166); }
-    .permitted { color: #16a34a; }
-    .restricted { color: #dc2626; }
+    .legal-card {
+      background: #fff;
+      border: 1px solid var(--border, #e2e8f0);
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .legal-card--blue {
+      border-top: 4px solid var(--blue, #00209F);
+    }
+    .legal-card--red {
+      border-top: 4px solid var(--red, #D21034);
+    }
+    .legal-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1.35rem;
+      color: var(--text, #0f172a);
+    }
+    .legal-card .card-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+    .legal-card--blue .card-label { color: var(--blue, #00209F); }
+    .legal-card--red  .card-label { color: var(--red,  #D21034); }
+    .legal-card p {
+      color: var(--text-muted, #475569);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .legal-card p:last-child { margin-bottom: 0; }
+    .legal-badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      margin-bottom: 1.2rem;
+    }
+    .legal-badge--mit  { background: #e0f2fe; color: #0369a1; }
+    .legal-badge--cr   { background: #fee2e2; color: #991b1b; }
+    .license-preformatted {
+      background: #f8fafc;
+      border: 1px solid var(--border, #e2e8f0);
+      border-radius: 8px;
+      padding: 1.4rem 1.6rem;
+      font-family: monospace;
+      font-size: 0.875rem;
+      line-height: 1.85;
+      color: var(--text, #0f172a);
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin-top: 1rem;
+    }
+    .copyright-box {
+      background: #0a0f2e;
+      color: rgba(255,255,255,0.9);
+      border-radius: 10px;
+      padding: 1.6rem 2rem;
+      line-height: 1.8;
+      margin-top: 1rem;
+    }
+    .copyright-box strong { color: #fff; }
+    .copyright-box .warning {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      color: #fca5a5;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .scope-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .scope-item {
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      border: 1px solid var(--border, #e2e8f0);
+    }
+    .scope-item .scope-icon { font-size: 1.3rem; margin-bottom: 0.3rem; display: block; }
+    .scope-item strong { font-size: 0.9rem; color: var(--text, #0f172a); display: block; margin-bottom: 0.2rem; }
+    .scope-item span { font-size: 0.83rem; color: var(--text-muted, #475569); }
+    @media (max-width: 600px) { .scope-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -125,12 +203,12 @@
 
   <section class="page-hero page-hero--history">
     <div class="container">
-      <p class="page-hero__label">Portail de Recherche</p>
-      <h1 class="page-hero__title">License</h1>
+      <p class="page-hero__label">Informations Légales</p>
+      <h1 class="page-hero__title">License &amp; Legal Notice</h1>
       <p class="page-hero__desc">
-        Terms of use for the historical and educational content published on RépubliqueHaïti.org.
-        This content may be shared for educational purposes with proper attribution,
-        but may not be used commercially without permission.
+        This page describes the legal terms governing the use of this website's source code
+        and content. Please read carefully before reproducing, adapting, or distributing
+        any part of this project.
       </p>
     </div>
   </section>
@@ -140,7 +218,7 @@
       <nav aria-label="Breadcrumb">
         <a href="index.html">Accueil</a>
         <span>/</span>
-        <span>License</span>
+        <span>Legal &amp; License</span>
       </nav>
     </div>
   </div>
@@ -148,178 +226,133 @@
   <section class="section">
     <div class="container">
 
-      <div class="license-highlight">
-        <p>
-          All historical content, research, and educational materials on this website are the work of
-          <strong>Kirlinger Jeune (Kirlinger357)</strong> and are made freely available for non-commercial
-          educational use under the terms below. If you wish to use this content commercially, please
-          <a href="contact.html">contact us</a> first.
-        </p>
-      </div>
+      <!-- ── OVERVIEW ─────────────────────────────────── -->
+      <p class="section-label">Vue d'ensemble</p>
+      <h2 class="section-title">Two-Tier Legal Framework</h2>
+      <p class="section-subtitle">
+        This project distinguishes between its <strong>source code</strong> and its <strong>website content</strong>.
+        Each is governed by separate and distinct legal terms.
+      </p>
 
-      <!-- LICENSE BADGE -->
-      <div class="license-section">
-        <p class="section-label">Applied License</p>
-        <h2 class="section-title">Creative Commons Attribution-NonCommercial 4.0 International</h2>
-        <p class="section-subtitle">
-          This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
-        </p>
-
-        <a class="license-badge" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 96 96" aria-hidden="true">
-            <circle cx="48" cy="48" r="48" fill="#EF9421"/>
-            <path d="M48 12C28.1 12 12 28.1 12 48s16.1 36 36 36 36-16.1 36-36S67.9 12 48 12zm0 6c16.6 0 30 13.4 30 30S64.6 78 48 78 18 64.6 18 48 31.4 18 48 18zm-8.5 16c-4.4 0-8 3.6-8 8v12c0 4.4 3.6 8 8 8h3v-6h-3c-1.1 0-2-.9-2-2V42c0-1.1.9-2 2-2h3v-6h-3zm13 0c-4.4 0-8 3.6-8 8v12c0 4.4 3.6 8 8 8h3v-6h-3c-1.1 0-2-.9-2-2V42c0-1.1.9-2 2-2h3v-6h-3z" fill="#fff"/>
-          </svg>
-          CC BY-NC 4.0 — View Full Legal Code at creativecommons.org
-        </a>
-      </div>
-
-      <!-- WHAT YOU CAN DO -->
-      <div class="license-section">
-        <h3>What You Are Free To Do</h3>
-        <ul class="license-terms">
-          <li>
-            <span class="term-icon permitted">✓</span>
-            <div>
-              <strong>Share</strong>
-              Copy and redistribute the material in any medium or format for non-commercial purposes.
-            </div>
-          </li>
-          <li>
-            <span class="term-icon permitted">✓</span>
-            <div>
-              <strong>Adapt</strong>
-              Remix, transform, and build upon the material for non-commercial purposes — for example,
-              translating articles, creating summaries, or incorporating content into educational presentations.
-            </div>
-          </li>
-          <li>
-            <span class="term-icon permitted">✓</span>
-            <div>
-              <strong>Educational Use</strong>
-              Use, quote, or reproduce content in classrooms, academic papers, research projects, or
-              non-profit educational initiatives, provided proper attribution is given.
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- CONDITIONS -->
-      <div class="license-section">
-        <h3>Under the Following Conditions</h3>
-        <ul class="license-terms">
-          <li>
-            <span class="term-icon" style="color:#2563eb;">🔖</span>
-            <div>
-              <strong>Attribution (BY)</strong>
-              You must give appropriate credit to <strong>Kirlinger357 / RépubliqueHaïti.org</strong>,
-              provide a link to this license, and indicate if changes were made. You may do so in any
-              reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-            </div>
-          </li>
-          <li>
-            <span class="term-icon restricted">✗</span>
-            <div>
-              <strong>NonCommercial (NC)</strong>
-              You may not use the material for commercial purposes. This includes selling content,
-              using it in commercial publications, incorporating it into paid products or services,
-              or any other use primarily intended for commercial advantage or monetary compensation,
-              without prior written permission from the copyright holder.
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- WHAT IS NOT COVERED -->
-      <div class="license-section">
-        <h3>What Is Not Covered by This License</h3>
-        <ul class="license-terms">
-          <li>
-            <span class="term-icon restricted">✗</span>
-            <div>
-              <strong>Commercial Reproduction or Redistribution</strong>
-              Publishing, selling, or redistributing this content — in whole or in part — as part of a
-              commercial product, service, or publication requires explicit written permission.
-            </div>
-          </li>
-          <li>
-            <span class="term-icon restricted">✗</span>
-            <div>
-              <strong>Claiming Authorship</strong>
-              You may not represent the original content as your own work. Attribution to
-              Kirlinger357 / RépubliqueHaïti.org must always be clearly stated.
-            </div>
-          </li>
-          <li>
-            <span class="term-icon restricted">✗</span>
-            <div>
-              <strong>Third-Party Materials</strong>
-              Some images, maps, or referenced documents on this site may be sourced from third parties
-              and carry their own separate copyright terms. This license applies only to original content
-              created by Kirlinger Jeune for this website.
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- HOW TO ATTRIBUTE -->
-      <div class="license-section">
-        <h3>How to Attribute This Work</h3>
-        <p>When sharing or adapting content from this website, please use an attribution notice similar to the following:</p>
-        <div class="license-code">
-          &ldquo;[Article Title]&rdquo; by <strong>Kirlinger Jeune (Kirlinger357)</strong> /
-          <a href="https://republiquehaiti.org/" target="_blank" rel="noopener noreferrer">RépubliqueHaïti.org</a>.
-          Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC 4.0</a>.
-          [Include URL to the original page if reproducing online.]
+      <div class="scope-grid" style="margin-bottom:3rem;">
+        <div class="scope-item">
+          <span class="scope-icon">💻</span>
+          <strong>Source Code</strong>
+          <span>HTML, CSS &amp; JavaScript — MIT License</span>
+        </div>
+        <div class="scope-item">
+          <span class="scope-icon">📄</span>
+          <strong>Website Content</strong>
+          <span>Text, data, maps, visuals — All Rights Reserved</span>
         </div>
       </div>
 
-      <!-- FULL LICENSE TEXT -->
-      <div class="license-section">
-        <h3>Full License Text</h3>
+      <!-- ── MIT LICENSE ────────────────────────────────── -->
+      <div class="legal-card legal-card--blue">
+        <span class="card-label">Source Code</span>
+        <h2>MIT License</h2>
+        <span class="legal-badge legal-badge--mit">Open Source — MIT</span>
         <p>
-          The complete legal text of the Creative Commons Attribution-NonCommercial 4.0 International
-          Public License is available at:
+          The source code of this website — including its HTML structure, CSS stylesheets,
+          and JavaScript files — is released as open-source software under the
+          <strong>MIT License</strong>. You are free to use, copy, modify, merge, publish,
+          distribute, sublicense, and/or sell copies of the code, subject to the conditions below.
         </p>
-        <p>
-          <a href="https://creativecommons.org/licenses/by-nc/4.0/legalcode" target="_blank" rel="noopener noreferrer">
-            https://creativecommons.org/licenses/by-nc/4.0/legalcode
-          </a>
-        </p>
-        <p>
-          A plain-language summary can be found at:
-        </p>
-        <p>
-          <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer">
-            https://creativecommons.org/licenses/by-nc/4.0/
-          </a>
-        </p>
-        <p>
-          A copy of the license text is also included in the
+        <div class="license-preformatted">MIT License
+
+Copyright (c) 2026 Kirlinger Jeune
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</div>
+        <p style="margin-top:1rem;font-size:0.9rem;">
+          A copy of this license is also available in the
           <a href="https://github.com/Kirlinger/haiti-culture/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">LICENSE file</a>
           in the project repository.
         </p>
       </div>
 
-      <!-- CONTACT -->
-      <div class="license-section">
-        <h3>Commercial Licensing &amp; Permissions</h3>
+      <!-- ── ALL RIGHTS RESERVED ───────────────────────── -->
+      <div class="legal-card legal-card--red">
+        <span class="card-label">Website Content</span>
+        <h2>Copyright — All Rights Reserved</h2>
+        <span class="legal-badge legal-badge--cr">All Rights Reserved</span>
         <p>
-          If you wish to use any content from this website for commercial purposes, or if you have
-          questions about permissible uses, please <a href="contact.html">contact us</a>. We welcome
-          requests from educators, researchers, journalists, and documentary makers and will consider
-          permissions on a case-by-case basis.
+          All original content published on this website — including historical research,
+          written articles, data, maps, visualizations, graphics, and design — is the
+          exclusive intellectual property of <strong>Kirlinger Jeune</strong> and is
+          fully protected by copyright law.
+        </p>
+        <div class="copyright-box">
+          <strong>Copyright &copy; 2026 Kirlinger Jeune<br>All rights reserved.</strong>
+          <p style="color:rgba(255,255,255,0.8);margin:0.8rem 0 0;">
+            No part of this website's content &mdash; including its maps, data, visualizations,
+            graphics, or written content &mdash; may be copied, reproduced, redistributed, modified,
+            or used for commercial purposes without prior written permission from the author.
+          </p>
+          <p class="warning">⚠ Unauthorized use may result in legal action.</p>
+        </div>
+        <p style="margin-top:1.2rem;">
+          This copyright notice applies regardless of the medium or format in which content
+          is reproduced, whether in print, online, or in any other form. If you wish to
+          quote, cite, or adapt any content, please <a href="contact.html">contact the author</a>
+          to request permission.
         </p>
       </div>
 
-    </div>
-  </section>
+      <!-- ── SCOPE TABLE ────────────────────────────────── -->
+      <p class="section-label" style="margin-top:1rem;">Clarification</p>
+      <h2 class="section-title">What Is — and Is Not — Covered</h2>
 
-  <section class="cta-section">
-    <div class="container">
-      <h2>Explore Haiti's History</h2>
-      <p>Discover the rich history, culture, and heritage of Haiti — shared freely for educational use.</p>
-      <a href="index.html" class="btn btn-cta-white">Return to Homepage →</a>
+      <div class="scope-grid">
+        <div class="scope-item">
+          <span class="scope-icon" style="color:#0369a1;">✔</span>
+          <strong>Free to use (MIT — code only)</strong>
+          <span>HTML templates, CSS stylesheets, JavaScript logic</span>
+        </div>
+        <div class="scope-item">
+          <span class="scope-icon" style="color:#991b1b;">✘</span>
+          <strong>Not free to reproduce (All Rights Reserved)</strong>
+          <span>Historical articles, research, maps, data &amp; visuals</span>
+        </div>
+        <div class="scope-item">
+          <span class="scope-icon" style="color:#991b1b;">✘</span>
+          <strong>Prohibited without permission</strong>
+          <span>Commercial use of any content from this website</span>
+        </div>
+        <div class="scope-item">
+          <span class="scope-icon" style="color:#991b1b;">✘</span>
+          <strong>Prohibited without permission</strong>
+          <span>Redistribution of written content or graphics in any medium</span>
+        </div>
+      </div>
+
+      <!-- ── CONTACT ────────────────────────────────────── -->
+      <div class="legal-card" style="margin-top:2.5rem;border-top:4px solid var(--gold,#FFD166);">
+        <span class="card-label" style="color:#92620e;">Permissions &amp; Contact</span>
+        <h2>Requesting Permission</h2>
+        <p>
+          For enquiries regarding reproduction, citation, adaptation, or any other use of
+          content from this website, please reach out directly. We welcome requests from
+          educators, researchers, journalists, and non-profit organisations.
+        </p>
+        <a href="contact.html" class="btn btn--primary">Contact the Author →</a>
+      </div>
+
     </div>
   </section>
 
@@ -376,12 +409,13 @@
           <ul>
             <li><a href="contact.html">Nous Contacter</a></li>
             <li><a href="contact.html#form">Envoyer un Message</a></li>
+            <li><a href="license.html">Mentions Légales</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 R&eacute;publiqueHa&iuml;ti.org &mdash; Tous droits r&eacute;serv&eacute;s.</span>
-        <span>&copy; 2026 Kirlinger357. Historical content provided for educational purposes. Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">Creative Commons Attribution-NonCommercial 4.0 International (CC&nbsp;BY-NC&nbsp;4.0)</a>.</span>
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
         <span>Recherche &amp; D&eacute;veloppement du Contenu : Kirlinger Jeune</span>
         <span>Projet de Recherche Historique Ind&eacute;pendant sur Ha&iuml;ti</span>
       </div>
