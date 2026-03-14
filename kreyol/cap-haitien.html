@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Cap-Haïtien — Istwa, Kilti et Jeyografi | Repiblik Ayiti</title>
+  <meta name="description" content="Fondée en 1670 comme Cap-Français, ancienne capitale coloniale de Saint-Domingue surnommée 'le Paris des Antilles', Cap-Haïtien est la vil où Revolisyon ayisyèn nan a commencé — et où l'endepandans a été proclamée." />
+  <meta name="author" content="RepiblikHaïti.org" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/premium.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Akèy">
+          Repiblik Ayiti
+        </a>
+        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+          <a href="index.html">Akèy</a>
+          <a href="about.html">Sou Nou</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Istwa Jeneral</a>
+              <a href="timeline.html">Kwonolouji</a>
+              <a href="heroes.html">Ewò Nasyonal</a>
+              <a href="lidès.html">Lidè</a>
+              <a href="konstitisyon.html">Konstitisyon</a>
+              <a href="enstitisyons.html">Enstitisyon</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti.html">Kilti &amp; Atizay</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Lwa yo</a>
+              <a href="gastronomy.html">Gastwonomi</a>
+              <a href="holidays.html">Jou Ferye</a>
+            </div>
+          </div>
+          <a href="tourism.html">Touris</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti-vivante.html">Kilti Vivan</a>
+              <a href="creativite-populaire.html">Kreyativite Popilè</a>
+              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+              <a href="instabilite-politik.html">Enstabilite Politik</a>
+              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+              <a href="services-essentiels.html">Sèvis Esansyèl</a>
+              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Ansiklopedi</a>
+              <a href="archives.html">Achiv</a>
+              <a href="bibliography.html">Bibliyografi</a>
+            </div>
+          </div>
+          <a href="contact.html">Kontak</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : istwa, kilti, vils…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Capital du Nord</p>
+      <h1 class="page-hero__title">Cap-Haïtien</h1>
+      <p class="page-hero__desc">Fondée en 1670 comme Cap-Français, ancienne capitale coloniale de Saint-Domingue surnommée « le Paris des Antilles », Cap-Haïtien est la vil où Revolisyon ayisyèn nan a commencé — et où l'endepandans a été proclamée.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Akèy</a>
+        <span>/</span>
+        <a href="vils.html">Vils d'Haïti</a>
+        <span>/</span>
+        <span>Cap-Haïtien</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Fondation &amp; Grandeur Coloniale</p>
+      <h2>Cap-Haïtien, berceau de la Revolisyon et de l'endepandans</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Cap-Français naît en 1670 comme comptoir de traite sur la côte nord de Saint-Domingue. Dès la fin du XVIIe syèk, la vil grandit à un rythme qui stupéfie les contemporains. Au milieu du XVIIIe syèk, elle est la cité la plus prospère des Karayib — peut-être de toute l'Amérique coloniale. Les voyageurs qui débarquent dans ses rues quadrillées découvrent des théâtres, des journaux, des loges maçonniques, des cafés animés, des hôtels particuliers ornés de ferronneries ouvragées. Les visiteurs français la surnomment « le Paris des Antilles », non par métaphore flatteuse mais parce que sa vie intellectuelle et mondaine se compare réellement à celle d'une grande vil de province française. Moreau de Saint-Méry, dans sa <em>Description topographique de la partie française de Saint-Domingue</em> (1797-1798), en dresse un portrait qui oscille entre l'admiration et la conscience aiguë que tout cela repose sur le travail forcé de plusieurs centaines de milliers d'esclaves.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            C'est dans la ceinture de plantations qui entoure le Cap que la Revolisyon prend son départ. Dans la nuit du 14 au 15 août 1791, au Bois Caïman — lieu-dit dont la localisation précise est encore débattue par les historiens — une cérémonie réunit des centaines d'esclaves sous la direction de Dutty Boukman et d'une prêtresse vodou dont le nom a varié selon les sources (Cécile Fatiman dans plusieurs tradisyons haïtiennes). Quelques jours plus tard, le 22 août, les plantations du Nord s'embrasent. La fumée des sucreries en feu est visible depuis les quais du Cap. L'insurrection la plus grande de l'istwa des Amériques vient de commencer.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            En juin 1793, la vil est incendiée. Le gouverneur Galbaud, en conflit avec les commissaires civils Polverel et Sonthonax, libère des milliers de marins qui pillent et brûlent une grande partie de la cité. Les commissaires, pour contrer cette mutinerie de Blancs, offrent la libète aux esclaves des environs en échange de leur soutien militaire — préfiguration de l'abolisyon formelle que la Convention proclamera en février 1794. L'incendie détruit des quartiers entiers, et le Cap-Français qu'on rebâtit après est une vil partiellement neuve, superposée sur les ruines du chef-d'œuvre colonial.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            La relation entre Bois Caïman et Revolisyon ayisyèn nan a été l'objet de nombreuses instrumentalisations politiks, religieuses et populaires. Certains milieux évangéliques nord-américains ont présenté cette cérémonie comme un « pacte avec le diable » qui expliquerait les malheurs d'Haïti. Les historiens sérieux — C. L. R. James, David Geggus, Laurent Dubois — insistent sur le fait que Bois Caïman fut avant tout un acte de mobilisation politik et militaire, enraciné dans les tradisyons religieuses africaines, et que la caricature diabolisante dit infiniment plus sur le racisme de ses auteurs que sur la réalité de 1791.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>· Fondée en 1670 comme Cap-Français</li>
+              <li>· Renommée Cap-Haïtien après 1804</li>
+              <li>· Depatman : Nord</li>
+              <li>· Population : ~300 000 habitants</li>
+              <li>· Bois Caïman : août 1791</li>
+              <li>· Endepandans proclamée ici : 1er jan. 1804</li>
+              <li>· Palais Sans-Souci &amp; Citadelle : UNESCO</li>
+              <li>· 2e vil d'Haïti</li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Sites à proximité</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Citadelle Laferrière (Milot)</li>
+              <li>· Palais Sans-Souci (Milot)</li>
+              <li>· Fort Picolet</li>
+              <li>· Bois Caïman (environs)</li>
+              <li>· Plages de Cormier et Labadee</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Le 1er janvier 1804 : la proclamation de l'endepandans</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        C'est à Gonaïves que Dessalines lit la déclaration formelle d'endepandans, mais c'est au Cap, rebaptisé Cap-Haïtien, que la nouvelle résonne avec le plus de force symbolique : c'est la vil qui avait vu naître la révolte, qui avait brûlé, qui avait résisté, et qui accueille maintenant le général victorieux. Le 1er janvier 1804, Haïti devient premye Repiblik nwa nan mond lan et la seconde nation indépendante du Nouveau Mond. Le nom « Haïti » est lui-même une restitution : il s'agit du nom taïno de l'île, <em>Ayiti</em>, « tè des hautes mòns », choisi délibérément pour rompre avec toute trace du nom colonial.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Henri Christophe et le royaume du Nord</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Après la mort de Dessalines en 1806, Haïti se divise. Au nord, Henri Christophe gouverne — d'abord comme prezidan, puis comme roi Henri Ier à partir de 1811. Son règne s'appuie sur le Cap-Haïtien comme capitale administrative, mais sa grandeur monumentale se déploie à Milot, à une vingtaine de kilomètres dans les mòns. Le Palais Sans-Souci, dont la sophistication architecturale stupéfie les visiteurs étrangers — ambassadeurs, journalistes, marchands — est achevé vers 1813. La Citadelle Laferrière, forteresse perchée à 900 mètres d'altitude, est l'une des constructions militaires les plus impressionnantes de l'ère préindustrielle. Ces deux monuments, classés au Patrimwàn Mondial de l'UNESCO en 1982, portent le nom collectif de Parc Historique de la Citadelle, Sans-Souci, Ramiers. Christophe se suicide d'une balle en or en 1820 lors d'un soulèvement de ses propres troupes. Réunification du peyi sous Boyer la même ane.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Cap-Haïtien jounen jodi a</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Le XIXe et le XXe syèk voient le Cap s'effacer progressivement derrière Port-au-Prince. La centralisation administrative, commerciale et politik autour de la capitale draine les élites, les capitaux et les enstitisyons vers le sud. Pourtant, Cap-Haïtien conserve une identité forte, une fyète régionale marquée, et une tradisyon kiltille vivace. Jounen jodi a, avec environ 300 000 habitants, c'est la deuxième vil du peyi. Son réseau de rues coloniales — en bonne partie intact, contrairement à Port-au-Prince ravagée par les séismes et les incendies — en fait un espace urbain d'une cohérence architecturale rare en Haïti. La vil est le point de départ du circuit touristique du Nord, qui inclut la Citadelle, les plajs de Cormier et le site de Labadee. Sa vie kiltille — kanaval, mizik, artisanat — reste d'une intensité que les Capois revendiquent avec une certaine fyète un peu acide vis-à-vis de la capitale.
+      </p>
+
+      <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:2rem;margin-bottom:2.5rem;">
+        <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Gade tou</p>
+        <ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2.2;">
+          <li>→ <a href="vils.html" style="color:#fff;">Retour aux Vils d'Haïti</a></li>
+          <li>→ <a href="history.html" style="color:#fff;">Istwa générale d'Haïti</a></li>
+          <li>→ <a href="heroes.html" style="color:#fff;">Ewò de la Revolisyon</a></li>
+          <li>→ <a href="patrimwàn-national.html" style="color:#fff;">Patrimwàn Nasyonal (Citadelle)</a></li>
+          <li>→ <a href="gonaives.html" style="color:#fff;">Gonaïves — Cité de l'Endepandans</a></li>
+          <li>→ <a href="port-au-prince.html" style="color:#fff;">Port-au-Prince</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            Repiblik Ayiti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire istwa d'Haïti, de sa kilti
+            vibrante et de son pèp remarquable. Dédié à partager l'istwa de
+            premye Repiblik nwa nan mond lan.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Eksplore</h4>
+          <ul>
+            <li><a href="index.html">Akèy</a></li>
+            <li><a href="about.html">Sou Ayiti</a></li>
+            <li><a href="history.html">Istwa</a></li>
+            <li><a href="tourism.html">Touris</a></li>
+            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+            <li><a href="archives.html">Achiv</a></li>
+            <li><a href="bibliography.html">Bibliyografi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kilti &amp; Sosyete</h4>
+          <ul>
+            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastwonomi</a></li>
+            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Istwa &amp; Enstitisyon</h4>
+          <ul>
+            <li><a href="timeline.html">Kwonolouji</a></li>
+            <li><a href="heroes.html">Ewò Nasyonal</a></li>
+            <li><a href="lidès.html">Lidè</a></li>
+            <li><a href="konstitisyon.html">Konstitisyon</a></li>
+            <li><a href="enstitisyons.html">Enstitisyon</a></li>
+            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Pran Kontak</h4>
+          <ul>
+            <li><a href="contact.html">Kontakte Nou</a></li>
+            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+            <li><a href="license.html">Mansyon Legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est né d'une frustration personnelle&#160;: trop d'ouvrages sur Haïti sont écrits de l'extérieur. J'ai voulu rassembler les sources haïtiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chèchè endepandan.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/premium.js"></script>
+</body>
+</html>

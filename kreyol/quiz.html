@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Quiz — Connaissez-vous Haïti ? | RepiblikHaïti.org</title>
+  <meta name="description" content="Testez vos konesanss sur l'istwa, la kilti, la jeyografi et la sosyete haïtiennes avec ce quiz interactif." />
+  <meta name="author" content="RepiblikHaïti.org" />
+  <meta property="og:url" content="https://republiquehaiti.org/quiz.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/premium.css" />
+  <style>
+    /* ── Quiz engine styles ── */
+    .quiz-shell {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* Progress bar */
+    .quiz-progress-wrap {
+      background: var(--border, #e5e7eb);
+      border-radius: 99px;
+      height: 8px;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+    .quiz-progress-bar {
+      height: 100%;
+      background: var(--blue, #00209F);
+      border-radius: 99px;
+      transition: width .4s ease;
+    }
+
+    /* Meta row */
+    .quiz-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.4rem;
+      font-size: 14px;
+      font-weight: 600;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    .quiz-score-badge {
+      background: var(--blue, #00209F);
+      color: #fff;
+      border-radius: 99px;
+      padding: 2px 14px;
+      font-size: 13px;
+    }
+
+    /* Category chip */
+    .quiz-category {
+      display: inline-block;
+      background: #f3f4f6;
+      color: var(--blue, #00209F);
+      border-radius: 6px;
+      padding: 3px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    /* Question card */
+    .quiz-card {
+      background: #fff;
+      border: 1px solid var(--border, #e5e7eb);
+      border-radius: 16px;
+      padding: 2rem 2.2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+    .quiz-question {
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.55;
+      margin-bottom: 1.6rem;
+      color: var(--text, #111827);
+    }
+
+    /* Choices */
+    .quiz-choices {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: .7rem;
+    }
+    .quiz-choice-btn {
+      width: 100%;
+      text-align: left;
+      background: #f9fafb;
+      border: 2px solid var(--border, #e5e7eb);
+      border-radius: 10px;
+      padding: .75rem 1.1rem;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: border-color .2s, background .2s, transform .1s;
+      line-height: 1.45;
+      color: var(--text, #111827);
+    }
+    .quiz-choice-btn:hover:not(:disabled) {
+      border-color: var(--blue, #00209F);
+      background: #eff2ff;
+      transform: translateX(3px);
+    }
+    .quiz-choice-btn.correct {
+      background: #d1fae5;
+      border-color: #059669;
+      color: #065f46;
+    }
+    .quiz-choice-btn.wrong {
+      background: #fee2e2;
+      border-color: #dc2626;
+      color: #991b1b;
+    }
+    .quiz-choice-btn:disabled {
+      cursor: default;
+    }
+
+    /* Explanation box */
+    .quiz-explanation {
+      display: none;
+      background: #f0fdf4;
+      border-left: 4px solid #059669;
+      border-radius: 0 8px 8px 0;
+      padding: .8rem 1rem;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #1a3c2b;
+      margin-bottom: 1.2rem;
+    }
+    .quiz-explanation.wrong-explain {
+      background: #fff7ed;
+      border-color: #d97706;
+      color: #451a03;
+    }
+    .quiz-explanation.visible {
+      display: block;
+    }
+
+    /* Next button */
+    .quiz-next-btn {
+      display: none;
+      background: var(--blue, #00209F);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: .75rem 2rem;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s, transform .1s;
+    }
+    .quiz-next-btn:hover {
+      background: #001a80;
+      transform: translateY(-1px);
+    }
+    .quiz-next-btn.visible {
+      display: inline-block;
+    }
+
+    /* Results screen */
+    .quiz-results {
+      display: none;
+      text-align: center;
+      padding: 2.5rem 2rem;
+    }
+    .quiz-results.visible {
+      display: block;
+    }
+    .quiz-results__score-ring {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: var(--blue, #00209F);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 4px 24px rgba(0,32,159,.25);
+    }
+    .quiz-results__score-ring .big {
+      font-size: 2.8rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .quiz-results__score-ring .small {
+      font-size: 1rem;
+      opacity: .75;
+    }
+    .quiz-results__msg {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--blue, #00209F);
+      margin-bottom: .75rem;
+    }
+    .quiz-results__sub {
+      font-size: 15px;
+      color: #4b5563;
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto 2rem;
+    }
+    .quiz-restart-btn {
+      background: var(--red, #D21034);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: .85rem 2.5rem;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s, transform .1s;
+    }
+    .quiz-restart-btn:hover {
+      background: #a80d28;
+      transform: translateY(-1px);
+    }
+
+    /* Category breakdown */
+    .quiz-breakdown {
+      margin: 1.5rem auto 0;
+      max-width: 400px;
+      text-align: left;
+    }
+    .quiz-breakdown h4 {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: #6b7280;
+      margin-bottom: .75rem;
+      text-align: center;
+    }
+    .quiz-breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      padding: .4rem 0;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .quiz-breakdown-row:last-child {
+      border-bottom: none;
+    }
+    .quiz-breakdown-row .cat-label {
+      font-weight: 600;
+      color: var(--text, #111827);
+    }
+    .quiz-breakdown-row .cat-score {
+      font-weight: 700;
+      color: var(--blue, #00209F);
+    }
+
+    @media (max-width: 600px) {
+      .quiz-card {
+        padding: 1.4rem 1.2rem;
+      }
+      .quiz-question {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Akèy">
+          Repiblik Ayiti
+        </a>
+        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+          <a href="index.html">Akèy</a>
+          <a href="about.html">Sou Nou</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Istwa Jeneral</a>
+              <a href="timeline.html">Kwonolouji</a>
+              <a href="heroes.html">Ewò Nasyonal</a>
+              <a href="lidès.html">Lidè</a>
+              <a href="konstitisyon.html">Konstitisyon</a>
+              <a href="enstitisyons.html">Enstitisyon</a>
+              <a href="presidents.html">Pwofil Prezidan yo</a>
+              <a href="revolution-batays.html">Batay Revolisyon an</a>
+              <a href="relations-internationales.html">Relasyon Entènasyonal</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti.html">Kilti &amp; Atizay</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Lwa yo</a>
+              <a href="gastronomy.html">Gastwonomi</a>
+              <a href="holidays.html">Jou Ferye</a>
+              <a href="atiss.html">Atis Vizyèl</a>
+              <a href="mizik-istwa.html">Istwa Mizik</a>
+              <a href="litterature.html">Literati</a>
+              <a href="creole.html">Lang Kreyòl</a>
+              <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
+              <a href="glossaire-creole.html">Glosè Kreyòl</a>
+            </div>
+          </div>
+          <a href="tourism.html">Touris</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="departements.html">10 Depatman yo</a>
+              <a href="geographie.html">Jeyografi Fizik</a>
+              <a href="anviwonman.html">Anviwonman</a>
+              <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
+              <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti-vivante.html">Kilti Vivan</a>
+              <a href="creativite-populaire.html">Kreyativite Popilè</a>
+              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+              <a href="fanm-haiti.html">Fanm d'Haïti</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+              <a href="instabilite-politik.html">Enstabilite Politik</a>
+              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+              <a href="services-essentiels.html">Sèvis Esansyèl</a>
+              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+              <a href="agrikilti.html">Agrikilti</a>
+              <a href="education-haiti.html">Edikasyon</a>
+              <a href="aide-internationale.html">Aide Internationale</a>
+              <a href="economie-informelle.html">Ekonomi Informelle</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Ansiklopedi</a>
+              <a href="archives.html">Achiv</a>
+              <a href="bibliography.html">Bibliyografi</a>
+              <a href="quiz.html">Quiz : Èske ou konnen Ayiti ?</a>
+              <a href="faits-meconnus.html">Bagay Moun Pa Konnen</a>
+            </div>
+          </div>
+          <a href="contact.html">Kontak</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : istwa, kilti, jeyografi…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Edikasyon Interactive</p>
+      <h1 class="page-hero__title">Connaissez-vous Haïti ?</h1>
+      <p class="page-hero__desc">Testez vos konesanss sur l'istwa, la kilti, la jeyografi et la sosyete de premye Repiblik nwa nan mond lan. Vingt questions, quatre niveaux de difficulté.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Akèy</a>
+        <span>/</span>
+        <a href="encyclopedia.html">Portail</a>
+        <span>/</span>
+        <span>Quiz</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label text-center">Quiz Interactif</p>
+      <h2 class="section-title text-center">20 Questions sur Haïti</h2>
+      <p class="section-subtitle text-center">Istwa • Kilti • Jeyografi • Sosyete — une question à la fois.</p>
+
+      <div class="quiz-shell" id="quizShell">
+
+        <!-- Progress + meta -->
+        <div class="quiz-progress-wrap" id="progressWrap">
+          <div class="quiz-progress-bar" id="progressBar" style="width:5%"></div>
+        </div>
+        <div class="quiz-meta" id="quizMeta">
+          <span id="questionCounter">Question 1 / 20</span>
+          <span class="quiz-score-badge" id="scoreBadge">Score : 0</span>
+        </div>
+
+        <!-- Question card -->
+        <div class="quiz-card" id="quizCard">
+          <span class="quiz-category" id="questionCategory">Istwa</span>
+          <p class="quiz-question" id="questionText"></p>
+          <ul class="quiz-choices" id="choicesList"></ul>
+          <div class="quiz-explanation" id="explanationBox"></div>
+          <button class="quiz-next-btn" id="nextBtn">Question suivante →</button>
+        </div>
+
+        <!-- Results screen (hidden initially) -->
+        <div class="quiz-results quiz-card" id="resultsScreen">
+          <div class="quiz-results__score-ring">
+            <span class="big" id="finalScore">0</span>
+            <span class="small">/ 20</span>
+          </div>
+          <p class="quiz-results__msg" id="resultMessage"></p>
+          <p class="quiz-results__sub" id="resultSub"></p>
+          <div class="quiz-breakdown" id="breakdownBox">
+            <h4>Résultats par catégorie</h4>
+            <div class="quiz-breakdown-row"><span class="cat-label">Istwa</span><span class="cat-score" id="scoreIstwa">0 / 5</span></div>
+            <div class="quiz-breakdown-row"><span class="cat-label">Kilti</span><span class="cat-score" id="scoreKilti">0 / 5</span></div>
+            <div class="quiz-breakdown-row"><span class="cat-label">Jeyografi</span><span class="cat-score" id="scoreGeographie">0 / 5</span></div>
+            <div class="quiz-breakdown-row"><span class="cat-label">Sosyete</span><span class="cat-score" id="scoreSociete">0 / 5</span></div>
+          </div>
+          <br>
+          <button class="quiz-restart-btn" id="restartBtn">↺ Recommencer</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section--alt">
+    <div class="container">
+      <p class="section-label text-center">Aprann plis</p>
+      <h2 class="section-title text-center">Approfondissez vos konesanss</h2>
+      <p class="section-subtitle text-center">Chaque bonne réponse est une porte ouverte. Eksplore les pages thématiques pour aller plus loin.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:1.5rem;">
+        <a href="history.html" style="display:inline-block;background:var(--blue,#00209F);color:#fff;border-radius:10px;padding:.65rem 1.4rem;font-size:14px;font-weight:700;text-decoration:none;">Istwa Jeneral</a>
+        <a href="kilti.html" style="display:inline-block;background:var(--blue,#00209F);color:#fff;border-radius:10px;padding:.65rem 1.4rem;font-size:14px;font-weight:700;text-decoration:none;">Kilti &amp; Atizay</a>
+        <a href="departements.html" style="display:inline-block;background:var(--blue,#00209F);color:#fff;border-radius:10px;padding:.65rem 1.4rem;font-size:14px;font-weight:700;text-decoration:none;">10 Depatman yo</a>
+        <a href="heroes.html" style="display:inline-block;background:var(--blue,#00209F);color:#fff;border-radius:10px;padding:.65rem 1.4rem;font-size:14px;font-weight:700;text-decoration:none;">Ewò Nasyonal</a>
+        <a href="creole.html" style="display:inline-block;background:var(--blue,#00209F);color:#fff;border-radius:10px;padding:.65rem 1.4rem;font-size:14px;font-weight:700;text-decoration:none;">Lang Kreyòl</a>
+        <a href="vodou.html" style="display:inline-block;background:var(--blue,#00209F);color:#fff;border-radius:10px;padding:.65rem 1.4rem;font-size:14px;font-weight:700;text-decoration:none;">Vodou</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            Repiblik Ayiti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire istwa d'Haïti, de sa kilti
+            vibrante et de son pèp remarquable. Dédié à partager l'istwa de
+            premye Repiblik nwa nan mond lan.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Eksplore</h4>
+          <ul>
+            <li><a href="index.html">Akèy</a></li>
+            <li><a href="about.html">Sou Ayiti</a></li>
+            <li><a href="history.html">Istwa</a></li>
+            <li><a href="tourism.html">Touris</a></li>
+            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+            <li><a href="archives.html">Achiv</a></li>
+            <li><a href="bibliography.html">Bibliyografi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kilti &amp; Sosyete</h4>
+          <ul>
+            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastwonomi</a></li>
+            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Istwa &amp; Enstitisyon</h4>
+          <ul>
+            <li><a href="timeline.html">Kwonolouji</a></li>
+            <li><a href="heroes.html">Ewò Nasyonal</a></li>
+            <li><a href="lidès.html">Lidè</a></li>
+            <li><a href="konstitisyon.html">Konstitisyon</a></li>
+            <li><a href="enstitisyons.html">Enstitisyon</a></li>
+            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Pran Kontak</h4>
+          <ul>
+            <li><a href="contact.html">Kontakte Nou</a></li>
+            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+            <li><a href="license.html">Mentions L&eacute;gales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est n&eacute; d&apos;une frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti sont &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les sources ha&iuml;tiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pendant.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/premium.js"></script>
+  <script>
+  (function () {
+    'use strict';
+
+    const QUESTIONS = [
+      /* ── HISTOIRE (1-5) ── */
+      {
+        category: 'Istwa',
+        question: 'Quelle date Haïti a-t-elle proclamé son endepandans ?',
+        choices: [
+          '1er janvier 1803',
+          '1er janvier 1804',
+          '4 juillet 1804',
+          '18 mai 1803'
+        ],
+        correct: 1,
+        explanation: 'Haïti a proclamé son endepandans le 1er janvier 1804 à Gonaïves, devenant ainsi la premye Repiblik nwa libre du mond et la deuxième nation indépendante des Amériques.'
+      },
+      {
+        category: 'Istwa',
+        question: 'Qui a proclamé l'endepandans Ayiti ?',
+        choices: [
+          'Toussaint Louverture',
+          'Henri Christophe',
+          'Jean-Jacques Dessalines',
+          'Alexandre Pétion'
+        ],
+        correct: 2,
+        explanation: 'Jean-Jacques Dessalines, après la viktwa décisive de Vertières en novembre 1803, proclama l'endepandans Ayiti et devint son premier chef d'État sous le nom de Jacques I.'
+      },
+      {
+        category: 'Istwa',
+        question: 'Quelle cérémonie a marqué le début de Revolisyon ayisyèn nan en 1791 ?',
+        choices: [
+          'La batay de Vertières',
+          'La cérémonie du Bois Caïman',
+          'Le Congrès d\'Arcahaie',
+          'La prise de Cap-Français'
+        ],
+        correct: 1,
+        explanation: 'La cérémonie du Bwa Kayiman, le 14 août 1791, réunit des esclaves sous la direction de Boukman Dutty et d'une prêtresse vodou, donnant le signal spirituel et politik du soulèvement général.'
+      },
+      {
+        category: 'Istwa',
+        question: 'Quel prezidan haïtien a accepté de payer à la France 150 millions de francs pour la rekonesans de l'endepandans ?',
+        choices: [
+          'Henri Christophe',
+          'Jean-Jacques Dessalines',
+          'Alexandre Pétion',
+          'Jean-Pierre Boyer'
+        ],
+        correct: 3,
+        explanation: 'Jean-Pierre Boyer signa en 1825 l'ordonnance de Charles X conditionnant la rekonesans française au paiement de 150 millions de francs — une dette coloniale qui pesa sur l'ekonomi haïtienne pendant plus d'un syèk.'
+      },
+      {
+        category: 'Istwa',
+        question: 'En quelle ane les États-Unis ont-ils occupé Haïti ?',
+        choices: [
+          '1905',
+          '1910',
+          '1915',
+          '1920'
+        ],
+        correct: 2,
+        explanation: 'Les États-Unis ont occupé Haïti de 1915 à 1934, invoquant l'instabilité politik après l'assassinat du prezidan Vilbrun Guillaume Sam, mais poursuivant des intérêts stratégiques et ekonomiks dans les Karayib.'
+      },
+
+      /* ── CULTURE (6-10) ── */
+      {
+        category: 'Kilti',
+        question: 'Quel est le nom de la cérémonie lors de laquelle fut créé le premier drapo haïtien ?',
+        choices: [
+          'La Conférence de Gonaïves',
+          'Le Congrès d\'Arcahaie',
+          'L\'Assemblée de Vertières',
+          'Le Conseil de Léogâne'
+        ],
+        correct: 1,
+        explanation: 'C'est lors du Congrès d'Arcahaie en mai 1803 que Dessalines arracha le blanc de la bannière tricolore française pour n'en conserver que le bleu et le rouge, cousus ensemble par Catherine Flon.'
+      },
+      {
+        category: 'Kilti',
+        question: 'Quelle est la signification de la couleur bleue dans le drapo haïtien ?',
+        choices: [
+          'La lanmè Karayib',
+          'Le ciel d\'Haïti',
+          'La population africaine haïtienne',
+          'La libète'
+        ],
+        correct: 2,
+        explanation: 'Le bleu du drapo haïtien représente la population d'origine africaine, tandis que le rouge symbolise les mulâtres — les deux groupes qui, ensemble, ont combattu pour l'endepandans de la nation.'
+      },
+      {
+        category: 'Kilti',
+        question: 'Comment s'appelle l'im national haïtien ?',
+        choices: [
+          'La Haïtienne',
+          'L\'Endepandans',
+          'La Dessalinienne',
+          'La Libète'
+        ],
+        correct: 2,
+        explanation: 'La Dessalinienne, dont les paroles sont de Justin Lhérisson et la mizik de Nicolas Geffrard, est l'im national d'Haïti depuis 1904 — cent ans après l'endepandans.'
+      },
+      {
+        category: 'Kilti',
+        question: 'Quel genre musical haïtien est reconnu comme la dans nationale d'Haïti ?',
+        choices: [
+          'Rara',
+          'Kompa',
+          'Rasin',
+          'Méringue'
+        ],
+        correct: 1,
+        explanation: 'Le kompa (ou compas direct), créé dans les anes 1950 par Nemours Jean-Baptiste, est à la fois un genre musical et une dans nationale haïtienne, célébré par la dyaspora dans le mond entier.'
+      },
+      {
+        category: 'Kilti',
+        question: 'Quelle est l'origine du vodou haïtien ?',
+        choices: [
+          'Il a été fondé par Boukman',
+          'Il a été fondé par Toussaint Louverture',
+          'Il a été fondé par Jean-Baptiste Pointe du Sable',
+          'Aucun fondateur unique — le vodou vient d\'Afrique'
+        ],
+        correct: 3,
+        explanation: 'Le vodou haïtien est né de la synthèse des tradisyons religieuses de nombreux pèps africains déportés comme esclaves à Saint-Domingue, principalement des Fon, Ewe et Yoruba d'Afrique de l'Ouest.'
+      },
+
+      /* ── GÉOGRAPHIE (11-15) ── */
+      {
+        category: 'Jeyografi',
+        question: 'Quelle est la capitale d'Haïti ?',
+        choices: [
+          'Cap-Haïtien',
+          'Gonaïves',
+          'Jacmel',
+          'Port-au-Prince'
+        ],
+        correct: 3,
+        explanation: 'Port-au-Prince, fondée en 1749, est la capitale et le principal centre ekonomik, politik et kiltil d'Haïti, abritant environ trois millions d'habitants dans son aire métropolitaine.'
+      },
+      {
+        category: 'Jeyografi',
+        question: 'Combien de depatmans compte Haïti ?',
+        choices: [
+          '8',
+          '9',
+          '10',
+          '12'
+        ],
+        correct: 2,
+        explanation: 'Haïti est divisée en 10 depatmans : Ouest, Nord, Nord-Est, Nord-Ouest, Artibonite, Centre, Sud, Grand'Anse, Nippes et Sud-Est — chacun subdivisé en arrondissements et communes.'
+      },
+      {
+        category: 'Jeyografi',
+        question: 'Dans quel depatman se trouve la Citadelle Laferrière, classée au patrimwàn mondial de l'UNESCO ?',
+        choices: [
+          'Ouest',
+          'Artibonite',
+          'Nord',
+          'Sud'
+        ],
+        correct: 2,
+        explanation: 'La Citadelle Laferrière, forteresse colossale construite par Henri Christophe après l'endepandans pour protéger la nation d'une reconquête française, est située dans le depatman du Nord, près de Cap-Haïtien.'
+      },
+      {
+        category: 'Jeyografi',
+        question: 'Quel est le plus long fleuve d'Haïti ?',
+        choices: [
+          'La rivyè Massacre',
+          'La rivyè Artibonite',
+          'La rivyè Péligre',
+          'Le fleuve des Cayes'
+        ],
+        correct: 1,
+        explanation: 'L'Artibonite, d'une longueur d'environ 280 km, est le plus long fleuve d'Haïti et le grenier à riz du peyi — sa plaine alluviale nourrit une grande partie de la population haïtienne.'
+      },
+      {
+        category: 'Jeyografi',
+        question: 'Quelle vil haïtienne est surnommée la « Cité des Powèts » ?',
+        choices: [
+          'Cap-Haïtien',
+          'Jacmel',
+          'Les Cayes',
+          'Jérémie'
+        ],
+        correct: 3,
+        explanation: 'Jérémie, dans le depatman de la Grand'Anse, est surnommée la « Cité des Powèts » pour avoir donné naissance à de nombreux ekrivens et intellectuels, dont Alexandre Dumas père dont les ancêtres étaient haïtiens.'
+      },
+
+      /* ── SOCIÉTÉ (16-20) ── */
+      {
+        category: 'Sosyete',
+        question: 'Quelle proportion de la population haïtienne parle le créole comme seule lang ?',
+        choices: [
+          '50 %',
+          '70 %',
+          '80 %',
+          'Environ 90–95 %'
+        ],
+        correct: 3,
+        explanation: 'Entre 90 et 95 % des Haïtiens sont monolingues créolophones ; le français, co-lang officielle depuis la Konstitisyon de 1987, n'est maîtrisé que par une minorité scolarisée, ce qui fait du kreyòl la vraie lang maternelle de la nation.'
+      },
+      {
+        category: 'Sosyete',
+        question: 'Qui fut la première fanm à diriger Haïti comme chef d'État ?',
+        choices: [
+          'Marie-Claire Heureuse',
+          'Ertha Pascal-Trouillot',
+          'Mireille Durocher Bertin',
+          'Magalie Marcelin'
+        ],
+        correct: 1,
+        explanation: 'Ertha Pascal-Trouillot, première fanm à siéger à la Cour de cassation d'Haïti, fut prezidane provisoire de 1990 à 1991, supervisant les eleksyon historiques qui portèrent Jean-Bertrand Aristide au pouvoir.'
+      },
+      {
+        category: 'Sosyete',
+        question: 'Quel est le surnom donné au réseau de commerçantes qui assurent la distribution alimentaire dans tout le peyi ?',
+        choices: [
+          'Machann yo',
+          'Madan Sara',
+          'Fanm Ayiti',
+          'Gwoupman Fanm'
+        ],
+        correct: 1,
+        explanation: 'Les Madan Sara sont des commerçantes itinérantes dont le réseau informe constitue l'épine dorsale de la distribution alimentaire entre régions rurales et urbaines d'Haïti, souvent sans crédit bancaire ni soutien étatique.'
+      },
+      {
+        category: 'Sosyete',
+        question: 'En quelle ane le séisme dévastateur a-t-il frappé Haïti, faisant plus de 200 000 morts ?',
+        choices: [
+          '2008',
+          '2010',
+          '2012',
+          '2016'
+        ],
+        correct: 1,
+        explanation: 'Le séisme du 12 janvier 2010, d'une magnitude de 7,0, détruisit une grande partie de l'agglomération de Port-au-Prince, fit plus de 200 000 morts et 1,5 million de sans-abri, déclenchant une réponse humanitaire internationale massive.'
+      },
+      {
+        category: 'Sosyete',
+        question: 'Quel auteur haïtien a écrit « Gouverneurs de la rosée » (1944), chef-d'œuvre de la littérature caribéenne ?',
+        choices: [
+          'René Depestre',
+          'Edwidge Danticat',
+          'Jacques Roumain',
+          'Frankétienne'
+        ],
+        correct: 2,
+        explanation: 'Jacques Roumain, ekriven, anthropologue et militant haïtien, écrivit « Gouverneurs de la rosée » en 1944, un roman qui célèbre la peyiannerie haïtienne et la solidarité communautaire, traduit en plus de vingt langs.'
+      }
+    ];
+
+    let currentIndex = 0;
+    let score = 0;
+    let answered = false;
+    const catScores = { Istwa: 0, Kilti: 0, Jeyografi: 0, Sosyete: 0 };
+
+    const progressBar  = document.getElementById('progressBar');
+    const questionCounter = document.getElementById('questionCounter');
+    const scoreBadge   = document.getElementById('scoreBadge');
+    const questionCategory = document.getElementById('questionCategory');
+    const questionText = document.getElementById('questionText');
+    const choicesList  = document.getElementById('choicesList');
+    const explanationBox = document.getElementById('explanationBox');
+    const nextBtn      = document.getElementById('nextBtn');
+    const quizCard     = document.getElementById('quizCard');
+    const resultsScreen = document.getElementById('resultsScreen');
+    const progressWrap = document.getElementById('progressWrap');
+    const quizMeta     = document.getElementById('quizMeta');
+
+    function renderQuestion() {
+      answered = false;
+      const q = QUESTIONS[currentIndex];
+
+      /* progress */
+      const pct = Math.round(((currentIndex) / QUESTIONS.length) * 100);
+      progressBar.style.width = Math.max(pct, 5) + '%';
+      questionCounter.textContent = 'Question ' + (currentIndex + 1) + ' / ' + QUESTIONS.length;
+
+      /* content */
+      questionCategory.textContent = q.category;
+      questionText.textContent = q.question;
+
+      /* choices */
+      choicesList.innerHTML = '';
+      const labels = ['A', 'B', 'C', 'D'];
+      q.choices.forEach(function (choice, i) {
+        const li = document.createElement('li');
+        const btn = document.createElement('button');
+        btn.className = 'quiz-choice-btn';
+        btn.textContent = labels[i] + ')  ' + choice;
+        btn.addEventListener('click', function () { handleChoice(i, btn); });
+        li.appendChild(btn);
+        choicesList.appendChild(li);
+      });
+
+      /* reset feedback */
+      explanationBox.textContent = '';
+      explanationBox.className = 'quiz-explanation';
+      nextBtn.className = 'quiz-next-btn';
+    }
+
+    function handleChoice(index, clickedBtn) {
+      if (answered) return;
+      answered = true;
+
+      const q = QUESTIONS[currentIndex];
+      const allBtns = choicesList.querySelectorAll('.quiz-choice-btn');
+      allBtns.forEach(function (b) { b.disabled = true; });
+
+      if (index === q.correct) {
+        score++;
+        catScores[q.category]++;
+        clickedBtn.classList.add('correct');
+        explanationBox.className = 'quiz-explanation visible';
+        explanationBox.innerHTML = '✓ &nbsp;' + q.explanation;
+      } else {
+        clickedBtn.classList.add('wrong');
+        allBtns[q.correct].classList.add('correct');
+        explanationBox.className = 'quiz-explanation wrong-explain visible';
+        explanationBox.innerHTML = '✗ &nbsp;La bonne réponse était : <strong>' + ['A', 'B', 'C', 'D'][q.correct] + ')&nbsp;' + q.choices[q.correct] + '</strong>. ' + q.explanation;
+      }
+
+      scoreBadge.textContent = 'Score : ' + score;
+      nextBtn.className = 'quiz-next-btn visible';
+    }
+
+    function showResults() {
+      quizCard.style.display = 'none';
+      progressWrap.style.display = 'none';
+      quizMeta.style.display = 'none';
+
+      document.getElementById('finalScore').textContent = score;
+
+      let msg, sub;
+      if (score >= 18) {
+        msg = 'Félicitations ! Vous êtes un(e) véritable expert(e) d'Haïti !';
+        sub = 'Un score exceptionnel ! Votre konesans de l'istwa, de la kilti et de la sosyete haïtiennes est remarquable.';
+      } else if (score >= 14) {
+        msg = 'Très bien ! Vous connaissez bien Haïti.';
+        sub = 'Excellent résultat ! Quelques pages de ce site vous permettront d'atteindre la maîtrise complète.';
+      } else if (score >= 10) {
+        msg = 'Pas mal ! Continuez à explorer ce site pour en apprendre davantage.';
+        sub = 'Bonne base de konesanss ! Plonje dans nos sections Istwa, Kilti et Jeyografi pour progresser encore.';
+      } else if (score >= 5) {
+        msg = 'Vous avez encore beaucoup à découvrir sur Haïti. Ce site est là pour vous !';
+        sub = 'Ne vous découragez pas — chaque page de ce site est une invitation à mieux connaître premye Repiblik nwa nan mond lan.';
+      } else {
+        msg = 'Ne vous découragez pas — eksplore nos pages pour tout apprendre sur Haïti !';
+        sub = 'Le voyage commence ici ! Ce site rassemble des centaines de pages sur l'istwa, la kilti et la sosyete haïtiennes.';
+      }
+
+      document.getElementById('resultMessage').textContent = msg;
+      document.getElementById('resultSub').textContent = sub;
+      document.getElementById('scoreIstwa').textContent = catScores['Istwa'] + ' / 5';
+      document.getElementById('scoreKilti').textContent = catScores['Kilti'] + ' / 5';
+      document.getElementById('scoreGeographie').textContent = catScores['Jeyografi'] + ' / 5';
+      document.getElementById('scoreSociete').textContent = catScores['Sosyete'] + ' / 5';
+
+      resultsScreen.className = 'quiz-results quiz-card visible';
+    }
+
+    nextBtn.addEventListener('click', function () {
+      currentIndex++;
+      if (currentIndex < QUESTIONS.length) {
+        renderQuestion();
+      } else {
+        showResults();
+      }
+    });
+
+    document.getElementById('restartBtn').addEventListener('click', function () {
+      currentIndex = 0;
+      score = 0;
+      Object.keys(catScores).forEach(function (k) { catScores[k] = 0; });
+      scoreBadge.textContent = 'Score : 0';
+
+      resultsScreen.className = 'quiz-results quiz-card';
+      quizCard.style.display = '';
+      progressWrap.style.display = '';
+      quizMeta.style.display = '';
+
+      renderQuestion();
+    });
+
+    /* Start */
+    renderQuestion();
+  }());
+  </script>
+</body>
+</html>

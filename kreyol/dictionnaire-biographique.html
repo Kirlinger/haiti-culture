@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Dictionnaire Biographique d'Haïti | RepiblikHaïti.org</title>
+  <meta name="description" content="Un répertoire de personnalités haïtiennes — ewò nationaux, atiss, scientifiques, athlètes, intellectuels — qui ont marqué leur époque et méritent une rekonesans à la hauteur de leur apport." />
+  <meta name="author" content="RepiblikHaïti.org" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/premium.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Akèy">
+          Repiblik Ayiti
+        </a>
+        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+          <a href="index.html">Akèy</a>
+          <a href="about.html">Sou Nou</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Istwa Jeneral</a>
+              <a href="timeline.html">Kwonolouji</a>
+              <a href="heroes.html">Ewò Nasyonal</a>
+              <a href="lidès.html">Lidè</a>
+              <a href="konstitisyon.html">Konstitisyon</a>
+              <a href="enstitisyons.html">Enstitisyon</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti.html">Kilti &amp; Atizay</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Lwa yo</a>
+              <a href="gastronomy.html">Gastwonomi</a>
+              <a href="holidays.html">Jou Ferye</a>
+            </div>
+          </div>
+          <a href="tourism.html">Touris</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti-vivante.html">Kilti Vivan</a>
+              <a href="creativite-populaire.html">Kreyativite Popilè</a>
+              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+              <a href="instabilite-politik.html">Enstabilite Politik</a>
+              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+              <a href="services-essentiels.html">Sèvis Esansyèl</a>
+              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Ansiklopedi</a>
+              <a href="archives.html">Achiv</a>
+              <a href="bibliography.html">Bibliyografi</a>
+            </div>
+          </div>
+          <a href="contact.html">Kontak</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Patrimwàn Humain</p>
+      <h1 class="page-hero__title">Dictionnaire Biographique d'Haïti</h1>
+      <p class="page-hero__desc">Un répertoire de personnalités haïtiennes — ewò nationaux, atiss, scientifiques, athlètes, intellectuels — qui ont marqué leur époque et méritent une rekonesans à la hauteur de leur apport.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Akèy</a>
+        <span>/</span>
+        <span>Dictionnaire Biographique</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Un Pèp de Bâtisseurs</p>
+      <h2>Au-delà des statues</h2>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:2rem;">
+        L'istwa haïtienne ne se résume pas à ses généraux et à ses prezidans. Derrière les grandes dates — 1804, 1915, 1957, 2010 — se trouvent des romanciers qui ont forgé une lang, des peintres qui ont inventé un regard, des médecins qui ont construit des systèmes de santé avec presque rien, des mizisyens qui ont donné au mond un rythme reconnaissable entre tous. Ce dictionnaire biographique rassemble ces fanm et ces hommes que l'istwa officielle n'a pas toujours mis en avant, mais sans lesquels Haïti ne serait pas ce qu'elle est.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:3rem;">
+        Les pères fondateurs — Toussaint Louverture, Dessalines, Christophe, Pétion, Sanité Belair — sont traités en détail sur la page <a href="heroes.html" style="color:var(--blue,#0038A8);text-decoration:underline;">Ewò Nasyonal</a>. Ce dictionnaire part de là où cette page s'arrête.
+      </p>
+
+
+      <!-- ===== ÉCRIVAINS & INTELLECTUELS ===== -->
+      <h2 style="font-size:clamp(22px,3vw,34px);font-weight:900;color:var(--blue-dark,#001370);border-bottom:3px solid var(--gold,#FFD166);padding-bottom:0.6rem;margin-bottom:2.5rem;">Ekrivens &amp; Intellectuels</h2>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Jacques Roumain</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1907 – 1944 · Romancier, Ethnologue, Fondateur du Parti Communiste Haïtien</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Jacques Roumain est mort à trente-sept ans, et il a pourtant accompli ce que d'autres mettent une vie entière à effleurer. Issu d'une fanmi de l'élite haïtienne, il choisit résolument le camp des peyians et des ouvriers — rupture de classe rare et coûteuse dans le Haiti des anes 1930. Il fonde le Parti Communiste Haïtien en 1934, ce qui lui vaut l'emprisonnement puis l'exil sous le gouvènman de Sténio Vincent. Ce n'est pas un militantisme de salon : Roumain s'engage, paie, recommence.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          À Paris, il étudie l'ethnologie auprès de Paul Rivet au Musée de l'Homme, et rapporte en Haïti une méthode scientifique qu'il applique à la kilti populaire et au vodou — à une époque où l'élite cultivée haïtienne considérait encore le vodou comme une honte nationale. Il fonde le Bureau d'Ethnologie d'Haïti en 1941, enstitisyon qui existe encore. Son œuvre ethnologique — notamment <em>Le Sacrifice du tambour assoto</em> — reste une référence.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Son roman <em>Gouverneurs de la Rosée</em>, publié à titre posthume en 1944, est considéré par la critique comme le chef-d'œuvre de la literati ayisyèn. Le récit d'un peyian revenu de Cuba qui cherche à réconcilier son village divisé autour d'une source d'eau est à la fois réaliste, lyrique et politikment dense. Traduit en plus de vingt langs, le livre dépasse largement le cadre caribéen. Il est mort à Mexico, où il servait comme chargé d'affaires. Les circonstances de sa mort restent obscures — certains historiens évoquent un empoisonnement, aucune preuve définitive n'existe — mais l'hypothèse est difficile à écarter compte tenu de l'intensité de ses adversaires politiks.
+        </p>
+        <aside class="researcher-note" aria-label="Note de recherche">
+          Le fait que Roumain soit issu de l'élite haïtienne — et qu'il ait choisi de la combattre — est souvent édulcoré dans les présentations scolaires, qui préfèrent en faire un simple « humaniste ». Sa trajectoire est plus radicale que cela : il s'est retourné contre sa propre classe. C'est cette cohérence entre la biographie et l'œuvre qui lui confère son autorité morale, pas seulement son talent littéraire.
+        </aside>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Ida Faubert</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1882 – 1969 · Powèt, Voix de la Dyaspora Haïtienne à Paris</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Fille d'un aide de camp du prezidan Lysius Salomon, Ida Faubert grandit dans les cercles proches du pouvoir haïtien, avant de s'installer durablement à Paris où elle fréquente les milieux littéraires afro-américains et antillais de l'entre-deux-lagès. À Paris, elle noue une amitié réelle avec Langston Hughes — qui reconnaît en elle une parenté de sensibilité — et avec les figures de la Négritude naissante. Cette position de passeur entre kiltis est centrale dans son œuvre.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Son recueil <em>Cœur des Îles</em>, publié à Paris en 1939, impose une voix poétique singulière : mélancolique sans pleurnicherie, précise dans ses évocations de la mer, de la chaleur, de la mémoire de Port-au-Prince vue de loin. La distance géographique est pour elle un instrument littéraire — l'exil volontaire n'efface pas l'appartenance, il la distille. Elle publie également des nouvelles et des poèmes en revues qui ont peu été réédités, ce qui explique sa relative invisibilité dans les anthologies contemporaines.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Ida Faubert a vécu quatre-vingt-sept ans et traversé deux lagès mondiales depuis Paris, sans jamais perdre le fil haïtien de son écriture. Elle est l'une des premières fanm haïtiennes à avoir publié un recueil de poésie en France — fait qui dit autant sur les barrières de genre et de nationalité que sur son propre courage.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Édris Saint-Amand</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1918 – 1995 · Essayiste, Critique Littéraire, Ministre de l'Edikasyon</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Édris Saint-Amand appartient à cette génération d'intellectuels haïtiens qui ont exercé simultanément la critique littéraire, l'enseignement et la fonction publique — une combinaison qui est moins une exception haïtienne qu'une nécessité structurelle dans un peyi où les enstitisyons kiltilles sont chroniquement sous-financées. Son roman <em>Bon Dieu rit</em> (1952) est considéré comme un des textes fondateurs de la modernité romanesque haïtienne, explorant les tensions entre vie peyianne et catholicisme imposé avec une ironie sobre et précise.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          En tant que critique, Saint-Amand a contribué à cartographier la literati ayisyèn dans ses dimensions stylistiques et historiques, à une époque où cette littérature était peu lue hors d'Haïti. Son rôle de ministre de l'Edikasyon lui a permis de mettre en œuvre certaines de ces convictions sur la valeur pédagogique de la kilti nationale — avec les contraintes et les compromis que toute fonction politik implique.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Jean Métellus</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1937 – 2014 · Romancier, Dramaturge, Neurologue</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Jean Métellus est l'une de ces figures qui rendent difficile tout classement simple : il exerçait la neurologie à Paris depuis les anes 1960 — spécialité parmi les plus exigeantes de la médecine — tout en publiant des romans, des pièces de théâtre et des essais sur Haïti. Cette double vie n'était pas une distraction ; c'était une stratégie de rezistans à l'exil. Jacquelin, son nom de naissance, a quitté Haïti sous Duvalier et ne l'a jamais vraiment quittée dans son écriture.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Ses romans — <em>Jacmel au crépuscule</em> (1981), <em>L'Année Dessalines</em> (1986), <em>Louis Vortex</em> (1992) — reconstituent une Haiti à la fois historique et intime, avec un souci du détail sociologique rare. Sa pièce <em>Anacaona</em>, consacrée à la reine taïno résistante à la conquête espagnole, a été jouée en Europe et témoigne d'une ambition dramaturgique qui dépasse le cadre national. Métellus écrivait en français avec une exigence formelle qui n'avait rien à envier aux romanciers français contemporains, et c'est peut-être pour cela qu'il était mieux reconnu à Paris qu'en Haïti.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3.5rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Gary Victor</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1958 – · Romancier, Maître du Roman Policier Haïtien</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Gary Victor est l'ekriven haïtien contemporain le plus lu en Haïti même — ce qui n'est pas un détail. Là où beaucoup de romanciers haïtiens publient pour un public extérieur, Victor écrit d'abord pour ses compatriotes, dans un créole et un français populaires qui reflètent la lang quotidienne de Port-au-Prince. Son roman policier <em>Soro</em> (2002), suivi du <em>Diable dans un thé à la citronnelle</em> (2006) et d'une longue série de récits mêlant vodou, corruption policière et humour noir, a inventé un genre : le polar haïtien urbain.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Ancien fonctionnaire au ministère de la Kilti, Victor a publié plus de trente livres. Il a remporté le prix du Vieux Port de Marseille et plusieurs distinctions de la Caraïbe francophone. Ce qui distingue son œuvre n'est pas seulement la fécondité — c'est la cohérence d'un regard sur une sosyete haïtienne que d'autres fuient ou idéalisent : un regard à la fois lucide, tendre et impitoyable, comme celui d'un médecin qui aime son patient.
+        </p>
+      </div>
+
+
+      <!-- ===== ARTISTES VISUELS ===== -->
+      <h2 style="font-size:clamp(22px,3vw,34px);font-weight:900;color:var(--blue-dark,#001370);border-bottom:3px solid var(--gold,#FFD166);padding-bottom:0.6rem;margin-bottom:2.5rem;">Atis Vizyèl</h2>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Hector Hyppolite</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1894 – 1948 · Peintre, Houngan, Fondateur de la Peinture Naïve Haïtienne</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Hector Hyppolite était prêtre vodou — houngan — avant d'être peintre. Il peignait avec des plumes de poulet quand il n'avait pas de pinceaux, et utilisait ses doigts. C'est André Breton et DeWitt Peters qui le « découvrent » en 1945 dans un bar de Saint-Marc où il a peint les portes à la demande du propriétaire. Cette « découverte » est à la fois un fait historique et une formulation problématique : Hyppolite peignait depuis longtemps ; c'est le regard occidental qui arrive, pas le talent.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Breton, père du surréalisme, le qualifie de « plus grand peintre surréaliste du mond » — une étiquette qu'Hyppolite n'aurait probablement pas choisie, puisqu'il peignait les lwa du vodou non pas comme des métaphores mais comme des réalités spirituelles qu'il connaissait intimement. Ses représentations d'Erzulie Fréda, de Ogou, de Dambala sont à la fois iconographiquement précises et visuellement souveraines. Il expose à Paris et New York dans les trois ans qui suivent sa découverte, et ses œuvres entrent dans les collections du Musée de l'Homme et de musées américains. Il meurt en 1948, trois ans après avoir commencé à peindre sur toile.
+        </p>
+        <aside class="researcher-note" aria-label="Note de recherche">
+          Le cas Hyppolite pose une question historiographique que les études d'art caribéen n'ont pas entièrement résolue : dans quelle mesure la rekonesans internationale d'un atis autodidacte non-occidental dépend-elle du filtre d'un regard occidental qui le renomme selon ses propres catégories ? Hyppolite a bénéficié de cette rencontre — et en a peut-être aussi été diminué. André Breton voyait du surréalisme là où Hyppolite voyait de la théologie. Ce n'est pas la même chose.
+        </aside>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Philomé Obin</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1891 – 1986 · Peintre, Fondateur de l'École du Cap-Haïtien</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Philomé Obin a peint pendant soixante ans avec une régularité presque monastique. Né au Cap-Haïtien, il est demeuré profondément attaché au nord d'Haïti, dont il a documenté la vie sociale, religieuse et historique avec une précision documentaire remarquable. Ses tableaux ressemblent parfois à des chroniques illustrées : on y voit des marchés, des entèments, des cérémonies religieuses catholiques et vodou, des peyiages de la plaine du Nord. Là où Hyppolite était visionnaire et mystique, Obin est mémoriel et archivistique.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Il fonde, avec ses frères Sénèque et Antoine, ce qu'on appellera l'École du Cap — distincte par son style de l'École de Port-au-Prince, plus influencée par le Centre d'Art de DeWitt Peters. Obin vivra jusqu'à quatre-vingt-quinze ans, lucide jusqu'au bout, produisant des tableaux jusque dans les anes 1980. Ses œuvres majeures sont jounen jodi a dans des collections publiques et privées aux États-Unis et en Europe. Il n'a pratiquement jamais quitté le Cap.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Préfète Duffaut</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1923 – 2012 · Peintre Visionnaire, Chantre de Jacmel</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Préfète Duffaut dit avoir reçu en vision le commandement de peindre sa vil natale, Jacmel, sous la forme d'une cité flottante — des mòns superposées, des villages accrochés à des falaises impossibles, des processions qui serpentent sur des ponts suspendus dans le vide. Ce style immédiatement reconnaissable n'est pas une fantaisie décorative : c'est une cosmologie. Jacmel, dans les tableaux de Duffaut, est à la fois le lieu réel où il a grandi et un archétype de la cité humaine fragile face aux forces du ciel et de la mer.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Duffaut rejoint le Centre d'Art de Port-au-Prince en 1947 et y peint l'une des grandes fresques de la cathédrale Sainte-Trinité — détruites par le séisme de 2010, perte irréparable pour le patrimwàn artistique mondial. Il continue à peindre jusqu'à la fin de sa vie, à quatre-vingt-neuf ans, dans une cohérence stylistique qui forçait l'admiration. Ses œuvres figurent dans les collections du Smithsonian, du Musée d'Art Haïtien et dans de nombreuses collections privées internationales.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Jasmin Joseph</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1923 – 2005 · Céramiste, Sculpteur</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Jasmin Joseph est l'une des figures les moins célèbres — et l'une des plus importantes — de la génération du Centre d'Art. Formé à la céramique et à la sculpture dans ce foyer créatif fondé en 1944, il développe un style tridimensionnel qui se distingue radicalement de la tradisyon picturale dominante : ses figures modelées en argile, souvent de grande taille, représentent des personnages du quotidien haïtien avec une plasticité et une présence physique que la peinture ne pouvait atteindre. Le Smithsonian Institution possède plusieurs de ses pièces dans sa collection permanente — distinction rare pour un atis haïtien du XXe syèk.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Joseph n'a jamais cherché la célébrité internationale avec l'agressivité commerciale de certains de ses contemporains. Il est resté en Haïti, a continué à travailler, a formé des élèves. Son œuvre mérite une étude monographique complète qui n'existe toujours pas en français.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3.5rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Bernard Séjourné</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1947 – 1994 · Peintre, Portraitiste de la Fanm Haïtienne</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Bernard Séjourné est mort à quarante-sept ans du sida, au moment où son œuvre atteignait une maturité exceptionnelle. Ses grands formats — souvent des portraits de fanm haïtiennes aux vêtements colorés, aux regards directs, dans des poses qui refusent la soumission — combinent une maîtrise technique académique et une sensibilité à la fois sociale et intime. Il ne peint pas des fanm exotiques pour un regard masculin ou étranger : il peint des êtres humains complets, dans leur dignité ordinaire.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Ses toiles, par leur format et leur ambition, rivalisent avec les grands portraitistes occidentaux du XXe syèk. Elles ont été exposées aux États-Unis, en Europe et dans la Caraïbe. Le fait que Séjourné reste peu connu hors des cercles spécialisés en art haïtien est une lacune de la critique internationale, pas un jugement sur son talent.
+        </p>
+      </div>
+
+
+      <!-- ===== MUSICIENS ===== -->
+      <h2 style="font-size:clamp(22px,3vw,34px);font-weight:900;color:var(--blue-dark,#001370);border-bottom:3px solid var(--gold,#FFD166);padding-bottom:0.6rem;margin-bottom:2.5rem;">Musiciens</h2>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Nemours Jean-Baptiste</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1918 – 1985 · Inventeur du Compas Direct</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          En 1955, Nemours Jean-Baptiste crée quelque chose d'entièrement nouveau à partir de matériaux existants : il combine le rythme méringue haïtien avec des syncopes afro-cubaines et une section de cuivres plus lente, plus dansante, plus langoureuse — et appelle le résultat <em>compas direct</em>. Ce n'est pas une évolution graduelle : c'est une rupture. La mizik populaire haïtienne, et par ricochet caribéenne, ne sera plus jamais la même. Le compas — ou kompa — est jounen jodi a la mizik nationale haïtienne dans le sens le plus profond : la mizik qu'on entend dans tous les quartiers, à tous les mariages, dans toutes les dyasporas.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Sa rivalité avec Webert Sicot, qui développa en parallèle le <em>cadence rampa</em>, a structuré l'âge d'or de la mizik populaire haïtienne dans les anes 1960 et 1970. Les deux mizisyens s'affrontaient à coups d'enregistrements et de concerts dans une émulation qui a élevé le niveau de toute la scène musicale. Nemours Jean-Baptiste est à mizik ayisyèn nan ce que James Brown est à la funk américaine : l'inventeur d'un idiome que des générations suivantes n'ont cessé de réinventer.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Althiery Dorival</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1922 – 1990 · Compositeur, Figure de la Mizik Classique et Folklorique Haïtienne</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Le nom d'Althiery Dorival est attaché à <em>La Dessalinienne</em>, l'im national haïtien dans son arrangement moderne — arrangement qu'il a réalisé et dont il a assuré la cohérence harmonique et orchestrale pour les cérémonies officielles du XXe syèk. Mais réduire Dorival à ce seul titre serait injuste. Il est l'une des figures centrales du mouvement d'intégration des miziks tradisyonnelles haïtiennes — mélodies vodou, méringues peyiannes, chants de travail — dans un langage musical savant.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Ce travail de dialogue entre tradisyon oral et écriture musicale formelle est l'une des grandes entreprises intellectuelles de kilti ayisyèn nan du XXe syèk, et Dorival y a contribué avec une rigueur et une discrétion qui expliquent peut-être qu'il soit moins célèbre que ses contemporains plus flamboyants.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Toto Bissainthe</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1934 – 1994 · Chanteuse, Actrice, Passeuse de Kilti</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Toto Bissainthe représente une forme rare d'atis totale : chanteuse de jazz, interprète de la tradisyon vodou, actrice de théâtre, militante politik. Elle quitte Haïti sous Duvalier et s'installe à Paris, où elle devient une figure du mond artistique afro-antillais. Elle fusionne les chants liturgiques vodou avec les harmonies jazz, non pas pour exotiser le premier ou diluer le second, mais pour montrer qu'ils parlent de la même expérience humaine — la douleur, la rezistans, la beauté.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Ses performances dans les grands festivals européens — Avignon, Nancy, les scènes parisiennes — font entrer kilti ayisyèn nan en force dans des espaces kiltils qui l'ignoraient largement. Elle a travaillé avec le metteur en scène Peter Brook, joué dans des pièces de Shakespeare et de Beckett. Elle est morte à Paris en 1994, peu reconnue en Haïti de son vivant, bien qu'elle soit retournée régulièrement au peyi jusqu'à la fin de sa vie.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Martha Jean-Claude</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1919 – 2001 · « La Voix d'Or d'Haïti », Exilée, Chanteuse Internationale</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Martha Jean-Claude avait une voix que ses contemporains décrivaient comme un événement naturel — profonde, chaude, capable de traverser une salle sans effort apparent. Surnommée <em>La voix d'or d'Haïti</em>, elle est expulsée par François Duvalier en raison de ses positions politiks et de ses liens avec des organisations syndicales. Elle s'installe à Cuba, où elle est accueillie avec les honneurs, enregistre plusieurs albums et enseigne le chant.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          L'exil de Martha Jean-Claude illustre un phénomène systémique sous le duvaliérisme : la destruction délibérée du tissu kiltil haïtien par l'élimination physique ou l'expulsion de ses membres les plus actifs. Elle ne rentrera jamais définitivement en Haïti. Sa carrière internationale — concerts, enregistrements, collaborations à Cuba et en Amerik Latin — est une réussite construite contre l'adversité politik, pas grâce à la bienveillance des enstitisyons haïtiennes.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3.5rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Tabou Combo</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Fondé en 1968 · L'Ambassadeur Musical de la Dyaspora Haïtienne</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Tabou Combo est fondé à Pétion-Vil en 1968 et deviendra, au fil des décennies, le groupe haïtien le plus internationalement voyagé. Sa particularité est d'avoir accompagné et en partie constitué dyaspora ayisyèn nan : là où des kominotes haïtiennes s'installaient — New York, Miami, Montréal, Paris, Boston — Tabou Combo arrivait, jouait, maintenait un lien sonore avec le peyi quitté. Cette fonction de ciment communautaire n'est pas secondaire à leur art ; elle en est le projet central.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Le groupe a survécu à des décennies de changements musicaux mondiaux en intégrant des influences soul, funk et hip-hop sans perdre l'ossature rythmique du compas. Des chansons comme <em>New York City</em> (1975) ou <em>Kalé Jo</em> sont devenues des standards que les Haïtiens de première, deuxième et troisième générations reconnaissent immédiatement. En 2004, ils reçoivent les clés de la vil de New York — consécration symbolique de plus de trente ans de présence dans cette métropole.
+        </p>
+      </div>
+
+
+      <!-- ===== MÉDECINS & SCIENTIFIQUES ===== -->
+      <h2 style="font-size:clamp(22px,3vw,34px);font-weight:900;color:var(--blue-dark,#001370);border-bottom:3px solid var(--gold,#FFD166);padding-bottom:0.6rem;margin-bottom:2.5rem;">Médecins &amp; Scientifiques</h2>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Dr. Ary Bordes</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1921 – 2004 · Pionnier de la Santé Publique Haïtienne</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Ary Bordes a consacré une carrière entière à construire ce qui n'existait pas : un sistèm sante primaire accessible aux peyians haïtiens. Dans un peyi où la médecine était historiquement concentrée à Port-au-Prince et réservée aux couches les plus aisées, il a travaillé à décentraliser les soins, à former des agents de santé communautaires, à concevoir des politiks de santé qui tiennent compte des réalités géographiques et ekonomiks du peyi profond.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Son ouvrage <em>Évolution des sciences de la santé en Haïti</em> reste la référence incontournable sur l'istwa de la médecine haïtienne — un travail d'historien autant que de praticien. Bordes avait compris que soigner sans documenter, c'est condamner les successeurs à recommencer de zéro. Cette rigueur intellectuelle combinée à l'engagement de terrain fait de lui une figure rare dans l'istwa des systèmes de santé du tiers-mond.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Georges Anglade</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1944 – 2010 · Géographe, Auteur de l'Atlas Critique d'Haïti</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Georges Anglade est mort dans le séisme du 12 janvier 2010, avec son épouse Mireille Neptune Anglade, alors qu'ils se trouvaient à Port-au-Prince pour une mission de travail. Cette mort dans la catastrophe a quelque chose de particulièrement douloureux : Anglade avait passé sa vie à cartographier les vulnérabilités d'Haïti, à nommer les inégalités spatiales, à montrer pourquoi ce peyi concentrait autant de fragilités en un si petit territoire — et la tè l'a emporté précisément là.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Son <em>Atlas critique d'Haïti</em> (1982) est une œuvre fondatrice de la jeyografi haïtienne : cartes, analyses, données démographiques et ekonomiks combinées dans une lecture critique de l'espace haïtien qui n'avait pas d'équivalent. Professeur à l'Université du Québec à Montréal pendant des décennies, il formait des géographes haïtiens de la dyaspora tout en maintenant un lien constant avec le débat intellectuel à Port-au-Prince. Il a aussi écrit des nouvelles — la jeyografi et la littérature comme deux manières différentes de nommer le même peyi.
+        </p>
+        <aside class="researcher-note" aria-label="Note de recherche">
+          La mort d'Anglade et de son épouse dans le séisme de 2010 symbolise une perte qui dépasse le deuil personnel : le tranblemanntè a tué un nombre disproportionné d'intellectuels, de médecins, de fonctionnaires et de professeurs — ceux qui, précisément, auraient été essentiels à la reconstruction. L'èd entènasyonal qui a suivi a souvent ignoré cette destruction du capital humain, préférant financer des infrastructures à reconstruire des enstitisyons. C'est une erreur que l'istwa jugera sévèrement.
+        </aside>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Dr. Reginald Boulos</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1950 – · Médecin, Entrepreneur en Santé Publique</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Reginald Boulos incarne un modèle rare en Haïti : celui du médecin qui comprend que la santé publique ne peut pas être séparée des questions ekonomiks et logistiques. Il est à l'origine du réseau CAMEP — Centre d'Approvisionnement en Médicaments Essentiels de Port-au-Prince — qui a contribué à rendre les médicaments de base accessibles à des populations qui en étaient exclues par le prix. Il a également développé des capacités de fabrication pharmaceutique locale, réduisant la dépendance aux importations dans un secteur où cette dépendance peut coûter des vies.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Sa carrière illustre ce que la santé publique haïtienne peut produire quand elle articule compétence médicale, vision systémique et volonté entrepreneuriale. Il a formé une génération de professionnels de santé publique haïtiens dont beaucoup occupent jounen jodi a des postes de responsabilité dans le peyi et dans la dyaspora.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Louis Déjoie</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1896 – 1967 · Agronome, Ingénieur, Candidat à la Présidence</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Louis Déjoie est davantage connu pour ce qu'il n'a pas obtenu — la présidence d'Haïti, dont il a été frauduleusement écarté en 1957 au profit de François Duvalier dans des eleksyon entachées de manipulation militaire — que pour ce qu'il a réellement accompli. Agronome et ingénieur de formation, il a été l'un des bâtisseurs de l'agrikilti industrielle haïtienne : ses plantations de sisal et de sucre dans le depatman de l'Artibonite ont représenté, au milieu du XXe syèk, une tentative sérieuse de modernisation ekonomik rurale.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          La défaite de 1957 l'envoie en exil. Il mourra sans jamais revenir en Haïti. Que l'istwa haïtienne retienne de lui surtout une défaite politik plutôt que ses contributions au développement agricole dit quelque chose sur la manière dont le politik écrase le reste dans les récits nationaux.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3.5rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Fritz Fontus</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Début du XXe syèk · Ingénieur, Bâtisseur de Port-au-Prince</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Fritz Fontus appartient à cette catégorie d'acteurs historiques que l'absence d'archives haïtiennes systématiques rend difficiles à documenter avec précision, mais dont l'empreinte physique est visible encore jounen jodi a. Ingénieur au début du XXe syèk, il a contribué à la conception et à la supervision d'infrastructures urbaines de Port-au-Prince — réseaux routiers, bâtiments publics, ouvrages hydrauliques — dans une période de transformation accélérée de la capitale.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Son cas illustre une lacune fondamentale dans l'historiographie haïtienne : les ingénieurs, architectes et techniciens qui ont bâti le peyi matériellement sont bien moins documentés que les politiks et les généraux. Des recherches archivistiques approfondies dans les dépôts haïtiens et français permettraient sans doute de mieux documenter sa contribution — et celle de ses pairs contemporains.
+        </p>
+      </div>
+
+
+      <!-- ===== ATHLÈTES ===== -->
+      <h2 style="font-size:clamp(22px,3vw,34px);font-weight:900;color:var(--blue-dark,#001370);border-bottom:3px solid var(--gold,#FFD166);padding-bottom:0.6rem;margin-bottom:2.5rem;">Athlètes</h2>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Joe Gaetjens</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1924 – 1964 · Footballeur, Auteur du But le Plus Célèbre de l'Istwa</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Le 29 juin 1950, à la Coupe du Mond de football au Brésil, Joe Gaetjens marque de la tête le seul but du match entre les États-Unis et l'Angletè. Résultat final : 1-0. C'est l'une des plus grandes surprises de l'istwa de la Coupe du Mond — l'Angletè, qui participait pour la première fois, était considérée comme favorite absolue. Gaetjens, né à Port-au-Prince, était venu à New York pour étudier la comptabilité et jouait dans des équipes amateurs new-yorkaises. Son éligibilité américaine tenait à une simple déclaration d'intention de naturalisation — jamais finalisée.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Il retourne en Haïti dans les anes 1950, tente d'y relancer sa carrière footballistique et ouvre un pressing. En juillet 1964, il est arrêté par les Tontons Macoutes de Duvalier. Il disparaît. Sa fanmi ne récupérera jamais son corps. Les circonstances exactes de sa mort n'ont jamais été officiellement établies. L'homme qui a humilié l'Angletè au football mondial a été effacé par la diktatè de son propre peyi. Son istwa est une miniature parfaite du XXe syèk haïtien : la gloire possible, la violence certaine.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Bruny Surin</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1967 – · Sprinter, Champion du Mond du 100m, Quatre Médailles Olympiques</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Bruny Surin est né à Cap-Haïtien et a émigré au Canada avec sa fanmi à l'âge de sept ans. Il devient l'un des meilleurs sprinters de l'istwa canadienne et mondiale : champion du mond du 100 mètres en 1999 à Sévil, avec un temps de 9,84 secondes, il fait partie d'une génération qui a dominé l'athlétisme mondial au tournant du millénaire. Ses quatre médailles olympiques — incluant l'or par relais 4×100 mètres à Atlanta en 1996 — font de lui l'une des figures majeures de l'athlétisme canadien de son époque.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Surin a toujours revendiqué ses origines haïtiennes, portant le drapo haïtien avec fyète dans des entretiens et des cérémonies. Il est une des figures les plus connues de dyaspora ayisyèn nan au Canada et un modèle pour les jeunes athlètes haïtiens-canadiens. Depuis sa retraite sportive, il travaille comme entraîneur et s'implique dans des programmes de développement sportif.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Dieudonné Lamothe</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Fin XIXe syèk · Premier Athlète Olympique Haïtien</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Dieudonné Lamothe a le mérite d'être le premier représentant haïtien aux Jeux Olympiques modernes, participant aux épreuves de tir lors des Jeux de Paris en 1900. L'Haïti de 1900 est une jeune Repiblik qui vient à peine de sortir de son isolement diplomatique forcé ; envoyer un athlète aux Jeux Olympiques était un acte de présence internationale délibéré. Les circonstances précises de sa seleksyon et de son séjour parisien restent peu documentées dans les archives sportives haïtiennes, mais son nom figure dans les registres officiels du Comité International Olympique.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Jean-Michel Timothée</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Fin XXe syèk · Tennisman, Représentant de Haïti en Coupe Davis</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Le tennis n'est pas un sport de masse en Haïti — ses coûts d'équipement et ses infrastructures le réservent structurellement à une minorité. Jean-Michel Timothée a pourtant représenté Haïti pendant de nombreuses anes en Coupe Davis, maintenant une présence haïtienne dans les compétitions internationales de tennis avec les moyens limités dont dispose une fédération nationale modeste. Son engagement dans la représentation nationale mérite d'être reconnu comme tel : un athlète qui choisit de représenter un petit peyi dans un sport où les grands peyi dominent.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3.5rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">L'Équipe d'Haïti à la Coupe du Mond 1974</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1974 · La Seule Qualification Masculine d'Haïti en Coupe du Mond</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          La qualification d'Haïti pour la Coupe du Mond de football en Allemagne en 1974 reste à ce jour l'unique qualification masculine de l'équipe nationale dans cette compétition. La seleksyon haïtienne avait créé la surprise lors des éliminatoires CONCACAF en battant notamment la jeune équipe d'Italie — exploit qui provoqua des célébrations durables à Port-au-Prince. En Allemagne, Haïti affronta l'Italie, l'Argentine et la Pologne dans le groupe 4 — l'un des groupes les plus relevés du tournoi.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          L'épisode du match contre l'Italie reste dans les mémoires : Emanuel Sanon marque à la 47e minute, offrant à Haïti l'avance 1-0 sur l'Italie, avant que les Italiens ne renversent le score 3-1. Haïti ne passa pas le premier tour, mais sa présence en Allemagne était déjà une viktwa historique. Cette génération de footballeurs — dans un contexte politik dominé par Jean-Claude Duvalier — a offert une fyète nationale rare et précieuse.
+        </p>
+      </div>
+
+
+      <!-- ===== PERSONNALITÉS POLITIQUES & DIPLOMATIQUES ===== -->
+      <h2 style="font-size:clamp(22px,3vw,34px);font-weight:900;color:var(--blue-dark,#001370);border-bottom:3px solid var(--gold,#FFD166);padding-bottom:0.6rem;margin-bottom:2.5rem;">Personnalités Politiks &amp; Diplomatiques</h2>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Anténor Firmin</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1850 – 1911 · Diplomate, Anthropologue, Défenseur de l'Égalité des Races</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Anténor Firmin est l'auteur d'un des textes les plus importants et les moins cités de l'istwa intellectuelle mondiale : <em>De l'égalité des races humaines</em>, publié à Paris en 1885. C'est une réfutation scientifique et philosophique point par point du <em>Essai sur l'inégalité des races humaines</em> du comte de Gobineau (1853-1855) — le texte fondateur du racisme pseudo-scientifique qui allait inspirer plusieurs décennies de colonialisme et, plus tard, le nazisme. Firmin répond avec des données anthropologiques, historiques et philosophiques. Il publie ce livre six ans avant que Franz Boas ne commence ses propres travaux antiracistes.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Député, sénateur, ministre des Finances et des Affaires étrangères, consul général à Paris — Firmin a mené une carrière diplomatique et politik de premier plan tout en produisant une œuvre intellectuelle considérable. Il a tenté de se présenter à la présidence haïtienne, échoué dans le contexte d'instabilités chroniques de la fin du XIXe syèk, et terminé sa vie en exil à Saint-Thomas. Son œuvre majeure est restée largement ignorée de l'anthropologie occidentale pendant près d'un syèk — redécouverte récente qui dit tout sur les biais du canon académique.
+        </p>
+        <aside class="researcher-note" aria-label="Note de recherche">
+          L'invisibilité d'Anténor Firmin dans l'istwa de l'anthropologie et de la pensée antiraciste est un cas d'école de biais historiographique. Son livre de 1885 précède et anticipe les arguments que Franz Boas, W.E.B. Du Bois et d'autres mettront des décennies à formuler — et qui seront crédités à ces auteurs euroaméricains. Que Firmin ait écrit en français, depuis Haïti, en tant qu'homme noir, n'est pas étranger à cet effacement. La redécouverte de son œuvre depuis les anes 2000 est tardive mais nécessaire.
+        </aside>
+      </div>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Dantès Bellegarde</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1877 – 1966 · Diplomate, Historien, Délégué d'Haïti à la Sosyete des Nations</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Dantès Bellegarde a consacré sa vie à deux projets parallèles et complémentaires : défendre Haïti sur la scène internationale et documenter son istwa pour les générations futures. Comme délégué haïtien à la Sosyete des Nations dans les anes 1920 et 1930, il a représenté un peyi humilié par l'okipasyon ameriken (1915-1934) sur une tribune mondiale, avec une éloquence et une rigueur intellectuelle qui lui valaient le respect de ses pairs européens et américains, même parmi ceux qui refusaient de prendre la souvènte haïtienne au sérieux.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Ses ouvrages historiques — <em>Haiti and Her Problems</em> (1936), <em>Istwa du pèp haïtien</em> (1953) — constituent des sources primaires irremplaçables sur la façon dont les élites haïtiennes éduquées de la première moitié du XXe syèk comprenaient leur peyi et le présentaient au mond. Bellegarde était aussi musicologue amateur, pédagogue et partisan convaincu de l'edikasyon comme outil d'émancipation nationale.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3.5rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Demesvar Delorme</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1831 – 1901 · Romancier, Diplomate, Premier Grand Romancier Haïtien Post-Endepandans</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Demesvar Delorme est une figure de transition dans la literati ayisyèn : il écrit à un moment où le roman haïtien n'existe pas encore vraiment comme genre établi, et contribue à le fonder. Son roman <em>Francesca</em> (1873) est considéré comme l'un des premiers romans haïtiens à part entière, même si Delorme écrit dans un registre très influencé par le romantisme français de son époque. Sa formation est parisienne ; sa sensibilité est haïtienne.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Diplomate sous plusieurs gouvènmans, il a aussi exercé des fonctions ministérielles et traversé plusieurs des crises politiks chroniques du XIXe syèk haïtien. Il finit sa vie en exil à Paris, comme beaucoup d'intellectuels haïtiens dont l'engagement politik les exposait aux retournements des régimes. Sa place dans l'istwa littéraire haïtienne est celle d'un fondateur dont l'œuvre est plus importante que sa célébrité actuelle ne le suggère.
+        </p>
+      </div>
+
+
+      <!-- ===== RELIGIEUX & SPIRITUELS ===== -->
+      <h2 style="font-size:clamp(22px,3vw,34px);font-weight:900;color:var(--blue-dark,#001370);border-bottom:3px solid var(--gold,#FFD166);padding-bottom:0.6rem;margin-bottom:2.5rem;">Religieux &amp; Figures Spirituelles</h2>
+
+      <div style="margin-bottom:3rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Père Antoine Adrien</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1934 – 2020 · Prêtre Montfortain, Théologien, Figure de la Théologie de la Libération en Haïti</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Antoine Adrien est l'une des figures centrales de l'Église catholique haïtienne engagée — celle qui a choisi le camp des pauvres contre les riches, et qui en a payé le prix sous le duvaliérisme. Prêtre de la Congrégation de Montfort, théologien formé en Europe, il revient en Haïti dans les anes 1960 avec une conviction que la foi chrétienne ne peut pas rester indifférente à la misère ekonomik organisée par les élites politiks. Cette conviction le met rapidement en conflit avec le régime de François Duvalier, qui surveille, harcèle et parfois expulse les clercs jugés dangereux.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Adrien reste. Il travaille dans les bidonvils de Port-au-Prince, contribue à la formation de kominotes chrétiennes de base sur le modèle de la théologie de la libération latino-américaine, et joue un rôle important dans les anes qui précèdent et suivent la chute de Jean-Claude Duvalier en 1986. Son influence sur une génération de prêtres et de militants sociaux haïtiens est difficile à quantifier mais réelle. Il est mort en 2020, à quatre-vingt-cinq ans, après une vie entière au service des plus vulnérables.
+        </p>
+      </div>
+
+      <div style="margin-bottom:3.5rem;">
+        <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Marie-Thérèse Chabot</h3>
+        <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">XXe syèk · Éducatrice, Fondatrice de Réseaux Scolaires Ruraux</p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Marie-Thérèse Chabot représente une catégorie d'acteurs qui manque systématiquement dans les dictionnaires biographiques haïtiens : les fanm qui ont construit des enstitisyons concrètes au service des populations rurales les plus défavorisées, sans titre politik ni visibilité médiatique. Elle a fondé et développé des réseaux d'écoles rurales servant des milliers d'timoun dans des zones où l'État haïtien était structurellement absent — c'est-à-dire dans la majorité du territoire.
+        </p>
+        <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+          Son travail s'inscrit dans une longue tradisyon de religieuses et de militantes catholiques haïtiennes qui ont pallié les carences de l'État en matière d'edikasyon et de santé, souvent à l'échelle locale et sans rekonesans nationale. Que ces fanm soient aussi peu documentées que les généraux du XIXe syèk sont sur-documentés est une lacune que l'historiographie haïtienne contemporaine commence seulement à combler.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            Repiblik Ayiti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire istwa d'Haïti, de sa kilti
+            vibrante et de son pèp remarquable. Dédié à partager l'istwa de
+            premye Repiblik nwa nan mond lan.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Eksplore</h4>
+          <ul>
+            <li><a href="index.html">Akèy</a></li>
+            <li><a href="about.html">Sou Ayiti</a></li>
+            <li><a href="history.html">Istwa</a></li>
+            <li><a href="tourism.html">Touris</a></li>
+            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+            <li><a href="archives.html">Achiv</a></li>
+            <li><a href="bibliography.html">Bibliyografi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kilti &amp; Sosyete</h4>
+          <ul>
+            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastwonomi</a></li>
+            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Istwa &amp; Enstitisyon</h4>
+          <ul>
+            <li><a href="timeline.html">Kwonolouji</a></li>
+            <li><a href="heroes.html">Ewò Nasyonal</a></li>
+            <li><a href="lidès.html">Lidè</a></li>
+            <li><a href="konstitisyon.html">Konstitisyon</a></li>
+            <li><a href="enstitisyons.html">Enstitisyon</a></li>
+            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Pran Kontak</h4>
+          <ul>
+            <li><a href="contact.html">Kontakte Nou</a></li>
+            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+            <li><a href="license.html">Mentions L&eacute;gales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est n&eacute; d&apos;une frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti sont &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les sources ha&iuml;tiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pendant.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/premium.js"></script>
+</body>
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Les Drapo Vodou — Art Sacré d'Haïti | Repiblik Ayiti</title>
+  <meta name="description" content="Les drapo vodou — drapox cérémoniels ornés de milliers de perles et de paillettes — sont à la fois objets rituels consacrés aux lwa et chefs-d'œuvre reconnus par les plus grands musées du mond. Istwa, techniques, maîtres et enjeux contemporains." />
+  <meta name="author" content="RepiblikHaïti.org" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/premium.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Akèy">
+          Repiblik Ayiti
+        </a>
+        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+          <a href="index.html">Akèy</a>
+          <a href="about.html">Sou Nou</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Istwa Jeneral</a>
+              <a href="timeline.html">Kwonolouji</a>
+              <a href="heroes.html">Ewò Nasyonal</a>
+              <a href="lidès.html">Lidè</a>
+              <a href="konstitisyon.html">Konstitisyon</a>
+              <a href="enstitisyons.html">Enstitisyon</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti.html">Kilti &amp; Atizay</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Lwa yo</a>
+              <a href="gastronomy.html">Gastwonomi</a>
+              <a href="holidays.html">Jou Ferye</a>
+            </div>
+          </div>
+          <a href="tourism.html">Touris</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti-vivante.html">Kilti Vivan</a>
+              <a href="creativite-populaire.html">Kreyativite Popilè</a>
+              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+              <a href="instabilite-politik.html">Enstabilite Politik</a>
+              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+              <a href="services-essentiels.html">Sèvis Esansyèl</a>
+              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Ansiklopedi</a>
+              <a href="archives.html">Achiv</a>
+              <a href="bibliography.html">Bibliyografi</a>
+            </div>
+          </div>
+          <a href="contact.html">Kontak</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : istwa, kilti, vils…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--about">
+    <div class="container">
+      <p class="page-hero__label">Art Sacré</p>
+      <h1 class="page-hero__title">Les Drapo Vodou</h1>
+      <p class="page-hero__desc">L'Art Sacré des Drapox Vodou — objets rituels consacrés aux lwa, cousus de milliers de paillettes et de perles, portés par les reines drapo à l'ouverture des cérémonies et reconnus jounen jodi a dans les plus grands musées du mond.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Akèy</a>
+        <span>/</span>
+        <a href="kilti.html">Kilti</a>
+        <span>/</span>
+        <span>Drapo Vodou</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Objet Rituel &amp; Patrimwàn Artistique</p>
+      <h2>Qu'est-ce qu'un drapo vodou ?</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Un drapo vodou est bien davantage qu'un simple drapo. C'est un objet rituel d'une densité spirituelle et esthétique rare, conçu pour honorer un lwa — l'une des divinités du panthéon vodou haïtien — et pour lui servir de véhicule lors des cérémonies. Sa surface est entièrement recouverte à la main de milliers de paillettes de verre et de perles de rocaille, minutieusement brodées sur un fond de soie, de satin ou de velours. Le résultat est une œuvre d'un scintillement intense, dont les couleurs, les senbòls et les figures indiquent immédiatement à un œil initié l'identité du lwa honoré.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Les dimensions standard d'un drapo varient, mais le format habituel tourne autour d'un mètre carré — parfois légèrement moins, parfois davantage pour les grandes pièces de cérémonie. Un seul drapo peut comporter plus de dix mille paillettes individuellement cousues. Le temps de fabrication d'une œuvre de qualité dépasse couramment plusieurs semaines, parfois plusieurs mois. Ce n'est pas un objet produit à la chaîne, et cela ne pourrait pas l'être : chaque drapo est unique, signé par la main, par la foi et par la kilti de celui ou de celle qui l'a créé.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Dans la seremoni vodou, les drapo sont portés par les <em>reine drapo</em> — les reines des drapox — au tout début du rituel. Ces fanm, initiées (<em>hounsis</em>) avec un rôle précis dans la hiérarchie du peristyle, tiennent le drapo de leur lwa à l'horizontale ou incliné, et processionnent dans l'espace cérémoniel avec une lenteur majestueuse pendant que les tambours et les chants s'élèvent. Il ne s'agit pas d'un rôle purement décoratif : la reine drapo est une médiatrice, une fanm dont la présence et le mouvement invitent le lwa à descendre et à prendre possession de ses serviteurs.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            La confusion entre « drapo » au sens politik et « drapo » au sens rituel est fréquente chez les observateurs extérieurs. Les premiers drapo vodou documentés dans les sources écrites occidentales datent du XIXe syèk, mais leur présence dans la pratique est certainement bien antérieure à toute documentation. Les journaux de voyageurs qui décrivent des seremoni vodou au XIXe syèk mentionnent des étoffes brodées portées lors des processions, sans toujours en comprendre la fonction précise.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères techniques</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>· Support : soie, satin ou velours</li>
+              <li>· Matériaux : paillettes de verre, perles de rocaille, broderie</li>
+              <li>· Format courant : environ 1 m × 1 m</li>
+              <li>· Paillettes par drapo : 5 000 à 15 000+</li>
+              <li>· Durée de fabrication : quelques semaines à plusieurs mois</li>
+              <li>· Usage premier : seremoni vodou</li>
+              <li>· Porteurs rituels : les reines drapo (hounsis)</li>
+              <li>· Chaque drapo est unique et non reproductible à l'identique</li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Terminologie</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· <strong>Drapo</strong> — drapo (créole)</li>
+              <li>· <strong>Lwa</strong> — esprit / divinité vodou</li>
+              <li>· <strong>Vèvè</strong> — senbòl sacré du lwa</li>
+              <li>· <strong>Reine drapo</strong> — porteuse rituelle du drapo</li>
+              <li>· <strong>Hounsi</strong> — initié(e) du peristyle</li>
+              <li>· <strong>Peristyle</strong> — temple vodou</li>
+              <li>· <strong>Poto mitan</strong> — poteau central du peristyle</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <h2 style="margin-top:2.5rem;">Origine et istwa</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Pour comprendre la naissance des drapo vodou, il faut remonter aux tradisyons des royaumes côtiers d'Afrique de l'Ouest, en particulier celles du royaume de Dahomey (actuel Bénin), dont les Fon avaient développé une kilti matérielle d'une richesse exceptionnelle. Les <em>recades</em> — sceptres cérémoniels royal — et les étendards de cour, ornés de motifs symboliques liés aux ancêtres royaux et aux divinités (<em>vodun</em>), constituaient des objets de prestige chargés d'une autorité spirituelle directe. De même, les royaumes yorouba voisins utilisaient des parements et des vêtements brodés de perles comme marqueurs d'identité divine et royale. Ces tradisyons n'ont pas disparu dans la cale des navires négriers : elles ont traversé l'Atlantique, fragmentées et recomposées, dans la mémoire des captifs.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            En Haïti, la synthèse s'est opérée sur plusieurs générations. Les esclaves réunis dans les habitations sucrières venaient d'horizons ethniques et linguistiques divers — Fon, Yoruba, Akan, Kongo, Mandé — et ont forgé une relijyon nouvelle à partir de fragments de tradisyons multiples, en intégrant aussi des éléments du catholicisme colonial imposé comme camouflage. C'est dans ce creuset que les lwa vodou ont pris leur forme haïtienne distincte, avec leurs attributs, leurs couleurs et leurs senbòls propres. Et c'est dans ce même processus que la pratique des drapox cérémoniels a trouvé sa forme locale : non pas simple copie des étendards africains, mais objet neuf, intensément haïtien.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Un élément souvent sous-estimé est l'influence de la kilti militaire haïtienne. L'armée d'Haïti, héritière des armées de la Revolisyon et des troupes de Saint-Domingue, avait ses drapox régimentaires, ses couleurs portées en procession, ses rites d'honneur aux étendards. Les cérémonies militaires haïtiennes du XIXe syèk, auxquelles participaient des soldats souvent pratiquants du vodou, ont certainement contribué à consolider la forme visuelle du drapo cérémoniel : sa taille carrée, sa hampe, le geste de le porter à bout de bras. Ce n'est pas un hasard si plusieurs lwa majeurs — au premier rang desquels Ogou, le lwa guerrier — sont représentés dans un vocabulaire iconographique résolument militaire.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            La forme du drapo vodou telle qu'on la connaît jounen jodi a — format carré, couverture totale de paillettes, vèvè central — semble s'être consolidée au cours du XIXe syèk, même si des transformations ont continué tout au long du XXe. Les drapo de la première moitié du XXe syèk, quand on peut en retrouver des exemples documentés, présentent déjà les caractéristiques fondamentales : fond de couleur, vèvè en paillettes, frange ou bordure ornementale. La professionnalisation de leur fabrication et leur entrée sur le marché de l'art international sont des phénomènes plus récents, concentrés sur la période 1970–2000.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            Le lien entre les étendards royaux du Dahomey et les drapo vodou haïtiens est une hypothèse solidement documentée mais qu'il faut manier sans excès de linéarité. Les captifs arrivés en Saint-Domingue n'étaient pas tous du Dahomey, et la pratique des drapox rituels est attestée dans plusieurs kiltis de la région. La synthèse haïtienne est une création propre, pas une transplantation directe. Il serait réducteur de traiter le drapo vodou comme un simple « survivant » africain : c'est une invention haïtienne qui a ses racines africaines et ses branches entièrement neuves.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Racines africaines</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>· <strong>Dahomey (Fon)</strong> : recades, étendards royaux, cultes vodun</li>
+              <li>· <strong>Yoruba</strong> : parements de perles, orisha et leurs couleurs</li>
+              <li>· <strong>Kongo</strong> : objets sacrés et cosmologie de l'entre-deux-monds</li>
+              <li>· Synthèse créole opérée sur plusieurs générations en Haïti</li>
+              <li>· Influence de la kilti militaire haïtienne post-1804</li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Jalons historiques</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· XVIIe–XVIIIe s. : synthèse vodou en Saint-Domingue</li>
+              <li>· 1804 : endepandans et affirmation de kilti ayisyèn nan</li>
+              <li>· XIXe s. : consolidation de la forme du drapo cérémoniel</li>
+              <li>· 1944 : Centre d'Art de Port-au-Prince (valorisation des arts populaires)</li>
+              <li>· Années 1970–80 : découverte internationale des drapo</li>
+              <li>· Années 1990–2000 : entrée dans les grandes collections muséales</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <h2 style="margin-top:2.5rem;">Les senbòls et les vèvè</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Le cœur visuel de tout drapo vodou est le <em>vèvè</em> — le senbòl sacré propre à chaque lwa, tracé tradisyonnellement à la farine de maïs sur le sol du peristyle en ouverture de cérémonie. Sur un drapo, ce même vèvè est reproduit en paillettes au centre du drapo, entouré d'attributs, de figures et d'un fond chromatique qui forment un langage iconographique aussi précis et codifié qu'un héraldique médiéval. Un initié peut identifier le lwa honoré depuis l'autre bout d'une salle, avant même d'avoir vu les détails.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            <strong>Papa Legba</strong>, gardien des carrefours et des passages, lwa de l'ouverture, est représenté avec son vèvè en forme de croix rayonnante aux quatre intersections. Ses couleurs sont le rouge et le noir dans certaines nations vodou, mais aussi le blanc et l'or. Ses attributs iconographiques sont la canne ou la béquille, le soleil, la route qui bifurque. Sur son drapo, on retrouve souvent aussi une figure de vieillard appuyé sur son bâton, correspondant à son syncrétisme catholique avec Saint Lazare ou Saint Pierre. Legba ouvre toujours la cérémonie : son drapo est le premier porté.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            <strong>Erzulie Freda</strong>, lwa de l'amour, de la beauté et de la richesse, a pour couleur dominante le rose, le or et le bleu clair. Son vèvè est un cœur percé de flèches, entouré de miroirs, de bijoux et de figures féminines. Elle est syncrétisée avec la Vierge Marie. Un drapo pour Erzulie Freda est souvent le plus luxueux, le plus chargé d'or et de rose, avec des paillettes irisées qui imitent le reflet des bijoux. C'est l'une des figures féminines les plus puissantes du vodou haïtien, célébrée avec une intensité particulière par ses dévots.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            <strong>Ogou</strong>, lwa des guerriers, du feu et du fer forgé, utilise le rouge et l'or dans ses drapo — parfois relevé de noir ou de vert. Son vèvè central est une épée ou un sabre, souvent croisé. Ses attributs incluent le rhum et le cigare, les armes blanches, les uniformes militaires. L'imagerie qui lui est associée est souvent celle de Saint Jacques combattant à cheval — syncrétisme colonial qui a profondément marqué son iconographie. Sur un drapo, Ogou apparaît en guerrier victorieux, entouré de flammes dorées et de sabres entrecroisés.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            <strong>Baron Samedi</strong>, maître de la mort et des cimetières, chef des Gede, a pour palette le noir et le violet, avec des touches de blanc osseux. Son iconographie est sans équivoque : crânes, croix de cimetière, hauts-de-forme noirs, lunettes de soleil aux verres percés. Sur son drapo, l'humour noir qui caractérise les Gede est souvent présent — Baron Samedi est une figure puissante mais aussi facétieuse, et les meilleurs maîtres drapo savent introduire dans ses représentations ce mélange de majesté funèbre et d'ironie mordante.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            <strong>Damballah</strong>, le grand serpent blanc, lwa de la sagesse, de la pureté et de l'eau, est représenté par des serpents en spirale sur fond blanc ou argent. Son vèvè est deux serpents s'enroulant autour d'un axe vertical — une forme qui rappelle le caducée médical occidental, avec lequel il n'a aucun lien historique direct. Damballah est un lwa silencieux : ceux qu'il possède ne parlent pas, sifflent ou rampent. Ses drapo sont parmi les plus épurés visuellement, dominés par le blanc et l'argent, avec des serpents sinueux en paillettes brillantes sur fond clair — un contraste saisissant dans un art qui privilégie souvent la profusion.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            Le système d'association entre lwa, couleurs et senbòls n'est pas totalement uniforme à travers Haïti : des variations existent selon les « nations » vodou (Rada, Petwo, Kongo, Ibo…), les régions géographiques, et les tradisyons spécifiques de chaque peristyle. Un drapo fait dans le sud du peyi peut présenter des variantes iconographiques absentes dans les drapo de Port-au-Prince. Cette diversité est une richesse, pas une incohérence. Les maîtres drapo expérimentés connaissent ces nuances et les intègrent consciemment dans leur travail selon la commande ou la dévotion qui guide leur création.
+          </aside>
+        </div>
+        <div>
+          <!-- Colour guide sidebar -->
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1.2rem;">Guide chromatique des lwa</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:13px;line-height:1;">
+              <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+                <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#c0392b,#222);flex-shrink:0;"></span>
+                <span><strong>Papa Legba</strong> — rouge &amp; noir, or, blanc</span>
+              </li>
+              <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+                <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#f8bbd0,#ffd700);flex-shrink:0;"></span>
+                <span><strong>Erzulie Freda</strong> — rose, or, bleu clair</span>
+              </li>
+              <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+                <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#c0392b,#ffd700);flex-shrink:0;"></span>
+                <span><strong>Ogou</strong> — rouge &amp; or, vert, noir</span>
+              </li>
+              <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+                <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#2c0040,#1a1a1a);flex-shrink:0;"></span>
+                <span><strong>Baron Samedi</strong> — violet &amp; noir, blanc</span>
+              </li>
+              <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+                <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#f0f0f0,#c0c0c0);border:1px solid #ccc;flex-shrink:0;"></span>
+                <span><strong>Damballah</strong> — blanc &amp; argent</span>
+              </li>
+              <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+                <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#1565c0,#0d47a1);flex-shrink:0;"></span>
+                <span><strong>Agwe</strong> — bleu &amp; vert marin, blanc</span>
+              </li>
+              <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+                <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#1b5e20,#ffd700);flex-shrink:0;"></span>
+                <span><strong>Zaka</strong> — vert, bleu peyian, paille</span>
+              </li>
+              <li style="display:flex;align-items:center;gap:10px;">
+                <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#4a0080,#1a1a1a);flex-shrink:0;"></span>
+                <span><strong>Marinette</strong> — violet sombre, noir, rouge</span>
+              </li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Les nations vodou</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· <strong>Rada</strong> — lwa doux, couleurs froides, origines dahomey</li>
+              <li>· <strong>Petwo</strong> — lwa chauds, plus intenses, créole haïtien</li>
+              <li>· <strong>Kongo</strong> — influences bantoues</li>
+              <li>· <strong>Gede</strong> — lwa des morts, humour et transgression</li>
+              <li>· <strong>Ibo</strong> — nation distincte, lwa solitaires</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <h2 style="margin-top:2.5rem;">La technique de fabrication</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            La fabrication d'un drapo vodou est un processus long, méticuleux et profondément artisanal qui ne se laisse pas accélérer sans perdre l'essentiel. Il commence par la conception : le maître drapo esquisse sa composition sur papier, en tenant compte de la hiérarchie visuelle du vèvè central, des figures secondaires, des bordures, et de la répartition des couleurs. Cette phase de conception n'est pas purement esthétique — elle engage la konesans que l'atis a du lwa honoré, de ses attributs, de ses préférences. Les meilleurs maîtres sont souvent aussi des dévots, et leur travail est autant prière que métier.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Une fois le dessin arrêté, il est reporté sur le tissu de support — soie, satin ou velours tendu sur un cadre de bois. Le tracé est fait à la craie ou à l'aiguille fine, suffisamment visible pour guider le travail mais destiné à disparaître sous les paillettes. Vient ensuite la phase de remplissage : chaque paillette est piquée individuellement à l'aiguille et fixée par un fil. On les dispose en rangées serrées, en spirales, en lignes courbes, selon la forme à remplir. La densité de pose est telle que le tissu de fond disparaît entièrement sous la surface scintillante.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Les perles de rocaille — petites perles de verre tubulaires — viennent compléter la surface pour les détails les plus fins, les contours des figures, les lettres ou les inscriptions rituelles que certains drapo comportent. La broderie en fil métallique doré ou argenté peut ajouter une dimension supplémentaire aux zones les plus chargées symboliquement. Une fois le corps du drapo terminé, une bordure — frange de perles, ruban de satin, galon brodé — encadre la pièce et lui donne son achèvement. Le tout est monté sur une hampe en bois ou en métal.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            La transmission de ces savoir-faire se fait tradisyonnellement dans le cadre de la fanmi ou de la kominote du peristyle. Un jeune apprend en regardant, puis en assistant, puis en prenant en charge des zones moins exposées — une frange, un fond uni — avant de progresser vers les parties centrales et symboliquement chargées. Cette transmission orale et gestuelle, sans manuel ni école formelle, est à la fois la force de la tradisyon (elle préserve une continuité vivante avec la pratique religieuse) et sa fragilité (elle dépend entièrement de la survie des maîtres et de la volonté des jeunes générations de prendre le relais).
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            Une tension importante traverse jounen jodi a les ateliers de drapo : la distinction entre le drapo fait pour une commande cérémonielle — destiné à un peristyle spécifique, pour honorer un lwa précis dans un contexte rituel connu du fabricant — et le drapo produit pour l'export, pour une galerie ou un collectionneur qui ne saura jamais comment l'utiliser. Certains maîtres refusent de distinguer les deux, affirmant que leur travail est une prière quelle qu'en soit la destination finale. D'autres reconnaissent que les contraintes commerciales — délais, coûts, formats standardisés — ont des effets sur la qualité et la profondeur spirituelle du produit. Cette tension n'est pas unique à Haïti : elle traverse toutes les tradisyons artisanales sacrées qui ont rencontré le marché de l'art mondial.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Étapes de fabrication</p>
+            <ol style="padding-left:1.2rem;margin:0;font-size:14px;line-height:2.2;">
+              <li>Conception et dessin de la composition</li>
+              <li>Report du design sur le tissu tendu</li>
+              <li>Pose des couches de base (fond coloré)</li>
+              <li>Application individuelle des paillettes</li>
+              <li>Broderie de perles de rocaille pour les détails</li>
+              <li>Broderie en fil métallique (or, argent)</li>
+              <li>Réalisation de la bordure et de la frange</li>
+              <li>Montage sur hampe et finition</li>
+            </ol>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Matériaux utilisés</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Soie ou satin (fond)</li>
+              <li>· Velours (pièces de cérémonie)</li>
+              <li>· Paillettes de verre (françaises, japonaises, taiwanaises)</li>
+              <li>· Perles de rocaille (verre)</li>
+              <li>· Fil de soie ou polyester pour la broderie</li>
+              <li>· Fil métallique doré / argenté</li>
+              <li>· Cadre de bois pour tension du tissu</li>
+              <li>· Hampe en bois ou métal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 5 -->
+      <h2 style="margin-top:2.5rem;">Les grands maîtres</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Le mond des drapo vodou compte plusieurs figures dont le travail a franchi les frontières de Haïti et atteint les collections muséales et les galeries internationales. Leurs noms sont connus des spécialistes d'art haïtien, mais méritent d'être connus du plus grand nombre.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            <strong>Clotaire Bazile</strong> est l'un des noms les plus régulièrement cités parmi les maîtres de la fin du XXe syèk. Son travail se distingue par la précision de ses vèvè et la densité exceptionnelle de ses paillettes, qui donnent à ses drapo un relief presque tridimensionnel sous certaines lumières. Ses pièces figurent dans des collections aux États-Unis et en Europe. Bazile représente une génération de maîtres qui ont su maintenir la rigueur rituelle de l'objet tout en produisant des pièces susceptibles de dialoguer avec les catégories de l'atizay kontanporen.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            <strong>Edgar Jean-Louis</strong> est un autre nom incontournable — ses drapo ont intégré des collections muséales majeures, notamment dans des enstitisyons américaines. Son travail est souvent cité comme exemple d'une maîtrise technique qui n'a pas sacrifié la profondeur symbolique à l'esthétique commerciale. Jean-Louis est représentatif d'un profil de maître : artisan formé dans la tradisyon, croyant pratiquant, dont les pièces fonctionnent simultanément comme objets de dévotion et comme œuvres d'art au sens occidental du terme.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            <strong>Antoine Oleyant</strong> figure également parmi les atiss reconnus par les galeries spécialisées dans atizay ayisyen an. Son approche se caractérise par une certaine libète compositionnelle tout en restant fidèle aux canons iconographiques du vodou. Ses drapo pour les Gede — Baron Samedi, Brav Gede, Maman Brigitte — sont particulièrement réputés pour leur densité symbolique et l'équilibre qu'il maintient entre le macabre et l'humour, trait essentiel de l'esthétique gede.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            L'atelier <strong>Atis Rezistans</strong> de Port-au-Prince, bien que connu principalement pour ses sculptures en matériaux recyclés, a maintenu des liens avec la tradisyon des drapo et illustre la vitalité d'un milieu créatif qui ne sépare pas l'art populaire de l'art sacré. Georges Valris, l'un de ses membres fondateurs, incarne cette continuité entre engagement artistique, dévotion vodou et rezistans kiltille.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Un fait essentiel et trop souvent passé sous silence : les fanm ont joué un rôle central dans l'istwa des drapo vodou. Cette tradisyon est l'une des rares formes d'art haïtien où les fanm ont historiquement été productrices, maîtresses, transmettrices — et pas seulement consommatrices ou muses. Les ateliers du quartier de Pétion-Vil et ceux des environs du Marché de Fer à Port-au-Prince comptaient et comptent toujours des fanm parmi leurs artisanes les plus expertes. Leur travail est souvent moins documenté que celui de leurs homologues masculins — lacune que l'istwa de atizay ayisyen an doit combler.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            La documentation des maîtres drapo souffre d'un biais que partagent de nombreuses tradisyons d'arts populaires : les collectionneurs et les galéristes étrangers qui ont commencé à acheter ces pièces dans les anes 1970 et 1980 ont souvent enregistré les noms des intermédiaires — marchands, guides, fixeurs — plutôt que ceux des créateurs réels. Des pièces importantes circulent dans des collections privées et publiques sans attribution fiable, ou avec des attributions contestées. C'est un problème sérieux pour la konstitisyon d'un corpus historique solide et pour la rekonesans équitable des atiss.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Maîtres reconnus</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.2;">
+              <li>· <strong>Clotaire Bazile</strong> — maître du relief et de la densité</li>
+              <li>· <strong>Edgar Jean-Louis</strong> — collections muséales internationales</li>
+              <li>· <strong>Antoine Oleyant</strong> — maître des Gede</li>
+              <li>· <strong>Georges Valris</strong> — Atis Rezistans, tradisyon &amp; rezistans</li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Centres de production</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Ateliers de Pétion-Vil</li>
+              <li>· Quartier du Marché de Fer, Port-au-Prince</li>
+              <li>· Ateliers liés aux peristyles</li>
+              <li>· Ateliers familiaux en province (Cap-Haïtien, Gonaïves)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 6 -->
+      <h2 style="margin-top:2.5rem;">La reine drapo dans la cérémonie</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            La <em>reine drapo</em> — ou <em>La Reine</em> dans le vocabulaire du peristyle — est une hounsi ayant reçu une formation spécifique et une initiation particulière pour assumer ce rôle cérémoniel. Ce n'est pas un titre purement honorifique : c'est une fonction liturgique précise, avec ses gestes codifiés, ses vêtements rituels, sa place dans la hiérarchie du temple. Généralement, deux reines drapo officiaient ensemble lors de l'ouverture de la cérémonie — une pour chaque drapo des lwa principaux invoqués ce soir-là.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            L'ouverture d'une seremoni vodou commence dans le péristyle à peine allumé, quand les tambours — tambou assoto pour les cérémonies Rada, tambou petwo pour les rites plus ardents — donnent les premiers rythmes. Les reines drapo entrent alors dans l'espace cérémoniel, les drapox inclinés devant elles. Leur démarche est lente, majestueuse, presque dansante — car tout dans le vodou est à la frontière du mouvement liturgique et de la dans. Elles se déplacent dans l'espace du peristyle en décrivant un parcours qui les amène devant les quatre points cardinaux.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Cette salutation aux quatre directions est l'un des moments les plus codifiés de l'ouverture : les reines drapo s'immobilisent face à chaque direction, inclinent le drapo en un salut profond, se relèvent et pivotent. Ce geste reproduit, dans l'espace du temple, la cosmologie vodou : les quatre points cardinaux représentent les quatre coins du mond spirituel, les quatre axes par lesquels les lwa circulent entre le mond des vivants et le <em>Ginen</em>, le mond ancestral. En saluant les quatre directions, les reines drapo ouvrent symboliquement ces passages.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Une fois le tour du péristyle accompli, les drapox sont portés vers le <em>poto mitan</em> — le poteau central du temple, axe symbolique autour duquel les esprits descendent dans le mond des vivants — et déposés ou accrochés à proximité, où ils restent pendant toute la durée de la cérémonie. La présence physique du drapo dans l'espace sacré n'est pas anodine : c'est l'enseigne du lwa, son territoire matérialisé, son adresse dans le mond des hommes. Quand un lwa prend possession d'un dévot, il peut se diriger vers son drapo, le toucher, se draper dedans.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            Le rôle des reines drapo est peu étudié de façon autonome dans la littérature ethnologique sur le vodou, souvent traité comme accessoire par rapport aux grandes questions de possession, de panthéon ou de rituel. C'est une lacune : la gestuelle des reines drapo est un langage en soi, dont la grammaire mériterait une étude ethnochoreographique approfondie. Quelques chercheuses haïtiennes ont commencé ce travail, en insistant sur la dimension féminine de cette fonction et sur ce qu'elle révèle de la place des fanm dans la hiérarchie vodou — une place bien plus complexe que l'image de la simple praticante passive que les sources coloniales ont longtemps imposée.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Déroulement de l'ouverture</p>
+            <ol style="padding-left:1.2rem;margin:0;font-size:14px;line-height:2.2;">
+              <li>Les tambours donnent les premiers rythmes</li>
+              <li>Entrée des reines drapo dans le péristyle</li>
+              <li>Procession lente avec les drapox inclinés</li>
+              <li>Salutation rituelle aux quatre directions</li>
+              <li>Dépôt des drapox près du poto mitan</li>
+              <li>La cérémonie proprement dite commence</li>
+            </ol>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">La hiérarchie du peristyle</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· <strong>Hougan / Mambo</strong> — prêtre / prêtresse dirigeant(e)</li>
+              <li>· <strong>La Place</strong> — maître de cérémonie</li>
+              <li>· <strong>Reine drapo</strong> — porteuse rituelle des drapox</li>
+              <li>· <strong>Hounsi</strong> — initiés du peristyle</li>
+              <li>· <strong>Hounci Bossale</strong> — non encore pleinement initiés</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 7 -->
+      <h2 style="margin-top:2.5rem;">Rekonesans internationale</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            L'entrée des drapo vodou dans les circuits de l'art international est un phénomène relativement récent — une quarantaine d'anes — mais qui a transformé de manière irréversible la façon dont ces objets sont perçus, produits et échangés. Les premiers collectionneurs occidentaux à s'y intéresser sérieusement l'ont fait dans le sillage du boom plus général de atizay ayisyen an qui a suivi les anes 1960-70. Des figures comme Selden Rodman, critique d'art américain qui a beaucoup écrit sur la peinture haïtienne, ou John Beardsley, historien de l'art, ont contribué à attirer l'attention des enstitisyons muséales sur ces pièces.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Le <strong>Brooklyn Museum</strong> de New York possède l'une des collections les plus importantes de drapo vodou hors d'Haïti. Des expositions comme <em>Flagrant Art</em> y ont présenté ces pièces avec un soin muséographique réel, s'efforçant de les contextualiser dans leur univers spirituel tout en les exposant comme des œuvres d'art à part entière. La <strong>Smithsonian Institution</strong> à Washington, notamment à travers le National Museum of African Art, conserve également des exemples significatifs. Des galeries privées à New York — particulièrement dans le quartier de Chelsea et sur la 57e rue — et à Paris ont servi de relais entre les ateliers haïtiens et les collectionneurs privés.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Cette rekonesans internationale a produit un effet paradoxal. D'un côté, elle a apporté une visibilité et des revenus à des artisans dont la pratique risquait de s'appauvrir faute de soutien local. De l'autre, elle a engendré une pression commerciale qui a déformé certains aspects de la production : formats standardisés pour plaire aux marchés occidentaux, raccourcis techniques, prolifération de pièces de qualité inférieure présentées comme authentiques. Le drapo est devenu une marchandise, ce qu'il n'était pas au départ.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            La question de la dimension sacrée de ces objets une fois exportés est l'une des plus épineuses. Des hougans et des mambos interrogés sur ce sujet expriment des positions nuancées : certains considèrent que l'objet, une fois sorti du contexte cérémoniel pour lequel il a été créé, perd sa charge rituelle et peut circuler librement. D'autres maintiennent que le vèvè et les senbòls sont intrinsèquement chargés, quelle que soit la destination de l'objet, et que suspendre un drapo de Baron Samedi dans un salon new-yorkais sans aucune konesans de ce que cela implique n'est pas sans conséquences spirituelles. Cette divergence reflète les débats internes au vodou haïtien lui-même sur la nature des objets sacrés et leur rapport au contexte.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            La question des droits kiltils et de la propriété intellectuelle n'a pas encore été traitée de façon satisfaisante dans le cas des drapo vodou. Les vèvè sont des créations collectives, transmises de génération en génération sans auteur individuel attribuable. Ils ne peuvent être protégés par le droit d'auteur au sens classique. Des entreprises étrangères ont reproduit des vèvè sur des vêtements, des accessoires ou des décors sans aucune consultation des kominotes vodou haïtiennes ni rémunération des atiss dont le travail a servi de source. C'est une forme d'appropriation kiltille dont la prise de conscience est encore embryonnaire, aussi bien en Haïti qu'à l'étranger.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Présence muséale mondiale</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.2;">
+              <li>· <strong>Brooklyn Museum</strong>, New York — collection importante, expositions thématiques</li>
+              <li>· <strong>Smithsonian / National Museum of African Art</strong>, Washington D.C.</li>
+              <li>· <strong>Fowler Museum</strong>, UCLA, Los Angeles</li>
+              <li>· <strong>Musée du Quai Branly</strong>, Paris — collection des arts premiers</li>
+              <li>· Collections privées à New York, Miami, Paris, Montréal</li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Figures du marché de atizay ayisyen an</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Selden Rodman — critique et collectionneur américain</li>
+              <li>· John Beardsley — historien de l'art, auteur de <em>The Vodou Aesthetic</em></li>
+              <li>· DeWitt Peters — fondateur du Centre d'Art de Port-au-Prince (1944)</li>
+              <li>· Galeries spécialisées : Galerie Marassa, Galerie Nader</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 8 -->
+      <h2 style="margin-top:2.5rem;">Les drapo vodou jounen jodi a</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Le séisme du 12 janvier 2010 a durement frappé Port-au-Prince et ses quartiers artisanaux. Des ateliers ont été détruits, des maîtres ont perdu leur matériel, leurs archives, parfois leur vie. Le quartier de Pétion-Vil, légèrement épargné par rapport aux zones les plus dévastées, a mieux résisté — mais les perturbations ekonomiks qui ont suivi ont affecté tous les producteurs. La demande touristique, déjà fragile avant le séisme, a encore chuté dans les anes qui ont suivi. Certains maîtres se sont tournés vers les commandes d'exportation directe, via des ONG kiltilles ou des galeries maintenant des circuits même dans la période de crise.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            La question de l'authenticité est désormais centrale dans tout échange commercial autour des drapo vodou. Le marché touristique haïtien a vu se multiplier les drapo de basse qualité — paillettes plastiques sur polyester, vèvè approximatifs, fabrication expédiée en quelques heures — vendus à des prix dérisoires dans les souks et les marchés artisanaux. Ces pièces ne méritent pas d'être confondues avec les œuvres des grands maîtres, qui représentent des centaines d'heures de travail et une konesans approfondie du vocabulaire sacré du vodou. La différence est visible à l'œil nu pour qui sait regarder — mais pas pour le touriste de passage.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Une nouvelle génération de créateurs haïtiens s'empare du drapo avec une libète formelle inédite. Certains atiss formés dans les académies de Port-au-Prince ou à l'étranger réinterprètent la technique des paillettes dans des œuvres qui intègrent des références au drag, à l'art queer, à la critique sociale, tout en restant enracinées dans la grammaire vodou. Ces expérimentations interrogent les frontières entre art sacré et atizay kontanporen, entre tradisyon et invention — des questions qui ne se posent pas qu'en Haïti, mais qui trouvent ici une acuité particulière.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Il n'existe pas, à ce jour, de mécanisme formel de protection des drapo vodou au titre du patrimwàn kiltirèl immatériel en Haïti. Des démarches ont été initiées auprès de l'UNESCO, mais la fragilité enstitisyonnelle du peyi a retardé les processus. En l'absence d'une telle protection, les risques d'appropriation kiltille, de plagiat industriel et de dévaluation symbolique restent entiers. Ce que les maîtres drapo demandent, quand on leur pose la question, n'est pas tant une protection juridique abstraite qu'une chose plus concrète : que leurs noms soient connus, que leur travail soit reconnu pour ce qu'il est, et que les circuits commerciaux qui en tirent profit leur en reversent une part équitable.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            La dyaspora haïtienne joue un rôle croissant dans la préservation et la valorisation des drapo. À Miami, à New York, à Montréal, des associations kiltilles organisent des expositions, des ateliers de sensibilisation et des ventes directes qui court-circuitent les intermédiaires tradisyonnels et permettent à des maîtres haïtiens de toucher directement des acheteurs sensibles à la valeur kiltille de ce qu'ils acquièrent. Ces réseaux diasporiques sont peut-être, jounen jodi a, les défenseurs les plus actifs de la qualité et de l'intégrité de cette tradisyon.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Enjeux contemporains</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.2;">
+              <li>· Impact du séisme de 2010 sur les ateliers</li>
+              <li>· Marché touristique vs. marché de l'art : deux qualités très distinctes</li>
+              <li>· Risques d'appropriation kiltille des vèvè</li>
+              <li>· Absence de protection patrimoniale formelle</li>
+              <li>· Nouvelle génération : atizay kontanporen &amp; tradisyon</li>
+              <li>· Dyaspora comme réseau de valorisation directe</li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Références bibliographiques</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:13px;line-height:1.9;">
+              <li>· Beardsley, John. <em>The Vodou Aesthetic</em></li>
+              <li>· Cosentino, Donald J. (dir.). <em>Sacred Arts of Haitian Vodou</em>. UCLA Fowler Museum, 1995</li>
+              <li>· Rodman, Selden. <em>Where Art Is Joy: Haitian Art</em>. 1988</li>
+              <li>· Dubois, Laurent. <em>Haiti: The Aftershocks of History</em>. 2012</li>
+              <li>· Brown, Karen McCarthy. <em>Mama Lola: A Vodou Priestess in Brooklyn</em>. 1991</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gade tou -->
+      <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:2rem;margin-bottom:2.5rem;">
+        <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Gade tou</p>
+        <ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2.2;">
+          <li>→ <a href="vodou.html" style="color:#fff;">Le Vodou haïtien — Relijyon, Istwa &amp; Kilti</a></li>
+          <li>→ <a href="lwa.html" style="color:#fff;">Lwa yo — Les Esprits du Vodou</a></li>
+          <li>→ <a href="creativite-populaire.html" style="color:#fff;">Kreyativite Popilè — Arts &amp; Artisanat d'Haïti</a></li>
+          <li>→ <a href="tap-tap.html" style="color:#fff;">Le Tap-Tap — Art Mobile Haïtien</a></li>
+          <li>→ <a href="origines-africaines.html" style="color:#fff;">Les Origines Africaines de la Kilti Haïtienne</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            Repiblik Ayiti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire istwa d'Haïti, de sa kilti
+            vibrante et de son pèp remarquable. Dédié à partager l'istwa de
+            premye Repiblik nwa nan mond lan.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Eksplore</h4>
+          <ul>
+            <li><a href="index.html">Akèy</a></li>
+            <li><a href="about.html">Sou Ayiti</a></li>
+            <li><a href="history.html">Istwa</a></li>
+            <li><a href="tourism.html">Touris</a></li>
+            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+            <li><a href="archives.html">Achiv</a></li>
+            <li><a href="bibliography.html">Bibliyografi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kilti &amp; Sosyete</h4>
+          <ul>
+            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastwonomi</a></li>
+            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Istwa &amp; Enstitisyon</h4>
+          <ul>
+            <li><a href="timeline.html">Kwonolouji</a></li>
+            <li><a href="heroes.html">Ewò Nasyonal</a></li>
+            <li><a href="lidès.html">Lidè</a></li>
+            <li><a href="konstitisyon.html">Konstitisyon</a></li>
+            <li><a href="enstitisyons.html">Enstitisyon</a></li>
+            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Pran Kontak</h4>
+          <ul>
+            <li><a href="contact.html">Kontakte Nou</a></li>
+            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+            <li><a href="license.html">Mansyon Legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est né d'une frustration personnelle&#160;: trop d'ouvrages sur Haïti sont écrits de l'extérieur. J'ai voulu rassembler les sources haïtiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chèchè endepandan.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/premium.js"></script>
+</body>
+</html>

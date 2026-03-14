@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>La Dyaspora Haïtienne au Canada | RepiblikHaïti.org</title>
+  <meta name="description" content="Montréal abrite la plus grande kominote haïtienne francophone hors d'Haïti — une dyaspora intellectuelle et kiltille qui a profondément marqué la vie littéraire et sociale du Québec." />
+  <meta name="author" content="RepiblikHaïti.org" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/premium.css" />
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Akèy">
+          Repiblik Ayiti
+        </a>
+        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+          <a href="index.html">Akèy</a>
+          <a href="about.html">Sou Nou</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Istwa Jeneral</a>
+              <a href="timeline.html">Kwonolouji</a>
+              <a href="heroes.html">Ewò Nasyonal</a>
+              <a href="lidès.html">Lidè</a>
+              <a href="konstitisyon.html">Konstitisyon</a>
+              <a href="enstitisyons.html">Enstitisyon</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti.html">Kilti &amp; Atizay</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Lwa yo</a>
+              <a href="gastronomy.html">Gastwonomi</a>
+              <a href="holidays.html">Jou Ferye</a>
+            </div>
+          </div>
+          <a href="tourism.html">Touris</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti-vivante.html">Kilti Vivan</a>
+              <a href="creativite-populaire.html">Kreyativite Popilè</a>
+              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+              <a href="instabilite-politik.html">Enstabilite Politik</a>
+              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+              <a href="services-essentiels.html">Sèvis Esansyèl</a>
+              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Ansiklopedi</a>
+              <a href="archives.html">Achiv</a>
+              <a href="bibliography.html">Bibliyografi</a>
+            </div>
+          </div>
+          <a href="contact.html">Kontak</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Dyaspora Haïtienne</p>
+      <h1 class="page-hero__title">La Dyaspora Haïtienne au Canada</h1>
+      <p class="page-hero__desc">Montréal abrite la plus grande kominote haïtienne francophone hors d'Haïti — une dyaspora intellectuelle et kiltille qui a profondément marqué la vie littéraire et sociale du Québec.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Akèy</a>
+        <span>/</span>
+        <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+        <span>/</span>
+        <span>Canada</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Kominote &amp; Literati</p>
+      <h2>La Dyaspora Haïtienne au Canada</h2>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Historique de la migration</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        La première vague d'immigration haïtienne au Canada est une vague intellectuelle. Dans les anes 1960, la répression duvalieriste décime les professions libérales haïtiennes : médecins, enseignants, avocats, fonctionnaires, ingénieurs sont persécutés, exilés ou assassinés. Simultanément, le Québec, en pleine Revolisyon tranquille, a un besoin urgent de professionnels francophones pour son sistèm sante en expansion et ses nouvelles universités. Une convergence historique s'opère : le Québec recrute activement en Haïti, et les Haïtiens francophones qualifiés y trouvent un refuge et une opportunité. On estime qu'environ <strong>30 000 Haïtiens</strong> arrivent au Québec entre 1960 et 1980, formant le noyau d'une kominote qui portera ensuite des générations de Canadiens d'origine haïtienne.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Le Montréal haïtien</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        La kominote haïtienne de Montréal s'est concentrée dans plusieurs quartiers du nord et de l'est de l'île : <strong>Montréal-Nord</strong>, <strong>Saint-Michel</strong> et <strong>Rivière-des-Prairies</strong> sont les cœurs historiques de cette présence. Ces quartiers, d'abord ouvriers et à majorité blanche, ont été progressivement transformés par l'arrivée de fanmis haïtiennes, puis antillaises et africaines, créant une jeyografi sociale distincte.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Les enstitisyons communautaires haïtiennes à Montréal ont joué un rôle crucial. La <strong>Maison d'Haïti</strong>, fondée en 1972 et toujours active, est l'une des organisations les plus durables de dyaspora ayisyèn nan dans le mond : centre d'accueil, d'alphabétisation, de défense des droits, d'activités kiltilles. Le <strong>Regroupement des organismes canado-haïtiens</strong> fédère les associations de la kominote. Les journaux communautaires <em>Haïti-Observateur</em> et <em>Le Nouvelliste du Canada</em> ont maintenu pendant des décennies un lien avec l'actualité haïtienne et diasporique.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Contribution kiltille et intellectuelle</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        La dyaspora haïtienne de Montréal a engendré ce que la critique littéraire québécoise reconnaît comme une catégorie propre : la littérature <strong>haïtiano-québécoise</strong>. À sa tête, <strong>Dany Laferrière</strong> — membre de l'Académie française depuis 2013, lauréat du Prix Médicis pour <em>L'Énigme du retour</em> (2009) — est l'ekriven haïtien le plus lu dans le mond francophone. Arrivé à Montréal en 1976 après la mort suspecte d'un ami journaliste à Port-au-Prince, il y vécut vingt ans avant de s'installer à Miami puis de revenir régulièrement en Haïti. Son œuvre navigue entre Haïti et le Québec avec une légèreté qui cache une profondeur considérable.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        <strong>Émile Ollivier</strong> (1940–2002) est une autre voix essentielle : professeur à l'Université de Montréal, auteur de <em>Mère-Solitude</em> (1983) et <em>Passages</em> (1991), il a théorisé la condition de l'exilé avec une précision qui le situe parmi les grands ekrivens de la dyaspora africaine francophone. <strong>Stanley Péan</strong>, romancier de polars, et <strong>Marie-Célie Agnant</strong>, dont l'œuvre explore la condition des fanm noires en exil, complètent une constellation d'auteurs qui ont transformé les lettres québécoises.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Population</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Selon le recensement canadien de 2021, le Canada compte environ <strong>175 000 personnes</strong> d'origine haïtienne. Le Québec en regroupe la grande majorité avec quelque <strong>140 000</strong> personnes, dont la plupart à Montréal. L'Ontario — principalement Toronto — en accueille environ <strong>25 000</strong>. La troisième génération de Haïtiano-Canadiens est jounen jodi a active dans tous les secteurs : médecine, arts, politik, enseignement, droit.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Contribution à la sosyete québécoise</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Les médecins haïtiens arrivés dans les anes 1960–1970 ont littéralement construit une partie du sistèm sante québécois, s'installant dans des régions éloignées où peu de médecins québécois voulaient exercer. Dans l'edikasyon, des centaines d'enseignants haïtiens ont traversé le système scolaire québécois pendant des décennies. Sur la piste d'athlétisme, <strong>Bruny Surin</strong> — né à Cap-Haïtien, établi au Québec — a représenté le Canada aux Jeux olympiques et remporté l'or au relais 4×100 m à Sydney en 2000. En politik fédérale, <strong>Emmanuel Dubourg</strong>, né à Port-au-Prince, siège comme député libéral à la Chambre des communes depuis 2014.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Tensions identitaires</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Être Haïtien au Québec, c'est naviguer dans un espace identitaire complexe : francophone mais pas Québécois de souche, Noir dans une sosyete majoritairement blanche, caribéen dans un peyi nordique. Le profilage racial par les forces de l'ordre à Montréal-Nord a cristallisé ces tensions. En août 2008, l'affaire <strong>Fredy Villanueva</strong> — un jeune de 18 ans tué par balle par un policier dans Montréal-Nord — déclenche des émeutes et une enquête publique. Elle révèle les fractures profondes entre une kominote noire de plus en plus présente et une police qui ne la comprend pas. La relation entre identité haïtienne et nationalisme québécois est également complexe : la kominote a soutenu dans l'ensemble le projet souverainiste, partageant la lang et parfois les revendications kiltilles, mais elle reste trop souvent absente des récits de la nation québécoise.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            Repiblik Ayiti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire istwa d'Haïti, de sa kilti
+            vibrante et de son pèp remarquable. Dédié à partager l'istwa de
+            premye Repiblik nwa nan mond lan.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Eksplore</h4>
+          <ul>
+            <li><a href="index.html">Akèy</a></li>
+            <li><a href="about.html">Sou Ayiti</a></li>
+            <li><a href="history.html">Istwa</a></li>
+            <li><a href="tourism.html">Touris</a></li>
+            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+            <li><a href="archives.html">Achiv</a></li>
+            <li><a href="bibliography.html">Bibliyografi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kilti &amp; Sosyete</h4>
+          <ul>
+            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastwonomi</a></li>
+            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Istwa &amp; Enstitisyon</h4>
+          <ul>
+            <li><a href="timeline.html">Kwonolouji</a></li>
+            <li><a href="heroes.html">Ewò Nasyonal</a></li>
+            <li><a href="lidès.html">Lidè</a></li>
+            <li><a href="konstitisyon.html">Konstitisyon</a></li>
+            <li><a href="enstitisyons.html">Enstitisyon</a></li>
+            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Pran Kontak</h4>
+          <ul>
+            <li><a href="contact.html">Kontakte Nou</a></li>
+            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+            <li><a href="license.html">Mentions L&eacute;gales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est n&eacute; d&apos;une frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti sont &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les sources ha&iuml;tiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pendant.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/premium.js"></script>
+</body>
+</html>

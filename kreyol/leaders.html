@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Lidè et Chefs d'État d'Haïti | </title>
+  <meta name="description" content="De Toussaint Louverture aux prezidans contemporains, dekouvri les grands lidès qui ont dirigé Haïti à travers son istwa." />
+  <meta name="author" content="RepiblikHaïti.org" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/premium.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+
+    <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Akèy">
+          Repiblik Ayiti
+        </a>
+        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+          <a href="index.html">Akèy</a>
+          <a href="about.html">Sou Nou</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Istwa Jeneral</a>
+              <a href="timeline.html">Kwonolouji</a>
+              <a href="heroes.html">Ewò Nasyonal</a>
+              <a href="lidès.html">Lidè</a>
+              <a href="konstitisyon.html">Konstitisyon</a>
+              <a href="enstitisyons.html">Enstitisyon</a>
+              <a href="presidents.html">Pwofil Prezidan yo</a>
+              <a href="revolution-batays.html">Batay Revolisyon an</a>
+              <a href="relations-internationales.html">Relasyon Entènasyonal</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti.html">Kilti &amp; Atizay</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Lwa yo</a>
+              <a href="gastronomy.html">Gastwonomi</a>
+              <a href="holidays.html">Jou Ferye</a>
+              <a href="atiss.html">Atis Vizyèl</a>
+              <a href="mizik-istwa.html">Istwa Mizik</a>
+              <a href="litterature.html">Literati</a>
+              <a href="creole.html">Lang Kreyòl</a>
+              <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
+              <a href="glossaire-creole.html">Glosè Kreyòl</a>
+            </div>
+          </div>
+          <a href="tourism.html">Touris</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="departements.html">10 Depatman yo</a>
+              <a href="geographie.html">Jeyografi Fizik</a>
+              <a href="anviwonman.html">Anviwonman</a>
+              <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
+              <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti-vivante.html">Kilti Vivan</a>
+              <a href="creativite-populaire.html">Kreyativite Popilè</a>
+              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+              <a href="instabilite-politik.html">Enstabilite Politik</a>
+              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+              <a href="services-essentiels.html">Sèvis Esansyèl</a>
+              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Ansiklopedi</a>
+              <a href="archives.html">Achiv</a>
+              <a href="bibliography.html">Bibliyografi</a>
+              <a href="quiz.html">Quiz : Èske ou konnen Ayiti ?</a>
+              <a href="faits-meconnus.html">Bagay Moun Pa Konnen</a>
+            </div>
+          </div>
+          <a href="contact.html">Kontak</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Gouvernance</p>
+      <h1 class="page-hero__title">Les Lidè d'Haïti</h1>
+      <p class="page-hero__desc">Des pères fondateurs de la nation aux prezidans contemporains, ces hommes et ces fanm ont dirigé Haïti à travers les grandeurs et les épreuves.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Akèy</a>
+        <span>/</span>
+        <a href="history.html">Istwa</a>
+        <span>/</span>
+        <span>Lidè</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- PÈRES FONDATEURS -->
+  <section class="section" id="fondateurs">
+    <div class="container">
+      <p class="section-label text-center">1791 – 1820</p>
+      <h2 class="section-title text-center">Les Pères Fondateurs de la Nation</h2>
+      <p class="section-subtitle text-center">Ces figures revolisyonnaires ont mené Haïti de l'esklavaj colonial à l'endepandans, forgeant premye Repiblik nwa nan mond lan et posant les bases d'un État souverain.</p>
+      <div class="two-col--wide-left" style="margin-bottom:2.5rem;">
+        <div>
+          <h3 style="font-size:1.15rem;font-weight:800;color:var(--blue);margin-bottom:0.6rem;">Toussaint Louverture (1743 – 1803)</h3>
+          <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
+            Né en esklavaj, Toussaint Louverture devint le plus grand stratège militaire de la
+            Revolisyon haïtienne. Il vainquit successivement les armées espagnole, britannique
+            et française, rédigea la Konstitisyon de 1801 et se proclama gouverneur à vie en
+            affirmant l'abolisyon définitive de l'esklavaj. Capturé par traîtrise par Napoléon
+            en 1802, il mourut dans la prison du Fort de Joux. Sa vision et son courage
+            ouvrirent la voie à l'endepandans qu'il n'a pas vécu à voir.
+          </p>
+          <h3 style="font-size:1.15rem;font-weight:800;color:var(--blue);margin-bottom:0.6rem;">Jean-Jacques Dessalines (1758 – 1806)</h3>
+          <p style="font-size:16px;line-height:1.85;">
+            Né dans l'esklavaj, Dessalines conduisit la batay finale de Vertières en
+            novembre 1803 puis proclama l'endepandans Ayiti le 1er janvier 1804 à
+            Gonaïves — premier État noir libre des Amériques. Devenu l'Empereur Jacques I,
+            sa Konstitisyon de 1805 déclara tous les Haïtiens « noirs » quelle que soit
+            leur couleur de peau. Assassiné en octobre 1806, il demeure le père fondateur
+            incontesté de la nation.
+          </p>
+        </div>
+        <div>
+          <h3 style="font-size:1.15rem;font-weight:800;color:var(--blue);margin-bottom:0.6rem;">Henri Christophe (1767 – 1820)</h3>
+          <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
+            Général de la Revolisyon, Christophe dirigea le nord d'Haïti après la mort de
+            Dessalines et se proclama Roi Henri I en 1811. Il fit bâtir la majestueuse
+            Citadelle Laferrière et le Palais Sans-Souci, jounen jodi a classés au patrimwàn
+            mondial de l'UNESCO. Administrateur visionnaire, il se suicida dans son palais
+            en 1820 face à une révolte de ses généraux.
+          </p>
+          <h3 style="font-size:1.15rem;font-weight:800;color:var(--blue);margin-bottom:0.6rem;">Alexandre Pétion (1770 – 1818)</h3>
+          <p style="font-size:16px;line-height:1.85;">
+            Pétion dirigea la partie méridionale d'Haïti en tant que prezidan républicain.
+            Ses convictions démocratiques l'amenèrent à mettre en œuvre une réforme agraire
+            généreuse distribuant des tès aux peyians. Il soutint Simón Bolívar en lui
+            fournissant troupes et ressources pour libérer l'Amerik di Sid, posant comme
+            seule condition l'abolisyon de l'esklavaj dans les territoires libérés. Son
+            humanisme lui valut le surnom de « Pétion le Grand ».
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LE XIXe SIECLE -->
+  <section class="section section--alt" id="xixeme">
+    <div class="container">
+      <p class="section-label text-center">1818 – 1915</p>
+      <h2 class="section-title text-center">Le XIXe Siècle : Construction et Crises</h2>
+      <p class="section-subtitle text-center">Après la mort des pères fondateurs, Haïti traverse un syèk marqué par des successions politiks souvent violentes, la lourde dette imposée par la France et des tentatives de modernisation.</p>
+      <div class="text-block" style="margin-top:1.5rem;">
+        <p>
+          Après la disparition des pères fondateurs, le XIXe syèk haïtien est une longue suite
+          de présidences fragiles, souvent interrompues par des insurrections armées.
+          <strong>Jean-Pierre Boyer (1776 – 1850)</strong>, successeur de Pétion, réunit les deux
+          moitiés d'Haïti en 1820 et annexa même la partie orientale de l'île pendant vingt-deux ans.
+          Mais c'est lui qui, en 1825, accepta de verser 150 millions de francs à la France pour
+          obtenir la rekonesans de l'endepandans — une dette écrasante qui pèsera sur
+          le peyi pendant plus d'un syèk.
+        </p>
+        <p>
+          <strong>Faustin Soulouque (1782 – 1867)</strong>, prezidan élu en 1847, se proclama
+          Empereur Faustin I en 1849, créant une cour impériale somptueuse avant d'être
+          renversé et exilé en France en 1859.
+          Son successeur, <strong>Fabre Nicolas Geffrard (1806 – 1878)</strong>, restaura la
+          Repiblik, réforma l'edikasyon et signa le concordat avec le Vatican en 1860 — tout en
+          menant une sévère campagne de répression contre les pratiques du Vodou.
+          <strong>Sylvain Salnave (1826 – 1870)</strong>, homme du pèp porté par les masses
+          populaires contre l'élite marchande, gouverna de 1867 à 1869 au milieu d'une lagè
+          civile permanente ; vaincu, il fut fusillé par une cour martiale en janvier 1870.
+        </p>
+        <p>
+          <strong>Lysius Salomon (1815 – 1888)</strong> fonda la Banque Nationale d'Haïti en 1880
+          et tenta de moderniser le peyi avant d'être chassé en exil en 1888.
+          <strong>Florvil Hyppolite (1828 – 1896)</strong> refusa fermement la demande américaine
+          d'une base navale à Môle-Saint-Nicolas, défendant la souvènte nationale jusqu'à sa
+          mort d'une crise cardiaque en 1896.
+          <strong>Tirésias Simon Sam (1835 – 1916)</strong> maintint une présidence relativement
+          stable de 1896 à 1902 avant d'être contraint à l'exil par des insurrections armées.
+          <strong>Nord Alexis (1820 – 1910)</strong>, âgé de 81 ans à son accession, était l'un
+          des derniers prezidans à avoir connu personnellement des revolisyonnaires de 1804 ;
+          renversé en 1908, il mourut en Jamaïque.
+        </p>
+        <p>
+          Le cycle se referme avec <strong>Jean Vilbrun Guillaume Sam (vers 1859 – 1915)</strong>,
+          dont le bref mandat de février à juillet 1915 s'acheva par son lynchage dans l'enceinte
+          de la légation française, après qu'il eut ordonné le massacre de plus de 160 prisonniers
+          politiks. Sa mort dramatique servit de prétexte à l'intervention militaire
+          des États-Unis quelques jours plus tard.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OCCUPATION AMÉRICAINE -->
+  <section class="section" id="occupation">
+    <div class="container">
+      <p class="section-label text-center">1915 – 1957</p>
+      <h2 class="section-title text-center">Sous Occupation et Après</h2>
+      <p class="section-subtitle text-center">De 1915 à 1934, les États-Unis occupent militairement Haïti. Les prezidans de cette période exercent un pouvoir limité sous la tutelle américaine. Après le départ des troupes, Haïti cherche à rebâtir son autonomie.</p>
+      <div class="text-block" style="margin-top:1.5rem;">
+        <p>
+          L'occupation militaire américaine (1915 – 1934) transforma le statut même de la
+          présidence haïtienne : les chefs d'État gouvernaient sous tutelle, leurs décisions
+          soumises à l'approbation des commandants de la Marine américaine.
+          <strong>Philippe Sudre Dartiguenave (1863 – 1926)</strong>, élu sous la pression
+          directe des Marines en 1915, signa le traité plaçant Haïti sous la tutelle
+          américaine pour vingt ans. C'est sous son gouvènman que fut rédigée la
+          Konstitisyon de 1918 — en partie par Franklin D. Roosevelt, alors
+          sous-secrétaire de la Marine.
+          <strong>Louis Borno (1865 – 1942)</strong>, qui lui succéda de 1922 à 1930,
+          développa les infrastructures du peyi grâce aux investissements américains tout
+          en restreignant les libètes politiks et en réprimant les mouvements nationalistes.
+        </p>
+        <p>
+          La fin de l'occupation porta au pouvoir <strong>Sténio Vincent (1874 – 1959)</strong>,
+          qui négocia le départ définitif des troupes américaines en 1934 et fut acclamé comme
+          un libérateur. Son mandat fut cependant assombri par sa réponse trop modérée au
+          massacre de dizaines de milliers d'Haïtiens en Repiblik Dominicaine en 1937, sur
+          ordre de Trujillo. Son successeur, <strong>Élie Lescot (1883 – 1974)</strong>,
+          mena entre 1941 et 1942 une violente « campagne antisuperstition » contre le Vodou,
+          en partenariat avec l'Église catholique, détruisant de nombreux temples et objets
+          sacrés. Un soulèvement étudiant et militaire le contraint à démissionner en 1946.
+        </p>
+        <p>
+          <strong>Dumarsais Estimé (1900 – 1953)</strong> représente un tournant historique :
+          premier prezidan à incarner pleinement le mouvement noiriste — valorisation de
+          l'identité et de la kilti noire haïtienne —, il inaugura une politik en faveur
+          des masses populaires, réhabilita kilti ayisyèn nan y compris le Vodou, et
+          organisa les Jeux du Bicentenaire de 1950. Sa tentative de proroger son mandat
+          provoqua un koudeta militaire ; il mourut en exil à New York en 1953.
+          <strong>Paul Eugène Magloire (1907 – 2001)</strong>, militaire populaire, assuma
+          ensuite la présidence lors du premier scrutin universel masculin, gouvernant
+          jusqu'en 1956, avant d'être contraint à l'exil par une grève générale.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LES DUVALIER -->
+  <section class="section section--alt" id="duvalier">
+    <div class="container">
+      <p class="section-label text-center">1957 – 1986</p>
+      <h2 class="section-title text-center">La Dictature des Duvalier</h2>
+      <p class="section-subtitle text-center">Père et fils gouvernèrent Haïti pendant 29 ans. Une période de tèur politik, de corruption et d'exode massif qui laissa des cicatrices profondes dans la sosyete haïtienne.</p>
+      <div class="text-block" style="margin-top:1.5rem;">
+        <p>
+          <strong>François Duvalier (1907 – 1971)</strong>, médecin de campagne surnommé
+          « Papa Doc », fut élu prezidan en 1957. Il instaura rapidement une diktatè
+          totale, s'appuyant sur les <em>Tonton Macoutes</em>, une milice paramilitaire
+          qui terrorisait la population. En 1964, il se proclama Prezidan à Vie. Son
+          régime fit assassiner, torturer ou pousser à l'exil des milliers d'opposants,
+          d'intellectuels et de professionnels. Il mourut en 1971 et transmit le pouvoir
+          à son fils de 19 ans — une succession dynastique sans précédent dans l'istwa
+          républicaine de l'hémisphère.
+        </p>
+        <p>
+          <strong>Jean-Claude Duvalier (1951 – 2014)</strong>, surnommé « Baby Doc »,
+          hérita du pouvoir à 19 ans. Son régime, moins meurtrier mais profondément
+          corrompu, s'ouvrit au touris et aux investissements étrangers tout en
+          maintenant la répression politik. La misère croissante, les inégalités
+          criantes et la rezistans populaire conduisirent à son renversement le
+          7 février 1986. Il s'exila en France pendant vingt-cinq ans, rentra en Haïti
+          en 2011 sans jamais être condamné, et mourut en 2014.
+        </p>
+
+        <aside class="researcher-note" aria-label="Note de recherche">
+          L'istwa politik haïtienne exige de distinguer soigneusement entre
+          <strong>prezidans konstitisyonnels</strong> et <strong>dirigeants de facto</strong>.
+          Sur les quelque cinquante chefs d'État qu'a connus Haïti depuis 1804, une majorité
+          n'a pas été élue au sens démocratique du terme : militaires putschistes, prezidans
+          à vie autoproclamés, juntes de transition et conseils nommés par la kominote
+          internationale se succèdent dans les archives officielles au même titre que les
+          prezidans élus au suffrage universel. Présenter cette liste comme une succession
+          de « prezidans » sans qualifier chaque cas — mandat konstitisyonnel, koudeta,
+          intérim forcé — revient à occulter la nature profonde de l'instabilité politik
+          haïtienne, elle-même héritière des contraintes ekonomiks imposées par la dette
+          coloniale et les occupations étrangères successives.
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- APRÈS 1986 -->
+  <section class="section" id="apres1986">
+    <div class="container">
+      <p class="section-label text-center">1986 – Jounen jodi a</p>
+      <h2 class="section-title text-center">L'Ère Démocratique et Ses Turbulences</h2>
+      <p class="section-subtitle text-center">Depuis la chute de Duvalier, Haïti cherche à construire une demokrasi stable. Ce chemin est semé d'embûches: coups d'État, crises politiks, katastwòf natirèl et instabilité chronique.</p>
+      <div class="text-block" style="margin-top:1.5rem;">
+        <p>
+          Après la fuite de Jean-Claude Duvalier, la transition démocratique s'avère semée
+          d'embûches. Le général <strong>Henri Namphy (1932 – 2018)</strong> dirigea le
+          Conseil National de Gouvènman (1986 – 1988), marqué par le massacre d'électeurs
+          en novembre 1987. <strong>Leslie Manigat (1930 – 2014)</strong>, professeur et
+          politologue, fut élu en janvier 1988 lors d'eleksyon boycottées par l'opposition ;
+          renversé en cinq mois par un nouveau coup de Namphy, lui-même bientôt chassé par
+          le général <strong>Prosper Avril (né en 1937)</strong>, dont le régime se rendit
+          coupable de graves violations des droits humains jusqu'en mars 1990.
+        </p>
+        <p>
+          La juriste <strong>Ertha Pascal-Trouillot (1943 – 2023)</strong>, première fanm
+          à accéder à la présidence haïtienne, organisa en tant que prezidane provisoire les
+          premières eleksyon libres et transparentes du peyi — remportées par
+          <strong>Jean-Bertrand Aristide (né en 1953)</strong> avec 67 % des voix en
+          décembre 1990. Renversé par le koudeta militaire du général
+          <strong>Raoul Cédras (né en 1949)</strong> le 30 septembre 1991, Aristide fut
+          rétabli dans ses fonctions en octobre 1994 sous pression internationale.
+          Réélu en 2001, il quitta le pouvoir en 2004 dans des circonstances controversées.
+        </p>
+        <p>
+          <strong>René Préval (1943 – 2017)</strong> reste la figure la plus stable de cette
+          période : seul prezidan haïtien à avoir effectué deux mandats complets (1996 – 2001
+          et 2006 – 2011) et transmis pacifiquement le pouvoir à deux reprises. Son second
+          mandat fut dominé par la gestion du séisme dévastateur du 12 janvier 2010,
+          qui tua plus de 200 000 personnes.
+          Entre ces mandats, <strong>Boniface Alexandre (né en 1936)</strong> assuma la
+          présidence provisoire (2004 – 2006) et supervisa le déploiement de la
+          Mission des Nasyon Zini pour la Stabilisation en Haïti (MINUSTAH).
+        </p>
+        <p>
+          <strong>Michel Martelly (né en 1961)</strong>, chanteur de kompa connu sous le nom
+          de « Sweet Micky », présida de 2011 à 2016 dans le contexte difficile de la
+          reconstruction post-séisme, au milieu d'accusations persistantes de corruption et
+          d'une crise konstitisyonnelle à la fin de son mandat.
+          <strong>Jovenel Moïse (1968 – 2021)</strong>, élu en 2016, fut assassiné
+          à son domicile dans la nuit du 6 au 7 juillet 2021 par un commando armé, plongeant
+          Haïti dans une spirale de chaos sécuritaire et politik sans précédent.
+        </p>
+        <p>
+          Le neurochirurgien <strong>Ariel Henry (né en 1959)</strong> assuma de facto la
+          direction du peyi de 2021 à mars 2024, sans jamais être élu, dans un vide
+          konstitisyonnel total aggravé par la montée en puissance des gangs armés.
+          Contraint de démissionner sous pression internationale, il céda la place au
+          <strong>Conseil Prezidaniel de Transition (2024 – présent)</strong>, organe
+          collégial soutenu par la kominote entènasyonal chargé de préparer le retour
+          à des eleksyon. Haïti n'a pas tenu d'eleksyon depuis 2016.
+          Le Premye Minis <strong>Alix Didier Fils-Aimé (nommé novembre 2024)</strong>
+          dirige le gouvènman de transition en appui à la Mission Multinationale de
+          Soutien à la Sécurité conduite par le Kenya.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Dekouvri l'Istwa Complète d'Haïti</h2>
+      <p>Plonje dans la chronologie détaillée des événements qui ont façonné la nation haïtienne, de l'ère taïno à nos jours.</p>
+      <a href="timeline.html" class="btn btn-cta-white">Voir la Kwonolouji →</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            Repiblik Ayiti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire istwa d'Haïti, de sa kilti
+            vibrante et de son pèp remarquable. Dédié à partager l'istwa de
+            premye Repiblik nwa nan mond lan.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Eksplore</h4>
+          <ul>
+            <li><a href="index.html">Akèy</a></li>
+            <li><a href="about.html">Sou Ayiti</a></li>
+            <li><a href="history.html">Istwa</a></li>
+            <li><a href="tourism.html">Touris</a></li>
+            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+            <li><a href="archives.html">Achiv</a></li>
+            <li><a href="bibliography.html">Bibliyografi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kilti &amp; Sosyete</h4>
+          <ul>
+            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastwonomi</a></li>
+            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Istwa &amp; Enstitisyon</h4>
+          <ul>
+            <li><a href="timeline.html">Kwonolouji</a></li>
+            <li><a href="heroes.html">Ewò Nasyonal</a></li>
+            <li><a href="lidès.html">Lidè</a></li>
+            <li><a href="konstitisyon.html">Konstitisyon</a></li>
+            <li><a href="enstitisyons.html">Enstitisyon</a></li>
+            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Pran Kontak</h4>
+          <ul>
+            <li><a href="contact.html">Kontakte Nou</a></li>
+            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+            <li><a href="license.html">Mentions L&eacute;gales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est n&eacute; d&apos;une frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti sont &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les sources ha&iuml;tiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pendant.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/premium.js"></script>
+</body>
+</html>

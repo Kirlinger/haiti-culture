@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Jacmel — Istwa, Kilti et Jeyografi | Repiblik Ayiti</title>
+  <meta name="description" content="Ses maisons aux balcons de fer forgé, son kanaval unique, ses ateliers d'atiss — Jacmel est la vil la plus belle d'Haïti, une cité qui résiste autant à l'oubli qu'aux catastrophes." />
+  <meta name="author" content="RepiblikHaïti.org" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/premium.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Akèy">
+          Repiblik Ayiti
+        </a>
+        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+          <a href="index.html">Akèy</a>
+          <a href="about.html">Sou Nou</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Istwa Jeneral</a>
+              <a href="timeline.html">Kwonolouji</a>
+              <a href="heroes.html">Ewò Nasyonal</a>
+              <a href="lidès.html">Lidè</a>
+              <a href="konstitisyon.html">Konstitisyon</a>
+              <a href="enstitisyons.html">Enstitisyon</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti.html">Kilti &amp; Atizay</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Lwa yo</a>
+              <a href="gastronomy.html">Gastwonomi</a>
+              <a href="holidays.html">Jou Ferye</a>
+            </div>
+          </div>
+          <a href="tourism.html">Touris</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti-vivante.html">Kilti Vivan</a>
+              <a href="creativite-populaire.html">Kreyativite Popilè</a>
+              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+              <a href="instabilite-politik.html">Enstabilite Politik</a>
+              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+              <a href="services-essentiels.html">Sèvis Esansyèl</a>
+              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Ansiklopedi</a>
+              <a href="archives.html">Achiv</a>
+              <a href="bibliography.html">Bibliyografi</a>
+            </div>
+          </div>
+          <a href="contact.html">Kontak</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : istwa, kilti, vils…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Capitale Kiltille du Sud</p>
+      <h1 class="page-hero__title">Jacmel</h1>
+      <p class="page-hero__desc">Ses maisons aux balcons de fer forgé, son kanaval unique, ses ateliers d'atiss — Jacmel est la vil la plus belle d'Haïti, une cité qui résiste autant à l'oubli qu'aux catastrophes.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Akèy</a>
+        <span>/</span>
+        <a href="vils.html">Vils d'Haïti</a>
+        <span>/</span>
+        <span>Jacmel</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Art, Architecture &amp; Mémoire</p>
+      <h2>Jacmel, vil des arts et du kanaval</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            La vil de Jacmel est fondée en 1698 par les Français sur la côte sud d'Haïti, dans une baie en croissant que les Taïnos appelaient <em>Yagua-Miel</em> — l'eau douce du jaguar, selon certaines étymologies populaires, bien que les linguistes hésitent sur la traduction exacte. Dès le XVIIIe syèk, elle s'impose comme l'un des principaux ports d'exportation de la colonie, acheminant café, coton et indigo depuis la riche plaine du sud-est vers les marchés européens. Après l'endepandans, Jacmel conserve cette vocation commerciale. Au XIXe syèk, le café haïtien — parmi les plus appréciés du mond — transite par son port, qui entretient des relations directes avec des maisons de commerce de New York, de Hambourg et de Marseille. Cette insertion dans les circuits commerciaux atlantiques explique en partie l'architecture particulière de la vil : les marchands fortunés font construire des entrepôts et des maisons de maître inspirés par ce qu'ils ont vu ou imaginé en Europe et en Louisiane.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            L'architecture de Jacmel est sa carte d'identité. Les maisons dites « gingerbread » — terme que les Haïtiens traduisent par <em>kay bwa</em>, maison de bois — sont des constructions en bois et métal dont les façades sont ornées de balcons en fer forgé aux motifs végétaux ou géométriques, de frontons denticulés, de vérandas abritées sous des marquises ouvragées. Ce style, qui fleurit principalement entre 1880 et 1910, s'inspire de l'architecture victorienne nord-américaine filtrée par la Nouvelle-Orléans, avec des adaptations tropicales intelligentes : les grandes ouvertures, les galeries circulaires, les toits débordants permettent de vivre dehors tout en restant à l'ombre. Les entrepôts à colonnes de fonte du front de mer, certains construits avec des pièces métalliques importées de France ou d'Angletè, complètent ce peyiage urbain d'une cohérence rare.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Jacmel a produit une école de peinture identifiable à l'œil nu. Préfète Duffaut (1923-2012) est son représentant le plus connu à l'étranger : ses tableaux montrent des vils-falaises impossibles, des villages accrochés à des mòns en spirale, des escaliers qui montent vers des cieux peuplés de figures flottantes. L'espace y est nié au profit d'une jeyografi intérieure, onirique, qui n'appartient à aucun réalisme mais reconnaît quelque chose d'immédiatement vrai dans la topographie haïtienne. Duffaut affirmait avoir reçu ses visions de la Vierge Marie dans un songe. Le Centre d'Art de Port-au-Prince, fondé en 1944 par DeWitt Peters, a joué un rôle central dans la valorisation de ces atiss, mais c'est Jacmel qui en a produit le tèau social et spirituel.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            Simón Bolívar séjourna brièvement à Jacmel en janvier 1816, en route vers Haïti où Alexandre Pétion allait lui offrir le soutien logistique et militaire qui rendit possible sa campagne de libération de l'Amerik di Sid. Ce passage est peu commémoré en Haïti — peut-être parce que Bolívar, une fois au pouvoir, refusa d'inclure Haïti dans les conférences panaméricaines, craignant que la présence d'une Repiblik noire n'effraye les oligarchies créoles du continent. La solidarité avait ses limites diplomatiques.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>· Fondée en 1698 par les Français</li>
+              <li>· Depatman : Sud-Est</li>
+              <li>· Nom taïno : Yagua-Miel</li>
+              <li>· Commerce du café, XIXe syèk</li>
+              <li>· Bolívar y séjourna en 1816</li>
+              <li>· École de peinture : Préfète Duffaut</li>
+              <li>· Kanaval : le plus théâtral d'Haïti</li>
+              <li>· Séisme 2010 : dommages partiels</li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Atiss notables</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Préfète Duffaut (1923–2012)</li>
+              <li>· Robert Saint-Brice</li>
+              <li>· Didier William</li>
+              <li>· École du papier-mâché</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Le Kanaval de Jacmel</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Si le kanaval de Port-au-Prince est dominé par les chars commerciaux, les sono géantes et les atiss de compas, celui de Jacmel est d'une nature différente : il appartient à la kominote. Les masques en papier-mâché — technique apprise et transmise dans les fanmis depuis plusieurs générations — représentent des animaux, des démons, des personnages historiques, des figures politiks grotesques, des créatures hybrides. Leur fabrication commence des semaines avant le kanaval : les artisans travaillent avec du papier journal trempé dans de la colle, des fils de fer pour les structures, des peintures vives. Chaque quartier a ses groupes, ses thèmes, ses spécialités. Les costumes sont confectionnés à la main. Les chars sont poussés à la force humaine. Il n'y a pas de stars — ou plutôt, la star c'est la vil entière.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Ce kanaval artisanal a résisté à la commercialisation et à la centralisation kiltille qui ont homogénéisé d'autres célébrations haïtiennes. Il est jounen jodi a reconnu comme l'une des manifestations kiltilles populaires les plus originales des Karayib. L'UNESCO et plusieurs organisations kiltilles internationales ont documenté ses masques et ses tradisyons. Des coopératives d'artisans vendent ces masques à des collectionneurs et des galeries en Europe et en Amerik di Nò — l'une des rares industries kiltilles exportatrices d'Haïti à fonctionner à l'échelle locale.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Le Festival du Film de Jacmel</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Le <strong>Festival du Film de Jacmel</strong>, connu sous son nom créole <em>JAFICINE</em> (Jacmel Film Cinéma), est né dans les anes 2000 comme une initiative de la sosyete sivil locale et de dyaspora ayisyèn nan. Sa philosophie est simple mais ambitieuse : faire de Jacmel la vitrine du cinéma haïtien indépendant, et ouvrir cette vil aux cinématographies des Karayib, d'Afrique et de la dyaspora noire dans le mond. Il se tient habituellement en janvier ou février, quelques semaines avant le kanaval, dans les cours coloniales de la vieille vil, sous les manguiers et dans les entrepôts réhabilités du front de mer.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Le festival est étroitement associé à des cinéastes comme <strong>Guetty Felin</strong>, dont le film <em>Ayiti mon amour</em> (2012) a circulé dans plusieurs festivals internationaux, et <strong>Raoul Peck</strong>, dont la réputation internationale (il a réalisé <em>I Am Not Your Negro</em>, nommé aux Oscars en 2017) a contribué à mettre en lumière le cinéma haïtien d'auteur. Ces noms ne travaillent pas tous directement avec JAFICINE, mais leur présence dans l'espace kiltil global rappelle qu'Haïti a une tradisyon cinématographique plus ancienne qu'on ne le croit : le premier film haïtien documenté remonte à 1953 avec <em>Canapé Vert</em> de Léonce Viaud et Roger Ricard.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Le défi du festival, comme de toute initiative kiltille en Haïti, est structurel. L'insécurité, les coupures d'électricité, le manque d'infrastructure de projection, la difficulté d'attirer des partenaires internationaux stables — tout cela rend chaque édition un accomplissement en soi. Et pourtant il revient. La vil de Jacmel, dont la tradisyon de rezistans kiltille remonte au moins à Préfète Duffaut, semble avoir internalisé l'idée qu'une vil sans festival est une vil qui a renoncé à elle-même.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Après le séisme et le renouveau du café</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Le séisme du 12 janvier 2010 touche Jacmel moins violemment que Port-au-Prince, mais la vil en sort fragilisée. Des maisons gingerbread s'effondrent ; des entrepôts coloniaux fissurés attendent depuis lors des restaurations qui tardent, faute de financements et de volonté politik. La reconstruction a été partielle. En revanche, un renouveau agricole et commercial s'est esquissé autour du café : des coopératives comme COOPCAB (Coopérative Caféières des Basses-Alpes) organisent des producteurs du sud-est haïtien, développent la certification biologique, établissent des relations directes avec des torréfacteurs aux États-Unis et en Europe. C'est un modèle qui tente de renouer avec la vocation historique du port de Jacmel tout en redonnant à la peyiannerie locale une place dans la chaîne de valeur — plutôt que de simplement vendre des cerises de café à des intermédiaires qui captent l'essentiel de la marge.
+      </p>
+
+      <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:2rem;margin-bottom:2.5rem;">
+        <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Gade tou</p>
+        <ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2.2;">
+          <li>→ <a href="vils.html" style="color:#fff;">Retour aux Vils d'Haïti</a></li>
+          <li>→ <a href="kilti.html" style="color:#fff;">Kilti &amp; Atizay d'Haïti</a></li>
+          <li>→ <a href="creativite-populaire.html" style="color:#fff;">Kreyativite Popilè</a></li>
+          <li>→ <a href="tourism.html" style="color:#fff;">Touris en Haïti</a></li>
+          <li>→ <a href="les-cayes.html" style="color:#fff;">Les Cayes — Sud d'Haïti</a></li>
+          <li>→ <a href="port-au-prince.html" style="color:#fff;">Port-au-Prince</a></li>
+          <li>→ <a href="tap-tap.html" style="color:#fff;">Le Tap-Tap — Art Mobile</a></li>
+          <li>→ <a href="drapo-vodou.html" style="color:#fff;">Les Drapo Vodou</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            Repiblik Ayiti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire istwa d'Haïti, de sa kilti
+            vibrante et de son pèp remarquable. Dédié à partager l'istwa de
+            premye Repiblik nwa nan mond lan.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Eksplore</h4>
+          <ul>
+            <li><a href="index.html">Akèy</a></li>
+            <li><a href="about.html">Sou Ayiti</a></li>
+            <li><a href="history.html">Istwa</a></li>
+            <li><a href="tourism.html">Touris</a></li>
+            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+            <li><a href="archives.html">Achiv</a></li>
+            <li><a href="bibliography.html">Bibliyografi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kilti &amp; Sosyete</h4>
+          <ul>
+            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastwonomi</a></li>
+            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Istwa &amp; Enstitisyon</h4>
+          <ul>
+            <li><a href="timeline.html">Kwonolouji</a></li>
+            <li><a href="heroes.html">Ewò Nasyonal</a></li>
+            <li><a href="lidès.html">Lidè</a></li>
+            <li><a href="konstitisyon.html">Konstitisyon</a></li>
+            <li><a href="enstitisyons.html">Enstitisyon</a></li>
+            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Pran Kontak</h4>
+          <ul>
+            <li><a href="contact.html">Kontakte Nou</a></li>
+            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+            <li><a href="license.html">Mansyon Legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est né d'une frustration personnelle&#160;: trop d'ouvrages sur Haïti sont écrits de l'extérieur. J'ai voulu rassembler les sources haïtiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chèchè endepandan.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/premium.js"></script>
+</body>
+</html>

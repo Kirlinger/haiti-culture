@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Hinche — Istwa, Kilti et Jeyografi | Repiblik Ayiti</title>
+  <meta name="description" content="Capitale du depatman du Centre, Hinche est une vil du Plateau Central marquée par la rezistans à l'okipasyon ameriken et par le rôle de ses peyians dans la longue istwa de la tè haïtienne." />
+  <meta name="author" content="RepiblikHaïti.org" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/premium.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Akèy">
+          Repiblik Ayiti
+        </a>
+        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+          <a href="index.html">Akèy</a>
+          <a href="about.html">Sou Nou</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Istwa Jeneral</a>
+              <a href="timeline.html">Kwonolouji</a>
+              <a href="heroes.html">Ewò Nasyonal</a>
+              <a href="lidès.html">Lidè</a>
+              <a href="konstitisyon.html">Konstitisyon</a>
+              <a href="enstitisyons.html">Enstitisyon</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti.html">Kilti &amp; Atizay</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Lwa yo</a>
+              <a href="gastronomy.html">Gastwonomi</a>
+              <a href="holidays.html">Jou Ferye</a>
+            </div>
+          </div>
+          <a href="tourism.html">Touris</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti-vivante.html">Kilti Vivan</a>
+              <a href="creativite-populaire.html">Kreyativite Popilè</a>
+              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+              <a href="instabilite-politik.html">Enstabilite Politik</a>
+              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+              <a href="services-essentiels.html">Sèvis Esansyèl</a>
+              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Ansiklopedi</a>
+              <a href="archives.html">Achiv</a>
+              <a href="bibliography.html">Bibliyografi</a>
+            </div>
+          </div>
+          <a href="contact.html">Kontak</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : istwa, kilti, vils…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Plateau Central</p>
+      <h1 class="page-hero__title">Hinche</h1>
+      <p class="page-hero__desc">Capitale du depatman du Centre, Hinche est une vil du Plateau Central marquée par la rezistans à l'okipasyon ameriken et par le rôle de ses peyians dans la longue istwa de la tè haïtienne.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Akèy</a>
+        <span>/</span>
+        <a href="vils.html">Vils d'Haïti</a>
+        <span>/</span>
+        <span>Hinche</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Rezistans &amp; Peyiannerie</p>
+      <h2>Hinche, berceau de la rezistans Cacos</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Hinche s'étend sur le Plateau Central haïtien, à environ 150 kilomètres au nord-est de Port-au-Prince, dans une zone de savanes et de collines que la rivyè Artibonite et ses affluents irriguent de façon irrégulière. C'est une vil de marché, carrefour des échanges entre les peyians du Centre et les commerçants qui acheminent les produits agricoles vers la côte. Elle est aussi une vil frontière, proche de la Repiblik dominicaine, ce qui a toujours donné à la région un caractère particulier — à la fois ouverture sur l'autre et espace de tensions historiques liées à la longue question de l'zile Ispayola.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            C'est à Hinche que naît, en 1885 selon la plupart des sources, Charlemagne Péralte. Fils d'une fanmi aisée du Centre, il est formé à l'École Militaire de Port-au-Prince. Quand les Marines américains débarquent en Haïti en juillet 1915 — invoquant l'instabilité politik et la protection des intérêts ekonomiks américains — Péralte est d'abord fait prisonnier. En 1917, il s'évade, rejoint les Cacos dans les mòns du Centre et devient rapidement leur chef militaire le plus efficace. Les Cacos — du nom d'un oiseau de proie, terme qui désignait les guérilleros peyians haïtiens — mènent pendant plusieurs anes une rezistans armée contre l'occupation qui mobilise des dizaines de milliers d'hommes.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            L'okipasyon ameriken (1915-1934) a profondément transformé le Centre d'Haïti. La SHADA (Sosyete Haïtiano-Américaine de Développement Agricole), sosyete américaine bénéficiant de la protection de la Gendarmerie d'Haïti créée par les Marines, s'approprie des tès fertiles pour établir des ranches à bétail et des plantations industrielles. Les peyians du Plateau Central, dont beaucoup disposaient de droits coutumiers sur des tès transmises depuis l'endepandans, se retrouvent expulsés de leurs lopins. Cette dépossession foncière alimenta directement la rezistans Cacos — ce n'était pas seulement un combat anticolonial abstrait, mais la défense concrète de tès et de moyens de subsistance.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            L'historienne Mary Renda, dans <em>Taking Haiti: Military Occupation and the Kilti of U.S. Imperialism</em> (2001), analyse en détail comment l'okipasyon ameriken a utilisé la figure de Charlemagne Péralte après sa mort pour légitimer la répression : les Marines photographièrent son corps crucifié contre une porte, image qui circula comme preuve de leur viktwa. Ce faisant, ils créèrent involontairement une icône. Péralte ressemblait au Christ dans cette image. Elle est devenue l'une des représentations les plus reproduites de l'istwa haïtienne — utilisée y compris, avec une ironie terrible, par le régime Duvalier qui instrumentalisait le nationalisme qu'il avait par ailleurs systématiquement réprimé.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>· Depatman : Centre</li>
+              <li>· Sur le Plateau Central</li>
+              <li>· Charlemagne Péralte : né à Hinche (1885)</li>
+              <li>· Rezistans Cacos : 1915–1919</li>
+              <li>· Péralte tué par les Marines : 1919</li>
+              <li>· Occupation américaine : 1915–1934</li>
+              <li>· Barrage de Péligre : sur l'Artibonite</li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Jeyografi régionale</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Altitude : ~460 m (plateau)</li>
+              <li>· Rivière Artibonite et affluents</li>
+              <li>· Agrikilti : riz, élevage bovin</li>
+              <li>· Frontière dominicaine à l'est</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Charlemagne Péralte : la vie et le mythe</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Charlemagne Péralte est tué le 1er novembre 1919, lors d'un raid mené par deux officiers des Marines américains — Herman Hanneken et William Button — qui avaient infiltré les rangs des Cacos grâce à un informateur. Hanneken, déguisé en soldat haïtien, s'approcha du camp de Péralte et l'abattit d'une balle. Il avait trente-quatre ans. Son exécution ne mit pas fin à la rezistans — son successeur Benoît Batravil continua le combat jusqu'en 1920 — mais elle priva le mouvement de son lidè le plus charismatique. Les Marines, pour décourager tout culte de la rezistans, photographièrent le corps de Péralte attaché à une croix de bois et distribuèrent ces images dans tout le peyi. L'effet fut inverse : l'image circula comme une relique, et Péralte devint un martyr.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Le barrage de Péligre et l'Artibonite</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        À une cinquantaine de kilomètres au sud-ouest de Hinche, dans les gorges de l'Artibonite, s'élève le barrage de Péligre, construit dans les anes 1950 avec un financement américain et inauguré en 1956. C'est le seul grand barrage hydroélectrique d'Haïti, alimentant l'essentiel de la production électrique nationale. Sa construction a nécessité le déplacement forcé de plusieurs milliers de peyians du Plateau Central — des fanmis qui cultivaient les tès de la vallée depuis des générations et qui furent relocalisées sans compensation adéquate sur des tès marginales. Paul Farmer, dans <em>The Uses of Haiti</em> (1994), a documenté les conséquences à long terme de ce déplacement sur les kominotes du Plateau Central, notamment en termes d'appauvrissement et de perte de capital social. Le barrage produit de l'électricité qui bénéficie principalement à Port-au-Prince ; les peyians expropriés, eux, vivent toujours dans les mêmes conditions de précarité.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        La fertilité du Plateau Central reste réelle : les plaines irrigables peuvent produire du riz, du maïs, des haricots, et l'élevage bovin a toujours été une composante importante de l'ekonomi régionale. Des initiatives coopératives locales tentent depuis les anes 1990 de structurer cette production agricole en dehors des circuits d'intermédiaires qui captent l'essentiel de la valeur. Le mouvement CODEP (Coordination de Développement des Peyians) et d'autres organisations peyiannes du Centre représentent cette tradisyon de mobilisation collective qui est, à Hinche, aussi ancienne que les Cacos.
+      </p>
+
+      <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:2rem;margin-bottom:2.5rem;">
+        <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Gade tou</p>
+        <ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2.2;">
+          <li>→ <a href="vils.html" style="color:#fff;">Retour aux Vils d'Haïti</a></li>
+          <li>→ <a href="history.html" style="color:#fff;">Istwa générale d'Haïti</a></li>
+          <li>→ <a href="heroes.html" style="color:#fff;">Ewò Nasyonal (Péralte)</a></li>
+          <li>→ <a href="fragilite-economique.html" style="color:#fff;">Frajilite Ekonomik</a></li>
+          <li>→ <a href="saint-marc.html" style="color:#fff;">Saint-Marc — Artibonite</a></li>
+          <li>→ <a href="gonaives.html" style="color:#fff;">Gonaïves — Cité de l'Endepandans</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            Repiblik Ayiti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire istwa d'Haïti, de sa kilti
+            vibrante et de son pèp remarquable. Dédié à partager l'istwa de
+            premye Repiblik nwa nan mond lan.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Eksplore</h4>
+          <ul>
+            <li><a href="index.html">Akèy</a></li>
+            <li><a href="about.html">Sou Ayiti</a></li>
+            <li><a href="history.html">Istwa</a></li>
+            <li><a href="tourism.html">Touris</a></li>
+            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+            <li><a href="archives.html">Achiv</a></li>
+            <li><a href="bibliography.html">Bibliyografi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kilti &amp; Sosyete</h4>
+          <ul>
+            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastwonomi</a></li>
+            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Istwa &amp; Enstitisyon</h4>
+          <ul>
+            <li><a href="timeline.html">Kwonolouji</a></li>
+            <li><a href="heroes.html">Ewò Nasyonal</a></li>
+            <li><a href="lidès.html">Lidè</a></li>
+            <li><a href="konstitisyon.html">Konstitisyon</a></li>
+            <li><a href="enstitisyons.html">Enstitisyon</a></li>
+            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Pran Kontak</h4>
+          <ul>
+            <li><a href="contact.html">Kontakte Nou</a></li>
+            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+            <li><a href="license.html">Mansyon Legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est né d'une frustration personnelle&#160;: trop d'ouvrages sur Haïti sont écrits de l'extérieur. J'ai voulu rassembler les sources haïtiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chèchè endepandan.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/premium.js"></script>
+</body>
+</html>

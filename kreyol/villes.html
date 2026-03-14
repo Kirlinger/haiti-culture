@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Les Vils d'Haïti | RepiblikHaïti.org</title>
+  <meta name="description" content="Un panorama des vils et communes haïtiennes — leur istwa, leur identité kiltille, leur rôle dans la jeyografi nationale." />
+  <meta name="author" content="RepiblikHaïti.org" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/premium.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Akèy">
+          Repiblik Ayiti
+        </a>
+        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+          <a href="index.html">Akèy</a>
+          <a href="about.html">Sou Nou</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Istwa Jeneral</a>
+              <a href="timeline.html">Kwonolouji</a>
+              <a href="heroes.html">Ewò Nasyonal</a>
+              <a href="lidès.html">Lidè</a>
+              <a href="konstitisyon.html">Konstitisyon</a>
+              <a href="enstitisyons.html">Enstitisyon</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti.html">Kilti &amp; Atizay</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Lwa yo</a>
+              <a href="gastronomy.html">Gastwonomi</a>
+              <a href="holidays.html">Jou Ferye</a>
+            </div>
+          </div>
+          <a href="tourism.html">Touris</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="kilti-vivante.html">Kilti Vivan</a>
+              <a href="creativite-populaire.html">Kreyativite Popilè</a>
+              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+              <a href="instabilite-politik.html">Enstabilite Politik</a>
+              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+              <a href="services-essentiels.html">Sèvis Esansyèl</a>
+              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Ansiklopedi</a>
+              <a href="archives.html">Achiv</a>
+              <a href="bibliography.html">Bibliyografi</a>
+            </div>
+          </div>
+          <a href="contact.html">Kontak</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Jeyografi</p>
+      <h1 class="page-hero__title">Les Vils d'Haïti</h1>
+      <p class="page-hero__desc">Un panorama des vils et communes haïtiennes — leur istwa, leur identité kiltille, leur rôle dans la jeyografi nationale.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Akèy</a>
+        <span>/</span>
+        <span>Vils d'Haïti</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Organisation territoriale</p>
+      <h2>Jeyografi administrative et urbaine</h2>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        Haïti est organisée en dix depatmans géographiques — Artibonite, Centre, Grand'Anse, Nippes, Nord, Nord-Est, Nord-Ouest, Ouest, Sud et Sud-Est — eux-mêmes subdivisés en arrondissements, puis en communes. Le peyi compte environ 145 communes, dont la superficie et la population varient considérablement. Cette architecture administrative reflète en partie les découpages coloniaux français, en partie les reconfigurations de l'État haïtien au XIXe syèk, et en partie des réalités géographiques — massifs mònux, péninsules, plaines irrigables — qui ont toujours conditionné les équilibres régionaux.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:2.5rem;">
+        Le contraste le plus saillant de la jeyografi urbaine haïtienne est la domination écrasante de Port-au-Prince. Avec une aire métropolitaine de près de 3,5 millions d'habitants — sur une population nationale d'environ 11 millions — la capitale concentre une part disproportionnée des enstitisyons publiques, des universités, des hôpitaux de référence, des activités commerciales et des flux migratoires internes. Cette primauté urbaine n'est pas une exception haïtienne ; c'est un phénomène courant dans les peyi à développement inégal. Mais elle atteint en Haïti une intensité particulière, héritée de syèks de centralisation politik et aggravée par les catastrophes successives qui ont dépeuplé les régions et grossi les bidonvils de la capitale.
+
+      </p>
+
+      <aside class="researcher-note" aria-label="Note de recherche">
+        La domination de Port-au-Prince sur la vie nationale haïtienne est à la fois une réalité démographique et une pathologie politik. Les prezidans ont été élus et renversés dans la capitale ; les crises ont rarement eu d'écho national proportionnel à leur impact réel sur les provinces. Les vils secondaires — Cap-Haïtien, Gonaïves, Les Cayes — ont souvent eu des dynamiques politiks propres que les récits centrés sur Port-au-Prince ne restituent pas fidèlement. Écrire une istwa urbaine d'Haïti qui ne soit pas une istwa de la capitale est un chantier historiographique à peine commencé.
+      </aside>
+
+      <!-- ==================== GRANDES VILLES ==================== -->
+      <p class="section-label" style="margin-top:3rem;">Les Grandes Vils</p>
+      <h2>Portraits urbains</h2>
+
+      <!-- Port-au-Prince -->
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Port-au-Prince</h3>
+          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Fondée 1749 · Capitale · Depatman de l'Ouest</p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Port-au-Prince fut fondée en 1749 par les autorités coloniales françaises sur les bords d'une baie naturelle du golfe de la Gonâve — un site choisi pour ses avantages portuaires plutôt que pour sa topographie, qui rendait difficile toute expansion urbaine rationalisée. La vil devint rapidement le centre administratif de la colonie de Saint-Domingue, rivalisant avec Cap-Français pour l'influence politik et commerciale. Après l'endepandans de 1804, elle fut confirmée comme capitale de la nouvelle Repiblik Ayiti.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Au cours du XXe syèk, Port-au-Prince connut une expansion urbaine rapide et largement non planifiée. Cité Soleil — jounen jodi a l'un des quartiers les plus densément peuplés de l'hémisphère occidental — s'est développée à partir des anes 1960. Pétionvil, dans les hauteurs, est devenue la résidence des classes supérieures et de la kominote entènasyonal. Tabarre abrite les infrastructures diplomatiques et onusiennes. Le Champ de Mars constituait le centre civique de la vil, avec le Palais National — senbòl de la souvènte haïtienne — jusqu'au séisme du 12 janvier 2010.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Ce séisme de magnitude 7,0 tua entre 100 000 et 300 000 personnes selon les estimations (les chiffres restent débattus), en détruisant le Palais National, la Cathédrale de Port-au-Prince — dont les ruines sont restées en place comme mémorial involontaire — et des quartiers entiers. Port-au-Prince avant 2010 et Port-au-Prince après 2010 sont deux vils superposées dans la même topographie : l'une dans les archives photographiques et les mémoires personnelles, l'autre en reconstruction permanente.
+          </p>
+          <p style="font-size:14px;font-style:italic;color:var(--blue,#0038A8);margin-bottom:0.5rem;"><a href="port-au-prince.html">→ Page complète sur Port-au-Prince</a></p>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Fondée 1749 par les Français</li>
+              <li>· Capitale depuis l'endepandans (1804)</li>
+              <li>· ~3,5 millions d'hab. (aire métropolitaine)</li>
+              <li>· Depatman de l'Ouest</li>
+              <li>· Séisme dévastateur : 12 janvier 2010</li>
+              <li>· Quartiers : Cité Soleil, Pétionvil, Tabarre</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cap-Haïtien -->
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Cap-Haïtien</h3>
+          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Fondée 1670 · Capitale kiltille du Nord · Depatman du Nord</p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Cap-Haïtien — fondée en 1670 sous le nom de Cap-Français — fut pendant l'ère coloniale la capitale administrative de Saint-Domingue et l'une des vils les plus prospères des Amériques. On la surnommait « la Paris des Antilles » : ses théâtres, ses salons, sa vie intellectuelle et commerciale attiraient des visiteurs de toute l'Europe. C'est dans sa plaine que revolisyon ayisyèn nan éclata en août 1791, et c'est en face de ses côtes que l'armée de Napoléon, ravagée par la fièvre jaune et les combats, commença à se désintégrer.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            C'est à Cap-Haïtien — ou dans ses environs immédiats — que Dessalines proclama l'endepandans Ayiti le 1er janvier 1804. La vil conserve jounen jodi a une architecture coloniale partiellement préservée, notable dans le contexte caribéen où les destructions successives ont effacé la plupart des bâtiments d'époque. Elle est le principal point de départ pour les visiteurs qui souhaitent accéder à la Citadelle Laferrière et au Palais Sans-Souci, inscrits au patrimwàn mondial de l'UNESCO — les deux monuments les plus impressionnants du patrimwàn bâti haïtien.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Avec environ 300 000 habitants, Cap-Haïtien est la deuxième vil du peyi. Elle revendique avec une certaine fyète régionale son statut de capitale kiltille et historique du Nord — une identité qui entre parfois en tension symbolique avec la domination politik de Port-au-Prince.
+          </p>
+          <p style="font-size:14px;font-style:italic;color:var(--blue,#0038A8);margin-bottom:0.5rem;"><a href="cap-haitien.html">→ Page complète sur Cap-Haïtien</a></p>
+        </div>
+        <div>
+          <div style="background:var(--red,#D21034);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:#fff;text-transform:uppercase;margin-bottom:1rem;opacity:0.8;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Fondée 1670 comme Cap-Français</li>
+              <li>· « Paris des Antilles » à l'époque coloniale</li>
+              <li>· Berceau de revolisyon ayisyèn nan (1791)</li>
+              <li>· Proclamation d'endepandans (1er jan. 1804)</li>
+              <li>· Accès à la Citadelle Laferrière (UNESCO)</li>
+              <li>· ~300 000 habitants</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gonaïves -->
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Gonaïves</h3>
+          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Cité de l'Endepandans · Depatman de l'Artibonite</p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Gonaïves porte le titre de « Cité de l'Endepandans » : c'est dans cette vil de l'Artibonite que Jean-Jacques Dessalines proclama officiellement l'endepandans Ayiti le 1er janvier 1804, mettant fin à deux syèks de kolonizasyon fransè et à près de deux syèks d'esklavaj transatlantique sur l'île. Ce moment fondateur — qui fit d'Haïti premye Repiblik nwa nan mond lan et la seule colonie à avoir obtenu son endepandans par la revolisyon des esclaves — est la raison pour laquelle Gonaïves occupe une place symbolique sans équivalent dans la mémoire nationale.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Avec environ 300 000 habitants, Gonaïves est la troisième vil du peyi. Située dans une plaine basse et vulnérable aux inondations, elle a été frappée de manière répétée par des katastwòf natirèl, dont les ouragans de 2004 (Jeanne) et 2008 (Ike, Hanna, Gustav) qui causèrent des milliers de morts et détruisirent des infrastructures que la vil peine encore à reconstruire. Cette vulnérabilité géographique est aggravée par la déforestation de l'arrière-peyi et l'insuffisance chronique des investissements publics dans la région.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Malgré ces difficultés ekonomiks et anviwonmanales, son rôle dans la mémoire nationale demeure intact. Chaque 1er janvier, Gonaïves est le centre des commémorations nationales de l'endepandans — un moment de fyète collective qui transcende les divisions politiks ordinaires.
+          </p>
+          <p style="font-size:14px;font-style:italic;color:var(--blue,#0038A8);margin-bottom:0.5rem;"><a href="gonaives.html">→ Page complète sur Gonaïves</a></p>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Proclamation de l'endepandans, 1er jan. 1804</li>
+              <li>· « Cité de l'Endepandans »</li>
+              <li>· ~300 000 habitants</li>
+              <li>· Depatman de l'Artibonite</li>
+              <li>· Inondations majeures : 2004, 2008</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Les Cayes -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Les Cayes</strong> — Capitale du depatman du Sud, Les Cayes est une vil portuaire fondée au XVIIe syèk dont l'istwa ekonomik est indissociable du café et du cacao — deux kiltis qui ont longtemps fait de la région l'une des plus productives du peyi. La vil et sa région furent le théâtre du soulèvement des Piquets (1843-1848), mouvement peyian et de basse extraction sociale mené par Louis Jean-Jacques Acaau, qui contestait l'ordre politik mulâtre issu de la période post-revolisyonnaire. Le Massacre de Cayes de 1869, lors des troubles politiks qui entourèrent la présidence de Nissage Saget, rappelle que cette vil côtière n'a jamais été à l'écart des convulsions de l'istwa nationale. <a href="les-cayes.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sur Les Cayes</a>
+      </p>
+
+      <!-- Jacmel -->
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Jacmel</h3>
+          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Fondée 1698 · Joyau kiltil du Sud · Depatman du Sud-Est</p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Jacmel est peut-être la vil haïtienne dont le caractère est le plus immédiatement saisissable pour un visiteur extérieur. Ses maisons à balcons de fer forgé, héritées de l'architecture victorienne du XIXe syèk — certaines parmi les plus belles du mond caribéen — lui confèrent une physionomie unique. Fondée en 1698, elle fut l'un des ports les plus actifs de l'île pour l'exportation du café, et sa prospérité coloniale puis post-revolisyonnaire se lit encore dans la taille et l'ornement de ses demeures bourgeoises.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Jacmel est aussi un centre artistique reconnu. Le peintre naïf Préfète Duffaut, dont les toiles représentent une Jacmel imaginaire en colimaçons et spirales, a contribué à inscrire la vil dans la cartographie de atizay ayisyen an. Le Kanaval de Jacmel — organisé en février, quelques semaines avant celui de Port-au-Prince — est considéré par beaucoup comme le plus élaboré et le plus authentiquement artisanal d'Haïti : ses mascarons en papier mâché, ses chars à thèmes historiques et ses processions nocturnes ont une qualité théâtrale que les kanavals plus spectaculaires de la capitale n'égalent pas nécessairement.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Le séisme de 2010 a touché Jacmel de manière significative, détruisant plusieurs des bâtiments historiques du centre-vil. Une partie du patrimwàn architectural a été préservée ou est en cours de restauration, mais la vulnérabilité de ce tissu urbain irremplaçable reste une préoccupation constante pour les acteurs du patrimwàn.
+          </p>
+          <p style="font-size:14px;font-style:italic;color:var(--blue,#0038A8);margin-bottom:0.5rem;"><a href="jacmel.html">→ Page complète sur Jacmel</a></p>
+        </div>
+        <div>
+          <div style="background:var(--red,#D21034);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:#fff;text-transform:uppercase;margin-bottom:1rem;opacity:0.8;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Fondée 1698</li>
+              <li>· Architecture victorienne, balcons de fer forgé</li>
+              <li>· Port caféier historique</li>
+              <li>· Kanaval : le plus artisanal d'Haïti</li>
+              <li>· Centre artistique (Préfète Duffaut)</li>
+              <li>· ~200 000 habitants</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jérémie -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Jérémie — La Cité des Powèts</strong> — Capitale du depatman de la Grand'Anse, Jérémie porte le surnom de « Cité des Powèts » avec une légitimité que peu de vils caribéennes peuvent revendiquer. C'est dans cette vil — ou dans ses environs — que naquit le père d'Alexandre Dumas, Thomas-Alexandre Davy de la Pailleterie, dit Dumas père, dont le fils Alexandre Dumas allait devenir l'un des romanciers les plus lus du XIXe syèk français. Cette ascendance haïtienne de Dumas est encore mal connue du grand public francophone. Jérémie est accessible principalement par avion ou par mer, ce qui l'a longtemps isolée ekonomikment tout en préservant son caractère distinct — une vil de lettres et d'intériorité, à l'écart des flux de la mondialisation. <a href="jeremie.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sur Jérémie</a>
+      </p>
+
+      <!-- Hinche -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Hinche</strong> — Capitale du depatman du Centre, Hinche est le cœur du plateau central haïtien, une région agricole et d'élevage qui fut l'un des territoires les plus affectés par l'okipasyon ameriken de 1915-1934. Les autorités d'okipasyon ameriken démantelèrent les structures d'exploitation peyianne tradisyonnelles pour les remplacer par des domaines d'élevage extensif au bénéfice de la HASCO et d'autres compagnies américaines — expulsant des peyians haïtiens de leurs tès pour nourrir des marchés nord-américains. Cette spoliation est l'une des sources documentées de la rezistans peyianne qui culmina dans la guérilla cacos, notamment sous le commandement de Charlemagne Péralte. <a href="hinche.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sur Hinche</a>
+      </p>
+
+      <!-- Saint-Marc -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Saint-Marc</strong> — Vil portuaire de l'Artibonite, Saint-Marc est l'un des centres commerciaux provinciaux les plus actifs d'Haïti. Son port joue un rôle significatif dans la distribution des marchandises vers les vils de l'intérieur. Historiquement, elle fut l'une des vils les plus prospères de la province au XIXe syèk, et le théâtre de l'affaire Bagabosse de 1908 — un épisode de violence politik révélateur des tensions entre factions régionales qui structuraient la vie politik haïtienne de l'époque. <a href="saint-marc.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sur Saint-Marc</a>
+      </p>
+
+      <!-- Miragoâne -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Miragoâne</strong> — Capitale du depatman des Nippes, Miragoâne est un port de la péninsule méridionale dont l'istwa ekonomik est liée à l'exportation du café et du bois. Historiquement importante dans les circuits commerciaux de la côte sud, elle est jounen jodi a l'une des vils moyennes haïtiennes confrontées aux défis communs de l'enclavement relatif, du manque d'investissements infrastructurels et de la fragmentation administrative. <a href="miragoane.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sur Miragoâne</a>
+      </p>
+
+      <!-- Fort-Libète -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:2.5rem;">
+        <strong>Fort-Libète</strong> — Fondée en 1731 sous le nom de Fort-Dauphin, cette vil du Nord-Est est l'une des cités haïtiennes qui conserve le mieux les traces de son architecture coloniale fortifiée. Elle fut le théâtre de combats significatifs pendant Revolisyon ayisyèn nan, et le lieu de plusieurs épisodes de brutalité documentée — dont le massacre organisé par Dessalines en 1805, événement complexe et controversé que l'historiographie haïtienne n'a pas encore pleinement intégré. Sa baie naturelle est l'une des mieux préservées du peyi. <a href="fort-liberte.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sur Fort-Libète</a>
+      </p>
+
+      <!-- ==================== VILLES ET MÉMOIRE ==================== -->
+      <p class="section-label" style="margin-top:2rem;">Jeyografi de la mémoire</p>
+      <h2>Vils et Mémoire nationale</h2>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        Les vils haïtiennes ne sont pas seulement des entités administratives ou des centres ekonomiks : elles sont des lieux de mémoire au sens que Pierre Nora a donné à cette expression — des espaces où la nation se souvient d'elle-même, négocie son passé, fabrique ses mythes fondateurs. Chaque grande vil haïtienne encode un moment ou un registre particulier de l'idantite nasyonal.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Cap-Haïtien</strong> est la mémoire de la kolonizasyon et de la revolisyon — la vil qui a vu naître et s'effondrer l'ordre colonial français, et dans laquelle l'endepandans a été proclamée. Elle est à la fois le senbòl de ce qu'Haïti a détruit pour naître et de ce que cette naissance a coûté. La Citadelle Laferrière, visible depuis ses environs, est un monument à la fois à la libète et à la paranoïa du pouvoir : Henri Christophe la fit construire pour défendre une endepandans déjà acquise contre une reconquête qui ne vint jamais.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Gonaïves</strong> est la mémoire de la rupture fondatrice — le 1er janvier 1804, le moment où un pèp anciennement réduit en esklavaj déclara sa libète au mond. Chaque cérémonie nationale haïtienne revient à Gonaïves comme à un point d'origine irréductible. Dans les périodes de crise politik, les lidès qui se rendent à Gonaïves font un geste symbolique de retour aux sources — légitime ou instrumentalisé selon les circonstances.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Jacmel</strong> est la mémoire de la kilti et de l'art — la vil qui a su préserver une continuité esthétique dans un peyi traversé par des discontinuités politiks violentes. Son kanaval, son architecture, ses peintres naïfs représentent une autre façon d'être haïtien : plus contemplatif, plus artisanal, moins épique. C'est une contre-mémoire dans un peyi dont les mémoires officielles sont presque toujours militaires.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Jérémie</strong> est la mémoire de la littérature et de l'intériorité — la vil qui a produit des ekrivens et des powèts, qui a maintenu une tradisyon intellectuelle indépendante malgré son isolement géographique. Dans un peyi où l'écriture a souvent été un acte politik, la vocation littéraire de Jérémie est aussi une forme de rezistans — la rezistans de ceux qui choisissent les mots plutôt que les armes pour dire ce qu'est Haïti.
+      </p>
+
+      <aside class="researcher-note" aria-label="Note de recherche">
+        Écrire l'istwa urbaine d'Haïti se heurte à un obstacle documentaire considérable : la destruction répétée des archives municipales. Le grand incendie du Cap-Français en 1793, lors de la Revolisyon, détruisit une part irremplaçable des registres coloniaux du Nord. Le séisme du 12 janvier 2010 détruisit ou dispersa des décennies d'archives de Port-au-Prince, de Jacmel et d'autres vils du Sud et de l'Ouest. Entre les deux, les troubles politiks répétés — incendies, pillages, destructions délibérées lors des changements de régime — ont fragmenté le tissu documentaire de pratiquement toutes les vils haïtiennes. Écrire l'istwa locale d'Haïti oblige donc à une archéologie de sources dispersées : presse ancienne conservée à l'étranger (Bibliothèque nationale de France, Library of Congress), mémoires personnelles, archives notariales partiellement conservées, enquêtes orales. C'est un travail nécessaire et encore largement à faire.
+      </aside>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            Repiblik Ayiti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire istwa d'Haïti, de sa kilti
+            vibrante et de son pèp remarquable. Dédié à partager l'istwa de
+            premye Repiblik nwa nan mond lan.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Eksplore</h4>
+          <ul>
+            <li><a href="index.html">Akèy</a></li>
+            <li><a href="about.html">Sou Ayiti</a></li>
+            <li><a href="history.html">Istwa</a></li>
+            <li><a href="tourism.html">Touris</a></li>
+            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+            <li><a href="archives.html">Achiv</a></li>
+            <li><a href="bibliography.html">Bibliyografi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kilti &amp; Sosyete</h4>
+          <ul>
+            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastwonomi</a></li>
+            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Istwa &amp; Enstitisyon</h4>
+          <ul>
+            <li><a href="timeline.html">Kwonolouji</a></li>
+            <li><a href="heroes.html">Ewò Nasyonal</a></li>
+            <li><a href="lidès.html">Lidè</a></li>
+            <li><a href="konstitisyon.html">Konstitisyon</a></li>
+            <li><a href="enstitisyons.html">Enstitisyon</a></li>
+            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Pran Kontak</h4>
+          <ul>
+            <li><a href="contact.html">Kontakte Nou</a></li>
+            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+            <li><a href="license.html">Mentions L&eacute;gales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est n&eacute; d&apos;une frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti sont &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les sources ha&iuml;tiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pendant.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/premium.js"></script>
+</body>
+</html>
