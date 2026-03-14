@@ -210,6 +210,8 @@
     { title: 'Reconstruction Durable', url: 'reconstruction-durable.html', section: 'Enjeux', keywords: 'reconstruction durable haïti développement institutions investissements responsables avenir solutions' },
     // Bibliographie
     { title: 'Bibliographie & Sources', url: 'bibliography.html', section: 'Portail', keywords: 'bibliographie sources références historiens haïtiens madiou ardouin trouillot price-mars fouchard casimir hurbon léger castor académique archives' },
+    // Légal
+    { title: 'Legal & License', url: 'license.html', section: 'Portail', keywords: 'license licence mit copyright all rights reserved legal mentions légales intellectual property code source kirlinger jeune' },
   ];
 
   function initSearch() {
