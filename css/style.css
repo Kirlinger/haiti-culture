@@ -2552,6 +2552,15 @@ ul {
   .hero__buttons {
     flex-direction: column;
     align-items: center;
+    width: 100%;
+  }
+
+  .hero__buttons .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
   }
 
   .btn {
@@ -3066,6 +3075,17 @@ pre, code {
   .hero__title { font-size: 26px; line-height: 1.25; }
   .hero__desc  { font-size: 14px; }
   .hero { padding: 64px 16px 52px; }
+
+  .hero__content { width: 100%; }
+
+  .hero__buttons {
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .hero__buttons .btn {
+    max-width: 260px;
+  }
 
   .section { padding: 40px 0; }
   .page-hero { padding: 44px 0 36px; }
