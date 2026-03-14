@@ -3218,11 +3218,121 @@ pre, code {
   .timeline-item__title { font-size: 17px; }
 }
 
-/* ── Leader/person table mobile ──────────────────────── */
+/* ── Leader/person table mobile — stacked card layout ── */
 @media (max-width: 600px) {
-  .leader-table { font-size: 13px; }
-  .leader-table th,
-  .leader-table td { padding: 8px 6px; }
+  .leader-table-wrapper {
+    overflow-x: visible;
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .leader-table,
+  .leader-table tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .leader-table thead {
+    display: none;
+  }
+
+  .leader-table tbody tr {
+    display: block;
+    margin-bottom: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .leader-table tbody tr:last-child {
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .leader-table tbody td {
+    display: block;
+    padding: 4px 0;
+    border: none;
+    font-size: 13px;
+    line-height: 1.5;
+    min-width: 0;
+  }
+
+  .leader-table td.lt-year {
+    white-space: normal;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--blue);
+  }
+
+  .leader-table td.lt-year::before {
+    content: "Période : ";
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .leader-table td.lt-name {
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 0;
+  }
+
+  .leader-table td.lt-name::before {
+    content: "Nom : ";
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .leader-table td.lt-status {
+    min-width: 0;
+  }
+
+  .leader-table td.lt-status::before {
+    content: "Statut : ";
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .leader-table td.lt-desc {
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-top: 4px;
+    padding-top: 6px;
+    border-top: 1px dashed var(--border);
+  }
+
+  .leader-table td.lt-desc::before {
+    content: "Faits marquants : ";
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+
+  /* Allow badge text to wrap on small screens */
+  .leader-badge {
+    white-space: normal;
+    display: inline-block;
+    line-height: 1.4;
+    padding: 4px 10px;
+  }
 }
 
 /* ── Navigation dropdown arrow spacing ───────────────── */
