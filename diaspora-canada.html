@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>La Diaspora Haïtienne au Canada | RépubliqueHaïti.org</title>
+  <meta name="description" content="Montréal abrite la plus grande communauté haïtienne francophone hors d'Haïti — une diaspora intellectuelle et culturelle qui a profondément marqué la vie littéraire et sociale du Québec." />
+  <meta name="author" content="RépubliqueHaïti.org" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+              <a href="institutions.html">Institutions</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Société ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture-vivante.html">Culture Vivante</a>
+              <a href="creativite-populaire.html">Créativité Populaire</a>
+              <a href="diaspora-engagee.html">Diaspora Engagée</a>
+              <a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a>
+              <a href="memoire-universelle.html">Mémoire Universelle</a>
+              <a href="patrimoine-national.html">Patrimoine National</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Enjeux ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Fragilité Économique</a>
+              <a href="inegalites-sociales.html">Inégalités Sociales</a>
+              <a href="instabilite-politique.html">Instabilité Politique</a>
+              <a href="pressions-securitaires.html">Pressions Sécuritaires</a>
+              <a href="services-essentiels.html">Services Essentiels</a>
+              <a href="capacite-adaptation.html">Capacité d'Adaptation</a>
+              <a href="reconstruction-durable.html">Reconstruction Durable</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+              <a href="bibliography.html">Bibliographie</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Diaspora Haïtienne</p>
+      <h1 class="page-hero__title">La Diaspora Haïtienne au Canada</h1>
+      <p class="page-hero__desc">Montréal abrite la plus grande communauté haïtienne francophone hors d'Haïti — une diaspora intellectuelle et culturelle qui a profondément marqué la vie littéraire et sociale du Québec.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <a href="diaspora-engagee.html">Diaspora Engagée</a>
+        <span>/</span>
+        <span>Canada</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Communauté &amp; Littérature</p>
+      <h2>La Diaspora Haïtienne au Canada</h2>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Historique de la migration</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        La première vague d'immigration haïtienne au Canada est une vague intellectuelle. Dans les années 1960, la répression duvalieriste décime les professions libérales haïtiennes : médecins, enseignants, avocats, fonctionnaires, ingénieurs sont persécutés, exilés ou assassinés. Simultanément, le Québec, en pleine Révolution tranquille, a un besoin urgent de professionnels francophones pour son système de santé en expansion et ses nouvelles universités. Une convergence historique s'opère : le Québec recrute activement en Haïti, et les Haïtiens francophones qualifiés y trouvent un refuge et une opportunité. On estime qu'environ <strong>30 000 Haïtiens</strong> arrivent au Québec entre 1960 et 1980, formant le noyau d'une communauté qui portera ensuite des générations de Canadiens d'origine haïtienne.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Le Montréal haïtien</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        La communauté haïtienne de Montréal s'est concentrée dans plusieurs quartiers du nord et de l'est de l'île : <strong>Montréal-Nord</strong>, <strong>Saint-Michel</strong> et <strong>Rivière-des-Prairies</strong> sont les cœurs historiques de cette présence. Ces quartiers, d'abord ouvriers et à majorité blanche, ont été progressivement transformés par l'arrivée de familles haïtiennes, puis antillaises et africaines, créant une géographie sociale distincte.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Les institutions communautaires haïtiennes à Montréal ont joué un rôle crucial. La <strong>Maison d'Haïti</strong>, fondée en 1972 et toujours active, est l'une des organisations les plus durables de la diaspora haïtienne dans le monde : centre d'accueil, d'alphabétisation, de défense des droits, d'activités culturelles. Le <strong>Regroupement des organismes canado-haïtiens</strong> fédère les associations de la communauté. Les journaux communautaires <em>Haïti-Observateur</em> et <em>Le Nouvelliste du Canada</em> ont maintenu pendant des décennies un lien avec l'actualité haïtienne et diasporique.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Contribution culturelle et intellectuelle</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        La diaspora haïtienne de Montréal a engendré ce que la critique littéraire québécoise reconnaît comme une catégorie propre : la littérature <strong>haïtiano-québécoise</strong>. À sa tête, <strong>Dany Laferrière</strong> — membre de l'Académie française depuis 2013, lauréat du Prix Médicis pour <em>L'Énigme du retour</em> (2009) — est l'écrivain haïtien le plus lu dans le monde francophone. Arrivé à Montréal en 1976 après la mort suspecte d'un ami journaliste à Port-au-Prince, il y vécut vingt ans avant de s'installer à Miami puis de revenir régulièrement en Haïti. Son œuvre navigue entre Haïti et le Québec avec une légèreté qui cache une profondeur considérable.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        <strong>Émile Ollivier</strong> (1940–2002) est une autre voix essentielle : professeur à l'Université de Montréal, auteur de <em>Mère-Solitude</em> (1983) et <em>Passages</em> (1991), il a théorisé la condition de l'exilé avec une précision qui le situe parmi les grands écrivains de la diaspora africaine francophone. <strong>Stanley Péan</strong>, romancier de polars, et <strong>Marie-Célie Agnant</strong>, dont l'œuvre explore la condition des femmes noires en exil, complètent une constellation d'auteurs qui ont transformé les lettres québécoises.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Population</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Selon le recensement canadien de 2021, le Canada compte environ <strong>175 000 personnes</strong> d'origine haïtienne. Le Québec en regroupe la grande majorité avec quelque <strong>140 000</strong> personnes, dont la plupart à Montréal. L'Ontario — principalement Toronto — en accueille environ <strong>25 000</strong>. La troisième génération de Haïtiano-Canadiens est aujourd'hui active dans tous les secteurs : médecine, arts, politique, enseignement, droit.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Contribution à la société québécoise</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Les médecins haïtiens arrivés dans les années 1960–1970 ont littéralement construit une partie du système de santé québécois, s'installant dans des régions éloignées où peu de médecins québécois voulaient exercer. Dans l'éducation, des centaines d'enseignants haïtiens ont traversé le système scolaire québécois pendant des décennies. Sur la piste d'athlétisme, <strong>Bruny Surin</strong> — né à Cap-Haïtien, établi au Québec — a représenté le Canada aux Jeux olympiques et remporté l'or au relais 4×100 m à Sydney en 2000. En politique fédérale, <strong>Emmanuel Dubourg</strong>, né à Port-au-Prince, siège comme député libéral à la Chambre des communes depuis 2014.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Tensions identitaires</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Être Haïtien au Québec, c'est naviguer dans un espace identitaire complexe : francophone mais pas Québécois de souche, Noir dans une société majoritairement blanche, caribéen dans un pays nordique. Le profilage racial par les forces de l'ordre à Montréal-Nord a cristallisé ces tensions. En août 2008, l'affaire <strong>Fredy Villanueva</strong> — un jeune de 18 ans tué par balle par un policier dans Montréal-Nord — déclenche des émeutes et une enquête publique. Elle révèle les fractures profondes entre une communauté noire de plus en plus présente et une police qui ne la comprend pas. La relation entre identité haïtienne et nationalisme québécois est également complexe : la communauté a soutenu dans l'ensemble le projet souverainiste, partageant la langue et parfois les revendications culturelles, mais elle reste trop souvent absente des récits de la nation québécoise.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            République d'Haïti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+            <li><a href="encyclopedia.html">Encyclopédie</a></li>
+            <li><a href="archives.html">Archives</a></li>
+            <li><a href="bibliography.html">Bibliographie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Culture &amp; Société</h4>
+          <ul>
+            <li><a href="culture.html">Culture &amp; Arts</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastronomie</a></li>
+            <li><a href="culture-vivante.html">Culture Vivante</a></li>
+            <li><a href="creativite-populaire.html">Créativité Populaire</a></li>
+            <li><a href="diaspora-engagee.html">Diaspora Engagée</a></li>
+            <li><a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire &amp; Institutions</h4>
+          <ul>
+            <li><a href="timeline.html">Chronologie</a></li>
+            <li><a href="heroes.html">Héros Nationaux</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="constitution.html">Constitution</a></li>
+            <li><a href="institutions.html">Institutions</a></li>
+            <li><a href="patrimoine-national.html">Patrimoine National</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+            <li><a href="license.html">Mentions L&eacute;gales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est n&eacute; d&apos;une frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti sont &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les sources ha&iuml;tiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pendant.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
+</body>
+</html>

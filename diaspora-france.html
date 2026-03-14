@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>La Diaspora Haïtienne en France | RépubliqueHaïti.org</title>
+  <meta name="description" content="La France accueille une communauté haïtienne concentrée à Paris — une diaspora aux racines intellectuelles profondes, façonnée par deux siècles d'une relation ambivalente entre Haïti et son ancienne puissance coloniale." />
+  <meta name="author" content="RépubliqueHaïti.org" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+              <a href="institutions.html">Institutions</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Société ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture-vivante.html">Culture Vivante</a>
+              <a href="creativite-populaire.html">Créativité Populaire</a>
+              <a href="diaspora-engagee.html">Diaspora Engagée</a>
+              <a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a>
+              <a href="memoire-universelle.html">Mémoire Universelle</a>
+              <a href="patrimoine-national.html">Patrimoine National</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Enjeux ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Fragilité Économique</a>
+              <a href="inegalites-sociales.html">Inégalités Sociales</a>
+              <a href="instabilite-politique.html">Instabilité Politique</a>
+              <a href="pressions-securitaires.html">Pressions Sécuritaires</a>
+              <a href="services-essentiels.html">Services Essentiels</a>
+              <a href="capacite-adaptation.html">Capacité d'Adaptation</a>
+              <a href="reconstruction-durable.html">Reconstruction Durable</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+              <a href="bibliography.html">Bibliographie</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Diaspora Haïtienne</p>
+      <h1 class="page-hero__title">La Diaspora Haïtienne en France</h1>
+      <p class="page-hero__desc">La France accueille une communauté haïtienne concentrée à Paris — une diaspora aux racines intellectuelles profondes, façonnée par deux siècles d'une relation ambivalente entre Haïti et son ancienne puissance coloniale.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <a href="diaspora-engagee.html">Diaspora Engagée</a>
+        <span>/</span>
+        <span>France</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Histoire &amp; Mémoire</p>
+      <h2>La Diaspora Haïtienne en France</h2>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Histoire de la présence haïtienne en France</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        La présence haïtienne en France précède les migrations modernes. Dès le XIXe siècle, des étudiants haïtiens issus des familles de l'élite viennent se former dans les grandes écoles et les facultés parisiennes. <strong>Jean Price-Mars</strong> et <strong>Anténor Firmin</strong> y séjournent et s'y forment intellectuellement. Paris est alors le centre du monde francophone, et les élites haïtiennes s'y inscrivent naturellement. Dans l'entre-deux-guerres, les échanges intellectuels s'intensifient : la <em>Revue Indigène</em> haïtienne (1927–1928) dialogue avec les avant-gardes parisiennes. Après la Seconde Guerre mondiale, les migrations de travail commencent à s'ajouter aux migrations intellectuelles.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        C'est à Paris, dans les années 1930 et 1940, que naît la <strong>Négritude</strong> — le mouvement intellectuel fondé par Aimé Césaire, Léopold Sédar Senghor et Léon-Gontran Damas, qui puise abondamment dans l'exemple haïtien pour construire une philosophie de la dignité noire. Voir aussi la page consacrée à <a href="negritude.html">Haïti et la Négritude</a>.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Vagues migratoires</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        La <strong>première vague duvalieriste (1957–1971)</strong> envoie en France une partie de la classe professionnelle haïtienne en fuite — ceux qui choisissent Paris plutôt que Montréal ou New York. Les années <strong>1970–1980</strong> voient arriver une migration plus populaire, de travailleurs cherchant des opportunités économiques. Après le coup d'État de 2004 et surtout le <strong>séisme de 2010</strong>, une nouvelle vague s'ajoute. La population haïtienne en France est aujourd'hui estimée à <strong>80 000–100 000 personnes</strong>, dont la grande majorité en Île-de-France, avec des concentrations dans les banlieues nord et est de Paris.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Vie culturelle</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Paris a été pendant des décennies le hub de la vie intellectuelle haïtienne en exil. Les revues <em>Conjonction</em> (organe de l'Institut français d'Haïti) et surtout <em>Présence Africaine</em> — fondée à Paris en 1947 par Alioune Diop — sont des espaces où les écrivains haïtiens publient et débattent aux côtés d'intellectuels africains et antillais. <strong>René Depestre</strong>, après avoir vécu à Cuba, s'installe en France et y publie une partie de son œuvre la plus aboutie, dont le roman <em>Hadriana dans tous mes rêves</em> (Prix Renaudot 1988). <strong>Jan J. Dominique</strong>, journaliste et romancière, représente une voix féminine dans cet espace. <strong>Yanick Lahens</strong>, Prix Femina 2014 pour <em>Bain de lune</em>, a fait le choix de rester en Haïti tout en étant publiée et reconnue en France.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Sur le plan culturel populaire, les restaurants haïtiens du quartier de Barbès et du 18e arrondissement, les concerts de <em>compas</em> dans la région parisienne, et les associations culturelles maintiennent une vie communautaire vibrante loin de l'attention médiatique.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">La relation ambivalente France-Haïti</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Aucune discussion sur la diaspora haïtienne en France ne peut faire l'économie de l'histoire. En 1825, le roi Charles X reconnaît l'indépendance d'Haïti en échange d'une indemnité de <strong>150 millions de francs-or</strong> — présentée comme compensation pour les colons dépossédés — imposée sous la menace d'une flotte de guerre. Haïti accepte, et emprunte pour payer. Cette dette, remboursée jusqu'en <strong>1947</strong>, a drainé les finances publiques haïtiennes pendant plus d'un siècle, hypothéquant le développement du pays au profit de l'ancienne métropole.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        En 2010, le président Hollande, lors d'une visite en Haïti, reconnaît cette dette morale sans pour autant proposer de restitution financière. En 2022, une investigation du <em>New York Times</em> remet le sujet sur la place publique internationale, relançant en France un débat longtemps étouffé. Pour de nombreux membres de la diaspora haïtienne en France, cette histoire est présente au quotidien — un poids difficilement articulable dans un pays qui n'a jamais véritablement assumé son rôle dans l'appauvrissement d'Haïti.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Communauté et représentation</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        L'Association des Haïtiens de France et plusieurs autres organisations diasporiques assurent une représentation communautaire, mais la visibilité politique des Haïtiens en France reste limitée. Quelques personnalités d'origine haïtienne évoluent dans les sphères politique, académique et médiatique françaises, mais souvent sans que leurs origines soient mises en avant dans un pays qui peine à reconnaître les identités hyphenées. Être Haïtien en France, c'est être francophone parmi des francophones — mais porteur d'une histoire que la France officielle préfère ne pas toujours regarder en face.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            République d'Haïti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+            <li><a href="encyclopedia.html">Encyclopédie</a></li>
+            <li><a href="archives.html">Archives</a></li>
+            <li><a href="bibliography.html">Bibliographie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Culture &amp; Société</h4>
+          <ul>
+            <li><a href="culture.html">Culture &amp; Arts</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastronomie</a></li>
+            <li><a href="culture-vivante.html">Culture Vivante</a></li>
+            <li><a href="creativite-populaire.html">Créativité Populaire</a></li>
+            <li><a href="diaspora-engagee.html">Diaspora Engagée</a></li>
+            <li><a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire &amp; Institutions</h4>
+          <ul>
+            <li><a href="timeline.html">Chronologie</a></li>
+            <li><a href="heroes.html">Héros Nationaux</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="constitution.html">Constitution</a></li>
+            <li><a href="institutions.html">Institutions</a></li>
+            <li><a href="patrimoine-national.html">Patrimoine National</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+            <li><a href="license.html">Mentions L&eacute;gales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est n&eacute; d&apos;une frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti sont &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les sources ha&iuml;tiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pendant.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
+</body>
+</html>
