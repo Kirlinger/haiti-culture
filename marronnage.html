@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Le Marronnage en Haïti — Résistance, Liberté, Révolution | République d'Haïti</title>
+  <meta name="description" content="Le marronnage à Saint-Domingue : les communautés d'esclaves fugitifs dans les montagnes haïtiennes, leurs leaders, leur rôle décisif dans la préparation de la Révolution de 1791." />
+  <meta name="author" content="RépubliqueHaïti.org" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+              <a href="institutions.html">Institutions</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Société ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture-vivante.html">Culture Vivante</a>
+              <a href="creativite-populaire.html">Créativité Populaire</a>
+              <a href="diaspora-engagee.html">Diaspora Engagée</a>
+              <a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a>
+              <a href="memoire-universelle.html">Mémoire Universelle</a>
+              <a href="patrimoine-national.html">Patrimoine National</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Enjeux ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Fragilité Économique</a>
+              <a href="inegalites-sociales.html">Inégalités Sociales</a>
+              <a href="instabilite-politique.html">Instabilité Politique</a>
+              <a href="pressions-securitaires.html">Pressions Sécuritaires</a>
+              <a href="services-essentiels.html">Services Essentiels</a>
+              <a href="capacite-adaptation.html">Capacité d'Adaptation</a>
+              <a href="reconstruction-durable.html">Reconstruction Durable</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+              <a href="bibliography.html">Bibliographie</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : histoire, culture, villes…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Résistance et Liberté</p>
+      <h1 class="page-hero__title">Le Marronnage en Haïti</h1>
+      <p class="page-hero__desc">Bien avant que les tambours du Bois Caïman ne retentissent en août 1791, des hommes et des femmes avaient choisi la montagne plutôt que la plantation. Le marronnage n'était pas une fuite — c'était la première forme organisée de résistance à l'esclavage dans la future Haïti.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <a href="history.html">Histoire</a>
+        <span>/</span>
+        <span>Le Marronnage</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Résistance, communautés et prémices de la Révolution</p>
+      <h2>Qu'est-ce que le marronnage ?</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Le mot vient de l'espagnol <em>cimarrón</em> — le bétail qui s'échappe dans les hauteurs. À Saint-Domingue, on l'appliquait aux esclaves qui fuyaient la plantation. Mais réduire le marronnage à une simple fuite serait trahir son sens profond. C'était un système, une culture, une philosophie de résistance qui s'est développée sur plusieurs décennies avant même que l'insurrection générale ne soit possible. L'historien haïtien Jean Fouchard, dans son ouvrage fondamental <em>Les Marrons de la Liberté</em> (1972), a été le premier à restituer à ce phénomène toute sa dimension politique et humaine. Pour Fouchard, les marrons n'étaient pas des individus en rupture isolée : ils formaient l'avant-garde d'un mouvement de libération long et patient.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Les historiens distinguent deux formes de marronnage. Le <strong>petit marronnage</strong> désigne les fugues temporaires — quelques jours, quelques semaines — souvent pour régler un grief, visiter des proches sur une plantation voisine ou simplement souffler. Ces absences étaient fréquentes, presque routinières. Elles perturbaient la production sans remettre en cause le système. Le <strong>grand marronnage</strong>, en revanche, c'était la décision irrévocable de ne plus revenir. On montait dans les mornes, on rejoignait une communauté déjà établie, on changeait de vie. Carolyn Fick, dans <em>The Making of Haiti</em> (1990), insiste sur le fait que le grand marronnage n'était pas une décision impulsive : il fallait des contacts préalables, une connaissance du terrain, des réseaux de solidarité — autrement dit, une organisation clandestine qui anticipait ce que serait la révolution.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Jean Casimir, sociologue haïtien dont le travail récent (<em>The Haitians: A Decolonial History</em>, 2020) prolonge et nuance les analyses de Fouchard, insiste sur un point souvent négligé : le marronnage n'était pas simplement une réaction au système esclavagiste, c'était aussi la construction active d'un monde alternatif. Dans les mornes, les marrons ne survivaient pas — ils vivaient. Ils cultivaient, créaient des familles, transmettaient des langues et des religions africaines, élaboraient des structures politiques. C'est cette capacité à construire, et pas seulement à détruire, qui distingue le marronnage haïtien d'une simple rébellion.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            Le terme <em>marron</em> a survécu dans le créole haïtien contemporain avec plusieurs sens. On dit <em>fè maròn</em> pour désigner quelqu'un qui se dérobe à une obligation, qui disparaît sans prévenir — mais aussi, dans un sens plus noble, pour évoquer quelqu'un qui refuse de se soumettre. La langue a gardé la mémoire de ce que l'histoire officielle a parfois tenté d'effacer.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères chronologiques</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>· Dès 1520 : premiers marrons à Hispaniola</li>
+              <li>· XVIIe s. : communautés dans le Massif du Nord</li>
+              <li>· 1740–1758 : règne de François Makandal</li>
+              <li>· 1758 : exécution de Makandal à Cap-Français</li>
+              <li>· 1772 : traité marron de Bahoruco (côté espagnol)</li>
+              <li>· 1791 : cérémonie du Bois Caïman, insurrection</li>
+              <li>· 1804 : indépendance d'Haïti</li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Sources essentielles</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Fouchard, <em>Les Marrons de la Liberté</em> (1972)</li>
+              <li>· Fick, <em>The Making of Haiti</em> (1990)</li>
+              <li>· James, <em>The Black Jacobins</em> (1938)</li>
+              <li>· Casimir, <em>The Haitians</em> (2020)</li>
+              <li>· Manigat, <em>Makandal</em> (1977)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="font-size:clamp(20px,2.5vw,30px);font-weight:900;color:var(--blue,#0038A8);margin-bottom:1rem;margin-top:2.5rem;">Les chiffres du marronnage</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            On dispose d'une source d'une valeur exceptionnelle pour mesurer l'ampleur du marronnage à Saint-Domingue : <em>Les Affiches Américaines</em>, le journal officiel de la colonie publié à Cap-Français à partir de 1766. Cette gazette publiait régulièrement des avis de fuite d'esclaves — descriptions physiques détaillées, noms, origines africaines supposées, professions, signes distinctifs, récompenses offertes. Jean Fouchard a dépouillé systématiquement ces archives et recensé des milliers d'annonces sur les décennies précédant la révolution. Ce travail de fourmi lui a permis de reconstituer, colonne par colonne, la géographie de la résistance.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Les chiffres sont éloquents. Entre 1766 et 1790, les <em>Affiches Américaines</em> publient en moyenne plusieurs centaines d'avis de fuite par an. Certaines années, on dépasse les mille annonces. Rapporté à une population servile d'environ 450 000 personnes à la veille de la révolution, cela représente un taux de marronnage considérable — et il faut se rappeler que seule une fraction des fugues donnait lieu à une annonce payante. Les maîtres les plus pauvres ne publiaient pas d'avis ; beaucoup de fugues courtes n'étaient jamais déclarées. Le chiffre réel était vraisemblablement bien supérieur.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Ces annonces nous apprennent aussi autre chose : les marrons n'étaient pas un profil homogène. On y trouve des hommes et des femmes, des jeunes et des vieux, des artisans qualifiés — charpentiers, tonneliers, forgerons — autant que des travailleurs des champs. Certains avaient été amenés directement d'Afrique (les annonces mentionnent des « nouveaux » récemment débarqués) ; d'autres étaient nés à Saint-Domingue et connaissaient parfaitement les routes, les villes, les langages de la colonie. Plusieurs annonces signalent des fugitifs parlant français, créole, et parfois l'espagnol de la partie est de l'île — ce qui témoigne d'une mobilité et d'une intelligence du territoire que les planteurs s'obstinaient à ne pas vouloir reconnaître.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            Les <em>Affiches Américaines</em> sont consultables aux Archives nationales d'outre-mer à Aix-en-Provence. Elles constituent l'une des sources les plus riches sur la vie quotidienne à Saint-Domingue. Mais il faut les lire à rebours : rédigées du point de vue des maîtres, elles documentent malgré elles la résistance des esclaves. Chaque annonce est, en négatif, le portrait d'une personne qui a dit non.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Chiffres clés</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>· ~450 000 esclaves en 1789</li>
+              <li>· Des milliers d'avis de fuite dans les <em>Affiches</em></li>
+              <li>· Fuites déclarées : fraction du total réel</li>
+              <li>· Marrons permanents estimés : 10 000 à 30 000</li>
+              <li>· Toutes origines africaines représentées</li>
+              <li>· Hommes et femmes, artisans et cultivateurs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="font-size:clamp(20px,2.5vw,30px);font-weight:900;color:var(--blue,#0038A8);margin-bottom:1rem;margin-top:2.5rem;">Les communautés de marrons</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            La géographie d'Haïti a joué en faveur des marrons d'une façon que les planteurs ne pouvaient pas corriger. Le pays est l'un des plus montagneux des Caraïbes. Le Massif du Nord, avec ses crêtes culminant à plus de 1 000 mètres, forme une barrière naturelle entre la Plaine du Nord — cœur de la production sucrière — et les zones de liberté dans les hauteurs. Le Massif de la Selle au sud, la Chaîne des Matheux au centre : autant de bastions où les compagnies de maréchaussée, cette milice coloniale chargée de traquer les fugitifs, hésitaient à s'aventurer. Les sentiers n'existaient que dans la tête des gens qui les avaient tracés.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Dans ces refuges, les marrons construisaient des économies de subsistance remarquablement efficaces. Ils cultivaient des jardins vivriers — manioc, ignames, bananes plantain, patates douces — sur des terrasses défrichées à la main. Ils élevaient de petits animaux. Ils commercialisaient discrètement avec les paysans libres des zones intermédiaires, échangeant des produits forestiers contre des outils en métal ou du sel. Ce n'était pas la misère : c'était une économie autonome, souveraine à sa manière, qui subvenait aux besoins de communautés pouvant compter plusieurs centaines de personnes.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            L'organisation sociale de ces communautés puisait dans les traditions africaines tout en s'adaptant au contexte caribéen. Le <strong>lakou</strong> — cette organisation spatiale et sociale où plusieurs familles partagent une cour commune sous l'autorité d'un patriarche ou d'un ancien — trouve probablement ses racines dans ces établissements marrons. Le lakou n'est pas simplement une architecture : c'est une philosophie du vivre-ensemble, une façon de partager les ressources, de prendre des décisions collectives, de transmettre les savoirs. Jean Casimir y voit l'une des matrices profondes de la société haïtienne post-coloniale, distincte du modèle que les Français voulaient imposer.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Les pratiques culturelles et religieuses africaines, que les planteurs s'évertuaient à interdire dans les habitations, survivaient et prospéraient dans les mornes. Des nations — Fon, Yoruba, Kongolais, Arada — qui avaient été délibérément mélangées sur les plantations pour empêcher toute communication, se retrouvaient dans les communautés marronnes et recommençaient à parler, à chanter, à pratiquer. Le vodou, en particulier, y fut préservé et transformé : les cérémonies nocturnes autour d'un feu dans les hauteurs boisées n'étaient pas des survivances exotiques, elles étaient des actes politiques.
+          </p>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Refuges géographiques</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>· Massif du Nord (jusqu'à 1 200 m)</li>
+              <li>· Massif de la Selle (jusqu'à 2 680 m)</li>
+              <li>· Chaîne des Matheux</li>
+              <li>· Massif de la Hotte (Grand-Anse)</li>
+              <li>· Forêts de la frontière domini&shy;caine</li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Héritages culturels préservés</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Vodou : cérémonies et lwa</li>
+              <li>· Langues africaines (fon, kikongo…)</li>
+              <li>· Organisation en lakou</li>
+              <li>· Médecine par les plantes</li>
+              <li>· Tambours et chants rituels</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="font-size:clamp(20px,2.5vw,30px);font-weight:900;color:var(--blue,#0038A8);margin-bottom:1rem;margin-top:2.5rem;">Les grands leaders marrons</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">François Makandal — le roi des poisons</h3>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Aucune figure du marronnage haïtien n'a laissé une empreinte aussi profonde que François Makandal. Né probablement au Sénégal ou en Guinée, amputé d'un bras lors d'un accident au moulin à canne, Makandal prit la fuite vers 1740 et passa les dix-huit années suivantes dans les mornes du nord de Saint-Domingue à construire l'un des réseaux clandestins les plus sophistiqués que la colonie ait jamais connus. C'est C.L.R. James, dans <em>The Black Jacobins</em> (1938), qui en a donné la première analyse historique rigoureuse en langue anglaise, le situant dans une longue tradition de résistance africaine.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Makandal était botaniste avant tout. Sa connaissance des plantes de la forêt haïtienne — poisons, antidotes, hallucinogènes, remèdes — lui valut le titre que lui donnèrent les esclaves : <em>houngan</em>, prêtre vodou, et chef spirituel. Mais ce savoir botanique avait aussi une application militaire. Son réseau introduisait des poisons dans les provisions des plantations — empoisonnant les animaux, contaminant les sources, affaiblissant les colons — dans ce qui s'apparentait à une guerre biologique longue et patiente. Les autorités coloniales, qui ne comprenaient pas initialement la nature coordonnée de ces morts étranges, parlaient de « grande mortalité ». Leslie G. Manigat, dans ses travaux sur Makandal publiés en 1977, a retracé l'étendue géographique de ce réseau, qui couvrait plusieurs paroisses du nord.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Capturé en 1758 par trahison — on dit qu'une femme l'avait dénoncé, ou qu'il fut surpris lors d'une cérémonie — Makandal fut condamné à être brûlé vif sur la place publique de Cap-Français. La tradition orale haïtienne dit qu'au moment où les flammes l'atteignirent, il se transforma en moucheron et s'envola. Cette légende n'est pas anecdotique : elle dit quelque chose d'essentiel sur la façon dont les esclaves percevaient ses qualités spirituelles, et sur le refus de laisser au colonisateur le dernier mot même sur la mort. Makandal est aujourd'hui un lwa du vodou haïtien — ses adeptes l'invoquent encore.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            Alejo Carpentier, l'écrivain cubain, s'est inspiré de Makandal pour son roman <em>Le Royaume de ce monde</em> (1949), l'un des textes fondateurs du réalisme magique latino-américain. Dans ce roman, le moment de l'exécution de Makandal devient une séquence visionnaire. Carpentier avait visité Haïti en 1943 — ce voyage a changé sa compréhension de ce que pouvait être la littérature des Amériques.
+          </aside>
+
+          <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;margin-top:2rem;">Les femmes marronnes</h3>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            L'historiographie a longtemps invisibilisé les femmes dans le marronnage, mais les <em>Affiches Américaines</em> contredisent ce récit : une proportion significative des avis de fuite concerne des femmes. Elles fuyaient seules, ou avec leurs enfants, ou avec un compagnon — parfois laissant des enfants derrière elles, déchirées entre la liberté pour soi et la séparation d'avec les siens. Sanite Bélair, héroïne de la guerre de l'indépendance et épouse du général Lamour Dérance, représente une génération de femmes qui avaient été éduquées dans la résistance bien avant de rejoindre les armées de Dessalines. Son nom est inscrit dans la liste des héros nationaux d'Haïti.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Les femmes marronnes jouaient un rôle central dans la préservation culturelle. Ce sont elles qui transmettaient les langues africaines aux enfants, qui maintenaient les pratiques rituelles du vodou, qui conservaient les savoirs médicaux liés aux plantes. Dans les communautés marronnes, la maternité n'était pas seulement biologique — c'était un acte de résistance culturelle, la décision de transmettre une mémoire que l'esclavage cherchait à effacer.
+          </p>
+
+          <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;margin-top:2rem;">Jean François et Biassou — des réseaux marrons à la révolution</h3>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Les deux premiers grands chefs de l'insurrection de 1791, Jean François et Georges Biassou, n'étaient pas des révolutionnaires surgis du néant. Avant d'apparaître à la tête des colonnes insurgées, ils avaient l'un et l'autre des connexions profondes avec les réseaux marrons du Nord. Jean François avait lui-même connu la fuite. Biassou opérait dans les zones intermédiaires entre la plantation et la montagne, dans ce no man's land social où se fabriquaient les solidarités clandestines.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Carolyn Fick a montré dans <em>The Making of Haiti</em> que la rapidité et la coordination de l'insurrection de 1791 — des milliers de personnes en action simultanée sur plusieurs paroisses — ne s'expliquent que par l'existence préalable de structures organisationnelles. Ces structures, c'étaient les réseaux marrons, les cercles vodou, les connections forgées au fil des années entre les habitations et les mornes. L'insurrection n'a pas créé ces réseaux : elle les a activés.
+          </p>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">François Makandal</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>· Origine : Sénégal / Guinée</li>
+              <li>· Actif : ~1740–1758</li>
+              <li>· Réseau : plusieurs paroisses du Nord</li>
+              <li>· Méthode : empoisonnement systématique</li>
+              <li>· Exécuté : Cap-Français, 1758</li>
+              <li>· Statut actuel : lwa du vodou haïtien</li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Autres figures du marronnage</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Sanite Bélair (héroïne de l'indépendance)</li>
+              <li>· Jean François (chef insurgé, 1791)</li>
+              <li>· Georges Biassou (chef insurgé, 1791)</li>
+              <li>· Lamour Dérance (guérilla post-1804)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="font-size:clamp(20px,2.5vw,30px);font-weight:900;color:var(--blue,#0038A8);margin-bottom:1rem;margin-top:2.5rem;">Le Bois Caïman et la connexion marron</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            La nuit du 14 août 1791, dans un bois de la plaine du Nord haïtien appelé Bois Caïman, une cérémonie vodou réunit plusieurs centaines de personnes qui allaient déclencher, une semaine plus tard, l'insurrection générale. Cette date est entrée dans la mémoire haïtienne comme l'acte fondateur de la révolution. Mais pour comprendre ce qui s'est passé à Bois Caïman, il faut comprendre ce qui s'était accumulé dans les décennies précédentes dans les mornes.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Les cérémonies vodou qui se tenaient dans les communautés marronnes depuis des générations n'étaient pas uniquement des pratiques religieuses au sens occidental du terme. Elles étaient des assemblées politiques déguisées. Autour du tambour, dans la nuit des hauteurs, on prenait des décisions, on transmettait des informations, on préparait des actions. Le secret était garanti par le lien spirituel : trahir la cérémonie, c'était trahir les lwa, les esprits, la communauté entière — une transgression d'une gravité incomparablement supérieure à ce que pouvait offrir en récompense un maître colonial.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Boukman Dutty, le meneur du Bois Caïman, était un marron ou proche des réseaux marrons. Le prêtre vodou ou la prêtresse — les sources divergent sur ce point, certaines mentionnant une femme dont on a perdu le nom — qui officia lors de cette cérémonie représentait une tradition spirituelle forgée dans les mornes, loin des plantations. Les chants, les invocations, les serments qui furent prononcés cette nuit-là n'étaient pas improvisés : ils s'inscrivaient dans un répertoire vivant, transmis de génération en génération dans les communautés marronnes.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            L'identité de la prêtresse du Bois Caïman reste l'une des questions les plus débattues de l'historiographie haïtienne. Certaines sources mentionnent une femme nommée Cécile Fatiman — métisse d'origine africaine aux yeux verts, selon certaines descriptions — qui aurait été la véritable officiant principale de la cérémonie. Si cette attribution est exacte, elle renforce l'importance des femmes dans la direction spirituelle et politique du marronnage.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Bois Caïman — 14 août 1791</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>· Lieu : plaine du Nord, Haïti</li>
+              <li>· Meneur : Boukman Dutty</li>
+              <li>· Nature : cérémonie vodou / assemblée politique</li>
+              <li>· Résultat : insurrection générale du 22 août</li>
+              <li>· Fondement : réseaux marrons préexistants</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="font-size:clamp(20px,2.5vw,30px);font-weight:900;color:var(--blue,#0038A8);margin-bottom:1rem;margin-top:2.5rem;">La résistance quotidienne : le marronnage invisible</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Le marronnage physique — la fuite vers les mornes — était le geste le plus visible d'un spectre beaucoup plus large de résistances. Pour ceux qui ne pouvaient pas fuir, ou qui choisissaient de rester pour diverses raisons, il existait tout un arsenal de résistances quotidiennes que les historiens appellent parfois le « marronnage invisible ». Ces pratiques ne laissaient pas de traces dans les <em>Affiches Américaines</em>, mais leurs effets se lisaient dans les livres de compte des habitations.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Le <strong>travail ralenti</strong> était peut-être le plus courant. Un esclave affecté à la coupe de la canne pouvait travailler à un rythme de 80 % de sa capacité maximale toute sa vie sans jamais être clairement en faute. Multiplié par des centaines de travailleurs, cet effet cumulatif représentait une perte de production significative. La <strong>feinte de maladie</strong> permettait d'obtenir des jours de repos ; les infirmeries des grandes habitations étaient chroniquement surpeuplées, ce qui ne passait pas inaperçu mais était difficile à contrecarrer. Le <strong>bris d'outils</strong> — moulins endommagés, cuves fendues, meules cassées au mauvais moment — retardait la production sucrière à des moments critiques.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            L'<strong>empoisonnement des animaux</strong>, pratique héritée du réseau de Makandal et qui continua bien après son exécution, ciblait spécifiquement les chevaux et les mulets de trait — animaux coûteux dont dépendait le fonctionnement de l'habitation. Les savoirs botaniques transmis dans les communautés marronnes et dans les cercles vodou permettaient d'identifier les plantes toxiques appropriées. La <strong>mutilation volontaire</strong> — ruse extrême et douloureuse — servait parfois à éviter la vente à une autre habitation ou à se rendre inapte à certains travaux. Ces actes disent quelque chose d'insupportable sur les conditions de l'esclavage : pour rester maître de son corps, il fallait parfois le blesser soi-même.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            La sociologue américaine Saidiya Hartman, dans <em>Scenes of Subjection</em> (1997), a développé le concept de « résistance ordinaire » pour désigner ces pratiques qui ne constituent pas une rébellion ouverte mais qui constituent néanmoins un refus constant de la domination. Son cadre analytique, bien que développé principalement pour le contexte états-unien, s'applique avec force au marronnage quotidien de Saint-Domingue.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Formes de résistance quotidienne</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>· Ralentissement du travail</li>
+              <li>· Feinte de maladie</li>
+              <li>· Bris d'outils et de machines</li>
+              <li>· Empoisonnement des animaux</li>
+              <li>· Vol de provisions</li>
+              <li>· Incendies volontaires</li>
+              <li>· Réseaux d'information clandestins</li>
+              <li>· Préservation des pratiques culturelles interdites</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="font-size:clamp(20px,2.5vw,30px);font-weight:900;color:var(--blue,#0038A8);margin-bottom:1rem;margin-top:2.5rem;">L'héritage du marronnage dans l'identité haïtienne</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Haïti a choisi de placer un marron au centre de son identité symbolique nationale. Le <strong>Marron Inconnu</strong> — <em>Nèg Mawon</em> en créole haïtien — est une statue de bronze érigée en 1968 devant le Palais National de Port-au-Prince. Elle représente un homme nu, un genou à terre, brisant ses chaînes, portant un conque à ses lèvres — le lambí, le coquillage dont le son servait de signal de ralliement entre les communautés marronnes et lors des insurrections. Cette statue, sculptée par Albert Mangonès, est l'une des images les plus reproduites et les plus reconnues de l'iconographie haïtienne.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Le choix du terme « inconnu » est délibéré et profond. Ce marron n'a pas de nom parce qu'il représente tous les marrons — les milliers d'hommes et de femmes dont les noms ont disparu dans les archives coloniales, dont les actes de résistance n'ont jamais été documentés, dont la vie s'est déroulée dans les interstices de l'histoire officielle. C'est une façon de dire que la liberté haïtienne n'est pas l'œuvre de quelques héros reconnaissables : elle est le produit d'une résistance collective, anonyme, obstinée.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Dans le créole haïtien contemporain, le mot <em>maròn</em> a conservé plusieurs de ses sens originaux. On dit d'un enfant qu'il a fait le <em>maròn</em> quand il a séché l'école — la fugue scolaire hérite sémantiquement de la fugue de plantation. Mais le terme garde aussi sa dignité : <em>espri maròn</em>, l'esprit marron, désigne une forme d'indépendance d'esprit, de refus têtu de se laisser gouverner, qui est perçue en Haïti non pas comme un défaut mais comme un trait de caractère distinctif, presque une fierté nationale.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Jean Casimir a avancé l'idée que la société haïtienne post-indépendance a été profondément façonnée par la culture marronne, et non par les élites lettrées qui ont rédigé la constitution. La paysannerie haïtienne — qui a toujours constitué la grande majorité de la population — a des pratiques sociales, des formes d'organisation économique et des structures familiales qui descendent en ligne directe des communautés marronnes. Le lakou, la coopération agricole informelle (<em>kounbit</em>), les réseaux de solidarité communautaire : tout cela a des racines dans les mornes, avant l'indépendance.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            Le séisme du 12 janvier 2010 a gravement endommagé le Palais National devant lequel se dresse le Marron Inconnu. Le palais a depuis été démoli. Mais la statue est restée debout, et elle est devenue dans les années qui ont suivi un point de rassemblement symbolique lors des manifestations populaires à Port-au-Prince. Le <em>Nèg Mawon</em> continue de jouer le rôle que lui assignait son sculpteur : rappeler que la résistance est au fondement de l'identité haïtienne.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Le Marron Inconnu</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>· Nom créole : <em>Nèg Mawon</em></li>
+              <li>· Sculpteur : Albert Mangonès</li>
+              <li>· Érection : 1968, Port-au-Prince</li>
+              <li>· Symboles : lambí (conque), chaînes brisées</li>
+              <li>· Lieu : devant l'ancien Palais National</li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Héritages vivants</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Le lakou comme organisation sociale</li>
+              <li>· Le <em>kounbit</em> (travail collectif)</li>
+              <li>· Le vodou dans les mornes</li>
+              <li>· L'<em>espri maròn</em> dans l'identité nationale</li>
+              <li>· Le lambí comme symbole de résistance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:2rem;margin-bottom:2.5rem;">
+        <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Voir aussi</p>
+        <ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2.2;">
+          <li>→ <a href="history.html" style="color:#fff;">Histoire Générale d'Haïti</a></li>
+          <li>→ <a href="heroes.html" style="color:#fff;">Héros Nationaux</a></li>
+          <li>→ <a href="vodou.html" style="color:#fff;">Le Vodou haïtien</a></li>
+          <li>→ <a href="revolution-batailles.html" style="color:#fff;">La Révolution — Batailles et Chronologie</a></li>
+          <li>→ <a href="declaration-independance.html" style="color:#fff;">La Déclaration d'Indépendance de 1804</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            République d'Haïti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+            <li><a href="encyclopedia.html">Encyclopédie</a></li>
+            <li><a href="archives.html">Archives</a></li>
+            <li><a href="bibliography.html">Bibliographie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Culture &amp; Société</h4>
+          <ul>
+            <li><a href="culture.html">Culture &amp; Arts</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastronomie</a></li>
+            <li><a href="culture-vivante.html">Culture Vivante</a></li>
+            <li><a href="creativite-populaire.html">Créativité Populaire</a></li>
+            <li><a href="diaspora-engagee.html">Diaspora Engagée</a></li>
+            <li><a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire &amp; Institutions</h4>
+          <ul>
+            <li><a href="timeline.html">Chronologie</a></li>
+            <li><a href="heroes.html">Héros Nationaux</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="constitution.html">Constitution</a></li>
+            <li><a href="institutions.html">Institutions</a></li>
+            <li><a href="patrimoine-national.html">Patrimoine National</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+            <li><a href="license.html">Mentions Légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est né d'une frustration personnelle&#160;: trop d'ouvrages sur Haïti sont écrits de l'extérieur. J'ai voulu rassembler les sources haïtiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur indépendant.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
+</body>
+</html>
