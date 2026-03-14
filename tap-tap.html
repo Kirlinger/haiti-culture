@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Le Tap-Tap — L'Art Mobile d'Haïti | République d'Haïti</title>
+  <meta name="description" content="Le tap-tap n'est pas qu'un minibus : c'est une galerie itinérante, un autel roulant, une déclaration d'identité peinte à vif sur les routes d'Haïti. Histoire, symbolisme et reconnaissance internationale d'un art populaire unique." />
+  <meta name="author" content="RépubliqueHaïti.org" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+              <a href="institutions.html">Institutions</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Société ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture-vivante.html">Culture Vivante</a>
+              <a href="creativite-populaire.html">Créativité Populaire</a>
+              <a href="diaspora-engagee.html">Diaspora Engagée</a>
+              <a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a>
+              <a href="memoire-universelle.html">Mémoire Universelle</a>
+              <a href="patrimoine-national.html">Patrimoine National</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Enjeux ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Fragilité Économique</a>
+              <a href="inegalites-sociales.html">Inégalités Sociales</a>
+              <a href="instabilite-politique.html">Instabilité Politique</a>
+              <a href="pressions-securitaires.html">Pressions Sécuritaires</a>
+              <a href="services-essentiels.html">Services Essentiels</a>
+              <a href="capacite-adaptation.html">Capacité d'Adaptation</a>
+              <a href="reconstruction-durable.html">Reconstruction Durable</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+              <a href="bibliography.html">Bibliographie</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : histoire, culture, villes…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--about">
+    <div class="container">
+      <p class="page-hero__label">Créativité Populaire</p>
+      <h1 class="page-hero__title">Le Tap-Tap — L'Art Mobile d'Haïti</h1>
+      <p class="page-hero__desc">Sur chaque route d'Haïti, des toiles roulantes traversent la poussière et l'asphalte fissuré : les tap-taps sont des minibus et des camionnettes couverts de peintures flamboyantes, de prières en créole et d'images sacrées. Ce ne sont pas de simples véhicules — ce sont les galeries les plus vivantes du pays.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <a href="culture.html">Culture</a>
+        <span>/</span>
+        <span>Tap-Tap</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Section 1 : Qu'est-ce qu'un tap-tap ? -->
+      <p class="section-label">Transports &amp; Identité Visuelle</p>
+      <h2>Qu'est-ce qu'un tap-tap ?</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            En Haïti, le tap-tap est à la fois le principal moyen de transport en commun et l'une des expressions artistiques populaires les plus distinctives des Caraïbes. Il se présente sous deux formes principales : la camionnette (<em>pick-up</em>) munie d'une carrosserie en bois ou en métal à l'arrière, où les passagers s'assoient dos à dos sur des banquettes latérales, et le minibus, plus courant dans les circuits urbains de Port-au-Prince. Dans un pays où les transports publics officiels sont quasi inexistants — pas de métro, pas de bus d'État réguliers, pas de réseau ferroviaire — le tap-tap est l'infrastructure sur laquelle se repose la mobilité de millions de personnes.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Le nom lui-même vient du geste des passagers : quand quelqu'un veut descendre, il frappe deux coups sur la carrosserie métallique — <em>tap-tap</em> — pour signaler au chauffeur de s'arrêter. Ce signal percussif, simple et universel, a donné son nom à tout un univers. Il n'y a pas d'arrêts fixes. On monte, on tape, on descend. Le tap-tap suit un itinéraire approximatif annoncé à la criée par un aide appelé le <em>chofè-de-ban</em> ou plus souvent le <em>kranp</em>, suspendu à la porte, hurlant la destination dans la poussière.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Ce qui distingue le tap-tap haïtien de tout autre transport collectif au monde, c'est que chaque véhicule est unique. Il n'y a pas deux tap-taps identiques. Chacun est une œuvre à part entière — peint de la tête aux roues, nommé, personnalisé, reconnaissable. La décoration n'est pas une option esthétique : elle est constitutive de l'objet. Un tap-tap non peint n'est pas encore un tap-tap.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            Le terme « tap-tap » est aujourd'hui entré dans plusieurs dictionnaires et encyclopédies culturelles anglophones comme exemple canonique de l'art populaire haïtien. Il figure dans les collections permanentes ou les expositions temporaires du Smithsonian National Museum of African American History and Culture à Washington, et du Brooklyn Museum à New York — une reconnaissance institutionnelle rare pour un objet quotidien.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>· Origine : surplus militaires US, 1945–1950</li>
+              <li>· Types : pick-up bois, minibus, camion</li>
+              <li>· Signal : deux coups sur la carrosserie</li>
+              <li>· Noms fréquents : religieux, proverbes</li>
+              <li>· Artisans spécialisés : quartiers de PAP</li>
+              <li>· Expositions : Smithsonian, Brooklyn Museum</li>
+              <li>· Concurrence : moto-taxis depuis années 2000</li>
+              <li>· Terme entré dans l'usage international</li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Noms typiques de tap-taps</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· <em>Bondye Bon</em> (Dieu est bon)</li>
+              <li>· <em>Merci Jésus</em></li>
+              <li>· <em>Force de Dieu</em></li>
+              <li>· <em>Tout bagay posib</em> (Tout est possible)</li>
+              <li>· <em>Papa Loko Veye</em></li>
+              <li>· <em>Nou tout frè</em> (Nous sommes tous frères)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2 : Histoire -->
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Histoire du tap-tap</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        L'histoire du tap-tap commence avec la Seconde Guerre mondiale — ou plutôt avec sa fin. À partir de 1945, d'importants stocks de camions militaires américains excédentaires, principalement des Dodge WC et des GMC CCKW, sont mis en vente ou cédés à travers les Caraïbes. Haïti en reçoit une partie. Ces véhicules robustes, conçus pour les routes boueuses d'Europe ou du Pacifique, se révèlent parfaitement adaptés aux pistes cahoteuses de l'Artibonite, des Palmes et de la région de Léogâne. Des transporteurs ruraux les adaptent en y fixant des carrosseries artisanales en bois, créant les premières versions de ce qui deviendra le tap-tap.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        La décoration commence modestement : un nom religieux peint sur le pare-brise, quelques motifs géométriques sur les flancs. Mais dans les années 1950 et 1960, à mesure que l'économie de marché haïtienne se structure et que des artisans peintres s'installent dans des quartiers spécialisés de Port-au-Prince — notamment autour de Carrefour, de Cité Soleil et du marché de la Croix-des-Bossales — la décoration devient plus élaborée, plus ambitieuse. Les propriétaires de tap-taps se mettent à rivaliser entre eux. Un véhicule bien peint attire plus de passagers : l'esthétique devient un argument commercial autant qu'une expression de foi.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        La vallée de l'Artibonite — grenier à riz d'Haïti — est l'un des berceaux de la tradition. Les routes entre Gonaïves, Saint-Marc et Hinche voient circuler dès les années 1960 des camions de transport de marchandises et de passagers dont les carrosseries témoignent d'un soin particulier. Port-au-Prince en concentre la plus grande densité, mais la tradition est nationale. Dans les années 1970 et 1980, sous le régime de Jean-Claude Duvalier, le tap-tap prolifère dans une capitale qui explose démographiquement, accueillant des ruraux déplacés qui ont besoin de transport et d'ateliers d'artisans qui ont besoin de clients. L'un alimente l'autre.
+      </p>
+
+      <aside class="researcher-note" aria-label="Note de recherche">
+        Plusieurs chercheurs ont noté la parenté visuelle entre les tap-taps haïtiens et les <em>matatu</em> kenyans ou les <em>jeepney</em> philippins — tous issus de véhicules militaires américains reconvertis après 1945, tous décorés par des artisans locaux selon des codes visuels spécifiques à leur culture. Cette convergence involontaire est l'une des curiosités de l'histoire de l'art de l'après-guerre : les surplus de la guerre froide ont engendré, dans trois coins du monde, des traditions artistiques populaires remarquablement similaires dans leur logique et radicalement différentes dans leur langage visuel.
+      </aside>
+
+      <!-- Section 3 : L'art de la décoration -->
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;margin-top:2rem;">L'art de la décoration</h3>
+
+      <div class="two-col--wide-left" style="margin-bottom:2.5rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            La décoration d'un tap-tap est un travail en plusieurs étapes qui mobilise des savoir-faire distincts. Tout commence par la carrosserie : un menuisier ou un soudeur construit ou répare la structure de bois ou de métal sur laquelle les passagers prendront place. Puis vient le peintre de fond, qui applique la couleur de base — souvent rouge vif, jaune soleil, bleu royal ou vert émeraude. Ensuite intervient le lettreur, artisan spécialisé dont la maîtrise calligraphique est au cœur de l'identité du véhicule : il trace le nom du tap-tap en lettres majuscules stylisées, souvent ombrées, parfois rehaussées d'or ou d'argent. Ce nom est presque toujours en français ou en créole. Les proverbes haïtiens s'y déploient avec une économie remarquable — une sentence entière sur une planche de trente centimètres.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            L'imagerie qui couvre les flancs et la cabine est le domaine du peintre figuratif. Le répertoire est vaste et sans hiérarchie apparente : des saints catholiques (saint Michel terrassant le diable, la Vierge de Czestochowa, le Sacré-Cœur) côtoient des figures du vodou (Ogou Feray sous ses couleurs rouge et noir, Erzulie Freda reconnaissable à son cœur percé, Baron Samedi en habit de deuil). Des portraits de musiciens haïtiens — Coupé Cloué, Boukman Eksperyans, Wyclef Jean — voisinent avec ceux de Pelé, de LeBron James ou de Tupac Shakur. L'histoire nationale est présente : Toussaint Louverture à cheval, Jean-Jacques Dessalines brandissant le drapeau bicolore. Il n'y a pas de contradiction dans cette iconographie syncrétique — elle reflète simplement la manière dont les Haïtiens habitent leur propre culture, c'est-à-dire sans frontières rigides entre le sacré et le profane, entre le local et le global.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Une fois les peintures sèches, le vernisseur applique plusieurs couches de vernis brillant qui protègent l'œuvre des intempéries et lui donnent cet aspect lumineux caractéristique. Sous le soleil haïtien, un tap-tap fraîchement verni scintille. L'ensemble du processus — carrosserie, fond, lettrage, images, vernis — peut prendre plusieurs semaines et représente un investissement significatif pour le propriétaire. C'est pourquoi le tap-tap est soigneusement entretenu : une égratignure est réparée, une image effacée est repeinte. Le véhicule est une fierté.
+          </p>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Étapes de fabrication</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>① Carrosserie bois / métal</li>
+              <li>② Fond de peinture colorée</li>
+              <li>③ Lettrage calligraphique du nom</li>
+              <li>④ Peinture des images figuratives</li>
+              <li>⑤ Détails décoratifs (or, argent)</li>
+              <li>⑥ Vernissage brillant final</li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Thèmes iconographiques</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Saints catholiques &amp; lwa vodou</li>
+              <li>· Héros nationaux haïtiens</li>
+              <li>· Musiciens &amp; sportifs</li>
+              <li>· Proverbes en créole</li>
+              <li>· Motifs floraux &amp; géométriques</li>
+              <li>· Paysages haïtiens</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 4 : Signification religieuse et culturelle -->
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">La signification religieuse et culturelle</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Le tap-tap haïtien est souvent décrit par les ethnologues et les historiens de l'art comme un « autel roulant ». Cette formule n'est pas une métaphore commode : elle désigne une réalité structurelle. Dans le vodou haïtien, l'autel (<em>badji</em>) est un espace de médiation entre les vivants et les esprits — les <em>lwa</em> — peuplé d'images, d'objets symboliques, de drapeaux (<em>drapo vodou</em>), de bougies et de prières. La décoration du tap-tap obéit à une logique similaire : le nom peint sur le pare-chocs avant est une invocation, une mise sous protection. <em>Bondye Bon</em> n'est pas un slogan publicitaire — c'est une affirmation théologique, une demande de grâce pour un véhicule qui va affronter des routes dangereuses dans un pays où les accidents sont fréquents et l'entretien des infrastructures défaillant.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Le parallèle avec les <em>drapo vodou</em> — les célèbres drapeaux de cérémonie brodés de perles et de paillettes qui représentent les lwa — est profond. Les deux objets partagent la même esthétique du foisonnement : pas de surface vide, chaque centimètre habité par une couleur, une image, un signe. Les deux sont des objets fonctionnels (transport d'un côté, ritual de l'autre) transformés en supports d'une expression spirituelle intense. Et les deux circulent : le drapo est porté en procession lors des cérémonies, le tap-tap traverse le pays. L'art haïtien n'est pas contemplatif — il est en mouvement.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Cette dimension communautaire est essentielle. Contrairement à la peinture sur toile — qui finit dans une collection privée ou dans un musée — le tap-tap est public par définition. Il traverse les marchés, les quartiers populaires, les routes de montagne. Il est vu par des dizaines de milliers de personnes chaque jour. Ses images appartiennent à tout le monde. En ce sens, le tap-tap accomplit ce que les théoriciens de l'art public appellent la démocratisation de l'esthétique : il amène l'art là où les gens vivent, sans billets d'entrée ni cartels explicatifs.
+      </p>
+
+      <aside class="researcher-note" aria-label="Note de recherche">
+        La chercheuse et photographe Leah Gordon, qui a documenté Haïti pendant plusieurs décennies, a consacré une partie importante de son travail aux tap-taps. Son ouvrage <em>Kanaval : A Haitian Odyssey</em> (2010) explore les représentations visuelles populaires haïtiennes, dont les tap-taps, comme des systèmes cohérents de production de sens — pas comme des curiosités folkloriques. Son approche a contribué à déplacer la discussion de « l'art naïf » vers une analyse plus sérieuse des traditions visuelles haïtiennes dans leur contexte culturel propre.
+      </aside>
+
+      <!-- Section 5 : Reconnaissance internationale -->
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;margin-top:2rem;">Reconnaissance internationale</h3>
+
+      <div class="two-col--wide-left" style="margin-bottom:2.5rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            À partir des années 1980 et plus encore dans les années 1990 et 2000, les tap-taps haïtiens commencent à attirer l'attention des institutions culturelles internationales. Le Brooklyn Museum de New York, qui possède l'une des collections d'art haïtien les plus importantes en dehors d'Haïti, a présenté des tap-taps et leurs motifs dans le cadre d'expositions consacrées à l'art de la diaspora caribéenne. Le Smithsonian Institution, à Washington, a acquis plusieurs exemples de carrosseries décorées et les a présentés dans ses programmes sur les arts populaires américains et caribéens, reconnaissant explicitement le tap-tap comme un objet de patrimoine immatériel.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            En Europe, les tap-taps ont été présentés dans des expositions consacrées aux arts de la Caraïbe à Paris, à Amsterdam et à Londres. Des collectionneurs privés, principalement en France et aux États-Unis, ont commencé à acheter des pièces — carrosseries démontées, capots peints, panneaux de bois — comme œuvres d'art à part entière. Ce mouvement de collection a eu des effets ambivalents : d'un côté, il a contribué à la reconnaissance et à la valorisation économique des artisans peintres ; de l'autre, il a parfois arraché les objets de leur contexte fonctionnel et communautaire pour les enfermer dans le silence climatisé des galeries.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Des artistes haïtiens de la diaspora ont intégré l'esthétique du tap-tap dans leur pratique. Didier William, peintre et graveur haïtiano-américain dont le travail est exposé dans des institutions majeures, a cité explicitement les tap-taps comme une influence sur son traitement de la surface, sa saturation visuelle et son usage syncrétique des images. Des discussions académiques sur la frontière entre art populaire et beaux-arts ont pris les tap-taps comme cas d'étude : peuvent-ils être « beaux-arts » ? La question elle-même révèle les préjugés d'un système classificatoire hérité d'une certaine histoire de l'art occidentale que les Haïtiens, eux, n'ont jamais acceptée.
+          </p>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Présences institutionnelles</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>· Smithsonian Institution, Washington D.C.</li>
+              <li>· Brooklyn Museum, New York</li>
+              <li>· Musée du Quai Branly, Paris (expositions)</li>
+              <li>· Museum of Arts and Design, New York</li>
+              <li>· Expositions <em>Kanaval</em> (Leah Gordon)</li>
+              <li>· Collections privées (France, États-Unis)</li>
+              <li>· Références dans l'œuvre de Didier William</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 6 : Le tap-tap aujourd'hui -->
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Le tap-tap aujourd'hui</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Le tap-tap traverse aujourd'hui une période de turbulences. La première concurrence sérieuse est venue des moto-taxis — appelés simplement <em>moto</em> en Haïti — qui se sont multipliés à partir du milieu des années 2000. Moins chers, plus rapides dans les embouteillages, disponibles à toute heure et accessibles même dans des ruelles où un minibus ne peut pas s'engager, les motos ont capturé une part croissante du marché du transport urbain. À Port-au-Prince, on estime qu'il y circule plusieurs centaines de milliers de motos-taxis — un chiffre astronomique pour une ville dont l'infrastructure n'a pas été conçue pour les absorber.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Le séisme du 12 janvier 2010 a porté un coup sévère. Des centaines de tap-taps ont été détruits ou endommagés dans l'effondrement des infrastructures routières. Des artisans peintres ont perdu leurs ateliers. Des propriétaires de véhicules, déjà endettés, ont perdu leur outil de travail et leur source de revenus. La reconstruction du parc de tap-taps a été lente. Dans les années qui ont suivi, des organisations non gouvernementales ont tenté d'intégrer les tap-taps dans des projets de mobilité durable, mais avec des résultats inégaux.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        La crise sécuritaire des années 2020 — avec la prolifération des gangs armés dans la région métropolitaine de Port-au-Prince — a porté une nouvelle atteinte à la circulation des tap-taps. Certains axes routiers sont devenus dangereux ou impraticables, forçant des réductions de service. La hausse des prix du carburant, amplifiée par la dépréciation de la gourde, a comprimé les marges des propriétaires. La nouvelle génération de peintres spécialisés est moins nombreuse que celle des années 1980-1990. Plusieurs ateliers historiques ont fermé ou réduit leur activité.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Et pourtant, le tap-tap résiste. Des jeunes artistes haïtiens continuent d'apprendre le métier. De nouveaux véhicules sont commandés et décorés chaque année. Dans les villes de province — Cap-Haïtien, Gonaïves, Les Cayes, Saint-Marc — la tradition est souvent plus vivace qu'à Port-au-Prince. Des entrepreneurs de la diaspora ont commencé à financer des commandes de tap-taps de prestige, parfois destinés à des expositions ou à des projets culturels. La tradition s'adapte — elle a toujours su le faire.
+      </p>
+
+      <aside class="researcher-note" aria-label="Note de recherche">
+        Il existe depuis quelques années des projets documentaires de cartographie photographique des tap-taps haïtiens — des initiatives citoyennes visant à constituer une archive visuelle avant que le parc de véhicules anciens ne soit entièrement remplacé. Ces projets sont portés à la fois depuis Haïti et depuis la diaspora, notamment à Miami, Montréal et Paris. Ils témoignent d'une conscience patrimoniale nouvelle autour d'un objet longtemps considéré comme trop ordinaire pour mériter d'être conservé.
+      </aside>
+
+      <!-- Section 7 : Quelques tap-taps célèbres -->
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;margin-top:2rem;">Quelques tap-taps célèbres</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        La documentation précise des tap-taps individuels reste un défi : ils circulent, changent de mains, sont repeints, disparaissent. Mais certains ont laissé une trace suffisamment marquée pour entrer dans les archives photographiques et culturelles.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Le tap-tap <strong>« Gran Mèt »</strong> (le Grand Maître), photographié à de nombreuses reprises dans les rues de Port-au-Prince dans les années 1990, était remarquable par la densité exceptionnelle de son imagerie : l'intégralité de la carrosserie latérale représentait une scène de la création tirée de la cosmogonie vodou, encadrée de citations en créole. Il fut photographié par des journalistes de <em>National Geographic</em> et du <em>New York Times</em> lors de reportages sur la culture haïtienne.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Un tap-tap nommé <strong>« Souvenir d'Haïti »</strong>, acquis par un collectionneur américain dans les années 2000, a été exposé à New York avant d'entrer dans une collection privée. Sa particularité était d'associer, sur le même panneau, le portrait de Toussaint Louverture et celui de Nelson Mandela — deux libérateurs, deux continents, une même couleur de peau et une même résistance à l'oppression. Cette association iconographique spontanée, née de la main d'un artisan de Port-au-Prince sans formation académique, est plus éloquente que bien des dissertations sur la solidarité panafricaine.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        La photographe Leah Gordon a documenté de manière systématique plusieurs dizaines de tap-taps dans ses travaux des années 1990 et 2000, dont certains ont été publiés dans <em>Kanaval</em> et repris dans des catalogues d'exposition. Ces photographies constituent aujourd'hui l'une des archives les plus sérieuses sur le sujet. Parmi les véhicules documentés figurent plusieurs tap-taps de la route nationale numéro 1 (Port-au-Prince — Saint-Marc — Gonaïves) dont les carrosseries représentaient des batailles de la révolution haïtienne dans un style qui rappelle l'art mural mexicain des années 1930 — une parenté que personne n'a commandée mais que tout le monde peut voir.
+      </p>
+
+      <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:2rem;margin-bottom:2.5rem;">
+        <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Voir aussi</p>
+        <ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2.2;">
+          <li>→ <a href="culture.html" style="color:#fff;">Culture &amp; Arts d'Haïti</a></li>
+          <li>→ <a href="creativite-populaire.html" style="color:#fff;">Créativité Populaire</a></li>
+          <li>→ <a href="vodou.html" style="color:#fff;">Le Vodou haïtien</a></li>
+          <li>→ <a href="jacmel.html" style="color:#fff;">Jacmel — Capitale culturelle du Sud</a></li>
+          <li>→ <a href="drapo-vodou.html" style="color:#fff;">Les Drapo Vodou</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            République d'Haïti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+            <li><a href="encyclopedia.html">Encyclopédie</a></li>
+            <li><a href="archives.html">Archives</a></li>
+            <li><a href="bibliography.html">Bibliographie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Culture &amp; Société</h4>
+          <ul>
+            <li><a href="culture.html">Culture &amp; Arts</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastronomie</a></li>
+            <li><a href="culture-vivante.html">Culture Vivante</a></li>
+            <li><a href="creativite-populaire.html">Créativité Populaire</a></li>
+            <li><a href="diaspora-engagee.html">Diaspora Engagée</a></li>
+            <li><a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire &amp; Institutions</h4>
+          <ul>
+            <li><a href="timeline.html">Chronologie</a></li>
+            <li><a href="heroes.html">Héros Nationaux</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="constitution.html">Constitution</a></li>
+            <li><a href="institutions.html">Institutions</a></li>
+            <li><a href="patrimoine-national.html">Patrimoine National</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+            <li><a href="license.html">Mentions Légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est né d'une frustration personnelle&#160;: trop d'ouvrages sur Haïti sont écrits de l'extérieur. J'ai voulu rassembler les sources haïtiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur indépendant.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
+</body>
+</html>
