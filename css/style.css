@@ -1656,6 +1656,11 @@ ul {
 }
 
 /* ── Language-switched elements ─────────────────────── */
+/* Default: hide Kreyòl content before JS sets data-lang-mode */
+.lang-kr {
+  display: none;
+}
+
 [data-lang-mode="kr"] .lang-fr,
 [data-lang-mode="fr"] .lang-kr {
   display: none !important;
