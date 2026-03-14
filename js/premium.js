@@ -1,5 +1,5 @@
 /* =====================================================
-   République d'Haïti — Premium JS v2
+   République d'Haïti : Premium JS v2
    Particles · Navbar · Progress · Back-to-top · Tilt
    ===================================================== */
 
@@ -7,7 +7,7 @@
   'use strict';
 
   /* ══════════════════════════════════════════════════
-     1. HERO CANVAS — Star / Particle Field
+     1. HERO CANVAS : Star / Particle Field
      ══════════════════════════════════════════════════ */
   function initHeroCanvas() {
     var canvas = document.getElementById('heroCanvas');
@@ -622,7 +622,7 @@
 
 
   /* ══════════════════════════════════════════════════
-     14. CHRONOLOGIE COMPLÈTE — Accordion toggle
+     14. CHRONOLOGIE COMPLÈTE : Accordion toggle
      ══════════════════════════════════════════════════ */
   function initEvtTimeline() {
     var headers = document.querySelectorAll('.evt-header');

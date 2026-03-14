@@ -1,5 +1,5 @@
 /* =====================================================
-   🇭🇹 Haïti 🇭🇹 — Main JavaScript
+   🇭🇹 Haïti 🇭🇹 : Main JavaScript
    ===================================================== */
 
 (function () {
@@ -163,7 +163,7 @@
     { title: 'Les Lwa', url: 'lwa.html', section: '', keywords: 'lwa loa esprits vodou haïti spirits dieux' },
     // Vodou sections
     { title: 'Origines Africaines du Vodou', url: 'vodou.html#origines', section: 'Vodou', keywords: 'origines afrique fon yoruba kongo dahomey nigeria vodou esclavage saint-domingue' },
-    { title: 'Bondye — Le Créateur', url: 'vodou.html#bondye', section: 'Vodou', keywords: 'bondye dieu créateur suprême vodou cosmologie' },
+    { title: 'Bondye, Le Créateur', url: 'vodou.html#bondye', section: 'Vodou', keywords: 'bondye dieu créateur suprême vodou cosmologie' },
     { title: 'Les Nations du Vodou', url: 'vodou.html#nations', section: 'Vodou', keywords: 'nations rada petro gede nago ibo kongo vodou' },
     { title: 'Nation Rada', url: 'vodou.html#nations', section: 'Vodou', keywords: 'rada lwa doux bienveillant fon dahomey blanc bleu' },
     { title: 'Nation Petro', url: 'vodou.html#nations', section: 'Vodou', keywords: 'petro lwa ardent feu résistance esclavage rouge noir don pedro' },
@@ -172,10 +172,10 @@
     { title: 'Nation Ibo', url: 'vodou.html#nations', section: 'Vodou', keywords: 'ibo igbo mystérieux mélancolique eau résistance' },
     { title: 'Nation Kongo', url: 'vodou.html#nations', section: 'Vodou', keywords: 'kongo simbi magie transformation eau bakongo afrique centrale' },
     { title: 'Cérémonies Vodou', url: 'vodou.html#ceremonies', section: 'Vodou', keywords: 'cérémonies fête kanzo initiation possession transe monte bain rituel' },
-    { title: 'Les Vèvè — Symboles Sacrés', url: 'vodou.html#veve', section: 'Vodou', keywords: 'vèvè veve symboles sacrés vodou art géométrie rituel farine' },
+    { title: 'Les Vèvè : Symboles Sacrés', url: 'vodou.html#veve', section: 'Vodou', keywords: 'vèvè veve symboles sacrés vodou art géométrie rituel farine' },
     { title: 'Tambours et Musique Sacrée', url: 'vodou.html#musique', section: 'Vodou', keywords: 'tambours musique sacrée rada petro rara danse chants cantiques ason' },
     { title: 'Houngan et Mambo', url: 'vodou.html#pretres', section: 'Vodou', keywords: 'houngan mambo prêtre prêtresse hounfor temple ason initiation guérisseur' },
-    { title: 'Bwa Kayiman — La Révolution', url: 'vodou.html#origines', section: 'Vodou', keywords: 'bwa kayiman boukman révolution 1791 liberté cérémonie' },
+    { title: 'Bwa Kayiman : La Révolution', url: 'vodou.html#origines', section: 'Vodou', keywords: 'bwa kayiman boukman révolution 1791 liberté cérémonie' },
     // Lwa individuels
     { title: 'Papa Legba', url: 'lwa.html#legba', section: 'Les Lwa', keywords: 'legba papa carrefour portes communications saint pierre rada bâton vieux' },
     { title: 'Damballah Wedo', url: 'lwa.html#damballah', section: 'Les Lwa', keywords: 'damballah wedo serpent céleste blanc pureté sagesse père rada saint patrick' },
@@ -345,6 +345,47 @@
     });
   }
 
+  /* ── Language Toggle (FR / Kreyòl) ─────────────────── */
+  function initLangToggle() {
+    var btn = document.getElementById('langToggle');
+    if (!btn) return;
+
+    var LANGS = ['fr', 'kr'];
+    var stored = localStorage.getItem('ht-lang') || 'fr';
+    var current = LANGS.includes(stored) ? stored : 'fr';
+
+    function applyLang(lang) {
+      current = lang;
+      document.documentElement.setAttribute('data-lang-mode', lang);
+      localStorage.setItem('ht-lang', lang);
+
+      // Update button labels
+      var frLabel = btn.querySelector('.lang-toggle__fr');
+      var krLabel = btn.querySelector('.lang-toggle__kr');
+      if (frLabel && krLabel) {
+        frLabel.classList.toggle('lang-toggle__active', lang === 'fr');
+        krLabel.classList.toggle('lang-toggle__active', lang === 'kr');
+      }
+
+      // Swap data-kr text content
+      document.querySelectorAll('[data-kr]').forEach(function(el) {
+        if (lang === 'kr') {
+          if (!el.dataset.fr) el.dataset.fr = el.innerHTML;
+          el.innerHTML = el.dataset.kr;
+        } else {
+          if (el.dataset.fr) el.innerHTML = el.dataset.fr;
+        }
+      });
+    }
+
+    btn.addEventListener('click', function() {
+      applyLang(current === 'fr' ? 'kr' : 'fr');
+    });
+
+    // Apply stored preference on load
+    applyLang(current);
+  }
+
   /* ── Init ───────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', function () {
     initMobileNav();
@@ -356,5 +397,6 @@
     initSearch();
     initSmoothScroll();
     initDropdowns();
+    initLangToggle();
   });
 })();

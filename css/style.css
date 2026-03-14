@@ -1621,6 +1621,55 @@ ul {
   border-color: rgba(255,255,255,0.6);
 }
 
+/* ── Language Toggle Button ─────────────────────────── */
+.lang-toggle {
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 42px;
+  padding: 0 10px;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.lang-toggle:hover {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.6);
+}
+
+.lang-toggle__active {
+  color: var(--gold);
+}
+
+.lang-toggle__sep {
+  opacity: 0.5;
+}
+
+/* ── Language-switched elements ─────────────────────── */
+/* Default: hide Kreyòl content before JS sets data-lang-mode */
+.lang-kr {
+  display: none;
+}
+
+[data-lang-mode="kr"] .lang-fr,
+[data-lang-mode="fr"] .lang-kr {
+  display: none !important;
+}
+
+[data-lang-mode="kr"] .lang-kr {
+  display: revert !important;
+}
+
 /* ── Search Overlay ──────────────────────────────────── */
 .search-overlay {
   position: fixed;
