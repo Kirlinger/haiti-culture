@@ -223,6 +223,25 @@
     { title: 'Bibliographie & Sources', url: 'bibliography.html', section: 'Portail', keywords: 'bibliographie sources références historiens haïtiens madiou ardouin trouillot price-mars fouchard casimir hurbon léger castor académique archives' },
     // Légal
     { title: 'Legal & License', url: 'license.html', section: 'Portail', keywords: 'license licence mit copyright all rights reserved legal mentions légales intellectual property code source kirlinger jeune' },
+    // Nouvelles pages — Histoire & Politique
+    { title: 'Profils des Présidents d\'Haïti', url: 'presidents.html', section: 'Histoire', keywords: 'présidents haïti dessalines christophe pétion boyer duvalier aristide préval martelly moïse henry pascal-trouillot lescot estimé magloire geffrard soulouque fondateurs' },
+    { title: 'Batailles de la Révolution Haïtienne', url: 'revolution-batailles.html', section: 'Histoire', keywords: 'bois caïman vertières crête-à-pierrot boukman capois dessalines toussaint révolution 1791 1803 1804 batailles indépendance leclerc rochambeau' },
+    { title: 'Les Relations Internationales d\'Haïti', url: 'relations-internationales.html', section: 'Histoire', keywords: 'relations internationales france dette rançon 150 millions états-unis occupation 1915 marine dominicaine massacre persil trujillo cuba coopération médicale minustah choléra diaspora remises caricom' },
+    // Nouvelles pages — Culture
+    { title: 'Histoire de la Musique Haïtienne', url: 'musique-histoire.html', section: 'Culture', keywords: 'musique haïtienne rara kompa compas nemours jean-baptiste rasin boukman eksperyans ram troubadour coupé cloué wyclef fugees tambours vodou méringue' },
+    // Nouvelles pages — Géographie
+    { title: 'Les 10 Départements d\'Haïti', url: 'departements.html', section: 'Géographie', keywords: 'départements haïti ouest artibonite nord nord-est nord-ouest centre sud sud-est grande-anse nippes port-au-prince cap-haïtien gonaïves jérémie les cayes jacmel miragoâne fort-liberté' },
+    { title: 'Département de l\'Ouest', url: 'departements.html#ouest', section: 'Géographie', keywords: 'ouest port-au-prince pétionville péligre kenscoff léogâne artibonite' },
+    { title: 'Département du Nord', url: 'departements.html#nord', section: 'Géographie', keywords: 'nord cap-haïtien citadelle laferrière sans-souci bois caïman milot labadée' },
+    { title: 'Département de la Grande-Anse', url: 'departements.html#grande-anse', section: 'Géographie', keywords: 'grande-anse jérémie poètes alexandre dumas cacao hurrican matthew' },
+    // Nouvelles pages — Langue & Culture
+    { title: 'La Langue Créole Haïtienne', url: 'creole.html', section: 'Culture', keywords: 'créole kreyòl haïtien langue formation africaine grammaire tma marqueurs proverbes degraf valdman ipa phonologie' },
+    { title: 'Proverbes Haïtiens', url: 'creole.html#proverbes', section: 'Culture', keywords: 'proverbes haïtiens dèyè mòn gen mòn sak vid pa kanpe bay kou bliye konstitisyon se papye' },
+    { title: 'Les Symboles Nationaux d\'Haïti', url: 'symboles-nationaux.html', section: 'Culture', keywords: 'symboles nationaux drapeau armoiries hymne dessalinienne catherine flon arcahaie bleu rouge liberté lhérisson geffrard palmiste' },
+    { title: 'La Dessalinienne — Hymne National', url: 'symboles-nationaux.html#hymne', section: 'Culture', keywords: 'dessalinienne hymne national lhérisson geffrard ancêtres pays marchons unis' },
+    { title: 'Glossaire du Créole Haïtien', url: 'glossaire-creole.html', section: 'Culture', keywords: 'glossaire créole vocabulaire mots expressions traduction français anglais salutations bonjou mèsi madan sara konbit sòl lakou' },
+    // Nouvelles pages — Portail
+    { title: 'Quiz — Connaissez-vous Haïti ?', url: 'quiz.html', section: 'Portail', keywords: 'quiz haïti connaissances questions histoire culture géographie société test éducation interactif' },
   ];
 
   function initSearch() {
