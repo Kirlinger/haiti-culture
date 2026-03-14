@@ -2980,3 +2980,55 @@ ul {
   height: 8px !important;
   min-height: 8px !important;
 }
+
+/* Society links — asymmetric navigation block (replaces 6-col grid) */
+.society-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.society-links__lead {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.society-links__rest {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-content: start;
+}
+.society-link {
+  display: block;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.society-link:hover {
+  border-color: var(--blue);
+  box-shadow: var(--shadow-sm);
+}
+.society-link--featured {
+  background: var(--bg-soft);
+  border-left: 3px solid var(--red);
+}
+.society-link__label {
+  display: block;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 0.3rem;
+  font-size: 15px;
+}
+.society-link__desc {
+  display: block;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+@media (max-width: 760px) {
+  .society-links { grid-template-columns: 1fr; }
+  .society-links__rest { grid-template-columns: 1fr; }
+}
