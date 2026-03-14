@@ -242,6 +242,13 @@
     { title: 'Glossaire du Créole Haïtien', url: 'glossaire-creole.html', section: 'Culture', keywords: 'glossaire créole vocabulaire mots expressions traduction français anglais salutations bonjou mèsi madan sara konbit sòl lakou' },
     // Nouvelles pages — Portail
     { title: 'Quiz — Connaissez-vous Haïti ?', url: 'quiz.html', section: 'Portail', keywords: 'quiz haïti connaissances questions histoire culture géographie société test éducation interactif' },
+    // Nouvelles pages — Batch 3
+    { title: 'La Déclaration d\'Indépendance de 1804', url: 'declaration-independance.html', section: 'Histoire', keywords: 'déclaration indépendance 1804 gonaïves boisrond-tonnerre dessalines texte intégral analyse document fondateur liberté haïti' },
+    { title: 'Le Marronnage en Haïti', url: 'marronnage.html', section: 'Histoire', keywords: 'marronnage marrons esclaves fugitifs résistance makandal montagnes communautés liberté révolution fouchard fick bois caïman' },
+    { title: 'Le Tap-Tap — L\'Art Mobile d\'Haïti', url: 'tap-tap.html', section: 'Culture', keywords: 'tap-tap transport art mobile peinture bus camion couleurs religion vodou créativité populaire haïti brooklyn smithsonian' },
+    { title: 'Les Origines Africaines d\'Haïti', url: 'origines-africaines.html', section: 'Histoire', keywords: 'origines africaines fon ewe yoruba kongo bantou igbo wolof dahomey bénin nigeria angola sénégal ginen vodou créole thornton fouchard traite négrière' },
+    { title: 'Les Drapo Vodou — Art Sacré', url: 'drapo-vodou.html', section: 'Culture', keywords: 'drapo vodou drapeaux vodou sequins perles vèvè lwa reine drapo bazile jean-louis oleyant art sacré cérémonie brooklyn smithsonian' },
+    { title: 'Jacmel — Capitale Culturelle du Sud', url: 'jacmel.html', section: 'Culture', keywords: 'jacmel ville art carnaval papier-mâché préfète duffaut gingerbread architecture café jaficine festival film cinéma bolívar pétion sud-est' },
   ];
 
   function initSearch() {
