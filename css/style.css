@@ -38,6 +38,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -45,6 +46,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 a {
@@ -2928,6 +2930,9 @@ ul {
   font-weight: 700;
   font-style: normal;
 }
+.researcher-note--analytical::before {
+  content: none;
+}
 
 /* Researcher bio box */
 .researcher-bio {
@@ -3031,4 +3036,199 @@ ul {
 @media (max-width: 760px) {
   .society-links { grid-template-columns: 1fr; }
   .society-links__rest { grid-template-columns: 1fr; }
+}
+
+/* =====================================================
+   📱 MOBILE RESPONSIVE REFINEMENTS — iPhone & Small Screens
+   ===================================================== */
+
+/* ── Prevent horizontal overflow on all elements ────── */
+*, *::before, *::after {
+  max-width: 100%;
+}
+img, video, iframe, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+pre, code {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* ── iPhone-specific scaling fixes ──────────────────── */
+@media (max-width: 390px) {
+  html { font-size: 15px; }
+  .container { padding: 0 14px; }
+
+  .hero__title { font-size: 26px; line-height: 1.25; }
+  .hero__desc  { font-size: 14px; }
+  .hero { padding: 64px 16px 52px; }
+
+  .section { padding: 40px 0; }
+  .page-hero { padding: 44px 0 36px; }
+  .page-hero__title { font-size: 24px; }
+  .section-title { font-size: 22px; }
+
+  .btn { padding: 11px 18px; font-size: 13.5px; }
+  .btn-sm { padding: 8px 14px; font-size: 13px; }
+
+  .stat-item__number { font-size: 32px; }
+  .stats-strip { padding: 40px 0; }
+}
+
+/* ── Navbar hamburger & search icon alignment ────────── */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 4px;
+  }
+  .navbar__logo {
+    flex: 1;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .navbar__toggle {
+    order: 2;
+    flex-shrink: 0;
+  }
+  .search-toggle {
+    order: 3;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+  }
+
+  /* Ensure mobile nav doesn't push content */
+  .navbar__nav {
+    z-index: 999;
+  }
+}
+
+/* ── Typography fixes for readability ───────────────── */
+@media (max-width: 480px) {
+  p, li, dd, blockquote {
+    font-size: 15px;
+    line-height: 1.75;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  h1 { font-size: clamp(22px, 6vw, 36px); }
+  h2 { font-size: clamp(20px, 5vw, 28px); }
+  h3 { font-size: clamp(17px, 4.5vw, 22px); }
+  h4 { font-size: clamp(15px, 4vw, 18px); }
+
+  .section-title  { font-size: clamp(20px, 5.5vw, 26px); }
+  .page-hero__title { font-size: clamp(22px, 6vw, 30px); }
+  .quote-text { font-size: 16px; line-height: 1.65; }
+
+  .researcher-note {
+    font-size: 13.5px;
+    padding: 0.9rem 1.1rem;
+  }
+}
+
+/* ── Card & container fixes ─────────────────────────── */
+@media (max-width: 600px) {
+  .card { margin-bottom: 0; }
+  .card__body { padding: 1.4rem !important; }
+  .card__title { font-size: 1.15rem !important; }
+  .card__desc { font-size: 14.5px; }
+
+  .feature-card { padding: 20px 18px; }
+
+  .cards-staggered { grid-template-columns: 1fr !important; }
+  .cards-staggered .card:first-child { grid-row: auto !important; }
+
+  .two-col,
+  .two-col--wide-left,
+  .two-col--wide-right {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Section & spacing cleanup ──────────────────────── */
+@media (max-width: 768px) {
+  .section { padding: 56px 0; }
+  .section-label { font-size: 11px; letter-spacing: 2px; }
+
+  .editorial-intro { padding: 0; }
+  .editorial-intro p { font-size: 16px; }
+
+  .text-block p { font-size: 15.5px; }
+  .text-block h2 { font-size: clamp(20px, 5vw, 28px); }
+}
+
+/* ── Footer layout on mobile ─────────────────────────── */
+@media (max-width: 480px) {
+  .site-footer { padding: 40px 0 24px; }
+  .footer-grid { gap: 20px; }
+  .footer-editorial { font-size: 11.5px; }
+}
+
+/* ── Scroll progress bar (full width on mobile) ──────── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--gold, #FFD166);
+  z-index: 9999;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* ── Back-to-top button ──────────────────────────────── */
+@media (max-width: 480px) {
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    right: 12px;
+    bottom: 12px;
+  }
+}
+
+/* ── Search overlay on mobile ────────────────────────── */
+@media (max-width: 480px) {
+  .search-overlay__inner {
+    padding: 20px 16px;
+  }
+  .search-input {
+    font-size: 16px; /* prevents iOS auto-zoom on input focus */
+  }
+}
+
+/* ── Timeline mobile ─────────────────────────────────── */
+@media (max-width: 600px) {
+  .timeline::before { left: 14px; }
+  .timeline-item { padding-left: 44px; }
+  .timeline-item::before {
+    left: 6px;
+    width: 16px;
+    height: 16px;
+  }
+  .timeline-item__year { font-size: 12px; }
+  .timeline-item__title { font-size: 17px; }
+}
+
+/* ── Leader/person table mobile ──────────────────────── */
+@media (max-width: 600px) {
+  .leader-table { font-size: 13px; }
+  .leader-table th,
+  .leader-table td { padding: 8px 6px; }
+}
+
+/* ── Navigation dropdown arrow spacing ───────────────── */
+@media (max-width: 768px) {
+  .nav-dropdown__btn { padding-right: 14px; }
 }

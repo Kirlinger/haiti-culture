@@ -2708,3 +2708,168 @@ h1, h2, h3, h4 {
   .evt-item::before    { background: #7BA3FF; border-color: #0E1420; }
   .evt-timeline::before { background: linear-gradient(to bottom, transparent 0%, rgba(100,140,255,0.35) 6%, rgba(100,140,255,0.35) 94%, transparent 100%); }
 }
+
+/* =====================================================
+   📱 PREMIUM MOBILE REFINEMENTS — iPhone Optimization
+   ===================================================== */
+
+/* ── Stats strip on small screens ────────────────────── */
+@media (max-width: 480px) {
+  .stats-strip {
+    padding: 48px 0;
+  }
+  .stats-strip .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 12px;
+  }
+  .stat-item {
+    padding: 4px 12px;
+  }
+  .stat-item__number {
+    font-size: 38px;
+    text-shadow: 0 0 20px rgba(196,146,42,0.4);
+  }
+  .stat-item__label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* ── Hero premium on mobile ──────────────────────────── */
+@media (max-width: 480px) {
+  .hero__badge {
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 6px 14px;
+  }
+  .hero__title {
+    font-size: clamp(28px, 7.5vw, 42px);
+    line-height: 1.22;
+  }
+  .hero__desc {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .hero__buttons {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .hero__buttons .btn {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* ── Section headings premium on mobile ──────────────── */
+@media (max-width: 600px) {
+  .section-headline {
+    font-size: clamp(26px, 7vw, 40px);
+  }
+  .section-sub {
+    font-size: 14.5px;
+  }
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+  }
+}
+
+/* ── Memory cards on mobile ──────────────────────────── */
+@media (max-width: 480px) {
+  .memory-card {
+    padding: 24px 18px;
+  }
+  .memory-card__year {
+    font-size: 32px;
+  }
+  .memory-card__title {
+    font-size: 16px;
+  }
+  .memory-card__desc {
+    font-size: 13.5px;
+  }
+}
+
+/* ── Page hero premium on mobile ─────────────────────── */
+@media (max-width: 480px) {
+  .page-hero-premium {
+    padding: 56px 0 44px;
+    min-height: auto;
+  }
+  .page-hero-premium .page-hero__title {
+    font-size: clamp(24px, 6.5vw, 34px);
+  }
+  .page-hero-premium .page-hero__desc {
+    font-size: 15px;
+  }
+}
+
+/* ── Figure cards on mobile ──────────────────────────── */
+@media (max-width: 480px) {
+  .figure-card {
+    padding: 20px 16px;
+  }
+  .figure-card__name {
+    font-size: 17px;
+  }
+  .figure-card__role {
+    font-size: 11px;
+  }
+  .figure-card__desc {
+    font-size: 13.5px;
+  }
+}
+
+/* ── Lwa preview cards on mobile ─────────────────────── */
+@media (max-width: 480px) {
+  .lwa-preview-card {
+    padding: 20px 14px;
+  }
+  .lwa-preview-card__symbol {
+    font-size: 40px;
+  }
+  .lwa-preview-card__name {
+    font-size: 17px;
+  }
+}
+
+/* ── Researcher bio on mobile ────────────────────────── */
+@media (max-width: 480px) {
+  .researcher-bio {
+    padding: 1.6rem 1.2rem;
+    gap: 20px;
+  }
+  .researcher-bio__text h2 {
+    font-size: 1.2rem;
+  }
+  .researcher-bio__text p {
+    font-size: 14.5px;
+  }
+}
+
+/* ── Society links on mobile ─────────────────────────── */
+@media (max-width: 480px) {
+  .society-link {
+    padding: 1rem 1.1rem;
+  }
+  .society-link__label {
+    font-size: 14px;
+  }
+  .society-link__desc {
+    font-size: 13px;
+  }
+}
+
+/* ── CTA section premium mobile ─────────────────────── */
+@media (max-width: 480px) {
+  .cta-section-premium {
+    padding: 56px 0;
+  }
+  .cta-section-premium h2 {
+    font-size: clamp(22px, 6vw, 30px);
+  }
+  .cta-section-premium p {
+    font-size: 15px;
+  }
+}

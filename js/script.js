@@ -122,19 +122,30 @@
         var el = entry.target;
         var target = parseInt(el.dataset.count, 10);
         var suffix = el.dataset.suffix || '';
-        var duration = 1600;
-        var step = Math.ceil(target / (duration / 16));
-        var current = 0;
+        var duration = 1800;
+        var startTime = null;
 
-        var timer = setInterval(function () {
-          current = Math.min(current + step, target);
-          el.textContent = current.toLocaleString() + suffix;
-          if (current >= target) clearInterval(timer);
-        }, 16);
+        function easeOutQuart(t) {
+          return 1 - Math.pow(1 - t, 4);
+        }
 
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var elapsed = timestamp - startTime;
+          var progress = Math.min(elapsed / duration, 1);
+          var current = Math.round(easeOutQuart(progress) * target);
+          el.textContent = current.toLocaleString('fr-FR') + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = target.toLocaleString('fr-FR') + suffix;
+          }
+        }
+
+        requestAnimationFrame(step);
         observer.unobserve(el);
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.3 });
 
     counters.forEach(function (el) {
       observer.observe(el);
