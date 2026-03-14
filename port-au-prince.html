@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Port-au-Prince — Histoire, Culture et Géographie | République d'Haïti</title>
+  <meta name="description" content="Fondée en 1749 par les colons français, Port-au-Prince est le cœur politique, économique et culturel d'Haïti — une ville marquée par les révolutions, les tremblements de terre et une résilience sans fin." />
+  <meta name="author" content="RépubliqueHaïti.org" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+              <a href="institutions.html">Institutions</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Société ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture-vivante.html">Culture Vivante</a>
+              <a href="creativite-populaire.html">Créativité Populaire</a>
+              <a href="diaspora-engagee.html">Diaspora Engagée</a>
+              <a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a>
+              <a href="memoire-universelle.html">Mémoire Universelle</a>
+              <a href="patrimoine-national.html">Patrimoine National</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Enjeux ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Fragilité Économique</a>
+              <a href="inegalites-sociales.html">Inégalités Sociales</a>
+              <a href="instabilite-politique.html">Instabilité Politique</a>
+              <a href="pressions-securitaires.html">Pressions Sécuritaires</a>
+              <a href="services-essentiels.html">Services Essentiels</a>
+              <a href="capacite-adaptation.html">Capacité d'Adaptation</a>
+              <a href="reconstruction-durable.html">Reconstruction Durable</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+              <a href="bibliography.html">Bibliographie</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : histoire, culture, villes…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Capitale Nationale</p>
+      <h1 class="page-hero__title">Port-au-Prince</h1>
+      <p class="page-hero__desc">Fondée en 1749 par les colons français, Port-au-Prince est le cœur politique, économique et culturel d'Haïti — une ville marquée par les révolutions, les tremblements de terre et une résilience sans fin.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <a href="villes.html">Villes d'Haïti</a>
+        <span>/</span>
+        <span>Port-au-Prince</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Fondation &amp; Histoire</p>
+      <h2>Port-au-Prince, capitale d'un monde en perpétuel mouvement</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            La ville naît en 1749 sous le nom de « L'Hôpital », modeste poste de mouillage au fond d'une baie que les marins français apprécient pour ses eaux calmes. Le nom Port-au-Prince apparaît rapidement, tiré d'un navire marchand — le <em>Prince</em> — qui y ancrait régulièrement. En 1770, les autorités coloniales font le choix stratégique d'en faire la capitale de Saint-Domingue, au détriment du Cap-Français au nord. C'est un choix géographique autant qu'administratif : la baie est accessible, le terrain plat autour de la plaine du Cul-de-Sac permet une expansion rapide. La ville coloniale s'organise autour d'une grille régulière, avec ses cases en bois, ses maisons de maîtres et son port actif qui exporte sucre, café et indigo vers Bordeaux et Nantes.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            La période révolutionnaire marque profondément la ville. En 1799, le général André Rigaud, dans le cadre de la « Guerre des couteaux » qui l'oppose à Toussaint Louverture, assiège la ville sans parvenir à la prendre. Les Français y maintiennent une présence jusqu'en 1803, date à laquelle l'armée de Leclerc, décimée par la fièvre jaune et les combats, se prépare à l'évacuation. La cité entre dans l'ère haïtienne sans avoir été détruite comme le Cap, mais avec ses équilibres sociaux complètement recomposés par une décennie de guerre civile et de révolution.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Le XIXe siècle voit la ville se transformer lentement. L'architecture dite « gingerbread » — ces maisons en bois à ornements découpés, balcons ajourés et toits en dentelle — fleurit à partir des années 1880, importée en partie par les influences de la Nouvelle-Orléans et des artisans allemands et syro-libanais qui s'établissent dans la ville. Cette communauté marchande étrangère — les « Allemands » comme les appelle la mémoire populaire — joue un rôle économique considérable, au point que le gouvernement haïtien finira par légiférer pour restreindre leurs activités commerciales. Des incendies répétés, celui de 1866 notamment, détruisent une grande partie du tissu colonial d'origine. Les maisons en bois brûlent vite.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            La géographie sociale de Port-au-Prince est inséparable de la topographie. À partir des années 1950 sous Magloire, puis sous les Duvalier, les classes aisées migrent progressivement vers Pétionville, commune perchée à 450 mètres d'altitude sur les flancs du Massif de la Selle. L'équation est simple et cruelle : dans une ville tropicale sans infrastructure d'assainissement, l'altitude apporte les brises, l'éloignement des inondations, et la séparation physique des quartiers pauvres. « Plus on monte, plus on est riche » — cette formule, répétée par des dizaines d'observateurs depuis Madeleine Sylvain-Bouchereau jusqu'à Paul Farmer, résume une géographie d'exclusion que l'architecte Albert Mangonès a documentée avec une précision douloureuse.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            L'historien Michel-Rolph Trouillot, dans <em>Haiti: State Against Nation</em> (1990), note que la centralisation extrême autour de Port-au-Prince n'est pas un accident administratif mais le produit d'une stratégie délibérée des élites successives pour contrôler les ressources économiques et politiques du pays depuis un point unique. Cette concentration a rendu le pays particulièrement vulnérable aux catastrophes localisées — comme le prouvera tragiquement le séisme de 2010.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>· Fondée en 1749 comme « L'Hôpital »</li>
+              <li>· Capitale de Saint-Domingue depuis 1770</li>
+              <li>· Département : Ouest</li>
+              <li>· Population : ~1,2 million (aire métro ~3,5 M)</li>
+              <li>· Altitude : 0 – 900 m (Pétionville)</li>
+              <li>· Séisme du 12 janvier 2010 : magnitude 7,0</li>
+              <li>· Victimes du séisme : 220 000+</li>
+              <li>· Marché de Fer : conçu par Eiffel &amp; Cie</li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Quartiers principaux</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Pétionville (quartier résidentiel et commercial)</li>
+              <li>· Cité Soleil (quartier populaire, nord)</li>
+              <li>· Delmas (axe commercial central)</li>
+              <li>· Tabarre (zone périurbaine nord-est)</li>
+              <li>· Carrefour (commune au sud)</li>
+              <li>· Pacot (galeries d'art, maisons gingerbread)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Le Marché de Fer et les hauts lieux de la ville</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Parmi les monuments qui ont structuré l'identité urbaine de Port-au-Prince, le Marché de Fer — ou Marché Vallières — mérite une attention particulière. Commandé dans les années 1890 par le gouvernement haïtien à une entreprise métallurgique française, il est souvent attribué, à tort ou à raison, aux ateliers d'Eiffel ou à son cercle d'ingénieurs, qui avaient la capacité de fabriquer de telles structures préfabriquées en fonte. Ses coupoles à bulbes orientalisantes le rendent immédiatement reconnaissable. Détérioré au fil des décennies, il a été rénové grâce au financement de la Digicel Foundation à la suite du séisme. Le Champ de Mars, grande esplanade civique au cœur de la ville, est le pendant politique de ce symbole commercial : c'est là que se tiennent les cérémonies nationales, que se dressent les statues de Dessalines, Pétion et Christophe, et que les mouvements populaires ont historiquement choisi de manifester.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Le 12 janvier 2010</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        À 16h53, heure locale, un séisme de magnitude 7,0 dont l'épicentre se situe à 25 kilomètres à l'ouest de Port-au-Prince ravage la capitale en moins de quarante secondes. Plus de 220 000 personnes périssent selon les estimations les plus sérieuses — certaines sources officielles haïtiennes avancent le chiffre de 316 000, contesté par des sismologues mais révélateur de l'ampleur ressentie par une population entière. La Cathédrale Notre-Dame, le Palais National, le siège de la MINUSTAH, des dizaines de lycées et d'hôpitaux s'effondrent. Les causes de la catastrophe sont à la fois géologiques — la faille d'Enriquillo-Plantain Garden était sous tension depuis des siècles — et humaines : la construction sans normes parasismiques, la surpopulation de la capitale, l'absence d'urbanisme régulateur ont transformé un séisme majeur en catastrophe d'une ampleur sans précédent dans l'hémisphère occidental au XXe siècle.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        La reconstruction qui suivit fut marquée par des controverses profondes. Des milliards de dollars d'aide internationale furent versés, en grande partie gérés hors des institutions haïtiennes par une Commission Intérimaire pour la Reconstruction d'Haïti co-présidée par Bill Clinton. Les résultats furent inégaux : certaines infrastructures furent reconstruites, mais la grande majorité des déplacés — plus d'un million à l'origine — attendirent des années dans des camps de fortune. L'historien Laurent Dubois, dans <em>Haiti: The Aftershocks of History</em> (2012), a analysé comment cette réponse internationale reproduisait des schémas de dépendance et de mise sous tutelle déjà visibles depuis l'occupation américaine.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">La vie culturelle : tap-taps, galeries, Théâtre de Verdure</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Port-au-Prince a produit une culture urbaine d'une vitalité remarquable malgré — et à travers — ses crises. Le tap-tap, minibus collectif peint à l'image des saints, des politiciens, des figures populaires et des versets bibliques, est une forme d'art public ambulant que les spécialistes du design ont comparé aux jeepneys philippins et aux camions afghans. Le quartier de Pacot, avec ses maisons gingerbread rescapées, abrite des galeries d'art comme le Centre d'Art fondé en 1944 par DeWitt Peters — un professeur américain qui découvrit et encouragea des peintres comme Hector Hyppolite, Rigaud Benoit et Philomé Obin. Le Théâtre de Verdure, inauguré dans les années 1950, fut pendant des décennies le principal espace de spectacle vivant de la ville : concerts de Jazz des Jeunes, représentations théâtrales, soirées de compas direct. Sa dégradation progressive est l'image fidèle du délabrement des espaces culturels publics sous l'effet conjugué de la pauvreté institutionnelle et de la privatisation du divertissement.
+      </p>
+
+      <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:2rem;margin-bottom:2.5rem;">
+        <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Voir aussi</p>
+        <ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2.2;">
+          <li>→ <a href="villes.html" style="color:#fff;">Retour aux Villes d'Haïti</a></li>
+          <li>→ <a href="history.html" style="color:#fff;">Histoire générale d'Haïti</a></li>
+          <li>→ <a href="heroes.html" style="color:#fff;">Héros de la Révolution</a></li>
+          <li>→ <a href="patrimoine-national.html" style="color:#fff;">Patrimoine National</a></li>
+          <li>→ <a href="reconstruction-durable.html" style="color:#fff;">Reconstruction Durable</a></li>
+          <li>→ <a href="cap-haitien.html" style="color:#fff;">Cap-Haïtien</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            République d'Haïti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+            <li><a href="encyclopedia.html">Encyclopédie</a></li>
+            <li><a href="archives.html">Archives</a></li>
+            <li><a href="bibliography.html">Bibliographie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Culture &amp; Société</h4>
+          <ul>
+            <li><a href="culture.html">Culture &amp; Arts</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastronomie</a></li>
+            <li><a href="culture-vivante.html">Culture Vivante</a></li>
+            <li><a href="creativite-populaire.html">Créativité Populaire</a></li>
+            <li><a href="diaspora-engagee.html">Diaspora Engagée</a></li>
+            <li><a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire &amp; Institutions</h4>
+          <ul>
+            <li><a href="timeline.html">Chronologie</a></li>
+            <li><a href="heroes.html">Héros Nationaux</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="constitution.html">Constitution</a></li>
+            <li><a href="institutions.html">Institutions</a></li>
+            <li><a href="patrimoine-national.html">Patrimoine National</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+            <li><a href="license.html">Mentions Légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est né d'une frustration personnelle&#160;: trop d'ouvrages sur Haïti sont écrits de l'extérieur. J'ai voulu rassembler les sources haïtiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur indépendant.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Saint-Marc — Histoire, Culture et Géographie | République d'Haïti</title>
+  <meta name="description" content="Ville portuaire de l'Artibonite, Saint-Marc est un carrefour commercial et historique — lieu d'une des grandes batailles révolutionnaires et nœud du réseau commercial de l'intérieur haïtien." />
+  <meta name="author" content="RépubliqueHaïti.org" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+              <a href="institutions.html">Institutions</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Société ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture-vivante.html">Culture Vivante</a>
+              <a href="creativite-populaire.html">Créativité Populaire</a>
+              <a href="diaspora-engagee.html">Diaspora Engagée</a>
+              <a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a>
+              <a href="memoire-universelle.html">Mémoire Universelle</a>
+              <a href="patrimoine-national.html">Patrimoine National</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Enjeux ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Fragilité Économique</a>
+              <a href="inegalites-sociales.html">Inégalités Sociales</a>
+              <a href="instabilite-politique.html">Instabilité Politique</a>
+              <a href="pressions-securitaires.html">Pressions Sécuritaires</a>
+              <a href="services-essentiels.html">Services Essentiels</a>
+              <a href="capacite-adaptation.html">Capacité d'Adaptation</a>
+              <a href="reconstruction-durable.html">Reconstruction Durable</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+              <a href="bibliography.html">Bibliographie</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : histoire, culture, villes…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Artibonite</p>
+      <h1 class="page-hero__title">Saint-Marc</h1>
+      <p class="page-hero__desc">Ville portuaire de l'Artibonite, Saint-Marc est un carrefour commercial et historique — lieu d'une des grandes batailles révolutionnaires et nœud du réseau commercial de l'intérieur haïtien.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <a href="villes.html">Villes d'Haïti</a>
+        <span>/</span>
+        <span>Saint-Marc</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Commerce, Révolution &amp; Tragédie</p>
+      <h2>Saint-Marc, porte de l'Artibonite</h2>
+
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Saint-Marc s'étend sur la rive orientale du Golfe des Gonaïves, dans le département de l'Artibonite. Son port naturel, protégé par une baie peu profonde, en a fait dès l'époque coloniale un nœud commercial essentiel entre l'arrière-pays agricole — la vallée de l'Artibonite, grenier à riz et à maïs d'Haïti — et les circuits maritimes atlantiques. Sous Saint-Domingue, la ville exportait sucre, coton et indigo produits dans les plaines irriguées de l'Artibonite. Après l'indépendance, cette vocation commerciale se maintient et s'adapte : Saint-Marc reste un port actif qui reçoit des importations et exporte des produits agricoles de l'intérieur.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            Pendant la période révolutionnaire, Saint-Marc est le théâtre de combats significatifs. En 1800, lors de la « Guerre des couteaux » opposant Toussaint Louverture au général Rigaud, la ville change plusieurs fois de mains. C'est aussi depuis Saint-Marc que certaines unités de Toussaint maintinrent une présence militaire dans l'Artibonite, contrôlant les accès à la vallée. La bataille de la Crête-à-Pierrot en 1802 — l'un des engagements les plus célèbres de la guerre d'indépendance, où un petit nombre de soldats haïtiens résistèrent pendant des semaines à une armée française bien supérieure en nombre — se déroula dans les environs, à Dessalines et non à Saint-Marc directement, mais la ville servit de base logistique et de passage obligé pour les deux armées.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+            La vallée de l'Artibonite, dont Saint-Marc est le débouché maritime, est la principale zone de production rizicole d'Haïti. Depuis les années 1970, le riz haïtien est entré en compétition directe avec le riz américain subventionné, importé à des prix artificiellement bas dans le cadre des accords de libre-échange négociés sous pression du FMI et de la Banque Mondiale dans les années 1980-1990. Les conséquences pour les riziculteurs de l'Artibonite ont été désastreuses : incapables de concurrencer des prix maintenus artificiellement bas par des subventions américaines, des centaines de milliers de paysans ont abandonné leurs terres pour rejoindre les bidonvilles de Port-au-Prince. Saint-Marc a été l'un des témoins directs de cet exode agricole.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            En octobre 2010, une épidémie de choléra éclate dans l'Artibonite, à proximité de Saint-Marc. Les enquêtes épidémiologiques — notamment celles du professeur Renaud Piarroux de l'Université de Marseille et, plus tard, l'enquête indépendante commandée par l'ONU — établissent que la source de la contamination était une base de la MINUSTAH (Mission des Nations Unies pour la Stabilisation en Haïti) au bord de la rivière Meye, tributaire de l'Artibonite, dont les systèmes sanitaires évacuaient des eaux usées non traitées directement dans le cours d'eau. Le choléra, maladie absente d'Haïti depuis plus d'un siècle, tua plus de 10 000 Haïtiens en quelques années et en contamina plus de 800 000. L'ONU refusa pendant des années toute responsabilité, avant de reconnaître formellement en 2016, sous Ban Ki-moon, son « rôle » dans l'introduction de la maladie.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+              <li>· Département : Artibonite</li>
+              <li>· Port sur le Golfe des Gonaïves</li>
+              <li>· Porte de la vallée agricole de l'Artibonite</li>
+              <li>· Crête-à-Pierrot : bataille de 1802 (environs)</li>
+              <li>· Choléra 2010 : source MINUSTAH/Artibonite</li>
+              <li>· 10 000+ morts du choléra en Haïti</li>
+              <li>· ONU reconnaît sa responsabilité : 2016</li>
+            </ul>
+          </div>
+          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Économie régionale</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Riz : culture principale de la vallée</li>
+              <li>· Maïs, haricots, sorgho</li>
+              <li>· Commerce de transit (intérieur → port)</li>
+              <li>· Pêche artisanale côtière</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">L'Artibonite, grenier d'Haïti</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        La plaine de l'Artibonite s'étend sur environ 550 km² de terres alluviales irriguées par le fleuve du même nom, le plus long d'Haïti. Le barrage de Péligre, construit dans les années 1950, alimente un réseau d'irrigation qui, en théorie, permet deux à trois cycles de culture annuels. En pratique, la dégradation du réseau d'irrigation — canaux non entretenus, prises d'eau obstruées, gestion conflictuelle de l'eau entre les différentes associations d'irrigants — réduit les rendements bien en deçà du potentiel. La production rizicole de l'Artibonite couvre néanmoins une part significative de la consommation nationale, et les marchés de Saint-Marc, de Dessalines et de La Chapelle restent parmi les plus actifs du pays pour les échanges de produits agricoles.
+      </p>
+
+      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Le choléra de 2010 et la responsabilité internationale</h3>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        L'épidémie de choléra déclenchée en 2010 près de Saint-Marc est l'une des plus grandes catastrophes sanitaires du XXIe siècle dans les Amériques. Elle illustre une vérité douloureuse sur la condition haïtienne : les institutions et les puissances étrangères qui prétendent aider Haïti peuvent simultanément lui causer des torts considérables, et les mécanismes de responsabilité internationale sont insuffisants pour contraindre ces acteurs à répondre de leurs actes. La lutte juridique menée par l'Institute for Justice and Democracy in Haiti (IJDH) et l'avocate Beatrice Lindstrom contre l'ONU, devant les tribunaux américains, échoua à obtenir des réparations directes — l'ONU revendiquant une immunité diplomatique absolue. L'admission de « responsabilité morale » de 2016 s'est accompagnée d'un fonds de 400 millions de dollars promis pour les victimes, dont une fraction seulement a été effectivement versée.
+      </p>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+        Saint-Marc vit aujourd'hui de son commerce portuaire, de la production agricole de son arrière-pays et d'une économie informelle intense. La ville n'a ni le prestige historique de Gonaïves ni la notoriété culturelle de Jacmel, mais elle joue un rôle structurant dans la vie économique de la région Artibonite — qui reste, avec ses rizières, ses marchés et ses traditions paysannes, l'un des lieux où l'on comprend le mieux comment Haïti se nourrit et comment elle survit.
+      </p>
+
+      <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:2rem;margin-bottom:2.5rem;">
+        <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Voir aussi</p>
+        <ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2.2;">
+          <li>→ <a href="villes.html" style="color:#fff;">Retour aux Villes d'Haïti</a></li>
+          <li>→ <a href="history.html" style="color:#fff;">Histoire générale d'Haïti</a></li>
+          <li>→ <a href="services-essentiels.html" style="color:#fff;">Services Essentiels</a></li>
+          <li>→ <a href="fragilite-economique.html" style="color:#fff;">Fragilité Économique</a></li>
+          <li>→ <a href="gonaives.html" style="color:#fff;">Gonaïves — Cité de l'Indépendance</a></li>
+          <li>→ <a href="hinche.html" style="color:#fff;">Hinche — Plateau Central</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            République d'Haïti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+            <li><a href="encyclopedia.html">Encyclopédie</a></li>
+            <li><a href="archives.html">Archives</a></li>
+            <li><a href="bibliography.html">Bibliographie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Culture &amp; Société</h4>
+          <ul>
+            <li><a href="culture.html">Culture &amp; Arts</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastronomie</a></li>
+            <li><a href="culture-vivante.html">Culture Vivante</a></li>
+            <li><a href="creativite-populaire.html">Créativité Populaire</a></li>
+            <li><a href="diaspora-engagee.html">Diaspora Engagée</a></li>
+            <li><a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire &amp; Institutions</h4>
+          <ul>
+            <li><a href="timeline.html">Chronologie</a></li>
+            <li><a href="heroes.html">Héros Nationaux</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="constitution.html">Constitution</a></li>
+            <li><a href="institutions.html">Institutions</a></li>
+            <li><a href="patrimoine-national.html">Patrimoine National</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+            <li><a href="license.html">Mentions Légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est né d'une frustration personnelle&#160;: trop d'ouvrages sur Haïti sont écrits de l'extérieur. J'ai voulu rassembler les sources haïtiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur indépendant.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
+</body>
+</html>
