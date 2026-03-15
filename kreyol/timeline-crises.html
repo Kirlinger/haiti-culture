@@ -537,26 +537,25 @@
   var sw=document.getElementById('langSwitcher');
   if(!sw)return;
   var btn=sw.querySelector('.lang-switcher__btn');
+  var touched=false;
   function toggleMenu(e){
     e.preventDefault();
     e.stopPropagation();
+    if(e.type==='touchend'){touched=true;}
+    else if(e.type==='click'&&touched){touched=false;return;}
     var isOpen=sw.classList.toggle('open');
     btn.setAttribute('aria-expanded',String(isOpen));
   }
   btn.addEventListener('click',toggleMenu);
   btn.addEventListener('touchend',toggleMenu);
-  document.addEventListener('click',function(e){
+  function closeMenu(e){
     if(!sw.contains(e.target)){
       sw.classList.remove('open');
       btn.setAttribute('aria-expanded','false');
     }
-  });
-  document.addEventListener('touchend',function(e){
-    if(!sw.contains(e.target)){
-      sw.classList.remove('open');
-      btn.setAttribute('aria-expanded','false');
-    }
-  });
+  }
+  document.addEventListener('click',closeMenu);
+  document.addEventListener('touchend',closeMenu);
   sw.querySelectorAll('.lang-option').forEach(function(a){
     a.addEventListener('click',function(e){
       e.preventDefault();
