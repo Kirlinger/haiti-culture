@@ -343,7 +343,7 @@ h1, h2, h3, h4 {
 }
 
 /* Mobile nav */
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   .navbar__nav {
     background: linear-gradient(160deg, #04091A, #081330);
     border-top: 1px solid rgba(196,146,42,0.12);
