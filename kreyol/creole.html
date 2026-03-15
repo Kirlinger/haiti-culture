@@ -1,783 +1,830 @@
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#00209F" />
-  <title>La Lang Kreyòl Haïtienne | RepiblikHaïti.org</title>
-  <meta name="description" content="Le créole ayisyen — son istwa, sa structure grammaticale, ses proverbes ak son rôle dans l'idantite nasyonal nan pèp haïtien." />
-  <meta name="author" content="RepiblikHaïti.org" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="RepiblikHaïti.org" />
-  <meta property="og:title" content="La Lang Kreyòl Haïtienne | RepiblikHaïti.org" />
-  <meta property="og:description" content="Le créole ayisyen — son istwa, sa structure grammaticale, ses proverbes ak son rôle dans l'idantite nasyonal nan pèp haïtien." />
-  <meta property="og:url" content="https://republiquehaiti.org/creole.html" />
-  <meta property="og:locale" content="ht_HT" />
-  <link rel="canonical" href="https://republiquehaiti.org/creole.html" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/premium.css" />
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Lang Kreyòl Haïtienne | RepiblikHaïti.org</title>
+ <meta name="description" content="Le créole ayisyen — son istwa, sa structure grammaticale, ses proverbes ak son rôle dans l'idantite nasyonal nan pèp haïtien." />
+ <meta name="author" content="RepiblikHaïti.org" />
+ <meta property="og:type" content="website" />
+ <meta property="og:site_name" content="RepiblikHaïti.org" />
+ <meta property="og:title" content="La Lang Kreyòl Haïtienne | RepiblikHaïti.org" />
+ <meta property="og:description" content="Le créole ayisyen — son istwa, sa structure grammaticale, ses proverbes ak son rôle dans l'idantite nasyonal nan pèp haïtien." />
+ <meta property="og:url" content="https://republiquehaiti.org/creole.html" />
+ <meta property="og:locale" content="ht_HT" />
+ <link rel="canonical" href="https://republiquehaiti.org/creole.html" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher */
+.lang-switcher { position: relative; margin-left: 1rem; }
+.lang-switcher__btn { background: none; border: 1px solid rgba(255,255,255,0.3); color: inherit; padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: border-color 0.2s; }
+.lang-switcher__btn:hover { border-color: rgba(255,255,255,0.7); }
+.lang-switcher__menu { display: none; position: absolute; top: 110%; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-width: 150px; z-index: 1000; overflow: hidden; }
+.lang-switcher.open .lang-switcher__menu { display: block; }
+.lang-option { display: block; padding: 0.6rem 1rem; color: #333; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+.lang-option:hover { background: #f0f4ff; }
+.lang-option.active { background: #e8f0fe; font-weight: 600; }
+@media (max-width: 768px) { .lang-switcher { margin-left: 0; margin-top: 0.5rem; } .lang-switcher__menu { right: auto; left: 0; } }
+</style>
 </head>
 <body>
 
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Back to top -->
-  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
 
-  <header class="site-header">
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="Akèy">
-          Repiblik Ayiti
-        </a>
-        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
-          <a href="index.html">Akèy</a>
-          <a href="about.html">Soswa Nou</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="history.html">Istwa Jeneral</a>
-              <a href="timeline.html">Kwonolouji</a>
-              <a href="heroes.html">Ewò Nasyonal</a>
-              <a href="lidès.html">Lidè</a>
-              <a href="konstitisyon.html">Konstitisyon</a>
-              <a href="enstitisyons.html">Enstitisyon</a>
-              <a href="presidents.html">Pwofil Prezidan yo</a>
-              <a href="revolution-batays.html">Batay Revolisyon an</a>
-              <a href="relations-internationales.html">Relasyon Entènasyonal</a>
-            </div>
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ <a href="presidents.html">Pwofil Prezidan yo</a>
+ <a href="revolution-batays.html">Batay Revolisyon an</a>
+ <a href="relations-internationales.html">Relasyon Entènasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ <a href="atiss.html">Atis Vizyèl</a>
+ <a href="mizik-istwa.html">Istwa Mizik</a>
+ <a href="litterature.html">Literati</a>
+ <a href="creole.html">Lang Kreyòl</a>
+ <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
+ <a href="glossaire-creole.html">Glosè Kreyòl</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="departements.html">10 Depatman yo</a>
+ <a href="geographie.html">Jeyografi Fizik</a>
+ <a href="anviwonman.html">Anviwonman</a>
+ <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
+ <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ <a href="fanm-haiti.html">Fanm d'Haïti</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ <a href="agrikilti.html">Agrikilti</a>
+ <a href="education-haiti.html">Edikasyon</a>
+ <a href="aide-internationale.html">Aide Internationale</a>
+ <a href="economie-informelle.html">Ekonomi Informelle</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
+ <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang">
+            🇭🇹 Kreyòl ▾
+          </button>
+          <div class="lang-switcher__menu">
+            <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
+            <a href="#" class="lang-option active" data-lang="ht">🇭🇹 Kreyòl</a>
           </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti.html">Kilti &amp; Atizay</a>
-              <a href="vodou.html">Vodou</a>
-              <a href="lwa.html">Lwa yo</a>
-              <a href="gastronomy.html">Gastwonomi</a>
-              <a href="holidays.html">Joswa Ferye</a>
-              <a href="atiss.html">Atis Vizyèl</a>
-              <a href="mizik-istwa.html">Istwa Mizik</a>
-              <a href="litterature.html">Literati</a>
-              <a href="creole.html">Lang Kreyòl</a>
-              <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
-              <a href="glossaire-creole.html">Glosè Kreyòl</a>
-            </div>
-          </div>
-          <a href="tourism.html">Touris</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="departements.html">10 Depatman yo</a>
-              <a href="geographie.html">Jeyografi Fizik</a>
-              <a href="anviwonman.html">Anviwonman</a>
-              <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
-              <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti-vivante.html">Kilti Vivan</a>
-              <a href="creativite-populaire.html">Kreyativite Popilè</a>
-              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
-              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
-              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
-              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
-              <a href="fanm-haiti.html">Fanm d'Haïti</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
-              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
-              <a href="instabilite-politik.html">Enstabilite Politik</a>
-              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
-              <a href="services-essentiels.html">Sèvis Esansyèl</a>
-              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
-              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
-              <a href="agrikilti.html">Agrikilti</a>
-              <a href="education-haiti.html">Edikasyon</a>
-              <a href="aide-internationale.html">Aide Internationale</a>
-              <a href="economie-informelle.html">Ekonomi Informelle</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="encyclopedia.html">Ansiklopedi</a>
-              <a href="archives.html">Achiv</a>
-              <a href="bibliography.html">Bibliyografi</a>
-              <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
-              <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
-            </div>
-          </div>
-          <a href="contact.html">Kontak</a>
-        </nav>
+        </div>
         <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
 
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
-    <div class="search-overlay__inner">
-      <div class="search-overlay__header">
-        <div class="search-input-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : créole, proverbes, grammaire…" autocomplete="off" />
-        </div>
-        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
-      </div>
-      <div class="search-results" id="searchResults" aria-live="polite"></div>
-    </div>
-  </div>
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : créole, proverbes, grammaire…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
 
-  <section class="page-hero page-hero--history">
-    <div class="container">
-      <p class="page-hero__label">Kilti &amp; Lang</p>
-      <h1 class="page-hero__title">La Lang Kreyòl Haïtienne</h1>
-      <p class="page-hero__desc">Le kreyòl ayisyen se la lang maternelle de tout les Haïtiens. Né au carrefour nan Afrique, nan Europe ak nan Amériques, il se byen plis qu'yon outil de communication : c'se l'âme nan pèp haïtien.</p>
-    </div>
-  </section>
+ <section class="page-hero page-hero--history">
+ <div class="container">
+ <p class="page-hero__label">Kilti &amp; Lang</p>
+ <h1 class="page-hero__title">Lang Kreyòl Haïtienne</h1>
+ <p class="page-hero__desc">kreyòl ayisyen lang maternelle nan tout Haïtiens. Né nan carrefour nan Afrique, nan Europe ak nan Amériques, li byen plis ke yon outil nan communication : c'se l'âme nan pèp ayisyen.</p>
+ </div>
+ </section>
 
-  <div class="breadcrumb">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <a href="index.html">Akèy</a>
-        <span>/</span>
-        <a href="kilti.html">Kilti</a>
-        <span>/</span>
-        <span>Lang Kreyòl</span>
-      </nav>
-    </div>
-  </div>
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <a href="kilti.html">Kilti</a>
+ <span>/</span>
+ <span>Lang Kreyòl</span>
+ </nav>
+ </div>
+ </div>
 
-  <!-- ORIGINES ET FORMATION -->
-  <section class="section" id="origines">
-    <div class="container">
-      <div class="editorial-intro">
-        <p class="section-label">Naissance d'yon Lang</p>
-        <h2 style="font-size:clamp(24px,3.5vw,38px);font-weight:800;color:var(--blue);margin-bottom:1.2rem;line-height:1.2;">Origines ak Formation nan Créole Haïtien</h2>
-        <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
-          La naissance nan créole ayisyen se l'yon nan gran istwas linguistiques nan mond — ak l'yon nan mwens byen comprises. Au XVII<sup>e</sup> ak XVIII<sup>e</sup> syèk, koloni an fransèz de Saint-Domingue rassemblait soswa menm territoire nan dizaines de pèps afriken arrachés à nan sosyetes ak nan langs radicalement différentes : les Fon ak les Ewe nan Dahomey, les Yoruba ak les Kongo d'Afrique centrale, les Mandé ak les Wolof d'Afrique nan Ouest. Aucyon de sa yo groupes ne partageait de lang commune. Pour communiquer — entre eux ak avec kolon yo fransè — il a fallu construire quelque chose de nouveau.
-        </p>
-        <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
-          Ce « quelque chose de nouvo », c'se kreyòl la haïtien. Les linguistes distinguent plizyè phases de sa a formation. Dans yon premye temps, yon <em>pidgin</em> — yon lang de contact simplifiée, sans locuteurs natifs — a émergé nan interactions forcées nan plantation. Puis, en yon oswa deux générations, ce pidgin s'se <em>créolisé</em> : les timoyon nés dans koloni an l'ont acquis tankoswa lang maternelle, lui donnant yon grammaire stable, yon phonologie complète, ak yon expressivité à part entière. C'se ce processus que les linguistes appellent la créolisation.
-        </p>
-        <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
-          Le fransè kolonyal a fourni l'essentiel nan vocabulaire — environ 90&nbsp;% nan lexique ayisyen se d'étymologie française, menm si les mots ont souvan changé de forme ak de sens. Mais la grammaire, la phonologie, ak la structure sémantique profonde nan créole ayisyen se fortement marquées pa langs africaines. Le linguiste ayisyen Michel DeGraff (Massachusetts Institute of Technology) a consakre yon gran partie de sa carrière à démontrer que kreyòl la n'se pas yon « fransè abîmé » oswa yon lang « déficiente », men yon lang pleinement fonctionnelle ak régie par ses propres règles internes. Le linguiste ameriken Albert Valdman ak le sociolinguiste fransè Robert Chaudenson ont toswa produit nan travaux fondamentaux soswa genèse nan langs créoles à base française.
-        </p>
-        <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
-          Il se enpòtan de souligner yon point qui continue à être mal compris, y compris en Haïti : kreyòl la ayisyen n'se <em>pas</em> yon dialecte nan français, ni yon version simplifiée oswa corrompue de sa a lang. C'se yon lang à part entière, avec ses propres règles morphosyntaxiques, ses propres structures phrastiques, sa pwòp prosodie. Un francophone monolingue ne compran pas kreyòl la haïtien. Les ressemblansa yo lexicales créent yon illusion de proximité qui masque yon divergence grammaticale profonde.
-        </p>
-        <aside class="researcher-note" aria-label="Note de recherche">
-          La linguistique créole a longtemps souffert d'yon biais idéologique : les premières descriptions nan créole haïtien, au XIX<sup>e</sup> syèk, te souvan rédigées par nan auteurs qui le traitaient tankoswa yon « dégradation » nan français. Ce préjugé a eu nan conséquensa yo réelles soswa politiks éducatives haïtiennes. Michel DeGraff a documenté tankount sa yo préjugés persistent dans sèten manuels scolaires ayisyen contemporains — ce qu'il appelle la « linguistique kolonyal ».
-        </aside>
-      </div>
-    </div>
-  </section>
+ <!-- ORIGINES ET FORMATION -->
+ <section class="section" id="origines">
+ <div class="container">
+ <div class="editorial-intro">
+ <p class="section-label">Naissance d'yon Lang</p>
+ <h2 style="font-size:clamp(24px,3.5vw,38px);font-weight:800;color:var(--blue);margin-bottom:1.2rem;line-height:1.2;">Origines ak Formation nan Créole Haïtien</h2>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
+ naissance nan créole ayisyen l'yon nan gran istwas linguistiques nan mond — ak l'yon nan mwens byen comprises. Au XVII<sup>e</sup> ak XVIII<sup>e</sup> syèk, koloni an fransèz nan Saint-Domingue rassemblait soswa menm teritwa nan dizaines nan pèps afriken arrachés à nan sosyetes ak nan langs radicalement diferans : Fon ak Ewe nan Dahomey, Yoruba ak Kongo d'Afrique centrale, Mandé ak Wolof d'Afrique nan Ouest. Aucyon nan li yo groupes pa partageait nan lang commune. Pour communiquer — ant eux ak ak kolon yo fransè — li a fallu construire quelque chose nan nouvo.
+ </p>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
+ Ce « quelque chose nan nouvo », c'se kreyòl ayisyen. linguistes distinguent plizyè phases nan li a formation. Dans yon premye temps, yon <em>pidgin</em> — yon lang nan contact simplifiée, san locuteurs natifs — a émergé nan interactions forcées nan plantation. Puis, en yon oswa deux générations, li a pidgin s'se <em>créolisé</em> : timoyon nés nan koloni an l'ont acquis tankoswa lang maternelle, lui donnant yon grammaire stable, yon phonologie complète, ak yon expressivité à part entière. C'se li a processus ke linguistes appellent créolisation.
+ </p>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
+ fransè kolonyal a fourni l'essentiel nan vocabulaire — anviwon 90&nbsp;% nan lexique ayisyen d'étymologie fransèz, menm si mo gen souvan changé nan fòm ak nan sens. Mais grammaire, phonologie, ak structure sémantique pwofon nan créole ayisyen fortement marquées pa langs afrikens. linguiste ayisyen Michel DeGraff (Massachusetts Institute of Technology) a consakre yon gran pati nan li carrière à démontrer ke kreyòl pa se pa yon « fransè abîmé » oswa yon lang « déficiente », men yon lang pleinement fonctionnelle ak régie pa li yo propres règles internes. linguiste ameriken Albert Valdman ak sociolinguiste fransè Robert Chaudenson gen toswa produit nan travaux fondamentaux soswa genèse nan langs créoles à base fransèz.
+ </p>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
+ Il enpòtan nan souligner yon pwen ki continue à être mal compris, y compris en Haïti : kreyòl ayisyen pa se <em>pas</em> yon dialecte nan fransè, ni yon version simplifiée oswa corrompue nan li a lang. C'se yon lang à part entière, ak li yo propres règles morphosyntaxiques, li yo propres structures phrastiques, li pwòp prosodie. Yon francophone monolingue pa compran pa kreyòl ayisyen. ressemblansa yo lexicales créent yon illusion nan proximité ki masque yon divergence grammaticale pwofon.
+ </p>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ linguistique créole a longtemps souffert d'yon biais idéologique : premyes deskripsyons nan créole ayisyen, nan XIX<sup>e</sup> syèk, te souvan rédigées pa nan otè ki traitaient tankoswa yon « dégradation » nan fransè. Ce préjugé a eu nan conséquensa yo réelles soswa politiks éducatives ayisyèns. Michel DeGraff a documenté tankount li yo préjugés persistent nan sèten manuels scolaires ayisyen contemporains — li a ke il appelle « linguistique kolonyal ».
+ </aside>
+ </div>
+ </div>
+ </section>
 
-  <!-- STATUT OFFICIEL -->
-  <section class="section section--alt" id="statut">
-    <div class="container">
-      <div class="two-col--wide-left">
-        <div>
-          <p class="section-label">Rekonesans Institutionnelle</p>
-          <h2 style="font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--blue);margin-bottom:1.2rem;">Statut Officiel ak Réalité Sociale</h2>
-          <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
-            Pendant près de deux syèks après l'endepandans de 1804, kreyòl la ayisyen n'avait aucyon statut officiel. Seul le fransè te rekonèt tankoswa lang d'État, de droit, d'administration ak d'instruction — pandan ke 95&nbsp;% nan population ne parlait que kreyòl la. Cette situation de diglossie profonde te an menm tan le symptôme ak le mécanisme d'yon exclusion sosyal systématique.
-          </p>
-          <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
-            La <strong>Konstitisyon de 1987</strong> te make yon tournant istorik : poswa premye fois, kreyòl la ayisyen te rekonèt tankoswa lang officielle au menm titre que le français. L'article 5 de sa a konstitisyon stipule que « tout les Haïtiens se unis par yon lang commyon : kreyòl la », ak en fè yon nan deux langs officielles nan Repiblik. C'te yon rupture symbolique majeure, byenke l'application pratique ait été inégale nan décennies suivantes.
-          </p>
-          <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
-            L'<strong>UNESCO</strong> reconnaît kreyòl la ayisyen tankoswa yon lang distincte, codifiée sous le code ISO 639-2&nbsp;: <code>hat</code>. On estime à 10–12 millions le nombre de locuteurs nan mond — en Haïti d'abord, men toswa dans dyaspora ayisyèn nan aux États-Unis, au Canada (Québec), en France, ak dans d'lòt peyi caribéens. C'se lang kreyòl la à base fransèz la plis parlée au mond.
-          </p>
-          <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
-            La situation de diglossie n'a sepandan pas disparu ak Konstitisyon. Dans la pratique, le fransè rete la lang nan pouvoir, nan enseignement supérieur, nan administration judiciaire ak nan élite ekonomik. Le créole se la lang nan quotidien, nan radio populaire, nan marché, nan fanmi. Michel DeGraff parle de « discrimination linguistique » pour décrire la façon dont ceux qui ne maîtrisent pas le fransè chita structurellement exclus de sèten secteurs nan vie publique. L'<strong>Institut d'Edikasyon poswa Formation (IEF)</strong> ak d'lòt organisations ont travaillé à produire nan matériaux pédagogiques en créole, men les ressoursa yo rete insuffisantes.
-          </p>
-          <aside class="researcher-note" aria-label="Note de recherche">
-            La diglossie ayisyèn n'se pas seulement yon question linguistique : c'se yon question de pouvoir. Les décisions judiciaires se rendues en fransè nan yon peyi où la gran majorité nan justiciables ne compran pas sa a lang. Ce paradoxe, signalé depi nan décennies, n'a jamè été sérieusement résolu par aucyon gouvènman.
-          </aside>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1rem;">
-            <p style="font-size:13px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:0.8rem;">Le créole en chiffres</p>
-            <ul style="list-style:none;padding:0;margin:0;">
-              <li style="padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:14px;line-height:1.6;"><strong>~10–12 millions</strong> de locuteurs nan mond</li>
-              <li style="padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:14px;line-height:1.6;"><strong>99&nbsp;%+</strong> nan Haïtiens parlent kreyòl la</li>
-              <li style="padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:14px;line-height:1.6;"><strong>~90&nbsp;%</strong> nan lexique d'origine française</li>
-              <li style="padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:14px;line-height:1.6;">Lang officielle depi la <strong>Konstitisyon de 1987</strong></li>
-              <li style="padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:14px;line-height:1.6;">Code ISO : <strong>hat</strong> (UNESCO)</li>
-              <li style="padding:0.55rem 0;font-size:14px;line-height:1.6;">Orthographe standardisée en <strong>1979</strong> (IPN)</li>
-            </ul>
-          </div>
-          <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.5rem;">
-            <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red);margin-bottom:0.8rem;">Langs afriken fondatrices</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:1.7;color:var(--text-muted);">
-              <li style="padding:0.3rem 0;">Fon &amp; Ewe (Dahomey / Bénin actuel)</li>
-              <li style="padding:0.3rem 0;">Yoruba (Nigeria / Bénin)</li>
-              <li style="padding:0.3rem 0;">Kongo (Congo / Angola)</li>
-              <li style="padding:0.3rem 0;">Mandé (Guinée / Mali / Sénégal)</li>
-              <li style="padding:0.3rem 0;">Wolof (Sénégal)</li>
-              <li style="padding:0.3rem 0;">Igbo (Nigeria)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+ <!-- STATUT OFFICIEL -->
+ <section class="section section--alt" id="statut">
+ <div class="container">
+ <div class="two-col--wide-left">
+ <div>
+ <p class="section-label">Rekonesans Institutionnelle</p>
+ <h2 style="font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--blue);margin-bottom:1.2rem;">Statut Officiel ak Réalité Sociale</h2>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
+ Pendant près nan deux syèks apre l'endepandans nan 1804, kreyòl ayisyen pa avait aucyon statut officiel. Seul fransè te rekonèt tankoswa lang d'État, nan droit, d'administration ak d'instruction — pandan ke 95&nbsp;% nan popilasyon pa parlait ke kreyòl la. Cette situation nan diglossie pwofon te an menm tan symptôme ak mécanisme d'yon exclusion sosyal systématique.
+ </p>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
+ <strong>Konstitisyon nan 1987</strong> te make yon tournant istorik : poswa premye fois, kreyòl ayisyen te rekonèt tankoswa lang officielle nan menm titre ke fransè. L'article 5 nan li a konstitisyon stipule ke « tout Haïtiens unis pa yon lang commyon : kreyòl », ak en fè yon nan deux langs officielles nan Repiblik. C'te yon rupture symbolique gwo, byenke l'application pratique ait été inégale nan décennies suivantes.
+ </p>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
+ L'<strong>UNESCO</strong> reconnaît kreyòl ayisyen tankoswa yon lang distincte, codifiée anba code ISO 639-2&nbsp;: <code>hat</code>. On estime à 10–12 millions nombre nan locuteurs nan mond — en Haïti d'abord, men toswa nan dyaspora ayisyèn nan nan États-Unis, nan Canada (Québec), en France, ak nan d'lòt peyi caribéens. C'se lang kreyòl à base fransèz plis parlée nan mond.
+ </p>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
+ situation nan diglossie pa a sepandan pa disparu ak Konstitisyon. Dans pratique, fransè rete lang nan pouvoir, nan enseignement supérieur, nan administration judiciaire ak nan élite ekonomik. créole lang nan quotidien, nan radio popilè, nan marché, nan fanmi. Michel DeGraff parle nan « discrimination linguistique » pou décrire façon ke ceux ki pa maîtrisent pa fransè chita structurellement exclus nan sèten secteurs nan lavi publique. L'<strong>Institut d'Edikasyon poswa Formation (IEF)</strong> ak d'lòt òganizasyons gen travaillé à produire nan matériaux pédagogiques en créole, men ressoursa yo rete insuffisantes.
+ </p>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ diglossie ayisyèn pa se pa seulement yon question linguistique : c'se yon question nan pouvoir. décisions judiciaires rendues en fransè nan yon peyi kote gran majorité nan justiciables pa compran pa li a lang. Ce paradoxe, signalé depi nan décennies, pa a jamè été sérieusement résolu pa aucyon gouvènman.
+ </aside>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1rem;">
+ <p style="font-size:13px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:0.8rem;">créole en chiffres</p>
+ <ul style="list-style:none;padding:0;margin:0;">
+ <li style="padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:14px;line-height:1.6;"><strong>~10–12 millions</strong> nan locuteurs nan mond</li>
+ <li style="padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:14px;line-height:1.6;"><strong>99&nbsp;%+</strong> nan Haïtiens parlent kreyòl la</li>
+ <li style="padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:14px;line-height:1.6;"><strong>~90&nbsp;%</strong> nan lexique d'origine fransèz</li>
+ <li style="padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:14px;line-height:1.6;">Lang officielle depi <strong>Konstitisyon nan 1987</strong></li>
+ <li style="padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:14px;line-height:1.6;">Code ISO : <strong>hat</strong> (UNESCO)</li>
+ <li style="padding:0.55rem 0;font-size:14px;line-height:1.6;">Orthographe standardisée en <strong>1979</strong> (IPN)</li>
+ </ul>
+ </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.5rem;">
+ <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red);margin-bottom:0.8rem;">Langs afriken fondatrices</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:1.7;color:var(--text-muted);">
+ <li style="padding:0.3rem 0;">Fon &amp; Ewe (Dahomey / Bénin actuel)</li>
+ <li style="padding:0.3rem 0;">Yoruba (Nigeria / Bénin)</li>
+ <li style="padding:0.3rem 0;">Kongo (Congo / Angola)</li>
+ <li style="padding:0.3rem 0;">Mandé (Guinée / Mali / Sénégal)</li>
+ <li style="padding:0.3rem 0;">Wolof (Sénégal)</li>
+ <li style="padding:0.3rem 0;">Igbo (Nigeria)</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-  <!-- STRUCTURE GRAMMATICALE -->
-  <section class="section" id="grammaire">
-    <div class="container">
-      <div class="editorial-intro editorial-intro--tight">
-        <p class="section-label">Fonctionnement Interne</p>
-        <h2 style="font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--blue);margin-bottom:1.2rem;">Structure Grammaticale nan Créole Haïtien</h2>
-        <p style="font-size:16px;line-height:1.85;margin-bottom:1.8rem;">
-          Comprendre la grammaire nan créole haïtien, c'se comprendre pourquoi il se irréductible au français. Ses mécanismes fondamentaux — la manière dont il marque le temps, le genre, la détermination — diffèrent radicalement de ceux nan fransè ak reflètent nan logiques issues nan langs africaines.
-        </p>
-      </div>
+ <!-- STRUCTURE GRAMMATICALE -->
+ <section class="section" id="grammaire">
+ <div class="container">
+ <div class="editorial-intro editorial-intro--tight">
+ <p class="section-label">Fonctionnement Interne</p>
+ <h2 style="font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--blue);margin-bottom:1.2rem;">Structure Grammaticale nan Créole Haïtien</h2>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.8rem;">
+ Comprendre grammaire nan créole ayisyen, c'se comprendre pourquoi li irréductible nan fransè. Ses mécanismes fondamentaux — manière ke li make temps, genre, détermination — diffèrent radicalement nan ceux nan fransè ak reflètent nan logiques issues nan langs afrikens.
+ </p>
+ </div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-bottom:2.5rem;">
+ <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-bottom:2.5rem;">
 
-        <div style="background:#f8f9fc;border-left:4px solid var(--blue);border-radius:0 8px 8px 0;padding:1.4rem;">
-          <h3 style="font-size:17px;font-weight:800;color:var(--blue);margin-bottom:0.8rem;">Phonologie</h3>
-          <p style="font-size:15px;line-height:1.8;color:var(--text-muted);margin-bottom:0.8rem;">Le créole ayisyen possède 32 phonèmes. Il n'y a pas de genre grammatical — les noms ne se ni masculins ni féminins. Les voyelles nasalisées se distinctives : <em>an, en, on, in</em>. Le <em>h</em> se aspiré dans sèten mots. Les verbes ne se conjuguent pas selon la personne oswa le nombre.</p>
-        </div>
+ <div style="background:#f8f9fc;border-left:4px solid var(--blue);border-radius:0 8px 8px 0;padding:1.4rem;">
+ <h3 style="font-size:17px;font-weight:800;color:var(--blue);margin-bottom:0.8rem;">Phonologie</h3>
+ <p style="font-size:15px;line-height:1.8;color:var(--text-muted);margin-bottom:0.8rem;">créole ayisyen possède 32 phonèmes. Il pa y a pa nan genre grammatical — non pa ni masculins ni féminins. voyelles nasalisées distinctives : <em>an, en, on, in</em>. <em>h</em> aspiré nan sèten mots. verbes pa conjuguent pa dapre personne oswa nombre.</p>
+ </div>
 
-        <div style="background:#f8f9fc;border-left:4px solid var(--red);border-radius:0 8px 8px 0;padding:1.4rem;">
-          <h3 style="font-size:17px;font-weight:800;color:var(--blue);margin-bottom:0.8rem;">Marqueurs TMA (Temps-Mode-Aspect)</h3>
-          <p style="font-size:15px;line-height:1.8;color:var(--text-muted);margin-bottom:0.8rem;">Au lieu de conjuguer les verbes, kreyòl la utilise nan particules pré-verbales&nbsp;:</p>
-          <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:1.9;">
-            <li><strong>ap</strong> — progressif / futur proche : <em>M ap manje</em> (Je mange / Je vais manger)</li>
-            <li><strong>te</strong> — passé : <em>M te manje</em> (J'ai mangé)</li>
-            <li><strong>pral</strong> — futur immédiat : <em>M pral manje</em> (Je suis soswa point de manger)</li>
-            <li><strong>ta</strong> — conditionnel : <em>M ta manje</em> (Je mangerais)</li>
-            <li><strong>te ap</strong> — passé progressif : <em>M te ap manje</em> (J'étais en train de manger)</li>
-          </ul>
-        </div>
+ <div style="background:#f8f9fc;border-left:4px solid var(--red);border-radius:0 8px 8px 0;padding:1.4rem;">
+ <h3 style="font-size:17px;font-weight:800;color:var(--blue);margin-bottom:0.8rem;">Marqueurs TMA (Temps-Mode-Aspect)</h3>
+ <p style="font-size:15px;line-height:1.8;color:var(--text-muted);margin-bottom:0.8rem;">Au lieu nan conjuguer verbes, kreyòl utilise nan particules pré-verbales&nbsp;:</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:1.9;">
+ <li><strong>ap</strong> — progressif / futur proche : <em>M ap manje</em> (Je mange / Je vais manger)</li>
+ <li><strong>te</strong> — passé : <em>M te manje</em> (J'ai mangé)</li>
+ <li><strong>pral</strong> — futur immédiat : <em>M pral manje</em> (Je suis soswa pwen nan manger)</li>
+ <li><strong>ta</strong> — conditionnel : <em>M ta manje</em> (Je mangerais)</li>
+ <li><strong>te ap</strong> — passé progressif : <em>M te ap manje</em> (J'étais en train nan manger)</li>
+ </ul>
+ </div>
 
-        <div style="background:#f8f9fc;border-left:4px solid var(--gold,#FFD166);border-radius:0 8px 8px 0;padding:1.4rem;">
-          <h3 style="font-size:17px;font-weight:800;color:var(--blue);margin-bottom:0.8rem;">Déterminants postposés</h3>
-          <p style="font-size:15px;line-height:1.8;color:var(--text-muted);">En créole haïtien, atizay laicle défini se place <em>après</em> le nom — contrairement au français. Exemples&nbsp;: <em>liv la</em> (le livre), <em>kay la</em> (la menon), <em>timoyon nan</em> (l'timoun), <em>moyon yo</em> (les gens). L'article indéfini se <em>yon</em> : <em>yon liv</em> (yon livre), <em>yon kay</em> (yon menon). Cette structure se typique de plizyè langs africaines.</p>
-        </div>
+ <div style="background:#f8f9fc;border-left:4px solid var(--gold,#FFD166);border-radius:0 8px 8px 0;padding:1.4rem;">
+ <h3 style="font-size:17px;font-weight:800;color:var(--blue);margin-bottom:0.8rem;">Déterminants postposés</h3>
+ <p style="font-size:15px;line-height:1.8;color:var(--text-muted);">En créole ayisyen, atizay laicle défini plas <em>après</em> non — contrairement nan fransè. Exemples&nbsp;: <em>liv la</em> (le livre), <em>kay la</em> (la menon), <em>timoyon nan</em> (l'timoun), <em>moyon yo</em> (les gens). L'article indéfini <em>yon</em> : <em>yon liv</em> (yon livre), <em>yon kay</em> (yon menon). Cette structure typique nan plizyè langs afrikens.</p>
+ </div>
 
-        <div style="background:#f8f9fc;border-left:4px solid #6c757d;border-radius:0 8px 8px 0;padding:1.4rem;">
-          <h3 style="font-size:17px;font-weight:800;color:var(--blue);margin-bottom:0.8rem;">Absence de genre grammatical</h3>
-          <p style="font-size:15px;line-height:1.8;color:var(--text-muted);">Le créole haïtien n'a pas de distinction masculin/féminin pour les noms ou les pronoms. Le pronom <em>li</em> signifie an menm tan « il », « elle » ak « ça ». <em>Yo</em> se le pluriel universel. Cette simplicité formelle contraste ak richesse expressive nan constructions orales.</p>
-        </div>
+ <div style="background:#f8f9fc;border-left:4px solid #6c757d;border-radius:0 8px 8px 0;padding:1.4rem;">
+ <h3 style="font-size:17px;font-weight:800;color:var(--blue);margin-bottom:0.8rem;">Absence nan genre grammatical</h3>
+ <p style="font-size:15px;line-height:1.8;color:var(--text-muted);">créole ayisyen pa a pa nan distinction masculin/féminin pou non oswa pronoms. pronom <em>li</em> signifie an menm tan « li », « li » ak « ça ». <em>Yo</em> pluriel universel. Cette simplicité formelle contraste ak richsse expressive nan constructions orales.</p>
+ </div>
 
-      </div>
+ </div>
 
-      <!-- Table 20 expressions courantes -->
-      <h3 style="font-size:20px;font-weight:800;color:var(--blue);margin-bottom:1.2rem;">20 Expressions Créoles Essentielles</h3>
-      <div style="overflow-x:auto;margin-bottom:2rem;">
-        <table style="width:100%;border-collapse:collapse;font-size:15px;">
-          <thead>
-            <tr style="background:var(--blue);color:#fff;">
-              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Créole Haïtien</th>
-              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Français</th>
-              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Contexte / Note</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Bonjou</td>
-              <td style="padding:0.65rem 1rem;">Bonjour</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Salutation matinale universelle</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Bonswa</td>
-              <td style="padding:0.65rem 1rem;">Bonsoir</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Employé dès l'après-midi</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Kijan oswa rele ?</td>
-              <td style="padding:0.65rem 1rem;">Comment t'appelles-tu ?</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Formule de présentation</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Mwen rele…</td>
-              <td style="padding:0.65rem 1rem;">Je m'appelle…</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);"><em>Mwen</em> = je/moi</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Koman oswa ye ?</td>
-              <td style="padding:0.65rem 1rem;">Comment allez-vous ?</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Formule de politesse courante</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Mwen byen, mèsi</td>
-              <td style="padding:0.65rem 1rem;">Je vais bien, merci</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Réponse standard à <em>koman oswa ye</em></td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Mèsi</td>
-              <td style="padding:0.65rem 1rem;">Merci</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Emprunté au français, universel</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Tanpri</td>
-              <td style="padding:0.65rem 1rem;">S'il vous plaît</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Forme créole, distinct nan fr. <em>s'il vous plaît</em></td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Padon</td>
-              <td style="padding:0.65rem 1rem;">Pardon / Excusez-moi</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Politesse ak demande d'excuse</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Mwen pa konprann</td>
-              <td style="padding:0.65rem 1rem;">Je ne comprends pas</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);"><em>pa</em> = négation universelle</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Pale piti piti, tanpri</td>
-              <td style="padding:0.65rem 1rem;">Parlez lentement, s'il vous plaît</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted;"><em>piti piti</em> = piti à petit</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">M renmen Ayiti</td>
-              <td style="padding:0.65rem 1rem;">J'aime Haïti</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);"><em>renmen</em> = aimer</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Kibò oswa rete ?</td>
-              <td style="padding:0.65rem 1rem;">Où habitez-vous ?</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);"><em>kibò</em> = où</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Ki lè li ye ?</td>
-              <td style="padding:0.65rem 1rem;">Quelle heure est-il ?</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);"><em>lè</em> = heure, temps</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Kombyen sa koute ?</td>
-              <td style="padding:0.65rem 1rem;">Combyen ça coûte ?</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Indispensable au marché</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Mwen grangou</td>
-              <td style="padding:0.65rem 1rem;">J'ai faim</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);"><em>grangou</em> = faim (nan fr. <em>gran goût</em> ?)</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Mwen swaf</td>
-              <td style="padding:0.65rem 1rem;">J'ai soif</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Du fransè <em>soif</em></td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Bònn nwit</td>
-              <td style="padding:0.65rem 1rem;">Bonne nuit</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Salutation de fin de soirée</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Wi / Non</td>
-              <td style="padding:0.65rem 1rem;">Oui / Non</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Réponses universelles</td>
-            </tr>
-            <tr>
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Tout moyon se moun</td>
-              <td style="padding:0.65rem 1rem;">Toute personne se yon personne</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Adage soswa dignité humaine</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
+ <!-- Table 20 expressions courantes -->
+ <h3 style="font-size:20px;font-weight:800;color:var(--blue);margin-bottom:1.2rem;">20 Expressions Créoles Essentielles</h3>
+ <div style="overflow-x:auto;margin-bottom:2rem;">
+ <table style="width:100%;border-collapse:collapse;font-size:15px;">
+ <thead>
+ <tr style="background:var(--blue);color:#fff;">
+ <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Créole Haïtien</th>
+ <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Français</th>
+ <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Kontèks / Note</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Bonjou</td>
+ <td style="padding:0.65rem 1rem;">Bonjour</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Salutation matinale universelle</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Bonswa</td>
+ <td style="padding:0.65rem 1rem;">Bonsoir</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Employé dès l'après-midi</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Kijan oswa rele ?</td>
+ <td style="padding:0.65rem 1rem;">Comment t'appelles-tu ?</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Formule nan présentation</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Mwen rele…</td>
+ <td style="padding:0.65rem 1rem;">Je m'appelle…</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);"><em>Mwen</em> = je/moi</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Koman oswa ye ?</td>
+ <td style="padding:0.65rem 1rem;">Comment allez-vous ?</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Formule nan politesse courante</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Mwen byen, mèsi</td>
+ <td style="padding:0.65rem 1rem;">Je vais bien, merci</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Repons standard à <em>koman oswa ye</em></td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Mèsi</td>
+ <td style="padding:0.65rem 1rem;">Merci</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Emprunté nan fransè, universel</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Tanpri</td>
+ <td style="padding:0.65rem 1rem;">S'il oswa plaît</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Forme créole, distinct nan fr. <em>s'il oswa plaît</em></td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Padon</td>
+ <td style="padding:0.65rem 1rem;">Pardon / Excusez-moi</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Politesse ak demande d'excuse</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Mwen pa konprann</td>
+ <td style="padding:0.65rem 1rem;">Je pa comprends pas</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);"><em>pa</em> = négation universelle</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Pale piti piti, tanpri</td>
+ <td style="padding:0.65rem 1rem;">Parlez lentement, s'il oswa plaît</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted;"><em>piti piti</em> = piti à piti</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">M renmen Ayiti</td>
+ <td style="padding:0.65rem 1rem;">J'aime Haïti</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);"><em>renmen</em> = aimer</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Kibò oswa rete ?</td>
+ <td style="padding:0.65rem 1rem;">Où habitez-vous ?</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);"><em>kibò</em> = où</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Ki lè li ye ?</td>
+ <td style="padding:0.65rem 1rem;">Ki heure est-il ?</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);"><em>lè</em> = heure, temps</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Kombyen li koute ?</td>
+ <td style="padding:0.65rem 1rem;">Combyen ça coûte ?</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Indispensable nan marché</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Mwen grangou</td>
+ <td style="padding:0.65rem 1rem;">J'ai faim</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);"><em>grangou</em> = faim (nan fr. <em>gran goût</em> ?)</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Mwen swaf</td>
+ <td style="padding:0.65rem 1rem;">J'ai soif</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Du fransè <em>soif</em></td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#f8f9fc;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Bònn nwit</td>
+ <td style="padding:0.65rem 1rem;">Bonne nuit</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Salutation nan fin nan soirée</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Wi / Non</td>
+ <td style="padding:0.65rem 1rem;">Oui / Non</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Reponss universelles</td>
+ </tr>
+ <tr>
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">Tout moyon moun</td>
+ <td style="padding:0.65rem 1rem;">Toute personne yon personne</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Adage soswa dignité humaine</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </div>
+ </section>
 
-  <!-- PROVERBES HAÏTIENS -->
-  <section class="section section--alt" id="proverbes">
-    <div class="container">
-      <p class="section-label">Sagesse Populaire</p>
-      <h2 style="font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--blue);margin-bottom:1rem;">Proverbes Haïtiens</h2>
-      <p style="font-size:16px;line-height:1.85;margin-bottom:2rem;max-width:780px;">
-        Les proverbes ayisyen — <em>pwovèb ayisyen</em> — se l'yon nan patrimwàns oraux les plis riches nan Karayib. Ils condensent en yon phrase yon vision nan mond, yon leçon de vie, yon réalité sociale. Ils circulent nan marchés, les fanmis, les discours politiks. Certains se attribués à nan personnages istorik ; la plupart se anonymes, appartenant à tout le pèp.
-      </p>
+ <!-- PROVERBES HAÏTIENS -->
+ <section class="section section--alt" id="proverbes">
+ <div class="container">
+ <p class="section-label">Sagesse Populaire</p>
+ <h2 style="font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--blue);margin-bottom:1rem;">Proverbes Haïtiens</h2>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:2rem;max-width:780px;">
+ proverbes ayisyen — <em>pwovèb ayisyen</em> — l'yon nan patrimwàns oraux plis richs nan Karayib. Ils condensent en yon phrase yon vision nan mond, yon leçon nan vie, yon réalité sosyal. Ils circulent nan marchés, fanmis, discours politiks. Certains attribués à nan personnages istorik ; plupart anonymes, appartenant à tout pèp.
+ </p>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.4rem;">
+ <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.4rem;">
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Dèyè mòn gen mòn. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Derrière les mòns, il y a ankò nan mòns.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">La vie se faite d'obstacles successifs. Résoudre yon problème ne signifie pas que les difficultés se terminées. Proverbe nasyonal par excellence, souvan utilisé pour inviter à la persévérance.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Dèyè mòn gen mòn. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Derrière mòns, li y a ankò nan mòns.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">lavi faite d'obstacles successifs. Résoudre yon problème pa signifie pa ke difficultés terminées. Proverbe nasyonal pa excellence, souvan itilize pou inviter à persévérance.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Sak vid pa kanpe. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Un sac vide ne kapab pas se tenir debout.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">On ne kapab rien accomplir le ventre vide, oswa sans ressources. Critique directe nan pauvreté ak de ses conséquensa yo soswa capacité d'agir.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Sak vid pa kanpe. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Yon sac vide pa kapab pa tenir debout.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">On pa kapab rien accomplir ventre vide, oswa san ressources. Critique directe nan pòvté ak nan li yo conséquensa yo soswa capacité d'agir.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Bay koswa bliye, pote mak sonje. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Celui qui frappe oublie ; celui qui porte la marque se souvient.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">La douleur infligée ne disparaît pas poswa victime menm si l'agresseur l'a oubliée. Ce proverbe se souvan cité dans nan contextes de jistis transitionnelle ak de mémoire historique.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Bay koswa bliye, pote mak sonje. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Celui ki frappe oublie ; celui ki pote make souvient.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">douleur infligée pa disparaît pa poswa victime menm si l'agresseur l'a oubliée. Ce proverbe souvan cité nan nan kontèkss nan jistis transitionnelle ak nan memwa istorik.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Konstitisyon se papye, bayonèt se fè. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">La konstitisyon se nan papier, la baïonnette se en fer.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">Le pouvoir effectif prime souvan sur dwa a formel. Proverbe politik d'yon lucidité cruelle, né de syèks de coups d'État ak d'instabilité.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Konstitisyon papye, bayonèt fè. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">konstitisyon nan papier, baïonnette en fer.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">pouvwa effectif prime souvan sou dwa a formel. Proverbe politik d'yon lucidité cruelle, né nan syèks nan coups d'État ak d'instabilité.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Piti piti zwazo fè nich li. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Petit à petit, l'oiseau fè son nid.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">La persévérance ak la patience mènent au succès. Équivalent créole nan proverbe universel, men ancré nan réalité nan patience imposée pa pauvreté.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Piti piti zwazo fè nich li. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Petit à piti, l'oiseau fè li nid.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">persévérance ak patience mènent nan succès. Équivalent créole nan proverbe universel, men ancré nan réalité nan patience imposée pa pòvté.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Bouk pa janm kache. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Le secrak ne rete jamè caché.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">La vérité finit toujoswa par émerger. Utilisé souvan en politik ak nan vie communautaire pour avertir que les mensonges ont yon durée de vie limitée.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Bouk pa janm kache. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">secrak pa rete jamè caché.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">vérité finit toujoswa pa émerger. Utilisé souvan en politik ak nan lavi communautaire pou avertir ke mensonges gen yon durée nan lavi limitée.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Pye bwa chonje, ravine sonje. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Le pied de bois s'en souvient, le ravin s'en souvient.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">Le passé laisse toujoswa nan trasa yo nan peyiage tankoswa dans memwa a collective. Réflexion soswa durabilité nan événements traumatiques.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Pye bwa chonje, ravine sonje. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">pied nan bois s'en souvient, ravin s'en souvient.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">passé laisse toujoswa nan trasa yo nan peyiage tankoswa nan memwa a collective. Réflexion soswa durabilité nan événements traumatiques.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Nan tan lapli tout bèt mouye. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Par temps de pluie, tout les bêtes se mouillées.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">Les épreuves collectives frappent tout le mond sans distinction. Expression d'yon solidarité nan souffrance commune.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Nan tan lapli tout bèt mouye. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Par tan nan pluie, tout bêtes mouillées.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">épreuves collectives frappent tout mond san distinction. Expression d'yon solidarité nan souffrance commune.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Chak joswa se pa dimanch. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Chaque jour n'se pas dimanche.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">Les bons moments ne durent pas éternellement ; il faut savoir travailler ak économiser en période d'abondance poswa temps difficiles.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Chak joswa pa dimanch. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Chaque jou pa se pa dimanche.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">bons moments pa durent pa éternellement ; li faut savoir travailler ak économiser en période d'abondance poswa tan difficiles.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Kouri pa lach. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Fuir n'se pas être lâche.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">Savoir éviter yon danger oswa se retirer d'yon situation impossible se nan sagesse, non nan lâcheté. Remise en cause nan normes sosyal autour nan bravoure.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Kouri pa lach. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Fuir pa se pa être lâche.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">Savoir éviter yon danger oswa retirer d'yon situation impossible nan sagesse, non nan lâcheté. Remise en cause nan normes sosyal otou nan bravoure.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Grenn mayi pa janm pè mòlen. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Le grain de maïs n'a jamè peur nan moulin.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">Le vrai courageux ne craint pas l'épreuve qui lui se destinée. Éloge nan bravoure face aux défis inévitables.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Grenn mayi pa janm pè mòlen. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">grain nan maïs pa a jamè peur nan moulin.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">vrai courageux pa craint pa l'épreuve ki lui destinée. Éloge nan bravoure face nan défis inévitables.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Manje kwit pa gen mèt. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">La nourriture cuite n'a pas de maître.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">Ce qui se disponible ak partageable appartient à quiconque en a besoin. Expression d'yon éthique communautaire nan solidarité.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Manje kwit pa gen mèt. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">nourriture cuite pa a pa nan maître.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">Ce ki disponible ak partageable appartient à quiconque en a besoin. Expression d'yon éthique communautaire nan solidarité.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Chen grangoswa pa jwe. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Le chien affamé ne joue pas.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">La misère ak la faim empêchent la joie ak la légèreté. Rekonesans que les besoins fondamentaux dwe être satisfaits avant tout le reste.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Chen grangoswa pa jwe. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">chien affamé pa jwe pas.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">misère ak faim empêchent joie ak légèreté. Rekonesans ke besoins fondamentaux dwe être satisfaits anvan tout reste.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Ranje kay oswa anvan lapli vini. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Répare ta menon avant que la pluie arrive.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">L'anticipation ak la prévoyance valent mieux que la réaction après coup. Sagesse pratique applicable toswa byen à lavi a personnelle qu'à la gouvernance.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Ranje kay oswa anvan lapli vini. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Répare ta menon anvan ke pluie arrive.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">L'anticipation ak prévoyance valent mieux ke réaction apre coup. Sagesse pratique applicable toswa byen à lavi a personnelle ke à gouvernance.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Tout moyon se moun. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Toute personne se yon personne.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">L'égale dignité de chak être humain, quel que soit son statut social, sa couleur de peau oswa son origine. L'yon nan proverbes les plis profonds politikment nan contexte haïtien.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Tout moyon moun. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Toute personne yon personne.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">L'égale dignité nan chak être humain, quel ke soit li statut sosyal, li couleur nan peau oswa li origine. L'yon nan proverbes plis pwofons politikment nan kontèks ayisyen.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Bourik travay, chwal galonnen. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Le baudak travaille, le cheval se promène.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">Critique cinglante nan injistis sosyal : ceux qui travaillent le plis ne profitent pas nan fruit de leur labeur, pandan que d'lòt jouissent sans effort.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Bourik travay, chwal galonnen. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">baudak travaille, cheval promène.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">Critique cinglante nan injistis sosyal : ceux ki travaillent plis pa profitent pa nan fruit nan yo labeur, pandan ke d'lòt jouissent san effort.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Dlo pa konn janm remonte mòn. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">L'eau ne remonte jamè la mòn.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">Certaines choses ne kapab pas être défaites oswa inversées. Acceptation réaliste nan irréversibilité de sèten événements.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Dlo pa konn janm remonte mòn. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">L'eau pa remonte jamè mòn.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">Certaines choses pa kapab pa être défaites oswa inversées. Acceptation réaliste nan irréversibilité nan sèten événements.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Fè byen, jete l dèyè do ou. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Fais le byen ak jette-le derrière ton dos.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">Agis byen sans attendre de rekonesans oswa de récompense. Éthique nan don désintéressé, proche d'yon spiritualité vodoswa ak catholique mêlées.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Fè byen, jete l dèyè do ou. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Fais byen ak jette-le dèyè ton dos.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">Agis byen san attendre nan rekonesans oswa nan récompense. Éthique nan don désintéressé, proche d'yon spiritualité vodoswa ak catholique mêlées.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Kò pòv pa lach. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Corps pauvre n'se pas lâche.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">La pauvreté matérielle ne di rien soswa courage oswa la valeur morale d'yon individu. Défense nan dignité nan personnes défavorisées contre le mépris social.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Kò pòv pa lach. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Corps pòv pa se pa lâche.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">pòvté matérielle pa di rien soswa courage oswa valeur morale d'yon individu. Défense nan dignité nan personnes défavorisées kont mépris sosyal.</p>
+ </div>
 
-        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
-          <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Lè chat pa la, rat bat tabou. »</p>
-          <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Quand le chat n'se pas là, les rats fè la fête.</p>
-          <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">En l'absence d'autorité oswa de surveillance, sèten profitent nan situation. Observation soswa discipline sosyal ak la gouvernance — équivalent créole nan proverbe latin.</p>
-        </div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.4rem;">
+ <p style="font-size:17px;font-weight:800;color:var(--blue);font-style:italic;margin-bottom:0.5rem;">« Lè chat pa la, rat bat tabou. »</p>
+ <p style="font-size:14px;color:var(--red);font-weight:600;margin-bottom:0.6rem;">Quand chat pa se pa là, rats fè fête.</p>
+ <p style="font-size:14px;line-height:1.75;color:var(--text-muted);">En l'absence d'autorité oswa nan surveillance, sèten profitent nan situation. Observation soswa discipline sosyal ak gouvernance — équivalent créole nan proverbe latin.</p>
+ </div>
 
-      </div>
-    </div>
-  </section>
+ </div>
+ </div>
+ </section>
 
-  <!-- LITTÉRATURE ET MÉDIAS EN CRÉOLE -->
-  <section class="section" id="medias">
-    <div class="container">
-      <div class="editorial-intro editorial-intro--tight">
-        <p class="section-label">Écriture ak Diffusion</p>
-        <h2 style="font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--blue);margin-bottom:1.2rem;">Literati ak Médias en Créole</h2>
-        <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
-          Pendant longtemps, l'écrit en créole ayisyen n'avait pas de statut. La literati ayisyèn s'exprimait presque exclusivement en français, ak les rares textes en créole te marginalisés oswa traités tankoswa nan curiosités folkloriques. Ce n'se que progressivement, ak ak rekonesans konstitisyonnelle de 1987, que la production littéraire ak médiatique en créole a acquis yon légitimité enstitisyonnelle — menm si la réalité nan ressoursa yo disponibles rete en deçà de sa a rekonesans.
-        </p>
-        <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
-          L'orthographe standardisée nan créole ayisyen te ofisyèlman adoptée en <strong>1979</strong> par l'<strong>Institut Pédagogique National (IPN)</strong> d'Haïti, mettant fin à yon cacophonie de systèmes concurrents qui rendait toute production écrite homogène impossible. C'se yon étape fondamentale souvan négligée nan récits sur kreyòl la. Avant 1979, chak ekriven, chak missionnaire, chak linguiste utilisait sa pwòp orthographe.
-        </p>
-        <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
-          La <strong>radio</strong> te jwe yon rôle décisif nan diffusion nan créole écrit ak parlé au gran public. <strong>Radio Haïti-Inter</strong>, dirigée pa journaliste Jean Léopold Dominique, te pionnière dans l'utilisation nan créole tankoswa lang prensipal nan information. Dominique — qui ap assassiné en 2000 dans nan circonstansa yo liées à ses activités journalistiques — avait compris que parler au pèp ayisyen signifiait lui parler dans sa lang. Cette vision te transfòme le peyiage médiatique haïtien.
-        </p>
-        <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
-          Du côté de literati a, woman ancier ak dramaturge <strong>Frankétienne</strong> (René Depestre di Frankétienne) se yon figure centrale. Inventeur nan mouvement littéraire nan « spiralisme », il a écrit en créole ayisyen ak en français, souvan en mêlant les deux. Son roman <em>Dezafi</em> (1975), écrit entièrement en créole, se konsidere tankoswa le premye roman ayisyen en créole. Il a ouvert yon voie que peu avaient eu l'audace d'emprunter.
-        </p>
-        <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
-          <strong>Edwidge Danticat</strong>, née à Port-au-Prince ak élevée aux États-Unis, se sans doute l'auteure d'origine ayisyèn la plis lue nan mond anglophone. Si elle écrit principalement en anglais, ses œuvres — <em>Breath, Eyes, Memory</em> (1994), <em>Krik? Krak!</em> (1995), <em>Brother I'm Dying</em> (2007) — se pwofondman enracinées nan kilti créole, les proverbes haïtiens, les pratiques nan Vodoswa ak memwa a familiale nan exil. La poésie en créole connaît toswa yon essor, avec nan auteurs tankoswa Félix Morisseau-Leroy (di Féfé), dont les pièsa yo en créole — sitoswa <em>Antigòn</em> (1953), adaptation créole nan Antigone de Sophocle — te make yon tournant nan légitimation littéraire nan lang.
-        </p>
-        <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
-          Les défis demeurent considérables. Le nombre de livres disponibles en créole ayisyen rete trè faible par rapport à la population locutrice. L'enseignement en créole nan écoles primaires se ltoswa prescrit men intoswa appliqué. La production académique en créole — thèses, revues scientifiques — se quasi inexistante. Michel DeGraff, avec son projak <strong>MIT-Haiti Initiative</strong>, travaille depi les anes 2010 à développer nan ressoursa yo pédagogiques en créole pour l'enseignement nan sciensa yo ak nan mathématiques — initiative qui se heurte souvan à nan rezistanss enstitisyonnelles au sein menm d'Haïti.
-        </p>
-        <aside class="researcher-note" aria-label="Note de recherche">
-          Il existe yon tension réelle ant revendication identitaire nan créole ak les pratiques enstitisyonnelles haïtiennes. Beaucoup d'Haïtiens qui défendent kreyòl la en public continuent à scolariser leurs timoyon dans nan écoles entièrement francophones. Ce paradoxe n'se pas yon hypocrisie — c'se le reflak d'yon réalité ekonomik où le fransè rete yon capital sosyal indispensable. Changer cela demanderait yon transformation nan structures de pouvoir, pas seulement nan déclarations konstitisyonnelles.
-        </aside>
-      </div>
-    </div>
-  </section>
+ <!-- LITTÉRATURE ET MÉDIAS EN CRÉOLE -->
+ <section class="section" id="medias">
+ <div class="container">
+ <div class="editorial-intro editorial-intro--tight">
+ <p class="section-label">Ekriti ak Diffusion</p>
+ <h2 style="font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--blue);margin-bottom:1.2rem;">Literati ak Médias en Créole</h2>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
+ Pendant longtemps, l'écrit en créole ayisyen pa avait pa nan statut. literati ayisyèn s'exprimait presque exclusivement en fransè, ak rares textes en créole te marginalisés oswa traités tankoswa nan curiosités folkloriques. Ce pa se ke progressivement, ak ak rekonesans konstitisyonnelle nan 1987, ke production littéraire ak médiatique en créole a acquis yon légitimité enstitisyonnelle — menm si réalité nan ressoursa yo disponibles rete en deçà nan li a rekonesans.
+ </p>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
+ L'orthographe standardisée nan créole ayisyen te ofisyèlman adopte en <strong>1979</strong> pa l'<strong>Institut Pédagogique National (IPN)</strong> d'Haïti, mettant fin à yon cacophonie nan systèmes concurrents ki rendait toute production écrite homogène impossible. C'se yon étape fondamantal souvan négligée nan récits sou kreyòl la. Avant 1979, chak ekriven, chak missionnaire, chak linguiste utilisait li pwòp orthographe.
+ </p>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
+ <strong>radio</strong> te jwe yon wòl décisif nan diffusion nan créole écrit ak parlé nan gran public. <strong>Radio Haïti-Inter</strong>, dirije pa journaliste Jean Léopold Dominique, te pionnière nan l'utilisation nan créole tankoswa lang prensipal nan information. Dominique — ki ap assassiné en 2000 nan nan circonstansa yo liées à li yo aktivite journalistiques — te gen compris ke parler nan pèp ayisyen signifiait lui parler nan li lang. Cette vision te transfòme peyiage médiatique ayisyen.
+ </p>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
+ Du côté nan literati a, woman ancier ak dramaturge <strong>Frankétienne</strong> (René Depestre di Frankétienne) yon figure centrale. Inventeur nan mouvman littéraire nan « spiralisme », li a écrit en créole ayisyen ak en fransè, souvan en mêlant deux. Son woman <em>Dezafi</em> (1975), écrit entièrement en créole, konsidere tankoswa premye woman ayisyen en créole. Il a ouvert yon voie ke peu te gen eu l'audace d'emprunter.
+ </p>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
+ <strong>Edwidge Danticat</strong>, née à Port-au-Prince ak élevée nan États-Unis, san doute l'auteure d'origine ayisyèn plis lue nan mond anglophone. Si li écrit prensipalman en anglais, li yo zèv — <em>Breath, Eyes, Memory</em> (1994), <em>Krik? Krak!</em> (1995), <em>Brother I'm Dying</em> (2007) — pwofondman enracinées nan kilti créole, proverbes ayisyens, pratiques nan Vodoswa ak memwa a familiale nan exil. poésie en créole connaît toswa yon essor, ak nan otè tankoswa Félix Morisseau-Leroy (di Féfé), ke pièsa yo en créole — sitoswa <em>Antigòn</em> (1953), adaptation créole nan Antigone nan Sophocle — te make yon tournant nan légitimation littéraire nan lang.
+ </p>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.2rem;">
+ défis demeurent considérables. nombre nan liv disponibles en créole ayisyen rete trè faible pa rapport à popilasyon locutrice. L'enseignement en créole nan écoles primaires ltoswa prescrit men intoswa appliqué. production académique en créole — thèses, revues scientifiques — quasi inexistante. Michel DeGraff, ak li projak <strong>MIT-Haiti Initiative</strong>, travaille depi anes 2010 à développer nan ressoursa yo pédagogiques en créole pou l'enseignement nan sciensa yo ak nan mathématiques — initiative ki heurte souvan à nan rezistanss enstitisyonnelles nan sein menm d'Haïti.
+ </p>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ Il existe yon tension réelle ant revendication identitaire nan créole ak pratiques enstitisyonnelles ayisyèns. Beaucoup d'Haïtiens ki défendent kreyòl en public continuent à scolariser yo timoyon nan nan écoles entièrement francophones. Ce paradoxe pa se pa yon hypocrisie — c'se reflak d'yon réalité ekonomik kote fransè rete yon capital sosyal indispensable. Changer cela demanderait yon transformation nan structures nan pouvoir, pa seulement nan déclarations konstitisyonnelles.
+ </aside>
+ </div>
+ </div>
+ </section>
 
-  <!-- COMPARAISON AVEC LE FRANÇAIS -->
-  <section class="section section--alt" id="comparaison">
-    <div class="container">
-      <p class="section-label">Deux Langs, Une Île</p>
-      <h2 style="font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--blue);margin-bottom:1rem;">Comparaison ak Français</h2>
-      <p style="font-size:16px;line-height:1.85;margin-bottom:1.5rem;max-width:780px;">
-        La proximité lexicale entre kreyòl la ayisyen ak le fransè se réelle men trompeuse. Un francophone qui entend nan créole reconnaîtra sèten mots, men ne comprendra pas la lang. Les structures grammaticales se si différentes que la compréhension mutuelle se limitée. Il y a toswa de nombreux faux cognats : nan mots qui ressemblent au fransè men ont yon sens différent. Le tableau ci-dessous illustre kèk ressemblansa yo ak divergensa yo caractéristiques.
-      </p>
-      <div style="overflow-x:auto;margin-bottom:2rem;">
-        <table style="width:100%;border-collapse:collapse;font-size:15px;">
-          <thead>
-            <tr style="background:var(--blue);color:#fff;">
-              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Créole Haïtien</th>
-              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Français</th>
-              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Anglais</th>
-              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Note</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">liv</td>
-              <td style="padding:0.65rem 1rem;">livre</td>
-              <td style="padding:0.65rem 1rem;">book</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Cognat proche</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#fff;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">kay</td>
-              <td style="padding:0.65rem 1rem;">menon / chez</td>
-              <td style="padding:0.65rem 1rem;">house / home</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Du fr. <em>quai</em> oswa <em>chez</em></td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">dlo</td>
-              <td style="padding:0.65rem 1rem;">eau</td>
-              <td style="padding:0.65rem 1rem;">water</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">De « nan eau » contracté</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#fff;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">manje</td>
-              <td style="padding:0.65rem 1rem;">nourriture / manger</td>
-              <td style="padding:0.65rem 1rem;">food / to eat</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Verbe ak nom an menm tan</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">pitit</td>
-              <td style="padding:0.65rem 1rem;">timoyon / fils / fille</td>
-              <td style="padding:0.65rem 1rem;">child</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Du fr. <em>petit</em> — sens élargi</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#fff;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">bèl</td>
-              <td style="padding:0.65rem 1rem;">beau / belle</td>
-              <td style="padding:0.65rem 1rem;">beautiful</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Pas de genre en créole</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">moun</td>
-              <td style="padding:0.65rem 1rem;">personne / gens</td>
-              <td style="padding:0.65rem 1rem;">person / people</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Du fr. <em>mond</em></td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#fff;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">peyi</td>
-              <td style="padding:0.65rem 1rem;">peyi</td>
-              <td style="padding:0.65rem 1rem;">country</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Cognat proche</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">tè</td>
-              <td style="padding:0.65rem 1rem;">tè / sol</td>
-              <td style="padding:0.65rem 1rem;">earth / land</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Cognat direct</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#fff;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">solèy</td>
-              <td style="padding:0.65rem 1rem;">soleil</td>
-              <td style="padding:0.65rem 1rem;">sun</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Cognat proche</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">lannwit</td>
-              <td style="padding:0.65rem 1rem;">la nuit</td>
-              <td style="padding:0.65rem 1rem;">night</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Article intégré nan mot</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#fff;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">wè</td>
-              <td style="padding:0.65rem 1rem;">voir</td>
-              <td style="padding:0.65rem 1rem;">to see</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Du fr. <em>voir</em>, simplifié</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">tande</td>
-              <td style="padding:0.65rem 1rem;">entendre / écouter</td>
-              <td style="padding:0.65rem 1rem;">to hear / listen</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Du fr. <em>entendre</em></td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#fff;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">pale</td>
-              <td style="padding:0.65rem 1rem;">parler</td>
-              <td style="padding:0.65rem 1rem;">to speak</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Cognat direct</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">konnen</td>
-              <td style="padding:0.65rem 1rem;">connaître / savoir</td>
-              <td style="padding:0.65rem 1rem;">to know</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Un seul verbe pour fr. <em>savoir</em> ak <em>connaître</em></td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#fff;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">gen</td>
-              <td style="padding:0.65rem 1rem;">avoir / il y a</td>
-              <td style="padding:0.65rem 1rem;">to have / there is</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Verbe existentiel polyvalent</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">se</td>
-              <td style="padding:0.65rem 1rem;">c'se / être (copule)</td>
-              <td style="padding:0.65rem 1rem;">is / to be</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Du fr. <em>c'est</em> — copule invariable</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);background:#fff;">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">remen</td>
-              <td style="padding:0.65rem 1rem;">aimer</td>
-              <td style="padding:0.65rem 1rem;">to love / like</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Du fr. <em>aimer</em></td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border);">
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">travay</td>
-              <td style="padding:0.65rem 1rem;">travail / travailler</td>
-              <td style="padding:0.65rem 1rem;">work / to work</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Nom ak verbe identiques</td>
-            </tr>
-            <tr>
-              <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">blag</td>
-              <td style="padding:0.65rem 1rem;">blague / plaisanterie</td>
-              <td style="padding:0.65rem 1rem;">joke</td>
-              <td style="padding:0.65rem 1rem;color:var(--text-muted);">Faux ami : en créole, kapab toswa désigner quelque chose de sérieux</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <aside class="researcher-note" aria-label="Note de recherche">
-        La question nan intelligibilité mutuelle entre kreyòl la ayisyen ak le fransè se souvan mal posée. Ce n'se pas yon question de degré — les deux langs ne se simplement pas mutuellement intelligibles. Un locuteur natif nan créole ayisyen n'acquiert pas le fransè par simple exposition, ak vice versa. Affirmer le contraire, c'se perpétuer le mythe que kreyòl la se « nan fransè simplifié », ce qui se linguistiquement faux ak politikment dangereux.
-      </aside>
-      <div style="margin-top:2rem;">
-        <a href="glossaire-creole.html" class="btn btn-blue">Eksplore le Glosè Kreyòl-Français →</a>
-      </div>
-    </div>
-  </section>
+ <!-- COMPARAISON AVEC LE FRANÇAIS -->
+ <section class="section section--alt" id="comparaison">
+ <div class="container">
+ <p class="section-label">Deux Langs, Yon Île</p>
+ <h2 style="font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--blue);margin-bottom:1rem;">Comparaison ak Français</h2>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.5rem;max-width:780px;">
+ proximité lexicale ant kreyòl ayisyen ak fransè réelle men trompeuse. Yon francophone ki entend nan créole reconnaîtra sèten mots, men pa comprendra pa lang. structures grammaticales si diferans ke compréhension mutuelle limitée. Il y a toswa nan nombreux faux cognats : nan mo ki ressemblent nan fransè men gen yon sens diferan. tableau ci-dessous montre kèk ressemblansa yo ak divergensa yo karakteristik.
+ </p>
+ <div style="overflow-x:auto;margin-bottom:2rem;">
+ <table style="width:100%;border-collapse:collapse;font-size:15px;">
+ <thead>
+ <tr style="background:var(--blue);color:#fff;">
+ <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Créole Haïtien</th>
+ <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Français</th>
+ <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Anglais</th>
+ <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;">Note</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">liv</td>
+ <td style="padding:0.65rem 1rem;">livre</td>
+ <td style="padding:0.65rem 1rem;">book</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Cognat proche</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#fff;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">kay</td>
+ <td style="padding:0.65rem 1rem;">menon / chez</td>
+ <td style="padding:0.65rem 1rem;">house / home</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Du fr. <em>quai</em> oswa <em>chez</em></td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">dlo</td>
+ <td style="padding:0.65rem 1rem;">eau</td>
+ <td style="padding:0.65rem 1rem;">water</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">De « nan dlo » contracté</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#fff;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">manje</td>
+ <td style="padding:0.65rem 1rem;">nourriture / manger</td>
+ <td style="padding:0.65rem 1rem;">food / to eat</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Verbe ak non an menm tan</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">pitit</td>
+ <td style="padding:0.65rem 1rem;">timoyon / fils / fille</td>
+ <td style="padding:0.65rem 1rem;">child</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Du fr. <em>petit</em> — sens élargi</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#fff;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">bèl</td>
+ <td style="padding:0.65rem 1rem;">beau / belle</td>
+ <td style="padding:0.65rem 1rem;">beautiful</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Pas nan genre en créole</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">moun</td>
+ <td style="padding:0.65rem 1rem;">personne / gens</td>
+ <td style="padding:0.65rem 1rem;">person / people</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Du fr. <em>mond</em></td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#fff;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">peyi</td>
+ <td style="padding:0.65rem 1rem;">peyi</td>
+ <td style="padding:0.65rem 1rem;">country</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Cognat proche</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">tè</td>
+ <td style="padding:0.65rem 1rem;">tè / sol</td>
+ <td style="padding:0.65rem 1rem;">earth / land</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Cognat direct</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#fff;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">solèy</td>
+ <td style="padding:0.65rem 1rem;">soleil</td>
+ <td style="padding:0.65rem 1rem;">sun</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Cognat proche</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">lannwit</td>
+ <td style="padding:0.65rem 1rem;">la nuit</td>
+ <td style="padding:0.65rem 1rem;">night</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Article intégré nan mot</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#fff;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">wè</td>
+ <td style="padding:0.65rem 1rem;">voir</td>
+ <td style="padding:0.65rem 1rem;">to see</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Du fr. <em>voir</em>, simplifié</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">tande</td>
+ <td style="padding:0.65rem 1rem;">entendre / écouter</td>
+ <td style="padding:0.65rem 1rem;">to hear / listen</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Du fr. <em>entendre</em></td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#fff;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">pale</td>
+ <td style="padding:0.65rem 1rem;">parler</td>
+ <td style="padding:0.65rem 1rem;">to speak</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Cognat direct</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">konnen</td>
+ <td style="padding:0.65rem 1rem;">connaître / savoir</td>
+ <td style="padding:0.65rem 1rem;">to know</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Yon seul verbe pou fr. <em>savoir</em> ak <em>connaître</em></td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#fff;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">gen</td>
+ <td style="padding:0.65rem 1rem;">avoir / li y a</td>
+ <td style="padding:0.65rem 1rem;">to have / there is</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Verbe existentiel polyvalent</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">se</td>
+ <td style="padding:0.65rem 1rem;">c'se / être (copule)</td>
+ <td style="padding:0.65rem 1rem;">is / to be</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Du fr. <em>c'est</em> — copule invariable</td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);background:#fff;">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">remen</td>
+ <td style="padding:0.65rem 1rem;">aimer</td>
+ <td style="padding:0.65rem 1rem;">to love / like</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Du fr. <em>aimer</em></td>
+ </tr>
+ <tr style="border-bottom:1px solid var(--border);">
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">travay</td>
+ <td style="padding:0.65rem 1rem;">travail / travailler</td>
+ <td style="padding:0.65rem 1rem;">work / to work</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Nom ak verbe identiques</td>
+ </tr>
+ <tr>
+ <td style="padding:0.65rem 1rem;font-weight:600;color:var(--blue);">blag</td>
+ <td style="padding:0.65rem 1rem;">blague / plaisanterie</td>
+ <td style="padding:0.65rem 1rem;">joke</td>
+ <td style="padding:0.65rem 1rem;color:var(--text-muted);">Fo ami : en créole, kapab toswa désigner quelque chose nan sérieux</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ question nan intelligibilité mutuelle ant kreyòl ayisyen ak fransè souvan mal posée. Ce pa se pa yon question nan degré — deux langs pa simplement pa mutuellement intelligibles. Yon locuteur natif nan créole ayisyen pa acquiert pa fransè pa simple exposition, ak vice versa. Affirmer contraire, c'se perpétuer mythe ke kreyòl « nan fransè simplifié », li a ki linguistiquement faux ak politikment dangereux.
+ </aside>
+ <div style="margin-top:2rem;">
+ <a href="glossaire-creole.html" class="btn btn-blue">Eksplore Glosè Kreyòl-Français →</a>
+ </div>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-brand__logo">
-            Repiblik Ayiti
-          </div>
-          <p>
-            Une célébration nan extraordinaire istwa d'Haïti, de sa kilti
-            vibrante ak de son pèp remarquable. Dédié à partager l'istwa de
-            premye Repiblik nwa nan mond lan.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Eksplore</h4>
-          <ul>
-            <li><a href="index.html">Akèy</a></li>
-            <li><a href="about.html">Soswa Ayiti</a></li>
-            <li><a href="history.html">Istwa</a></li>
-            <li><a href="tourism.html">Touris</a></li>
-            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
-            <li><a href="archives.html">Achiv</a></li>
-            <li><a href="bibliography.html">Bibliyografi</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Kilti &amp; Lang</h4>
-          <ul>
-            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
-            <li><a href="vodou.html">Vodou</a></li>
-            <li><a href="gastronomy.html">Gastwonomi</a></li>
-            <li><a href="creole.html">Lang Kreyòl</a></li>
-            <li><a href="glossaire-creole.html">Glosè Kreyòl</a></li>
-            <li><a href="litterature.html">Literati</a></li>
-            <li><a href="senbòls-nationaux.html">Senbòl Nasyonal</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Istwa &amp; Enstitisyon</h4>
-          <ul>
-            <li><a href="timeline.html">Kwonolouji</a></li>
-            <li><a href="heroes.html">Ewò Nasyonal</a></li>
-            <li><a href="lidès.html">Lidè</a></li>
-            <li><a href="konstitisyon.html">Konstitisyon</a></li>
-            <li><a href="enstitisyons.html">Enstitisyon</a></li>
-            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Pran Kontak</h4>
-          <ul>
-            <li><a href="contact.html">Kontakte Nou</a></li>
-            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
-            <li><a href="license.html">Mansyon Legal</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
-        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
-        <span class="footer-editorial">Soursa yo principales : Michel DeGraff (MIT), Albert Valdman, Robert Chaudenson, Institut Pédagogique National d'Haïti, UNESCO, Konstitisyon de 1987.</span>
-      </div>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Lang</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="creole.html">Lang Kreyòl</a></li>
+ <li><a href="glossaire-creole.html">Glosè Kreyòl</a></li>
+ <li><a href="litterature.html">Literati</a></li>
+ <li><a href="senbòls-nationaux.html">Senbòl Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mansyon Legal</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Soursa yo prensipals : Michel DeGraff (MIT), Albert Valdman, Robert Chaudenson, Institut Pédagogique National d'Haïti, UNESCO, Konstitisyon nan 1987.</span>
+ </div>
+ </div>
+ </footer>
 
-  <script src="../js/script.js"></script>
-  <script src="../js/premium.js"></script>
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){e.stopPropagation();sw.classList.toggle('open');});
+  document.addEventListener('click',function(){sw.classList.remove('open');});
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  // Auto-redirect based on stored preference
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
 </body>
 </html>

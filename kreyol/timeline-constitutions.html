@@ -1,410 +1,457 @@
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#00209F" />
-  <title>Kwonolouji nan Konstitisyons d'Haïti | Repiblik Ayiti</title>
-  <meta name="description" content="Les gran étapes konstitisyonnelles ak enstitisyonnelles d'Haïti, nan premye Konstitisyon de 1801 à la Konstitisyon démocratique de 1987." />
-  <meta name="author" content="RepiblikHaïti.org" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/premium.css" />
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Kwonolouji nan Konstitisyons d'Haïti | Repiblik Ayiti</title>
+ <meta name="description" content="Les gran étapes konstitisyonnelles ak enstitisyonnelles d'Haïti, nan premye Konstitisyon de 1801 à la Konstitisyon démocratique de 1987." />
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher */
+.lang-switcher { position: relative; margin-left: 1rem; }
+.lang-switcher__btn { background: none; border: 1px solid rgba(255,255,255,0.3); color: inherit; padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: border-color 0.2s; }
+.lang-switcher__btn:hover { border-color: rgba(255,255,255,0.7); }
+.lang-switcher__menu { display: none; position: absolute; top: 110%; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-width: 150px; z-index: 1000; overflow: hidden; }
+.lang-switcher.open .lang-switcher__menu { display: block; }
+.lang-option { display: block; padding: 0.6rem 1rem; color: #333; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+.lang-option:hover { background: #f0f4ff; }
+.lang-option.active { background: #e8f0fe; font-weight: 600; }
+@media (max-width: 768px) { .lang-switcher { margin-left: 0; margin-top: 0.5rem; } .lang-switcher__menu { right: auto; left: 0; } }
+</style>
 </head>
 <body>
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Back to top -->
-  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
 
-    <header class="site-header">
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="Akèy">
-          Repiblik Ayiti
-        </a>
-        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
-          <a href="index.html">Akèy</a>
-          <a href="about.html">Soswa Nou</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="history.html">Istwa Jeneral</a>
-              <a href="timeline.html">Kwonolouji</a>
-              <a href="heroes.html">Ewò Nasyonal</a>
-              <a href="lidès.html">Lidè</a>
-              <a href="konstitisyon.html">Konstitisyon</a>
-              <a href="enstitisyons.html">Enstitisyon</a>
-              <a href="presidents.html">Pwofil Prezidan yo</a>
-              <a href="revolution-batays.html">Batay Revolisyon an</a>
-              <a href="relations-internationales.html">Relasyon Entènasyonal</a>
-            </div>
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ <a href="presidents.html">Pwofil Prezidan yo</a>
+ <a href="revolution-batays.html">Batay Revolisyon an</a>
+ <a href="relations-internationales.html">Relasyon Entènasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ <a href="atiss.html">Atis Vizyèl</a>
+ <a href="mizik-istwa.html">Istwa Mizik</a>
+ <a href="litterature.html">Literati</a>
+ <a href="creole.html">Lang Kreyòl</a>
+ <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
+ <a href="glossaire-creole.html">Glosè Kreyòl</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="departements.html">10 Depatman yo</a>
+ <a href="geographie.html">Jeyografi Fizik</a>
+ <a href="anviwonman.html">Anviwonman</a>
+ <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
+ <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
+ <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang">
+            🇭🇹 Kreyòl ▾
+          </button>
+          <div class="lang-switcher__menu">
+            <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
+            <a href="#" class="lang-option active" data-lang="ht">🇭🇹 Kreyòl</a>
           </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti.html">Kilti &amp; Atizay</a>
-              <a href="vodou.html">Vodou</a>
-              <a href="lwa.html">Lwa yo</a>
-              <a href="gastronomy.html">Gastwonomi</a>
-              <a href="holidays.html">Joswa Ferye</a>
-              <a href="atiss.html">Atis Vizyèl</a>
-              <a href="mizik-istwa.html">Istwa Mizik</a>
-              <a href="litterature.html">Literati</a>
-              <a href="creole.html">Lang Kreyòl</a>
-              <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
-              <a href="glossaire-creole.html">Glosè Kreyòl</a>
-            </div>
-          </div>
-          <a href="tourism.html">Touris</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="departements.html">10 Depatman yo</a>
-              <a href="geographie.html">Jeyografi Fizik</a>
-              <a href="anviwonman.html">Anviwonman</a>
-              <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
-              <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti-vivante.html">Kilti Vivan</a>
-              <a href="creativite-populaire.html">Kreyativite Popilè</a>
-              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
-              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
-              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
-              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
-              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
-              <a href="instabilite-politik.html">Enstabilite Politik</a>
-              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
-              <a href="services-essentiels.html">Sèvis Esansyèl</a>
-              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
-              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="encyclopedia.html">Ansiklopedi</a>
-              <a href="archives.html">Achiv</a>
-              <a href="bibliography.html">Bibliyografi</a>
-              <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
-              <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
-            </div>
-          </div>
-          <a href="contact.html">Kontak</a>
-        </nav>
+        </div>
         <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
 
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
-    <div class="search-overlay__inner">
-      <div class="search-overlay__header">
-        <div class="search-input-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
-        </div>
-        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
-      </div>
-      <div class="search-results" id="searchResults" aria-live="polite"></div>
-    </div>
-  </div>
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
 
-  <section class="page-hero page-hero--history">
-    <div class="container">
-      <p class="page-hero__label">Enstitisyon</p>
-      <h1 class="page-hero__title">Kwonolouji nan Konstitisyons ak Enstitisyon</h1>
-      <p class="page-hero__desc">Les gran étapes konstitisyonnelles ak enstitisyonnelles d'Haïti, nan premye Konstitisyon de 1801 à la Konstitisyon démocratique de 1987.</p>
-    </div>
-  </section>
+ <section class="page-hero page-hero--history">
+ <div class="container">
+ <p class="page-hero__label">Enstitisyon</p>
+ <h1 class="page-hero__title">Kwonolouji nan Konstitisyons ak Enstitisyon</h1>
+ <p class="page-hero__desc">gran étapes konstitisyonnelles ak enstitisyonnelles d'Haïti, nan premye Konstitisyon nan 1801 à Konstitisyon démocratique nan 1987.</p>
+ </div>
+ </section>
 
-  <div class="breadcrumb">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <a href="index.html">Akèy</a>
-        <span>/</span>
-        <a href="history.html">Istwa</a>
-        <span>/</span>
-        <a href="timeline.html">Kwonolouji</a>
-        <span>/</span>
-        <span>Konstitisyons &amp; Enstitisyon</span>
-      </nav>
-    </div>
-  </div>
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <a href="history.html">Istwa</a>
+ <span>/</span>
+ <a href="timeline.html">Kwonolouji</a>
+ <span>/</span>
+ <span>Konstitisyons &amp; Enstitisyon</span>
+ </nav>
+ </div>
+ </div>
 
-  <div class="container" style="padding-top:1rem;">
-    <a href="timeline.html" class="btn btn-outline" style="font-size:0.9rem;">← Retour à la Kwonolouji</a>
-  </div>
+ <div class="container" style="padding-top:1rem;">
+ <a href="timeline.html" class="btn btn-outline" style="font-size:0.9rem;">← Retour à Kwonolouji</a>
+ </div>
 
-  <section class="section" id="konstitisyons">
-    <div class="container">
-      <p class="section-label text-center">1801 – Présent</p>
-      <h2 class="section-title text-center">Les Grannan Konstitisyons d'Haïti</h2>
-      <p class="section-subtitle text-center">Haïti a eu plis de vingt konstitisyons pandan son istwa, reflétant l'instabilité politik chronique men toswa la permanence d'yon aspiration à l'État de droit. Voici les jalons konstitisyonnels les plis significatifs.</p>
+ <section class="section" id="konstitisyons">
+ <div class="container">
+ <p class="section-label text-center">1801 – Présent</p>
+ <h2 class="section-title text-center">Grannan Konstitisyons d'Haïti</h2>
+ <p class="section-subtitle text-center">Haïti a eu plis nan vingt konstitisyons pandan li istwa, reflétant l'instabilité politik chronique men toswa permanence d'yon aspiration à l'État nan droit. Voici jalons konstitisyonnels plis significatifs.</p>
 
-      <div class="timeline">
+ <div class="timeline">
 
-        <div class="timeline-item">
-          <div class="timeline-card">
-            <p class="timeline-card__year">1801 &bull; Saint-Domingue</p>
-            <h3 class="timeline-card__title">Konstitisyon de Toussaint Louverture</h3>
-            <p class="timeline-card__desc">Première konstitisyon nan île, adoptée par l'Assemblée centrale de Saint-Domingue sous l'autorité de Toussaint Louverture. Elle abolit définitivement l'esklavaj sur l'ensemble nan île ak proclame l'égalité de tout les habitants. Toussaint s'y nomme Gouverneur à vie avec pouvoir de désigner son successeur. Bien que formellement sous souvènte française, sa a konstitisyon représente le premye acte d'autonomie konstitisyonnelle de Saint-Domingue ak l'yon nan premières abolisyons légales nan esklavaj dans l'istwa moderne.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1801 &bull; Saint-Domingue</p>
+ <h3 class="timeline-card__title">Konstitisyon nan Toussaint Louverture</h3>
+ <p class="timeline-card__desc">Première konstitisyon nan île, adopte pa l'Assemblée centrale nan Saint-Domingue anba l'autorité nan Toussaint Louverture. Elle abolit définitivement l'esklavaj sou l'ensemble nan zile ak proclame l'égalité nan tout habitants. Toussaint s'y nomme Gouverneur à lavi ak pouvwa nan désigner li successeur. Bien ke formellement anba souvènte fransèz, li a konstitisyon reprezante premye acte d'autonomie konstitisyonnelle nan Saint-Domingue ak l'yon nan premyes abolisyons légales nan esklavaj nan l'istwa moderne.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card">
-            <p class="timeline-card__year">20 mai 1805 &bull; Empire d'Haïti</p>
-            <h3 class="timeline-card__title">Konstitisyon Impériale de Dessalines</h3>
-            <p class="timeline-card__desc">Première konstitisyon nan Repiblik Ayiti indépandane, promulguée par l'Empereur Jacques Ier (Dessalines). Elle proclame que tout les Haïtiens, quelle que soit leur couleur de peau, se ltoswa « noirs » — yon acte revolisyonnaire destiné à effacer les distinctions raciales héritées nan esklavaj. Elle interdi formellement aux Blancs de posséder nan tès en Haïti. Cette konstitisyon affirme yon souvènte totale ak yon idantite nasyonal noire revendiquée avec fyète, en rupture radicale avec l'ordre kolonyal mondial.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">20 mai 1805 &bull; Empire d'Haïti</p>
+ <h3 class="timeline-card__title">Konstitisyon Impériale nan Dessalines</h3>
+ <p class="timeline-card__desc">Première konstitisyon nan Repiblik Ayiti indépandane, promulguée pa l'Empereur Jacques Ier (Dessalines). Elle proclame ke tout Haïtiens, quelle ke soit yo couleur nan peau, ltoswa « noirs » — yon acte revolisyonnaire destiné à effacer distinctions raciales héritées nan esklavaj. Elle interdi formellement nan Blancs nan posséder nan tès en Haïti. Cette konstitisyon affirme yon souvènte totale ak yon idantite nasyonal noire revendiquée ak fyète, en rupture radicale ak l'ordre kolonyal mondial.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card">
-            <p class="timeline-card__year">27 décembre 1806 &bull; Repiblik nan Sud</p>
-            <h3 class="timeline-card__title">Konstitisyon Républicaine de 1806</h3>
-            <p class="timeline-card__desc">Après l'assassinat de Dessalines, les élites mulâtres ak sèten généraux noirs nan Sud ak nan Ouse adoptent yon nouvo konstitisyon républicaine. Elle instaure yon système bicaméral avec yon Sénat pwisan ak yon exécutif affaibli, pour éviter tout retour à l'autoritarisme. Alexandre Pétion se élu prezidan. Cette konstitisyon représente yon tentative de gouvènman libéral, menm si elle perpétue en réalité pouvwa a nan élites de couleur au détriment nan masses peyiannes noires.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">27 décembre 1806 &bull; Repiblik nan Sud</p>
+ <h3 class="timeline-card__title">Konstitisyon Républicaine nan 1806</h3>
+ <p class="timeline-card__desc">Après l'assassinat nan Dessalines, élites mulâtres ak sèten généraux noirs nan Sud ak nan Ouse adoptent yon nouvo konstitisyon républicaine. Elle instaure yon système bicaméral ak yon Sénat pwisan ak yon exécutif affaibli, pou éviter tout retour à l'autoritarisme. Alexandre Pétion élu prezidan. Cette konstitisyon reprezante yon tentative nan gouvènman libéral, menm si li perpétue en réalité pouvwa a nan élites nan couleur nan détriment nan masses peyiannes noires.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card">
-            <p class="timeline-card__year">1816 &bull; Repiblik</p>
-            <h3 class="timeline-card__title">Konstitisyon d'Alexandre Pétion</h3>
-            <p class="timeline-card__desc">Nouvelle konstitisyon libérale adoptée sous la présidence de Pétion, qui établit sitoswa la présidence à vie poswa prezidan en exercice. Pétion se konnen pour sa politik de redistribution nan tès aux soldats ak ansyen esclaves, créant yon classe de piti propriétaires ruraux. Cette konstitisyon marque yon étape vers yon gouvernance plis libérale ak sosyal nan partie sud nan peyi, en contraste ak régime autoritaire nan Royaume nan Nord de Christophe.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1816 &bull; Repiblik</p>
+ <h3 class="timeline-card__title">Konstitisyon d'Alexandre Pétion</h3>
+ <p class="timeline-card__desc">Nouvelle konstitisyon libérale adopte anba présidence nan Pétion, ki établit sitoswa présidence à lavi poswa prezidan en exercice. Pétion konnen pou li politik nan redistribution nan tès nan sòlda ak ansyen esclaves, créant yon classe nan piti propriétaires ruraux. Cette konstitisyon make yon étape vè yon gouvernance plis libérale ak sosyal nan pati sid nan peyi, en contraste ak régime autoritaire nan Royaume nan Nord nan Christophe.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card">
-            <p class="timeline-card__year">1843 &bull; Repiblik Réunifiée</p>
-            <h3 class="timeline-card__title">Konstitisyon de 1843</h3>
-            <p class="timeline-card__desc">Après la chute nan prezidan Boyer (qui avait gouverné 25 ans), yon nouvo konstitisyon libérale se adoptée avec nan garanties renforcées nan libètes civiles ak yon limitation nan pouvoirs exécutifs. Elle représente yon tentative de démocratisation après les longues présidensa yo autoritaires. Cepandan, l'instabilité politik qui suit sa promulgation illustre le fossé ant textes konstitisyonnels progressistes ak la réalité nan pouvoir en Haïti.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1843 &bull; Repiblik Réunifiée</p>
+ <h3 class="timeline-card__title">Konstitisyon nan 1843</h3>
+ <p class="timeline-card__desc">Après chute nan prezidan Boyer (qui te gen gouverné 25 ans), yon nouvo konstitisyon libérale adopte ak nan garanties renforcées nan libètes civiles ak yon limitation nan pouvwa exécutifs. Elle reprezante yon tentative nan démocratisation apre longues présidensa yo autoritaires. Cepandan, l'instabilité politik ki suit li promulgation montre fossé ant textes konstitisyonnels progressistes ak réalité nan pouvwa en Haïti.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card">
-            <p class="timeline-card__year">1849 – 1859 &bull; Second Empire</p>
-            <h3 class="timeline-card__title">Konstitisyon Impériale de Faustin Ier</h3>
-            <p class="timeline-card__desc">En 1849, jeneral la Faustin Soulouque se fè proclamer Empereur Faustin Ier ak adopte yon nouvo konstitisyon impériale, instaurant yon monarchie héréditaire avec yon cour nobiliaire. C'se la dènye tentative de régime monarchique en Haïti. En 1859, yon révolte milite renverse l'Empire ak restaure la Repiblik, avec l'adoption d'yon nouvo konstitisyon républicaine sous jeneral la Geffrard, rejetant définitivement tout régime monarchique.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1849 – 1859 &bull; Second Empire</p>
+ <h3 class="timeline-card__title">Konstitisyon Impériale nan Faustin Ier</h3>
+ <p class="timeline-card__desc">En 1849, jeneral Faustin Soulouque fè proclamer Empereur Faustin Ier ak adopte yon nouvo konstitisyon impériale, instaurant yon monarchie héréditaire ak yon cour nobiliaire. C'se dènye tentative nan régime monarchique en Haïti. En 1859, yon révolte milite renverse l'Empire ak restaure Repiblik, ak l'adoption d'yon nouvo konstitisyon républicaine anba jeneral Geffrard, rejetant définitivement tout régime monarchique.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card">
-            <p class="timeline-card__year">1879 &bull; Troisième Repiblik</p>
-            <h3 class="timeline-card__title">Konstitisyon de 1879</h3>
-            <p class="timeline-card__desc">Adoptée sous la présidence de Lysius Salomon, la konstitisyon de 1879 tente d'établir nan enstitisyons stables. Elle maintient yon régime républicain avec yon Parlement bicaméral. Cette période nan Troisième Repiblik ayisyèn se marquée par nan luttes politiks entre partis libéraux ak nationaux, nan coups d'État à répétition ak yon instabilité chronique qui verra défiler de nombreux prezidans en peu d'anes.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1879 &bull; Troisième Repiblik</p>
+ <h3 class="timeline-card__title">Konstitisyon nan 1879</h3>
+ <p class="timeline-card__desc">Adoptée anba présidence nan Lysius Salomon, konstitisyon nan 1879 tente d'établir nan enstitisyons stables. Elle maintient yon régime républicain ak yon Parlement bicaméral. Cette période nan Troisième Repiblik ayisyèn make pa nan luttes politiks ant partis libéraux ak nationaux, nan coups d'État à répétition ak yon instabilité chronique ki verra défiler nan nombreux prezidans en peu d'anes.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">1918 &bull; Occupation Américaine</p>
-            <h3 class="timeline-card__title">Konstitisyon de 1918 (Konstitisyon Américaine)</h3>
-            <p class="timeline-card__desc">Imposée pandan l'okipasyon ameriken, sa a konstitisyon controversée se sitoswa rédigée par Franklin D. Roosevelt (alò Secrétaire adjoint à la Marine). Sa disposition la plis contestée autorise les étrangers à posséder nan tès en Haïti, renversant l'interdiction fondamentale issue nan Konstitisyon de 1805. Le Parlement ayisyen ayant refusé nan adopter, il se dissous ak la konstitisyon se ratifiée par yon plébiscite. Elle symbolise la subordination nan souvènte ayisyèn aux intérêts américains.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">1918 &bull; Occupation Américaine</p>
+ <h3 class="timeline-card__title">Konstitisyon nan 1918 (Konstitisyon Américaine)</h3>
+ <p class="timeline-card__desc">Imposée pandan l'okipasyon ameriken, li a konstitisyon controversée sitoswa rédigée pa Franklin D. Roosevelt (alò Secrétaire adjoint à Marine). Sa disposition plis contestée autorise étrangers à posséder nan tès en Haïti, renversant l'interdiction fondamantal issue nan Konstitisyon nan 1805. Parlement ayisyen ayant refusé nan adopter, li dissous ak konstitisyon ratifiée pa yon plébiscite. Elle sinbolize subordination nan souvènte ayisyèn nan intérêts amerikens.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card">
-            <p class="timeline-card__year">1932 – 1935 &bull; Post-Occupation</p>
-            <h3 class="timeline-card__title">Konstitisyons Post-Occupation</h3>
-            <p class="timeline-card__desc">Dans les anes qui suivent le retrait progressif nan troupes américaines (complété en 1934), Haïti adopte de nouvo konstitisyons en 1932 ak 1935. Elles cherchent à restaurer la souvènte nasyonal ak à renforcer les enstitisyons haïtiennes. La konstitisyon de 1935, sous Sténio Vincent, rétablit sitoswa l'interdiction poswa étrangers de posséder nan tès. Ces textes témoignent nan volonté ayisyèn de reconstruire yon identité konstitisyonnelle souveraine après okipasyon an.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1932 – 1935 &bull; Post-Occupation</p>
+ <h3 class="timeline-card__title">Konstitisyons Post-Occupation</h3>
+ <p class="timeline-card__desc">Dans anes ki suivent retrait progressif nan troupes amerikens (complété en 1934), Haïti adopte nan nouvo konstitisyons en 1932 ak 1935. Elles cherchent à restaurer souvènte nasyonal ak à renforcer enstitisyons ayisyèns. konstitisyon nan 1935, anba Sténio Vincent, rétablit sitoswa l'interdiction poswa étrangers nan posséder nan tès. Ces textes témoignent nan volonté ayisyèn nan reconstruire yon idantite konstitisyonnelle souveraine apre okipasyon an.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">1957 – 1964 &bull; Duvalierisme</p>
-            <h3 class="timeline-card__title">Modifications Konstitisyonnelles Duvalieristes</h3>
-            <p class="timeline-card__desc">François Duvalier, arrivé au pouvoir en 1957, procède à nan modifications konstitisyonnelles successives pour concentrer pouvwa a. En 1964, yon nouvo konstitisyon le proclame ofisyèlman Prezidan à vie, avec dwa a de désigner son successeur. Ces changements éliminent tout contre-pouvoir konstitisyonnel ak permete à Duvalier d'exercer yon pouvoir absolu. À sa mort en 1971, son fils Jean-Claude lui succède à 19 ans en vertu de sa yo dispositions, illustrant la perversion nan textes konstitisyonnels à nan fins dynastiques.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">1957 – 1964 &bull; Duvalierisme</p>
+ <h3 class="timeline-card__title">Modifications Konstitisyonnelles Duvalieristes</h3>
+ <p class="timeline-card__desc">François Duvalier, arrivé nan pouvwa en 1957, procède à nan modifications konstitisyonnelles successives pou concentrer pouvwa a. En 1964, yon nouvo konstitisyon proclame ofisyèlman Prezidan à vie, ak dwa a nan désigner li successeur. Ces changements éliminent tout contre-pouvoir konstitisyonnel ak permete à Duvalier d'exercer yon pouvwa absolu. À li lanmò en 1971, li fils Jean-Claude lui succède à 19 ans en vertu nan li yo dispositions, illustrant perversion nan textes konstitisyonnels à nan fins dynastiques.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--green, #27ae60);">
-            <p class="timeline-card__year">29 mars 1987 &bull; Démocratie</p>
-            <h3 class="timeline-card__title">Konstitisyon Démocratique de 1987</h3>
-            <p class="timeline-card__desc">Adoptée par référendum après la chute de Jean-Claude Duvalier, la Konstitisyon de 1987 se la plis progressiste de istwa Ayiti. Elle établit : la séparation nan pouvoirs entre exécutif, législatif ak judiciaire ; la limitation nan mandat prezidaniel à deux mandats non consécutifs de 5 ans ; kreyòl la ayisyen tankoswa lang officielle au menm titre que le fransè ; l'interdiction pour tout prezidan de se représenter après son mandat ; la création d'yon Conseil Électoral Permanent (CEP) ; ak yon Charte nan dwa fondamantal. Elle demeure la konstitisyon en vigueur, byenke souvan suspendue oswa contournée nan faits.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--green, #27ae60);">
+ <p class="timeline-card__year">29 mars 1987 &bull; Démocratie</p>
+ <h3 class="timeline-card__title">Konstitisyon Démocratique nan 1987</h3>
+ <p class="timeline-card__desc">Adoptée pa référendum apre chute nan Jean-Claude Duvalier, Konstitisyon nan 1987 plis progressiste nan istwa Ayiti. Elle établit : séparation nan pouvwa ant exécutif, législatif ak judiciaire ; limitation nan mandat prezidaniel à deux mandats non consécutifs nan 5 ans ; kreyòl ayisyen tankoswa lang officielle nan menm titre ke fransè ; l'interdiction pou tout prezidan nan représenter apre li mandat ; création d'yon Conseil Électoral Permanent (CEP) ; ak yon Charte nan dwa fondamantal. Elle demeure konstitisyon en vigueur, byenke souvan suspendue oswa contournée nan faits.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card">
-            <p class="timeline-card__year">2011 &bull; Amendements</p>
-            <h3 class="timeline-card__title">Amendements Konstitisyonnels de 2011</h3>
-            <p class="timeline-card__desc">En 2011, le Parlement ayisyen adopte nan amendements konstitisyonnels significatifs, sitoswa : la rekonesans nan double nationalité (permettant à nan Haïtiens nan dyaspora d'accéder à nan fonctions publiques), la création d'yon Cour konstitisyonnelle (jamè effectivement mise en place), ak diverses modifications enstitisyonnelles. Ces amendements reflètent la volonté de moderniser les enstitisyons, men leur mise en œuvre demeure partielle en raison nan instabilité politik persistante.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">2011 &bull; Amendements</p>
+ <h3 class="timeline-card__title">Amendements Konstitisyonnels nan 2011</h3>
+ <p class="timeline-card__desc">En 2011, Parlement ayisyen adopte nan amendements konstitisyonnels significatifs, sitoswa : rekonesans nan double nasyonalité (permettant à nan Haïtiens nan dyaspora d'accéder à nan fonctions publiques), création d'yon Cour konstitisyonnelle (jamè effectivement mise en place), ak diverses modifications enstitisyonnelles. Ces amendements reflètent volonté nan moderniser enstitisyons, men yo mise en zèv demeure partielle en raison nan instabilité politik persistante.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">2021 &bull; Référendum Contesté</p>
-            <h3 class="timeline-card__title">Projak de Nouvelle Konstitisyon de Moïse</h3>
-            <p class="timeline-card__desc">En 2021, le prezidan Jovenel Moïse propose yon nouvo konstitisyon par voie référendaire, prévoyant yon renforcement nan pouvoirs prezidaniels ak nan modifications enstitisyonnelles profondes. Le projak se largement contesté par l'opposition, les organisations nan sosyete sivil ak les milieux juridiques, qui dénoncent yon tentative d'augmenter pouvwa yo exécutifs. L'assassinat de Moïse en juillak 2021 mete fin à ce projet. La Konstitisyon de 1987 (avec ses amendements de 2011) demeure le texte de référence.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">2021 &bull; Référendum Contesté</p>
+ <h3 class="timeline-card__title">Projak nan Nouvelle Konstitisyon nan Moïse</h3>
+ <p class="timeline-card__desc">En 2021, prezidan Jovenel Moïse pwopoze yon nouvo konstitisyon pa voie référendaire, prévoyant yon renforcement nan pouvwa prezidaniels ak nan modifications enstitisyonnelles pwofons. projak largement contesté pa l'opposition, òganizasyons nan sosyete sivil ak milieux juridiques, ki dénoncent yon tentative d'augmenter pouvwa yo exécutifs. L'assassinat nan Moïse en juillak 2021 mete fin à li a projet. Konstitisyon nan 1987 (avec li yo amendements nan 2011) demeure texte nan référence.</p>
+ </div>
+ </div>
 
-      </div>
-    </div>
-  </section>
+ </div>
+ </div>
+ </section>
 
-  <section class="section section--alt" id="enstitisyons-cles">
-    <div class="container">
-      <div class="two-col--wide-left">
-        <div>
-          <p class="section-label">Enstitisyon</p>
-          <h2 style="font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--blue);margin-bottom:1.2rem;">Les Enstitisyon Clés nan État Haïtien</h2>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            La Konstitisyon de 1987 te etabli yon architecture enstitisyonnelle ambitieuse —
-            trop ambitieuse, diront sèten — pour yon État dont les fondations avaient été
-            fragilisées par deux syèks de diktatès, d'occupations ak d'instabilité.
-            Le <strong>Pouvoir Exécutif</strong> se confié à yon prezidan élu au suffrage universel
-            pour yon mandat de cinq ans non renouvelable consécutivement, assisté d'yon Premier ministre.
-            Ce dispositif d'exécutif bicéphale te voulu pour empêcher la concentration nan pouvoir —
-            en pratique, la cohabitation ant deux têtes nan exécutif a souvan été source de
-            blocages enstitisyonnels.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Le <strong>Parlement</strong> se bicaméral : yon Sénat de 30 membres (élus pour 6 ans)
-            ak yon Chambre nan Députés de 119 membres (élus pour 4 ans). Ce Parlement a
-            konnen nan périonan entières de paralysie oswa d'absence totale, faute d'eleksyon
-            organisées nan délais. Entre 2019 ak 2023, Haïti a fonctionné sans Parlement.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            La <strong>Cour de Cassation</strong> se la plis haute juridiction judiciaire.
-            La Konstitisyon prévoyait la création d'yon Cour konstitisyonnelle distincte —
-            elle n'a jamè été instituée. Le <strong>Conseil Électoral Permanent (CEP)</strong>,
-            censé organiser les eleksyon de façon indépandane, a presque toujoswa fonctionné
-            sous forme provisoire, sa composition faisant l'objak de négociations politiks à
-            chak cycle électoral.
-          </p>
-          <div class="researcher-note">
-            Il y a yon décalage frappant ant sophistication juridique nan Konstitisyon de 1987
-            ak la réalité enstitisyonnelle nan peyi. Ce décalage n'se pas yon défaillance haïtienne
-            intrinsèque — c'se le produit d'yon déstabilisation systématique depi 1804, y compris
-            par nan acteurs extérieurs. Le droit konstitisyonnel ayisyen se remarquablement bien
-            écrit ; ce se les conditions de son application qui fè défaut.
-          </div>
-        </div>
-        <div>
-          <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.5rem;">
-            <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red);margin-bottom:1rem;">Quatre piliers enstitisyonnels</p>
-            <div style="margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">
-              <strong style="display:block;color:var(--blue);">Présidence</strong>
-              <p style="font-size:13px;color:var(--text-muted);margin:0.2rem 0 0;line-height:1.5;">Mandat de 5 ans, non renouvelable consécutivement. Nomme le Premier ministre.</p>
-            </div>
-            <div style="margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">
-              <strong style="display:block;color:var(--blue);">Parlement</strong>
-              <p style="font-size:13px;color:var(--text-muted);margin:0.2rem 0 0;line-height:1.5;">Sénat (30 membres) + Chambre nan Députés (119 membres). Vote les lois, contrôle le gouvènman.</p>
-            </div>
-            <div style="margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">
-              <strong style="display:block;color:var(--blue);">Cour de Cassation</strong>
-              <p style="font-size:13px;color:var(--text-muted);margin:0.2rem 0 0;line-height:1.5;">Juridiction suprême nan ordre judiciaire. La Cour konstitisyonnelle prévue en 1987 n'a jamè été créée.</p>
-            </div>
-            <div>
-              <strong style="display:block;color:var(--blue);">CEP</strong>
-              <p style="font-size:13px;color:var(--text-muted);margin:0.2rem 0 0;line-height:1.5;">Conseil Électoral Permanent — presque toujoswa provisoire en pratique.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+ <section class="section section--alt" id="enstitisyons-cles">
+ <div class="container">
+ <div class="two-col--wide-left">
+ <div>
+ <p class="section-label">Enstitisyon</p>
+ <h2 style="font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--blue);margin-bottom:1.2rem;">Enstitisyon Clés nan État Haïtien</h2>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Konstitisyon nan 1987 te etabli yon architecture enstitisyonnelle ambitieuse —
+ trop ambitieuse, diront sèten — pou yon État ke fondasyons te gen été
+ fragilisées pa deux syèks nan diktatès, d'occupations ak d'instabilité.
+ <strong>Pouvoir Exécutif</strong> confié à yon prezidan élu nan suffrage universel
+ pou yon mandat nan cinq ans non renouvelable consécutivement, assisté d'yon Premier ministre.
+ Ce dispositif d'exécutif bicéphale te voulu pou empêcher concentration nan pouvwa —
+ en pratique, cohabitation ant deux têtes nan exécutif a souvan été anba de
+ blocages enstitisyonnels.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ <strong>Parlement</strong> bicaméral : yon Sénat nan 30 membres (élus pou 6 ans)
+ ak yon Chambre nan Députés nan 119 membres (élus pou 4 ans). Ce Parlement a
+ konnen nan périonan entières nan paralysie oswa d'absence totale, faute d'eleksyon
+ organisées nan délais. Entre 2019 ak 2023, Haïti a fonctionné san Parlement.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ <strong>Cour nan Cassation</strong> plis haute juridiction judiciaire.
+ Konstitisyon prévoyait création d'yon Cour konstitisyonnelle distincte —
+ li pa a jamè été instituée. <strong>Conseil Électoral Permanent (CEP)</strong>,
+ censé organiser eleksyon nan façon indépandane, a presque toujoswa fonctionné
+ anba fòm provisoire, li composition faisant l'objak nan négociations politiks à
+ chak cycle électoral.
+ </p>
+ <div class="researcher-note">
+ Il y a yon décalage frappant ant sophistication juridique nan Konstitisyon nan 1987
+ ak réalité enstitisyonnelle nan peyi. Ce décalage pa se pa yon défaillance ayisyèn
+ intrinsèque — c'se produit d'yon déstabilisation systématique depi 1804, y compris
+ pa nan acteurs extérieurs. droit konstitisyonnel ayisyen remarquablement bien
+ écrit ; li a conditions nan li application ki fè défaut.
+ </div>
+ </div>
+ <div>
+ <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.5rem;">
+ <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red);margin-bottom:1rem;">Quatre piliers enstitisyonnels</p>
+ <div style="margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">
+ <strong style="display:block;color:var(--blue);">Présidence</strong>
+ <p style="font-size:13px;color:var(--text-muted);margin:0.2rem 0 0;line-height:1.5;">Mandat nan 5 ans, non renouvelable consécutivement. Nomme Premier ministre.</p>
+ </div>
+ <div style="margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">
+ <strong style="display:block;color:var(--blue);">Parlement</strong>
+ <p style="font-size:13px;color:var(--text-muted);margin:0.2rem 0 0;line-height:1.5;">Sénat (30 membres) + Chambre nan Députés (119 membres). Vote lois, contrôle gouvènman.</p>
+ </div>
+ <div style="margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--border);">
+ <strong style="display:block;color:var(--blue);">Cour nan Cassation</strong>
+ <p style="font-size:13px;color:var(--text-muted);margin:0.2rem 0 0;line-height:1.5;">Juridiction suprême nan ordre judiciaire. Cour konstitisyonnelle prévue en 1987 pa a jamè été créée.</p>
+ </div>
+ <div>
+ <strong style="display:block;color:var(--blue);">CEP</strong>
+ <p style="font-size:13px;color:var(--text-muted);margin:0.2rem 0 0;line-height:1.5;">Conseil Électoral Permanent — presque toujoswa provisoire en pratique.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-  <section class="cta-section">
-    <div class="container">
-      <h2>Voir la Konstitisyon Actuelle</h2>
-      <p>Dekouvri en détail la Konstitisyon de 1987, ses dispositions essentielles ak son application contemporaine.</p>
-      <a href="konstitisyon.html" class="btn btn-cta-white">Voir la Konstitisyon Actuelle →</a>
-    </div>
-  </section>
+ <section class="cta-section">
+ <div class="container">
+ <h2>Voir Konstitisyon Actuelle</h2>
+ <p>Dekouvri en détail Konstitisyon nan 1987, li yo dispositions esansyèls ak li application contemporaine.</p>
+ <a href="konstitisyon.html" class="btn btn-cta-white">Voir Konstitisyon Actuelle →</a>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-brand__logo">
-            Repiblik Ayiti
-          </div>
-          <p>
-            Une célébration nan extraordinaire istwa d'Haïti, de sa kilti
-            vibrante ak de son pèp remarquable. Dédié à partager l'istwa de
-            premye Repiblik nwa nan mond lan.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Eksplore</h4>
-          <ul>
-            <li><a href="index.html">Akèy</a></li>
-            <li><a href="about.html">Soswa Ayiti</a></li>
-            <li><a href="history.html">Istwa</a></li>
-            <li><a href="tourism.html">Touris</a></li>
-            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
-            <li><a href="archives.html">Achiv</a></li>
-            <li><a href="bibliography.html">Bibliyografi</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Kilti &amp; Sosyete</h4>
-          <ul>
-            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
-            <li><a href="vodou.html">Vodou</a></li>
-            <li><a href="gastronomy.html">Gastwonomi</a></li>
-            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
-            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
-            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
-            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Istwa &amp; Enstitisyon</h4>
-          <ul>
-            <li><a href="timeline.html">Kwonolouji</a></li>
-            <li><a href="heroes.html">Ewò Nasyonal</a></li>
-            <li><a href="lidès.html">Lidè</a></li>
-            <li><a href="konstitisyon.html">Konstitisyon</a></li>
-            <li><a href="enstitisyons.html">Enstitisyon</a></li>
-            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Pran Kontak</h4>
-          <ul>
-            <li><a href="contact.html">Kontakte Nou</a></li>
-            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
-            <li><a href="license.html">Mentions L&eacute;gales</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
-        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
-        <span class="footer-editorial">Ce projak se n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti se &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
-      </div>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mentions L&eacute;gales</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sou Ha&iuml;ti &eacute;crits nan l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
+ </div>
+ </div>
+ </footer>
 
-  <script src="../js/script.js"></script>
-  <script src="../js/premium.js"></script>
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){e.stopPropagation();sw.classList.toggle('open');});
+  document.addEventListener('click',function(){sw.classList.remove('open');});
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  // Auto-redirect based on stored preference
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
 </body>
 </html>

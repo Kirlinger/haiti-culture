@@ -1,400 +1,447 @@
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#00209F" />
-  <title>Le Tap-Tap — L'Art Mobile d'Haïti | Repiblik Ayiti</title>
-  <meta name="description" content="Le tap-tap n'se pas qu'yon minibus : c'se yon galerie itinérante, yon autel roulant, yon déclaration d'identité peinte à vif soswa routes d'Haïti. Istwa, symbolisme ak rekonesans entènasyonal d'yon art popilè unique." />
-  <meta name="author" content="RepiblikHaïti.org" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/premium.css" />
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Tap-Tap — L'Art Mobile d'Haïti | Repiblik Ayiti</title>
+ <meta name="description" content="Le tap-tap n'se pas qu'yon minibus : c'se yon galerie itinérante, yon autel roulant, yon déclaration d'identité peinte à vif soswa routes d'Haïti. Istwa, symbolisme ak rekonesans entènasyonal d'yon art popilè unique." />
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher */
+.lang-switcher { position: relative; margin-left: 1rem; }
+.lang-switcher__btn { background: none; border: 1px solid rgba(255,255,255,0.3); color: inherit; padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: border-color 0.2s; }
+.lang-switcher__btn:hover { border-color: rgba(255,255,255,0.7); }
+.lang-switcher__menu { display: none; position: absolute; top: 110%; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-width: 150px; z-index: 1000; overflow: hidden; }
+.lang-switcher.open .lang-switcher__menu { display: block; }
+.lang-option { display: block; padding: 0.6rem 1rem; color: #333; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+.lang-option:hover { background: #f0f4ff; }
+.lang-option.active { background: #e8f0fe; font-weight: 600; }
+@media (max-width: 768px) { .lang-switcher { margin-left: 0; margin-top: 0.5rem; } .lang-switcher__menu { right: auto; left: 0; } }
+</style>
 </head>
 <body>
 
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Back to top -->
-  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
 
-  <header class="site-header">
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="Akèy">
-          Repiblik Ayiti
-        </a>
-        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
-          <a href="index.html">Akèy</a>
-          <a href="about.html">Soswa Nou</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="history.html">Istwa Jeneral</a>
-              <a href="timeline.html">Kwonolouji</a>
-              <a href="heroes.html">Ewò Nasyonal</a>
-              <a href="lidès.html">Lidè</a>
-              <a href="konstitisyon.html">Konstitisyon</a>
-              <a href="enstitisyons.html">Enstitisyon</a>
-            </div>
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang">
+            🇭🇹 Kreyòl ▾
+          </button>
+          <div class="lang-switcher__menu">
+            <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
+            <a href="#" class="lang-option active" data-lang="ht">🇭🇹 Kreyòl</a>
           </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti.html">Kilti &amp; Atizay</a>
-              <a href="vodou.html">Vodou</a>
-              <a href="lwa.html">Lwa yo</a>
-              <a href="gastronomy.html">Gastwonomi</a>
-              <a href="holidays.html">Joswa Ferye</a>
-            </div>
-          </div>
-          <a href="tourism.html">Touris</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti-vivante.html">Kilti Vivan</a>
-              <a href="creativite-populaire.html">Kreyativite Popilè</a>
-              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
-              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
-              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
-              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
-              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
-              <a href="instabilite-politik.html">Enstabilite Politik</a>
-              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
-              <a href="services-essentiels.html">Sèvis Esansyèl</a>
-              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
-              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="encyclopedia.html">Ansiklopedi</a>
-              <a href="archives.html">Achiv</a>
-              <a href="bibliography.html">Bibliyografi</a>
-            </div>
-          </div>
-          <a href="contact.html">Kontak</a>
-        </nav>
+        </div>
         <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
 
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
-    <div class="search-overlay__inner">
-      <div class="search-overlay__header">
-        <div class="search-input-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : istwa, kilti, vils…" autocomplete="off" />
-        </div>
-        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
-      </div>
-      <div class="search-results" id="searchResults" aria-live="polite"></div>
-    </div>
-  </div>
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : istwa, kilti, vils…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
 
-  <section class="page-hero page-hero--about">
-    <div class="container">
-      <p class="page-hero__label">Kreyativite Popilè</p>
-      <h1 class="page-hero__title">Le Tap-Tap — L'Art Mobile d'Haïti</h1>
-      <p class="page-hero__desc">Sur chak route d'Haïti, nan toiles roulantes traversent la poussière ak l'asphalte fissuré : les tap-taps se nan minibus ak nan camionnettes couverts de peintures flamboyantes, de prières en créole ak d'images sacrées. Ce ne se pas de simples véhicules — ce se les galeries les plis vivantes nan peyi.</p>
-    </div>
-  </section>
+ <section class="page-hero page-hero--about">
+ <div class="container">
+ <p class="page-hero__label">Kreyativite Popilè</p>
+ <h1 class="page-hero__title">Tap-Tap — L'Art Mobile d'Haïti</h1>
+ <p class="page-hero__desc">Sur chak route d'Haïti, nan toiles roulantes traversent poussière ak l'asphalte fissuré : tap-taps nan minibus ak nan camionnettes couverts nan peintures flamboyantes, nan priyè en créole ak d'images sakres. Ce pa pa nan simples véhicules — li a galeries plis vivantes nan peyi.</p>
+ </div>
+ </section>
 
-  <div class="breadcrumb">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <a href="index.html">Akèy</a>
-        <span>/</span>
-        <a href="kilti.html">Kilti</a>
-        <span>/</span>
-        <span>Tap-Tap</span>
-      </nav>
-    </div>
-  </div>
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <a href="kilti.html">Kilti</a>
+ <span>/</span>
+ <span>Tap-Tap</span>
+ </nav>
+ </div>
+ </div>
 
-  <section class="section">
-    <div class="container">
+ <section class="section">
+ <div class="container">
 
-      <!-- Section 1 : Qu'est-ce qu'un tap-tap ? -->
-      <p class="section-label">Transports &amp; Identité Visuelle</p>
-      <h2>Qu'est-ce qu'yon tap-tap ?</h2>
+ <!-- Section 1 : Qu'est-ce qu'un tap-tap ? -->
+ <p class="section-label">Transports &amp; Identité Visuelle</p>
+ <h2>Ke est-ce ke yon tap-tap ?</h2>
 
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            En Haïti, le tap-tap se an menm tan le prensipal moyen de transport en commyon ak l'yon nan expressions artistiques popilè les plis distinctives nan Karayib. Il se présente sous deux formes principales : la camionnette (<em>pick-up</em>) munie d'yon carrosserie en bois oswa en métal à l'arrière, où les passagers s'assoient dos à dos sur nan banquettes latérales, ak le minibus, plis courant nan circuits urbains de Port-au-Prince. Dans yon peyi où les transports publics officiels se quasi inexistants — pas de métro, pas de bus d'État réguliers, pas de réseau ferroviaire — le tap-tap se l'infrastructure souquelle se repose la mobilité de millions de personnes.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Le nom lui-menm soti nan geste nan passagers : lè quelqu'yon veut descendre, il frappe deux coups soswa carrosserie métallique — <em>tap-tap</em> — pour signaler au chauffeur de s'arrêter. Ce signal percussif, simple ak universel, a donné son nom à tout yon univers. Il n'y a pas d'arrêts fixes. On monte, on tape, on descend. Le tap-tap suit yon itinéraire approximatif annoncé à la criée par yon aide rele le <em>chofè-de-ban</em> oswa plis souvan le <em>kranp</em>, suspennan à la porte, hurlant la destination nan poussière.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Ce qui distingue le tap-tap ayisyen de tout lòt transport collectif au mond, c'se que chak véhicule se unique. Il n'y a pas deux tap-taps identiques. Chacyon se yon œuvre à part entière — peint nan tête aux roues, nommé, personnalisé, reconnaissable. La décoration n'se pas yon option esthétique : elle se constitutive nan objet. Un tap-tap non peint n'se pas ankò yon tap-tap.
-          </p>
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ En Haïti, tap-tap an menm tan prensipal moyen nan transport en commyon ak l'yon nan expressions artistiques popilè plis distinctives nan Karayib. Il présente anba deux fòm prensipals : camionnette (<em>pick-up</em>) munie d'yon carrosserie en bois oswa en métal à l'arrière, kote passagers s'assoient dos à dos sou nan banquettes latérales, ak minibus, plis courant nan circuits ibens nan Port-au-Prince. Dans yon peyi kote transports publics officiels quasi inexistants — pa nan métro, pa nan bus d'État réguliers, pa nan réseau ferroviaire — tap-tap l'infrastructure souquelle repose mobilité nan millions nan personnes.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ non lui-menm soti nan geste nan passagers : lè quelke yon veut descendre, li frappe deux coups soswa carrosserie métallique — <em>tap-tap</em> — pou signaler nan chauffeur nan s'arrêter. Ce signal percussif, simple ak universel, a donné li non à tout yon univers. Il pa y a pa d'arrêts fixes. On monte, yo tape, yo descend. tap-tap suit yon itinéraire approximatif annoncé à criée pa yon aide rele <em>chofè-de-ban</em> oswa plis souvan <em>kranp</em>, suspennan à porte, hurlant destination nan poussière.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Ce ki distingue tap-tap ayisyen nan tout lòt transport collectif nan mond, c'se ke chak véhicule inik. Il pa y a pa deux tap-taps identiques. Chacyon yon zèv à part entière — peint nan tête nan roues, nommé, personnalisé, reconnaissable. décoration pa se pa yon option esthétique : li constitutive nan objet. Yon tap-tap non peint pa se pa ankò yon tap-tap.
+ </p>
 
-          <aside class="researcher-note" aria-label="Note de recherche">
-            Le terme « tap-tap » se jounen jodi a entré dans plizyè dictionnaires ak encyclopédies kiltilles anglophones tankoswa exemple canonique nan art popilè haïtien. Il figure nan collections permanentes oswa les expositions temporaires nan Smithsonian National Museum of African American History and Kilti à Washington, ak nan Brooklyn Museum à New York — yon rekonesans enstitisyonnelle rare pour yon objak quotidien.
-          </aside>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
-              <li>· Origine : surplis milite US, 1945–1950</li>
-              <li>· Types : pick-up bois, minibus, camion</li>
-              <li>· Signal : deux coups soswa carrosserie</li>
-              <li>· Noms fréquents : religieux, proverbes</li>
-              <li>· Artisans spécialisés : quartiers de PAP</li>
-              <li>· Expositions : Smithsonian, Brooklyn Museum</li>
-              <li>· Concurrence : moto-taxis depi anes 2000</li>
-              <li>· Terme entré dans l'usage international</li>
-            </ul>
-          </div>
-          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Noms typiques de tap-taps</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· <em>Bondye Bon</em> (Dieu se bon)</li>
-              <li>· <em>Merci Jésus</em></li>
-              <li>· <em>Force de Dieu</em></li>
-              <li>· <em>Tout bagay posib</em> (Tout se possible)</li>
-              <li>· <em>Papa Loko Veye</em></li>
-              <li>· <em>Noswa tout frè</em> (Nous sommes tout frères)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ terme « tap-tap » jounen jodi a entré nan plizyè dictionnaires ak encyclopédies kiltilles anglophones tankoswa exemple canonique nan atizay popilè ayisyen. Il figure nan collections permanentes oswa expositions temporaires nan Smithsonian National Museum of African American History and Kilti à Washington, ak nan Brooklyn Museum à New York — yon rekonesans enstitisyonnelle rare pou yon objak quotidien.
+ </aside>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+ <li>· Origine : surplis milite US, 1945–1950</li>
+ <li>· Types : pick-up bois, minibus, camion</li>
+ <li>· Signal : deux coups soswa carrosserie</li>
+ <li>· Noms fréquents : relijye, proverbes</li>
+ <li>· Artisans spécialisés : quartiers nan PAP</li>
+ <li>· Expositions : Smithsonian, Brooklyn Museum</li>
+ <li>· Concurrence : moto-taxis depi anes 2000</li>
+ <li>· Terme entré nan l'usage entènasyonal</li>
+ </ul>
+ </div>
+ <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Noms typiques nan tap-taps</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· <em>Bondye Bon</em> (Dieu bon)</li>
+ <li>· <em>Merci Jésus</em></li>
+ <li>· <em>Force nan Dieu</em></li>
+ <li>· <em>Tout bagay posib</em> (Tout possible)</li>
+ <li>· <em>Papa Loko Veye</em></li>
+ <li>· <em>Noswa tout frè</em> (Nous sommes tout frères)</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- Section 2 : Istwa -->
-      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Istwa nan tap-tap</h3>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        L'istwa nan tap-tap tankounce ak Seconde Lagè mondiale — oswa plutôt avec sa fin. À partir de 1945, d'importants stocks de camions milite américains excédentaires, principalement nan Dodge WC ak nan GMC CCKW, se mis en vente oswa cédés atravè les Karayib. Haïti en reçoit yon partie. Ces véhicules robustes, conçus poswa routes boueuses d'Europe oswa nan Pacifique, se révèlent parfaitement adaptés aux pistes cahoteuses nan Artibonite, nan Palmes ak nan région de Léogâne. Des transporteurs ruraux les adaptent en y fixant nan carrosseries artisanales en bois, créant les premières versions de ce qui deviendra le tap-tap.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        La décoration tankounce modestement : yon nom relijye peint soswa pare-brise, kèk motifs géométriques soswa flancs. Mais nan anes 1950 ak 1960, à mesure que l'ekonomi de marché ayisyèn se structure ak que nan artisans peintres s'installent dans nan quartiers spécialisés de Port-au-Prince — sitoswa autour de Carrefour, de Cité Soleil ak nan marché nan Croix-des-Bossales — la décoration vin plis élaborée, plis ambitieuse. Les propriétaires de tap-taps se mete à rivaliser entre eux. Un véhicule byen peint attire plis de passagers : l'esthétique vin yon argument tankourcial autant qu'yon expression de foi.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        La vallée nan Artibonite — grenier à riz d'Haïti — se l'yon nan berceaux nan tradisyon. Les routes entre Gonaïves, Saint-Marc ak Hinche voient circuler dès les anes 1960 nan camions de transport de marchandises ak de passagers dont les carrosseries témoignent d'yon soin particulier. Port-au-Prince en concant plis gran densité, men la tradisyon se nationale. Dans les anes 1970 ak 1980, sous le régime de Jean-Claude Duvalier, le tap-tap prolifère nan yon capitale qui explose démographiquement, accueillant nan ruraux déplacés qui ont besoin de transport ak d'ateliers d'artisans qui ont besoin de clients. L'yon alimente l'autre.
-      </p>
+ <!-- Section 2 : Istwa -->
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Istwa nan tap-tap</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ L'istwa nan tap-tap tankounce ak Seconde Lagè mondiale — oswa plutôt ak li fin. À partir nan 1945, d'importants stocks nan camions milite amerikens excédentaires, prensipalman nan Dodge WC ak nan GMC CCKW, mis en vente oswa cédés atravè Karayib. Haïti en reçoit yon partie. Ces véhicules robustes, conçus poswa routes boueuses d'Europe oswa nan Pacifique, révèlent parfaitement adaptés nan pistes cahoteuses nan Artibonite, nan Palmes ak nan rejyon nan Léogâne. Des transporteurs ruraux adaptent en y fixant nan carrosseries artisanales en bois, créant premyes versions nan li a ki deviendra tap-tap.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ décoration tankounce modestement : yon non relijye peint soswa pare-brise, kèk motifs géométriques soswa flancs. Mais nan anes 1950 ak 1960, à mesure ke l'ekonomi nan marché ayisyèn structure ak ke nan artisans peintres s'installent nan nan quartiers spécialisés nan Port-au-Prince — sitoswa otou nan Carrefour, nan Cité Soleil ak nan marché nan Croix-des-Bossales — décoration vin plis élaborée, plis ambitieuse. propriétaires nan tap-taps mete à rivaliser ant eux. Yon véhicule byen peint attire plis nan passagers : l'esthétique vin yon argument tankourcial autant ke yon expression nan foi.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ vallée nan Artibonite — grenier à riz d'Haïti — l'yon nan berceaux nan tradisyon. routes ant Gonaïves, Saint-Marc ak Hinche voient circuler dès anes 1960 nan camions nan transport nan marchandises ak nan passagers ke carrosseries témoignent d'yon soin particulier. Port-au-Prince en concant plis gran densité, men tradisyon nasyonal. Dans anes 1970 ak 1980, anba régime nan Jean-Claude Duvalier, tap-tap prolifère nan yon kapital ki explose démographiquement, accueillant nan ruraux déplacés ki gen besoin nan transport ak d'ateliers d'artisans ki gen besoin nan clients. L'yon alimente l'autre.
+ </p>
 
-      <aside class="researcher-note" aria-label="Note de recherche">
-        Plusieurs chercheurs ont noté la parenté visuelle ant tap-taps ayisyen ak les <em>matatu</em> kenyans oswa les <em>jeepney</em> philippins — tout issus de véhicules milite américains reconvertis après 1945, tout décorés par nan artisans locaux selon nan conan visuels spécifiques à leur kilti. Cette convergence involontaire se l'yon nan curiosités nan istwa nan art nan après-lagè : les surplis nan lagè froide ont engendré, dans trois coins nan mond, nan tradisyons artistiques popilè remarquablement similaires nanur logique ak radicalement différentes nanur langage visuel.
-      </aside>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ Plusieurs chercheurs gen noté parenté visuelle ant tap-taps ayisyen ak <em>matatu</em> kenyans oswa <em>jeepney</em> philippins — tout issus nan véhicules milite amerikens reconvertis apre 1945, tout décorés pa nan artisans locaux dapre nan conan visuels spécifiques à yo kilti. Cette convergence involontaire l'yon nan curiosités nan istwa nan atizay nan après-lagè : surplis nan lagè froide gen engendré, nan trois coins nan mond, nan tradisyons artistiques popilè remarquablement similaires nanur logique ak radicalement diferans nanur langage visuel.
+ </aside>
 
-      <!-- Section 3 : L'art de la décoration -->
-      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;margin-top:2rem;">L'art nan décoration</h3>
+ <!-- Section 3 : L'art de la décoration -->
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;margin-top:2rem;">L'art nan décoration</h3>
 
-      <div class="two-col--wide-left" style="margin-bottom:2.5rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            La décoration d'yon tap-tap se yon travail en plizyè étapes qui mobilise nan savoir-faire distincts. Tout tankounce pa carrosserie : yon menuisier oswa yon soudeur construit oswa répare la structure de bois oswa de métal souquelle les passagers prendront place. Puis soti le peintre de fond, qui applique la couleur de base — souvan rouge vif, jayon soleil, bleu royal oswa vert émeraude. Ensuite intersoti le lettreur, artisan spécialisé dont la maîtrise calligraphique se au cœur de idantite a nan véhicule : il trace le nom nan tap-tap en lettres majuscules stylisées, souvan ombrées, parfois rehaussées d'or oswa d'argent. Ce nom se presque toujoswa en fransè oswa en créole. Les proverbes ayisyen s'y déploient avec yon ekonomi remarquable — yon sentence entière sur yon planche de trente centimètres.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            L'imagerie qui couvre les flancs ak la cabine se le domaine nan peintre figuratif. Le répertoire se vaste ak sans hiérarchie apparente : nan saints catholiques (saint Michel terrassant le diable, la Vierge de Czestochowa, le Sacré-Cœur) côtoient nan figures nan vodoswa (Ogoswa Feray sous ses couleurs rouge ak noir, Erzulie Freda reconnaissable à son cœur percé, Baron Samedi en habit de deuil). Des portraits de mizisyens ayisyen — Coupé Cloué, Boukman Eksperyans, Wyclef Jean — voisinent avec ceux de Pelé, de LeBron James oswa de Tupac Shakur. L'istwa nasyonal se présente : Toussaint Louverture à cheval, Jean-Jacques Dessalines brandissant le drapo bicolore. Il n'y a pas de contradiction dans sa a iconographie syncrétique — elle reflète simplement la manière dont les Haïtiens habitent leur pwòp kilti, sa vle di sans frontières riginan ant sakre ak le profane, ant local ak le global.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Une fois les peintures sèches, le vernisseur applique plizyè couches de vernis brillant qui protègent l'œuvre nan intempéries ak lui donnent sa a aspect lumineux caractéristique. Sous le soleil haïtien, yon tap-tap fraîchement verni scintille. L'ensemble nan processus — carrosserie, fond, lettrage, images, vernis — kapab prendre plizyè semaines ak représente yon investissement significatif poswa propriétaire. C'se pourquoi le tap-tap se soigneusement entretenu : yon égratignure se réparée, yon image effacée se repeinte. Le véhicule se yon fyète.
-          </p>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Étapes de fabrication</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
-              <li>① Carrosserie bois / métal</li>
-              <li>② Fond de peinture colorée</li>
-              <li>③ Lettrage calligraphique nan nom</li>
-              <li>④ Peinture nan images figuratives</li>
-              <li>⑤ Détails décoratifs (or, argent)</li>
-              <li>⑥ Vernissage brillant final</li>
-            </ul>
-          </div>
-          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Thèmes iconographiques</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· Saints catholiques &amp; lwa vodou</li>
-              <li>· Ewò nasyonal haïtiens</li>
-              <li>· Musiciens &amp; sportifs</li>
-              <li>· Proverbes en créole</li>
-              <li>· Motifs floraux &amp; géométriques</li>
-              <li>· Peyiages haïtiens</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <div class="two-col--wide-left" style="margin-bottom:2.5rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ décoration d'yon tap-tap yon travail en plizyè étapes ki mobilise nan savoir-faire distincts. Tout tankounce pa carrosserie : yon menuisier oswa yon soudeur bati oswa répare structure nan bois oswa nan métal souquelle passagers prendront place. Puis soti peintre nan fond, ki applique couleur nan base — souvan rouge vif, jayon soleil, bleu royal oswa vert émeraude. Ensuite intersoti lettreur, artisan spécialisé ke maîtrise calligraphique nan cœur nan idantite a nan véhicule : li trace non nan tap-tap en lettres majuscules stylisées, souvan ombrées, pafwa rehaussées d'or oswa d'argent. Ce non presque toujoswa en fransè oswa en créole. proverbes ayisyen s'y déploient ak yon ekonomi remarquable — yon sentence entière sou yon planche nan trente centimètres.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ L'imagerie ki couvre flancs ak cabine domaine nan peintre figuratif. répertoire vaste ak san hiérarchie apparente : nan saints catholiques (saint Michel terrassant diable, Vierge nan Czestochowa, Sacré-Cœur) côtoient nan figures nan vodoswa (Ogoswa Feray anba li yo couleurs rouge ak noir, Erzulie Freda reconnaissable à li cœur percé, Baron Samedi en habit nan deuil). Des portraits nan mizisyens ayisyen — Coupé Cloué, Boukman Eksperyans, Wyclef Jean — voisinent ak ceux nan Pelé, nan LeBron James oswa nan Tupac Shakur. L'istwa nasyonal présente : Toussaint Louverture à cheval, Jean-Jacques Dessalines brandissant drapo bicolore. Il pa y a pa nan contradiction nan li a iconographie syncrétique — li reflete simplement manière ke Haïtiens habitent yo pwòp kilti, li vle di san fwontyè riginan ant sakre ak profane, ant local ak global.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Yon fwa peintures sèches, vernisseur applique plizyè couches nan vernis brillant ki protègent l'œuvre nan intempéries ak lui donnent li a aspect lumineux caractéristique. Sous soleil ayisyen, yon tap-tap fraîchement verni scintille. L'ensemble nan processus — carrosserie, fond, lettrage, images, vernis — kapab prendre plizyè semaines ak reprezante yon investissement significatif poswa propriétaire. C'se pourquoi tap-tap soigneusement entretenu : yon égratignure réparée, yon image effacée repeinte. véhicule yon fyète.
+ </p>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Étapes nan fabrication</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+ <li>① Carrosserie bois / métal</li>
+ <li>② Fond nan penti colorée</li>
+ <li>③ Lettrage calligraphique nan nom</li>
+ <li>④ Peinture nan images figuratives</li>
+ <li>⑤ Détails décoratifs (or, argent)</li>
+ <li>⑥ Vernissage brillant final</li>
+ </ul>
+ </div>
+ <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Thèmes iconographiques</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· Saints catholiques &amp; lwa vodou</li>
+ <li>· Ewò nasyonal ayisyens</li>
+ <li>· Musiciens &amp; sportifs</li>
+ <li>· Proverbes en créole</li>
+ <li>· Motifs floraux &amp; géométriques</li>
+ <li>· Peyiages ayisyens</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- Section 4 : Signification religieuse et kiltille -->
-      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">La signification relijye ak kiltille</h3>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        Le tap-tap ayisyen se souvan décrit pa ethnologues ak les historiens nan art tankoswa yon « autel roulant ». Cette formule n'se pas yon métaphore commode : elle désigne yon réalité structurelle. Dans vodoswa a haïtien, l'autel (<em>badji</em>) se yon espace de médiation ant vivants ak lespri yo — les <em>lwa</em> — peuplé d'images, d'objets symboliques, de drapox (<em>drapo vodou</em>), de bougies ak de prières. La décoration nan tap-tap obéit à yon logique similaire : le nom peint soswa pare-chocs avant se yon invocation, yon mise sous protection. <em>Bondye Bon</em> n'se pas yon slogan publicitaire — c'se yon affirmation théologique, yon demande de grâce pour yon véhicule qui va affronter nan routes dangereuses nan yon peyi où les accidents se fréquents ak l'entretien nan infrastructures défaillant.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        Le parallèle ak <em>drapo vodou</em> — les célèbres drapox de cérémonie brodés de perles ak de paillettes ki reprezantent les lwa — se profond. Les deux objets partagent la menm esthétique nan foisonnement : pas de surface vide, chak centimètre habité par yon couleur, yon image, yon signe. Les deux se nan objets fonctionnels (transport d'yon côté, ritual nan autre) transformés en supports d'yon expression espirityèl intense. Et les deux circulent : le drapo se porté en procession lors nan cérémonies, le tap-tap traverse le peyi. L'art ayisyen n'se pas contemplatif — il se en mouvement.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        Cette dimension communautaire se essentielle. Contrairement à penti a sur toile — qui finit nan yon collection privée oswa nan yon musée — le tap-tap se public par définition. Il traverse les marchés, les quartiers populaires, les routes de mòn. Il se vu par nan dizaines de milliers de personnes chak jour. Ses images appartiennent à tout le mond. En ce sens, le tap-tap accomplit ce que les théoriciens nan art public appellent la démocratisation nan esthétique : il amène atizay la là où les gens vivent, sans billets d'entrée ni cartels explicatifs.
-      </p>
+ <!-- Section 4 : Signification religieuse et kiltille -->
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">siyifikasyon relijye ak kiltille</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ tap-tap ayisyen souvan décrit pa ethnologues ak historiens nan atizay tankoswa yon « autel roulant ». Cette formule pa se pa yon métaphore commode : li deziye yon réalité structurelle. Dans vodoswa a ayisyen, l'autel (<em>badji</em>) yon espace nan médiation ant vivants ak lespri yo — <em>lwa</em> — peuplé d'images, d'objets symboliques, nan drapox (<em>drapo vodou</em>), nan bougies ak nan prières. décoration nan tap-tap obéit à yon logique similaire : non peint soswa pare-chocs anvan yon invocation, yon mise anba protection. <em>Bondye Bon</em> pa se pa yon slogan publicitaire — c'se yon affirmation théologique, yon demande nan grâce pou yon véhicule ki va affronter nan routes dangereuses nan yon peyi kote accidents fréquents ak l'entretien nan infrastructures défaillant.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ parallèle ak <em>drapo vodou</em> — selèb drapox nan seremoni brodés nan perles ak nan paillettes ki reprezantent lwa — pwofon. deux objets partagent menm esthétique nan foisonnement : pa nan surface vide, chak centimètre habité pa yon couleur, yon image, yon signe. deux nan objets fonctionnels (transport d'yon côté, ritual nan autre) transformés en supports d'yon expression espirityèl intense. Et deux circulent : drapo porté en procession lors nan cérémonies, tap-tap travèse peyi. L'art ayisyen pa se pa contemplatif — li en mouvement.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Cette dimension communautaire esansyèl. Contrairement à penti a sou toile — ki finit nan yon collection privée oswa nan yon musée — tap-tap public pa définition. Il travèse marchés, quartiers popilès, routes nan mòn. Il vu pa nan dizaines nan milliers nan personnes chak jour. Ses images appartiennent à tout mond. En li a sens, tap-tap accomplit li a ke théoriciens nan atizay public appellent démocratisation nan esthétique : li amène atizay là kote gens vivent, san billets d'entrée ni cartels explicatifs.
+ </p>
 
-      <aside class="researcher-note" aria-label="Note de recherche">
-        La chercheuse ak photographe Leah Gordon, qui a documenté Haïti pandan plizyè décennies, a consakre yon partie enpòtan de son travail aux tap-taps. Son ouvrage <em>Kanaval : A Haitian Odyssey</em> (2010) explore les représentations visuelles popilè haïtiennes, dont les tap-taps, tankoswa nan systèmes cohérents de production de sens — pas tankoswa nan curiosités folkloriques. Son approche te kontribye à déplacer la discussion de « atizay la naïf » vers yon analyse plis sérieuse nan tradisyons visuelles ayisyèn nanur contexte kiltil propre.
-      </aside>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ chercheuse ak photographe Leah Gordon, ki a documenté Haïti pandan plizyè décennies, a consakre yon pati enpòtan nan li travail nan tap-taps. Son ouvrage <em>Kanaval : A Haitian Odyssey</em> (2010) explore représentations visuelles popilè ayisyèns, ke tap-taps, tankoswa nan systèmes cohérents nan production nan sens — pa tankoswa nan curiosités folkloriques. Son approche te kontribye à déplacer discussion nan « atizay naïf » vè yon analyse plis sérieuse nan tradisyons visuelles ayisyèn nanur kontèks kiltil propre.
+ </aside>
 
-      <!-- Section 5 : Rekonesans internationale -->
-      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;margin-top:2rem;">Rekonesans internationale</h3>
+ <!-- Section 5 : Rekonesans internationale -->
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;margin-top:2rem;">Rekonesans entènasyonal</h3>
 
-      <div class="two-col--wide-left" style="margin-bottom:2.5rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            À partir nan anes 1980 ak plis ankò nan anes 1990 ak 2000, les tap-taps ayisyen tankouncent à attirer l'attention nan enstitisyons kiltilles internationales. Le Brooklyn Museum de New York, qui possènan yon nan collections d'art ayisyen les plis importantes en dehors d'Haïti, a présenté nan tap-taps ak leurs motifs nan cadre d'expositions consacrées à atizay la nan dyaspora caribéenne. Le Smithsonian Institution, à Washington, a acquis plizyè exemples de carrosseries décorées ak les a présentés dans ses programmes sur atizay yo popilè américains ak caribéens, reconnaissant explicitement le tap-tap tankoswa yon objak de patrimwàn immatériel.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            En Europe, les tap-taps te présentés dans nan expositions consacrées aux arts nan Caraïbe à Paris, à Amsterdam ak à Londres. Des collectionneurs privés, principalement en France ak aux États-Unis, ont tankouncé à acheter nan pièsa yo — carrosseries démontées, capots peints, panneaux de bois — tankoswa œuvres d'art à part entière. Ce mouvement de collection a eu nan effets ambivalents : d'yon côté, il te kontribye à la rekonesans ak à la valorisation ekonomik nan artisans peintres ; nan autre, il a parfois arraché les objets de leur contexte fonctionnel ak communautaire poswa enfermer nan silence climatisé nan galeries.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Des atiss ayisyen nan dyaspora ont intégré l'esthétique nan tap-tap nanur pratique. Didier William, peintre ak graveur haïtiano-ameriken dont le travail se exposé dans nan enstitisyons majeures, a cité explicitement les tap-taps tankoswa yon influence sur son traitement nan surface, sa saturation visuelle ak son usage syncrétique nan images. Des discussions académiques sur fwontyè a entre art popilè ak beaux-arts ont pris les tap-taps tankoswa cas d'étude : peuvent-ils être « beaux-arts » ? La question elle-menm révèle les préjugés d'yon système classificatoire hérité d'yon certaine istwa nan art occidentale que les Haïtiens, eux, n'ont jamè acceptée.
-          </p>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Présensa yo enstitisyonnelles</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
-              <li>· Smithsonian Institution, Washington D.C.</li>
-              <li>· Brooklyn Museum, New York</li>
-              <li>· Musée nan Quai Branly, Paris (expositions)</li>
-              <li>· Museum of Arts and Design, New York</li>
-              <li>· Expositions <em>Kanaval</em> (Leah Gordon)</li>
-              <li>· Collections privées (France, États-Unis)</li>
-              <li>· Référensa yo dans l'œuvre de Didier William</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <div class="two-col--wide-left" style="margin-bottom:2.5rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ À partir nan anes 1980 ak plis ankò nan anes 1990 ak 2000, tap-taps ayisyen tankouncent à attirer l'attention nan enstitisyons kiltilles entènasyonals. Brooklyn Museum nan New York, ki possènan yon nan collections d'art ayisyen plis enpòtans en dehors d'Haïti, a présenté nan tap-taps ak yo motifs nan cadre d'expositions consacrées à atizay nan dyaspora caribéenne. Smithsonian Institution, à Washington, a acquis plizyè exemples nan carrosseries décorées ak a présentés nan li yo programmes sou atizay yo popilè amerikens ak caribéens, reconnaissant explicitement tap-tap tankoswa yon objak nan patrimwàn immatériel.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ En Europe, tap-taps te présentés nan nan expositions consacrées nan arts nan Caraïbe à Paris, à Amsterdam ak à Londres. Des collectionneurs privés, prensipalman en France ak nan États-Unis, gen tankouncé à acheter nan pièsa yo — carrosseries démontées, capots peints, panneaux nan bois — tankoswa zèv d'art à part entière. Ce mouvman nan collection a eu nan effets ambivalents : d'yon côté, li te kontribye à rekonesans ak à valorisation ekonomik nan artisans peintres ; nan autre, li a pafwa arraché objets nan yo kontèks fonctionnel ak communautaire poswa enfermer nan silence climatisé nan galeries.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Des atiss ayisyen nan dyaspora gen intégré l'esthétique nan tap-tap nanur pratique. Didier William, peintre ak graveur haïtiano-ameriken ke travail exposé nan nan enstitisyons gwos, a cité explicitement tap-taps tankoswa yon influence sou li traitement nan surface, li saturation visuelle ak li usage syncrétique nan images. Des discussions académiques sou fwontyè a ant atizay popilè ak beaux-arts gen pris tap-taps tankoswa cas d'étude : peuvent-ils être « beaux-arts » ? question elle-menm révèle préjugés d'yon système classificatoire hérité d'yon certaine istwa nan atizay occidentale ke Haïtiens, eux, pa ont jamè acceptée.
+ </p>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Présensa yo enstitisyonnelles</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+ <li>· Smithsonian Institution, Washington D.C.</li>
+ <li>· Brooklyn Museum, New York</li>
+ <li>· Musée nan Quai Branly, Paris (expositions)</li>
+ <li>· Museum of Arts and Design, New York</li>
+ <li>· Expositions <em>Kanaval</em> (Leah Gordon)</li>
+ <li>· Collections privées (France, États-Unis)</li>
+ <li>· Référensa yo nan l'œuvre nan Didier William</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- Section 6 : Le tap-tap jounen jodi a -->
-      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Le tap-tap jounen jodi a</h3>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        Le tap-tap traverse jounen jodi a yon période de turbulences. La premye concurrence sérieuse se venue nan moto-taxis — rele simplement <em>moto</em> en Haïti — qui se se multipliés à partir nan milieu nan anes 2000. Moins chers, plis rapinan nan embouteillages, disponibles à toute heure ak accessibles menm dans nan ruelles où yon minibus ne kapab pas s'engager, les motos ont capturé yon part croissante nan marché nan transport urbain. À Port-au-Prince, on estime qu'il y circule plizyè centaines de milliers de motos-taxis — yon chiffre astronomique pour yon vil dont l'infrastructure n'a pas été conçue poswa absorber.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        Le séisme nan 12 janvier 2010 a porté yon coup sévère. Des centaines de tap-taps te détruits oswa endommagés dans l'effondrement nan infrastructures routières. Des artisans peintres ont pernan leurs ateliers. Des propriétaires de véhicules, deja endettés, ont pernan leur outil de travail ak leur source de revenus. La reconstruction nan parc de tap-taps te lente. Dans les anes qui ont suivi, nan organisations non gouvènmanales ont tenté d'intégrer les tap-taps dans nan projets de mobilité durable, men avec nan résultats inégaux.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        La crise sécuritaire nan anes 2020 — ak prolifération nan gangs armés nan région métropolitaine de Port-au-Prince — a porté yon nouvo atteinte à la circulation nan tap-taps. Certains axes routiers vin tounen dangereux oswa impraticables, forçant nan réductions de service. La hausse nan prix nan carburant, amplifiée pa dépréciation nan gourde, a comprimé les marges nan propriétaires. La nouvo génération de peintres spécialisés se mwens nombreuse que celle nan anes 1980-1990. Plusieurs ateliers istorik ont fermé oswa réduit leur activité.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        Et pourtant, le tap-tap résiste. Des jeunes atiss ayisyen continuent d'apprendre le métier. De nouvo véhicules se commandés ak décorés chak ane. Dans les vils de province — Cap-Haïtien, Gonaïves, Les Cayes, Saint-Marc — la tradisyon se souvan plis vivace qu'à Port-au-Prince. Des entrepreneurs nan dyaspora ont tankouncé à financer nan commannan de tap-taps de prestige, parfois destinés à nan expositions oswa à nan projets kiltils. La tradisyon s'adapte — elle a toujoswa su le faire.
-      </p>
+ <!-- Section 6 : Le tap-tap jounen jodi a -->
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">tap-tap jounen jodi a</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ tap-tap travèse jounen jodi a yon période nan turbulences. premye concurrence sérieuse venue nan moto-taxis — rele simplement <em>moto</em> en Haïti — ki se multipliés à partir nan milieu nan anes 2000. Moins chers, plis rapinan nan embouteillages, disponibles à toute heure ak accessibles menm nan nan ruelles kote yon minibus pa kapab pa s'engager, motos gen capturé yon part croissante nan marché nan transport iben. À Port-au-Prince, yo estime ke il y circule plizyè centaines nan milliers nan motos-taxis — yon chiffre astronomique pou yon vil ke l'infrastructure pa a pa été conçue poswa absorber.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ séisme nan 12 janvier 2010 a porté yon coup sévère. Des centaines nan tap-taps te détruits oswa endommagés nan l'effondrement nan infrastructures routières. Des artisans peintres gen pernan yo ateliers. Des propriétaires nan véhicules, deja endettés, gen pernan yo outil nan travail ak yo anba nan revenus. rekonstriksyon nan parc nan tap-taps te lente. Dans anes ki gen suivi, nan òganizasyons non gouvènmanales gen tenté d'intégrer tap-taps nan nan projets nan mobilité durable, men ak nan rezilta inégaux.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ crise sécuritaire nan anes 2020 — ak prolifération nan gangs armés nan rejyon métropolitaine nan Port-au-Prince — a porté yon nouvo atteinte à circulation nan tap-taps. Certains axes routiers vin tounen dangereux oswa impraticables, forçant nan réductions nan service. hausse nan prix nan carburant, amplifiée pa dépréciation nan gourde, a comprimé marges nan propriétaires. nouvo génération nan peintres spécialisés mwens nombreuse ke celle nan anes 1980-1990. Plusieurs ateliers istorik gen fermé oswa réduit yo activité.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Et pourtant, tap-tap résiste. Des jeunes atiss ayisyen continuent d'apprendre métier. De nouvo véhicules commandés ak décorés chak ane. Dans vils nan province — Cap-Haïtien, Gonaïves, Cayes, Saint-Marc — tradisyon souvan plis vivace ke à Port-au-Prince. Des entrepreneurs nan dyaspora gen tankouncé à financer nan commannan nan tap-taps nan prestige, pafwa destinés à nan expositions oswa à nan projets kiltils. tradisyon s'adapte — li a toujoswa su faire.
+ </p>
 
-      <aside class="researcher-note" aria-label="Note de recherche">
-        Il existe depi kèk anes nan projets documentaires de cartographie photographique nan tap-taps ayisyen — nan initiatives citoyennes visant à constituer yon archive visuelle avant que le parc de véhicules ansyen ne soit entièrement remplacé. Ces projets se portés an menm tan depi Haïti ak depi la dyaspora, sitoswa à Miami, Montréal ak Paris. Ils témoignent d'yon conscience patrimoniale nouvo autour d'yon objak longtemps konsidere tankoswa trop ordinaire pour mériter d'être conservé.
-      </aside>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ Il existe depi kèk anes nan projets documentaires nan cartographie photographique nan tap-taps ayisyen — nan initiatives citoyennes visant à constituer yon archive visuelle anvan ke parc nan véhicules ansyen pa soit entièrement remplacé. Ces projets portés an menm tan depi Haïti ak depi dyaspora, sitoswa à Miami, Montréal ak Paris. Ils témoignent d'yon conscience patrimoniale nouvo otou d'yon objak longtemps konsidere tankoswa trop ordinaire pou mériter d'être conservé.
+ </aside>
 
-      <!-- Section 7 : Quelques tap-taps célèbres -->
-      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;margin-top:2rem;">Quelques tap-taps célèbres</h3>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        La documentation précise nan tap-taps individuels rete yon défi : ils circulent, changent de mains, se repeints, disparaissent. Mais sèten ont laissé yon trace suffisamment marquée pour entrer nan archives photographiques ak kiltilles.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        Le tap-tap <strong>« Gran Mèt »</strong> (le Grand Maître), photographié à de nombreuses reprises nan rues de Port-au-Prince nan anes 1990, te remarquable pa densité exceptionnelle de son imagerie : l'intégralité nan carrosserie latérale représentait yon scène nan création tirée nan cosmogonie vodou, encadrée de citations en créole. Il fut photographié par nan journalistes de <em>National Geographic</em> ak nan <em>New York Times</em> lors de reportages sur kilti ayisyèn nan.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        Un tap-tap nommé <strong>« Souvenir d'Haïti »</strong>, acquis par yon collectionneur ameriken nan anes 2000, te exposé à New York avant d'entrer nan yon collection privée. Sa particularité te d'associer, soswa menm panneau, le portrait de Toussaint Louverture ak celui de Nelson Mandela — deux libérateurs, deux continents, yon menm couleur de peau ak yon menm rezistans à l'oppression. Cette association iconographique spontanée, née nan main d'yon artisan de Port-au-Prince sans formation académique, se plis éloquente que byen nan dissertations soswa solidarité panafricaine.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        La photographe Leah Gordon a documenté de manière systématique plizyè dizaines de tap-taps dans ses travaux nan anes 1990 ak 2000, dont sèten te publiés dans <em>Kanaval</em> ak repris dans nan catalogues d'exposition. Ces photographies constituent jounen jodi a l'yon nan archives les plis sérieuses soswa sujet. Parmi les véhicules documentés figurent plizyè tap-taps nan route nasyonal numéro 1 (Port-au-Prince — Saint-Marc — Gonaïves) dont les carrosseries représentaient nan batays de revolisyon ayisyèn nan nan yon style qui rappelle atizay la mural mexicain nan anes 1930 — yon parenté que personne n'a commandée men que tout le mond kapab voir.
-      </p>
+ <!-- Section 7 : Quelques tap-taps célèbres -->
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;margin-top:2rem;">Quelques tap-taps selèb</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ documentation précise nan tap-taps individuels rete yon défi : yo circulent, changent nan mains, repeints, disparaissent. Mais sèten gen laissé yon trace suffisamment make pou entrer nan archives photographiques ak kiltilles.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ tap-tap <strong>« Gran Mèt »</strong> (le Grand Maître), photographié à nan nombreuses reprises nan rues nan Port-au-Prince nan anes 1990, te remarquable pa densité exceptionnelle nan li imagerie : l'intégralité nan carrosserie latérale représentait yon scène nan création tirée nan cosmogonie vodou, encadrée nan citations en créole. Il te photographié pa nan journalistes nan <em>National Geographic</em> ak nan <em>New York Times</em> pandan reportages sou kilti ayisyèn nan.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Yon tap-tap rele <strong>« Souvenir d'Haïti »</strong>, acquis pa yon collectionneur ameriken nan anes 2000, te exposé à New York anvan d'entrer nan yon collection privée. Sa particularité te d'associer, soswa menm panneau, portrait nan Toussaint Louverture ak celui nan Nelson Mandela — deux libérateurs, deux continents, yon menm couleur nan peau ak yon menm rezistans à l'oppression. Cette association iconographique spontanée, née nan main d'yon artisan nan Port-au-Prince san formation académique, plis éloquente ke byen nan dissertations soswa solidarité panafricaine.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ photographe Leah Gordon a documenté nan manière systématique plizyè dizaines nan tap-taps nan li yo travaux nan anes 1990 ak 2000, ke sèten te publiés nan <em>Kanaval</em> ak repris nan nan catalogues d'exposition. Ces photographies constituent jounen jodi a l'yon nan archives plis sérieuses soswa sujet. Parmi véhicules documentés figurent plizyè tap-taps nan route nasyonal numéro 1 (Port-au-Prince — Saint-Marc — Gonaïves) ke carrosseries représentaient nan batays nan revolisyon ayisyèn nan nan yon style ki raple atizay mural mexicain nan anes 1930 — yon parenté ke personne pa a commandée men ke tout mond kapab voir.
+ </p>
 
-      <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:2rem;margin-bottom:2.5rem;">
-        <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Gade tou</p>
-        <ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2.2;">
-          <li>→ <a href="kilti.html" style="color:#fff;">Kilti &amp; Atizay d'Haïti</a></li>
-          <li>→ <a href="creativite-populaire.html" style="color:#fff;">Kreyativite Popilè</a></li>
-          <li>→ <a href="vodou.html" style="color:#fff;">Le Vodoswa haïtien</a></li>
-          <li>→ <a href="jacmel.html" style="color:#fff;">Jacmel — Capitale kiltille nan Sud</a></li>
-          <li>→ <a href="drapo-vodou.html" style="color:#fff;">Les Drapo Vodou</a></li>
-        </ul>
-      </div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:2rem;margin-bottom:2.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Gade tou</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2.2;">
+ <li>→ <a href="kilti.html" style="color:#fff;">Kilti &amp; Atizay d'Haïti</a></li>
+ <li>→ <a href="creativite-populaire.html" style="color:#fff;">Kreyativite Popilè</a></li>
+ <li>→ <a href="vodou.html" style="color:#fff;">Vodoswa ayisyen</a></li>
+ <li>→ <a href="jacmel.html" style="color:#fff;">Jacmel — Kapital kiltille nan Sud</a></li>
+ <li>→ <a href="drapo-vodou.html" style="color:#fff;">Drapo Vodou</a></li>
+ </ul>
+ </div>
 
-    </div>
-  </section>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-brand__logo">
-            Repiblik Ayiti
-          </div>
-          <p>
-            Une célébration nan extraordinaire istwa d'Haïti, de sa kilti
-            vibrante ak de son pèp remarquable. Dédié à partager l'istwa de
-            premye Repiblik nwa nan mond lan.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Eksplore</h4>
-          <ul>
-            <li><a href="index.html">Akèy</a></li>
-            <li><a href="about.html">Soswa Ayiti</a></li>
-            <li><a href="history.html">Istwa</a></li>
-            <li><a href="tourism.html">Touris</a></li>
-            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
-            <li><a href="archives.html">Achiv</a></li>
-            <li><a href="bibliography.html">Bibliyografi</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Kilti &amp; Sosyete</h4>
-          <ul>
-            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
-            <li><a href="vodou.html">Vodou</a></li>
-            <li><a href="gastronomy.html">Gastwonomi</a></li>
-            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
-            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
-            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
-            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Istwa &amp; Enstitisyon</h4>
-          <ul>
-            <li><a href="timeline.html">Kwonolouji</a></li>
-            <li><a href="heroes.html">Ewò Nasyonal</a></li>
-            <li><a href="lidès.html">Lidè</a></li>
-            <li><a href="konstitisyon.html">Konstitisyon</a></li>
-            <li><a href="enstitisyons.html">Enstitisyon</a></li>
-            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Pran Kontak</h4>
-          <ul>
-            <li><a href="contact.html">Kontakte Nou</a></li>
-            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
-            <li><a href="license.html">Mansyon Legal</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
-        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
-        <span class="footer-editorial">Ce projak se né d'yon frustration personnelle&#160;: trop d'ouvrages sur Haïti se écrits nan extérieur. J'ai voulu rassembler les soursa yo ayisyèn en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chèchè endepandan.</span>
-      </div>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mansyon Legal</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak né d'yon frustration personnelle&#160;: trop d'ouvrages sou Haïti écrits nan extérieur. J'ai voulu rassembler soursa yo ayisyèn en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chèchè endepandan.</span>
+ </div>
+ </div>
+ </footer>
 
-  <script src="../js/script.js"></script>
-  <script src="../js/premium.js"></script>
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){e.stopPropagation();sw.classList.toggle('open');});
+  document.addEventListener('click',function(){sw.classList.remove('open');});
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  // Auto-redirect based on stored preference
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
 </body>
 </html>

@@ -1,317 +1,364 @@
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#00209F" />
-  <title>Konstitisyon Ayiti | </title>
-  <meta name="description" content="Dekouvri fondasyon jiridik ak demokratik ki gide Repiblik Ayiti." />
-  <meta name="author" content="RepiblikHaïti.org" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/premium.css" />
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Konstitisyon Ayiti | </title>
+ <meta name="description" content="Dekouvri fondasyon jiridik ak demokratik ki gide Repiblik Ayiti." />
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher */
+.lang-switcher { position: relative; margin-left: 1rem; }
+.lang-switcher__btn { background: none; border: 1px solid rgba(255,255,255,0.3); color: inherit; padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: border-color 0.2s; }
+.lang-switcher__btn:hover { border-color: rgba(255,255,255,0.7); }
+.lang-switcher__menu { display: none; position: absolute; top: 110%; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-width: 150px; z-index: 1000; overflow: hidden; }
+.lang-switcher.open .lang-switcher__menu { display: block; }
+.lang-option { display: block; padding: 0.6rem 1rem; color: #333; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+.lang-option:hover { background: #f0f4ff; }
+.lang-option.active { background: #e8f0fe; font-weight: 600; }
+@media (max-width: 768px) { .lang-switcher { margin-left: 0; margin-top: 0.5rem; } .lang-switcher__menu { right: auto; left: 0; } }
+</style>
 </head>
 <body>
 
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Back to top -->
-  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
 
-    <header class="site-header">
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="Akèy">
-          Repiblik Ayiti
-        </a>
-        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
-          <a href="index.html">Akèy</a>
-          <a href="about.html">Soswa Nou</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="history.html">Istwa Jeneral</a>
-              <a href="timeline.html">Kwonolouji</a>
-              <a href="heroes.html">Ewò Nasyonal</a>
-              <a href="lidès.html">Lidè</a>
-              <a href="konstitisyon.html">Konstitisyon</a>
-              <a href="enstitisyons.html">Enstitisyon</a>
-              <a href="presidents.html">Pwofil Prezidan yo</a>
-              <a href="revolution-batays.html">Batay Revolisyon an</a>
-              <a href="relations-internationales.html">Relasyon Entènasyonal</a>
-            </div>
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ <a href="presidents.html">Pwofil Prezidan yo</a>
+ <a href="revolution-batays.html">Batay Revolisyon an</a>
+ <a href="relations-internationales.html">Relasyon Entènasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ <a href="atiss.html">Atis Vizyèl</a>
+ <a href="mizik-istwa.html">Istwa Mizik</a>
+ <a href="litterature.html">Literati</a>
+ <a href="creole.html">Lang Kreyòl</a>
+ <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
+ <a href="glossaire-creole.html">Glosè Kreyòl</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="departements.html">10 Depatman yo</a>
+ <a href="geographie.html">Jeyografi Fizik</a>
+ <a href="anviwonman.html">Anviwonman</a>
+ <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
+ <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
+ <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang">
+            🇭🇹 Kreyòl ▾
+          </button>
+          <div class="lang-switcher__menu">
+            <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
+            <a href="#" class="lang-option active" data-lang="ht">🇭🇹 Kreyòl</a>
           </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti.html">Kilti &amp; Atizay</a>
-              <a href="vodou.html">Vodou</a>
-              <a href="lwa.html">Lwa yo</a>
-              <a href="gastronomy.html">Gastwonomi</a>
-              <a href="holidays.html">Joswa Ferye</a>
-              <a href="atiss.html">Atis Vizyèl</a>
-              <a href="mizik-istwa.html">Istwa Mizik</a>
-              <a href="litterature.html">Literati</a>
-              <a href="creole.html">Lang Kreyòl</a>
-              <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
-              <a href="glossaire-creole.html">Glosè Kreyòl</a>
-            </div>
-          </div>
-          <a href="tourism.html">Touris</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="departements.html">10 Depatman yo</a>
-              <a href="geographie.html">Jeyografi Fizik</a>
-              <a href="anviwonman.html">Anviwonman</a>
-              <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
-              <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti-vivante.html">Kilti Vivan</a>
-              <a href="creativite-populaire.html">Kreyativite Popilè</a>
-              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
-              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
-              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
-              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
-              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
-              <a href="instabilite-politik.html">Enstabilite Politik</a>
-              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
-              <a href="services-essentiels.html">Sèvis Esansyèl</a>
-              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
-              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="encyclopedia.html">Ansiklopedi</a>
-              <a href="archives.html">Achiv</a>
-              <a href="bibliography.html">Bibliyografi</a>
-              <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
-              <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
-            </div>
-          </div>
-          <a href="contact.html">Kontak</a>
-        </nav>
+        </div>
         <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
 
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
-    <div class="search-overlay__inner">
-      <div class="search-overlay__header">
-        <div class="search-input-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
-        </div>
-        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
-      </div>
-      <div class="search-results" id="searchResults" aria-live="polite"></div>
-    </div>
-  </div>
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
 
-  <section class="page-hero page-hero--history">
-    <div class="container">
-      <p class="page-hero__label"> Dwa &amp; Repiblik</p>
-      <h1 class="page-hero__title">Konstitisyon Ayiti</h1>
-      <p class="page-hero__desc">Dekouvri fondasyon jiridik ak demokratik ki gide Repiblik Ayiti.</p>
-    </div>
-  </section>
+ <section class="page-hero page-hero--history">
+ <div class="container">
+ <p class="page-hero__label"> Dwa &amp; Repiblik</p>
+ <h1 class="page-hero__title">Konstitisyon Ayiti</h1>
+ <p class="page-hero__desc">Dekouvri fondasyon jiridik ak demokratik ki gide Repiblik Ayiti.</p>
+ </div>
+ </section>
 
-  <div class="breadcrumb">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <a href="index.html">Akèy</a>
-        <span>/</span>
-        <span>Konstitisyon</span>
-      </nav>
-    </div>
-  </div>
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <span>Konstitisyon</span>
+ </nav>
+ </div>
+ </div>
 
-  <section class="section">
-    <div class="container">
-      <div class="text-block">
-        <p class="section-label">Fondasyon Repiblik la</p>
-        <h2>Entwodiksyon</h2>
-        <p>Konstitisyon ayisyèn nan se lwa siprèm Repiblik la. Li defini dwa yo, devwa yo ak òganizasyon Leta a. Ayiti te konnen plizyè konstitisyon depi endepandans li. Konstitisyon 1987 la, ki te adopte apre tonbe diktati Duvalier a, se sa ki anvigè kounye a epi li etabli yon repiblik demokratik.</p>
-      </div>
-    </div>
-  </section>
+ <section class="section">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Fondasyon Repiblik la</p>
+ <h2>Entwodiksyon</h2>
+ <p>Konstitisyon ayisyèn nan lwa siprèm Repiblik la. Li defini dwa yo, devwa yo ak òganizasyon Leta a. Ayiti te konnen plizyè konstitisyon depi endepandans li. Konstitisyon 1987 la, ki te adopte apre tonbe diktati Duvalier a, li ki anvigè kounye a epi li etabli yon repiblik demokratik.</p>
+ </div>
+ </div>
+ </section>
 
-  <section class="section section--alt">
-    <div class="container">
-      <div class="text-block">
-        <p class="section-label">Orijin</p>
-        <h2>Kontèks Istorik</h2>
-        <p>Soti nan premye konstitisyon 1801 la ki te ekri soswa Toussaint Louverture rive nan sa 1805 la ki te pwomilge pa Dessalines, pase nan anpil revizyon pandan syèk yo, istwa konstitisyonèl ayisyèn nan mouvmante anpil. Konstitisyon 1987 la te yon tounan desizif apre plizyè deseni rejim otoritè : li te make retoswa nan yon Leta de dwa ki chita soswa sifranj inivèsèl ak separasyon pouvwa yo.</p>
-      </div>
-    </div>
-  </section>
+ <section class="section section--alt">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Orijin</p>
+ <h2>Kontèks Istorik</h2>
+ <p>Soti nan premye konstitisyon 1801 ki te ekri soswa Toussaint Louverture rive nan li 1805 ki te pwomilge pa Dessalines, pase nan anpil revizyon pandan syèk yo, istwa konstitisyonèl ayisyèn nan mouvmante anpil. Konstitisyon 1987 te yon tounan desizif apre plizyè deseni rejim otoritè : li te make retoswa nan yon Leta nan dwa ki chita soswa sifranj inivèsèl ak separasyon pouvwa yo.</p>
+ </div>
+ </div>
+ </section>
 
-  <section class="section">
-    <div class="container">
-      <p class="section-label">Baz Demokratik</p>
-      <h2>Prensip Konstitisyonèl Fondamantal</h2>
-      <p style="font-size:16px;line-height:1.85;margin-bottom:1.4rem;">
-        Konstitisyon 1987 la pwoklame Ayiti <strong>« yon Repiblik ki pa ka divize,
-        souvren, endepandan, kooperatis, lib, demokratik ak sosyal »</strong>.
-        Fòmilasyon sa a pa retorik : li kondanse plizyè deseni
-        lit politik ak tantativ yoyon apre lòt poswa defini kisa Leta
-        ayisyen an ta dwe ye apre Duvalier yo.
-      </p>
-      <p style="font-size:16px;line-height:1.85;margin-bottom:1.4rem;">
-        <strong>Separasyon pouvwa yo</strong> ant egzekitif, lejislatif ak jidisyè
-        se kè dispozitif konstitisyonèl la — yon leson ki soti dirèkteman nan
-        plizyè deseni konsantrasyon pouvwa anba prezidans otoritè yo.
-        Konstitisyon an egzije toswa yon <strong>desantralizasyon administratif ak
-        teritoryal</strong> atravè kolektivite lokal yo : depatman, komin ak
-        seksyon kominal gen, an teyori, pwòp otonomi yo ak pwòp resous
-        yo. An pratik, desantralizasyon sa a rete lajman pa fini.
-      </p>
-      <p style="font-size:16px;line-height:1.85;margin-bottom:1.4rem;">
-        <strong>Dwa fondamantal yo</strong> — libète ekspresyon, relijyon,
-        asosyasyon, dwa edikasyon, dwa travay — garanti pa tèks la,
-        ki konsakre toswa <strong>pliralis politik, kiltirèl ak relijye</strong>.
-        Okenn diskriminasyon ki baze soswa ras, sèks oswa relijyon pa pèmèt.
-      </p>
-      <p style="font-size:16px;line-height:1.85;">
-        Finalman, Konstitisyon an <strong>entèdi aklè tout privilèj ereditè</strong>
-        — yon dispozisyon ki soti dirèkteman nan ideal revolisyonè 1804 yo, ki
-        te aboli noblès kolonyal la epi pwoklame egalite absoli devan lalwa,
-        kèlkeswa koulè po a.
-      </p>
-      <aside class="researcher-note" aria-label="Nòt rechèch" style="margin-top:1.5rem;">
-        Konstitisyon 1987 la remakab soswa papye — yoyon nan pi pwogresist
-        nan rejyon an. Men eka ant tèks la ak pratik enstitisyonèl la frape w.
-        Ayiti te konnen, depi 1987, koudeta, gouvènman pa dekrè,
-        Palman ki disoud oswa ki vid, ak eleksyon ki konteste. Kesyon an pa tèlman
-        poswa konnen si Konstitisyon an bon, men poukisa garanti li yo rete si
-        difisil poswa fè moyon respekte yo — e ki aktè, anndan koswa deyò, ki gen enterè
-        nan frajilite pèmanan sa a.
-      </aside>
-    </div>
-  </section>
+ <section class="section">
+ <div class="container">
+ <p class="section-label">Baz Demokratik</p>
+ <h2>Prensip Konstitisyonèl Fondamantal</h2>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.4rem;">
+ Konstitisyon 1987 pwoklame Ayiti <strong>« yon Repiblik ki pa ka divize,
+ souvren, endepandan, kooperatis, lib, demokratik ak sosyal »</strong>.
+ Fòmilasyon li a pa retorik : li kondanse plizyè deseni
+ lit politik ak tantativ yoyon apre lòt poswa defini kisa Leta
+ ayisyen an ta dwe ye apre Duvalier yo.
+ </p>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.4rem;">
+ <strong>Separasyon pouvwa yo</strong> ant egzekitif, lejislatif ak jidisyè
+ kè dispozitif konstitisyonèl — yon leson ki soti dirèkteman nan
+ plizyè deseni konsantrasyon pouvwa anba prezidans otoritè yo.
+ Konstitisyon an egzije toswa yon <strong>desantralizasyon administratif ak
+ teritoryal</strong> atravè kolektivite lokal yo : depatman, komin ak
+ seksyon kominal gen, an teyori, pwòp otonomi yo ak pwòp resous
+ yo. An pratik, desantralizasyon li a rete lajman pa fini.
+ </p>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.4rem;">
+ <strong>Dwa fondamantal yo</strong> — libète ekspresyon, relijyon,
+ asosyasyon, dwa edikasyon, dwa travay — garanti pa tèks la,
+ ki konsakre toswa <strong>pliralis politik, kiltirèl ak relijye</strong>.
+ Okenn diskriminasyon ki baze soswa ras, sèks oswa relijyon pa pèmèt.
+ </p>
+ <p style="font-size:16px;line-height:1.85;">
+ Finalman, Konstitisyon an <strong>entèdi aklè tout privilèj ereditè</strong>
+ — yon dispozisyon ki soti dirèkteman nan ideal revolisyonè 1804 yo, ki
+ te aboli noblès kolonyal epi pwoklame egalite absoli devan lalwa,
+ kèlkeswa koulè po a.
+ </p>
+ <aside class="researcher-note" aria-label="Nòt rechèch" style="margin-top:1.5rem;">
+ Konstitisyon 1987 remakab soswa papye — yoyon nan pi pwogresist
+ nan rejyon an. Men eka ant tèks ak pratik enstitisyonèl frape w.
+ Ayiti te konnen, depi 1987, koudeta, gouvènman pa dekrè,
+ Palman ki disoud oswa ki vid, ak eleksyon ki konteste. Kesyon an pa tèlman
+ poswa konnen si Konstitisyon an bon, men poukisa garanti li yo rete si
+ difisil poswa fè moyon respekte yo — e ki aktè, anndan koswa deyò, ki gen enterè
+ nan frajilite pèmanan li a.
+ </aside>
+ </div>
+ </section>
 
-  <section class="section section--alt">
-    <div class="container">
-      <div class="text-block">
-        <p class="section-label">Sitwayènte</p>
-        <h2>Dwa ak Devwa Sitwayen yo</h2>
-        <p>Konstitisyon an rekonèt chak sitwayen dwa poswa lavi, poswa libète ak poswa sekirite. Pami dwa fondamantal yo genyen egalite devan lalwa, libète ekspresyon, libète relijyon, dwa edikasyon ak dwa travay. An retou, chak sitwayen gen devwa poswa respekte lalwa, peye taks li epi kontribye nan lavi nasyon an.</p>
-      </div>
-    </div>
-  </section>
+ <section class="section section--alt">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Sitwayènte</p>
+ <h2>Dwa ak Devwa Sitwayen yo</h2>
+ <p>Konstitisyon an rekonèt chak sitwayen dwa poswa lavi, poswa libète ak poswa sekirite. Pami dwa fondamantal yo genyen egalite devan lalwa, libète ekspresyon, libète relijyon, dwa edikasyon ak dwa travay. An retou, chak sitwayen gen devwa poswa respekte lalwa, peye taks li epi kontribye nan lavi nasyon an.</p>
+ </div>
+ </div>
+ </section>
 
-  <section class="section">
-    <div class="container">
-      <p class="section-label">Achitekti Leta a</p>
-      <h2>Òganizasyon Leta Ayisyen</h2>
-      <p style="font-size:16px;line-height:1.85;margin-bottom:1.4rem;">
-        Konstitisyon an konfye <strong>pouvwa egzekitif</strong> la bay yon Prezidan ki eli nan
-        sifranj inivèsèl poswa yon manda senk an ki pa ka renouvle yoyon apre lòt,
-        avèk yon Premye Minis ki responsab devan Palman an. Ko-direksyon sa a nan
-        egzekitif la te sous konfli enstitisyonèl ki repete ant de tèt
-        gouvènman an, sitoswa nan peryòd koabitasyon politik.
-      </p>
-      <p style="font-size:16px;line-height:1.85;margin-bottom:1.4rem;">
-        <strong>Pouvwa lejislatif</strong> la se poswa yon Palman bikameral : Sena a
-        ak Chanm Depite a. Ansanm, yo vote lwa yo, adopte bidjè a epi
-        kontwole gouvènman an. Palman an te konnen plizyè peryòd disolisyon
-        oswa vakans — sitoswa ant 2020 ak 2024 — sa ki te mennen nan gouvène pa
-        dekrè prezidansyèl, ki te frajilize ekilibb enstitisyonèl la plis toujou.
-      </p>
-      <p style="font-size:16px;line-height:1.85;">
-        Nan tèt <strong>pouvwa jidisyè</strong> a gen Koswa Kasasyon an,
-        ki garanti aplikasyon inifòm lalwa soswa tout teritwa a. Endepandans
-        majistradi a, ke Konstitisyon an afime, frape an pratik ak
-        presyon politik ak ensifizans kwonik mwayen ki bay jistis la.
-      </p>
-    </div>
-  </section>
+ <section class="section">
+ <div class="container">
+ <p class="section-label">Achitekti Leta a</p>
+ <h2>Òganizasyon Leta Ayisyen</h2>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.4rem;">
+ Konstitisyon an konfye <strong>pouvwa egzekitif</strong> bay yon Prezidan ki eli nan
+ sifranj inivèsèl poswa yon manda senk an ki pa ka renouvle yoyon apre lòt,
+ avèk yon Premye Minis ki responsab devan Palman an. Ko-direksyon li a nan
+ egzekitif te anba konfli enstitisyonèl ki repete ant nan tèt
+ gouvènman an, sitoswa nan peryòd koabitasyon politik.
+ </p>
+ <p style="font-size:16px;line-height:1.85;margin-bottom:1.4rem;">
+ <strong>Pouvwa lejislatif</strong> poswa yon Palman bikameral : Sena a
+ ak Chanm Depite a. Ansanm, yo vote lwa yo, adopte bidjè a epi
+ kontwole gouvènman an. Palman an te konnen plizyè peryòd disolisyon
+ oswa vakans — sitoswa ant 2020 ak 2024 — li ki te mennen nan gouvène pa
+ dekrè prezidansyèl, ki te frajilize ekilibb enstitisyonèl plis toujou.
+ </p>
+ <p style="font-size:16px;line-height:1.85;">
+ Nan tèt <strong>pouvwa jidisyè</strong> a gen Koswa Kasasyon an,
+ ki garanti aplikasyon inifòm lalwa soswa tout teritwa a. Endepandans
+ majistradi a, ke Konstitisyon an afime, frape an pratik ak
+ presyon politik ak ensifizans kwonik mwayen ki bay jistis la.
+ </p>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-brand__logo">
-            Repiblik Ayiti
-          </div>
-          <p>
-            Yon selebrasyon istwa ekstraòdinè Ayiti, kilti
-            vibran li ak pèp remakab li. Dedye poswa pataje istwa
-            premye Repiblik nwa nan mond lan.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Eksplore</h4>
-          <ul>
-            <li><a href="index.html">Akèy</a></li>
-            <li><a href="about.html">Soswa Ayiti</a></li>
-            <li><a href="history.html">Istwa</a></li>
-            <li><a href="tourism.html">Touris</a></li>
-            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
-            <li><a href="archives.html">Achiv</a></li>
-            <li><a href="bibliography.html">Bibliyografi</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Kilti &amp; Sosyete</h4>
-          <ul>
-            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
-            <li><a href="vodou.html">Vodou</a></li>
-            <li><a href="gastronomy.html">Gastwonomi</a></li>
-            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
-            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
-            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
-            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Istwa &amp; Enstitisyon</h4>
-          <ul>
-            <li><a href="timeline.html">Kwonolouji</a></li>
-            <li><a href="heroes.html">Ewò Nasyonal</a></li>
-            <li><a href="lidès.html">Lidè</a></li>
-            <li><a href="konstitisyon.html">Konstitisyon</a></li>
-            <li><a href="enstitisyons.html">Enstitisyon</a></li>
-            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Pran Kontak</h4>
-          <ul>
-            <li><a href="contact.html">Kontakte Nou</a></li>
-            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
-            <li><a href="license.html">Mansyon Legal</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
-        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
-        <span class="footer-editorial">Pwojè sa a soti nan yon fristrasyon pèsonèl&#160;: twòp liv soswa Ayiti ekri pa moyon deyò. Mwen te vle rasanble sous ayisyen yo nan yon sèl kote. &mdash;&nbsp;Kirlinger Jeune, chèchè endepandan.</span>
-      </div>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon selebrasyon istwa ekstraòdinè Ayiti, kilti
+ vibran li ak pèp remakab li. Dedye poswa pataje istwa
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mansyon Legal</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Pwojè li a soti nan yon fristrasyon pèsonèl&#160;: twòp liv soswa Ayiti ekri pa moyon deyò. Mwen te vle rasanble anba ayisyen yo nan yon sèl kote. &mdash;&nbsp;Kirlinger Jeune, chèchè endepandan.</span>
+ </div>
+ </div>
+ </footer>
 
-  <script src="../js/script.js"></script>
-  <script src="../js/premium.js"></script>
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){e.stopPropagation();sw.classList.toggle('open');});
+  document.addEventListener('click',function(){sw.classList.remove('open');});
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  // Auto-redirect based on stored preference
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
 </body>
 </html>

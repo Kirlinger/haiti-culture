@@ -1,403 +1,450 @@
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#00209F" />
-  <title>Joswa Ferye en Haïti | </title>
-  <meta name="description" content="Les fêtes nationales ak commémorations qui rythment lavi a ayisyèn tout au long nan ane." />
-  <meta name="author" content="RepiblikHaïti.org" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/premium.css" />
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Joswa Ferye en Haïti | </title>
+ <meta name="description" content="Les fêtes nationales ak commémorations qui rythment lavi a ayisyèn tout au long nan ane." />
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher */
+.lang-switcher { position: relative; margin-left: 1rem; }
+.lang-switcher__btn { background: none; border: 1px solid rgba(255,255,255,0.3); color: inherit; padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: border-color 0.2s; }
+.lang-switcher__btn:hover { border-color: rgba(255,255,255,0.7); }
+.lang-switcher__menu { display: none; position: absolute; top: 110%; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-width: 150px; z-index: 1000; overflow: hidden; }
+.lang-switcher.open .lang-switcher__menu { display: block; }
+.lang-option { display: block; padding: 0.6rem 1rem; color: #333; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+.lang-option:hover { background: #f0f4ff; }
+.lang-option.active { background: #e8f0fe; font-weight: 600; }
+@media (max-width: 768px) { .lang-switcher { margin-left: 0; margin-top: 0.5rem; } .lang-switcher__menu { right: auto; left: 0; } }
+</style>
 </head>
 <body>
 
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Back to top -->
-  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
 
-    <header class="site-header">
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="Akèy">
-          Repiblik Ayiti
-        </a>
-        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
-          <a href="index.html">Akèy</a>
-          <a href="about.html">Soswa Nou</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="history.html">Istwa Jeneral</a>
-              <a href="timeline.html">Kwonolouji</a>
-              <a href="heroes.html">Ewò Nasyonal</a>
-              <a href="lidès.html">Lidè</a>
-              <a href="konstitisyon.html">Konstitisyon</a>
-              <a href="enstitisyons.html">Enstitisyon</a>
-              <a href="presidents.html">Pwofil Prezidan yo</a>
-              <a href="revolution-batays.html">Batay Revolisyon an</a>
-              <a href="relations-internationales.html">Relasyon Entènasyonal</a>
-            </div>
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ <a href="presidents.html">Pwofil Prezidan yo</a>
+ <a href="revolution-batays.html">Batay Revolisyon an</a>
+ <a href="relations-internationales.html">Relasyon Entènasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ <a href="atiss.html">Atis Vizyèl</a>
+ <a href="mizik-istwa.html">Istwa Mizik</a>
+ <a href="litterature.html">Literati</a>
+ <a href="creole.html">Lang Kreyòl</a>
+ <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
+ <a href="glossaire-creole.html">Glosè Kreyòl</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="departements.html">10 Depatman yo</a>
+ <a href="geographie.html">Jeyografi Fizik</a>
+ <a href="anviwonman.html">Anviwonman</a>
+ <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
+ <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
+ <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang">
+            🇭🇹 Kreyòl ▾
+          </button>
+          <div class="lang-switcher__menu">
+            <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
+            <a href="#" class="lang-option active" data-lang="ht">🇭🇹 Kreyòl</a>
           </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti.html">Kilti &amp; Atizay</a>
-              <a href="vodou.html">Vodou</a>
-              <a href="lwa.html">Lwa yo</a>
-              <a href="gastronomy.html">Gastwonomi</a>
-              <a href="holidays.html">Joswa Ferye</a>
-              <a href="atiss.html">Atis Vizyèl</a>
-              <a href="mizik-istwa.html">Istwa Mizik</a>
-              <a href="litterature.html">Literati</a>
-              <a href="creole.html">Lang Kreyòl</a>
-              <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
-              <a href="glossaire-creole.html">Glosè Kreyòl</a>
-            </div>
-          </div>
-          <a href="tourism.html">Touris</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="departements.html">10 Depatman yo</a>
-              <a href="geographie.html">Jeyografi Fizik</a>
-              <a href="anviwonman.html">Anviwonman</a>
-              <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
-              <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti-vivante.html">Kilti Vivan</a>
-              <a href="creativite-populaire.html">Kreyativite Popilè</a>
-              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
-              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
-              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
-              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
-              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
-              <a href="instabilite-politik.html">Enstabilite Politik</a>
-              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
-              <a href="services-essentiels.html">Sèvis Esansyèl</a>
-              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
-              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="encyclopedia.html">Ansiklopedi</a>
-              <a href="archives.html">Achiv</a>
-              <a href="bibliography.html">Bibliyografi</a>
-              <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
-              <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
-            </div>
-          </div>
-          <a href="contact.html">Kontak</a>
-        </nav>
+        </div>
         <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
 
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
-    <div class="search-overlay__inner">
-      <div class="search-overlay__header">
-        <div class="search-input-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
-        </div>
-        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
-      </div>
-      <div class="search-results" id="searchResults" aria-live="polite"></div>
-    </div>
-  </div>
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
 
-  <section class="page-hero page-hero--about">
-    <div class="container">
-      <p class="page-hero__label">Calendrier</p>
-      <h1 class="page-hero__title">Joswa Ferye Nationaux</h1>
-      <p class="page-hero__desc">Les fêtes nationales ak commémorations qui rythment lavi a ayisyèn tout au long nan ane.</p>
-    </div>
-  </section>
+ <section class="page-hero page-hero--about">
+ <div class="container">
+ <p class="page-hero__label">Calendrier</p>
+ <h1 class="page-hero__title">Joswa Ferye Nationaux</h1>
+ <p class="page-hero__desc">fêtes nasyonals ak commémorations ki rythment lavi a ayisyèn tout nan long nan ane.</p>
+ </div>
+ </section>
 
-  <div class="breadcrumb">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <a href="index.html">Akèy</a>
-        <span>/</span>
-        <span>Joswa Ferye</span>
-      </nav>
-    </div>
-  </div>
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <span>Joswa Ferye</span>
+ </nav>
+ </div>
+ </div>
 
-  <section class="section">
-    <div class="container">
-      <p class="section-label text-center">Le Calendrier Haïtien</p>
-      <h2 class="section-title text-center">Fêtes ak Commémorations Nationales</h2>
-      <p class="section-subtitle text-center">Tout au long nan ane, les Haïtiens célèbrent leur istwa, leurs tradisyons religieuses ak leur idantite nasyonal atravè yon riche calendrier de fêtes officielles ak populaires.</p>
-      <p style="font-size:16px;line-height:1.85;max-width:780px;margin:0 auto 2.5rem;">
-        Le calendrier ayisyen se yon calendrier double : d'yon côté, les dates
-        nationales qui inscrivent nan temps memwa a nan Revolisyon ak de
-        l'endepandans ; nan autre, les fêtes religieuses catholiques qui ponctuent
-        l'ane liturgique ak se mêlent, souvan insensiblement, aux pratiques nan Vodou.
-        Ensemble, sa yo jours forment le tissu nan temps collectif ayisyen — yon calendrier
-        où la souvènte, lafwa a ak la kilti popilè se convoquent mutuellement.
-      </p>
+ <section class="section">
+ <div class="container">
+ <p class="section-label text-center">Calendrier Haïtien</p>
+ <h2 class="section-title text-center">Fêtes ak Commémorations Nationales</h2>
+ <p class="section-subtitle text-center">Tout nan long nan ane, Haïtiens selèbnt yo istwa, yo tradisyons relijyes ak yo idantite nasyonal atravè yon rich calendrier nan fêtes officielles ak popilès.</p>
+ <p style="font-size:16px;line-height:1.85;max-width:780px;margin:0 auto 2.5rem;">
+ calendrier ayisyen yon calendrier double : d'yon côté, dates
+ nasyonals ki inscrivent nan tan memwa a nan Revolisyon ak de
+ l'endepandans ; nan autre, fêtes relijyes catholiques ki ponctuent
+ l'ane liturgique ak mêlent, souvan insensiblement, nan pratiques nan Vodou.
+ Ensemble, li yo jou forment tissu nan tan collectif ayisyen — yon calendrier
+ kote souvènte, lafwa a ak kilti popilè convoquent mutuellement.
+ </p>
 
-      <!-- Fêtes nationales et commémoratives -->
-      <h3 style="font-size:1.1rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);margin-bottom:1.2rem;">Fêtes Nationales &amp; Commémoratives</h3>
-      <ul style="list-style:none;padding:0;margin:0 0 2.5rem;">
+ <!-- Fêtes nationales et commémoratives -->
+ <h3 style="font-size:1.1rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);margin-bottom:1.2rem;">Fêtes Nationales &amp; Commémoratives</h3>
+ <ul style="list-style:none;padding:0;margin:0 0 2.5rem;">
 
-        <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">1er janvier — Jour nan Endepandans</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            La fèt nasyonal la plis enpòtan d'Haïti. En 1804, Jean-Jacques Dessalines
-            proclama l'endepandans à Gonaïves. La journée se célébrée avec nan cérémonies
-            officielles, nan mizik ak la dégustation rituelle nan <em>soup joumou</em>,
-            autrefois réservée aux maîtres esclavagistes, désormen senbòl nan libète
-            recouvrée.
-          </p>
-        </li>
+ <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">1er janvier — Jour nan Endepandans</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ fèt nasyonal plis enpòtan d'Haïti. En 1804, Jean-Jacques Dessalines
+ proclama l'endepandans à Gonaïves. journée selebre ak nan cérémonies
+ officielles, nan mizik ak dégustation rituelle nan <em>soup joumou</em>,
+ autrefois réservée nan maîtres esclavagistes, désormen senbòl nan libète
+ recouvrée.
+ </p>
+ </li>
 
-        <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">2 janvier — Jour nan Aïeux</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            Journée dédiée aux pères ak mères fondateurs nan nation, à tout ceux qui ont
-            combattu ak sacrifié leur vie poswa Haïti soit libre. Une journée de
-            recueillement ak de mémoire nationale.
-          </p>
-        </li>
+ <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">2 janvier — Jour nan Aïeux</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ Journée dédiée nan pères ak mères fondateurs nan nation, à tout ceux ki ont
+ combattu ak sacrifié yo lavi poswa Haïti soit lib. Yon journée de
+ recueillement ak nan memwa nasyonal.
+ </p>
+ </li>
 
-        <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">18 mai — Fête nan Drapo</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            Commémoration nan création nan drapo ayisyen lors nan Congrès d'Arcahaie en
-            1803, lè Dessalines arracha le blanc nan bannière tricolore fransèz pour
-            n'en conserver que le bleu ak le rouge. L'yon nan journées de fyète nationale
-            les plis vivement célébrées.
-          </p>
-        </li>
+ <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">18 mai — Fête nan Drapo</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ Commémoration nan création nan drapo ayisyen lors nan Congrès d'Arcahaie en
+ 1803, lè Dessalines arracha blanc nan bannière tricolore fransèz pour
+ pa en conserver ke bleu ak rouge. L'yon nan journées nan fyète nasyonal
+ plis vivement célébrées.
+ </p>
+ </li>
 
-        <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">14 août — Cérémonie nan Bois Caïman</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            Commémoration de seremoni an nan Bwa Kayiman nan 14 août 1791, moment fondateur
-            que l'historiographie ayisyèn considère tankoswa le signal de départ de la
-            Revolisyon. Ce site se sakre dans memwa a collective haïtienne.
-          </p>
-        </li>
+ <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">14 août — Cérémonie nan Bois Caïman</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ Commémoration nan seremoni an nan Bwa Kayiman nan 14 août 1791, moment fondateur
+ ke l'historiographie ayisyèn considère tankoswa signal nan départ nan la
+ Revolisyon. Ce site sakre nan memwa a collective ayisyèn.
+ </p>
+ </li>
 
-        <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">17 octobre — Mort de Dessalines</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            Commémoration nan assassinat nan père fondateur Jean-Jacques Dessalines le
-            17 octobre 1806. Une journée de recueillement nasyonal en hommage à gason an
-            qui proclama l'endepandans nan peyi.
-          </p>
-        </li>
+ <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">17 octobre — Mort nan Dessalines</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ Commémoration nan assassinat nan père fondateur Jean-Jacques Dessalines le
+ 17 octobre 1806. Yon journée nan recueillement nasyonal en hommage à gason an
+ ki proclama l'endepandans nan peyi.
+ </p>
+ </li>
 
-        <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">18 novembre — Bataille de Vertières</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            Commémoration nan viktwa décisive nan forsa yo ayisyèn soswa troupes
-            napoléoniennes le 18 novembre 1803. Cette batay, remportée sous le
-            commandement de Dessalines ak Capois la Mort, a rennan l'endepandans
-            irréversible.
-          </p>
-        </li>
+ <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">18 novembre — Bataille nan Vertières</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ Commémoration nan viktwa décisive nan forsa yo ayisyèn soswa troupes
+ napoléoniennes 18 novembre 1803. Cette batay, remportée anba le
+ commandement nan Dessalines ak Capois Mort, a rennan l'endepandans
+ irréversible.
+ </p>
+ </li>
 
-        <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">5 décembre — Découverte d'Haïti</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            Commémoration nan arrivée de Christophe Colomb sur zile a le 5 décembre 1492.
-            Cette date, ki make le début d'yon ère nouvelle, se l'occasion d'une
-            réflexion sur l'istwa précolombienne ak l'héritage taïno.
-          </p>
-        </li>
+ <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">5 décembre — Découverte d'Haïti</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ Commémoration nan arrivée nan Christophe Colomb sou zile a 5 décembre 1492.
+ Cette date, ki make début d'yon ère nouvo, l'occasion d'une
+ réflexion sou l'istwa précolombienne ak l'eritaj taïno.
+ </p>
+ </li>
 
-        <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">14 avril — Jour nan Amériques</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            Journée panameriken commémorant la solidarité ant nations nan continent
-            américain. Elle rappelle le rôle pionnier d'Haïti nan luttes d'endepandans
-            nan Amériques.
-          </p>
-        </li>
+ <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">14 avril — Jour nan Amériques</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ Journée panameriken commémorant solidarité ant nations nan continent
+ ameriken. Elle raple wòl pionnier d'Haïti nan luttes d'endepandans
+ nan Amériques.
+ </p>
+ </li>
 
-        <li style="padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">1er mai — Fête nan Travail</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            Journée entènasyonal nan travailleurs, célébrée en Haïti tankoswa nan mond
-            entier. Des manifestations syndicales ak nan célébrations rassemblent travailleurs
-            ak militants pour défendre dwa yo nan travailleurs.
-          </p>
-        </li>
+ <li style="padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">1er mai — Fête nan Travail</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ Journée entènasyonal nan travailleurs, selebre en Haïti tankoswa nan mond
+ entier. Des manifestations syndicales ak nan célébrations rassemblent travailleurs
+ ak militants pou défendre dwa yo nan travailleurs.
+ </p>
+ </li>
 
-      </ul>
+ </ul>
 
-      <!-- Fêtes religieuses et populaires -->
-      <h3 style="font-size:1.1rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);margin-bottom:1.2rem;">Fêtes Religieuses &amp; Populaires</h3>
-      <ul style="list-style:none;padding:0;margin:0;">
+ <!-- Fêtes religieuses et populaires -->
+ <h3 style="font-size:1.1rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);margin-bottom:1.2rem;">Fêtes Religieuses &amp; Populaires</h3>
+ <ul style="list-style:none;padding:0;margin:0;">
 
-        <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">6 janvier — Fête nan Rois</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            Célébration catholique nan Épiphanie, marquant la visite nan Rois Mages à
-            l'timoyon Jésus. Une fête relijye observée dans tout le peyi, avec des
-            gâteaux nan rois ak nan célébrations familiales.
-          </p>
-        </li>
+ <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">6 janvier — Fête nan Rois</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ Célébration catholique nan Épiphanie, marquant visite nan Rois Mages à
+ l'timoyon Jésus. Yon fête relijye observée nan tout peyi, ak des
+ gâteaux nan rois ak nan célébrations familiales.
+ </p>
+ </li>
 
-        <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">Février / Mars — Kanaval</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            La plis gran fête popilè d'Haïti, célébrée durant les trois jours
-            précédant le Mercredi nan Cendres. Mizik, costumes somptueux, chars décorés
-            ak foules immenses fè nan Kanaval ayisyen l'yon nan plis spectaculaires
-            nan Karayib.
-          </p>
-        </li>
+ <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">Février / Mars — Kanaval</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ plis gran fête popilè d'Haïti, selebre durant trois jours
+ précédant Mercredi nan Cendres. Mizik, costumes somptueux, chars décorés
+ ak foules immenses fè nan Kanaval ayisyen l'yon nan plis spectaculaires
+ nan Karayib.
+ </p>
+ </li>
 
-        <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">Février / Mars — Mercredi nan Cendres</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            Début nan Carême catholique. Après l'exubérance nan Kanaval, les fidèles
-            reçoivent nan cendres soswa front tankoswa signe de pénitence ak de préparation
-            à Pâques.
-          </p>
-        </li>
+ <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">Février / Mars — Mercredi nan Cendres</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ Début nan Carême catholique. Après l'exubérance nan Kanaval, fidèles
+ reçoivent nan cendres soswa front tankoswa signe nan pénitence ak nan préparation
+ à Pâques.
+ </p>
+ </li>
 
-        <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">Vendredi Saint</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            Jour saint catholique commémorant la crucifixion de Jésus-Christ. Une journée
-            de recueillement, de processions religieuses ak de prière intense dans tout
-            le peyi.
-          </p>
-        </li>
+ <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">Vendredi Saint</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ Jour saint catholique commémorant crucifixion nan Jésus-Christ. Yon journée
+ nan recueillement, nan processions relijyes ak nan priyè intense nan tout
+ peyi.
+ </p>
+ </li>
 
-        <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">15 août — Assomption</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            Fête catholique nan Assomption nan Vierge Marie, célébrée avec nan messes
-            solennelles ak nan processions dans tout le peyi. C'se l'yon nan fêtes
-            religieuses les plis importantes nan ane liturgique.
-          </p>
-        </li>
+ <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">15 août — Assomption</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ Fête catholique nan Assomption nan Vierge Marie, selebre ak nan messes
+ solennelles ak nan processions nan tout peyi. C'se l'yon nan fêtes
+ relijyes plis enpòtans nan ane liturgique.
+ </p>
+ </li>
 
-        <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">1er novembre — La Toussaint</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            Fête catholique honorant tout les saints. En Haïti, sa a journée revêt
-            toswa yon importance particulière nan tradisyon vodou, qui honore
-            les ancêtres ak lespri yo nan défunts.
-          </p>
-        </li>
+ <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">1er novembre — Toussaint</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ Fête catholique honorant tout saints. En Haïti, li a journée revêt
+ toswa yon importance particulière nan tradisyon vodou, ki honore
+ ancêtres ak lespri yo nan défunts.
+ </p>
+ </li>
 
-        <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">2 novembre — Fête nan Morts</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            Journée nan défunts, pwofondman intégrée à kilti ayisyèn nan. Les
-            fanmis se rendent aux cimetières pour honorer leurs ancêtres. Dans la
-            tradisyon vodou, les Lwa Gede — maîtres de lanmò a — se particulièrement
-            célébrés ce jour-là.
-          </p>
-        </li>
+ <li style="border-bottom:1px solid var(--border,#e5e7eb);padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">2 novembre — Fête nan Morts</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ Journée nan défunts, pwofondman intégrée à kilti ayisyèn nan. Les
+ fanmis rendent nan cimetières pou honorer yo ancêtres. Dans la
+ tradisyon vodou, Lwa Gede — maîtres nan lanmò a — particulièrement
+ célébrés li a jour-là.
+ </p>
+ </li>
 
-        <li style="padding:1rem 0;">
-          <span style="font-weight:700;color:var(--blue);">25 décembre — Noël</span>
-          <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
-            La fête de Noël se largement célébrée en Haïti. Les fanmis se réunissent,
-            les églises se bondées poswa messes de minuit ak l'atmosphère festive
-            emplit le peyi de chants, de lumières ak de joie partagée.
-          </p>
-        </li>
+ <li style="padding:1rem 0;">
+ <span style="font-weight:700;color:var(--blue);">25 décembre — Noël</span>
+ <p style="margin:.4rem 0 0;font-size:15px;line-height:1.75;">
+ fête nan Noël largement selebre en Haïti. fanmis réunissent,
+ églises bondées poswa messes nan minuit ak l'atmosphère festive
+ emplit peyi nan chants, nan lumières ak nan joie partagée.
+ </p>
+ </li>
 
-      </ul>
-    </div>
-  </section>
+ </ul>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-brand__logo">
-            Repiblik Ayiti
-          </div>
-          <p>
-            Une célébration nan extraordinaire istwa d'Haïti, de sa kilti
-            vibrante ak de son pèp remarquable. Dédié à partager l'istwa de
-            premye Repiblik nwa nan mond lan.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Eksplore</h4>
-          <ul>
-            <li><a href="index.html">Akèy</a></li>
-            <li><a href="about.html">Soswa Ayiti</a></li>
-            <li><a href="history.html">Istwa</a></li>
-            <li><a href="tourism.html">Touris</a></li>
-            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
-            <li><a href="archives.html">Achiv</a></li>
-            <li><a href="bibliography.html">Bibliyografi</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Kilti &amp; Sosyete</h4>
-          <ul>
-            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
-            <li><a href="vodou.html">Vodou</a></li>
-            <li><a href="gastronomy.html">Gastwonomi</a></li>
-            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
-            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
-            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
-            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Istwa &amp; Enstitisyon</h4>
-          <ul>
-            <li><a href="timeline.html">Kwonolouji</a></li>
-            <li><a href="heroes.html">Ewò Nasyonal</a></li>
-            <li><a href="lidès.html">Lidè</a></li>
-            <li><a href="konstitisyon.html">Konstitisyon</a></li>
-            <li><a href="enstitisyons.html">Enstitisyon</a></li>
-            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Pran Kontak</h4>
-          <ul>
-            <li><a href="contact.html">Kontakte Nou</a></li>
-            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
-            <li><a href="license.html">Mentions L&eacute;gales</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
-        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
-        <span class="footer-editorial">Ce projak se n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti se &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
-      </div>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mentions L&eacute;gales</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sou Ha&iuml;ti &eacute;crits nan l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
+ </div>
+ </div>
+ </footer>
 
-  <script src="../js/script.js"></script>
-  <script src="../js/premium.js"></script>
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){e.stopPropagation();sw.classList.toggle('open');});
+  document.addEventListener('click',function(){sw.classList.remove('open');});
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  // Auto-redirect based on stored preference
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
 </body>
 </html>

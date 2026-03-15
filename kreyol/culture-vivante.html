@@ -1,281 +1,328 @@
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#00209F" />
-  <title>La Kilti Vivan d'Haïti | </title>
-  <meta name="author" content="RepiblikHaïti.org" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/premium.css" />
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Kilti Vivan d'Haïti | </title>
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher */
+.lang-switcher { position: relative; margin-left: 1rem; }
+.lang-switcher__btn { background: none; border: 1px solid rgba(255,255,255,0.3); color: inherit; padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: border-color 0.2s; }
+.lang-switcher__btn:hover { border-color: rgba(255,255,255,0.7); }
+.lang-switcher__menu { display: none; position: absolute; top: 110%; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-width: 150px; z-index: 1000; overflow: hidden; }
+.lang-switcher.open .lang-switcher__menu { display: block; }
+.lang-option { display: block; padding: 0.6rem 1rem; color: #333; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+.lang-option:hover { background: #f0f4ff; }
+.lang-option.active { background: #e8f0fe; font-weight: 600; }
+@media (max-width: 768px) { .lang-switcher { margin-left: 0; margin-top: 0.5rem; } .lang-switcher__menu { right: auto; left: 0; } }
+</style>
 </head>
 <body>
 
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Back to top -->
-  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
 
-    <header class="site-header">
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="Akèy">
-          Repiblik Ayiti
-        </a>
-        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
-          <a href="index.html">Akèy</a>
-          <a href="about.html">Soswa Nou</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="history.html">Istwa Jeneral</a>
-              <a href="timeline.html">Kwonolouji</a>
-              <a href="heroes.html">Ewò Nasyonal</a>
-              <a href="lidès.html">Lidè</a>
-              <a href="konstitisyon.html">Konstitisyon</a>
-              <a href="enstitisyons.html">Enstitisyon</a>
-              <a href="presidents.html">Pwofil Prezidan yo</a>
-              <a href="revolution-batays.html">Batay Revolisyon an</a>
-              <a href="relations-internationales.html">Relasyon Entènasyonal</a>
-            </div>
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ <a href="presidents.html">Pwofil Prezidan yo</a>
+ <a href="revolution-batays.html">Batay Revolisyon an</a>
+ <a href="relations-internationales.html">Relasyon Entènasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ <a href="atiss.html">Atis Vizyèl</a>
+ <a href="mizik-istwa.html">Istwa Mizik</a>
+ <a href="litterature.html">Literati</a>
+ <a href="creole.html">Lang Kreyòl</a>
+ <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
+ <a href="glossaire-creole.html">Glosè Kreyòl</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="departements.html">10 Depatman yo</a>
+ <a href="geographie.html">Jeyografi Fizik</a>
+ <a href="anviwonman.html">Anviwonman</a>
+ <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
+ <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
+ <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang">
+            🇭🇹 Kreyòl ▾
+          </button>
+          <div class="lang-switcher__menu">
+            <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
+            <a href="#" class="lang-option active" data-lang="ht">🇭🇹 Kreyòl</a>
           </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti.html">Kilti &amp; Atizay</a>
-              <a href="vodou.html">Vodou</a>
-              <a href="lwa.html">Lwa yo</a>
-              <a href="gastronomy.html">Gastwonomi</a>
-              <a href="holidays.html">Joswa Ferye</a>
-              <a href="atiss.html">Atis Vizyèl</a>
-              <a href="mizik-istwa.html">Istwa Mizik</a>
-              <a href="litterature.html">Literati</a>
-              <a href="creole.html">Lang Kreyòl</a>
-              <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
-              <a href="glossaire-creole.html">Glosè Kreyòl</a>
-            </div>
-          </div>
-          <a href="tourism.html">Touris</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="departements.html">10 Depatman yo</a>
-              <a href="geographie.html">Jeyografi Fizik</a>
-              <a href="anviwonman.html">Anviwonman</a>
-              <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
-              <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti-vivante.html">Kilti Vivan</a>
-              <a href="creativite-populaire.html">Kreyativite Popilè</a>
-              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
-              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
-              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
-              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
-              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
-              <a href="instabilite-politik.html">Enstabilite Politik</a>
-              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
-              <a href="services-essentiels.html">Sèvis Esansyèl</a>
-              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
-              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="encyclopedia.html">Ansiklopedi</a>
-              <a href="archives.html">Achiv</a>
-              <a href="bibliography.html">Bibliyografi</a>
-              <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
-              <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
-            </div>
-          </div>
-          <a href="contact.html">Kontak</a>
-        </nav>
+        </div>
         <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
 
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
-    <div class="search-overlay__inner">
-      <div class="search-overlay__header">
-        <div class="search-input-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
-        </div>
-        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
-      </div>
-      <div class="search-results" id="searchResults" aria-live="polite"></div>
-    </div>
-  </div>
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
 
-  <section class="page-hero page-hero--about">
-    <div class="container">
-      <p class="page-hero__label">Kilti Vivan</p>
-      <h1 class="page-hero__title">La Kilti Vivan d'Haïti</h1>
-      <p class="page-hero__desc">Lang, mizik, kwizin, atizay vizyèl : yon kilti qui résiste, crée ak inspire chak jour.</p>
-    </div>
-  </section>
+ <section class="page-hero page-hero--about">
+ <div class="container">
+ <p class="page-hero__label">Kilti Vivan</p>
+ <h1 class="page-hero__title">Kilti Vivan d'Haïti</h1>
+ <p class="page-hero__desc">Lang, mizik, kwizin, atizay vizyèl : yon kilti ki résiste, crée ak inspire chak jour.</p>
+ </div>
+ </section>
 
-  <div class="breadcrumb">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <a href="index.html">Akèy</a>
-        <span>/</span>
-        <span>Kilti Vivan</span>
-      </nav>
-    </div>
-  </div>
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <span>Kilti Vivan</span>
+ </nav>
+ </div>
+ </div>
 
-  <section class="section">
-    <div class="container">
-      <div class="editorial-intro">
-        <p class="section-label">Kilti Vivan</p>
-        <p>La kilti ayisyèn ne s'expose pas dans nan vitrines. Elle se vit nan rues de Port-au-Prince yon dimanche matin, dans l'odeur nan griyo qui fume devant yon cour familiale, nan kreyo̲l qu'on parle entre voisins sans menm y penser. Quand les chercheurs parlent de « kilti vivante », ils désignent précisément cela : nan pratiques qui se reproduisent parce qu'elles ont yon utilité sociale, affective oswa espirityèl — pas parce qu'yon enstitisyon les soutient.</p>
-        <p>La mizik en se l'exemple le plis immédiat. Le Kompa te travèse les décennies depi Nemours Jean-Baptiste sans se fossiliser ; il s'se électrifié, s'se mêlé de hip-hop ak de zouk, apre sa a rebondi nan dyaspora de Miami ak de Montréal avant de revenir transformé. Le Rara, lui, n'a jamè cherché de salle de concert : il appartient à la route, aux carrefours, aux processions nan carême. Ce se deux logiques kiltilles qui coexistent sans se contredire.</p>
-        <p>Le créole ayisyen mérite qu'on s'y attarde. Lang officielle depi la Konstitisyon de 1987, il se surtout la lang nanquelle les Haïtiens rêvent, plaisantent ak prient. Il se né d'yon nécessité istorik absolue — nan esclaves de dizaines d'origines différentes avaient besoin de se comprendre — ak sa a genèse lui a conféré yon plasticité remarquable. Les pwovèb kreyòl condensent nan syèks de sagesse popilè en kèk syllabes : <em>Dèyè mòn gen mòn</em> (derrière les mòns, d'lòt mòns) di en quatre mots ce que l'anthropologie mete nan pages à expliquer.</p>
-        <p>La Soup Joumou, inscrite au patrimwàn immatériel nan UNESCO en 2021, illustre byen tankount yon acte culinaire ordinaire kapab porter yon charge symbolique extraordinaire. Chaque 1er janvier, nan millions de fanmis ayisyèn préparent sa a soupe que esklav yo n'avaient pas dwa a de consommer — ak sa préparation elle-même, collective, intergénérationnelle, se yon répétition nan geste libérateur.</p>
+ <section class="section">
+ <div class="container">
+ <div class="editorial-intro">
+ <p class="section-label">Kilti Vivan</p>
+ <p>kilti ayisyèn pa s'expose pa nan nan vitrines. Elle vit nan rues nan Port-au-Prince yon dimanche matin, nan l'odeur nan griyo ki fume devan yon cour familiale, nan kreyo̲l ke on parle ant voisins san menm y penser. Quand chercheurs parlent nan « kilti vivante », yo désignent précisément cela : nan pratiques ki reproduisent parce ke elles gen yon utilité sosyal, affective oswa espirityèl — pa parce ke yon enstitisyon soutient.</p>
+ <p>mizik en l'exemple plis immédiat. Kompa te travèse décennies depi Nemours Jean-Baptiste san fossiliser ; li s'se électrifié, s'se mêlé nan hip-hop ak nan zouk, apre li a rebondi nan dyaspora nan Miami ak nan Montréal anvan nan revenir transformé. Rara, lui, pa a jamè cherché nan salle nan concert : li appartient à route, nan carrefours, nan processions nan carême. Ce deux logiques kiltilles ki coexistent san contredire.</p>
+ <p>créole ayisyen mérite ke on s'y attarde. Lang officielle depi Konstitisyon nan 1987, li sitou lang nanquelle Haïtiens rêvent, plaisantent ak prient. Il né d'yon nécessité istorik absolue — nan esklav nan dizaines d'origines diferans te gen besoin nan comprendre — ak li a genèse lui a conféré yon plasticité remarquable. pwovèb kreyòl condensent nan syèks nan sagesse popilè en kèk syllabes : <em>Dèyè mòn gen mòn</em> (derrière mòns, d'lòt mòns) di en quatre mo li a ke l'anthropologie mete nan pages à expliquer.</p>
+ <p>Soup Joumou, inscrite nan patrimwàn immatériel nan UNESCO en 2021, montre byen tankount yon acte culinaire ordinaire kapab porter yon charge symbolique extraordinaire. Chaque 1er janvier, nan millions nan fanmis ayisyèn préparent li a soupe ke esklav yo pa avaient pa dwa a nan consommer — ak li préparation elle-même, collective, intergénérationnelle, yon répétition nan geste libérateur.</p>
 
-        <div class="researcher-note">
-          <p>Ce que les chercheurs désignent par « kilti vivante » ne correspond pas toujoswa à ce que les enstitisyons patrimoniales reconnaissent. Une gran partie nan vitalité kiltille ayisyèn se passe précisément en dehors nan musées, nan salles de spectacle ak nan programmes UNESCO. Le défi poswa documentation se de saisir sa yo pratiques <em>in situ</em>, avant qu'elles ne disparaissent oswa ne se figent en folklore touristique. Ce site tente d'en témoigner depi soursa yo haïtiennes, pas depi l'extérieur.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+ <div class="researcher-note">
+ <p>Ce ke chercheurs désignent pa « kilti vivante » pa correspond pa toujoswa à li a ke enstitisyons patrimoniales reconnaissent. Yon gran pati nan vitalité kiltille ayisyèn passe précisément en dehors nan musées, nan salles nan spectacle ak nan programmes UNESCO. défi poswa documentation nan saisir li yo pratiques <em>in situ</em>, anvan ke elles pa disparaissent oswa pa figent en folklore touristique. Ce site tente d'en témoigner depi soursa yo ayisyèns, pa depi l'extérieur.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="text-block">
-        <p class="section-label">Identité</p>
-        <h2>La Lang Kreyòl</h2>
-        <p>Le créole ayisyen se byen plis qu'yon simple moyen de communication. C'se yon senbòl d'idantite nasyonal, né nan rezistans nan esclaves africains, qui ont fusionné les langs européennes ak afriken pour créer leur pwòp mode d'expression. Rekonnen lang officielle en 1987, il se la lang nan coeur de tout les Haïtiens.</p>
-      </div>
-    </div>
-  </section>
+ <section class="section">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Identité</p>
+ <h2>Lang Kreyòl</h2>
+ <p>créole ayisyen byen plis ke yon simple moyen nan communication. C'se yon senbòl d'idantite nasyonal, né nan rezistans nan esklav afrikens, ki gen fusionné langs européennes ak afriken pou créer yo pwòp mode d'expression. Rekonnen lang officielle en 1987, li lang nan coeur nan tout Haïtiens.</p>
+ </div>
+ </div>
+ </section>
 
-  <section class="section section--alt">
-    <div class="container">
-      <div class="text-block">
-        <p class="section-label">Rythme ak Célébration</p>
-        <h2>Mizik ak Festivals</h2>
-        <p>La mizik ayisyèn se yon force vitale. Le Kompa, le Rara, le Rasin ak le Troubadoswa rythment lavi a quotidienne ak les célébrations collectives. Le Kanaval haïtien, l'yon nan plis spectaculaires nan Karayib, rassemble chak ane nan millions de personnes nan yon célébration joyeuse nan idantite nasyonal.</p>
-      </div>
-    </div>
-  </section>
+ <section class="section section--alt">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Rythme ak Célébration</p>
+ <h2>Mizik ak Festivals</h2>
+ <p>mizik ayisyèn yon fòs vitale. Kompa, Rara, Rasin ak Troubadoswa rythment lavi a quotidienne ak célébrations collectives. Kanaval ayisyen, l'yon nan plis spectaculaires nan Karayib, rassemble chak ane nan millions nan personnes nan yon célébration joyeuse nan idantite nasyonal.</p>
+ </div>
+ </div>
+ </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="text-block">
-        <p class="section-label">Saveurs ak Tradisyons</p>
-        <h2>Kwizin ak Tradisyons</h2>
-        <p>La kwizin ayisyèn se yon patrimwàn vivant. La Soup Joumou, mangée chak 1er janvier pour commémorer l'endepandans, se désormen rekonnen par l'UNESCO. Le griyo, le diri ak pwa, le pikliz : chak plat raconte yon istwa de rezistans, de créativité ak de fyète.</p>
-      </div>
-    </div>
-  </section>
+ <section class="section">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Saveurs ak Tradisyons</p>
+ <h2>Kwizin ak Tradisyons</h2>
+ <p>kwizin ayisyèn yon patrimwàn vivant. Soup Joumou, mangée chak 1er janvier pou commémorer l'endepandans, désormen rekonnen pa l'UNESCO. griyo, diri ak pwa, pikliz : chak plat raconte yon istwa nan rezistans, nan créativité ak nan fyète.</p>
+ </div>
+ </div>
+ </section>
 
-  <section class="section section--alt">
-    <div class="container">
-      <div class="text-block">
-        <p class="section-label">Expression Artistique</p>
-        <h2>Arts Visuels ak Literati</h2>
-        <p>L'art ayisyen se célébré nan musées nan mond entier. Les peintures naïves, les sculptures en métal ak literati a en créole ak en fransè témoignent d'yon créativité qui s'épanouit malgre les difficultés. Des auteurs tankoswa Jacques Roumain, René Depestre ak Edwidge Danticat ont porté la voix d'Haïti soswa scène internationale.</p>
-      </div>
-    </div>
-  </section>
+ <section class="section section--alt">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Expression Artistique</p>
+ <h2>Arts Visuels ak Literati</h2>
+ <p>L'art ayisyen selebre nan musées nan mond entier. peintures naïves, sculptures en métal ak literati a en créole ak en fransè témoignent d'yon créativité ki s'épanouit malgre difficultés. Des otè tankoswa Jacques Roumain, René Depestre ak Edwidge Danticat gen porté voix d'Haïti soswa scène entènasyonal.</p>
+ </div>
+ </div>
+ </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="text-block">
-        <p class="section-label">Rezistans ak Fierté</p>
-        <h2>La Kilti tankoswa Rezistans</h2>
-        <p>Tout au long de son istwa, kilti ayisyèn nan te yon instrument de rezistans ak de survie. Face à l'esklavaj, à la kolonizasyon, aux diktatès ak aux katastwòf natirèl, pèp ayisyen an a toujoswa trouvé dans sa kilti la force de résister ak de se reconstruire.</p>
-      </div>
-    </div>
-  </section>
+ <section class="section">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Rezistans ak Fierté</p>
+ <h2>Kilti tankoswa Rezistans</h2>
+ <p>Tout nan long nan li istwa, kilti ayisyèn nan te yon instrument nan rezistans ak nan survie. Face à l'esklavaj, à kolonizasyon, nan diktatès ak nan katastwòf natirèl, pèp ayisyen an a toujoswa trouvé nan li kilti fòs nan résister ak nan reconstruire.</p>
+ </div>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-brand__logo">
-            Repiblik Ayiti
-          </div>
-          <p>
-            Une célébration nan extraordinaire istwa d'Haïti, de sa kilti
-            vibrante ak de son pèp remarquable. Dédié à partager l'istwa de
-            premye Repiblik nwa nan mond lan.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Eksplore</h4>
-          <ul>
-            <li><a href="index.html">Akèy</a></li>
-            <li><a href="about.html">Soswa Ayiti</a></li>
-            <li><a href="history.html">Istwa</a></li>
-            <li><a href="tourism.html">Touris</a></li>
-            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
-            <li><a href="archives.html">Achiv</a></li>
-            <li><a href="bibliography.html">Bibliyografi</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Kilti &amp; Sosyete</h4>
-          <ul>
-            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
-            <li><a href="vodou.html">Vodou</a></li>
-            <li><a href="gastronomy.html">Gastwonomi</a></li>
-            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
-            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
-            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
-            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Istwa &amp; Enstitisyon</h4>
-          <ul>
-            <li><a href="timeline.html">Kwonolouji</a></li>
-            <li><a href="heroes.html">Ewò Nasyonal</a></li>
-            <li><a href="lidès.html">Lidè</a></li>
-            <li><a href="konstitisyon.html">Konstitisyon</a></li>
-            <li><a href="enstitisyons.html">Enstitisyon</a></li>
-            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Pran Kontak</h4>
-          <ul>
-            <li><a href="contact.html">Kontakte Nou</a></li>
-            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
-            <li><a href="license.html">Mentions L&eacute;gales</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
-        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
-        <span class="footer-editorial">Ce projak se n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti se &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
-      </div>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mentions L&eacute;gales</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sou Ha&iuml;ti &eacute;crits nan l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
+ </div>
+ </div>
+ </footer>
 
-  <script src="../js/script.js"></script>
-  <script src="../js/premium.js"></script>
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){e.stopPropagation();sw.classList.toggle('open');});
+  document.addEventListener('click',function(){sw.classList.remove('open');});
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  // Auto-redirect based on stored preference
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
 </body>
 </html>

@@ -1,629 +1,676 @@
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#00209F" />
-  <title>Les Drapo Vodoswa — Art Sacré d'Haïti | Repiblik Ayiti</title>
-  <meta name="description" content="Les drapo vodoswa — drapox cérémoniels ornés de milliers de perles ak de paillettes — se an menm tan objets rituels consakre aux lwa ak chefs-d'œuvre rekonèt pa plis gran musées nan mond. Istwa, techniques, maîtres ak enjeux contemporains." />
-  <meta name="author" content="RepiblikHaïti.org" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/premium.css" />
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Drapo Vodoswa — Art Sacré d'Haïti | Repiblik Ayiti</title>
+ <meta name="description" content="Les drapo vodoswa — drapox cérémoniels ornés de milliers de perles ak de paillettes — se an menm tan objets rituels consakre aux lwa ak chefs-d'œuvre rekonèt pa plis gran musées nan mond. Istwa, techniques, maîtres ak enjeux contemporains." />
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher */
+.lang-switcher { position: relative; margin-left: 1rem; }
+.lang-switcher__btn { background: none; border: 1px solid rgba(255,255,255,0.3); color: inherit; padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: border-color 0.2s; }
+.lang-switcher__btn:hover { border-color: rgba(255,255,255,0.7); }
+.lang-switcher__menu { display: none; position: absolute; top: 110%; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-width: 150px; z-index: 1000; overflow: hidden; }
+.lang-switcher.open .lang-switcher__menu { display: block; }
+.lang-option { display: block; padding: 0.6rem 1rem; color: #333; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+.lang-option:hover { background: #f0f4ff; }
+.lang-option.active { background: #e8f0fe; font-weight: 600; }
+@media (max-width: 768px) { .lang-switcher { margin-left: 0; margin-top: 0.5rem; } .lang-switcher__menu { right: auto; left: 0; } }
+</style>
 </head>
 <body>
 
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Back to top -->
-  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
 
-  <header class="site-header">
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="Akèy">
-          Repiblik Ayiti
-        </a>
-        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
-          <a href="index.html">Akèy</a>
-          <a href="about.html">Soswa Nou</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="history.html">Istwa Jeneral</a>
-              <a href="timeline.html">Kwonolouji</a>
-              <a href="heroes.html">Ewò Nasyonal</a>
-              <a href="lidès.html">Lidè</a>
-              <a href="konstitisyon.html">Konstitisyon</a>
-              <a href="enstitisyons.html">Enstitisyon</a>
-            </div>
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang">
+            🇭🇹 Kreyòl ▾
+          </button>
+          <div class="lang-switcher__menu">
+            <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
+            <a href="#" class="lang-option active" data-lang="ht">🇭🇹 Kreyòl</a>
           </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti.html">Kilti &amp; Atizay</a>
-              <a href="vodou.html">Vodou</a>
-              <a href="lwa.html">Lwa yo</a>
-              <a href="gastronomy.html">Gastwonomi</a>
-              <a href="holidays.html">Joswa Ferye</a>
-            </div>
-          </div>
-          <a href="tourism.html">Touris</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti-vivante.html">Kilti Vivan</a>
-              <a href="creativite-populaire.html">Kreyativite Popilè</a>
-              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
-              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
-              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
-              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
-              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
-              <a href="instabilite-politik.html">Enstabilite Politik</a>
-              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
-              <a href="services-essentiels.html">Sèvis Esansyèl</a>
-              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
-              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="encyclopedia.html">Ansiklopedi</a>
-              <a href="archives.html">Achiv</a>
-              <a href="bibliography.html">Bibliyografi</a>
-            </div>
-          </div>
-          <a href="contact.html">Kontak</a>
-        </nav>
+        </div>
         <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
 
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
-    <div class="search-overlay__inner">
-      <div class="search-overlay__header">
-        <div class="search-input-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : istwa, kilti, vils…" autocomplete="off" />
-        </div>
-        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
-      </div>
-      <div class="search-results" id="searchResults" aria-live="polite"></div>
-    </div>
-  </div>
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : istwa, kilti, vils…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
 
-  <section class="page-hero page-hero--about">
-    <div class="container">
-      <p class="page-hero__label">Art Sacré</p>
-      <h1 class="page-hero__title">Les Drapo Vodou</h1>
-      <p class="page-hero__desc">L'Art Sacré nan Drapox Vodoswa — objets rituels consakre aux lwa, cousus de milliers de paillettes ak de perles, portés pa reines drapo à l'ouverture nan cérémonies ak rekonèt jounen jodi a nan plis gran musées nan mond.</p>
-    </div>
-  </section>
+ <section class="page-hero page-hero--about">
+ <div class="container">
+ <p class="page-hero__label">Art Sacré</p>
+ <h1 class="page-hero__title">Drapo Vodou</h1>
+ <p class="page-hero__desc">L'Art Sacré nan Drapox Vodoswa — objets rityèl consakre nan lwa, cousus nan milliers nan paillettes ak nan perles, portés pa reines drapo à l'ouverture nan seremoni ak rekonèt jounen jodi a nan plis gran musées nan mond.</p>
+ </div>
+ </section>
 
-  <div class="breadcrumb">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <a href="index.html">Akèy</a>
-        <span>/</span>
-        <a href="kilti.html">Kilti</a>
-        <span>/</span>
-        <span>Drapo Vodou</span>
-      </nav>
-    </div>
-  </div>
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <a href="kilti.html">Kilti</a>
+ <span>/</span>
+ <span>Drapo Vodou</span>
+ </nav>
+ </div>
+ </div>
 
-  <section class="section">
-    <div class="container">
-      <p class="section-label">Objak Rituel &amp; Patrimwàn Artistique</p>
-      <h2>Qu'est-ce qu'yon drapo vodoswa ?</h2>
+ <section class="section">
+ <div class="container">
+ <p class="section-label">Objak Rituel &amp; Patrimwàn Artistique</p>
+ <h2>Ke est-ce ke yon drapo vodoswa ?</h2>
 
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Un drapo vodoswa se byen davantage qu'yon simple drapo. C'se yon objak rituel d'yon densité espirityèl ak esthétique rare, conçu pour honorer yon lwa — l'yon nan divinités nan panthéon vodoswa ayisyen — ak pour lui servir de véhicule lors nan cérémonies. Sa surface se entièrement recouverte à la main de milliers de paillettes de verre ak de perles de rocaille, minutieusement brodées sur yon fond de soie, de satin oswa de velours. Le résultat se yon œuvre d'yon scintillement intense, dont les couleurs, les senbòls ak les figures indiquent immédiatement à yon œil initié idantite a nan lwa honoré.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Les dimensions standard d'yon drapo varient, men le format habituel tourne autour d'yon mètre carré — parfois légèrement moins, parfois davantage poswa gran pièsa yo de cérémonie. Un seul drapo kapab comporter plis de dix mille paillettes individuellement cousues. Le temps de fabrication d'yon œuvre de qualité dépasse couramment plizyè semaines, parfois plizyè mois. Ce n'se pas yon objak produit à la chaîne, ak cela ne pourrait pas l'être : chak drapo se unique, signé pa main, pa foi ak pa kilti de celui oswa de celle qui l'te kreye.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Dans la seremoni vodou, les drapo se portés pa <em>reine drapo</em> — les reines nan drapox — au tout début nan rituel. Ces fanm, initiées (<em>hounsis</em>) avec yon rôle précis nan hiérarchie nan peristyle, tiennent le drapo de leur lwa à l'horizontale oswa incliné, ak processionnent dans l'espace cérémoniel avec yon lenteur majestueuse pandan que les tambours ak les chants s'élèvent. Il ne s'agit pas d'yon rôle purement décoratif : rèn nan drapo se yon médiatrice, yon fanm dont la présence ak le mouvement invitent le lwa à descendre ak à prendre possession de ses serviteurs.
-          </p>
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Yon drapo vodoswa byen davantage ke yon simple drapo. C'se yon objak rityèl d'yon densité espirityèl ak esthétique rare, conçu pou honorer yon lwa — l'yon nan divenités nan panthéon vodoswa ayisyen — ak pou lui servir nan véhicule lors nan cérémonies. Sa surface entièrement recouverte à main nan milliers nan paillettes nan verre ak nan perles nan rocaille, minutieusement brodées sou yon fond nan soie, nan satin oswa nan velours. résultat yon zèv d'yon scintillement intense, ke couleurs, senbòls ak figures indiquent immédiatement à yon œil initié idantite a nan lwa honoré.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ dimensions standard d'yon drapo varient, men format habituel tourne otou d'yon mètre carré — pafwa légèrement moins, pafwa davantage poswa gran pièsa yo nan cérémonie. Yon seul drapo kapab comporter plis nan dix mille paillettes individuellement cousues. tan nan fabrication d'yon zèv nan qualité dépasse couramment plizyè semaines, pafwa plizyè mois. Ce pa se pa yon objak produit à chaîne, ak cela pa pourrait pa l'être : chak drapo inik, signé pa main, pa foi ak pa kilti nan celui oswa nan celle ki l'te kreye.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Dans seremoni vodou, drapo portés pa <em>reine drapo</em> — reines nan drapox — nan tout début nan rituel. Ces fanm, initiées (<em>hounsis</em>) ak yon wòl précis nan hiérarchie nan peristyle, tiennent drapo nan yo lwa à l'horizontale oswa incliné, ak processionnent nan l'espace cérémoniel ak yon lenteur majestueuse pandan ke tanbou ak chants s'élèvent. Il pa s'agit pa d'yon wòl purement décoratif : rèn nan drapo yon médiatrice, yon fanm ke présence ak mouvman invitent lwa à descendre ak à prendre possession nan li yo serviteurs.
+ </p>
 
-          <aside class="researcher-note" aria-label="Note de recherche">
-            La confusion entre « drapo » au sens politik ak « drapo » au sens rituel se fréquente chez les observateurs extérieurs. Les premiers drapo vodoswa documentés nan soursa yo écrites occidentales datent nan XIXe syèk, men leur présence nan pratique se certainement byen antérieure à toute documentation. Les journaux de voyageurs qui décrivent nan seremoni vodoswa au XIXe syèk mentionnent nan étoffes brodées portées lors nan processions, sans toujoswa en comprendre la fonction précise.
-          </aside>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères techniques</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
-              <li>· Support : soie, satin oswa velours</li>
-              <li>· Matériaux : paillettes de verre, perles de rocaille, broderie</li>
-              <li>· Format courant : environ 1 m × 1 m</li>
-              <li>· Paillettes par drapo : 5 000 à 15 000+</li>
-              <li>· Durée de fabrication : kèk semaines à plizyè mois</li>
-              <li>· Usage premye : seremoni vodou</li>
-              <li>· Porteurs rituels : les reines drapo (hounsis)</li>
-              <li>· Chaque drapo se unique ak non reproductible à l'identique</li>
-            </ul>
-          </div>
-          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Terminologie</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· <strong>Drapo</strong> — drapo (créole)</li>
-              <li>· <strong>Lwa</strong> — esprit / divinité vodou</li>
-              <li>· <strong>Vèvè</strong> — senbòl sakre nan lwa</li>
-              <li>· <strong>Reine drapo</strong> — porteuse rituelle nan drapo</li>
-              <li>· <strong>Hounsi</strong> — initié(e) nan peristyle</li>
-              <li>· <strong>Peristyle</strong> — tempvodoswa a</li>
-              <li>· <strong>Poto mitan</strong> — poteau central nan peristyle</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ confusion ant « drapo » nan sens politik ak « drapo » nan sens rityèl fréquente lakay observateurs extérieurs. premyes drapo vodoswa documentés nan soursa yo écrites occidentales datent nan XIXe syèk, men yo présence nan pratique certainement byen antérieure à toute documentation. journaux nan voyageurs ki décrivent nan seremoni vodoswa nan XIXe syèk mentionnent nan étoffes brodées portées lors nan processions, san toujoswa en comprendre fonction précise.
+ </aside>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères techniques</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+ <li>· Support : soie, satin oswa velours</li>
+ <li>· Matériaux : paillettes nan verre, perles nan rocaille, broderie</li>
+ <li>· Format courant : anviwon 1 m × 1 m</li>
+ <li>· Paillettes pa drapo : 5 000 à 15 000+</li>
+ <li>· Durée nan fabrication : kèk semaines à plizyè mois</li>
+ <li>· Usage premye : seremoni vodou</li>
+ <li>· Porteurs rityèl : reines drapo (hounsis)</li>
+ <li>· Chaque drapo inik ak non reproductible à l'identique</li>
+ </ul>
+ </div>
+ <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Terminologie</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· <strong>Drapo</strong> — drapo (créole)</li>
+ <li>· <strong>Lwa</strong> — lespri / divenité vodou</li>
+ <li>· <strong>Vèvè</strong> — senbòl sakre nan lwa</li>
+ <li>· <strong>Reine drapo</strong> — porteuse rituelle nan drapo</li>
+ <li>· <strong>Hounsi</strong> — initié(e) nan peristyle</li>
+ <li>· <strong>Peristyle</strong> — tempvodoswa a</li>
+ <li>· <strong>Poto mitan</strong> — poteau central nan peristyle</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- Section 2 -->
-      <h2 style="margin-top:2.5rem;">Origine ak istwa</h2>
+ <!-- Section 2 -->
+ <h2 style="margin-top:2.5rem;">Origine ak istwa</h2>
 
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Pour comprendre la naissance nan drapo vodou, il faut remonter aux tradisyons nan royaumes côtiers d'Afrique nan Ouest, an patikilye celles nan royaume de Dahomey (actuel Bénin), dont les Fon avaient développé yon kilti matérielle d'yon richesse exceptionnelle. Les <em>recades</em> — sceptres cérémoniels royal — ak les étendards de cour, ornés de motifs symboliques liés aux ancêtres royaux ak aux divinités (<em>vodun</em>), constituaient nan objets de prestige chargés d'yon autorité espirityèl directe. De même, les royaumes yorouba voisins utilisaient nan parements ak nan vêtements brodés de perles tankoswa marqueurs d'identité diven ak royale. Ces tradisyons n'ont pas disparu nan cale nan navires négriers : elles ont traversé l'Atlantique, fragmentées ak recomposées, dans memwa a nan captifs.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            En Haïti, la synthèse s'se opérée sur plizyè générations. Les esclaves réunis nan habitations sucrières venaient d'horizons ethniques ak linguistiques divers — Fon, Yoruba, Akan, Kongo, Mandé — ak ont forgé yon relijyon nouvo depi fragments de tradisyons multiples, en intégrant toswa nan éléments nan catholicisme kolonyal imposé tankoswa camouflage. C'se dans ce creusak que les lwa vodoswa ont pris leur forme ayisyèn distincte, akurs attributs, leurs couleurs ak leurs senbòls propres. Et c'se dans ce menm processus que la pratique nan drapox cérémoniels a trouvé sa forme locale : non pas simple copie nan étendards africains, men objak neuf, intensément haïtien.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Un élément souvan sous-estimé se l'influence nan kilti milite haïtienne. L'armée d'Haïti, héritière nan armées nan Revolisyon ak nan troupes de Saint-Domingue, avait ses drapox régimentaires, ses couleurs portées en procession, ses rites d'honneur aux étendards. Les cérémonies milite ayisyèn nan XIXe syèk, auxquelles participaient nan soldats souvan pratiquants nan vodou, ont certainement contribué à consolider la forme visuelle nan drapo cérémoniel : sa taille carrée, sa hampe, le geste de le porter à bout de bras. Ce n'se pas yon hasard si plizyè lwa majeurs — au premye rang desquels Ogou, le lwa guerrier — se représentés nan yon vocabulaire iconographique résolument militaire.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            La forme nan drapo vodoswa telle qu'on la connaît jounen jodi a — format carré, couverture totale de paillettes, vèvè central — semble s'être consolidée au cours nan XIXe syèk, menm si nan transformations ont continué tout au long nan XXe. Les drapo nan premye moitié nan XXe syèk, lè on kapab en retrouver nan exemples documentés, présentent deja les caractéristiques fondamentales : fond de couleur, vèvè en paillettes, frange oswa bordure ornementale. La professionnalisation de leur fabrication ak leur entrée soswa marché nan art entènasyonal se nan phénomènes plis récents, concentrés soswa période 1970–2000.
-          </p>
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Pour comprendre naissance nan drapo vodou, li faut remonter nan tradisyons nan royaumes côtiers d'Afrique nan Ouest, an patikilye celles nan royaume nan Dahomey (actuel Bénin), ke Fon te gen développé yon kilti matérielle d'yon richsse exceptionnelle. <em>recades</em> — sceptres cérémoniels royal — ak étendards nan cour, ornés nan motifs symboliques lye nan ancêtres royaux ak nan divenités (<em>vodun</em>), constituaient nan objets nan prestige chargés d'yon autorité espirityèl directe. De même, royaumes yorouba voisins utilisaient nan parements ak nan vêtements brodés nan perles tankoswa marqueurs d'identité diven ak royale. Ces tradisyons pa ont pa disparu nan cale nan navires négriers : yo gen traversé l'Atlantique, fragmentées ak recomposées, nan memwa a nan captifs.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ En Haïti, synthèse s'se opérée sou plizyè générations. esklav réunis nan habitations sucrières venaient d'horizons ethniques ak linguistiques divers — Fon, Yoruba, Akan, Kongo, Mandé — ak gen forgé yon relijyon nouvo depi fragments nan tradisyons multiples, en intégrant toswa nan éléments nan catholicisme kolonyal imposé tankoswa camouflage. C'se nan li a creusak ke lwa vodoswa gen pris yo fòm ayisyèn distincte, akurs attributs, yo couleurs ak yo senbòls propres. Et c'se nan li a menm processus ke pratique nan drapox cérémoniels a trouvé li fòm locale : non pa simple copie nan étendards afrikens, men objak neuf, intensément ayisyen.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Yon élément souvan sous-estimé l'influence nan kilti milite ayisyèn. L'armée d'Haïti, héritière nan armées nan Revolisyon ak nan troupes nan Saint-Domingue, te gen li yo drapox régimentaires, li yo couleurs portées en procession, li yo rites d'honneur nan étendards. seremoni milite ayisyèn nan XIXe syèk, auxquelles participaient nan sòlda souvan pratiquants nan vodou, gen certainement contribué à consolider fòm visuelle nan drapo cérémoniel : li taille carrée, li hampe, geste nan porter à bout nan bras. Ce pa se pa yon hasard si plizyè lwa gwos — nan premye rang desquels Ogou, lwa guerrier — représentés nan yon vocabulaire iconographique résolument milite.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ fòm nan drapo vodoswa telle ke on connaît jounen jodi a — format carré, couverture totale nan paillettes, vèvè central — sanble s'être consolidée nan cours nan XIXe syèk, menm si nan transformations gen continué tout nan long nan XXe. drapo nan premye moitié nan XXe syèk, lè yo kapab en retrouver nan exemples documentés, présentent deja karakteristik fondamantals : fond nan couleur, vèvè en paillettes, frange oswa bordure ornementale. professionnalisation nan yo fabrication ak yo entrée soswa marché nan atizay entènasyonal nan phénomènes plis récents, concentrés soswa période 1970–2000.
+ </p>
 
-          <aside class="researcher-note" aria-label="Note de recherche">
-            Le lien ant étendards royaux nan Dahomey ak les drapo vodoswa ayisyen se yon hypothèse solidement documentée men qu'il faut manier sans excès de linéarité. Les captifs arrivés en Saint-Domingue n'te pas tout nan Dahomey, ak la pratique nan drapox rituels se attestée dans plizyè kiltis nan région. La synthèse ayisyèn se yon création propre, pas yon transplantation directe. Il serait réducteur de traiter le drapo vodoswa tankoswa yon simple « survivant » afriken : c'se yon invention ayisyèn qui a ses racines afriken ak ses branches entièrement neuves.
-          </aside>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Racines africaines</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
-              <li>· <strong>Dahomey (Fon)</strong> : recades, étendards royaux, cultes vodun</li>
-              <li>· <strong>Yoruba</strong> : parements de perles, orisha ak leurs couleurs</li>
-              <li>· <strong>Kongo</strong> : objets sakre ak cosmologie nan entre-deux-monds</li>
-              <li>· Synthèse créole opérée sur plizyè générations en Haïti</li>
-              <li>· Influence nan kilti milite ayisyèn post-1804</li>
-            </ul>
-          </div>
-          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Jalons historiques</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· XVIIe–XVIIIe s. : synthèse vodoswa en Saint-Domingue</li>
-              <li>· 1804 : endepandans ak affirmation de kilti ayisyèn nan</li>
-              <li>· XIXe s. : consolidation nan forme nan drapo cérémoniel</li>
-              <li>· 1944 : Centre d'Art de Port-au-Prince (valorisation nan arts populaires)</li>
-              <li>· Années 1970–80 : découverte entènasyonal nan drapo</li>
-              <li>· Années 1990–2000 : entrée nan gran collections muséales</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ lien ant étendards royaux nan Dahomey ak drapo vodoswa ayisyen yon hypothèse solidement documentée men ke il faut manier san excès nan linéarité. captifs arrivés en Saint-Domingue pa te pa tout nan Dahomey, ak pratique nan drapox rityèl attestée nan plizyè kiltis nan région. synthèse ayisyèn yon création propre, pa yon transplantation directe. Il serait réducteur nan traiter drapo vodoswa tankoswa yon simple « survivant » afriken : c'se yon invention ayisyèn ki a li yo racines afriken ak li yo branches entièrement neuves.
+ </aside>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Racines afrikens</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+ <li>· <strong>Dahomey (Fon)</strong> : recades, étendards royaux, cultes vodun</li>
+ <li>· <strong>Yoruba</strong> : parements nan perles, orisha ak yo couleurs</li>
+ <li>· <strong>Kongo</strong> : objets sakre ak cosmologie nan entre-deux-monds</li>
+ <li>· Synthèse créole opérée sou plizyè générations en Haïti</li>
+ <li>· Enfliyans nan kilti milite ayisyèn post-1804</li>
+ </ul>
+ </div>
+ <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Jalons istoriks</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· XVIIe–XVIIIe s. : synthèse vodoswa en Saint-Domingue</li>
+ <li>· 1804 : endepandans ak affirmation nan kilti ayisyèn nan</li>
+ <li>· XIXe s. : consolidation nan fòm nan drapo cérémoniel</li>
+ <li>· 1944 : Centre d'Art nan Port-au-Prince (valorisation nan arts popilès)</li>
+ <li>· Années 1970–80 : découverte entènasyonal nan drapo</li>
+ <li>· Années 1990–2000 : entrée nan gran collections muséales</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- Section 3 -->
-      <h2 style="margin-top:2.5rem;">Les senbòls ak les vèvè</h2>
+ <!-- Section 3 -->
+ <h2 style="margin-top:2.5rem;">senbòls ak vèvè</h2>
 
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Le cœur visuel de tout drapo vodoswa se le <em>vèvè</em> — le senbòl sakre pwòp à chak lwa, tracé tradisyonnellement à la farine de maïs soswa sol nan peristyle en ouverture de cérémonie. Sur yon drapo, ce menm vèvè se reproduit en paillettes au centre nan drapo, entouré d'attributs, de figures ak d'yon fond chromatique qui forment yon langage iconographique toswa précis ak codifié qu'yon héraldique médiéval. Un initié kapab identifier le lwa honoré depi l'lòt bout d'yon salle, avant menm d'avoir vu les détails.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            <strong>Papa Legba</strong>, gardien nan carrefours ak nan passages, lwa nan ouverture, se représenté avec son vèvè en forme de croix rayonnante aux quatre intersections. Ses couleurs se le rouge ak le noir dans sèten nations vodou, men toswa le blanc ak l'or. Ses attributs iconographiques se la canne oswa la béquille, le soleil, la route qui bifurque. Sur son drapo, on rejwenn souvan toswa yon figure de vieillard appuyé sur son bâton, correspondant à son syncrétisme catholique avec Saint Lazare oswa Saint Pierre. Legba ouvre toujoswa seremoni an : son drapo se le premye porté.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            <strong>Erzulie Freda</strong>, lwa nan amour, nan beauté ak nan richesse, a pour couleur dominante le rose, le or ak le bleu clair. Son vèvè se yon cœur percé de flèches, entouré de miroirs, de bijoux ak de figures féminines. Elle se syncrétisée ak Vierge Marie. Un drapo pour Erzulie Freda se souvan le plis luxueux, le plis chargé d'or ak de rose, avec nan paillettes irisées qui imitent le reflak nan bijoux. C'se l'yon nan figures féminines les plis puissantes nan vodoswa haïtien, célébrée avec yon intensité particulière par ses dévots.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            <strong>Ogou</strong>, lwa nan guerriers, nan feu ak nan fer forgé, utilise le rouge ak l'or dans ses drapo — parfois relevé de noir oswa de vert. Son vèvè central se yon épée oswa yon sabre, souvan croisé. Ses attributs incluent le rhum ak le cigare, les armes blanches, les uniformes militaires. L'imagerie qui lui se associée se souvan celle de Saint Jacques combattant à cheval — syncrétisme kolonyal qui a pwofondman marqué son iconographie. Sur yon drapo, Ogoswa apparaît en guerrier victorieux, entouré de flammes dorées ak de sabres entrecroisés.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            <strong>Baron Samedi</strong>, maître de lanmò a ak nan cimetières, chef nan Gede, a pour palette le noir ak le violet, avec nan touches de blanc osseux. Son iconographie se sans équivoque : crânes, croix de cimetière, hauts-de-forme noirs, lunettes de soleil aux verres percés. Sur son drapo, l'humour noir qui caractérise les Gede se souvan présent — Baron Samedi se yon figure pwisan men toswa facétieuse, ak les meilleurs maîtres drapo savent introduire dans ses représentations ce mélange de majesté funèbre ak d'ironie mordante.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            <strong>Damballah</strong>, le gran serpent blanc, lwa nan sagesse, nan pureté ak nan eau, se représenté par nan serpents en spirale sur fond blanc oswa argent. Son vèvè se deux serpents s'enroulant autour d'yon axe vertical — yon forme qui rappelle le caducée médical occidental, akquel il n'a aucyon lien istorik direct. Damballah se yon lwa silencieux : ceux qu'il possède ne parlent pas, sifflent oswa rampent. Ses drapo se parmi les plis épurés visuellement, dominés pa blanc ak l'argent, avec nan serpents sinueux en paillettes brillantes sur fond clair — yon contraste saisissant nan yon art qui privilégie souvan la profusion.
-          </p>
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ cœur visuel nan tout drapo vodoswa <em>vèvè</em> — senbòl sakre pwòp à chak lwa, tracé tradisyonnellement à farine nan maïs soswa sol nan peristyle en ouverture nan cérémonie. Sur yon drapo, li a menm vèvè reproduit en paillettes nan sant nan drapo, entouré d'attributs, nan figures ak d'yon fond chromatique ki forment yon langage iconographique toswa précis ak codifié ke yon héraldique médiéval. Yon initié kapab identifier lwa honoré depi l'lòt bout d'yon salle, anvan menm d'avoir vu détails.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ <strong>Papa Legba</strong>, gardien nan carrefours ak nan passages, lwa nan ouverture, reprezante ak li vèvè en fòm nan croix rayonnante nan quatre intersections. Ses couleurs rouge ak noir nan sèten nations vodou, men toswa blanc ak l'or. Ses attributs iconographiques canne oswa béquille, soleil, route ki bifurque. Sur li drapo, yo rejwenn souvan toswa yon figure nan vieillard appuyé sou li bâton, correspondant à li syncrétisme catholique ak Saint Lazare oswa Saint Pierre. Legba ouvre toujoswa seremoni an : li drapo premye porté.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ <strong>Erzulie Freda</strong>, lwa nan amour, nan beauté ak nan richsse, a pou couleur dominante rose, or ak bleu clair. Son vèvè yon cœur percé nan flèches, entouré nan miroirs, nan bijoux ak nan figures féminines. Elle syncrétisée ak Vierge Marie. Yon drapo pou Erzulie Freda souvan plis luxueux, plis chargé d'or ak nan rose, ak nan paillettes irisées ki imitent reflak nan bijoux. C'se l'yon nan figures féminines plis pwisans nan vodoswa ayisyen, selebre ak yon intensité particulière pa li yo dévots.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ <strong>Ogou</strong>, lwa nan guerriers, nan feu ak nan fer forgé, utilise rouge ak l'or nan li yo drapo — pafwa relevé nan noir oswa nan vert. Son vèvè central yon épée oswa yon sabre, souvan croisé. Ses attributs incluent rhum ak cigare, armes blanches, uniformes milites. L'imagerie ki lui asosye souvan celle nan Saint Jacques combattant à cheval — syncrétisme kolonyal ki a pwofondman make li iconographie. Sur yon drapo, Ogoswa parèt en guerrier victorieux, entouré nan flammes dorées ak nan sabres entrecroisés.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ <strong>Baron Samedi</strong>, maître nan lanmò a ak nan cimetières, chef nan Gede, a pou palette noir ak violet, ak nan touches nan blanc osseux. Son iconographie san équivoque : crânes, croix nan cimetière, hauts-de-forme noirs, lunettes nan soleil nan verres percés. Sur li drapo, l'humour noir ki caractérise Gede souvan présent — Baron Samedi yon figure pwisan men toswa facétieuse, ak meilleurs maîtres drapo savent introduire nan li yo représentations li a mélange nan majesté funèbre ak d'ironie mordante.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ <strong>Damballah</strong>, gran serpent blanc, lwa nan sagesse, nan pureté ak nan eau, reprezante pa nan serpents en spirale sou fond blanc oswa argent. Son vèvè deux serpents s'enroulant otou d'yon axe vertical — yon fòm ki raple caducée médical occidental, akquel li pa a aucyon lien istorik direct. Damballah yon lwa silencieux : ceux ke il possède pa parlent pas, sifflent oswa rampent. Ses drapo pami plis épurés visuellement, dominés pa blanc ak l'argent, ak nan serpents sinueux en paillettes brillantes sou fond clair — yon contraste saisissant nan yon atizay ki privilégie souvan profusion.
+ </p>
 
-          <aside class="researcher-note" aria-label="Note de recherche">
-            Le système d'association entre lwa, couleurs ak senbòls n'se pas totalement uniforme atravè Haïti : nan variations existent selon les « nations » vodoswa (Rada, Petwo, Kongo, Ibo…), les régions géographiques, ak les tradisyons spécifiques de chak peristyle. Un drapo fè nan sud nan peyi kapab présenter nan variantes iconographiques absentes nan drapo de Port-au-Prince. Cette diversité se yon richesse, pas yon incohérence. Les maîtres drapo expérimentés connaissent sa yo nuansa yo ak les intègrent consciemment nanur travail selon la commande oswa la dévotion qui guide leur création.
-          </aside>
-        </div>
-        <div>
-          <!-- Colour guide sidebar -->
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1.2rem;">Guide chromatique nan lwa</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:13px;line-height:1;">
-              <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-                <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#c0392b,#222);flex-shrink:0;"></span>
-                <span><strong>Papa Legba</strong> — rouge &amp; noir, or, blanc</span>
-              </li>
-              <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-                <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#f8bbd0,#ffd700);flex-shrink:0;"></span>
-                <span><strong>Erzulie Freda</strong> — rose, or, bleu clair</span>
-              </li>
-              <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-                <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#c0392b,#ffd700);flex-shrink:0;"></span>
-                <span><strong>Ogou</strong> — rouge &amp; or, vert, noir</span>
-              </li>
-              <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-                <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#2c0040,#1a1a1a);flex-shrink:0;"></span>
-                <span><strong>Baron Samedi</strong> — violak &amp; noir, blanc</span>
-              </li>
-              <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-                <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#f0f0f0,#c0c0c0);border:1px solid #ccc;flex-shrink:0;"></span>
-                <span><strong>Damballah</strong> — blanc &amp; argent</span>
-              </li>
-              <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-                <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#1565c0,#0d47a1);flex-shrink:0;"></span>
-                <span><strong>Agwe</strong> — bleu &amp; vert marin, blanc</span>
-              </li>
-              <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-                <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#1b5e20,#ffd700);flex-shrink:0;"></span>
-                <span><strong>Zaka</strong> — vert, bleu peyian, paille</span>
-              </li>
-              <li style="display:flex;align-items:center;gap:10px;">
-                <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#4a0080,#1a1a1a);flex-shrink:0;"></span>
-                <span><strong>Marinette</strong> — violak sombre, noir, rouge</span>
-              </li>
-            </ul>
-          </div>
-          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Les nations vodou</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· <strong>Rada</strong> — lwa doux, couleurs froides, origines dahomey</li>
-              <li>· <strong>Petwo</strong> — lwa chauds, plis intenses, créole haïtien</li>
-              <li>· <strong>Kongo</strong> — influensa yo bantoues</li>
-              <li>· <strong>Gede</strong> — lwa nan morts, humour ak transgression</li>
-              <li>· <strong>Ibo</strong> — nation distincte, lwa solitaires</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ système d'association ant lwa, couleurs ak senbòls pa se pa totalement uniforme atravè Haïti : nan variations existent dapre « nations » vodoswa (Rada, Petwo, Kongo, Ibo…), rejyon géographiques, ak tradisyons spécifiques nan chak peristyle. Yon drapo fè nan sid nan peyi kapab présenter nan variantes iconographiques absentes nan drapo nan Port-au-Prince. Cette diversité yon richsse, pa yon incohérence. maîtres drapo expérimentés connaissent li yo nuansa yo ak intègrent consciemment nanur travail dapre commande oswa dévotion ki guide yo création.
+ </aside>
+ </div>
+ <div>
+ <!-- Colour guide sidebar -->
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1.2rem;">Guide chromatique nan lwa</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:13px;line-height:1;">
+ <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+ <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#c0392b,#222);flex-shrink:0;"></span>
+ <span><strong>Papa Legba</strong> — rouge &amp; noir, or, blanc</span>
+ </li>
+ <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+ <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#f8bbd0,#ffd700);flex-shrink:0;"></span>
+ <span><strong>Erzulie Freda</strong> — rose, or, bleu clair</span>
+ </li>
+ <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+ <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#c0392b,#ffd700);flex-shrink:0;"></span>
+ <span><strong>Ogou</strong> — rouge &amp; or, vert, noir</span>
+ </li>
+ <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+ <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#2c0040,#1a1a1a);flex-shrink:0;"></span>
+ <span><strong>Baron Samedi</strong> — violak &amp; noir, blanc</span>
+ </li>
+ <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+ <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#f0f0f0,#c0c0c0);border:1px solid #ccc;flex-shrink:0;"></span>
+ <span><strong>Damballah</strong> — blanc &amp; argent</span>
+ </li>
+ <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+ <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#1565c0,#0d47a1);flex-shrink:0;"></span>
+ <span><strong>Agwe</strong> — bleu &amp; vert marin, blanc</span>
+ </li>
+ <li style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+ <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#1b5e20,#ffd700);flex-shrink:0;"></span>
+ <span><strong>Zaka</strong> — vert, bleu peyian, paille</span>
+ </li>
+ <li style="display:flex;align-items:center;gap:10px;">
+ <span style="display:inline-block;width:18px;height:18px;border-radius:3px;background:linear-gradient(135deg,#4a0080,#1a1a1a);flex-shrink:0;"></span>
+ <span><strong>Marinette</strong> — violak sombre, noir, rouge</span>
+ </li>
+ </ul>
+ </div>
+ <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">nations vodou</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· <strong>Rada</strong> — lwa doux, couleurs froides, origines dahomey</li>
+ <li>· <strong>Petwo</strong> — lwa chauds, plis intenses, créole ayisyen</li>
+ <li>· <strong>Kongo</strong> — influensa yo bantoues</li>
+ <li>· <strong>Gede</strong> — lwa nan morts, humour ak transgression</li>
+ <li>· <strong>Ibo</strong> — nasyon distincte, lwa solitaires</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- Section 4 -->
-      <h2 style="margin-top:2.5rem;">La technique de fabrication</h2>
+ <!-- Section 4 -->
+ <h2 style="margin-top:2.5rem;">technique nan fabrication</h2>
 
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            La fabrication d'yon drapo vodoswa se yon processus long, méticuleux ak pwofondman artisanal qui ne se laisse pas accélérer sans perdre l'essentiel. Il tankounce pa conception : mèt la drapo esquisse sa composition sur papier, en tenant compte nan hiérarchie visuelle nan vèvè central, nan figures secondaires, nan bordures, ak nan répartition nan couleurs. Cette phase de conception n'se pas purement esthétique — elle engage la konesans que l'atis a nan lwa honoré, de ses attributs, de ses préférences. Les meilleurs maîtres se souvan toswa nan dévots, ak leur travail se autant prière que métier.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Une fois le dessin arrêté, il se reporté soswa tissu de support — soie, satin oswa velours tennan sur yon cadre de bois. Le tracé se fè à la craie oswa à l'aiguille fine, suffisamment visible pour guider le travail men destiné à disparaître sous les paillettes. Vient apre sa la phase de remplissage : chak paillette se piquée individuellement à l'aiguille ak fixée par yon fil. On les dispose en rangées serrées, en spirales, en lignes courbes, selon la forme à remplir. La densité de pose se telle que le tissu de fond disparaît entièrement sous la surface scintillante.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Les perles de rocaille — petites perles de verre tubulaires — soti compléter la surface poswa détails les plis fins, les contours nan figures, les lettres oswa les inscriptions rituelles que sèten drapo comportent. La broderie en fil métallique doré oswa argenté kapab ajouter yon dimension supplémentaire aux zones les plis chargées symboliquement. Une fois le corps nan drapo terminé, yon bordure — frange de perles, ruban de satin, galon brodé — encadre la pièce ak lui donne son achèvement. Le tout se monté sur yon hampe en bois oswa en métal.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            La transmission de sa yo savoir-faire se fè tradisyonnellement nan cadre nan fanmi oswa nan kominote nan peristyle. Un jeyon appran en regardant, apre sa en assistant, apre sa en prenant en charge nan zones mwens exposées — yon frange, yon fond uni — avant de progresser vers les parties centrales ak symboliquement chargées. Cette transmission orale ak gestuelle, sans manuel ni école formelle, se an menm tan la force nan tradisyon (elle préserve yon continuité vivante ak pratique religieuse) ak sa fragilité (elle dépend entièrement nan survie nan maîtres ak nan volonté nan jeunes générations de prendre le relais).
-          </p>
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ fabrication d'yon drapo vodoswa yon processus long, méticuleux ak pwofondman artisanal ki pa laisse pa accélérer san perdre l'essentiel. Il tankounce pa conception : mèt drapo esquisse li composition sou papier, en tenant compte nan hiérarchie visuelle nan vèvè central, nan figures secondaires, nan bordures, ak nan répartition nan couleurs. Cette phase nan conception pa se pa purement esthétique — li engage konesans ke l'atis a nan lwa honoré, nan li yo attributs, nan li yo préférences. meilleurs maîtres souvan toswa nan dévots, ak yo travail autant priyè ke métier.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Yon fwa dessin arrêté, li reporté soswa tissu nan support — soie, satin oswa velours tennan sou yon cadre nan bois. tracé fè à craie oswa à l'aiguille fine, suffisamment visible pou guider travail men destiné à disparaître anba paillettes. Vient apre li phase nan remplissage : chak paillette piquée individuellement à l'aiguille ak fixée pa yon fil. On dispose en rangées serrées, en spirales, en lignes courbes, dapre fòm à remplir. densité nan pose telle ke tissu nan fond disparaît entièrement anba surface scintillante.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ perles nan rocaille — pitis perles nan verre tubulaires — soti compléter surface poswa détails plis fins, contours nan figures, lettres oswa inscriptions rituelles ke sèten drapo comportent. broderie en fil métallique doré oswa argenté kapab ajouter yon dimension supplémentaire nan zones plis chargées symboliquement. Yon fwa corps nan drapo terminé, yon bordure — frange nan perles, ruban nan satin, galon brodé — encadre pièce ak lui donne li achèvement. tout monté sou yon hampe en bois oswa en métal.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ transmission nan li yo savoir-faire fè tradisyonnellement nan cadre nan fanmi oswa nan kominote nan peristyle. Yon jeyon appran en regardant, apre li en assistant, apre li en prenant en charge nan zones mwens exposées — yon frange, yon fond uni — anvan nan progresser vè pati centrales ak symboliquement chargées. Cette transmission orale ak gestuelle, san manuel ni école formelle, an menm tan fòs nan tradisyon (elle préserve yon continuité vivante ak pratique relijye) ak li fragilité (elle dépend entièrement nan survie nan maîtres ak nan volonté nan jeunes générations nan prendre relais).
+ </p>
 
-          <aside class="researcher-note" aria-label="Note de recherche">
-            Une tension enpòtan traverse jounen jodi a les ateliers de drapo : la distinction ant drapo fè pour yon commande cérémonielle — destiné à yon peristyle spécifique, pour honorer yon lwa précis nan yon contexte rituel konnen nan fabricant — ak le drapo produit pour l'export, pour yon galerie oswa yon collectionneur qui ne saura jamè tankount l'utiliser. Certains maîtres refusent de distinguer les deux, affirmant que leur travail se yon prière quelle qu'en soit la destination finale. D'lòt reconnaissent que les contraintes tankourciales — délais, coûts, formats standardisés — ont nan effets soswa qualité ak la profondeur espirityèl nan produit. Cette tension n'se pas unique à Haïti : elle traverse tout les tradisyons artisanales sacrées qui ont rencontré le marché nan art mondial.
-          </aside>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Étapes de fabrication</p>
-            <ol style="padding-left:1.2rem;margin:0;font-size:14px;line-height:2.2;">
-              <li>Conception ak dessin nan composition</li>
-              <li>Report nan design soswa tissu tendu</li>
-              <li>Pose nan couches de base (fond coloré)</li>
-              <li>Application individuelle nan paillettes</li>
-              <li>Broderie de perles de rocaille poswa détails</li>
-              <li>Broderie en fil métallique (or, argent)</li>
-              <li>Réalisation nan bordure ak nan frange</li>
-              <li>Montage sur hampe ak finition</li>
-            </ol>
-          </div>
-          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Matériaux utilisés</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· Soie oswa satin (fond)</li>
-              <li>· Velours (pièsa yo de cérémonie)</li>
-              <li>· Paillettes de verre (françaises, japonaises, taiwanaises)</li>
-              <li>· Perles de rocaille (verre)</li>
-              <li>· Fil de soie oswa polyester poswa broderie</li>
-              <li>· Fil métallique doré / argenté</li>
-              <li>· Cadre de bois pour tension nan tissu</li>
-              <li>· Hampe en bois oswa métal</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ Yon tension enpòtan travèse jounen jodi a ateliers nan drapo : distinction ant drapo fè pou yon commande cérémonielle — destiné à yon peristyle spécifique, pou honorer yon lwa précis nan yon kontèks rityèl konnen nan fabricant — ak drapo produit pou l'export, pou yon galerie oswa yon collectionneur ki pa saura jamè tankount l'utiliser. Certains maîtres refusent nan distinguer deux, affirmant ke yo travail yon priyè quelle ke en soit destination finale. D'lòt reconnaissent ke contraintes tankourciales — délais, coûts, formats standardisés — gen nan effets soswa qualité ak pwofonur espirityèl nan produit. Cette tension pa se pa inik à Haïti : li travèse tout tradisyons artisanales sakres ki gen rencontré marché nan atizay mondial.
+ </aside>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Étapes nan fabrication</p>
+ <ol style="padding-left:1.2rem;margin:0;font-size:14px;line-height:2.2;">
+ <li>Conception ak dessin nan composition</li>
+ <li>Report nan design soswa tissu tendu</li>
+ <li>Pose nan couches nan base (fond coloré)</li>
+ <li>Application individuelle nan paillettes</li>
+ <li>Broderie nan perles nan rocaille poswa détails</li>
+ <li>Broderie en fil métallique (or, argent)</li>
+ <li>Réalisation nan bordure ak nan frange</li>
+ <li>Montage sou hampe ak finition</li>
+ </ol>
+ </div>
+ <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Matériaux utilisés</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· Soie oswa satin (fond)</li>
+ <li>· Velours (pièsa yo nan cérémonie)</li>
+ <li>· Paillettes nan verre (françaises, japonaises, taiwanaises)</li>
+ <li>· Perles nan rocaille (verre)</li>
+ <li>· Fil nan soie oswa polyester poswa broderie</li>
+ <li>· Fil métallique doré / argenté</li>
+ <li>· Cadre nan bois pou tension nan tissu</li>
+ <li>· Hampe en bois oswa métal</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- Section 5 -->
-      <h2 style="margin-top:2.5rem;">Les gran maîtres</h2>
+ <!-- Section 5 -->
+ <h2 style="margin-top:2.5rem;">gran maîtres</h2>
 
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Le mond nan drapo vodoswa compte plizyè figures dont le travail a franchi fwontyè yo de Haïti ak atteint les collections muséales ak les galeries internationales. Leurs noms se konnen nan spécialistes d'art haïtien, men méritent d'être konnen nan plis gran nombre.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            <strong>Clotaire Bazile</strong> se l'yon nan noms les plis régulièrement cités parmi les maîtres nan fin nan XXe syèk. Son travail se distingue pa précision de ses vèvè ak la densité exceptionnelle de ses paillettes, qui donnent à ses drapo yon relief presque tridimensionnel sous sèten lumières. Ses pièsa yo figurent dans nan collections aux États-Unis ak en Europe. Bazile représente yon génération de maîtres qui ont su maintenir la rigueur rituelle nan objak tout en produisant nan pièsa yo susceptibles de dialoguer ak catégories nan atizay kontanporen.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            <strong>Edgar Jean-Louis</strong> se yon lòt nom incontournable — ses drapo ont intégré nan collections muséales majeures, sitoswa dans nan enstitisyons américaines. Son travail se souvan cité tankoswa exemple d'yon maîtrise technique qui n'a pas sacrifié la profondeur symbolique à l'esthétique tankourciale. Jean-Louis se représentatif d'yon profil de maître : artisan formé nan tradisyon, croyant pratiquant, dont les pièsa yo fonctionnent simultanément tankoswa objets de dévotion ak tankoswa œuvres d'art au sens occidental nan terme.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            <strong>Antoine Oleyant</strong> figure toswa parmi les atiss rekonèt pa galeries spécialisées dans atizay ayisyen an. Son approche se caractérise par yon certaine libète compositionnelle tout en restant fidèle aux canons iconographiques nan vodou. Ses drapo poswa Gede — Baron Samedi, Brav Gede, Maman Brigitte — se an patikilye réputés pouur densité symbolique ak l'équilib qu'il maintient ant macabre ak l'humour, trait essentiel nan esthétique gede.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            L'atelier <strong>Atis Rezistans</strong> de Port-au-Prince, byenke konnen principalement pour ses sculptures en matériaux recyclés, a maintenu nan liens ak tradisyon nan drapo ak illustre la vitalité d'yon milieu créatif qui ne sépare pas atizay la popilè nan art sacré. Georges Valris, l'yon de ses membres fondateurs, incarne sa a continuité entre engagement artistique, dévotion vodoswa ak rezistans kiltille.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Un fè essentiel ak trop souvan passé sous silence : les fanm te jwe yon rôle central dans l'istwa nan drapo vodou. Cette tradisyon se l'yon nan rares formes d'art ayisyen où les fanm ont historiquement été productrices, maîtresses, transmettrisa yo — ak pas seulement consommatrisa yo oswa muses. Les ateliers nan quartier de Pétion-Vil ak ceux nan environs nan Marché de Fer à Port-au-Prince comptaient ak comptent toujoswa nan fanm parmi leurs artisanes les plis expertes. Leur travail se souvan mwens documenté que celui de leurs homologues masculins — lacyon que l'istwa de atizay ayisyen an dwe combler.
-          </p>
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ mond nan drapo vodoswa compte plizyè figures ke travail a franchi fwontyè yo nan Haïti ak atteint collections muséales ak galeries entènasyonals. Leurs non konnen nan spécialistes d'art ayisyen, men méritent d'être konnen nan plis gran nombre.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ <strong>Clotaire Bazile</strong> l'yon nan non plis régulièrement cités pami maîtres nan fin nan XXe syèk. Son travail distingue pa précision nan li yo vèvè ak densité exceptionnelle nan li yo paillettes, ki donnent à li yo drapo yon relief presque tridimensionnel anba sèten lumières. Ses pièsa yo figurent nan nan collections nan États-Unis ak en Europe. Bazile reprezante yon génération nan maîtres ki gen su maintenir rigueur rituelle nan objak tout en produisant nan pièsa yo susceptibles nan dialoguer ak catégories nan atizay kontanporen.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ <strong>Edgar Jean-Louis</strong> yon lòt non incontournable — li yo drapo gen intégré nan collections muséales gwos, sitoswa nan nan enstitisyons amerikens. Son travail souvan cité tankoswa exemple d'yon maîtrise technique ki pa a pa sacrifié pwofonur symbolique à l'esthétique tankourciale. Jean-Louis représentatif d'yon profil nan maître : artisan formé nan tradisyon, croyant pratiquant, ke pièsa yo fonctionnent simultanément tankoswa objets nan dévotion ak tankoswa zèv d'art nan sens occidental nan terme.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ <strong>Antoine Oleyant</strong> figure toswa pami atiss rekonèt pa galeries spécialisées nan atizay ayisyen an. Son approche caractérise pa yon certaine libète compositionnelle tout en restant fidèle nan canons iconographiques nan vodou. Ses drapo poswa Gede — Baron Samedi, Brav Gede, Maman Brigitte — an patikilye réputés pouur densité symbolique ak l'équilib ke il maintient ant macabre ak l'humour, trait esansyèl nan esthétique gede.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ L'atelier <strong>Atis Rezistans</strong> nan Port-au-Prince, byenke konnen prensipalman pou li yo sculptures en matériaux recyclés, a maintenu nan liens ak tradisyon nan drapo ak montre vitalité d'yon milieu créatif ki pa sépare pa atizay popilè nan atizay sakre. Georges Valris, l'yon nan li yo membres fondateurs, enkane li a continuité ant engagement artistique, dévotion vodoswa ak rezistans kiltille.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Yon fè esansyèl ak trop souvan passé anba silence : fanm te jwe yon wòl central nan l'istwa nan drapo vodou. Cette tradisyon l'yon nan rares fòm d'art ayisyen kote fanm gen istorikment été productrices, maîtresses, transmettrisa yo — ak pa seulement consommatrisa yo oswa muses. ateliers nan quartier nan Pétion-Vil ak ceux nan environs nan Marché nan Fer à Port-au-Prince comptaient ak comptent toujoswa nan fanm pami yo artisanes plis expertes. Leur travail souvan mwens documenté ke celui nan yo homologues masculins — lacyon ke l'istwa nan atizay ayisyen an dwe combler.
+ </p>
 
-          <aside class="researcher-note" aria-label="Note de recherche">
-            La documentation nan maîtres drapo souffre d'yon biais que partagent de nombreuses tradisyons d'arts popilè : les collectionneurs ak les galéristes étrangers qui ont tankouncé à acheter sa yo pièsa yo nan anes 1970 ak 1980 ont souvan enregistré les noms nan intermédiaires — marchands, guides, fixeurs — plutôt que ceux nan créateurs réels. Des pièsa yo importantes circulent dans nan collections privées ak publiques sans attribution fiable, oswa avec nan attributions contestées. C'se yon problème sérieux poswa konstitisyon d'yon corpus istorik solide ak poswa rekonesans équitable nan atiss.
-          </aside>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Maîtres reconnus</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.2;">
-              <li>· <strong>Clotaire Bazile</strong> — maître nan relief ak nan densité</li>
-              <li>· <strong>Edgar Jean-Louis</strong> — collections muséales internationales</li>
-              <li>· <strong>Antoine Oleyant</strong> — maître nan Gede</li>
-              <li>· <strong>Georges Valris</strong> — Atis Rezistans, tradisyon &amp; rezistans</li>
-            </ul>
-          </div>
-          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Centres de production</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· Ateliers de Pétion-Vil</li>
-              <li>· Quartier nan Marché de Fer, Port-au-Prince</li>
-              <li>· Ateliers liés aux peristyles</li>
-              <li>· Ateliers familiaux en province (Cap-Haïtien, Gonaïves)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ documentation nan maîtres drapo souffre d'yon biais ke partagent nan nombreuses tradisyons d'arts popilè : collectionneurs ak galéristes étrangers ki gen tankouncé à acheter li yo pièsa yo nan anes 1970 ak 1980 gen souvan enregistré non nan intermédiaires — marchands, guides, fixeurs — plutôt ke ceux nan créateurs réels. Des pièsa yo enpòtans circulent nan nan collections privées ak publiques san attribution fiable, oswa ak nan attributions contestées. C'se yon problème sérieux poswa konstitisyon d'yon corpus istorik solide ak poswa rekonesans équitable nan atiss.
+ </aside>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Maîtres reconnus</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.2;">
+ <li>· <strong>Clotaire Bazile</strong> — maître nan relief ak nan densité</li>
+ <li>· <strong>Edgar Jean-Louis</strong> — collections muséales entènasyonals</li>
+ <li>· <strong>Antoine Oleyant</strong> — maître nan Gede</li>
+ <li>· <strong>Georges Valris</strong> — Atis Rezistans, tradisyon &amp; rezistans</li>
+ </ul>
+ </div>
+ <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Centres nan production</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· Ateliers nan Pétion-Vil</li>
+ <li>· Quartier nan Marché nan Fer, Port-au-Prince</li>
+ <li>· Ateliers lye nan peristyles</li>
+ <li>· Ateliers familiaux en province (Cap-Haïtien, Gonaïves)</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- Section 6 -->
-      <h2 style="margin-top:2.5rem;">La reine drapo dans seremoni an</h2>
+ <!-- Section 6 -->
+ <h2 style="margin-top:2.5rem;">rèn drapo nan seremoni an</h2>
 
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            La <em>reine drapo</em> — oswa <em>La Reine</em> nan vocabulaire nan peristyle — se yon hounsi ayant reçu yon formation spécifique ak yon initiation particulière pour assumer ce rôle cérémoniel. Ce n'se pas yon titre purement honorifique : c'se yon fonction liturgique précise, avec ses gestes codifiés, ses vêtements rituels, sa place nan hiérarchie nan temple. Généralement, deux reines drapo officiaient ensemble lors nan ouverture de seremoni an — yon pour chak drapo nan lwa prensipal invoqués ce soir-là.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            L'ouverture d'yon seremoni vodoswa tankounce nan péristyle à peine allumé, lè les tambours — tamboswa assoto pour seremoni yo Rada, tamboswa petwo poswa rites plis ardents — donnent les premiers rythmes. Les reines drapo entrent alò dans l'espace cérémoniel, les drapox inclinés devant elles. Leur démarche se lente, majestueuse, presque dansante — paske tout dans vodoswa a se à fwontyè a nan mouvement liturgique ak nan dans. Elles se déplacent dans l'espace nan peristyle en décrivant yon parcours qui les amène devant les quatre points cardinaux.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Cette salutation aux quatre directions se l'yon nan moments les plis codifiés nan ouverture : les reines drapo s'immobilisent face à chak direction, inclinent le drapo en yon salut profond, se relèvent ak pivotent. Ce geste reproduit, dans l'espace nan temple, la cosmologie vodoswa : les quatre points cardinaux représentent les quatre coins nan mond spirituel, les quatre axes paquels les lwa circulent ant mond nan vivants ak le <em>Ginen</em>, le mond ancestral. En saluant les quatre directions, les reines drapo ouvrent symboliquement sa yo passages.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Une fois le tour nan péristyle accompli, les drapox se portés vers le <em>poto mitan</em> — le poteau central nan temple, axe symbolique autour duquel lespri yo descendent nan mond nan vivants — ak déposés oswa accrochés à proximité, où ils rete pandan toute la durée de seremoni an. La présence physique nan drapo dans l'espace sakre n'se pas anodine : c'se l'enseigne nan lwa, son territoire matérialisé, son adresse nan mond nan hommes. Quand yon lwa pran possession d'yon dévot, il kapab se diriger vers son drapo, le toucher, se draper dedans.
-          </p>
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ <em>reine drapo</em> — oswa <em>Reine</em> nan vocabulaire nan peristyle — yon hounsi ayant reçu yon formation spécifique ak yon initiation particulière pou assumer li a wòl cérémoniel. Ce pa se pa yon titre purement honorifique : c'se yon fonction liturgique précise, ak li yo gestes codifiés, li yo vêtements rituels, li plas nan hiérarchie nan temple. Généralement, deux reines drapo officiaient ensemble lors nan ouverture nan seremoni an — yon pou chak drapo nan lwa prensipal invoqués li a soir-là.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ L'ouverture d'yon seremoni vodoswa tankounce nan péristyle à peine allumé, lè tanbou — tamboswa assoto pou seremoni yo Rada, tamboswa petwo poswa rites plis ardents — donnent premyes rythmes. reines drapo entrent alò nan l'espace cérémoniel, drapox inclinés devan elles. Leur démarche lente, majestueuse, presque dansante — paske tout nan vodoswa a à fwontyè a nan mouvman liturgique ak nan dans. Elles déplacent nan l'espace nan peristyle en décrivant yon parcours ki amène devan quatre points cardinaux.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Cette salutation nan quatre directions l'yon nan moments plis codifiés nan ouverture : reines drapo s'immobilisent face à chak direction, inclinent drapo en yon salut pwofon, relèvent ak pivotent. Ce geste reproduit, nan l'espace nan temple, cosmologie vodoswa : quatre points cardinaux représentent quatre coins nan mond espirityèl, quatre axes paquels lwa circulent ant mond nan vivants ak <em>Ginen</em>, mond ancestral. En saluant quatre directions, reines drapo ouvrent symboliquement li yo passages.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Yon fwa tour nan péristyle accompli, drapox portés vè <em>poto mitan</em> — poteau central nan temple, axe symbolique otou duquel lespri yo descendent nan mond nan vivants — ak déposés oswa accrochés à proximité, kote yo rete pandan toute durée nan seremoni an. présence physique nan drapo nan l'espace sakre pa se pa anodine : c'se l'enseigne nan lwa, li teritwa matérialisé, li adresse nan mond nan hommes. Quand yon lwa pran possession d'yon dévot, li kapab diriger vè li drapo, toucher, draper dedans.
+ </p>
 
-          <aside class="researcher-note" aria-label="Note de recherche">
-            Le rôle nan reines drapo se peu étudié de façon autonome dans literati a ethnologique sur vodoswa a, souvan traité tankoswa accessoire par rapport aux gran questions de possession, de panthéon oswa de rituel. C'se yon lacyon : la gestuelle nan reines drapo se yon langage en soi, dont la grammaire mériterait yon étude ethnochoreographique approfondie. Quelques chercheuses ayisyèn ont tankouncé ce travail, en insistant soswa dimension féminine de sa a fonction ak sur ce qu'elle révèle nan place nan fanm nan hiérarchie vodoswa — yon place byen plis complexe que l'image nan simple praticante passive que les soursa yo coloniales ont longtemps imposée.
-          </aside>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Déroulement nan ouverture</p>
-            <ol style="padding-left:1.2rem;margin:0;font-size:14px;line-height:2.2;">
-              <li>Les tambours donnent les premiers rythmes</li>
-              <li>Entrée nan reines drapo nan péristyle</li>
-              <li>Procession lente ak drapox inclinés</li>
-              <li>Salutation rituelle aux quatre directions</li>
-              <li>Dépôt nan drapox près nan poto mitan</li>
-              <li>La cérémonie proprement dite tankounce</li>
-            </ol>
-          </div>
-          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">La hiérarchie nan peristyle</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· <strong>Hougan / Mambo</strong> — prêtre / prêtresse dirigeant(e)</li>
-              <li>· <strong>La Place</strong> — maître de cérémonie</li>
-              <li>· <strong>Reine drapo</strong> — porteuse rituelle nan drapox</li>
-              <li>· <strong>Hounsi</strong> — initiés nan peristyle</li>
-              <li>· <strong>Hounci Bossale</strong> — non ankò pleinement initiés</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ wòl nan reines drapo peu étudié nan façon autonome nan literati a ethnologique sou vodoswa a, souvan traité tankoswa accessoire pa rapport nan gran questions nan possession, nan panthéon oswa nan rituel. C'se yon lacyon : gestuelle nan reines drapo yon langage en soi, ke grammaire mériterait yon étude ethnochoreographique approfondie. Quelques chercheuses ayisyèn gen tankouncé li a travail, en insistant soswa dimension féminine nan li a fonction ak sou li a ke elle révèle nan plas nan fanm nan hiérarchie vodoswa — yon plas byen plis complexe ke l'image nan simple praticante passive ke soursa yo kolonyals gen longtemps imposée.
+ </aside>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Déroulement nan ouverture</p>
+ <ol style="padding-left:1.2rem;margin:0;font-size:14px;line-height:2.2;">
+ <li>tanbou donnent premyes rythmes</li>
+ <li>Entrée nan reines drapo nan péristyle</li>
+ <li>Procession lente ak drapox inclinés</li>
+ <li>Salutation rituelle nan quatre directions</li>
+ <li>Dépôt nan drapox près nan poto mitan</li>
+ <li>seremoni proprement dite tankounce</li>
+ </ol>
+ </div>
+ <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">hiérarchie nan peristyle</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· <strong>Hougan / Mambo</strong> — prêtre / prêtresse dirigeant(e)</li>
+ <li>· <strong>Place</strong> — maître nan cérémonie</li>
+ <li>· <strong>Reine drapo</strong> — porteuse rituelle nan drapox</li>
+ <li>· <strong>Hounsi</strong> — initiés nan peristyle</li>
+ <li>· <strong>Hounci Bossale</strong> — non ankò pleinement initiés</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- Section 7 -->
-      <h2 style="margin-top:2.5rem;">Rekonesans internationale</h2>
+ <!-- Section 7 -->
+ <h2 style="margin-top:2.5rem;">Rekonesans entènasyonal</h2>
 
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            L'entrée nan drapo vodoswa nan circuits nan art entènasyonal se yon phénomène relativement récent — yon quarantaine d'anes — men qui te transfòme de manière irréversible la façon dont sa yo objets se perçus, produits ak échangés. Les premiers collectionneurs occidentaux à s'y intéresser sérieusement l'ont fè nan sillage nan boom plis général de atizay ayisyen an qui a suivi les anes 1960-70. Des figures tankoswa Selden Rodman, critique d'art ameriken qui a beaucoup écrit sur penti a haïtienne, oswa John Beardsley, historien nan art, ont contribué à attirer l'attention nan enstitisyons muséales sur sa yo pièces.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Le <strong>Brooklyn Museum</strong> de New York possènan yon nan collections les plis importantes de drapo vodoswa hors d'Haïti. Des expositions tankoswa <em>Flagrant Art</em> y ont présenté sa yo pièsa yo avec yon soin muséographique réel, s'efforçant de les contextualiser nanur univers espirityèl tout en les exposant tankoswa nan œuvres d'art à part entière. La <strong>Smithsonian Institution</strong> à Washington, sitoswa atravè le National Museum of African Art, conserve toswa nan exemples significatifs. Des galeries privées à New York — an patikilye nan quartier de Chelsea ak soswa 57e rue — ak à Paris ont servi de relais ant ateliers ayisyen ak les collectionneurs privés.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Cette rekonesans entènasyonal a produit yon effak paradoxal. D'yon côté, elle a apporté yon visibilité ak nan revenus à nan artisans dont la pratique risquait de s'appauvrir faute de soutien local. De l'autre, elle a engendré yon pression tankourciale qui a déformé sèten aspects nan production : formats standardisés pour plaire aux marchés occidentaux, raccourcis techniques, prolifération de pièsa yo de qualité inférieure présentées tankoswa authentiques. Le drapo vin tounen yon marchandise, ce qu'il n'te pas au départ.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            La question nan dimension sakre de sa yo objets yon fois exportés se l'yon nan plis épineuses. Des hougans ak nan mambos interrogés sur ce sujak expriment nan positions nuancées : sèten considèrent que l'objet, yon fois sorti nan contexte cérémoniel pouquel il te créé, perd sa charge rituelle ak kapab circuler librement. D'lòt maintiennent que le vèvè ak les senbòls se intrinsèquement chargés, quelle que soit la destination nan objet, ak que suspendre yon drapo de Baron Samedi nan yon salon new-yorkais sans aucyon konesans de ce que cela implique n'se pas sans conséquensa yo spirituelles. Cette divergence reflète les débats internes au vodoswa ayisyen lui-menm sounati a nan objets sakre ak leur rapport au contexte.
-          </p>
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ L'entrée nan drapo vodoswa nan circuits nan atizay entènasyonal yon phénomène relativement récent — yon quarantaine d'anes — men ki te transfòme nan manière irréversible façon ke li yo objets perçus, produits ak échangés. premyes collectionneurs occidentaux à s'y intéresser sérieusement l'ont fè nan sillage nan boom plis jeneral nan atizay ayisyen an ki a suivi anes 1960-70. Des figures tankoswa Selden Rodman, critique d'art ameriken ki a beaucoup écrit sou penti a ayisyèn, oswa John Beardsley, historien nan art, gen contribué à attirer l'attention nan enstitisyons muséales sou li yo pièces.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ <strong>Brooklyn Museum</strong> nan New York possènan yon nan collections plis enpòtans nan drapo vodoswa hors d'Haïti. Des expositions tankoswa <em>Flagrant Art</em> y gen présenté li yo pièsa yo ak yon soin muséographique réel, s'efforçant nan contextualiser nanur univers espirityèl tout en exposant tankoswa nan zèv d'art à part entière. <strong>Smithsonian Institution</strong> à Washington, sitoswa atravè National Museum of African Art, conserve toswa nan exemples significatifs. Des galeries privées à New York — an patikilye nan quartier nan Chelsea ak soswa 57e rue — ak à Paris gen servi nan relais ant ateliers ayisyen ak collectionneurs privés.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Cette rekonesans entènasyonal a produit yon effak paradoxal. D'yon côté, li a apporté yon visibilité ak nan revenus à nan artisans ke pratique risquait nan s'appauvrir faute nan soutien local. De l'autre, li a engendré yon pression tankourciale ki a déformé sèten aspects nan production : formats standardisés pou plaire nan marchés occidentaux, raccourcis techniques, prolifération nan pièsa yo nan qualité inférieure présentées tankoswa authentiques. drapo vin tounen yon marchandise, li a ke il pa te pa nan départ.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ question nan dimension sakre nan li yo objets yon fwa exportés l'yon nan plis épineuses. Des hougans ak nan mambos interrogés sou li a sujak expriment nan positions nuancées : sèten considèrent ke l'objet, yon fwa sorti nan kontèks cérémoniel pouquel li te créé, perd li charge rituelle ak kapab circuler libment. D'lòt maintiennent ke vèvè ak senbòls intrinsèquement chargés, quelle ke soit destination nan objet, ak ke suspendre yon drapo nan Baron Samedi nan yon salon new-yorkais san aucyon konesans nan li a ke cela implique pa se pa san conséquensa yo espirityèls. Cette divergence reflete débats internes nan vodoswa ayisyen lui-menm sounati a nan objets sakre ak yo rapport nan kontèks.
+ </p>
 
-          <aside class="researcher-note" aria-label="Note de recherche">
-            La question nan droits kiltils ak nan propriété intellectuelle n'a pas ankò été traitée de façon satisfaisante nan cas nan drapo vodou. Les vèvè se nan créations collectives, transmises de génération en génération sans auteur individuel attribuable. Ils ne kapab être protégés par dwa a d'auteur au sens classique. Des entreprises étrangères ont reproduit nan vèvè sur nan vêtements, nan accessoires oswa nan décors sans aucyon consultation nan kominotes vodoswa ayisyèn ni rémunération nan atiss dont le travail a servi de source. C'se yon forme d'appropriation kiltille dont la prise de conscience se ankò embryonnaire, toswa byen en Haïti qu'à l'étranger.
-          </aside>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Présence muséale mondiale</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.2;">
-              <li>· <strong>Brooklyn Museum</strong>, New York — collection importante, expositions thématiques</li>
-              <li>· <strong>Smithsonian / National Museum of African Art</strong>, Washington D.C.</li>
-              <li>· <strong>Fowler Museum</strong>, UCLA, Los Angeles</li>
-              <li>· <strong>Musée nan Quai Branly</strong>, Paris — collection nan arts premiers</li>
-              <li>· Collections privées à New York, Miami, Paris, Montréal</li>
-            </ul>
-          </div>
-          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Figures nan marché de atizay ayisyen an</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· Selden Rodman — critique ak collectionneur américain</li>
-              <li>· John Beardsley — historien nan art, auteur de <em>The Vodoswa Aesthetic</em></li>
-              <li>· DeWitt Peters — fondateur nan Centre d'Art de Port-au-Prince (1944)</li>
-              <li>· Galeries spécialisées : Galerie Marassa, Galerie Nader</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ question nan droits kiltils ak nan propriété intellectuelle pa a pa ankò été traitée nan façon satisfaisante nan cas nan drapo vodou. vèvè nan créations collectives, transmises nan génération en génération san otè individuel attribuable. Ils pa kapab être protégés pa dwa a d'auteur nan sens classique. Des entreprises étrangères gen reproduit nan vèvè sou nan vêtements, nan accessoires oswa nan décors san aucyon consultation nan kominotes vodoswa ayisyèn ni rémunération nan atiss ke travail a servi nan source. C'se yon fòm d'appropriation kiltille ke prise nan conscience ankò embryonnaire, toswa byen en Haïti ke à l'étranger.
+ </aside>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Présence muséale mondiale</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.2;">
+ <li>· <strong>Brooklyn Museum</strong>, New York — collection enpòtan, expositions thématiques</li>
+ <li>· <strong>Smithsonian / National Museum of African Art</strong>, Washington D.C.</li>
+ <li>· <strong>Fowler Museum</strong>, UCLA, Los Angeles</li>
+ <li>· <strong>Musée nan Quai Branly</strong>, Paris — collection nan arts premyes</li>
+ <li>· Collections privées à New York, Miami, Paris, Montréal</li>
+ </ul>
+ </div>
+ <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Figures nan marché nan atizay ayisyen an</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· Selden Rodman — critique ak collectionneur ameriken</li>
+ <li>· John Beardsley — historien nan art, otè nan <em>The Vodoswa Aesthetic</em></li>
+ <li>· DeWitt Peters — fondateur nan Centre d'Art nan Port-au-Prince (1944)</li>
+ <li>· Galeries spécialisées : Galerie Marassa, Galerie Nader</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- Section 8 -->
-      <h2 style="margin-top:2.5rem;">Les drapo vodoswa jounen jodi a</h2>
+ <!-- Section 8 -->
+ <h2 style="margin-top:2.5rem;">drapo vodoswa jounen jodi a</h2>
 
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Le séisme nan 12 janvier 2010 a durement frappé Port-au-Prince ak ses quartiers artisanaux. Des ateliers te détruits, nan maîtres ont pernan leur matériel, leurs archives, parfois leur vie. Le quartier de Pétion-Vil, légèrement épargné par rapport aux zones les plis dévastées, a mieux résisté — men les perturbations ekonomiks qui ont suivi ont affecté tout les producteurs. La demande touristique, deja fragile avant le séisme, a ankò chuté nan anes qui ont suivi. Certains maîtres se se tournés vers les commannan d'exportation directe, via nan ONG kiltilles oswa nan galeries maintenant nan circuits menm nan période de crise.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            La question nan authenticité se désormen centrale dans tout échange tankourcial autour nan drapo vodou. Le marché touristique ayisyen a vu se multiplier les drapo de basse qualité — paillettes plastiques sur polyester, vèvè approximatifs, fabrication expédiée en kèk heures — vendus à nan prix dérisoires nan souks ak les marchés artisanaux. Ces pièsa yo ne méritent pas d'être confondues ak œuvres nan gran maîtres, ki reprezantent nan centaines d'heures de travail ak yon konesans approfondie nan vocabulaire sakre nan vodou. La différence se visible à l'œil nu pour qui sait regarder — men pas poswa touriste de passage.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Une nouvo génération de créateurs ayisyen s'empare nan drapo avec yon libète formelle inédite. Certains atiss formés nan académies de Port-au-Prince oswa à l'étranger réinterprètent la technique nan paillettes dans nan œuvres qui intègrent nan référensa yo au drag, à atizay la queer, à la critique sociale, tout en restant enracinées nan grammaire vodou. Ces expérimentations interrogent fwontyè yo entre art sakre ak atizay kontanporen, entre tradisyon ak invention — nan questions qui ne se posent pas qu'en Haïti, men qui jwenn ici yon acuité particulière.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Il n'existe pas, jiska jodi a, de mécanisme formel de protection nan drapo vodoswa au titre nan patrimwàn kiltirèl immatériel en Haïti. Des démarches te initiées auprès nan UNESCO, men la fragilité enstitisyonnelle nan peyi a retardé les processus. En l'absence d'yon telle protection, les risques d'appropriation kiltille, de plagiat industriel ak de dévaluation symbolique rete entiers. Ce que les maîtres drapo demandent, lè on leur pose la question, n'se pas tant yon protection juridique abstraite qu'yon chose plis concrète : que leurs noms soient connus, que leur travail soit rekonèt pour ce qu'il est, ak que les circuits tankourciaux qui en tirent profit leur en reversent yon part équitable.
-          </p>
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ séisme nan 12 janvier 2010 a durement frappé Port-au-Prince ak li yo quartiers artisanaux. Des ateliers te détruits, nan maîtres gen pernan yo matériel, yo archives, pafwa yo vie. quartier nan Pétion-Vil, légèrement épargné pa rapport nan zones plis dévastées, a mieux résisté — men perturbations ekonomiks ki gen suivi gen affecté tout producteurs. demande touristique, deja fragile anvan séisme, a ankò chuté nan anes ki gen suivi. Certains maîtres se tournés vè commannan d'exportation directe, via nan ONG kiltilles oswa nan galeries maintenant nan circuits menm nan période nan crise.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ question nan authenticité désormen centrale nan tout échange tankourcial otou nan drapo vodou. marché touristique ayisyen a vu multiplier drapo nan basse qualité — paillettes plastiques sou polyester, vèvè approximatifs, fabrication expédiée en kèk heures — vendus à nan prix dérisoires nan souks ak marchés artisanaux. Ces pièsa yo pa méritent pa d'être confondues ak zèv nan gran maîtres, ki reprezantent nan centaines d'heures nan travail ak yon konesans approfondie nan vocabulaire sakre nan vodou. différence visible à l'œil nu pou ki sait regarder — men pa poswa touriste nan passage.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Yon nouvo génération nan créateurs ayisyen s'empare nan drapo ak yon libète formelle inédite. Certains atiss formés nan académies nan Port-au-Prince oswa à l'étranger réinterprètent technique nan paillettes nan nan zèv ki intègrent nan référensa yo nan drag, à atizay queer, à critique sosyal, tout en restant enracinées nan grammaire vodou. Ces expérimentations interrogent fwontyè yo ant atizay sakre ak atizay kontanporen, ant tradisyon ak invention — nan questions ki pa posent pa ke en Haïti, men ki jwenn ici yon acuité particulière.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Il pa existe pas, jiska jodi a, nan mécanisme formel nan protection nan drapo vodoswa nan titre nan patrimwàn kiltirèl immatériel en Haïti. Des démarches te initiées auprès nan UNESCO, men fragilité enstitisyonnelle nan peyi a retardé processus. En l'absence d'yon telle protection, risques d'appropriation kiltille, nan plagiat industriel ak nan dévaluation symbolique rete entiers. Ce ke maîtres drapo demandent, lè yo yo pose question, pa se pa tant yon protection juridique abstraite ke yon chose plis concrète : ke yo non soient connus, ke yo travail soit rekonèt pou li a ke il est, ak ke circuits tankourciaux ki en tirent profit yo en reversent yon part équitable.
+ </p>
 
-          <aside class="researcher-note" aria-label="Note de recherche">
-            La dyaspora ayisyèn joue yon rôle croissant nan préservation ak la valorisation nan drapo. À Miami, à New York, à Montréal, nan associations kiltilles organisent nan expositions, nan ateliers de sensibilisation ak nan ventes directes qui court-circuitent les intermédiaires tradisyonnels ak permete à nan maîtres ayisyen de toucher directement nan acheteurs sensibles à la valeur kiltille de ce qu'ils acquièrent. Ces réseaux diasporiques se peut-être, jounen jodi a, les défenseurs les plis actifs nan qualité ak nan intégrité de sa a tradisyon.
-          </aside>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Enjeux contemporains</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.2;">
-              <li>· Impact nan séisme de 2010 soswa ateliers</li>
-              <li>· Marché touristique vs. marché nan art : deux qualités trè distinctes</li>
-              <li>· Risques d'appropriation kiltille nan vèvè</li>
-              <li>· Absence de protection patrimoniale formelle</li>
-              <li>· Nouvelle génération : atizay kontanporen &amp; tradisyon</li>
-              <li>· Dyaspora tankoswa réseau de valorisation directe</li>
-            </ul>
-          </div>
-          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Référensa yo bibliographiques</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:13px;line-height:1.9;">
-              <li>· Beardsley, John. <em>The Vodoswa Aesthetic</em></li>
-              <li>· Cosentino, Donald J. (dir.). <em>Sacred Arts of Haitian Vodou</em>. UCLA Fowler Museum, 1995</li>
-              <li>· Rodman, Selden. <em>Where Art Is Joy: Haitian Art</em>. 1988</li>
-              <li>· Dubois, Laurent. <em>Haiti: The Aftershocks of History</em>. 2012</li>
-              <li>· Brown, Karen McCarthy. <em>Mama Lola: A Vodoswa Priestess in Brooklyn</em>. 1991</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ dyaspora ayisyèn jwe yon wòl croissant nan préservation ak valorisation nan drapo. À Miami, à New York, à Montréal, nan associations kiltilles organisent nan expositions, nan ateliers nan sensibilisation ak nan ventes directes ki court-circuitent intermédiaires tradisyonnels ak permete à nan maîtres ayisyen nan toucher dirèkteman nan acheteurs sensibles à valeur kiltille nan li a ke ils acquièrent. Ces réseaux diasporiques peut-être, jounen jodi a, défenseurs plis actifs nan qualité ak nan intégrité nan li a tradisyon.
+ </aside>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Enjeux contemporains</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.2;">
+ <li>· Impact nan séisme nan 2010 soswa ateliers</li>
+ <li>· Marché touristique vs. marché nan atizay : deux qualités trè distinctes</li>
+ <li>· Risques d'appropriation kiltille nan vèvè</li>
+ <li>· Absence nan protection patrimoniale formelle</li>
+ <li>· Nouvelle génération : atizay kontanporen &amp; tradisyon</li>
+ <li>· Dyaspora tankoswa réseau nan valorisation directe</li>
+ </ul>
+ </div>
+ <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Référensa yo bibliographiques</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:13px;line-height:1.9;">
+ <li>· Beardsley, John. <em>The Vodoswa Aesthetic</em></li>
+ <li>· Cosentino, Donald J. (dir.). <em>Sacred Arts of Haitian Vodou</em>. UCLA Fowler Museum, 1995</li>
+ <li>· Rodman, Selden. <em>Where Art Is Joy: Haitian Art</em>. 1988</li>
+ <li>· Dubois, Laurent. <em>Haiti: The Aftershocks of History</em>. 2012</li>
+ <li>· Brown, Karen McCarthy. <em>Mama Lola: A Vodoswa Priestess in Brooklyn</em>. 1991</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- Gade tou -->
-      <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:2rem;margin-bottom:2.5rem;">
-        <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Gade tou</p>
-        <ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2.2;">
-          <li>→ <a href="vodou.html" style="color:#fff;">Le Vodoswa ayisyen — Relijyon, Istwa &amp; Kilti</a></li>
-          <li>→ <a href="lwa.html" style="color:#fff;">Lwa yo — Les Esprits nan Vodou</a></li>
-          <li>→ <a href="creativite-populaire.html" style="color:#fff;">Kreyativite Popilè — Arts &amp; Artisanat d'Haïti</a></li>
-          <li>→ <a href="tap-tap.html" style="color:#fff;">Le Tap-Tap — Art Mobile Haïtien</a></li>
-          <li>→ <a href="origines-africaines.html" style="color:#fff;">Les Origines Africaines nan Kilti Haïtienne</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+ <!-- Gade tou -->
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:2rem;margin-bottom:2.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Gade tou</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2.2;">
+ <li>→ <a href="vodou.html" style="color:#fff;">Vodoswa ayisyen — Relijyon, Istwa &amp; Kilti</a></li>
+ <li>→ <a href="lwa.html" style="color:#fff;">Lwa yo — Esprits nan Vodou</a></li>
+ <li>→ <a href="creativite-populaire.html" style="color:#fff;">Kreyativite Popilè — Arts &amp; Artisanat d'Haïti</a></li>
+ <li>→ <a href="tap-tap.html" style="color:#fff;">Tap-Tap — Art Mobile Haïtien</a></li>
+ <li>→ <a href="origines-africaines.html" style="color:#fff;">Orijin Afriken nan Kilti Haïtienne</a></li>
+ </ul>
+ </div>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-brand__logo">
-            Repiblik Ayiti
-          </div>
-          <p>
-            Une célébration nan extraordinaire istwa d'Haïti, de sa kilti
-            vibrante ak de son pèp remarquable. Dédié à partager l'istwa de
-            premye Repiblik nwa nan mond lan.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Eksplore</h4>
-          <ul>
-            <li><a href="index.html">Akèy</a></li>
-            <li><a href="about.html">Soswa Ayiti</a></li>
-            <li><a href="history.html">Istwa</a></li>
-            <li><a href="tourism.html">Touris</a></li>
-            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
-            <li><a href="archives.html">Achiv</a></li>
-            <li><a href="bibliography.html">Bibliyografi</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Kilti &amp; Sosyete</h4>
-          <ul>
-            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
-            <li><a href="vodou.html">Vodou</a></li>
-            <li><a href="gastronomy.html">Gastwonomi</a></li>
-            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
-            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
-            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
-            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Istwa &amp; Enstitisyon</h4>
-          <ul>
-            <li><a href="timeline.html">Kwonolouji</a></li>
-            <li><a href="heroes.html">Ewò Nasyonal</a></li>
-            <li><a href="lidès.html">Lidè</a></li>
-            <li><a href="konstitisyon.html">Konstitisyon</a></li>
-            <li><a href="enstitisyons.html">Enstitisyon</a></li>
-            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Pran Kontak</h4>
-          <ul>
-            <li><a href="contact.html">Kontakte Nou</a></li>
-            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
-            <li><a href="license.html">Mansyon Legal</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
-        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
-        <span class="footer-editorial">Ce projak se né d'yon frustration personnelle&#160;: trop d'ouvrages sur Haïti se écrits nan extérieur. J'ai voulu rassembler les soursa yo ayisyèn en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chèchè endepandan.</span>
-      </div>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mansyon Legal</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak né d'yon frustration personnelle&#160;: trop d'ouvrages sou Haïti écrits nan extérieur. J'ai voulu rassembler soursa yo ayisyèn en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chèchè endepandan.</span>
+ </div>
+ </div>
+ </footer>
 
-  <script src="../js/script.js"></script>
-  <script src="../js/premium.js"></script>
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){e.stopPropagation();sw.classList.toggle('open');});
+  document.addEventListener('click',function(){sw.classList.remove('open');});
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  // Auto-redirect based on stored preference
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
 </body>
 </html>

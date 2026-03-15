@@ -1,477 +1,524 @@
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#00209F" />
-  <title>L'Influence d'Haïti soswa Mond | Repiblik Ayiti</title>
-  <meta name="description" content="Comment Revolisyon ayisyèn nan de 1804 te enspire Simón Bolívar, les mouvements abolisyonnistes européens ak la tradisyon de libération noire mondiale." />
-  <meta name="author" content="RepiblikHaïti.org" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/premium.css" />
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>L'Enfliyans d'Haïti soswa Mond | Repiblik Ayiti</title>
+ <meta name="description" content="Comment Revolisyon ayisyèn nan de 1804 te enspire Simón Bolívar, les mouvements abolisyonnistes européens ak la tradisyon de libération noire mondiale." />
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher */
+.lang-switcher { position: relative; margin-left: 1rem; }
+.lang-switcher__btn { background: none; border: 1px solid rgba(255,255,255,0.3); color: inherit; padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: border-color 0.2s; }
+.lang-switcher__btn:hover { border-color: rgba(255,255,255,0.7); }
+.lang-switcher__menu { display: none; position: absolute; top: 110%; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-width: 150px; z-index: 1000; overflow: hidden; }
+.lang-switcher.open .lang-switcher__menu { display: block; }
+.lang-option { display: block; padding: 0.6rem 1rem; color: #333; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+.lang-option:hover { background: #f0f4ff; }
+.lang-option.active { background: #e8f0fe; font-weight: 600; }
+@media (max-width: 768px) { .lang-switcher { margin-left: 0; margin-top: 0.5rem; } .lang-switcher__menu { right: auto; left: 0; } }
+</style>
 </head>
 <body>
 
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Back to top -->
-  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
 
-  <header class="site-header">
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="Akèy">
-          Repiblik Ayiti
-        </a>
-        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
-          <a href="index.html">Akèy</a>
-          <a href="about.html">Soswa Nou</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="history.html">Istwa Jeneral</a>
-              <a href="timeline.html">Kwonolouji</a>
-              <a href="heroes.html">Ewò Nasyonal</a>
-              <a href="lidès.html">Lidè</a>
-              <a href="konstitisyon.html">Konstitisyon</a>
-              <a href="enstitisyons.html">Enstitisyon</a>
-            </div>
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang">
+            🇭🇹 Kreyòl ▾
+          </button>
+          <div class="lang-switcher__menu">
+            <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
+            <a href="#" class="lang-option active" data-lang="ht">🇭🇹 Kreyòl</a>
           </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti.html">Kilti &amp; Atizay</a>
-              <a href="vodou.html">Vodou</a>
-              <a href="lwa.html">Lwa yo</a>
-              <a href="gastronomy.html">Gastwonomi</a>
-              <a href="holidays.html">Joswa Ferye</a>
-            </div>
-          </div>
-          <a href="tourism.html">Touris</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti-vivante.html">Kilti Vivan</a>
-              <a href="creativite-populaire.html">Kreyativite Popilè</a>
-              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
-              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
-              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
-              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
-              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
-              <a href="instabilite-politik.html">Enstabilite Politik</a>
-              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
-              <a href="services-essentiels.html">Sèvis Esansyèl</a>
-              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
-              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="encyclopedia.html">Ansiklopedi</a>
-              <a href="archives.html">Achiv</a>
-              <a href="bibliography.html">Bibliyografi</a>
-            </div>
-          </div>
-          <a href="contact.html">Kontak</a>
-        </nav>
+        </div>
         <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
 
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
-    <div class="search-overlay__inner">
-      <div class="search-overlay__header">
-        <div class="search-input-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
-        </div>
-        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
-      </div>
-      <div class="search-results" id="searchResults" aria-live="polite"></div>
-    </div>
-  </div>
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
 
-  <section class="page-hero page-hero--history">
-    <div class="container">
-      <p class="page-hero__label">Rayonnement Mondial</p>
-      <h1 class="page-hero__title">L'Influence d'Haïti soswa Mond</h1>
-      <p class="page-hero__desc">Comment la revolisyon de 1804 a changé le cours nan istwa pour toute l'humanité — de Simón Bolívar aux mouvements abolisyonnistes, nan Négritude aux luttes contemporaines poswa dignité.</p>
-    </div>
-  </section>
+ <section class="page-hero page-hero--history">
+ <div class="container">
+ <p class="page-hero__label">Rayonnement Mondial</p>
+ <h1 class="page-hero__title">L'Enfliyans d'Haïti soswa Mond</h1>
+ <p class="page-hero__desc">Comment revolisyon nan 1804 a changé cours nan istwa pou toute l'humanité — nan Simón Bolívar nan mouvements abolisyonnistes, nan Négritude nan luttes contemporaines poswa dignité.</p>
+ </div>
+ </section>
 
-  <div class="breadcrumb">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <a href="index.html">Akèy</a>
-        <span>/</span>
-        <span>Influence Mondiale</span>
-      </nav>
-    </div>
-  </div>
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <span>Enfliyans Mondiale</span>
+ </nav>
+ </div>
+ </div>
 
-  <section class="section">
-    <div class="container">
-      <p class="section-label">Rayonnement &amp; Héritage</p>
-      <h2>Une revolisyon qui a changé le mond</h2>
+ <section class="section">
+ <div class="container">
+ <p class="section-label">Rayonnement &amp; Eritaj</p>
+ <h2>Yon revolisyon ki a changé mond</h2>
 
-      <!-- INTRODUCTION -->
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
-        Le 1er janvier 1804, lè Jean-Jacques Dessalines proclame l'endepandans Ayiti depi la vil nan Gonaïves, il accomplit quelque chose que le mond n'a jamè vu ak n'avait pas prévu : yon révolte d'esclaves victorieuse débouchant soswa création d'yon État souverain. Ce n'se ni la premye revolisyon moderne — la Revolisyon ameriken (1776) ak la Revolisyon fransèz (1789) l'ont précédée — ni la premye émancipation forcée de serviteurs. Mais c'se la seule révolte d'esclaves dans l'istwa qui ait produit yon nation indépandane, gouvernée par ceux qui avaient été enchaînés.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
-        Cette singularité a produit nan onnan de choc que l'historiographie occidentale dominante a longtemps minimisées, lè elle ne les a pas niées. Les effets se pourtant mesurables : nan armées levées, nan traités signés, nan konstitisyons rédigées, nan mouvements intellectuels fondés — tout en portant la dette, avouée oswa tue, de ce que nan hommes ak nan fanm ont accompli à Saint-Domingue entre 1791 ak 1803. Ce qui suit se yon inventaire de sa a dette.
-      </p>
+ <!-- INTRODUCTION -->
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ 1er janvier 1804, lè Jean-Jacques Dessalines proclame l'endepandans Ayiti depi vil nan Gonaïves, li accomplit quelque chose ke mond pa a jamè vu ak pa avait pa prévu : yon révolte d'esclaves victorieuse débouchant soswa création d'yon État souverain. Ce pa se ni premye revolisyon moderne — Revolisyon ameriken (1776) ak Revolisyon fransèz (1789) l'ont précédée — ni premye émancipation forcée nan serviteurs. Mais c'se seule révolte d'esclaves nan l'istwa ki ait produit yon nasyon indépandane, gouvernée pa ceux ki te gen été enchaînés.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ Cette singularité a produit nan onnan nan choc ke l'historiographie occidentale dominante a longtemps minimisées, lè li pa a pa niées. effets pourtant mesurables : nan armées levées, nan traités signés, nan konstitisyons rédigées, nan mouvements intellectuels fondés — tout en portant dette, avouée oswa tue, nan li a ke nan gason ak nan fanm gen accompli à Saint-Domingue ant 1791 ak 1803. Ce ki suit yon inventaire nan li a dette.
+ </p>
 
-      <aside class="researcher-note" aria-label="Note historiographique">
-        L'historien David Nicholls, dans <em>From Dessalines to Duvalier : Race, Colour and National Independence in Haiti</em> (Cambridge, 1979), souligne que l'influence ayisyèn soswa revolisyons nan XIXe syèk se structurellement absente nan synthèses européennes ak nord-américaines. Cette absence n'se pas yon lacyon innocente : elle reflète l'inconfort persistant nan historiographies nationales face à l'idée que premye Repiblik nwa nan mond lan ait pu être yon avant-garde politik poswa rete nan humanité.
-      </aside>
+ <aside class="researcher-note" aria-label="Note historiographique">
+ L'historien David Nicholls, nan <em>From Dessalines to Duvalier : Race, Colour and National Independence in Haiti</em> (Cambridge, 1979), souligne ke l'influence ayisyèn soswa revolisyons nan XIXe syèk structurellement absente nan synthèses européennes ak nord-américaines. Cette absence pa se pa yon lacyon innocente : li reflete l'inconfort persistant nan historiographies nasyonals face à l'idée ke premye Repiblik nwa nan mond lan ait pu être yon avant-garde politik poswa rete nan humanité.
+ </aside>
 
-      <!-- BOLÍVAR -->
-      <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:800;color:var(--blue,#0038A8);margin:2.8rem 0 0.7rem;">Simón Bolívar ak l'Amerik Latin : yon dette rarement acquittée</h3>
+ <!-- BOLÍVAR -->
+ <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:800;color:var(--blue,#0038A8);margin:2.8rem 0 0.7rem;">Simón Bolívar ak l'Amerik Latin : yon dette rarement acquittée</h3>
 
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            En décembre 1815, Simón Bolívar se yon général en fuite. Ses deux premières tentatives pour libérer le Venezuela nan couronne espagnole ont échoué. Il a quitté la Nouvelle-Grenade, traversé la Jamaïque — où il rédige sa célèbre <em>Lettre de Jamaïque</em> — ak se rejwenn sans troupes, sans argent, sans alliés. C'se dans sa a état qu'il débarque à Port-au-Prince ak sollicite l'aide d'Alexandre Pétion, prezidan nan Repiblik nan Sud d'Haïti.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Pétion reçoit Bolívar à deux reprises, en 1816 ak en 1816-1817. Il lui accorde quelque chose de considérable : nan soldats — entre 250 ak 300 hommes aguerris selon les soursa yo — nan navires armés, nan fusils, nan poudre à canon, nan vivres, et, détail souvan négligé, yon imprimerie. Cette dènye permettra à Bolívar de diffuser ses proclamations nan territoires libérés. Les historiens ayisyen Beaubryon Ardouin ak Thomas Madiou, nanurs chroniques nan XIXe syèk, ont documenté sa yo fournitures avec précision, s'appuyant soswa archives nan présidence de Pétion.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            La condition posée par Pétion te claire ak historiquement extraordinaire : l'abolisyon nan esklavaj dans tout les territoires que Bolívar libérerait. Bolívar accepta. Le <strong>20 juin 1816</strong>, depi Carúpano, au Venezuela à peine débarqué, il proclame l'émancipation nan esclaves qui rejoindraient ses armées — yon mesure qu'il étendra progressivement, sous la pression nan événements ak de sa pwòp évolution politik, à l'ensemble de Gran Colombia. L'historien vénézuélien Vicente Lecuna, dans son édition monumentale nan <em>Obras completas</em> de Bolívar (1947), a publié la correspondance directe ant deux hommes, permettant de dater ak de situer sa yo engagements.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            L'expédition nan Cayos — dite <em>Expedición de los Cayos</em> — parte en mars 1816 nan côtes ayisyèn avec sept navires. Elle échoue nan yon premye temps, ak Bolívar retourne à Haïti. Pétion l'aide yon deuxième fois, sans exiger de garanties supplémentaires. Cette seconde expédition, partie en décembre 1816, ap le départ nan reconquête qui mènera à la libération nan Venezuela (1821), nan Colombie (1819), nan Équateur (1822), nan Péroswa (1824), ak enfin nan Bolivie (1825) — ce peyi qui porte son nom.
-          </p>
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ En décembre 1815, Simón Bolívar yon jeneral en fuite. Ses deux premyes tentatives pou libérer Venezuela nan couronne espagnole gen échoué. Il a quitté Nouvelle-Grenade, traversé Jamaïque — kote li rédige li selèb <em>Lettre nan Jamaïque</em> — ak rejwenn san troupes, san argent, san alliés. C'se nan li a état ke il débarque à Port-au-Prince ak sollicite l'aide d'Alexandre Pétion, prezidan nan Repiblik nan Sud d'Haïti.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Pétion reçoit Bolívar à deux reprises, en 1816 ak en 1816-1817. Il lui accorde quelque chose nan considérable : nan sòlda — ant 250 ak 300 gason aguerris dapre soursa yo — nan navires armés, nan fusils, nan poudre à canon, nan vivres, et, détail souvan négligé, yon imprimerie. Cette dènye permettra à Bolívar nan diffuser li yo proclamations nan territoires libérés. historiens ayisyen Beaubryon Ardouin ak Thomas Madiou, nanurs chroniques nan XIXe syèk, gen documenté li yo fournitures ak précision, s'appuyant soswa archives nan présidence nan Pétion.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ condition posée pa Pétion te claire ak istorikment extraordinaire : l'abolisyon nan esklavaj nan tout territoires ke Bolívar libérerait. Bolívar accepta. <strong>20 juin 1816</strong>, depi Carúpano, nan Venezuela à peine débarqué, li proclame l'émancipation nan esklav ki rejoindraient li yo armées — yon mesure ke il étendra progressivement, anba pression nan événements ak nan li pwòp évolution politik, à l'ensemble nan Gran Colombia. L'historien vénézuélien Vicente Lecuna, nan li édition monumentale nan <em>Obras completas</em> nan Bolívar (1947), a publié correspondance directe ant deux hommes, permettant nan dater ak nan situer li yo engagements.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ L'expédition nan Cayos — dite <em>Expedición nan los Cayos</em> — parte en mars 1816 nan côtes ayisyèn ak sept navires. Elle échoue nan yon premye temps, ak Bolívar retourne à Haïti. Pétion l'aide yon deuxième fois, san exiger nan garanties supplémentaires. Cette seconde expédition, pati en décembre 1816, ap départ nan reconquête ki mènera à libération nan Venezuela (1821), nan Colombie (1819), nan Équateur (1822), nan Péroswa (1824), ak enfin nan Bolivie (1825) — li a peyi ki pote li nom.
+ </p>
 
-          <aside class="researcher-note" aria-label="Note de recherche">
-            Les biographies de Bolívar publiées en Amerik Latin traitent trè intoswa l'épisode haïtien. John Lynch, dans <em>Simón Bolívar : A Life</em> (Yale University Press, 2006), y consacre à peine deux pages sur plis de trois cents. L'historienne ayisyèn Brenda Gayle Plummer, dans <em>Haiti and the Great Powers, 1902–1915</em> (1988), identifie ce silence tankoswa yon stratégie narrative délibérée : reconnaître pleinement la dette envers Haïti aurait impliqué de reconnaître qu'yon nation noire avait rennan possible les fondements républicains nan Amerik di Sid. Leslie Manigat, dans ses <em>Eventails nan istwa vivante d'Haïti</em> (CHUDAC, 2001), démontre que sa a omission se ankò plis flagrante nan manuels scolaires colombiens ak vénézuéliens contemporains.
-          </aside>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ biographies nan Bolívar publiées en Amerik Latin traitent trè intoswa l'épisode ayisyen. John Lynch, nan <em>Simón Bolívar : A Life</em> (Yale University Press, 2006), y consacre à peine deux pages sou plis nan trois cents. L'historienne ayisyèn Brenda Gayle Plummer, nan <em>Haiti and the Great Powers, 1902–1915</em> (1988), identifie li a silence tankoswa yon stratégie narrative délibérée : reconnaître pleinement dette envers Haïti aurait impliqué nan reconnaître ke yon nasyon noire te gen rennan possible fondements républicains nan Amerik di Sid. Leslie Manigat, nan li yo <em>Eventails nan istwa vivante d'Haïti</em> (CHUDAC, 2001), démontre ke li a omission ankò plis flagrante nan manuels scolaires colombiens ak vénézuéliens contemporains.
+ </aside>
 
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Bolívar lui-menm n'a pas toujoswa gardé le silence. Dans yon lettre adressée à Pétion en 1816, dont le texte figure nan <em>Obras completas</em> éditées par Lecuna, il écrit :
-          </p>
-          <blockquote style="border-left:4px solid var(--gold,#FFD166);padding:1rem 1.5rem;margin:1.5rem 0;font-style:italic;font-size:16px;line-height:1.9;background:rgba(0,32,159,0.04);border-radius:0 8px 8px 0;">
-            « À Votre Excellence seule appartient la gloire d'avoir accordé à notre entreprise le seul appui efficace que nous ayons reçu. Les hommes ak les ressoursa yo que vous nous avez fournis te le levier qui a élevé notre cause. »<br>
-            <span style="font-size:13px;font-weight:700;color:var(--blue,#0038A8);font-style:normal;">— Simón Bolívar, lettre à Alexandre Pétion, 1816 (in Lecuna, <em>Obras completas</em>, vol. I)</span>
-          </blockquote>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Quand Pétion mourut en mars 1818, Bolívar porta ofisyèlman le deuil ak ordonna que les drapox de ses armées soient mis en berne. C'se yon geste rare entre chefs d'État, surtout nan yon contexte où la légitimité entènasyonal d'Haïti te contestée pa France ak les puissansa yo coloniales. Qu'il l'ait accompli di quelque chose sur ce que Bolívar ressentait à titre personnel — menm si sa postérité officielle a préféré taire la source ayisyèn de sa renaissance politik.
-          </p>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;display:flex;flex-direction:column;justify-content:center;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères — Pétion &amp; Bolívar</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· Déc. 1815 : Bolívar arrive à Port-au-Prince</li>
-              <li>· Fév. 1816 : 1re aide ayisyèn accordée</li>
-              <li>· Mars 1816 : <em>Expedición de los Cayos</em></li>
-              <li>· 20 juin 1816 : Bolívar proclame l'abolisyon</li>
-              <li>· Déc. 1816 : 2e expédition depi Haïti</li>
-              <li>· Mars 1818 : mort de Pétion, deuil officiel</li>
-              <li>· 1819–1825 : libération de 5 peyi d'Amérique</li>
-            </ul>
-          </div>
-          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--blue,#0038A8);text-transform:uppercase;margin-bottom:0.8rem;">Soursa yo primaires</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:13px;line-height:1.9;color:#333;">
-              <li>· Lecuna, V. — <em>Obras completas de Bolívar</em>, La Habana, 1947</li>
-              <li>· Ardouin, B. — <em>Étunan sur istwa Ayiti</em>, Paris, 1853–1860</li>
-              <li>· Madiou, T. — <em>Istwa d'Haïti</em>, Port-au-Prince, 1847</li>
-              <li>· Manigat, L. — <em>Eventails nan istwa vivante</em>, CHUDAC, 2001</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Bolívar lui-menm pa a pa toujoswa gardé silence. Dans yon lettre adressée à Pétion en 1816, ke texte figure nan <em>Obras completas</em> éditées pa Lecuna, li écrit :
+ </p>
+ <blockquote style="border-left:4px solid var(--gold,#FFD166);padding:1rem 1.5rem;margin:1.5rem 0;font-style:italic;font-size:16px;line-height:1.9;background:rgba(0,32,159,0.04);border-radius:0 8px 8px 0;">
+ « À Votre Excellence seule appartient gloire d'avoir accordé à nou entreprise seul appui efficace ke nou ayons reçu. gason ak ressoursa yo ke oswa nou avez fournis te levier ki a élevé nou cause. »<br>
+ <span style="font-size:13px;font-weight:700;color:var(--blue,#0038A8);font-style:normal;">— Simón Bolívar, lettre à Alexandre Pétion, 1816 (in Lecuna, <em>Obras completas</em>, vol. I)</span>
+ </blockquote>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Quand Pétion mourut en mars 1818, Bolívar porta ofisyèlman deuil ak ordonna ke drapox nan li yo armées soient mis en berne. C'se yon geste rare ant chefs d'État, sitou nan yon kontèks kote légitimité entènasyonal d'Haïti te contestée pa France ak puissansa yo kolonyals. Ke il l'ait accompli di quelque chose sou li a ke Bolívar ressentait à titre personnel — menm si li postérité officielle a préféré taire anba ayisyèn nan li renaissance politik.
+ </p>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;display:flex;flex-direction:column;justify-content:center;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères — Pétion &amp; Bolívar</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· Déc. 1815 : Bolívar arrive à Port-au-Prince</li>
+ <li>· Fév. 1816 : 1re aide ayisyèn accordée</li>
+ <li>· Mars 1816 : <em>Expedición nan los Cayos</em></li>
+ <li>· 20 juin 1816 : Bolívar proclame l'abolisyon</li>
+ <li>· Déc. 1816 : 2e expédition depi Haïti</li>
+ <li>· Mars 1818 : lanmò nan Pétion, deuil officiel</li>
+ <li>· 1819–1825 : libération nan 5 peyi d'Amérique</li>
+ </ul>
+ </div>
+ <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--blue,#0038A8);text-transform:uppercase;margin-bottom:0.8rem;">Soursa yo primaires</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:13px;line-height:1.9;color:#333;">
+ <li>· Lecuna, V. — <em>Obras completas nan Bolívar</em>, Habana, 1947</li>
+ <li>· Ardouin, B. — <em>Étunan sou istwa Ayiti</em>, Paris, 1853–1860</li>
+ <li>· Madiou, T. — <em>Istwa d'Haïti</em>, Port-au-Prince, 1847</li>
+ <li>· Manigat, L. — <em>Eventails nan istwa vivante</em>, CHUDAC, 2001</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- ABOLITIONNISTES EUROPÉENS -->
-      <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:800;color:var(--blue,#0038A8);margin:2.8rem 0 0.7rem;">Les mouvements abolisyonnistes en Europe : tèur ak inspiration</h3>
+ <!-- ABOLITIONNISTES EUROPÉENS -->
+ <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:800;color:var(--blue,#0038A8);margin:2.8rem 0 0.7rem;">mouvements abolisyonnistes en Europe : tèur ak inspiration</h3>
 
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
-        La revolisyon de Saint-Domingue a produit deux effets contradictoires en Europe, souvan simultanément chez les menm observateurs. Elle a terrifié les propriétaires de plantations, les armateurs négriers, ak les gouvènmans kolonyal — qui ont fè circuler nan récits d'yon violence apocalyptique pour dissuader toute tentative similaire nanurs propres colonies. Et elle a électrisé les abolisyonnistes, qui voyaient nan viktwa nan esclaves de Saint-Domingue la preuve empirique que leur cause n'te pas utopique.
-      </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ revolisyon nan Saint-Domingue a produit deux effets contradictoires en Europe, souvan simultanément lakay menm observateurs. Elle a terrifié propriétaires nan plantations, armateurs négriers, ak gouvènmans kolonyal — ki gen fè circuler nan récits d'yon violence apocalyptique pou dissuader toute tentative similaire nanurs propres colonies. Et li a électrisé abolisyonnistes, ki voyaient nan viktwa nan esklav nan Saint-Domingue preuve empirique ke yo cause pa te pa utopique.
+ </p>
 
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            En <strong>Grande-Bretagne</strong>, Thomas Clarkson — cofondateur nan Society for Effecting the Abolition of the Slave Trade en 1787 — se l'yon nan premiers à observer les événements de Saint-Domingue avec yon intérêt analytique. Dans ses <em>Thoughts on the Necessity of Improving the Condition of the Slaves in the British Colonies</em> (1823), Clarkson soutient que revolisyon ayisyèn nan démontre que l'esklavaj se intrinsèquement instable : tout système fondé soswa violence extrême porte en lui-menm sa pwòp destruction. Cak argument ap repris par William Wilberforce lors nan débats parlementaires sur l'abolisyon. La loi d'abolisyon nan komès esklav britannique se votée en 1807 — six ans après la Konstitisyon de Toussaint Louverture pour Saint-Domingue, trois ans après l'endepandans Ayiti. La chronologie n'se pas anodine.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            En <strong>France</strong>, la Revolisyon avait deja posé la question. Le décrak nan 16 pluviôse An II (4 février 1794) abolissant l'esklavaj dans tout koloni yo françaises se indissociable nan insurrections de Saint-Domingue : c'se la pression milite ak politik de Toussaint Louverture qui te kondwi la Convention à agir. Abbé Grégoire, figure nan abolisyonnisme français, avait dès 1789 défennan dwa yo nan <em>hommes de couleur libres</em> dans ses <em>Mémoire en faveur nan gens de couleur</em>. L'endepandans de 1804 renforce ses convictions ak lui offre yon argument de fè : les ansyen esclaves ont pa sèlman combattu pouur libète, ils ont construit yon Konstitisyon, yon État, yon diplomatie.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Au <strong>Danemark</strong>, la décision d'abolir la komès esklav en 1792 — ofisyèlman la premye nan gran puissansa yo européennes — s'inscrit nan yon contexte où les nouvo de Saint-Domingue circulaient déjà. La commission royale danoise chargée d'évaluer la question avait pris note nan tensions croissantes dans koloni yo à sucre caribéennes. Si l'acte danois se motivé en partie par nan calculs ekonomiks (yon période de transition de dix ans fut accordée), il s'inscrit nan yon climat où l'exemple de Saint-Domingue rendait la question inévitable pour toute puissance kolonyal soucieuse nan stabilité de ses possessions.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            La proclamation ayisyèn de 1804 fonctionnait, poswa abolisyonnistes européens, tankoswa yon réfutation vivante nan argument raciste central nan défenseurs nan esklavaj : que les Africains ak leurs descendants te incapables de se gouverner. L'existence d'Haïti — avec sa Konstitisyon, ses généraux formés soswa terrain, sa diplomatie naissante — rendait sa a argument indéfendable soswa plan factuel. C'se pourquoi les puissansa yo esclavagistes (France, Grande-Bretagne, États-Unis, Espagne) ont fè si peu pour reconnaître Haïti diplomatiquement avant le milieu nan XIXe syèk : reconnaître l'État haïtien, c'te reconnaître sa légitimité, ak donk l'échec nan thèse raciale qui fondait le système colonial.
-          </p>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;display:flex;flex-direction:column;justify-content:center;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères — Europe abolisyonniste</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· 1787 : fondation nan Society for Abolition (GB)</li>
-              <li>· 1789 : Abbé Grégoire défend les gens de couleur</li>
-              <li>· 1792 : Danemark abolit la traite (effectif 1803)</li>
-              <li>· 4 fév. 1794 : France abolit l'esklavaj (décret)</li>
-              <li>· 1801 : Konstitisyon autonomiste de Toussaint</li>
-              <li>· 1er jan. 1804 : Endepandans d'Haïti proclamée</li>
-              <li>· 1807 : abolisyon nan traite en Grande-Bretagne</li>
-              <li>· 1833 : Slavery Abolition Act britannique</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ En <strong>Grande-Bretagne</strong>, Thomas Clarkson — cofondateur nan Society for Effecting the Abolition of the Slave Trade en 1787 — l'yon nan premyes à observer événements nan Saint-Domingue ak yon intérêt analytique. Dans li yo <em>Thoughts yo the Necessity of Improving the Condition of the Slaves in the British Colonies</em> (1823), Clarkson soutient ke revolisyon ayisyèn nan démontre ke l'esklavaj intrinsèquement instable : tout système fonde soswa violence extrême pote en lui-menm li pwòp destruction. Cak argument ap repris pa William Wilberforce lors nan débats parlementaires sou l'abolisyon. loi d'abolisyon nan komès esklav britannique votée en 1807 — six ans apre Konstitisyon nan Toussaint Louverture pou Saint-Domingue, trois ans apre l'endepandans Ayiti. chronologie pa se pa anodine.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ En <strong>France</strong>, Revolisyon te gen deja posé question. décrak nan 16 pluviôse An II (4 février 1794) abolissant l'esklavaj nan tout koloni yo fransèzs indissociable nan insurrections nan Saint-Domingue : c'se pression milite ak politik nan Toussaint Louverture ki te kondwi Convention à agir. Abbé Grégoire, figure nan abolisyonnisme fransè, te gen dès 1789 défennan dwa yo nan <em>hommes nan couleur libs</em> nan li yo <em>Mémoire en faveur nan gens nan couleur</em>. L'endepandans nan 1804 renforce li yo convictions ak lui offre yon argument nan fè : ansyen esklav gen pa sèlman combattu pouur libète, yo gen bati yon Konstitisyon, yon État, yon diplomatie.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Au <strong>Danemark</strong>, décision d'abolir komès esklav en 1792 — ofisyèlman premye nan gran puissansa yo européennes — s'inscrit nan yon kontèks kote nouvo nan Saint-Domingue circulaient déjà. commission royale danoise chargée d'évaluer question te gen pris note nan tensions croissantes nan koloni yo à sucre caribéennes. Si l'acte danois motivé en pati pa nan calculs ekonomiks (yon période nan transition nan dix ans te accordée), li s'inscrit nan yon klima kote l'exemple nan Saint-Domingue rendait question inévitable pou toute puissance kolonyal soucieuse nan stabilité nan li yo possessions.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ proclamation ayisyèn nan 1804 fonctionnait, poswa abolisyonnistes européens, tankoswa yon réfutation vivante nan argument raciste central nan défenseurs nan esklavaj : ke Africains ak yo descendants te incapables nan gouverner. L'existence d'Haïti — ak li Konstitisyon, li yo généraux formés soswa terrain, li diplomatie naissante — rendait li a argument indéfendable soswa plan factuel. C'se pourquoi puissansa yo esclavagistes (France, Grande-Bretagne, États-Unis, Espagne) gen fè si peu pou reconnaître Haïti diplomatiquement anvan milieu nan XIXe syèk : reconnaître l'État ayisyen, c'te reconnaître li légitimité, ak donk l'échec nan thèse raciale ki fondait système kolonyal.
+ </p>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;display:flex;flex-direction:column;justify-content:center;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères — Europe abolisyonniste</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· 1787 : fondasyon nan Society for Abolition (GB)</li>
+ <li>· 1789 : Abbé Grégoire défend gens nan couleur</li>
+ <li>· 1792 : Danemark abolit traite (effectif 1803)</li>
+ <li>· 4 fév. 1794 : France abolit l'esklavaj (décret)</li>
+ <li>· 1801 : Konstitisyon autonomiste nan Toussaint</li>
+ <li>· 1er jan. 1804 : Endepandans d'Haïti proclamée</li>
+ <li>· 1807 : abolisyon nan traite en Grande-Bretagne</li>
+ <li>· 1833 : Slavery Abolition Act britannique</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- ABOLITIONNISME AMÉRICAIN -->
-      <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:800;color:var(--blue,#0038A8);margin:2.8rem 0 0.7rem;">Le mouvement abolisyonniste ameriken : Douglass, Garrison ak l'exemple haïtien</h3>
+ <!-- ABOLITIONNISME AMÉRICAIN -->
+ <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:800;color:var(--blue,#0038A8);margin:2.8rem 0 0.7rem;">mouvman abolisyonniste ameriken : Douglass, Garrison ak l'exemple ayisyen</h3>
 
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
-        Aux États-Unis, revolisyon ayisyèn nan te jwe yon rôle nan mouvement abolisyonniste que les manuels américains tendent à minimiser, préférant insister soswa figures nationales blanches nan mouvement. Mais poswa Américains noirs nan XIXe syèk, Haïti n'te pas yon événement lointain — c'te yon modèle, yon preuve, ak parfois yon refuge.
-      </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ Aux États-Unis, revolisyon ayisyèn nan te jwe yon wòl nan mouvman abolisyonniste ke manuels amerikens tendent à minimiser, préférant insister soswa figures nasyonals blanches nan mouvement. Mais poswa Américains noirs nan XIXe syèk, Haïti pa te pa yon événement lointain — c'te yon modèle, yon preuve, ak pafwa yon refuge.
+ </p>
 
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            <strong>Frederick Douglass</strong> se la figure la plis emblématique de ce lien. Ancien esclave devenu orateur ak intellectuel de renommée internationale, Douglass te nommé <strong>ministre plénipotentiaire nan États-Unis en Haïti de 1889 à 1891</strong>. C'se le poste diplomatique le plis élevé jamè confié à yon Américain noir à l'époque, ak Douglass l'a accepté en konesans de cause. Dans son discours de 1893 à l'Exposition universelle de Chicago — <em>Haiti and the Haitian People</em> — il déclare : « Haïti se le seul peyi au mond où le Noir puisse pointer nan doigt yon Repiblik, ak dire : voilà ce que nous avons accompli, sans l'aide de personne. » Ce discours, republié par Rayford W. Logan dans <em>Rayford W. Logan and the Dilemma of the African American Intellectual</em>, rete l'yon nan textes fondateurs nan conscience noire ameriken nan XIXe syèk.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            <strong>William Lloyd Garrison</strong>, fondateur de <em>The Liberator</em> en 1831, invoquait régulièrement l'exemple ayisyen dans ses éditoriaux pour réfuter les arguments pseudo-scientifiques nan infériorité raciale. Garrison connaissait les œuvres d'Abbé Grégoire sur Haïti ak s'en te inspiré pour construire son argumentaire. La question n'te pas théorique pour lui : si nan hommes réduits en esklavaj pouvaient établir yon nation ordonnée ak gouverner yon État, l'argument raciste s'effondrait de lui-même.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            <strong>John Brown</strong>, dont le raid sur l'arsenal de Harper's Ferry en 1859 a préfiguré la lagè civile américaine, tirait yon inspiration directe de Toussaint Louverture. Oswald Garrison Villard, dans sa biographie <em>John Brown : A Biography Fifty Years After</em> (1910), rapporte que Brown avait étudié attentivement la stratégie milite de Toussaint nan mòns de Saint-Domingue ak envisageait yon guérilla similaire nan Appalaches. La connection n'se pas anecdotique : Brown considérait revolisyon ayisyèn nan tankoswa la démonstration que esklav yo américains pouvaient ak devaient prendre les armes.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            La <strong>migration vers Haïti nan anes 1850-1860</strong> constitue yon chapitre souvan oublié nan istwa afro-américaine. Sous la présidence de Fabre Geffrard (1859-1867), le gouvènman ayisyen lança yon campagne active de recrutement de travailleurs ak d'intellectuels noirs américains, proposant tès ak citoyenneté. Entre 1860 ak 1862, plizyè milliers d'Afro-Américains émigrèrent en Haïti — nan charpentiers, nan agriculteurs, nan enseignants, nan pasteurs. James Redpath, journaliste abolisyonniste blanc, fut l'agent officiel de ce mouvement à Boston. L'historienne Carole Emberton, dans ses travaux soswa citoyenneté noire au XIXe syèk, a analysé sa yo migrations tankoswa yon réponse directe au <em>Dred Scott v. Sandford</em> (1857), la décision nan Cour suprême niant tout droit de citoyenneté aux Américains noirs. Pour beaucoup, Haïti n'te pas yon exil — c'te la seule patrie disponible.
-          </p>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;display:flex;flex-direction:column;justify-content:center;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères — USA &amp; Haïti</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· 1804 : modèle poswa Noirs américains libres</li>
-              <li>· 1831 : Garrison fonde <em>The Liberator</em></li>
-              <li>· 1857 : <em>Dred Scott</em> nie la citoyenneté noire</li>
-              <li>· 1859 : raid de John Brown (inspiré de Toussaint)</li>
-              <li>· 1860–1862 : émigration afro-ameriken sous Geffrard</li>
-              <li>· 1889–1891 : Douglass, ministre US en Haïti</li>
-              <li>· 1893 : discours de Douglass à Chicago</li>
-            </ul>
-          </div>
-          <aside class="researcher-note" aria-label="Note de recherche" style="margin-top:0;">
-            L'Underground Railroad — le réseau clandestin qui aidait esklav yo fugitifs à atteindre les États lib oswa le Canada — a toswa utilisé Haïti tankoswa destination alternative. Des témoignages conservés nan archives nan Pennsylvania Abolition Society indiquent que sèten passeurs proposaient la route maritime vers Haïti, an patikilye après le Fugitive Slave Act de 1850 qui rendait les États lib nan Nord plis dangereux.
-          </aside>
-        </div>
-      </div>
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ <strong>Frederick Douglass</strong> figure plis emblématique nan li a lien. Ancien esklav vin tounen orateur ak intellectuel nan renommée entènasyonal, Douglass te rele <strong>ministre plénipotentiaire nan États-Unis en Haïti nan 1889 à 1891</strong>. C'se poste diplomatique plis élevé jamè confié à yon Américain noir à l'époque, ak Douglass l'a accepté en konesans nan cause. Dans li discours nan 1893 à l'Exposition universelle nan Chicago — <em>Haiti and the Haitian People</em> — li déclare : « Haïti seul peyi nan mond kote Noir puisse pointer nan doigt yon Repiblik, ak dire : voilà li a ke nou avons accompli, san l'aide nan personne. » Ce discours, republié pa Rayford W. Logan nan <em>Rayford W. Logan and the Dilemma of the African American Intellectual</em>, rete l'yon nan textes fondateurs nan conscience noire ameriken nan XIXe syèk.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ <strong>William Lloyd Garrison</strong>, fondateur nan <em>The Liberator</em> en 1831, invoquait régulièrement l'exemple ayisyen nan li yo éditoriaux pou réfuter arguments pseudo-scientifiques nan infériorité raciale. Garrison connaissait zèv d'Abbé Grégoire sou Haïti ak s'en te enspire pou construire li argumentaire. question pa te pa théorique pou lui : si nan gason réduits en esklavaj pouvaient établir yon nasyon ordonnée ak gouverner yon État, l'argument raciste s'effondrait nan lui-même.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ <strong>John Brown</strong>, ke raid sou l'arsenal nan Harper's Ferry en 1859 a préfiguré lagè civile ameriken, tirait yon inspiration directe nan Toussaint Louverture. Oswald Garrison Villard, nan li biographie <em>John Brown : A Biography Fifty Years After</em> (1910), rapporte ke Brown te gen étudié attentivement stratégie milite nan Toussaint nan mòns nan Saint-Domingue ak envisageait yon guérilla similaire nan Appalaches. connection pa se pa anecdotique : Brown considérait revolisyon ayisyèn nan tankoswa démonstration ke esklav yo amerikens pouvaient ak devaient prendre armes.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ <strong>migration vè Haïti nan anes 1850-1860</strong> konstitye yon chapitre souvan oublié nan istwa afro-américaine. Sous présidence nan Fabre Geffrard (1859-1867), gouvènman ayisyen lança yon campagne active nan recrutement nan travailleurs ak d'intellectuels noirs amerikens, proposant tès ak citoyenneté. Entre 1860 ak 1862, plizyè milliers d'Afro-Américains émigrèrent en Haïti — nan charpentiers, nan agriculteurs, nan enseignants, nan pasteurs. James Redpath, journaliste abolisyonniste blanc, te l'agent officiel nan li a mouvman à Boston. L'historienne Carole Emberton, nan li yo travaux soswa citoyenneté noire nan XIXe syèk, a analysé li yo migrations tankoswa yon réponse directe nan <em>Dred Scott v. Sandford</em> (1857), décision nan Cour suprême niant tout droit nan citoyenneté nan Américains noirs. Pour beaucoup, Haïti pa te pa yon exil — c'te seule patri disponible.
+ </p>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;display:flex;flex-direction:column;justify-content:center;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères — USA &amp; Haïti</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· 1804 : modèle poswa Noirs amerikens libs</li>
+ <li>· 1831 : Garrison fonde <em>The Liberator</em></li>
+ <li>· 1857 : <em>Dred Scott</em> nie citoyenneté noire</li>
+ <li>· 1859 : raid nan John Brown (inspiré nan Toussaint)</li>
+ <li>· 1860–1862 : émigration afro-ameriken anba Geffrard</li>
+ <li>· 1889–1891 : Douglass, ministre US en Haïti</li>
+ <li>· 1893 : discours nan Douglass à Chicago</li>
+ </ul>
+ </div>
+ <aside class="researcher-note" aria-label="Note de recherche" style="margin-top:0;">
+ L'Underground Railroad — réseau clandestin ki aidait esklav yo fugitifs à atteindre États lib oswa Canada — a toswa itilize Haïti tankoswa destination alternative. Des témoignages conservés nan archives nan Pennsylvania Abolition Society indiquent ke sèten passeurs proposaient route maritime vè Haïti, an patikilye apre Fugitive Slave Act nan 1850 ki rendait États lib nan Nord plis dangereux.
+ </aside>
+ </div>
+ </div>
 
-      <!-- HÉRITAGE PANAFRICAIN -->
-      <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:800;color:var(--blue,#0038A8);margin:2.8rem 0 0.7rem;">L'héritage panafriken ak la tradisyon de libération noire</h3>
+ <!-- HÉRITAGE PANAFRICAIN -->
+ <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:800;color:var(--blue,#0038A8);margin:2.8rem 0 0.7rem;">L'eritaj panafriken ak tradisyon nan libération noire</h3>
 
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
-        Si Haïti te enspire nan revolisyons ak nan campagnes politiks concrètes au XIXe syèk, son rôle symbolique au XXe syèk se tout toswa déterminant. Pour les mouvements noirs ak panafriken qui émergent après la Première Lagè mondiale — nan yon contexte de dékolonizasyon accélérée ak de racisme systémique aux États-Unis, en Afrique ak nan Karayib — Haïti se an menm tan yon miroir ak yon étendard.
-      </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ Si Haïti te enspire nan revolisyons ak nan campagnes politiks concrètes nan XIXe syèk, li wòl symbolique nan XXe syèk tout toswa déterminant. Pour mouvements noirs ak panafriken ki émergent apre Première Lagè mondiale — nan yon kontèks nan dékolonizasyon accélérée ak nan racisme systémique nan États-Unis, en Afrique ak nan Karayib — Haïti an menm tan yon miroir ak yon étendard.
+ </p>
 
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            <strong>Marcus Garvey</strong>, fondateur nan Universal Negro Improvement Association (UNIA) en 1914 ak apôtre nan panafricanisme militant, citait régulièrement Toussaint Louverture dans ses discours. Pour Garvey, revolisyon ayisyèn nan te la démonstration que les Noirs pouvaient pa sèlman se libérer pa armes, men administrer yon nation. Dans <em>Philosophy and Opinions of Marcus Garvey</em>, compilé par Amy Jacques Garvey (1923-1925), Toussaint se présenté tankoswa l'yon nan gran hommes d'État nan istwa mondiale. Le programme panafriken de Garvey — retour en Afrique, création d'yon État noir indépandan — se en partie structuré soswa modèle haïtien.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            <strong>W.E.B. Du Bois</strong>, le plis gran intellectuel noir ameriken nan XXe syèk, s'se lui toswa appuyé sur Haïti de façon constante. Dans <em>The Negro</em> (1915) ak dans <em>Black Reconstruction in America</em> (1935), Du Bois resoti sur revolisyon ayisyèn nan tankoswa moment fondateur d'yon conscience noire internationale. Il te yon lecteur attentif nan literati ayisyèn ak entretenait nan correspondansa yo avec nan intellectuels haïtiens, sitoswa Dantès Bellegarde. Pour Du Bois, l'isolement ekonomik ak diplomatique d'Haïti au XIXe syèk — la <em>dette nan endepandans</em> imposée pa France en 1825, les embargos tankourciaux américains — te le prix conscient que les puissansa yo blanches faisaient payer à la seule Repiblik noire, pour décourager toute imitation.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            L'ouvrage qui a le plis largement diffusé l'istwa de revolisyon ayisyèn nan nan conscience mondiale nan XXe syèk se incontestablement <em>The Black Jacobins : Toussaint L'Ouverture and the San Domingo Revolution</em> de <strong>C.L.R. James</strong>, publié en 1938. James, intellectuel trinidadien marxiste, y reconstruit revolisyon ayisyèn nan ak rigueur d'yon historien ak la plume d'yon romancier. Il démontre que esklav yo de Saint-Domingue ne réagissaient pas seulement à l'oppression immédiate — ils comprenaient ak utilisaient les contradictions idéologiques nan Revolisyon française. Le livre, réédité en 1963 avec yon postface réécrite en lien ak endepandanss africaines, vin tounen yon texte fondateur nan étunan postcoloniales ak nan Black Power. Des générations d'activistes, de Trinidad à l'Afrique nan Sud en passant pa Jamaïque, l'ont lu tankoswa yon manuel politik.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Sur le continent africain, <strong>Kwame Nkrumah</strong>, premye prezidan nan Ghana indépandan (1957), évoquait Toussaint Louverture parmi ses influensa yo dans ses écrits autobiographiques (<em>Ghana : The Autobiography of Kwame Nkrumah</em>, 1957). Haïti te l'yon nan premiers États à reconnaître ofisyèlman l'endepandans nan Ghana la menm ane. Ce geste de solidarité diplomatique ant plis ansyen Repiblik noire ak la premye nation afriken à se libérer nan kolonizasyon britannique n'a rien d'anodin — il s'inscrit nan yon continuité consciente de ce que les deux pèps avaient en commyon dans l'istwa nan libération.
-          </p>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;display:flex;flex-direction:column;justify-content:center;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères — Panafricanisme</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· 1914 : Garvey fonnan UNIA</li>
-              <li>· 1915 : Du Bois, <em>The Negro</em></li>
-              <li>· 1923-25 : Garvey cite Toussaint dans ses discours</li>
-              <li>· 1938 : C.L.R. James, <em>The Black Jacobins</em></li>
-              <li>· 1935 : Du Bois, <em>Black Reconstruction</em></li>
-              <li>· 1957 : Haïti reconnaît le Ghana indépandan</li>
-              <li>· 1963 : réédition nan <em>Black Jacobins</em> (postface Afrique)</li>
-            </ul>
-          </div>
-          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--blue,#0038A8);text-transform:uppercase;margin-bottom:0.8rem;">Textes fondateurs</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:13px;line-height:1.9;color:#333;">
-              <li>· James, C.L.R. — <em>The Black Jacobins</em>, 1938</li>
-              <li>· Garvey, A.J. (ed.) — <em>Philosophy and Opinions</em>, 1923</li>
-              <li>· Du Bois, W.E.B. — <em>The Negro</em>, 1915</li>
-              <li>· Nkrumah, K. — <em>Ghana : Autobiography</em>, 1957</li>
-              <li>· Nicholls, D. — <em>From Dessalines to Duvalier</em>, 1979</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ <strong>Marcus Garvey</strong>, fondateur nan Universal Negro Improvement Association (UNIA) en 1914 ak apôtre nan panafricanisme militant, citait régulièrement Toussaint Louverture nan li yo discours. Pour Garvey, revolisyon ayisyèn nan te démonstration ke Noirs pouvaient pa sèlman libérer pa armes, men administrer yon nation. Dans <em>Philosophy and Opinions of Marcus Garvey</em>, compilé pa Amy Jacques Garvey (1923-1925), Toussaint présenté tankoswa l'yon nan gran gason d'État nan istwa mondiale. programme panafriken nan Garvey — retour en Afrique, création d'yon État noir indépandan — en pati structuré soswa modèle ayisyen.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ <strong>W.E.B. Du Bois</strong>, plis gran intellectuel noir ameriken nan XXe syèk, s'se lui toswa appuyé sou Haïti nan façon constante. Dans <em>The Negro</em> (1915) ak nan <em>Black Reconstruction in America</em> (1935), Du Bois resoti sou revolisyon ayisyèn nan tankoswa moment fondateur d'yon conscience noire entènasyonal. Il te yon lecteur attentif nan literati ayisyèn ak entretenait nan correspondansa yo ak nan intellectuels ayisyens, sitoswa Dantès Bellegarde. Pour Du Bois, l'isolement ekonomik ak diplomatique d'Haïti nan XIXe syèk — <em>dette nan endepandans</em> imposée pa France en 1825, embargos tankourciaux amerikens — te prix conscient ke puissansa yo blanches faisaient payer à seule Repiblik noire, pou décourager toute imitation.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ L'ouvrage ki a plis largement diffusé l'istwa nan revolisyon ayisyèn nan nan conscience mondiale nan XXe syèk incontestablement <em>The Black Jacobins : Toussaint L'Ouverture and the San Domingo Revolution</em> nan <strong>C.L.R. James</strong>, publié en 1938. James, intellectuel trinidadien marxiste, y reconstruit revolisyon ayisyèn nan ak rigueur d'yon historien ak plume d'yon romancier. Il démontre ke esklav yo nan Saint-Domingue pa réagissaient pa seulement à l'oppression immédiate — yo comprenaient ak utilisaient contradictions idéologiques nan Revolisyon fransèz. livre, réédité en 1963 ak yon postface réécrite en lien ak endepandanss afrikens, vin tounen yon texte fondateur nan étunan postcoloniales ak nan Black Power. Des générations d'activistes, nan Trinidad à l'Afrique nan Sud en passant pa Jamaïque, l'ont lu tankoswa yon manuel politik.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Sur continent afriken, <strong>Kwame Nkrumah</strong>, premye prezidan nan Ghana indépandan (1957), évoquait Toussaint Louverture pami li yo influensa yo nan li yo écrits autobiographiques (<em>Ghana : The Autobiography of Kwame Nkrumah</em>, 1957). Haïti te l'yon nan premyes États à reconnaître ofisyèlman l'endepandans nan Ghana menm ane. Ce geste nan solidarité diplomatique ant plis ansyen Repiblik noire ak premye nasyon afriken à libérer nan kolonizasyon britannique pa a rien d'anodin — li s'inscrit nan yon continuité consciente nan li a ke deux pèps te gen en commyon nan l'istwa nan libération.
+ </p>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;display:flex;flex-direction:column;justify-content:center;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères — Panafricanisme</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· 1914 : Garvey fonnan UNIA</li>
+ <li>· 1915 : Du Bois, <em>The Negro</em></li>
+ <li>· 1923-25 : Garvey cite Toussaint nan li yo discours</li>
+ <li>· 1938 : C.L.R. James, <em>The Black Jacobins</em></li>
+ <li>· 1935 : Du Bois, <em>Black Reconstruction</em></li>
+ <li>· 1957 : Haïti reconnaît Ghana indépandan</li>
+ <li>· 1963 : réédition nan <em>Black Jacobins</em> (postface Afrique)</li>
+ </ul>
+ </div>
+ <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--blue,#0038A8);text-transform:uppercase;margin-bottom:0.8rem;">Textes fondateurs</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:13px;line-height:1.9;color:#333;">
+ <li>· James, C.L.R. — <em>The Black Jacobins</em>, 1938</li>
+ <li>· Garvey, A.J. (ed.) — <em>Philosophy and Opinions</em>, 1923</li>
+ <li>· Du Bois, W.E.B. — <em>The Negro</em>, 1915</li>
+ <li>· Nkrumah, K. — <em>Ghana : Autobiography</em>, 1957</li>
+ <li>· Nicholls, D. — <em>From Dessalines to Duvalier</em>, 1979</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- SOLIDARITÉ INTERNATIONALE -->
-      <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:800;color:var(--blue,#0038A8);margin:2.8rem 0 0.7rem;">Haïti ak la solidarité entènasyonal : yon État qui donnait avant qu'on lui donne</h3>
+ <!-- SOLIDARITÉ INTERNATIONALE -->
+ <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:800;color:var(--blue,#0038A8);margin:2.8rem 0 0.7rem;">Haïti ak solidarité entènasyonal : yon État ki donnait anvan ke on lui donne</h3>
 
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
-        L'istwa d'Haïti nan relations internationales nan XIXe syèk n'se pas seulement celle d'yon nation qui reçoit nan aide — c'se toswa celle d'yon nation qui en offre, souvan à nan mouvements qu'aucyon lòt puissance ne soutenait encore. Cette dimension de solidarité active se structurellement absente nan récits conventionnels, qui préfèrent inscrire Haïti nan rôle nan bénéficiaire passif.
-      </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ L'istwa d'Haïti nan relations entènasyonals nan XIXe syèk pa se pa seulement celle d'yon nasyon ki reçoit nan aide — c'se toswa celle d'yon nasyon ki en offre, souvan à nan mouvements ke aucyon lòt puissance pa soutenait encore. Cette dimension nan solidarité active structurellement absente nan récits conventionnels, ki préfèrent inscrire Haïti nan wòl nan bénéficiaire passif.
+ </p>
 
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
-        En <strong>1822</strong>, le prezidan Jean-Pierre Boyer reçoit yon délégation de représentants grecs en lutte pouur endepandans contre l'Empire ottoman. La Grèce, qui inspira tant de philhellènes européens, trouva toswa yon soutien inattennan nan Karayib : Boyer envoya yon don financier aux insurgés grecs. L'historien ayisyen Hénock Trouillot a documenté sa a épisode dans ses <em>Enstitisyon ayisyèn nan XIXe syèk</em> (1969). Le geste se symboliquement fort : yon Repiblik noire, née d'yon insurrection, aidant yon pèp méditerranéen à se libérer d'yon empire — au moment menm où les puissansa yo européennes refusaient de reconnaître Haïti diplomatiquement.
-      </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ En <strong>1822</strong>, prezidan Jean-Pierre Boyer reçoit yon délégation nan représentants grecs en lutte pouur endepandans kont l'Empire ottoman. Grèce, ki inspira tant nan philhellènes européens, trouva toswa yon soutien inattennan nan Karayib : Boyer envoya yon don financier nan insurgés grecs. L'historien ayisyen Hénock Trouillot a documenté li a épisode nan li yo <em>Enstitisyon ayisyèn nan XIXe syèk</em> (1969). geste symboliquement fort : yon Repiblik noire, née d'yon insurrection, aidant yon pèp méditerranéen à libérer d'yon empire — nan moment menm kote puissansa yo européennes refusaient nan reconnaître Haïti diplomatiquement.
+ </p>
 
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
-        La connexion avec Bolívar, deja évoquée, illustre toswa sa a logique de solidarité structurelle. Pétion n'aidait pas Bolívar par intérêt stratégique immédiat — Haïti n'avait rien à gagner directement nan libération nan Venezuela. Il aidait paske la vision politik ayisyèn depi 1804 impliquait que la libète te indivisible : qu'yon homme réduit en esklavaj quelque part dans l'hémisphère te yon offense à tout gason yo libres, y compris les Haïtiens.
-      </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ connexion ak Bolívar, deja évoquée, montre toswa li a logique nan solidarité structurelle. Pétion pa aidait pa Bolívar pa intérêt stratégique immédiat — Haïti pa avait rien à gagner dirèkteman nan libération nan Venezuela. Il aidait paske vision politik ayisyèn depi 1804 impliquait ke libète te indivisible : ke yon gason réduit en esklavaj quelque part nan l'hémisphère te yon offense à tout gason yo libs, y compris Haïtiens.
+ </p>
 
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
-        Dans les anes 1950-1960, sa a tradisyon de solidarité s'se exprimée nan contexte nan dékolonizasyons afriken ak asiatiques. Si Haïti n'a pas participé physiquement à la <strong>Conférence de Bandung</strong> (avril 1955) — qui réunit 29 peyi d'Afrique ak d'Asie autour d'yon agenda anticolonialiste — lespri a bandungien a trouvé nan résonansa yo nan milieux intellectuels ayisyen nan époque. La revue <em>Les Griots</em>, fondée nan anes 1930 par Lorimer Denis ak François Duvalier (avant que ce dènye ne devienne dictateur), avait deja posé les bases d'yon solidarité kiltille ak raciale panafricaine. Et au niveau nan Congrès panafriken — le cinquième, à Manchester en 1945, qui réunissait Nkrumah, Kenyatta, Du Bois — la référence ayisyèn te omniprésente nan discours ak les résolutions.
-      </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ Dans anes 1950-1960, li a tradisyon nan solidarité s'se exprimée nan kontèks nan dékolonizasyons afriken ak asiatiques. Si Haïti pa a pa participé physiquement à <strong>Conférence nan Bandung</strong> (avril 1955) — ki réunit 29 peyi d'Afrique ak d'Asie otou d'yon agenda anticolonialiste — lespri a bandungien a trouvé nan résonansa yo nan milieux intellectuels ayisyen nan époque. revue <em>Griots</em>, fonde nan anes 1930 pa Lorimer Denis ak François Duvalier (avant ke li a dènye pa devienne dictateur), te gen deja posé bases d'yon solidarité kiltille ak raciale panafricaine. Et nan niveau nan Congrès panafriken — cinquième, à Manchester en 1945, ki réunissait Nkrumah, Kenyatta, Du Bois — référence ayisyèn te omniprésente nan discours ak résolutions.
+ </p>
 
-      <aside class="researcher-note" aria-label="Note de recherche">
-        Il faut noter yon tension istorik douloureuse : sèten nan menm lidès ayisyen qui ont pratiqué sa a solidarité entènasyonal ont toswa conduit nan politiks internes autoritaires. Boyer, qui a aidé les Grecs ak absorbé la partie orientale nan île pour protéger les Noirs nan réesclavisation, a toswa gouverné de façon despotique pandan vingt-cinq ans. Cette complexité ne réduit pas la valeur nan actes de solidarité — men elle interdi yon lecture angélique qui gommerait les contradictions internes nan État haïtien.
-      </aside>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ Il faut noter yon tension istorik douloureuse : sèten nan menm lidès ayisyen ki gen pratike li a solidarité entènasyonal gen toswa conduit nan politiks internes autoritaires. Boyer, ki a aidé Grecs ak absorbé pati orientale nan zile pou protéger Noirs nan réesclavisation, a toswa gouverné nan façon despotique pandan vingt-cinq ans. Cette complexité pa réduit pa valeur nan actes nan solidarité — men li interdi yon lecture angélique ki gommerait contradictions internes nan État ayisyen.
+ </aside>
 
-      <!-- DETTE NON RECONNUE -->
-      <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:800;color:var(--blue,#0038A8);margin:2.8rem 0 0.7rem;">Une dette non rekonnen : le paradoxe nan oubli</h3>
+ <!-- DETTE NON RECONNUE -->
+ <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:800;color:var(--blue,#0038A8);margin:2.8rem 0 0.7rem;">Yon dette non rekonnen : paradoxe nan oubli</h3>
 
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Il existe yon paradoxe cruel au cœur nan place d'Haïti dans l'istwa mondiale. La nation qui a accompli le plis poswa libète humaine concrète — qui a vaincu militairement l'esklavaj, qui a financé nan revolisyons d'endepandans, qui te enspire nan générations d'abolisyonnistes, qui a fourni le premye modèle pratique d'yon État gouverné par nan ansyen esclaves — se précisément la nation la plis isolée, la plis appauvrie, la plis marginalisée dans l'ordre entènasyonal contemporain.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Ce paradoxe n'se pas accidentel. L'historien Michel-Rolph Trouillot, dans son ouvrage décisif <em>Silencing the Past : Power and the Production of History</em> (Beacon Press, 1995), démontre que l'istwa ayisyèn te systématiquement « mise sous silence » (<em>silenced</em>) nan récits historiographiques occidentaux dès 1804. Les contemporains nan revolisyon — journalistes, diplomates, politiciens — ont choisi de ne pas traiter sa a événement tankoswa yon revolisyon, paske le reconnaître tankoswa tel impliquait d'en reconnaître la légitimité et, par extension, la légitimité de toute révolte d'esclaves. Trouillot appelle cela l'« impensable » (<em>the unthinkable</em>) : sèten événements se trop menaçants poswa cadres conceptuels dominants pour être pleinement rekonèt au moment où ils se produisent.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            La <strong>dette nan endepandans</strong> imposée pa France en 1825 se l'expression la plis brutale de sa a punition systémique. Pour obtenir la rekonesans diplomatique fransèz — ak lever l'embargo tankourcial qui étranglait l'ekonomi ayisyèn depi 1804 — Boyer accepta de payer <strong>150 millions de francs-or</strong> aux ansyen colons tankoswa « compensation » pouurs plantations perdues. Cette somme — équivalant à plizyè fois le budgak annuel nan État ayisyen — fut remboursée jusqu'en 1947, plis d'yon syèk après l'endepandans. Une enquête nan <em>New York Times</em> publiée en 2022 a estimé que sa a dette ak ses intérêts composés ont coûté à Haïti entre 21 ak 115 milliards de dollars de développement perdu. C'se yon structure de punition ekonomik délibérée infligée à yon nation précisément parce qu'elle avait osé appliquer les principes nan Lumières plis conséquemment que les Lumières elles-mêmes.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Les États-Unis n'ont rekonèt diplomatiquement Haïti qu'en <strong>1862</strong> — cinquante-huit ans après l'endepandans. Cette rekonesans tardive, obtenue sous la pression nan lagè civile ameriken ak nan intérêts abolisyonnistes, illustre combyen la présence d'yon Repiblik noire dérangeait l'ordre politik ameriken fondé sur l'esklavaj nan États nan Sud. Pendant sa yo cinquante-huit ans, Haïti avait existé, gouverné, payé nan dettes, construit nan enstitisyons — sans la rekonesans de son voisin continental le plis puissant. Que ce voisin soit jounen jodi a le prensipal créancier ak partenaire diplomatique d'yon Haïti fragilisée donne à sa a istwa yon résonance amère.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Reconnaître pleinement l'influence d'Haïti soswa mond n'se pas yon exercice de nostalgie oswa de réparation symbolique. C'se yon correction factuelle nécessaire à yon compréhension honnête nan istwa moderne. La libète humaine, telle qu'elle te conquise ak étendue pandans deux derniers syèks, porte la marque d'hommes ak de fanm qui combattaient nu-pieds nan mòns de Saint-Domingue. Leurs noms méritent d'être nan manuels aux côtés de Jefferson, de Robespierre ak de Bolívar — pas tankoswa sujets d'yon istwa qu'on leur raconte, men tankoswa auteurs d'yon istwa qu'ils ont écrite.
-          </p>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;display:flex;flex-direction:column;justify-content:center;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères — La punition nan libète</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· 1804 : embargo tankourcial nan gran puissances</li>
-              <li>· 1825 : dette de 150 M francs imposée pa France</li>
-              <li>· 1862 : rekonesans diplomatique américaine</li>
-              <li>· 1915–1934 : occupation milite américaine</li>
-              <li>· 1947 : dènye versement à la France</li>
-              <li>· 1995 : Trouillot, <em>Silencing the Past</em></li>
-              <li>· 2022 : enquête NYT — 115 Mds $ de manque à gagner</li>
-            </ul>
-          </div>
-          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--blue,#0038A8);text-transform:uppercase;margin-bottom:0.8rem;">Lectures essentielles</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:13px;line-height:1.9;color:#333;">
-              <li>· Trouillot, M.-R. — <em>Silencing the Past</em>, Beacon Press, 1995</li>
-              <li>· James, C.L.R. — <em>The Black Jacobins</em>, Secker &amp; Warburg, 1938</li>
-              <li>· Nicholls, D. — <em>From Dessalines to Duvalier</em>, CUP, 1979</li>
-              <li>· Manigat, L. — <em>Eventails nan istwa vivante</em>, CHUDAC, 2001</li>
-              <li>· Plummer, B.G. — <em>Haiti and the Great Powers</em>, 1988</li>
-              <li>· Dubois, L. — <em>Avengers of the New World</em>, HUP, 2004</li>
-              <li>· Geggus, D. — <em>The Impact of the Haitian Revolution</em>, 2001</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Il existe yon paradoxe cruel nan cœur nan plas d'Haïti nan l'istwa mondiale. nasyon ki a accompli plis poswa libète humaine concrète — ki a vaincu militement l'esklavaj, ki a financé nan revolisyons d'endepandans, ki te enspire nan générations d'abolisyonnistes, ki a fourni premye modèle pratique d'yon État gouverné pa nan ansyen esklav — précisément nasyon plis isolée, plis appauvrie, plis marginalisée nan l'ordre entènasyonal contemporain.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Ce paradoxe pa se pa accidentel. L'historien Michel-Rolph Trouillot, nan li ouvrage décisif <em>Silencing the Past : Power and the Production of History</em> (Beacon Press, 1995), démontre ke l'istwa ayisyèn te systématiquement « mise anba silence » (<em>silenced</em>) nan récits historiographiques occidentaux dès 1804. contemporains nan revolisyon — journalistes, diplomates, politiciens — gen choisi nan pa pa traiter li a événement tankoswa yon revolisyon, paske reconnaître tankoswa tel impliquait d'en reconnaître légitimité et, pa extension, légitimité nan toute révolte d'esclaves. Trouillot appelle cela l'« impensable » (<em>the unthinkable</em>) : sèten événements trop menaçants poswa cadres conceptuels dominants pou être pleinement rekonèt nan moment kote yo produisent.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ <strong>dette nan endepandans</strong> imposée pa France en 1825 l'expression plis brutale nan li a punition systémique. Pour obtenir rekonesans diplomatique fransèz — ak lever l'embargo tankourcial ki étranglait l'ekonomi ayisyèn depi 1804 — Boyer accepta nan payer <strong>150 millions nan francs-or</strong> nan ansyen kolon tankoswa « compensation » pouurs plantations perdues. Cette somme — équivalant à plizyè fwa budgak annuel nan État ayisyen — te remboursée juske en 1947, plis d'yon syèk apre l'endepandans. Yon enquête nan <em>New York Times</em> publiée en 2022 a estimé ke li a dette ak li yo intérêts composés gen coûté à Haïti ant 21 ak 115 milliards nan dollars nan devlopman perdu. C'se yon structure nan punition ekonomik délibérée infligée à yon nasyon précisément parce ke elle te gen osé appliquer principes nan Lumières plis conséquemment ke Lumières elles-mêmes.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ États-Unis pa ont rekonèt diplomatiquement Haïti ke en <strong>1862</strong> — cinquante-huit ans apre l'endepandans. Cette rekonesans tardive, obtenue anba pression nan lagè civile ameriken ak nan intérêts abolisyonnistes, montre combyen présence d'yon Repiblik noire dérangeait l'ordre politik ameriken fonde sou l'esklavaj nan États nan Sud. Pendant li yo cinquante-huit ans, Haïti te gen existé, gouverné, payé nan dettes, bati nan enstitisyons — san rekonesans nan li voisin continental plis pwisan. Que li a voisin soit jounen jodi a prensipal créancier ak partenaire diplomatique d'yon Haïti fragilisée donne à li a istwa yon résonance amère.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Reconnaître pleinement l'influence d'Haïti soswa mond pa se pa yon exercice nan nostalgie oswa nan réparation symbolique. C'se yon correction factuelle nécessaire à yon compréhension honnête nan istwa moderne. libète humaine, telle ke elle te conquise ak étendue pandans deux dènyes syèks, pote make d'hommes ak nan fanm ki combattaient nu-pieds nan mòns nan Saint-Domingue. Leurs non méritent d'être nan manuels nan côtés nan Jefferson, nan Robespierre ak nan Bolívar — pa tankoswa sujets d'yon istwa ke on yo raconte, men tankoswa otè d'yon istwa ke ils gen écrite.
+ </p>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;display:flex;flex-direction:column;justify-content:center;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères — punition nan libète</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· 1804 : embargo tankourcial nan gran puissances</li>
+ <li>· 1825 : dette nan 150 M francs imposée pa France</li>
+ <li>· 1862 : rekonesans diplomatique ameriken</li>
+ <li>· 1915–1934 : okipasyon milite ameriken</li>
+ <li>· 1947 : dènye versement à France</li>
+ <li>· 1995 : Trouillot, <em>Silencing the Past</em></li>
+ <li>· 2022 : enquête NYT — 115 Mds $ nan manque à gagner</li>
+ </ul>
+ </div>
+ <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--blue,#0038A8);text-transform:uppercase;margin-bottom:0.8rem;">Lectures esansyèls</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:13px;line-height:1.9;color:#333;">
+ <li>· Trouillot, M.-R. — <em>Silencing the Past</em>, Beacon Press, 1995</li>
+ <li>· James, C.L.R. — <em>The Black Jacobins</em>, Secker &amp; Warburg, 1938</li>
+ <li>· Nicholls, D. — <em>From Dessalines to Duvalier</em>, CUP, 1979</li>
+ <li>· Manigat, L. — <em>Eventails nan istwa vivante</em>, CHUDAC, 2001</li>
+ <li>· Plummer, B.G. — <em>Haiti and the Great Powers</em>, 1988</li>
+ <li>· Dubois, L. — <em>Avengers of the New World</em>, HUP, 2004</li>
+ <li>· Geggus, D. — <em>The Impact of the Haitian Revolution</em>, 2001</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <aside class="researcher-note" aria-label="Konklizyon analytique">
-        Ce n'se pas yon coïncidence si les deux nations qui ont le plis contribué à isoler Haïti ekonomikment ak diplomatiquement au XIXe syèk — la France ak les États-Unis — se précisément celles dont les revolisyons fondatrisa yo avaient proclamé la libète universelle tout en maintenant l'esklavaj. Haïti leur renvoyait l'image de leur pwòp contradiction. La punir revenait à conjurer sa a image. Comprendre cela ne suffit pas à réparer ce qui te brisé — men ça tankounce par là.
-      </aside>
+ <aside class="researcher-note" aria-label="Konklizyon analytique">
+ Ce pa se pa yon coïncidence si deux nations ki gen plis contribué à isoler Haïti ekonomikment ak diplomatiquement nan XIXe syèk — France ak États-Unis — précisément celles ke revolisyons fondatrisa yo te gen pwoklame libète universelle tout en maintenant l'esklavaj. Haïti yo renvoyait l'image nan yo pwòp contradiction. punir revenait à conjurer li a image. Comprendre cela pa suffit pa à réparer li a ki te brisé — men ça tankounce pa là.
+ </aside>
 
-    </div>
-  </section>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-brand__logo">
-            Repiblik Ayiti
-          </div>
-          <p>
-            Une célébration nan extraordinaire istwa d'Haïti, de sa kilti
-            vibrante ak de son pèp remarquable. Dédié à partager l'istwa de
-            premye Repiblik nwa nan mond lan.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Eksplore</h4>
-          <ul>
-            <li><a href="index.html">Akèy</a></li>
-            <li><a href="about.html">Soswa Ayiti</a></li>
-            <li><a href="history.html">Istwa</a></li>
-            <li><a href="tourism.html">Touris</a></li>
-            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
-            <li><a href="archives.html">Achiv</a></li>
-            <li><a href="bibliography.html">Bibliyografi</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Kilti &amp; Sosyete</h4>
-          <ul>
-            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
-            <li><a href="vodou.html">Vodou</a></li>
-            <li><a href="gastronomy.html">Gastwonomi</a></li>
-            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
-            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
-            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
-            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Istwa &amp; Enstitisyon</h4>
-          <ul>
-            <li><a href="timeline.html">Kwonolouji</a></li>
-            <li><a href="heroes.html">Ewò Nasyonal</a></li>
-            <li><a href="lidès.html">Lidè</a></li>
-            <li><a href="konstitisyon.html">Konstitisyon</a></li>
-            <li><a href="enstitisyons.html">Enstitisyon</a></li>
-            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Pran Kontak</h4>
-          <ul>
-            <li><a href="contact.html">Kontakte Nou</a></li>
-            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
-            <li><a href="license.html">Mentions L&eacute;gales</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
-        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
-        <span class="footer-editorial">Ce projak se n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti se &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
-      </div>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mentions L&eacute;gales</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sou Ha&iuml;ti &eacute;crits nan l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
+ </div>
+ </div>
+ </footer>
 
-  <script src="../js/script.js"></script>
-  <script src="../js/premium.js"></script>
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){e.stopPropagation();sw.classList.toggle('open');});
+  document.addEventListener('click',function(){sw.classList.remove('open');});
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  // Auto-redirect based on stored preference
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
 </body>
 </html>

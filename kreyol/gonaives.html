@@ -1,270 +1,317 @@
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#00209F" />
-  <title>Gonaïves — Istwa, Kilti ak Jeyografi | Repiblik Ayiti</title>
-  <meta name="description" content="C'se ici, le 1er janvier 1804, que Jean-Jacques Dessalines te pwoklame l'endepandans Ayiti. Gonaïves porte sa a mémoire fondatrice — ak les cicatrisa yo nan inondations répétées qui ont éprouvé sa population." />
-  <meta name="author" content="RepiblikHaïti.org" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/premium.css" />
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Gonaïves — Istwa, Kilti ak Jeyografi | Repiblik Ayiti</title>
+ <meta name="description" content="C'se ici, le 1er janvier 1804, que Jean-Jacques Dessalines te pwoklame l'endepandans Ayiti. Gonaïves porte sa a mémoire fondatrice — ak les cicatrisa yo nan inondations répétées qui ont éprouvé sa population." />
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher */
+.lang-switcher { position: relative; margin-left: 1rem; }
+.lang-switcher__btn { background: none; border: 1px solid rgba(255,255,255,0.3); color: inherit; padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: border-color 0.2s; }
+.lang-switcher__btn:hover { border-color: rgba(255,255,255,0.7); }
+.lang-switcher__menu { display: none; position: absolute; top: 110%; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-width: 150px; z-index: 1000; overflow: hidden; }
+.lang-switcher.open .lang-switcher__menu { display: block; }
+.lang-option { display: block; padding: 0.6rem 1rem; color: #333; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+.lang-option:hover { background: #f0f4ff; }
+.lang-option.active { background: #e8f0fe; font-weight: 600; }
+@media (max-width: 768px) { .lang-switcher { margin-left: 0; margin-top: 0.5rem; } .lang-switcher__menu { right: auto; left: 0; } }
+</style>
 </head>
 <body>
 
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Back to top -->
-  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
 
-  <header class="site-header">
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="Akèy">
-          Repiblik Ayiti
-        </a>
-        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
-          <a href="index.html">Akèy</a>
-          <a href="about.html">Soswa Nou</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="history.html">Istwa Jeneral</a>
-              <a href="timeline.html">Kwonolouji</a>
-              <a href="heroes.html">Ewò Nasyonal</a>
-              <a href="lidès.html">Lidè</a>
-              <a href="konstitisyon.html">Konstitisyon</a>
-              <a href="enstitisyons.html">Enstitisyon</a>
-            </div>
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang">
+            🇭🇹 Kreyòl ▾
+          </button>
+          <div class="lang-switcher__menu">
+            <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
+            <a href="#" class="lang-option active" data-lang="ht">🇭🇹 Kreyòl</a>
           </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti.html">Kilti &amp; Atizay</a>
-              <a href="vodou.html">Vodou</a>
-              <a href="lwa.html">Lwa yo</a>
-              <a href="gastronomy.html">Gastwonomi</a>
-              <a href="holidays.html">Joswa Ferye</a>
-            </div>
-          </div>
-          <a href="tourism.html">Touris</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti-vivante.html">Kilti Vivan</a>
-              <a href="creativite-populaire.html">Kreyativite Popilè</a>
-              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
-              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
-              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
-              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
-              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
-              <a href="instabilite-politik.html">Enstabilite Politik</a>
-              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
-              <a href="services-essentiels.html">Sèvis Esansyèl</a>
-              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
-              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="encyclopedia.html">Ansiklopedi</a>
-              <a href="archives.html">Achiv</a>
-              <a href="bibliography.html">Bibliyografi</a>
-            </div>
-          </div>
-          <a href="contact.html">Kontak</a>
-        </nav>
+        </div>
         <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
 
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
-    <div class="search-overlay__inner">
-      <div class="search-overlay__header">
-        <div class="search-input-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : istwa, kilti, vils…" autocomplete="off" />
-        </div>
-        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
-      </div>
-      <div class="search-results" id="searchResults" aria-live="polite"></div>
-    </div>
-  </div>
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : istwa, kilti, vils…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
 
-  <section class="page-hero page-hero--history">
-    <div class="container">
-      <p class="page-hero__label">Cité nan Endepandans</p>
-      <h1 class="page-hero__title">Gonaïves</h1>
-      <p class="page-hero__desc">C'se ici, le 1er janvier 1804, que Jean-Jacques Dessalines te pwoklame l'endepandans Ayiti. Gonaïves porte sa a mémoire fondatrice — ak les cicatrisa yo nan inondations répétées qui ont éprouvé sa population.</p>
-    </div>
-  </section>
+ <section class="page-hero page-hero--history">
+ <div class="container">
+ <p class="page-hero__label">Cité nan Endepandans</p>
+ <h1 class="page-hero__title">Gonaïves</h1>
+ <p class="page-hero__desc">C'se ici, 1er janvier 1804, ke Jean-Jacques Dessalines te pwoklame l'endepandans Ayiti. Gonaïves pote li a memwa fondatrice — ak cicatrisa yo nan inondations répétées ki gen éprouvé li popilasyon.</p>
+ </div>
+ </section>
 
-  <div class="breadcrumb">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <a href="index.html">Akèy</a>
-        <span>/</span>
-        <a href="vils.html">Vils d'Haïti</a>
-        <span>/</span>
-        <span>Gonaïves</span>
-      </nav>
-    </div>
-  </div>
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <a href="vils.html">Vils d'Haïti</a>
+ <span>/</span>
+ <span>Gonaïves</span>
+ </nav>
+ </div>
+ </div>
 
-  <section class="section">
-    <div class="container">
-      <p class="section-label">Endepandans &amp; Rezistans</p>
-      <h2>Gonaïves, berceau nan Repiblik</h2>
+ <section class="section">
+ <div class="container">
+ <p class="section-label">Endepandans &amp; Rezistans</p>
+ <h2>Gonaïves, berceau nan Repiblik</h2>
 
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Gonaïves s'étend soswa côte orientale nan Golfe nan menm nom, nan depatman nan Artibonite. La vil occupe yon plaine basse, presque au niveau nan mer, entourée de mòns dénudées dont les versants pelés accélèrent le ruissellement nan eaux de pluie. Cette jeyografi explique sa vulnérabilité aux inondations — men avant de parler nan catastrophes, il faut parler nan gloire. Car Gonaïves est, avant tout, la vil où naît Haïti.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Le 1er janvier 1804, soswa place d'armes de Gonaïves, jeneral la Jean-Jacques Dessalines lit — oswa fè lire, les soursa yo divergent soswa détail — l'acte d'endepandans nan nouvo nation. Le secrétaire Boisrond-Tonnerre en se l'auteur principal. Le texte, d'yon radicalité sans équivalent dans l'istwa nan revolisyons atlantiques, ne demande pas l'autonomie ni la réforme : il proclame la rupture totale avec l'ordre kolonyal ak réaffirme, au nom nan ansyen esclaves ak nan affranchis, dwa a à l'existence en tant que pèp lib ak souverain. Haïti vin konsa premye Repiblik nwa nan mond lan, la premye nation à abolir l'esklavaj pa force nan armes, ak le seul cas dans l'istwa nan esklavaj moderne où esklav yo eux-menm ont renversé leurs maîtres ak fondé yon État.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-            Au-delà de ce moment fondateur, Gonaïves te jwe yon rôle tankourcial significatif au XIXe syèk. Le coton, le sisal — fibre végétale utilisée poswa cordages ak les sacs — ak l'élevage bovin fè nan région artibonite l'yon nan zones agricoles les plis actives nan peyi. Le port de Gonaïves exporte sa yo produits vers les États-Unis ak l'Europe. Mais c'se toswa yon vil de tensions sosyal intenses, carrefour d'yon Artibonite où la question agraire — qui possènan tè, qui la cultive, qui en bénéficie — ne ap jamè définitivement résolue.
-          </p>
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Gonaïves s'étend soswa côte orientale nan Golfe nan menm nom, nan depatman nan Artibonite. vil okipe yon plèn basse, presque nan niveau nan mer, entourée nan mòns dénudées ke versants pelés accélèrent ruissellement nan dlo nan pluie. Cette jeyografi explique li vulnérabilité nan inondations — men anvan nan parler nan catastrophes, li faut parler nan gloire. Car Gonaïves est, anvan tout, vil kote naît Haïti.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ 1er janvier 1804, soswa plas d'armes nan Gonaïves, jeneral Jean-Jacques Dessalines lit — oswa fè lire, soursa yo divergent soswa détail — l'acte d'endepandans nan nouvo nation. secrétaire Boisrond-Tonnerre en l'auteur prensipal. texte, d'yon radicalité san équivalent nan l'istwa nan revolisyons atlantiques, pa demande pa l'autonomie ni réforme : li proclame rupture totale ak l'ordre kolonyal ak réaffirme, nan non nan ansyen esklav ak nan affranchis, dwa a à l'existence en tant ke pèp lib ak souverain. Haïti vin konsa premye Repiblik nwa nan mond lan, premye nasyon à abolir l'esklavaj pa fòs nan armes, ak seul cas nan l'istwa nan esklavaj moderne kote esklav yo eux-menm gen renversé yo maîtres ak fonde yon État.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Au-delà nan li a moment fondateur, Gonaïves te jwe yon wòl tankourcial significatif nan XIXe syèk. coton, sisal — fibre végétale itilize poswa cordages ak sacs — ak l'élevage bovin fè nan rejyon artibonite l'yon nan zones agricoles plis actives nan peyi. port nan Gonaïves exporte li yo produits vè États-Unis ak l'Europe. Mais c'se toswa yon vil nan tensions sosyal intenses, carrefour d'yon Artibonite kote question agraire — ki possènan tè, ki cultive, ki en bénéficie — pa ap jamè définitivement résolue.
+ </p>
 
-          <aside class="researcher-note" aria-label="Note de recherche">
-            Le mouvement Piquak nan anes 1840, mené par Louis Jean-Jacques Acaau depi les campagnes autour de Gonaïves ak nan Cayes, se l'yon nan soulèvements peyians les plis importants nan XIXe syèk haïtien. Acaau mobilisait les peyians noirs <em>sans-tè</em> contre l'élite mulâtre qui avait capté les bénéfisa yo nan endepandans sans redistribuer les tès. L'historien Leslie Manigat a analysé le Piquak tankoswa la premye expression articulée d'yon conscience de classe agraire en Haïti — yon lecture que d'lòt historiens, tankoswa Brenda Gayle Plummer, nuancent en insistant soswa dimension coloriste nan conflit otan ke sur sa dimension ekonomik.
-          </aside>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
-              <li>· Depatman : Artibonite</li>
-              <li>· Sur le Golfe nan Gonaïves</li>
-              <li>· Endepandans proclamée : 1er jan. 1804</li>
-              <li>· Mouvement Piquak : anes 1840</li>
-              <li>· Déchoukaj Duvalier tankounce ici : 1985</li>
-              <li>· Tempête Jeanne 2004 : ~3 000 morts</li>
-              <li>· Ouragans 2008 : Fay, Gustav, Hanna, Ike</li>
-            </ul>
-          </div>
-          <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Contexte régional</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· Plaine basse, altitude ~5 m</li>
-              <li>· Montagnes dénudées au pourtour</li>
-              <li>· Agrikilti : coton, sisal, élevage</li>
-              <li>· Artibonite : grenier à riz d'Haïti</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ mouvman Piquak nan anes 1840, mené pa Louis Jean-Jacques Acaau depi campagnes otou nan Gonaïves ak nan Cayes, l'yon nan soulèvements peyians plis enpòtans nan XIXe syèk ayisyen. Acaau mobilisait peyians noirs <em>sans-tè</em> kont l'élite mulâtre ki te gen capté bénéfisa yo nan endepandans san redistribuer tès. L'historien Leslie Manigat a analysé Piquak tankoswa premye expression articulée d'yon conscience nan classe agraire en Haïti — yon lecture ke d'lòt historiens, tankoswa Brenda Gayle Plummer, nuancent en insistant soswa dimension coloriste nan conflit otan ke sou li dimension ekonomik.
+ </aside>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+ <li>· Depatman : Artibonite</li>
+ <li>· Sur Golfe nan Gonaïves</li>
+ <li>· Endepandans proclamée : 1er jan. 1804</li>
+ <li>· Mouvement Piquak : anes 1840</li>
+ <li>· Déchoukaj Duvalier tankounce ici : 1985</li>
+ <li>· Tempête Jeanne 2004 : ~3 000 morts</li>
+ <li>· Ouragans 2008 : Fay, Gustav, Hanna, Ike</li>
+ </ul>
+ </div>
+ <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Kontèks régional</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· Plaine basse, altitude ~5 m</li>
+ <li>· Montagnes dénudées nan pourtour</li>
+ <li>· Agrikilti : coton, sisal, élevage</li>
+ <li>· Artibonite : grenier à riz d'Haïti</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Gonaïves ak la chute nan Duvalier</h3>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        En novembre 1985, à Gonaïves, nan lycéens manifestent contre le régime de Jean-Claude Duvalier. La police tire soswa foule ; trois jeunes — Jean-Robert Cius, Daniel Israël ak Mackenson Michel — se tués. Leur mort mete le feu aux poudres. Le mouvement de protestation qui s'embrase nan semaines suivantes se konnen sous le nom de <em>Déchoukaj</em> (déracinement) : il se propage depi Gonaïves vers tout le peyi, contraignant Jean-Claude Duvalier à fuir Haïti le 7 février 1986, après vingt-neuf ans de diktatè familiale. Gonaïves avait deja renversé yon ordre kolonyal en 1804 ; elle en renverse yon lòt en 1986. Cette répétition n'se pas yon coïncidence dans memwa a popilè ayisyèn — c'se yon confirmation.
-      </p>
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Gonaïves ak chute nan Duvalier</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ En novembre 1985, à Gonaïves, nan lycéens manifestent kont régime nan Jean-Claude Duvalier. police tire soswa foule ; trois jeunes — Jean-Robert Cius, Daniel Israël ak Mackenson Michel — tués. Leur lanmò mete feu nan poudres. mouvman nan protestation ki s'embrase nan semaines suivantes konnen anba non nan <em>Déchoukaj</em> (déracinement) : li propage depi Gonaïves vè tout peyi, contraignant Jean-Claude Duvalier à fuir Haïti 7 février 1986, apre vingt-neuf ans nan diktatè familiale. Gonaïves te gen deja renversé yon ordre kolonyal en 1804 ; li en renverse yon lòt en 1986. Cette répétition pa se pa yon coïncidence nan memwa a popilè ayisyèn — c'se yon confirmation.
+ </p>
 
-      <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">Les catastrophes ak la résilience</h3>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        En septembre 2004, la tempête tropicale Jeanne stationne plizyè jours au-dessus nan nord-ouse d'Haïti, déversant nan pluies torrentielles. Les mòns dénudées autour de Gonaïves — dont le déboisement te documenté depi les anes 1970 — ne retiennent pas les eaux. Des crues soudaines ak nan coulées de boue engloutissent nan quartiers entiers. Environ 3 000 personnes meurent à Gonaïves seule. En 2008, nan yon intervalle de kèk semaines, quatre cyclones successifs — Fay, Gustav, Hanna ak Ike — frappent le peyi. Gonaïves se à nouvo submergée. Les images de résidents soswa toits de leurs menons inondées, attendant nan secours qui mete nan jours à venir, fè le tour nan mond.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-        Ces catastrophes ne se pas seulement nan malheurs naturels. Elles se le produit d'yon déforestation massive — Haïti a pernan plis de 98% de sa couverture forestière originelle — ak d'yon absence d'investissement nan infrastructures hydrauliques ak de protection nan bassins versants. La vulnérabilité de Gonaïves aux inondations se konnen nan ingénieurs ayisyen depi nan décennies. Les solutions techniques existent. Ce qui manque, c'se la volonté politik ak les ressoursa yo poswa mettre en œuvre nan yon vil qui ne fè pas partie nan priorités nan gouvènmans successifs basés à Port-au-Prince.
-      </p>
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">katastwòf ak résilience</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ En septembre 2004, tempête tropicale Jeanne stationne plizyè jou au-dessus nan nord-ouse d'Haïti, déversant nan pluies torrentielles. mòns dénudées otou nan Gonaïves — ke déboisement te documenté depi anes 1970 — pa retiennent pa eaux. Des crues soudaines ak nan coulées nan boue engloutissent nan quartiers entiers. Environ 3 000 personnes meurent à Gonaïves seule. En 2008, nan yon intervalle nan kèk semaines, quatre cyclones successifs — Fay, Gustav, Hanna ak Ike — frappent peyi. Gonaïves à nouvo submergée. images nan résidents soswa toits nan yo menons inondées, attendant nan secours ki mete nan jou à venir, fè tour nan mond.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Ces katastwòf pa pa seulement nan malheurs naturels. Elles produit d'yon déforestation massive — Haïti a pernan plis nan 98% nan li couverture forestière originelle — ak d'yon absence d'investissement nan infrastructures hydrauliques ak nan protection nan bassins versants. vulnérabilité nan Gonaïves nan inondations konnen nan ingénieurs ayisyen depi nan décennies. solutions techniques existent. Ce ki manque, c'se volonté politik ak ressoursa yo poswa mettre en zèv nan yon vil ki pa fè pa pati nan priorités nan gouvènmans successifs basés à Port-au-Prince.
+ </p>
 
-      <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:2rem;margin-bottom:2.5rem;">
-        <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Gade tou</p>
-        <ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2.2;">
-          <li>→ <a href="vils.html" style="color:#fff;">Retour aux Vils d'Haïti</a></li>
-          <li>→ <a href="history.html" style="color:#fff;">Istwa générale d'Haïti</a></li>
-          <li>→ <a href="heroes.html" style="color:#fff;">Ewò nan Revolisyon (Dessalines)</a></li>
-          <li>→ <a href="instabilite-politik.html" style="color:#fff;">Enstabilite Politik</a></li>
-          <li>→ <a href="saint-marc.html" style="color:#fff;">Saint-Marc — Artibonite</a></li>
-          <li>→ <a href="cap-haitien.html" style="color:#fff;">Cap-Haïtien</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:2rem;margin-bottom:2.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Gade tou</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2.2;">
+ <li>→ <a href="vils.html" style="color:#fff;">Retour nan Vils d'Haïti</a></li>
+ <li>→ <a href="history.html" style="color:#fff;">Istwa générale d'Haïti</a></li>
+ <li>→ <a href="heroes.html" style="color:#fff;">Ewò nan Revolisyon (Dessalines)</a></li>
+ <li>→ <a href="instabilite-politik.html" style="color:#fff;">Enstabilite Politik</a></li>
+ <li>→ <a href="saint-marc.html" style="color:#fff;">Saint-Marc — Artibonite</a></li>
+ <li>→ <a href="cap-haitien.html" style="color:#fff;">Cap-Haïtien</a></li>
+ </ul>
+ </div>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-brand__logo">
-            Repiblik Ayiti
-          </div>
-          <p>
-            Une célébration nan extraordinaire istwa d'Haïti, de sa kilti
-            vibrante ak de son pèp remarquable. Dédié à partager l'istwa de
-            premye Repiblik nwa nan mond lan.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Eksplore</h4>
-          <ul>
-            <li><a href="index.html">Akèy</a></li>
-            <li><a href="about.html">Soswa Ayiti</a></li>
-            <li><a href="history.html">Istwa</a></li>
-            <li><a href="tourism.html">Touris</a></li>
-            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
-            <li><a href="archives.html">Achiv</a></li>
-            <li><a href="bibliography.html">Bibliyografi</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Kilti &amp; Sosyete</h4>
-          <ul>
-            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
-            <li><a href="vodou.html">Vodou</a></li>
-            <li><a href="gastronomy.html">Gastwonomi</a></li>
-            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
-            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
-            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
-            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Istwa &amp; Enstitisyon</h4>
-          <ul>
-            <li><a href="timeline.html">Kwonolouji</a></li>
-            <li><a href="heroes.html">Ewò Nasyonal</a></li>
-            <li><a href="lidès.html">Lidè</a></li>
-            <li><a href="konstitisyon.html">Konstitisyon</a></li>
-            <li><a href="enstitisyons.html">Enstitisyon</a></li>
-            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Pran Kontak</h4>
-          <ul>
-            <li><a href="contact.html">Kontakte Nou</a></li>
-            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
-            <li><a href="license.html">Mansyon Legal</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
-        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
-        <span class="footer-editorial">Ce projak se né d'yon frustration personnelle&#160;: trop d'ouvrages sur Haïti se écrits nan extérieur. J'ai voulu rassembler les soursa yo ayisyèn en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chèchè endepandan.</span>
-      </div>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mansyon Legal</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak né d'yon frustration personnelle&#160;: trop d'ouvrages sou Haïti écrits nan extérieur. J'ai voulu rassembler soursa yo ayisyèn en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chèchè endepandan.</span>
+ </div>
+ </div>
+ </footer>
 
-  <script src="../js/script.js"></script>
-  <script src="../js/premium.js"></script>
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){e.stopPropagation();sw.classList.toggle('open');});
+  document.addEventListener('click',function(){sw.classList.remove('open');});
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  // Auto-redirect based on stored preference
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
 </body>
 </html>

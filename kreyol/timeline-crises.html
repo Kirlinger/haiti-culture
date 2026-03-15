@@ -1,415 +1,462 @@
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#00209F" />
-  <title>Kwonolouji nan Crises Nationales | Repiblik Ayiti</title>
-  <meta name="description" content="Catastrophes naturelles, coups d'État, épidémies, violensa yo politiks — les gran épreuves traversées par pèp ayisyen an atravè l'istwa." />
-  <meta name="author" content="RepiblikHaïti.org" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/premium.css" />
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Kwonolouji nan Crises Nationales | Repiblik Ayiti</title>
+ <meta name="description" content="Catastrophes naturelles, coups d'État, épidémies, violensa yo politiks — les gran épreuves traversées par pèp ayisyen an atravè l'istwa." />
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher */
+.lang-switcher { position: relative; margin-left: 1rem; }
+.lang-switcher__btn { background: none; border: 1px solid rgba(255,255,255,0.3); color: inherit; padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: border-color 0.2s; }
+.lang-switcher__btn:hover { border-color: rgba(255,255,255,0.7); }
+.lang-switcher__menu { display: none; position: absolute; top: 110%; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-width: 150px; z-index: 1000; overflow: hidden; }
+.lang-switcher.open .lang-switcher__menu { display: block; }
+.lang-option { display: block; padding: 0.6rem 1rem; color: #333; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+.lang-option:hover { background: #f0f4ff; }
+.lang-option.active { background: #e8f0fe; font-weight: 600; }
+@media (max-width: 768px) { .lang-switcher { margin-left: 0; margin-top: 0.5rem; } .lang-switcher__menu { right: auto; left: 0; } }
+</style>
 </head>
 <body>
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Back to top -->
-  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
 
-    <header class="site-header">
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="Akèy">
-          Repiblik Ayiti
-        </a>
-        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
-          <a href="index.html">Akèy</a>
-          <a href="about.html">Soswa Nou</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="history.html">Istwa Jeneral</a>
-              <a href="timeline.html">Kwonolouji</a>
-              <a href="heroes.html">Ewò Nasyonal</a>
-              <a href="lidès.html">Lidè</a>
-              <a href="konstitisyon.html">Konstitisyon</a>
-              <a href="enstitisyons.html">Enstitisyon</a>
-              <a href="presidents.html">Pwofil Prezidan yo</a>
-              <a href="revolution-batays.html">Batay Revolisyon an</a>
-              <a href="relations-internationales.html">Relasyon Entènasyonal</a>
-            </div>
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ <a href="presidents.html">Pwofil Prezidan yo</a>
+ <a href="revolution-batays.html">Batay Revolisyon an</a>
+ <a href="relations-internationales.html">Relasyon Entènasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ <a href="atiss.html">Atis Vizyèl</a>
+ <a href="mizik-istwa.html">Istwa Mizik</a>
+ <a href="litterature.html">Literati</a>
+ <a href="creole.html">Lang Kreyòl</a>
+ <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
+ <a href="glossaire-creole.html">Glosè Kreyòl</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="departements.html">10 Depatman yo</a>
+ <a href="geographie.html">Jeyografi Fizik</a>
+ <a href="anviwonman.html">Anviwonman</a>
+ <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
+ <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
+ <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang">
+            🇭🇹 Kreyòl ▾
+          </button>
+          <div class="lang-switcher__menu">
+            <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
+            <a href="#" class="lang-option active" data-lang="ht">🇭🇹 Kreyòl</a>
           </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti.html">Kilti &amp; Atizay</a>
-              <a href="vodou.html">Vodou</a>
-              <a href="lwa.html">Lwa yo</a>
-              <a href="gastronomy.html">Gastwonomi</a>
-              <a href="holidays.html">Joswa Ferye</a>
-              <a href="atiss.html">Atis Vizyèl</a>
-              <a href="mizik-istwa.html">Istwa Mizik</a>
-              <a href="litterature.html">Literati</a>
-              <a href="creole.html">Lang Kreyòl</a>
-              <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
-              <a href="glossaire-creole.html">Glosè Kreyòl</a>
-            </div>
-          </div>
-          <a href="tourism.html">Touris</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="departements.html">10 Depatman yo</a>
-              <a href="geographie.html">Jeyografi Fizik</a>
-              <a href="anviwonman.html">Anviwonman</a>
-              <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
-              <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti-vivante.html">Kilti Vivan</a>
-              <a href="creativite-populaire.html">Kreyativite Popilè</a>
-              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
-              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
-              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
-              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
-              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
-              <a href="instabilite-politik.html">Enstabilite Politik</a>
-              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
-              <a href="services-essentiels.html">Sèvis Esansyèl</a>
-              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
-              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="encyclopedia.html">Ansiklopedi</a>
-              <a href="archives.html">Achiv</a>
-              <a href="bibliography.html">Bibliyografi</a>
-              <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
-              <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
-            </div>
-          </div>
-          <a href="contact.html">Kontak</a>
-        </nav>
+        </div>
         <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
 
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
-    <div class="search-overlay__inner">
-      <div class="search-overlay__header">
-        <div class="search-input-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
-        </div>
-        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
-      </div>
-      <div class="search-results" id="searchResults" aria-live="polite"></div>
-    </div>
-  </div>
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
 
-  <section class="page-hero page-hero--history">
-    <div class="container">
-      <p class="page-hero__label">Crises &amp; Résilience</p>
-      <h1 class="page-hero__title">Kwonolouji nan Crises Nationales</h1>
-      <p class="page-hero__desc">Catastrophes naturelles, coups d'État, épidémies, violensa yo politiks — les gran épreuves traversées par pèp ayisyen an atravè l'istwa.</p>
-    </div>
-  </section>
+ <section class="page-hero page-hero--history">
+ <div class="container">
+ <p class="page-hero__label">Crises &amp; Résilience</p>
+ <h1 class="page-hero__title">Kwonolouji nan Crises Nationales</h1>
+ <p class="page-hero__desc">Catastrophes naturelles, coups d'État, épidémies, violensa yo politiks — gran épreuves traversées pa pèp ayisyen an atravè l'istwa.</p>
+ </div>
+ </section>
 
-  <div class="breadcrumb">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <a href="index.html">Akèy</a>
-        <span>/</span>
-        <a href="history.html">Istwa</a>
-        <span>/</span>
-        <a href="timeline.html">Kwonolouji</a>
-        <span>/</span>
-        <span>Crises Nationales</span>
-      </nav>
-    </div>
-  </div>
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <a href="history.html">Istwa</a>
+ <span>/</span>
+ <a href="timeline.html">Kwonolouji</a>
+ <span>/</span>
+ <span>Crises Nationales</span>
+ </nav>
+ </div>
+ </div>
 
-  <div class="container" style="padding-top:1rem;">
-    <a href="timeline.html" class="btn btn-outline" style="font-size:0.9rem;">← Retour à la Kwonolouji</a>
-  </div>
+ <div class="container" style="padding-top:1rem;">
+ <a href="timeline.html" class="btn btn-outline" style="font-size:0.9rem;">← Retour à Kwonolouji</a>
+ </div>
 
-  <section class="section" id="catastrophes">
-    <div class="container">
-      <p class="section-label text-center">Épreuves ak Résilience</p>
-      <h2 class="section-title text-center">Catastrophes, Crises ak Tragédies Nationales</h2>
-      <p class="section-subtitle text-center">Au fil de son istwa, Haïti te sibi nan katastwòf natirèl dévastatrices, nan crises sanitaires ak nan violensa yo politiks d'yon ampleur exceptionnelle. Face à chacyon de sa yo épreuves, pèp ayisyen an a montré yon résilience remarquable.</p>
-      <div class="timeline">
+ <section class="section" id="catastrophes">
+ <div class="container">
+ <p class="section-label text-center">Épreuves ak Résilience</p>
+ <h2 class="section-title text-center">Catastrophes, Crises ak Tragédies Nationales</h2>
+ <p class="section-subtitle text-center">Au fil nan li istwa, Haïti te sibi nan katastwòf natirèl dévastatrices, nan crises sanitaires ak nan violensa yo politiks d'yon ampleur exceptionnelle. Face à chacyon nan li yo épreuves, pèp ayisyen an a montré yon résilience remarquable.</p>
+ <div class="timeline">
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">1954 &bull; Ouragan</p>
-            <h3 class="timeline-card__title">Cyclone Hazel</h3>
-            <p class="timeline-card__desc">En octobre 1954, siklòn nan Hazel frappe Haïti avec yon violence extrême. Plus de 1 000 personnes perdent lavi a, nan milliers de foyers se détruits ak les récoltes agricoles ravagées. C'se l'yon nan katastwòf natirèl les plis meurtrières nan XXe syèk en Haïti, survenant nan yon peyi ankò marqué pa séquelles ekonomiks nan okipasyon ameriken ak nan dette imposée pa France.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">1954 &bull; Ouragan</p>
+ <h3 class="timeline-card__title">Cyclone Hazel</h3>
+ <p class="timeline-card__desc">En octobre 1954, siklòn nan Hazel frappe Haïti ak yon violence extrême. Plus nan 1 000 personnes perdent lavi a, nan milliers nan foyers détruits ak récoltes agricoles ravagées. C'se l'yon nan katastwòf natirèl plis meurtrières nan XXe syèk en Haïti, survenant nan yon peyi ankò make pa séquelles ekonomiks nan okipasyon ameriken ak nan dette imposée pa France.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">1963 &bull; Cyclone</p>
-            <h3 class="timeline-card__title">Cyclone Flora</h3>
-            <p class="timeline-card__desc">En octobre 1963, le cyclone Flora s'abat soswa sud d'Haïti avec yon intensité cataclysmique. Plus de 6 000 personnes jwenn lanmò a, ce qui en fè l'yon nan katastwòf natirèl les plis meurtrières nan istwa haïtienne. Des villages entiers se rayés nan carte. La reconstruction se rendue difficile pa pauvreté structurelle ak le manque d'enstitisyons capables de coordonner l'aide.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">1963 &bull; Cyclone</p>
+ <h3 class="timeline-card__title">Cyclone Flora</h3>
+ <p class="timeline-card__desc">En octobre 1963, cyclone Flora s'abat soswa sid d'Haïti ak yon intensité cataclysmique. Plus nan 6 000 personnes jwenn lanmò a, li a ki en fè l'yon nan katastwòf natirèl plis meurtrières nan istwa ayisyèn. Des villages entiers rayés nan carte. rekonstriksyon rendue difficile pa pòvté structurelle ak manque d'enstitisyons capables nan coordonner l'aide.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">28 novembre 1987 &bull; Violence Politik</p>
-            <h3 class="timeline-card__title">Massacre nan Élections de 1987</h3>
-            <p class="timeline-card__desc">Lors nan premières eleksyon organisées après la chute de Duvalier, nan hommes armés attaquent les bureaux de vote à Port-au-Prince, massacrant nan dizaines d'électeurs venus exercer leur droit civique poswa premye fois. Cette violence délibérée force l'annulation nan eleksyon. L'acte, attribué aux milisa yo Duvalieristes ankò actives, illustre la rezistans nan forsa yo conservatrisa yo à toute transition démocratique réelle.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">28 novembre 1987 &bull; Violence Politik</p>
+ <h3 class="timeline-card__title">Massacre nan Élections nan 1987</h3>
+ <p class="timeline-card__desc">Lors nan premyes eleksyon organisées apre chute nan Duvalier, nan gason armés attaquent bureaux nan vote à Port-au-Prince, massacrant nan dizaines d'électeurs venus exercer yo droit civique poswa premye fois. Cette violence délibérée fòs l'annulation nan eleksyon. L'acte, attribué nan milisa yo Duvalieristes ankò actives, montre rezistans nan forsa yo conservatrisa yo à toute transition démocratique réelle.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">1991 – 1994 &bull; Répression</p>
-            <h3 class="timeline-card__title">Tèur sous la Junte Militaire</h3>
-            <p class="timeline-card__desc">Pendant les trois anes nan régime milite de Raoul Cédras, après le koudeta contre Aristide, plis de 3 000 à 5 000 civils se tués pame a ak les paramilite FRAPH. Des milliers de militants nan quartiers popilè se arrêtés, torturés oswa assassinés. Des milliers de réfugiés ayisyen fuient par mer vers les États-Unis; beaucoup se noient oswa se interceptés ak renvoyés pa garde-côtes américains.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">1991 – 1994 &bull; Répression</p>
+ <h3 class="timeline-card__title">Tèur anba Junte Militaire</h3>
+ <p class="timeline-card__desc">Pendant trois anes nan régime milite nan Raoul Cédras, apre koudeta kont Aristide, plis nan 3 000 à 5 000 civils tués pame a ak paramilite FRAPH. Des milliers nan militants nan quartiers popilè arrêtés, torturés oswa assassinés. Des milliers nan réfugiés ayisyen fuient pa lanmè vè États-Unis; beaucoup noient oswa interceptés ak renvoyés pa garde-côtes amerikens.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">2004 &bull; Inondations</p>
-            <h3 class="timeline-card__title">Inondations de Maposwa ak Fonds-Verrettes</h3>
-            <p class="timeline-card__desc">En mai 2004, nan pluies torrentielles provoquent nan inondations catastrophiques nan sud d'Haïti ak nan depatman nan Ouest. Plus de 2 000 personnes périssent nan vils de Maposwa ak Fonds-Verrettes. La déforestation massive qui a dénudé les mòns ayisyèn aggrave considérablement les risques d'inondation. Ce drame remete en lumière la vulnérabilité anviwonmanale critique nan peyi.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">2004 &bull; Inondations</p>
+ <h3 class="timeline-card__title">Inondations nan Maposwa ak Fonds-Verrettes</h3>
+ <p class="timeline-card__desc">En mai 2004, nan pluies torrentielles provoquent nan inondations catastrophiques nan sid d'Haïti ak nan depatman nan Ouest. Plus nan 2 000 personnes périssent nan vils nan Maposwa ak Fonds-Verrettes. déforestation massive ki a dénudé mòns ayisyèn aggrave considérablement risques d'inondation. Ce drame remete en lumière vulnérabilité anviwonmanale critique nan peyi.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">Septembre 2008 &bull; Ouragans</p>
-            <h3 class="timeline-card__title">Saison nan Ouragans 2008</h3>
-            <p class="timeline-card__desc">En l'espace de trois semaines de septembre 2008, quatre cyclones tropicaux consécutifs (Fay, Gustav, Hanna ak Ike) frappent Haïti. Plus de 800 personnes meurent, 60 % nan récoltes se détruites ak nan centaines de milliers de personnes se rejwenn sans abri. La vil de Gonaïves se submergée sous plizyè mètres de boue. Le coût nan dommages représente 70 % nan PIB nasyonal ak plonge le peyi nan yon crise alimentaire grave.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">Septembre 2008 &bull; Ouragans</p>
+ <h3 class="timeline-card__title">Saison nan Ouragans 2008</h3>
+ <p class="timeline-card__desc">En l'espace nan trois semaines nan septembre 2008, quatre cyclones tropicaux consécutifs (Fay, Gustav, Hanna ak Ike) frappent Haïti. Plus nan 800 personnes meurent, 60 % nan récoltes détruites ak nan centaines nan milliers nan personnes rejwenn san abri. vil nan Gonaïves submergée anba plizyè mètres nan boue. coût nan dommages reprezante 70 % nan PIB nasyonal ak plonge peyi nan yon crise alimentaire grave.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">12 janvier 2010 &bull; Séisme</p>
-            <h3 class="timeline-card__title">Le Grand Séisme de 2010</h3>
-            <p class="timeline-card__desc">A 16h53 heure locale, yon séisme de magnitude 7,0 frappe à 25 km à l'ouse de Port-au-Prince. En kèk secondes, yon vil entière s'effondre. Plus de 220 000 personnes perdent lavi a selon les estimations, 300 000 se blessées ak 1,5 million se rejwenn sans abri. Le Palais National, la cathédrale de Port-au-Prince, nan hôpitaux, nan écoles ak nan ministères entiers s'effondrent. C'se l'yon nan pires katastwòf natirèl nan istwa nan hémisphère occidental.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">12 janvier 2010 &bull; Séisme</p>
+ <h3 class="timeline-card__title">Grand Séisme nan 2010</h3>
+ <p class="timeline-card__desc">A 16h53 heure locale, yon séisme nan magnitude 7,0 frappe à 25 km à l'ouse nan Port-au-Prince. En kèk secondes, yon vil entière s'effondre. Plus nan 220 000 personnes perdent lavi a dapre estimations, 300 000 blessées ak 1,5 million rejwenn san abri. Palais National, cathédrale nan Port-au-Prince, nan hôpitaux, nan écoles ak nan ministères entiers s'effondrent. C'se l'yon nan pires katastwòf natirèl nan istwa nan hémisphère occidental.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">2010 – 2019 &bull; Épidémie</p>
-            <h3 class="timeline-card__title">Épidémie de Choléra</h3>
-            <p class="timeline-card__desc">En octobre 2010, kèk mois après le séisme, yon épidémie de choléra éclate nan depatman nan Artibonite. Elle se répand rapidement dans tout le peyi. Des enquêtes scientifiques établissent que la souche te introduite par nan soldats nan mission de lapè onusienne (MINUSTAH) venus nan Népal. Plus de 820 000 personnes se contaminées ak environ 10 000 meurent. L'ONU reconnaît tardivement sa responsabilité en 2016, sans réparations effectives.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">2010 – 2019 &bull; Épidémie</p>
+ <h3 class="timeline-card__title">Épidémie nan Choléra</h3>
+ <p class="timeline-card__desc">En octobre 2010, kèk mois apre séisme, yon épidémie nan choléra éclate nan depatman nan Artibonite. Elle répand rapidement nan tout peyi. Des enquêtes scientifiques établissent ke souche te introduite pa nan sòlda nan mission nan lapè onusienne (MINUSTAH) venus nan Népal. Plus nan 820 000 personnes contaminées ak anviwon 10 000 meurent. L'ONU reconnaît tardivement li responsabilité en 2016, san réparations effectives.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">4 octobre 2016 &bull; Cyclone</p>
-            <h3 class="timeline-card__title">Ouragan Matthew</h3>
-            <p class="timeline-card__desc">L'ouragan Matthew, l'un des plus puissants de l'istwa de l'Atlantique, frappe le sud d'Haïti le 4 octobre 2016 avec des vents de 230 km/h. Plus de 546 personnes meurent, des vils comme Les Cayes, Jérémie et toute la Péninsule du Sud sont dévastées. Des centaines de milliers de personnes sont déplacées et les infrastructures agricoles anéanties. La reconstruction est lente, freinée par l'instabilité politik chronique.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">4 octobre 2016 &bull; Cyclone</p>
+ <h3 class="timeline-card__title">Ouragan Matthew</h3>
+ <p class="timeline-card__desc">L'ouragan Matthew, l'un nan plis pwisans nan l'istwa nan l'Atlantique, frappe sid d'Haïti 4 octobre 2016 ak nan vents nan 230 km/h. Plus nan 546 personnes meurent, nan vils tankou Cayes, Jérémie ak toute Péninsule nan Sud dévastées. Des centaines nan milliers nan personnes déplacées ak infrastructures agricoles anéanties. rekonstriksyon lente, freinée pa l'instabilité politik chronique.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">14 août 2021 &bull; Séisme</p>
-            <h3 class="timeline-card__title">Séisme nan Grand Sud 2021</h3>
-            <p class="timeline-card__desc">Un séisme de magnitude 7,2 frappe le depatman nan Sud ak la Grande-Anse le 14 août 2021, soit six semaines seulement après l'assassinat nan prezidan Moïse. Plus de 2 248 personnes meurent, 12 000 se blessées ak plis de 130 000 menons se détruites oswa endommagées. La réponse humanitaire se compliquée par l'instabilité politik, la méfiance envers le gouvènman ak la présence de gangs armés qui bloquent parfois l'acheminement nan aide.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">14 août 2021 &bull; Séisme</p>
+ <h3 class="timeline-card__title">Séisme nan Grand Sud 2021</h3>
+ <p class="timeline-card__desc">Yon séisme nan magnitude 7,2 frappe depatman nan Sud ak Grande-Anse 14 août 2021, soit six semaines seulement apre l'assassinat nan prezidan Moïse. Plus nan 2 248 personnes meurent, 12 000 blessées ak plis nan 130 000 menons détruites oswa endommagées. réponse humanitaire compliquée pa l'instabilité politik, méfiance envers gouvènman ak présence nan gangs armés ki bloquent pafwa l'acheminement nan aide.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">2018 – Présent &bull; Insécurité</p>
-            <h3 class="timeline-card__title">Crise Sécuritaire ak Emprise nan Gangs</h3>
-            <p class="timeline-card__desc">A partir de 2018, nan gangs armés étendent progressivement leur contrôle sur Port-au-Prince ak d'lòt régions. En 2023 ak 2024, nan coalitions de gangs contrôlent plis de 80 % nan capitale. Les enlèvements contre rançon atteignent nan niveaux inédits, ciblant toswa byen nan étrangers que nan Haïtiens ordinaires. L'axe reliant Port-au-Prince aux vils nan nord se régulièrement coupé. Des centaines de milliers de personnes se déplacées à l'intérieur nan peyi.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">2018 – Présent &bull; Insécurité</p>
+ <h3 class="timeline-card__title">Crise Sécuritaire ak Emprise nan Gangs</h3>
+ <p class="timeline-card__desc">A partir nan 2018, nan gangs armés étendent progressivement yo contrôle sou Port-au-Prince ak d'lòt régions. En 2023 ak 2024, nan coalitions nan gangs contrôlent plis nan 80 % nan kapital. enlèvements kont rançon atteignent nan niveaux inédits, ciblant toswa byen nan étrangers ke nan Haïtiens ordinaires. L'axe reliant Port-au-Prince nan vils nan nò régulièrement coupé. Des centaines nan milliers nan personnes déplacées à l'intérieur nan peyi.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--blue);">
-            <p class="timeline-card__year">2024 – 2025 &bull; Espwa</p>
-            <h3 class="timeline-card__title">Mission Multinasyonal ak Transition</h3>
-            <p class="timeline-card__desc">En 2024, yon Mission Multinasyonal de Soutien à la Sécurité, autorisée pa Conseil de Sécurité nan ONU ak conduite pa Kenya, tankounce à déployer nan forsa yo policières pour soutenir la Police Nationale d'Haïti. Un Conseil Prezidaniel de Transition tente de stabiliser les enstitisyons. Malgré nan conditions extraordinairement difficiles, Haïti continue de chercher son chemin vers la lapè, la demokrasi ak devlopman an, portée pa résilience de son pèp.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--blue);">
+ <p class="timeline-card__year">2024 – 2025 &bull; Espwa</p>
+ <h3 class="timeline-card__title">Mission Multinasyonal ak Transition</h3>
+ <p class="timeline-card__desc">En 2024, yon Mission Multinasyonal nan Soutien à Sécurité, autorisée pa Conseil nan Sécurité nan ONU ak conduite pa Kenya, tankounce à déployer nan forsa yo policières pou soutenir Police Nationale d'Haïti. Yon Conseil Prezidaniel nan Transition tente nan stabiliser enstitisyons. Malgré nan conditions extraordinairement difficiles, Haïti continue nan chercher li chemin vè lapè, demokrasi ak devlopman an, portée pa résilience nan li pèp.</p>
+ </div>
+ </div>
 
-      </div>
-    </div>
-  </section>
+ </div>
+ </div>
+ </section>
 
-  <!-- Additional political crises section -->
-  <section class="section section--alt" id="crises-politiks">
-    <div class="container">
-      <p class="section-label text-center">Crises Politiks</p>
-      <h2 class="section-title text-center">Les Grannan Crises Politiks nan Istwa Haïtienne</h2>
-      <p class="section-subtitle text-center">Au-delà nan katastwòf natirèl, Haïti te travèse de profonnan crises politiks qui ont façonné son destin national.</p>
-      <div class="timeline">
+ <!-- Additional political crises section -->
+ <section class="section section--alt" id="crises-politiks">
+ <div class="container">
+ <p class="section-label text-center">Crises Politiks</p>
+ <h2 class="section-title text-center">Grannan Crises Politiks nan Istwa Haïtienne</h2>
+ <p class="section-subtitle text-center">Au-delà nan katastwòf natirèl, Haïti te travèse nan profonnan crises politiks ki gen façonné li destin nasyonal.</p>
+ <div class="timeline">
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">1791 &bull; Revolisyon</p>
-            <h3 class="timeline-card__title">Cérémonie nan Bois Caïman</h3>
-            <p class="timeline-card__desc">Le 14 août 1791, seremoni an nan Bois Caïman marque le début officiel de Revolisyon ayisyèn nan. Cette nuit, nan esclaves conduits par Dutty Boukman ak Cécile Fatiman tiennent yon seremoni vodoswa secrète nan forè nan Bois Caïman. Le soulèvement qui s'ensuit embrase koloni an de Saint-Domingue ak lance la plis gran révolte d'esclaves nan istwa, qui aboutira, treize ans plis tard, à la création de premye Repiblik nwa nan mond lan.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">1791 &bull; Revolisyon</p>
+ <h3 class="timeline-card__title">Cérémonie nan Bois Caïman</h3>
+ <p class="timeline-card__desc">14 août 1791, seremoni an nan Bois Caïman make début officiel nan Revolisyon ayisyèn nan. Cette nuit, nan esklav conduits pa Dutty Boukman ak Cécile Fatiman tiennent yon seremoni vodoswa secrète nan forè nan Bois Caïman. soulèvement ki s'ensuit embrase koloni an nan Saint-Domingue ak lance plis gran révolte d'esclaves nan istwa, ki aboutira, treize ans plis tard, à création nan premye Repiblik nwa nan mond lan.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">1806 &bull; Crise Politik</p>
-            <h3 class="timeline-card__title">Assassinat de Dessalines</h3>
-            <p class="timeline-card__desc">Le 17 octobre 1806, le père fondateur nan nation haïtienne, Jean-Jacques Dessalines, se assassiné nan yon embuscade à Pont-Rouge. Son assassinat provoque la division nan peyi en deux entités rivales — le Royaume nan Nord d'Henri Christophe ak la Repiblik nan Sud d'Alexandre Pétion — ak inaugure yon longue période d'instabilité politik ki makera durablement istwa Ayiti.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">1806 &bull; Crise Politik</p>
+ <h3 class="timeline-card__title">Assassinat nan Dessalines</h3>
+ <p class="timeline-card__desc">17 octobre 1806, père fondateur nan nasyon ayisyèn, Jean-Jacques Dessalines, assassiné nan yon embuscade à Pont-Rouge. Son assassinat provoque division nan peyi en deux entités rivales — Royaume nan Nord d'Henri Christophe ak Repiblik nan Sud d'Alexandre Pétion — ak inaugure yon longue période d'instabilité politik ki makera durablement istwa Ayiti.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">1825 &bull; Crise Économique</p>
-            <h3 class="timeline-card__title">La Dette nan Endepandans</h3>
-            <p class="timeline-card__desc">Sous la menace d'yon flotte de lagè française, le prezidan Boyer accepte de verser à la France yon indemnité de 150 millions de francs-or (ramenée à 90 millions en 1838) en compensation poswa biens nan ansyen colons. Haïti se konsa le seul peyi nan istwa moderne contraint de payer yon rançon pour sa pwòp endepandans. Cette dette colossale, remboursée jusqu'en 1947, a pwofondman hypothéqué devlopman an ekonomik nan peyi pandan plis d'yon syèk.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">1825 &bull; Crise Économique</p>
+ <h3 class="timeline-card__title">Dette nan Endepandans</h3>
+ <p class="timeline-card__desc">Sous menace d'yon flotte nan lagè fransèz, prezidan Boyer accepte nan verser à France yon indemnité nan 150 millions nan francs-or (ramenée à 90 millions en 1838) en compensation poswa biens nan ansyen colons. Haïti konsa seul peyi nan istwa moderne contraint nan payer yon rançon pou li pwòp endepandans. Cette dette colossale, remboursée juske en 1947, a pwofondman hypothéqué devlopman an ekonomik nan peyi pandan plis d'yon syèk.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">1915 – 1934 &bull; Occupation</p>
-            <h3 class="timeline-card__title">Occupation Américaine</h3>
-            <p class="timeline-card__desc">En juillak 1915, les Marines américains débarquent en Haïti sous prétexte de maintenir l'ordre après l'assassinat nan prezidan Guillaume Sam. L'occupation dure 19 ans. Elle entraîne la dissolution nan Parlement haïtien, l'imposition d'yon nouvo konstitisyon autorisant les étrangers à posséder nan tès, le travail forcé (corvée), la suppression nan presse lib ak la rezistans armée nan Cacos menée par Charlemagne Péralte. L'occupation laisse nan séquelles durables nan sosyete haïtienne.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">1915 – 1934 &bull; Occupation</p>
+ <h3 class="timeline-card__title">Occupation Américaine</h3>
+ <p class="timeline-card__desc">En juillak 1915, Marines amerikens débarquent en Haïti anba prétexte nan maintenir l'ordre apre l'assassinat nan prezidan Guillaume Sam. L'occupation dure 19 ans. Elle entraîne dissolution nan Parlement ayisyen, l'imposition d'yon nouvo konstitisyon autorisant étrangers à posséder nan tès, travail forcé (corvée), suppression nan presse lib ak rezistans lame nan Cacos menée pa Charlemagne Péralte. L'occupation laisse nan séquelles durables nan sosyete ayisyèn.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">Octobre 1937 &bull; Massacre</p>
-            <h3 class="timeline-card__title">Massacre nan Persil (Parsley Massacre)</h3>
-            <p class="timeline-card__desc">En octobre 1937, le dictateur dominicain Rafael Trujillo ordonne le massacre systématique nan Haïtiens vivant à fwontyè a dominicaine. Entre 15 000 ak 35 000 personnes se tuées en kèk jours, souvan à la machette. Les soldats dominicains identifiaient les Haïtiens en leur demandant de prononcer le mot "perejil" (persil en espagnol), que les créolophones prononçaient différemment. Ce génocide rete l'yon nan pages les plis sombres nan istwa nan relations haïtiano-dominicaines.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">Octobre 1937 &bull; Massacre</p>
+ <h3 class="timeline-card__title">Massacre nan Persil (Parsley Massacre)</h3>
+ <p class="timeline-card__desc">En octobre 1937, dictateur dominicain Rafael Trujillo ordonne massacre systématique nan Haïtiens vivant à fwontyè a dominicaine. Entre 15 000 ak 35 000 personnes tuées en kèk jours, souvan à machette. sòlda dominicains identifiaient Haïtiens en yo demandant nan prononcer mo "perejil" (persil en espagnol), ke créolophones prononçaient différemment. Ce génocide rete l'yon nan pages plis sombres nan istwa nan relations haïtiano-dominicaines.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">1957 – 1986 &bull; Dictature</p>
-            <h3 class="timeline-card__title">La Dictature nan Duvalier</h3>
-            <p class="timeline-card__desc">François "Papa Doc" Duvalier pran pouvwa a en 1957 ak instaure yon diktatè brutale fondée soswa tèur. Ses Tontons Macoutes — milice paramilite — sèment la tèur dans tout le peyi. En 1964, il se proclame prezidan à vie. À sa mort en 1971, son fils Jean-Claude "Baby Doc" Duvalier lui succède. Sous leur règne, nan dizaines de milliers d'opposants se tués, torturés oswa contraints à l'exil. La dynasty duvalieriste pran fin en 1986 ak fuite de Jean-Claude vers la France.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">1957 – 1986 &bull; Dictature</p>
+ <h3 class="timeline-card__title">Dictature nan Duvalier</h3>
+ <p class="timeline-card__desc">François "Papa Doc" Duvalier pran pouvwa a en 1957 ak instaure yon diktatè brutale fonde soswa tèur. Ses Tontons Macoutes — milice paramilite — sèment tèur nan tout peyi. En 1964, li proclame prezidan à vie. À li lanmò en 1971, li fils Jean-Claude "Baby Doc" Duvalier lui succède. Sous yo règne, nan dizaines nan milliers d'opposants tués, torturés oswa contraints à l'exil. dynasty duvalieriste pran fin en 1986 ak fuite nan Jean-Claude vè France.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">29 septembre 1991 &bull; Coup d'État</p>
-            <h3 class="timeline-card__title">Coup d'État milite contre Aristide</h3>
-            <p class="timeline-card__desc">Le prezidan Jean-Bertrand Aristide, premye prezidan démocratiquement élu d'Haïti, se renversé par yon koudeta milite conduit par jeneral la Raoul Cédras. Aristide part en exil. La junte milite qui s'empare nan pouvoir impose yon régime de tèur : plis de 3 000 personnes se tuées, nan milliers arrêtées ak torturées. Un embargo entènasyonal se imposé à Haïti. En 1994, sous pression américaine, la junte accepte de céder pouvwa a ak Aristide se rétabli dans ses fonctions.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">29 septembre 1991 &bull; Coup d'État</p>
+ <h3 class="timeline-card__title">Coup d'État milite kont Aristide</h3>
+ <p class="timeline-card__desc">prezidan Jean-Bertrand Aristide, premye prezidan démocratiquement élu d'Haïti, renversé pa yon koudeta milite conduit pa jeneral Raoul Cédras. Aristide part en exil. junte milite ki s'empare nan pouvwa impose yon régime nan tèur : plis nan 3 000 personnes tuées, nan milliers arrêtées ak torturées. Yon embargo entènasyonal imposé à Haïti. En 1994, anba pression ameriken, junte accepte nan céder pouvwa a ak Aristide rétabli nan li yo fonctions.</p>
+ </div>
+ </div>
 
-        <div class="timeline-item">
-          <div class="timeline-card" style="border-left-color: var(--red);">
-            <p class="timeline-card__year">7 juillak 2021 &bull; Assassinat</p>
-            <h3 class="timeline-card__title">Assassinat nan Prezidan Jovenel Moïse</h3>
-            <p class="timeline-card__desc">Dans la nuit nan 6 au 7 juillak 2021, le prezidan ayisyen Jovenel Moïse se assassiné à son domicile privé de Pétion-Vil par yon commando armé. Sa fanm Martine se grièvement blessée. Cak acte sans précédent dans l'istwa récente d'Haïti plonge le peyi nan yon crise politik profonde. Le contexte se deja marqué par yon insécurité grandissante, yon profonde division politik ak yon légitimité contestée de Moïse lui-même. L'enquête soswa commanditaires rete incomplète.</p>
-          </div>
-        </div>
+ <div class="timeline-item">
+ <div class="timeline-card" style="border-left-color: var(--red);">
+ <p class="timeline-card__year">7 juillak 2021 &bull; Assassinat</p>
+ <h3 class="timeline-card__title">Assassinat nan Prezidan Jovenel Moïse</h3>
+ <p class="timeline-card__desc">Dans nwit nan 6 nan 7 juillak 2021, prezidan ayisyen Jovenel Moïse assassiné à li domicile privé nan Pétion-Vil pa yon commando armé. Sa fanm Martine grièvement blessée. Cak acte san précédent nan l'istwa récente d'Haïti plonge peyi nan yon crise politik pwofon. kontèks deja make pa yon insécurité granissante, yon pwofon division politik ak yon légitimité contestée nan Moïse lui-même. L'enquête soswa commanditaires rete incomplète.</p>
+ </div>
+ </div>
 
-      </div>
-    </div>
-  </section>
+ </div>
+ </div>
+ </section>
 
 
-  <section class="cta-section">
-    <div class="container">
-      <h2>Voir les Jalons Konstitisyonnels</h2>
-      <p>Dekouvri les gran étapes konstitisyonnelles ak enstitisyonnelles qui ont structuré l'État haïtien.</p>
-      <a href="timeline-konstitisyons.html" class="btn btn-cta-white">Voir les Konstitisyons →</a>
-    </div>
-  </section>
+ <section class="cta-section">
+ <div class="container">
+ <h2>Voir Jalons Konstitisyonnels</h2>
+ <p>Dekouvri gran étapes konstitisyonnelles ak enstitisyonnelles ki gen structuré l'État ayisyen.</p>
+ <a href="timeline-konstitisyons.html" class="btn btn-cta-white">Voir Konstitisyons →</a>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-brand__logo">
-            Repiblik Ayiti
-          </div>
-          <p>
-            Une célébration nan extraordinaire istwa d'Haïti, de sa kilti
-            vibrante ak de son pèp remarquable. Dédié à partager l'istwa de
-            premye Repiblik nwa nan mond lan.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Eksplore</h4>
-          <ul>
-            <li><a href="index.html">Akèy</a></li>
-            <li><a href="about.html">Soswa Ayiti</a></li>
-            <li><a href="history.html">Istwa</a></li>
-            <li><a href="tourism.html">Touris</a></li>
-            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
-            <li><a href="archives.html">Achiv</a></li>
-            <li><a href="bibliography.html">Bibliyografi</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Kilti &amp; Sosyete</h4>
-          <ul>
-            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
-            <li><a href="vodou.html">Vodou</a></li>
-            <li><a href="gastronomy.html">Gastwonomi</a></li>
-            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
-            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
-            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
-            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Istwa &amp; Enstitisyon</h4>
-          <ul>
-            <li><a href="timeline.html">Kwonolouji</a></li>
-            <li><a href="heroes.html">Ewò Nasyonal</a></li>
-            <li><a href="lidès.html">Lidè</a></li>
-            <li><a href="konstitisyon.html">Konstitisyon</a></li>
-            <li><a href="enstitisyons.html">Enstitisyon</a></li>
-            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Pran Kontak</h4>
-          <ul>
-            <li><a href="contact.html">Kontakte Nou</a></li>
-            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
-            <li><a href="license.html">Mentions L&eacute;gales</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
-        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
-        <span class="footer-editorial">Ce projak se n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti se &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
-      </div>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mentions L&eacute;gales</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sou Ha&iuml;ti &eacute;crits nan l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
+ </div>
+ </div>
+ </footer>
 
-  <script src="../js/script.js"></script>
-  <script src="../js/premium.js"></script>
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){e.stopPropagation();sw.classList.toggle('open');});
+  document.addEventListener('click',function(){sw.classList.remove('open');});
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  // Auto-redirect based on stored preference
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
 </body>
 </html>

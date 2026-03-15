@@ -1,418 +1,465 @@
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#00209F" />
-  <title>Fanm qui ont changé l'Istwa d'Haïti | RepiblikHaïti.org</title>
-  <meta name="description" content="De Bois Caïman aux salons politiks nan XIXe syèk, nan combats revolisyonnaires aux luttes contemporaines — les fanm ayisyèn ont toujoswa été au cœur nan istwa nationale." />
-  <meta name="author" content="RepiblikHaïti.org" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/premium.css" />
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Fanm ki gen changé l'Istwa d'Haïti | RepiblikHaïti.org</title>
+ <meta name="description" content="De Bois Caïman aux salons politiks nan XIXe syèk, nan combats revolisyonnaires aux luttes contemporaines — les fanm ayisyèn ont toujoswa été au cœur nan istwa nationale." />
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher */
+.lang-switcher { position: relative; margin-left: 1rem; }
+.lang-switcher__btn { background: none; border: 1px solid rgba(255,255,255,0.3); color: inherit; padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: border-color 0.2s; }
+.lang-switcher__btn:hover { border-color: rgba(255,255,255,0.7); }
+.lang-switcher__menu { display: none; position: absolute; top: 110%; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-width: 150px; z-index: 1000; overflow: hidden; }
+.lang-switcher.open .lang-switcher__menu { display: block; }
+.lang-option { display: block; padding: 0.6rem 1rem; color: #333; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+.lang-option:hover { background: #f0f4ff; }
+.lang-option.active { background: #e8f0fe; font-weight: 600; }
+@media (max-width: 768px) { .lang-switcher { margin-left: 0; margin-top: 0.5rem; } .lang-switcher__menu { right: auto; left: 0; } }
+</style>
 </head>
 <body>
 
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Back to top -->
-  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
 
-  <header class="site-header">
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="Akèy">
-          Repiblik Ayiti
-        </a>
-        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
-          <a href="index.html">Akèy</a>
-          <a href="about.html">Soswa Nou</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="history.html">Istwa Jeneral</a>
-              <a href="timeline.html">Kwonolouji</a>
-              <a href="heroes.html">Ewò Nasyonal</a>
-              <a href="lidès.html">Lidè</a>
-              <a href="konstitisyon.html">Konstitisyon</a>
-              <a href="enstitisyons.html">Enstitisyon</a>
-            </div>
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang">
+            🇭🇹 Kreyòl ▾
+          </button>
+          <div class="lang-switcher__menu">
+            <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
+            <a href="#" class="lang-option active" data-lang="ht">🇭🇹 Kreyòl</a>
           </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti.html">Kilti &amp; Atizay</a>
-              <a href="vodou.html">Vodou</a>
-              <a href="lwa.html">Lwa yo</a>
-              <a href="gastronomy.html">Gastwonomi</a>
-              <a href="holidays.html">Joswa Ferye</a>
-            </div>
-          </div>
-          <a href="tourism.html">Touris</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti-vivante.html">Kilti Vivan</a>
-              <a href="creativite-populaire.html">Kreyativite Popilè</a>
-              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
-              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
-              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
-              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
-              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
-              <a href="instabilite-politik.html">Enstabilite Politik</a>
-              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
-              <a href="services-essentiels.html">Sèvis Esansyèl</a>
-              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
-              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="encyclopedia.html">Ansiklopedi</a>
-              <a href="archives.html">Achiv</a>
-              <a href="bibliography.html">Bibliyografi</a>
-            </div>
-          </div>
-          <a href="contact.html">Kontak</a>
-        </nav>
+        </div>
         <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
 
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
-    <div class="search-overlay__inner">
-      <div class="search-overlay__header">
-        <div class="search-input-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
-        </div>
-        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
-      </div>
-      <div class="search-results" id="searchResults" aria-live="polite"></div>
-    </div>
-  </div>
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
 
-  <section class="page-hero page-hero--history">
-    <div class="container">
-      <p class="page-hero__label">Mémoire &amp; Rezistans</p>
-      <h1 class="page-hero__title">Fanm qui ont changé l'Istwa d'Haïti</h1>
-      <p class="page-hero__desc">De Bois Caïman aux salons politiks nan XIXe syèk, nan combats revolisyonnaires aux luttes contemporaines — les fanm ayisyèn ont toujoswa été au cœur nan istwa nationale, menm lè les livres ne les mentionnaient pas.</p>
-    </div>
-  </section>
+ <section class="page-hero page-hero--history">
+ <div class="container">
+ <p class="page-hero__label">Mémoire &amp; Rezistans</p>
+ <h1 class="page-hero__title">Fanm ki gen changé l'Istwa d'Haïti</h1>
+ <p class="page-hero__desc">De Bois Caïman nan salons politiks nan XIXe syèk, nan combats revolisyonnaires nan luttes contemporaines — fanm ayisyèn gen toujoswa été nan cœur nan istwa nasyonal, menm lè liv pa mentionnaient pas.</p>
+ </div>
+ </section>
 
-  <div class="breadcrumb">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <a href="index.html">Akèy</a>
-        <span>/</span>
-        <span>Fanm dans l'Istwa</span>
-      </nav>
-    </div>
-  </div>
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <span>Fanm nan l'Istwa</span>
+ </nav>
+ </div>
+ </div>
 
-  <section class="section">
-    <div class="container">
-      <p class="section-label">Figures Oubliées &amp; Redécouvertes</p>
-      <h2>Des fanm au cœur nan istwa nationale</h2>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:2rem;">
-        L'istwa officielle d'Haïti a longtemps été écrite au masculin. Les généraux, les prezidans, les fondateurs ont occupé le devant nan scène — ak derrière eux, nan marges nan rapports militaires, nan journaux littéraires de province, nan mémoires orales transmises de génération en génération, vivaient nan fanm qui avaient combattu, créé, organisé, résisté. Ce qui suit se yon tentative de rendre à quelques-unes d'entre elles la place qu'elles n'auraient jamè dû perdre.
-      </p>
+ <section class="section">
+ <div class="container">
+ <p class="section-label">Figures Oubliées &amp; Redécouvertes</p>
+ <h2>Des fanm nan cœur nan istwa nasyonal</h2>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:2rem;">
+ L'istwa officielle d'Haïti a longtemps été écrite nan masculin. généraux, prezidans, fondateurs gen occupé devan nan scène — ak dèyè eux, nan marges nan rapports milites, nan journaux littéraires nan province, nan mémoires orales transmises nan génération en génération, vivaient nan fanm ki te gen combattu, créé, organisé, résisté. Ce ki suit yon tentative nan rendre à quelques-unes d'entre yo plas ke elles pa auraient jamè dû perdre.
+ </p>
 
-      <!-- Cécile Fatiman -->
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Cécile Fatiman</h3>
-          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Active 1791 · Mambo, co-officiant de Bois Caïman</p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Dans la nuit nan 14 août 1791 (sèten soursa yo indiquent le 21 août — la date exacte rete débattue), nan yon clairière nan plaine nan Nord, se déroula seremoni an de Bois Caïman — l'événement fondateur qui précède de kèk jours le début nan insurrection généralisée de Saint-Domingue. Cécile Fatiman, mambo vodou, te à la tête de seremoni an aux côtés nan officiant Dutty Boukman. Les soursa yo la décrivent tankoswa la fille d'yon princesse afriken ak d'yon colon français, aux longs cheveux noirs — portrait ambivalent ki reflete autant les projections nan époque que les réalités biographiques.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Selon les récits les plis répandus, c'se elle qui sacrifia yon porc noir ak distribua le sang aux hommes ak fanm assemblés — yon acte rituel destiné à sceller le pacte collectif de rezistans. La dimension espirityèl de Bois Caïman n'se pas séparable de sa dimension politik : nan yon contexte où esklav yo n'avaient aucyon espace d'organisation légale, rityèl la vodoswa constituait le seul cadre capable de rassembler nan centaines de personnes de langs ak d'origines diverses autour d'yon engagement commun.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Cécile Fatiman épousa pa suite Louis Michel Pierrot, qui devint prezidan d'Haïti en 1845-1846. Elle aurait vécu jiska plis de 112 ans, traversant la quasi-totalité nan XIXe syèk ayisyen — si les dates se exactes, elle fut contemporaine an menm tan nan esklavaj kolonyal ak nan premye abolisyon nan esklavaj aux États-Unis.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            L'historiographie de Bois Caïman se complexe. La cérémonie te longtemps contestée oswa minimisée par nan historiens sceptiques quant à ses détails, voire par nan milieux relijye ayisyen qui ont cherché à effacer la dimension vodoswa nan origines nationales. Elle te redécouverte ak réhabilitée au cours nan XXe syèk, ak Cécile Fatiman avec elle — byenke son nom rete mwens konnen que celui de Boukman, dont priyè a se entrée nan canon scolaire haïtien.
-          </p>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· Mambo vodou, plaine nan Nord</li>
-              <li>· Co-officiant de Bois Caïman, août 1791</li>
-              <li>· Sacrifice nan porc noir, distribution nan sang</li>
-              <li>· Épouse de Louis Michel Pierrot (prezidan 1845)</li>
-              <li>· Aurait vécu plis de 112 ans</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <!-- Cécile Fatiman -->
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Cécile Fatiman</h3>
+ <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Active 1791 · Mambo, co-officiant nan Bois Caïman</p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Dans nwit nan 14 août 1791 (sèten soursa yo indiquent 21 août — date exacte rete débattue), nan yon clairière nan plèn nan Nord, déroula seremoni an nan Bois Caïman — l'événement fondateur ki précède nan kèk jou début nan insurrection généralisée nan Saint-Domingue. Cécile Fatiman, mambo vodou, te à tête nan seremoni an nan côtés nan officiant Dutty Boukman. soursa yo décrivent tankoswa fille d'yon princesse afriken ak d'yon kolon fransè, nan longs cheveux noirs — portrait ambivalent ki reflete autant projections nan époque ke réalités biographiques.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Selon récits plis répandus, c'se li ki sacrifia yon porc noir ak distribua sang nan gason ak fanm assemblés — yon acte rityèl destiné à sceller pacte collectif nan rezistans. dimension espirityèl nan Bois Caïman pa se pa séparable nan li dimension politik : nan yon kontèks kote esklav yo pa avaient aucyon espace d'òganizasyon légale, rityèl vodoswa constituait seul cadre capable nan rassembler nan centaines nan personnes nan langs ak d'origines diverses otou d'yon engagement commun.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Cécile Fatiman épousa pa suite Louis Michel Pierrot, ki devint prezidan d'Haïti en 1845-1846. Elle aurait vécu jiska plis nan 112 ans, traversant quasi-totalité nan XIXe syèk ayisyen — si dates exactes, li te contemporaine an menm tan nan esklavaj kolonyal ak nan premye abolisyon nan esklavaj nan États-Unis.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ L'historiographie nan Bois Caïman complexe. seremoni te longtemps contestée oswa minimisée pa nan historiens sceptiques quant à li yo détails, voire pa nan milieux relijye ayisyen ki gen cherché à effacer dimension vodoswa nan origines nasyonals. Elle te redécouverte ak réhabilitée nan cours nan XXe syèk, ak Cécile Fatiman ak li — byenke li non rete mwens konnen ke celui nan Boukman, ke priyè a entrée nan canon scolaire ayisyen.
+ </p>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· Mambo vodou, plèn nan Nord</li>
+ <li>· Co-officiant nan Bois Caïman, août 1791</li>
+ <li>· Sacrifice nan porc noir, distribution nan sang</li>
+ <li>· Épouse nan Louis Michel Pierrot (prezidan 1845)</li>
+ <li>· Aurait vécu plis nan 112 ans</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- Marie-Jeanne Lamartinière -->
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Marie-Jeanne Lamartinière</h3>
-          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Active 1803 · Combattante à Crête-à-Pierrot</p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            La batay de Crête-à-Pierrot, livrée en mars 1802, se l'yon nan plis dramatiques de Revolisyon ayisyèn nan. Une poignée de soldats revolisyonnaires sous les ordres nan général Louis Daure Lamartinière résista pandan plizyè semaines aux forsa yo expéditionnaires de Leclerc, envoyées par Napoléon pour rétablir l'ordre colonial. C'se dans ce contexte que le nom de Marie-Jeanne Lamartinière entre dans l'istwa — ak presque aussitôt en disparaît.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Elle combattit déguisée en soldat aux côtés nan garnison. Quand son mari fut blessé, elle continua à se battre. Les officiers français, nanurs propres rapports, notèrent avec étonnement la présence de fanm armées parmi les défenseurs — yon consécration involontaire, d'autant plis significative qu'elle émane nan ennemi. Être citée par ses adversaires se souvan la seule forme de rekonesans disponible pour ceux que l'istwa dominante n'a pas de raison d'enregistrer.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            On ne sait presque rien de Marie-Jeanne Lamartinière avant sa a batay ni après. Elle n'a pas laissé de mémoires, de lettres, de postérité politik. Son nom survit parce qu'yon rapport milite français, daté de 1802, a mentionné yon fanm qui se battait nan rangs ennemis avec suffisamment de bravoure pour mériter yon note. C'se peu, ak c'se beaucoup.
-          </p>
+ <!-- Marie-Jeanne Lamartinière -->
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Marie-Jeanne Lamartinière</h3>
+ <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Active 1803 · Combattante à Crête-à-Pierrot</p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ batay nan Crête-à-Pierrot, livrée en mars 1802, l'yon nan plis dramatiques nan Revolisyon ayisyèn nan. Yon poignée nan sòlda revolisyonnaires anba ordres nan jeneral Louis Daure Lamartinière résista pandan plizyè semaines nan forsa yo expéditionnaires nan Leclerc, envoyées pa Napoléon pou rétablir l'ordre kolonyal. C'se nan li a kontèks ke non nan Marie-Jeanne Lamartinière ant nan l'istwa — ak presque aussitôt en disparaît.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Elle combattit déguisée en sòlda nan côtés nan garnison. Quand li mari te blessé, li continua à battre. officiers fransè, nanurs propres rapports, notèrent ak étonnement présence nan fanm armées pami défenseurs — yon consécration involontaire, d'autant plis significative ke elle émane nan ennemi. Être citée pa li yo adversaires souvan seule fòm nan rekonesans disponible pou ceux ke l'istwa dominante pa a pa nan raison d'enregistrer.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ On pa sait presque rien nan Marie-Jeanne Lamartinière anvan li a batay ni après. Elle pa a pa laissé nan mémoires, nan lettres, nan postérité politik. Son non survit parce ke yon rapport milite fransè, daté nan 1802, a mentionné yon fanm ki battait nan rangs ennemis ak suffisamment nan bravoure pou mériter yon note. C'se peu, ak c'se beaucoup.
+ </p>
 
-          <aside class="researcher-note" aria-label="Note de recherche">
-            Le cas Lamartinière illustre yon phénomène récurrent dans l'historiographie nan fanm combattantes : elles entrent nan archives par accident — yon rapport milite ennemi, yon récit de témoin surprise, yon note marginale — ak n'en ressortent que si quelqu'yon décide de chercher. L'absence de mention nan soursa yo ayisyèn n'indique pas l'absence nan faits ; elle indique qui a écrit l'istwa ak dans quel but. Les fanm qui combattaient « tankoswa nan hommes » ne rentraient pas nan catégories narratives disponibles ak disparaissaient donk de memwa a enstitisyonnelle.
-          </aside>
-        </div>
-        <div>
-          <div style="background:var(--red,#D21034);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:#fff;text-transform:uppercase;margin-bottom:1rem;opacity:0.8;">Repères</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· Combattante à Crête-à-Pierrot, mars 1802</li>
-              <li>· Épouse nan général Louis Daure Lamartinière</li>
-              <li>· Citée dans nan rapports milite français</li>
-              <li>· Combattit déguisée en soldat</li>
-              <li>· Biographie avant/après : inconnue</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ cas Lamartinière montre yon phénomène récurrent nan l'historiographie nan fanm combattantes : yo entrent nan archives pa accident — yon rapport milite ennemi, yon récit nan témoin surprise, yon note marginale — ak pa en ressortent ke si quelke yon décide nan chercher. L'absence nan mention nan soursa yo ayisyèn pa indique pa l'absence nan faits ; li indique ki a écrit l'istwa ak nan quel but. fanm ki combattaient « tankoswa nan gason » pa rentraient pa nan catégories narratives disponibles ak disparaissaient donk nan memwa a enstitisyonnelle.
+ </aside>
+ </div>
+ <div>
+ <div style="background:var(--red,#D21034);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:#fff;text-transform:uppercase;margin-bottom:1rem;opacity:0.8;">Repères</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· Combattante à Crête-à-Pierrot, mars 1802</li>
+ <li>· Épouse nan jeneral Louis Daure Lamartinière</li>
+ <li>· Citée nan nan rapports milite fransè</li>
+ <li>· Combattit déguisée en soldat</li>
+ <li>· Biographie avant/après : inconnue</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- Sanité Bélair -->
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Sanité (Suzanne) Bélair</h3>
-          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1781 – 1802 · Officière revolisyonnaire</p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Née à Verrettes en 1781, Suzanne — konnen sous le nom de Sanité — Bélair te yon fanm lib de couleur qui rejoignit les forsa yo revolisyonnaires ak obtint le grade de lieutenant. Ce détail mérite d'être souligné : dans l'ensemble nan mond atlantique nan fin nan XVIIIe syèk, les fanm ne détenaient pratiquement jamè de granan milite officiels. Sanité Bélair fut yon exception documentée, nan yon revolisyon qui multipliait les exceptions.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Elle combattit aux côtés de son mari Charles Bélair, neveu de Toussaint Louverture. Capturés ensemble pa forsa yo françaises de Leclerc en 1802, tout deux furent condamnés à mort. À l'heure de son exécution par fusillade, Sanité Bélair refusa le bandeau que l'on offrait aux condamnés. Elle te âgée de vingt ak yon ans. Son exécution avait été orchestrée tankoswa yon spectacle public destiné à démoraliser les rebelles — en montrant qu'yon fanm, yon officière, n'te pas à l'abri nan répression française.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            L'effak fut inverse. Le courage de Sanité Bélair face au peloton d'exécution devint yon récit de rezistans transmis nan rangs revolisyonnaires. Elle se jounen jodi a représentée soswa billak de cinquante gournan ayisyen — l'yon nan rares fanm à figurer soswa monnaie nasyonal — byenke sa a consécration tardive ne compense pas nan syèks d'effacement nan manuels scolaires.
-          </p>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· Née à Verrettes, 1781</li>
-              <li>· Grade de lieutenant dans lame a revolisyonnaire</li>
-              <li>· Épouse de Charles Bélair, neveu de Toussaint</li>
-              <li>· Refusa le bandeau devant le peloton d'exécution</li>
-              <li>· Exécutée à 21 ans, 1802</li>
-              <li>· Figure soswa billak de 50 gourdes</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <!-- Sanité Bélair -->
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Sanité (Suzanne) Bélair</h3>
+ <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1781 – 1802 · Officière revolisyonnaire</p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Née à Verrettes en 1781, Suzanne — konnen anba non nan Sanité — Bélair te yon fanm lib nan couleur ki rejoignit forsa yo revolisyonnaires ak obtint grade nan lieutenant. Ce détail mérite d'être souligné : nan l'ensemble nan mond atlantique nan fin nan XVIIIe syèk, fanm pa détenaient pratiquement jamè nan granan milite officiels. Sanité Bélair te yon exception documentée, nan yon revolisyon ki multipliait exceptions.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Elle combattit nan côtés nan li mari Charles Bélair, neveu nan Toussaint Louverture. Capturés ensemble pa forsa yo fransèzs nan Leclerc en 1802, tout deux furent condamnés à mort. À l'heure nan li exécution pa fusillade, Sanité Bélair refusa bandeau ke l'on offrait nan condamnés. Elle te âgée nan vingt ak yon ans. Son exécution te gen été orchestrée tankoswa yon spectacle public destiné à démoraliser rebelles — en montrant ke yon fanm, yon officière, pa te pa à l'abri nan répression fransèz.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ L'effak te inverse. courage nan Sanité Bélair face nan peloton d'exécution devint yon récit nan rezistans transmis nan rangs revolisyonnaires. Elle jounen jodi a représentée soswa billak nan cinquante gournan ayisyen — l'yon nan rares fanm à figurer soswa monnaie nasyonal — byenke li a consécration tardive pa compense pa nan syèks d'effacement nan manuels scolaires.
+ </p>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· Née à Verrettes, 1781</li>
+ <li>· Grade nan lieutenant nan lame a revolisyonnaire</li>
+ <li>· Épouse nan Charles Bélair, neveu nan Toussaint</li>
+ <li>· Refusa bandeau devan peloton d'exécution</li>
+ <li>· Exécutée à 21 ans, 1802</li>
+ <li>· Figure soswa billak nan 50 gourdes</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- Marie-Claire Heureuse -->
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Marie-Claire Heureuse Félicité Bonheur</h3>
-          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1758 – 1858 · Impératrice consort, figure revolisyonnaire</p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Marie-Claire Heureuse Félicité Bonheur se entrée dans memwa a nasyonal principalement tankoswa l'épouse de Jean-Jacques Dessalines, l'Impératrice d'Haïti. Cette définition relationnelle — konnen atravè son mari — a largement occulté ce que les soursa yo contemporaines révèlent de son action propre. Pendant les anes revolisyonnaires, elle te konnen pour soigner les blessés nan deux camps — revolisyonnaires ak soldats fransè — yon acte d'humanité suffisamment remarquable poswa nan témwens fransè le documentent nanurs correspondances.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Après l'assassinat de Dessalines en octobre 1806, elle continua à vivre en Haïti, traversant toute l'istwa politik nan XIXe syèk — les présidensa yo de Pétion, Boyer, Soulouque, les crises konstitisyonnelles, les occupations étrangères, les revolisyons de palais. Si les dates rapportées se exactes, elle mourut en 1858 à l'âge de cent ans, ayant vécu depi l'époque nan esklavaj kolonyal jusqu'aux prémisa yo nan débats qui allaient mener à la lagè de Sécession américaine.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Sa mémoire te instrumentalisée pa gouvènmans successifs ayisyen sous le titre de « Mère nan Nation » — yon hommage qui, en la cantonnant au registre maternel ak domestique, a simultanément célébré ak contenu son héritage. Ce mécanisme — élever yon fanm pour mieux la circonscrire — se l'yon nan traits récurrents de memwa a nasyonal ayisyèn à l'égard de ses figures féminines.
-          </p>
+ <!-- Marie-Claire Heureuse -->
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Marie-Claire Heureuse Félicité Bonheur</h3>
+ <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1758 – 1858 · Impératrice consort, figure revolisyonnaire</p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Marie-Claire Heureuse Félicité Bonheur entrée nan memwa a nasyonal prensipalman tankoswa l'épouse nan Jean-Jacques Dessalines, l'Impératrice d'Haïti. Cette définition relationnelle — konnen atravè li mari — a largement occulté li a ke soursa yo contemporaines révèlent nan li action propre. Pendant anes revolisyonnaires, li te konnen pou soigner blessés nan deux camps — revolisyonnaires ak sòlda fransè — yon acte d'humanité suffisamment remarquable poswa nan témwens fransè documentent nanurs correspondances.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Après l'assassinat nan Dessalines en octobre 1806, li continua à vivre en Haïti, traversant toute l'istwa politik nan XIXe syèk — présidensa yo nan Pétion, Boyer, Soulouque, crises konstitisyonnelles, occupations étrangères, revolisyons nan palais. Si dates rapportées exactes, li mourut en 1858 à l'âge nan cent ans, ayant vécu depi l'époque nan esklavaj kolonyal juske aux prémisa yo nan débats ki allaient mener à lagè nan Sécession ameriken.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Sa memwa te instrumentalisée pa gouvènmans successifs ayisyen anba titre nan « Mère nan Nation » — yon hommage qui, en cantonnant nan registre maternel ak domestique, a simultanément selebre ak contenu li eritaj. Ce mécanisme — élever yon fanm pou mieux circonscrire — l'yon nan traits récurrents nan memwa a nasyonal ayisyèn à l'égard nan li yo figures féminines.
+ </p>
 
-          <aside class="researcher-note" aria-label="Note de recherche">
-            L'archétype nan « mère nan nation » se yon dispositif mémoriel ambigu. Il honore yon fanm tout en la déplaçant hors nan champ politik vers le champ affectif. Marie-Claire Heureuse vin yon figure de douceur ak de miséricorde, contrepoint nécessaire à la brutalité perçue de Dessalines — ak dans ce rôle, elle n'a plis d'agency propre, seulement yon fonction symbolique. Ce type de récupération mémorielle a affecté d'lòt figures féminines ayisyèn nan XIXe syèk ak mérite yon lecture critique systématique. La célébration kapab être yon forme d'enfermement.
-          </aside>
-        </div>
-        <div>
-          <div style="background:var(--red,#D21034);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:#fff;text-transform:uppercase;margin-bottom:1rem;opacity:0.8;">Repères</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· Née ca. 1758, morte ca. 1858</li>
-              <li>· Impératrice consort, épouse de Dessalines</li>
-              <li>· Soignait les blessés nan deux camps</li>
-              <li>· Survécut 52 ans à l'assassinat de Dessalines</li>
-              <li>· Instrumentalisée tankoswa « Mère nan Nation »</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ L'archétype nan « mère nan nasyon » yon dispositif mémoriel ambigu. Il honore yon fanm tout en déplaçant hors nan champ politik vè champ affectif. Marie-Claire Heureuse vin yon figure nan douceur ak nan miséricorde, contrepoint nécessaire à brutalité perçue nan Dessalines — ak nan li a rôle, li pa a plis d'agency propre, seulement yon fonction symbolique. Ce kalite nan récupération mémorielle a affecté d'lòt figures féminines ayisyèn nan XIXe syèk ak mérite yon lecture critique systématique. célébration kapab être yon fòm d'enfermement.
+ </aside>
+ </div>
+ <div>
+ <div style="background:var(--red,#D21034);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:#fff;text-transform:uppercase;margin-bottom:1rem;opacity:0.8;">Repères</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· Née ca. 1758, morte ca. 1858</li>
+ <li>· Impératrice consort, épouse nan Dessalines</li>
+ <li>· Soignait blessés nan deux camps</li>
+ <li>· Survécut 52 ans à l'assassinat nan Dessalines</li>
+ <li>· Instrumentalisée tankoswa « Mère nan Nation »</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- Célimène Labastè -->
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
-        <strong>Célimène Labastè (1828 – 1902)</strong> — Poétesse ak journaliste, Célimène Labastè fut l'yon nan premières fanm à publier régulièrement nan journaux littéraires ayisyen nan XIXe syèk. Directrice de <em>L'Album littéraire</em> nan anes 1840, elle publia yon poésie résolument politik, défendant la souvènte ayisyèn nan yon période marquée pa pressions extérieures — la question nan rekonesans française, les dettes coloniales, les ingérensa yo américaines naissantes. Sa voix publique nan yon espace intellectuel dominé par gason yo constituait déjà, en soi, yon acte de rezistans ; ses positions politiks l'amplifient. Elle se jounen jodi a peu konnen en dehors nan cercles spécialisés en literati ayisyèn nan XIXe syèk.
-      </p>
+ <!-- Célimène Labastè -->
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ <strong>Célimène Labastè (1828 – 1902)</strong> — Poétesse ak journaliste, Célimène Labastè te l'yon nan premyes fanm à publier régulièrement nan journaux littéraires ayisyen nan XIXe syèk. Directrice nan <em>L'Album littéraire</em> nan anes 1840, li publia yon poésie résolument politik, défendant souvènte ayisyèn nan yon période make pa pressions extérieures — question nan rekonesans fransèz, dettes kolonyals, ingérensa yo amerikens naissantes. Sa voix publique nan yon espace intellectuel dominé pa gason yo constituait déjà, en soi, yon acte nan rezistans ; li yo positions politiks l'amplifient. Elle jounen jodi a peu konnen en dehors nan cercles spécialisés en literati ayisyèn nan XIXe syèk.
+ </p>
 
-      <!-- Adèle Métellus -->
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
-        <strong>Adèle Métellus (active anes 1820)</strong> — Figure mwens konnen nan istwa politik post-revolisyonnaire, Adèle Métellus dirigea yon groupe de fanm à Jérémie nan période turbulente qui suivit lanmò a d'Alexandre Pétion. Dans yon contexte de fragmentation politik ak d'incertitude soswa lidèship national, elle organisa nan réseaux d'approvisionnement alimentaire poswa forsa yo locales de rezistans — yon forme d'organisation logistique ak communautaire qui ne laisse pas de trasa yo nan chroniques milite men sans laquelle aucyon rezistans n'aurait pu se maintenir. Son istwa se transmise principalement par tradisyon oral nan région nan Grand'Anse.
-      </p>
+ <!-- Adèle Métellus -->
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ <strong>Adèle Métellus (active anes 1820)</strong> — Figure mwens konnen nan istwa politik post-revolisyonnaire, Adèle Métellus dirigea yon groupe nan fanm à Jérémie nan période turbulente ki suivit lanmò a d'Alexandre Pétion. Dans yon kontèks nan fragmentation politik ak d'incertitude soswa lidèship nasyonal, li organisa nan réseaux d'approvisionnement alimentaire poswa forsa yo locales nan rezistans — yon fòm d'òganizasyon logistique ak communautaire ki pa laisse pa nan trasa yo nan chroniques milite men san laquelle aucyon rezistans pa aurait pu maintenir. Son istwa transmise prensipalman pa tradisyon oral nan rejyon nan Grand'Anse.
+ </p>
 
-      <!-- Marie Vieux-Chauvet -->
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Marie Vieux-Chauvet</h3>
-          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1916 – 1973 · Romancière, exilée</p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Marie Vieux-Chauvak se probablement la plis gran romancière qu'Haïti ait produite — ak l'yon nan voix littéraires les plis importantes nan XXe syèk caribéen. Son œuvre, largement ignorée pandan nan décennies, se jounen jodi a redécouverte tankoswa yon monument de literati a mondiale. Née à Port-au-Prince en 1916, elle publie plizyè romans avant de signer, en 1968, le livre qui faillit la détruire.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            <em>Amour, Colère ak Folie</em> (1968) se yon triptyque de nouvo qui décrit avec yon précision clinique ak yon violence littéraire sans précédent la tèur d'État sous le régime Duvalier — la violence sexuelle exercée pa Tontons Macoutes, la délation, la complicité nan élites, la lente désintégration nan âme sous la diktatè. Le livre fut publié à Paris. À Port-au-Prince, la réaction fut immédiate : la fanmi Chauvak racheta l'intégralité nan tirage disponible en Haïti pour éviter les représailles nan régime. Marie Vieux-Chauvak s'exila à New York, où elle mourut en 1973 nan yon relatif anonymat.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Le livre fut redécouvert depis anes 1980 ak réédité en 2005. Il se jounen jodi a enseigné nan universités francophones ak anglophones, traduit en plizyè langs, ak rekonèt tankoswa l'yon nan textes fondateurs de literati a caribéenne contemporaine. La question qui demeure se celle-ci : qu'avons-nous pernan pandan les quarante ans où il te introuvable ?
-          </p>
+ <!-- Marie Vieux-Chauvet -->
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Marie Vieux-Chauvet</h3>
+ <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1916 – 1973 · Romancière, exilée</p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Marie Vieux-Chauvak probablement plis gran romancière ke Haïti ait produite — ak l'yon nan voix littéraires plis enpòtans nan XXe syèk caribéen. Son œuvre, largement ignorée pandan nan décennies, jounen jodi a redécouverte tankoswa yon monument nan literati a mondiale. Née à Port-au-Prince en 1916, li publie plizyè woman anvan nan signer, en 1968, liv ki faillit détruire.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ <em>Amour, Colère ak Folie</em> (1968) yon triptyque nan nouvo ki décrit ak yon précision clinique ak yon violence littéraire san précédent tèur d'État anba régime Duvalier — violence sexuelle exercée pa Tontons Macoutes, délation, complicité nan élites, lente désintégration nan nanm anba diktatè. liv te publié à Paris. À Port-au-Prince, réaction te immédiate : fanmi Chauvak racheta l'intégralité nan tirage disponible en Haïti pou éviter représailles nan régime. Marie Vieux-Chauvak s'exila à New York, kote li mourut en 1973 nan yon relatif anonymat.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ liv te redécouvert depis anes 1980 ak réédité en 2005. Il jounen jodi a enseigné nan universités francophones ak anglophones, traduit en plizyè langs, ak rekonèt tankoswa l'yon nan textes fondateurs nan literati a caribéenne contemporaine. question ki demeure celle-ci : ke avons-nous pernan pandan quarante ans kote li te introuvable ?
+ </p>
 
-          <aside class="researcher-note" aria-label="Note de recherche">
-            Le cas de Marie Vieux-Chauvak illustre tankount la censure littéraire sous Duvalier a fonctionné non pas principalement par l'interdiction officielle — trop voyante — men pa menace implicite, la pression familiale, l'autocensure ak l'exil. Le rachat nan tirage pa pwòp fanmi nan auteure n'se pas yon trahison : c'se yon décision prise sous contrainte nan yon contexte où lavi a de Chauvak te en danger réel. Ce mécanisme a effacé nan dizaines d'œuvres ayisyèn nan période 1957-1986, dont beaucoup ne ap jamè retrouvées. <em>Amour, Colère ak Folie</em> a survécu parce qu'il avait été publié à Paris. Les textes restés en Haïti n'ont souvan pas eu sa a chance.
-          </aside>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· Née à Port-au-Prince, 1916</li>
-              <li>· <em>Amour, Colère ak Folie</em>, Paris, 1968</li>
-              <li>· Tirage racheté par sa fanmi sous pression nan régime</li>
-              <li>· Exil à New York, mort en 1973</li>
-              <li>· Redécouverte ak réédition depis anes 1980</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ cas nan Marie Vieux-Chauvak montre tankount censure littéraire anba Duvalier a fonctionné non pa prensipalman pa l'interdiction officielle — trop voyante — men pa menace implicite, pression familiale, l'autocensure ak l'exil. rachat nan tirage pa pwòp fanmi nan auteure pa se pa yon trahison : c'se yon décision prise anba contrainte nan yon kontèks kote lavi a nan Chauvak te en danger réel. Ce mécanisme a effacé nan dizaines d'œuvres ayisyèn nan période 1957-1986, ke beaucoup pa ap jamè retrouvées. <em>Amour, Colère ak Folie</em> a survécu parce ke il te gen été publié à Paris. textes restés en Haïti pa ont souvan pa eu li a chance.
+ </aside>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· Née à Port-au-Prince, 1916</li>
+ <li>· <em>Amour, Colère ak Folie</em>, Paris, 1968</li>
+ <li>· Tirage racheté pa li fanmi anba pression nan régime</li>
+ <li>· Exil à New York, lanmò en 1973</li>
+ <li>· Redécouverte ak réédition depis anes 1980</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <!-- Madeleine Sylvain Bouchereau -->
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
-        <strong>Madeleine Sylvain Bouchereau (1905 – 1970)</strong> — Juriste, sociologue ak militante féministe, Madeleine Sylvain Bouchereau fut la premye fanm ayisyèn à obtenir yon doctorat en droit. Elle fonda la <em>Liga Femina Haïti</em> ak consacra yon large partie de sa carrière à kanpay la pour dwa a de vote nan fanm ayisyèn — yon combat qui aboutit en 1950, date à laquelle Haïti accorda enfin le suffrage féminin. Ses travaux sociologiques soswa condition nan fanm en Haïti anticipent de plizyè décennies les questionnements nan féminisme académique contemporain, byen qu'ils rete largement ignorés nan bibliographies nan étunan de genre internationales — yon effacement supplémentaire, sa a fois disciplinaire.
-      </p>
+ <!-- Madeleine Sylvain Bouchereau -->
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ <strong>Madeleine Sylvain Bouchereau (1905 – 1970)</strong> — Juriste, sociologue ak militante féministe, Madeleine Sylvain Bouchereau te premye fanm ayisyèn à obtenir yon doctorat en droit. Elle fonda <em>Liga Femina Haïti</em> ak consacra yon large pati nan li carrière à kanpay pou dwa a nan vote nan fanm ayisyèn — yon combat ki aboutit en 1950, date à laquelle Haïti accorda enfin suffrage féminin. Ses travaux sociologiques soswa condition nan fanm en Haïti anticipent nan plizyè décennies questionnements nan féminisme académique contemporain, byen ke ils rete largement ignorés nan bibliographies nan étunan nan genre entènasyonals — yon effacement supplémentaire, li a fwa disciplinaire.
+ </p>
 
-      <!-- Paulette Poujol-Oriol -->
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
-        <strong>Paulette Poujol-Oriol (1926 – 2011)</strong> — Ekrivene, enseignante ak militante, Paulette Poujol-Oriol a occupé yon place centrale nan vie kiltille ak féministe ayisyèn pandan plis de cinquante ans. Son roman <em>Le creuset</em> (1980) se le premye gran roman ayisyen à placer au centre nan narration les expériensa yo nan fanm pauvres nan milieux urbains — invisibles nan literati ayisyèn classique qui s'te principalement intéressée aux élites. Longtemps prezidane nan Ligue Féminine d'Action Sociale, elle a incarné la continuité ant féminisme nan pionnières de 1950 ak les générations suivantes.
-      </p>
+ <!-- Paulette Poujol-Oriol -->
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ <strong>Paulette Poujol-Oriol (1926 – 2011)</strong> — Ekrivene, enseignante ak militante, Paulette Poujol-Oriol a occupé yon plas centrale nan lavi kiltille ak féministe ayisyèn pandan plis nan cinquante ans. Son woman <em>creuset</em> (1980) premye gran woman ayisyen à placer nan sant nan narration expériensa yo nan fanm pòvs nan milieux ibens — invisibles nan literati ayisyèn classique ki s'te prensipalman intéressée nan élites. Longtemps prezidane nan Ligue Féminine d'Action Sociale, li a incarné continuité ant féminisme nan pionnières nan 1950 ak générations suivantes.
+ </p>
 
-      <!-- Florette Nicolas -->
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
-        <strong>Florette Nicolas (1935 – 2010)</strong> — Éducatrice ak lidè nan sosyete sivil, Florette Nicolas te kreye nan anes 1970, atravè le FONHEP (Fonds National d'Edikasyon à la Population), les premiers programmes d'alphabétisation fonctionnelle destinés aux fanm nan zones rurales haïtiennes. Dans yon peyi où le taux d'analphabétisme nan fanm en milieu rural dépassait ankò 70 % à la fin nan anes 1960, ce travail représentait yon intervention concrète ak durable — mwens spectaculaire qu'yon discours politik, men d'yon portée transformatrice byen plis profonde soswa conditions de vie quotidienne nan bénéficiaires.
-      </p>
+ <!-- Florette Nicolas -->
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ <strong>Florette Nicolas (1935 – 2010)</strong> — Éducatrice ak lidè nan sosyete sivil, Florette Nicolas te kreye nan anes 1970, atravè FONHEP (Fonds National d'Edikasyon à Popilasyon), premyes programmes d'alphabétisation fonctionnelle destinés nan fanm nan zones rirals ayisyèns. Dans yon peyi kote taux d'analphabétisme nan fanm en milieu riral dépassait ankò 70 % à fin nan anes 1960, li a travail représentait yon intervention concrète ak durable — mwens spectaculaire ke yon discours politik, men d'yon portée transformatrice byen plis pwofon soswa conditions nan lavi quotidienne nan bénéficiaires.
+ </p>
 
-      <!-- Mirlande Manigat -->
-      <div class="two-col--wide-left" style="margin-bottom:3rem;">
-        <div>
-          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Mirlande Manigat</h3>
-          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1940 – · Professeure de droit konstitisyonnel, candidate prezidanielle</p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Mirlande Manigat représente la synthèse de plizyè nan trajectoires décrites dans paj sa a : intellectuelle, militante enstitisyonnelle, figure politik majeure. Professeure de droit konstitisyonnel, auteure de travaux de référence soswa konstitisyon haïtienne, ansyen Première Dame pandan la présidence de Leslie Manigat (1988), elle s'se présentée à l'eleksyon prezidanielle de 2010-2011 — nan yon contexte de catastrophe nasyonal post-séisme — ak vin tounene la premye fanm dans istwa Ayiti à atteindre le second tour d'yon eleksyon prezidanielle.
-          </p>
-          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-            Sa candidature te an menm tan yon événement istorik ak yon révélateur nan rezistanss persistantes à l'accès nan fanm aux plis hautes fonctions nan État haïtien. Elle n'a pas remporté l'eleksyon, men elle a ouvert yon possibilité que l'istwa politik ayisyèn n'avait jamè ankò formulée. La portée symbolique de ce franchissement nan seuil n'se pas moindre paske le résultat final te négatif.
-          </p>
-        </div>
-        <div>
-          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
-            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
-              <li>· Née en 1940</li>
-              <li>· Docteure en droit konstitisyonnel</li>
-              <li>· Ancienne Première Dame (1988)</li>
-              <li>· Candidate prezidanielle, 2010-2011</li>
-              <li>· 1re fanm au second tour d'yon prezidanielle haïtienne</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <!-- Mirlande Manigat -->
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Mirlande Manigat</h3>
+ <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1940 – · Professeure nan droit konstitisyonnel, candidate prezidanielle</p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Mirlande Manigat reprezante synthèse nan plizyè nan trajectoires décrites nan paj li a : intellectuelle, militante enstitisyonnelle, figure politik gwo. Professeure nan droit konstitisyonnel, auteure nan travaux nan référence soswa konstitisyon ayisyèn, ansyen Première Dame pandan présidence nan Leslie Manigat (1988), li s'se présentée à l'eleksyon prezidanielle nan 2010-2011 — nan yon kontèks nan katastwòf nasyonal post-séisme — ak vin tounene premye fanm nan istwa Ayiti à atteindre second tour d'yon eleksyon prezidanielle.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Sa candidature te an menm tan yon événement istorik ak yon révélateur nan rezistanss persistantes à l'accès nan fanm nan plis hautes fonctions nan État ayisyen. Elle pa a pa remporté l'eleksyon, men li a ouvert yon possibilité ke l'istwa politik ayisyèn pa avait jamè ankò formulée. portée symbolique nan li a franchissement nan seuil pa se pa moindre paske résultat final te négatif.
+ </p>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· Fèt nan 1940</li>
+ <li>· Docteure en droit konstitisyonnel</li>
+ <li>· Ancienne Première Dame (1988)</li>
+ <li>· Candidate prezidanielle, 2010-2011</li>
+ <li>· 1re fanm nan second tour d'yon prezidanielle ayisyèn</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-    </div>
-  </section>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-brand__logo">
-            Repiblik Ayiti
-          </div>
-          <p>
-            Une célébration nan extraordinaire istwa d'Haïti, de sa kilti
-            vibrante ak de son pèp remarquable. Dédié à partager l'istwa de
-            premye Repiblik nwa nan mond lan.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Eksplore</h4>
-          <ul>
-            <li><a href="index.html">Akèy</a></li>
-            <li><a href="about.html">Soswa Ayiti</a></li>
-            <li><a href="history.html">Istwa</a></li>
-            <li><a href="tourism.html">Touris</a></li>
-            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
-            <li><a href="archives.html">Achiv</a></li>
-            <li><a href="bibliography.html">Bibliyografi</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Kilti &amp; Sosyete</h4>
-          <ul>
-            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
-            <li><a href="vodou.html">Vodou</a></li>
-            <li><a href="gastronomy.html">Gastwonomi</a></li>
-            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
-            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
-            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
-            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Istwa &amp; Enstitisyon</h4>
-          <ul>
-            <li><a href="timeline.html">Kwonolouji</a></li>
-            <li><a href="heroes.html">Ewò Nasyonal</a></li>
-            <li><a href="lidès.html">Lidè</a></li>
-            <li><a href="konstitisyon.html">Konstitisyon</a></li>
-            <li><a href="enstitisyons.html">Enstitisyon</a></li>
-            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Pran Kontak</h4>
-          <ul>
-            <li><a href="contact.html">Kontakte Nou</a></li>
-            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
-            <li><a href="license.html">Mentions L&eacute;gales</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
-        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
-        <span class="footer-editorial">Ce projak se n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti se &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
-      </div>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mentions L&eacute;gales</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sou Ha&iuml;ti &eacute;crits nan l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
+ </div>
+ </div>
+ </footer>
 
-  <script src="../js/script.js"></script>
-  <script src="../js/premium.js"></script>
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){e.stopPropagation();sw.classList.toggle('open');});
+  document.addEventListener('click',function(){sw.classList.remove('open');});
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  // Auto-redirect based on stored preference
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
 </body>
 </html>

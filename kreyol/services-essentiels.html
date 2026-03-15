@@ -1,249 +1,296 @@
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#00209F" />
-  <title>Sèvis Esansyèl en Haïti | </title>
-  <meta name="author" content="RepiblikHaïti.org" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/premium.css" />
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Sèvis Esansyèl en Haïti | </title>
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher */
+.lang-switcher { position: relative; margin-left: 1rem; }
+.lang-switcher__btn { background: none; border: 1px solid rgba(255,255,255,0.3); color: inherit; padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: border-color 0.2s; }
+.lang-switcher__btn:hover { border-color: rgba(255,255,255,0.7); }
+.lang-switcher__menu { display: none; position: absolute; top: 110%; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-width: 150px; z-index: 1000; overflow: hidden; }
+.lang-switcher.open .lang-switcher__menu { display: block; }
+.lang-option { display: block; padding: 0.6rem 1rem; color: #333; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+.lang-option:hover { background: #f0f4ff; }
+.lang-option.active { background: #e8f0fe; font-weight: 600; }
+@media (max-width: 768px) { .lang-switcher { margin-left: 0; margin-top: 0.5rem; } .lang-switcher__menu { right: auto; left: 0; } }
+</style>
 </head>
 <body>
 
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Back to top -->
-  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
 
-    <header class="site-header">
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="Akèy">
-          Repiblik Ayiti
-        </a>
-        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
-          <a href="index.html">Akèy</a>
-          <a href="about.html">Soswa Nou</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="history.html">Istwa Jeneral</a>
-              <a href="timeline.html">Kwonolouji</a>
-              <a href="heroes.html">Ewò Nasyonal</a>
-              <a href="lidès.html">Lidè</a>
-              <a href="konstitisyon.html">Konstitisyon</a>
-              <a href="enstitisyons.html">Enstitisyon</a>
-              <a href="presidents.html">Pwofil Prezidan yo</a>
-              <a href="revolution-batays.html">Batay Revolisyon an</a>
-              <a href="relations-internationales.html">Relasyon Entènasyonal</a>
-            </div>
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ <a href="presidents.html">Pwofil Prezidan yo</a>
+ <a href="revolution-batays.html">Batay Revolisyon an</a>
+ <a href="relations-internationales.html">Relasyon Entènasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ <a href="atiss.html">Atis Vizyèl</a>
+ <a href="mizik-istwa.html">Istwa Mizik</a>
+ <a href="litterature.html">Literati</a>
+ <a href="creole.html">Lang Kreyòl</a>
+ <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
+ <a href="glossaire-creole.html">Glosè Kreyòl</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="departements.html">10 Depatman yo</a>
+ <a href="geographie.html">Jeyografi Fizik</a>
+ <a href="anviwonman.html">Anviwonman</a>
+ <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
+ <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
+ <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang">
+            🇭🇹 Kreyòl ▾
+          </button>
+          <div class="lang-switcher__menu">
+            <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
+            <a href="#" class="lang-option active" data-lang="ht">🇭🇹 Kreyòl</a>
           </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti.html">Kilti &amp; Atizay</a>
-              <a href="vodou.html">Vodou</a>
-              <a href="lwa.html">Lwa yo</a>
-              <a href="gastronomy.html">Gastwonomi</a>
-              <a href="holidays.html">Joswa Ferye</a>
-              <a href="atiss.html">Atis Vizyèl</a>
-              <a href="mizik-istwa.html">Istwa Mizik</a>
-              <a href="litterature.html">Literati</a>
-              <a href="creole.html">Lang Kreyòl</a>
-              <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
-              <a href="glossaire-creole.html">Glosè Kreyòl</a>
-            </div>
-          </div>
-          <a href="tourism.html">Touris</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="departements.html">10 Depatman yo</a>
-              <a href="geographie.html">Jeyografi Fizik</a>
-              <a href="anviwonman.html">Anviwonman</a>
-              <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
-              <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti-vivante.html">Kilti Vivan</a>
-              <a href="creativite-populaire.html">Kreyativite Popilè</a>
-              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
-              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
-              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
-              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
-              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
-              <a href="instabilite-politik.html">Enstabilite Politik</a>
-              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
-              <a href="services-essentiels.html">Sèvis Esansyèl</a>
-              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
-              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="encyclopedia.html">Ansiklopedi</a>
-              <a href="archives.html">Achiv</a>
-              <a href="bibliography.html">Bibliyografi</a>
-              <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
-              <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
-            </div>
-          </div>
-          <a href="contact.html">Kontak</a>
-        </nav>
+        </div>
         <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
 
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
-    <div class="search-overlay__inner">
-      <div class="search-overlay__header">
-        <div class="search-input-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
-        </div>
-        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
-      </div>
-      <div class="search-results" id="searchResults" aria-live="polite"></div>
-    </div>
-  </div>
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
 
-  <section class="page-hero page-hero--history">
-    <div class="container">
-      <p class="page-hero__label">Servisa yo Publics</p>
-      <h1 class="page-hero__title">Sèvis Esansyèl en Haïti</h1>
-      <p class="page-hero__desc">L'état nan servisa yo fondamentaux, les défis d'accès ak les besoins urgents nan population haïtienne.</p>
-    </div>
-  </section>
+ <section class="page-hero page-hero--history">
+ <div class="container">
+ <p class="page-hero__label">Servisa yo Publics</p>
+ <h1 class="page-hero__title">Sèvis Esansyèl en Haïti</h1>
+ <p class="page-hero__desc">L'état nan servisa yo fondamentaux, défis d'accès ak besoins urgents nan popilasyon ayisyèn.</p>
+ </div>
+ </section>
 
-  <div class="breadcrumb">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <a href="index.html">Akèy</a>
-        <span>/</span>
-        <span>Sèvis Esansyèl</span>
-      </nav>
-    </div>
-  </div>
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <span>Sèvis Esansyèl</span>
+ </nav>
+ </div>
+ </div>
 
-  <section class="section">
-    <div class="container">
-      <div class="editorial-intro">
-        <p class="section-label">Droit au développement</p>
-        <h2>Quand l'État ne délivre pas les servisa yo fondamentaux</h2>
-        <p>L'accès à l'eau potable, à l'électricité, aux soins de santé ak à yon edikasyon de qualité n'se pas yon luxe&nbsp;: c'se la condition sine qua non nan développement humain. En Haïti, sa yo servisa yo se absents, insuffisants oswa d'yon qualité si dégradée qu'ils ne remplissent pas leur fonction poswa majorité nan population. Cette situation n'se pas yon fatalité géographique — Haïti dispose de ressoursa yo en eau, d'yon potentiel solaire ak hydraulique considérable, ak d'yon jenès nombreuse. Elle résulte de décennies de sous-investissement public, de prédation politik ak d'yon architecture nan èd entènasyonal qui a souvan substitué nan ONG à yon État défaillant plutôt que de construire sa a État.</p>
-        <p>Moins de 45&nbsp;% nan population a accès à yon source d'eau potable améliorée. Les populations rurales parcourent souvan plizyè kilomètres pour s'approvisionner à nan soursa yo dont la qualité bactériologique se douteuse. Port-au-Prince, malgre sa densité, ne bénéficie que de kèk heures d'alimentation en électricité par jour — lorsqu'elle fonctionne. Les zones rurales sont, nanur gran majorité, entièrement hors nan réseau. L'introduction nan choléra pa casques bleus nan MINUSTAH en 2010 a tué plis de 10&nbsp;000 personnes nan yon peyi où les infrastructures d'assainissement te deja en état d'effondrement.</p>
-        <p>Le sistèm sante public fonctionne principalement grâce aux ONG ak aux organisations confessionnelles. Les hôpitaux publics manquent chroniquement de médicaments, d'équipements ak de personnel qualifié. La densité médicale — environ 0,3 médecin pour 1&nbsp;000 habitants — se l'yon nan plis basses nan mond. Les crises sécuritaires récentes ont contraint plizyè hôpitaux à fermer oswa à réduire drastiquement leurs activités.</p>
+ <section class="section">
+ <div class="container">
+ <div class="editorial-intro">
+ <p class="section-label">Droit nan développement</p>
+ <h2>Quand l'État pa délivre pa servisa yo fondamentaux</h2>
+ <p>L'accès à l'eau potable, à l'électricité, nan soins nan sante ak à yon edikasyon nan qualité pa se pa yon luxe&nbsp;: c'se condition sine qua non nan devlopman humain. En Haïti, li yo servisa yo absents, insuffisants oswa d'yon qualité si dégradée ke ils pa remplissent pa yo fonction poswa majorité nan popilasyon. Cette situation pa se pa yon fatalité géographique — Haïti dispose nan ressoursa yo en eau, d'yon potentiel solaire ak hydraulique considérable, ak d'yon jenès nombreuse. Elle résulte nan décennies nan sous-investissement public, nan prédation politik ak d'yon architecture nan èd entènasyonal ki a souvan substitué nan ONG à yon État défaillant plutôt ke nan construire li a État.</p>
+ <p>Moins nan 45&nbsp;% nan popilasyon a accès à yon anba d'eau potable améliorée. popilasyons rirals parcourent souvan plizyè kilomètres pou s'approvisionner à nan soursa yo ke qualité bactériologique douteuse. Port-au-Prince, malgre li densité, pa bénéficie ke nan kèk heures d'alimentation en électricité pa jou — lorske elle fonctionne. zones rirals sont, nanur gran majorité, entièrement hors nan réseau. L'introduction nan choléra pa casques bleus nan MINUSTAH en 2010 a tué plis nan 10&nbsp;000 personnes nan yon peyi kote infrastructures d'assainissement te deja en état d'effondrement.</p>
+ <p>sistèm sante public fonctionne prensipalman grâce nan ONG ak nan òganizasyons confessionnelles. hôpitaux publics manquent chroniquement nan médicaments, d'équipements ak nan personnel qualifié. densité médicale — anviwon 0,3 médecin pou 1&nbsp;000 abitan — l'yon nan plis basses nan mond. crises sécuritaires récentes gen contraint plizyè hôpitaux à fermer oswa à réduire drastiquement yo aktivite.</p>
 
-        <div class="researcher-note researcher-note--analytical" aria-label="Note de recherche">
-          <strong>Note analytique&nbsp;:</strong> La dépendance d'Haïti aux ONG poswa délivrance nan servisa yo essentiels se souvan présentée tankoswa yon solution pragmatique à l'incapacité nan État. Elle se en réalité yon problème en soi. Les ONG — plis de 10&nbsp;000 seraient actives en Haïti selon sèten estimations — opèrent selon leurs propres priorités, sans coordination nationale, sans obligation de transparence envers les populations ayisyèn ak sans mandat de construire nan capacités étatiques durables. Leurs interventions se cycliques, concentrées autour nan crises médiatisées, ak créent yon dépendance qui affaiblit structurellement la légitimité ak les capacités nan État ayisyen à gouverner son pwòp territoire.
-        </div>
-      </div>
-    </div>
-  </section>
+ <div class="researcher-note researcher-note--analytical" aria-label="Note de recherche">
+ <strong>Note analytique&nbsp;:</strong> dépendance d'Haïti nan ONG poswa délivrance nan servisa yo esansyèls souvan présentée tankoswa yon solution pragmatique à l'incapacité nan État. Elle en réalité yon problème en soi. ONG — plis nan 10&nbsp;000 seraient actives en Haïti dapre sèten estimations — opèrent dapre yo propres priorités, san coordination nasyonal, san obligation nan transparence envers popilasyons ayisyèn ak san mandat nan construire nan capacités étatiques durables. Leurs interventions cycliques, concentrées otou nan crises médiatisées, ak créent yon dépendance ki affaiblit structurellement légitimité ak capacités nan État ayisyen à gouverner li pwòp territoire.
+ </div>
+ </div>
+ </div>
+ </section>
 
-  <section class="section section--alt">
-    <div class="container">
-      <div class="two-col--wide-left">
-        <div>
-          <p class="section-label">Edikasyon</p>
-          <h2>Un système à deux vitesses</h2>
-          <p>Environ 80&nbsp;% nan établissements scolaires ayisyen se privés. Cette proportion — unique nan Amériques — se le résultat direct nan désengagement nan État nan enseignement public sur plizyè décennies. Les frais de scolarité, menm nan établissements les mwens coûteux, représentent yon part significative nan revenu nan ménages pauvres. Le taux d'abandon scolaire se élevé, an patikilye chez les filles nan zones rurales. Le niveau de formation nan enseignants se inégal, faute d'yon système public de formation pédagogique robuste.</p>
-          <p>La scolarisation a progressé en termes de taux d'accès, men les résultats d'apprentissage rete préoccupants. Des étunan ont montré que de nombreux élèves atteignent la fin nan cycle primaire sans maîtriser les compétensa yo de base en lecture ak en calcul. L'enseignement en fransè — lang étrangère poswa majorité nan timoyon ayisyen dont la lang maternelle se kreyòl la — constitue yon obstacle pédagogique supplémentaire que le système tarde à résoudre.</p>
-        </div>
-        <div>
-          <p class="section-label">Énergie ak territoire</p>
-          <h2>Les inégalités d'accès aux infrastructures</h2>
-          <p>Les disparités territoriales dans l'accès aux servisa yo se profondes. Les depatmans éloignés nan capitale — Grand'Anse, Nippes, Nord-Ouse — se souvan les plis mal desservis, avec nan routes impraticables qui coupent les populations nan marchés, nan hôpitaux ak nan écoles secondaires. Ces inégalités territoriales alimentent l'exode rural vers yon capitale deja saturée, renforçant la surcharge nan servisa yo de Port-au-Prince sans résoudre les déficits nan zones d'origine. Le potentiel nan énergies renouvelables — solaire ak hydraulique — rete en gran partie inexploité, faute d'investissements publics ak privés conséquents.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+ <section class="section section--alt">
+ <div class="container">
+ <div class="two-col--wide-left">
+ <div>
+ <p class="section-label">Edikasyon</p>
+ <h2>Yon système à deux vitesses</h2>
+ <p>Environ 80&nbsp;% nan établissements scolaires ayisyen privés. Cette proportion — inik nan Amériques — résultat direct nan désengagement nan État nan enseignement public sou plizyè décennies. frais nan scolarité, menm nan établissements mwens coûteux, représentent yon part significative nan revenu nan ménages pòvs. taux d'abandon scolaire élevé, an patikilye lakay filles nan zones rirals. niveau nan formation nan enseignants inégal, faute d'yon système public nan formation pédagogique robuste.</p>
+ <p>scolarisation a progressé en termes nan taux d'accès, men rezilta d'apprentissage rete préoccupants. Des étunan gen montré ke nan nombreux élèves atteignent fin nan cycle primaire san maîtriser compétensa yo nan base en lecture ak en calcul. L'enseignement en fransè — lang étrangère poswa majorité nan timoyon ayisyen ke lang maternelle kreyòl — konstitye yon obstacle pédagogique supplémentaire ke système tarde à résoudre.</p>
+ </div>
+ <div>
+ <p class="section-label">Énergie ak territoire</p>
+ <h2>inégalités d'accès nan infrastructures</h2>
+ <p>disparités territoriales nan l'accès nan servisa yo pwofons. depatmans éloignés nan kapital — Grand'Anse, Nippes, Nord-Ouse — souvan plis mal desservis, ak nan routes impraticables ki coupent popilasyons nan marchés, nan hôpitaux ak nan écoles secondaires. Ces inégalités territoriales alimentent l'exode riral vè yon kapital deja saturée, renforçant surcharge nan servisa yo nan Port-au-Prince san résoudre déficits nan zones d'origine. potentiel nan énergies renouvelables — solaire ak hydraulique — rete en gran pati inexploité, faute d'investissements publics ak privés conséquents.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-brand__logo">
-            Repiblik Ayiti
-          </div>
-          <p>
-            Une célébration nan extraordinaire istwa d'Haïti, de sa kilti
-            vibrante ak de son pèp remarquable. Dédié à partager l'istwa de
-            premye Repiblik nwa nan mond lan.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Eksplore</h4>
-          <ul>
-            <li><a href="index.html">Akèy</a></li>
-            <li><a href="about.html">Soswa Ayiti</a></li>
-            <li><a href="history.html">Istwa</a></li>
-            <li><a href="tourism.html">Touris</a></li>
-            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
-            <li><a href="archives.html">Achiv</a></li>
-            <li><a href="bibliography.html">Bibliyografi</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Kilti &amp; Sosyete</h4>
-          <ul>
-            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
-            <li><a href="vodou.html">Vodou</a></li>
-            <li><a href="gastronomy.html">Gastwonomi</a></li>
-            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
-            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
-            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
-            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Istwa &amp; Enstitisyon</h4>
-          <ul>
-            <li><a href="timeline.html">Kwonolouji</a></li>
-            <li><a href="heroes.html">Ewò Nasyonal</a></li>
-            <li><a href="lidès.html">Lidè</a></li>
-            <li><a href="konstitisyon.html">Konstitisyon</a></li>
-            <li><a href="enstitisyons.html">Enstitisyon</a></li>
-            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Pran Kontak</h4>
-          <ul>
-            <li><a href="contact.html">Kontakte Nou</a></li>
-            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
-            <li><a href="license.html">Mentions L&eacute;gales</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
-        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
-        <span class="footer-editorial">Ce projak se n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti se &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
-      </div>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mentions L&eacute;gales</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sou Ha&iuml;ti &eacute;crits nan l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
+ </div>
+ </div>
+ </footer>
 
-  <script src="../js/script.js"></script>
-  <script src="../js/premium.js"></script>
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){e.stopPropagation();sw.classList.toggle('open');});
+  document.addEventListener('click',function(){sw.classList.remove('open');});
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  // Auto-redirect based on stored preference
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
 </body>
 </html>

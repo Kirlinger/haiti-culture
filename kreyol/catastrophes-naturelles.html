@@ -1,500 +1,547 @@
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#00209F" />
-  <title>Katastwòf Natirèl en Haïti : Séismes, Ouragans ak Résilience | RepubliqueHaiti.org</title>
-  <meta name="description" content="Istwa nan katastwòf natirèl en Haïti : le séisme de 2010, siklòn nan Matthew, le cyclone Flora ak byen d'autres. Comment Haïti fè face aux risques naturels ak reconstruit après chak désastre." />
-  <meta name="author" content="RepiblikHaïti.org" />
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Katastwòf Natirèl en Haïti : Séismes, Ouragans ak Résilience | RepubliqueHaiti.org</title>
+ <meta name="description" content="Istwa nan katastwòf natirèl en Haïti : le séisme de 2010, siklòn nan Matthew, le cyclone Flora ak byen d'autres. Comment Haïti fè face aux risques naturels ak reconstruit après chak désastre." />
+ <meta name="author" content="RepiblikHaïti.org" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://republiquehaiti.org/catastrophes-naturelles.html" />
-  <meta property="og:title" content="Katastwòf Natirèl en Haïti : Séismes, Ouragans ak Résilience" />
-  <meta property="og:description" content="Séisme de 2010, ouragan Matthew, cyclone Flora : yon panorama nan katastwòf natirèl qui ont frappé Haïti ak la résilience remarquable de son pèp." />
-  <meta property="og:site_name" content="RepubliqueHaiti.org" />
-  <meta property="og:locale" content="ht_HT" />
+ <!-- Open Graph -->
+ <meta property="og:type" content="article" />
+ <meta property="og:url" content="https://republiquehaiti.org/catastrophes-naturelles.html" />
+ <meta property="og:title" content="Katastwòf Natirèl en Haïti : Séismes, Ouragans ak Résilience" />
+ <meta property="og:description" content="Séisme de 2010, ouragan Matthew, cyclone Flora : yon panorama nan katastwòf natirèl qui ont frappé Haïti ak la résilience remarquable de son pèp." />
+ <meta property="og:site_name" content="RepubliqueHaiti.org" />
+ <meta property="og:locale" content="ht_HT" />
 
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/premium.css" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher */
+.lang-switcher { position: relative; margin-left: 1rem; }
+.lang-switcher__btn { background: none; border: 1px solid rgba(255,255,255,0.3); color: inherit; padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: border-color 0.2s; }
+.lang-switcher__btn:hover { border-color: rgba(255,255,255,0.7); }
+.lang-switcher__menu { display: none; position: absolute; top: 110%; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-width: 150px; z-index: 1000; overflow: hidden; }
+.lang-switcher.open .lang-switcher__menu { display: block; }
+.lang-option { display: block; padding: 0.6rem 1rem; color: #333; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+.lang-option:hover { background: #f0f4ff; }
+.lang-option.active { background: #e8f0fe; font-weight: 600; }
+@media (max-width: 768px) { .lang-switcher { margin-left: 0; margin-top: 0.5rem; } .lang-switcher__menu { right: auto; left: 0; } }
+</style>
 </head>
 <body>
 
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- Back to top -->
-  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
 
-  <header class="site-header">
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="Akèy">
-          Repiblik Ayiti
-        </a>
-        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
-          <a href="index.html">Akèy</a>
-          <a href="about.html">Soswa Nou</a>
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
 
-          <!-- Istwa -->
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="history.html">Istwa Jeneral</a>
-              <a href="timeline.html">Kwonolouji</a>
-              <a href="heroes.html">Ewò Nasyonal</a>
-              <a href="lidès.html">Lidè</a>
-              <a href="konstitisyon.html">Konstitisyon</a>
-              <a href="enstitisyons.html">Enstitisyon</a>
-              <a href="presidents.html">Pwofil Prezidan yo</a>
-              <a href="revolution-batays.html">Batay Revolisyon an</a>
-              <a href="relations-internationales.html">Relasyon Entènasyonal</a>
-            </div>
+ <!-- Istwa -->
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ <a href="presidents.html">Pwofil Prezidan yo</a>
+ <a href="revolution-batays.html">Batay Revolisyon an</a>
+ <a href="relations-internationales.html">Relasyon Entènasyonal</a>
+ </div>
+ </div>
+
+ <!-- Kilti -->
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ <a href="atiss.html">Atis Vizyèl</a>
+ <a href="mizik-istwa.html">Istwa Mizik</a>
+ <a href="litterature.html">Literati</a>
+ <a href="creole.html">Lang Kreyòl</a>
+ <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
+ <a href="glossaire-creole.html">Glosè Kreyòl</a>
+ </div>
+ </div>
+
+ <a href="tourism.html">Touris</a>
+
+ <!-- Jeyografi -->
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="departements.html">10 Depatman yo</a>
+ <a href="geographie.html">Jeyografi Fizik</a>
+ <a href="anviwonman.html">Anviwonman</a>
+ <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
+ <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
+ </div>
+ </div>
+
+ <!-- Sosyete -->
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ <a href="fanm-haiti.html">Fanm d'Haïti</a>
+ </div>
+ </div>
+
+ <!-- Enjeux -->
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ <a href="agrikilti.html">Agrikilti</a>
+ <a href="education-haiti.html">Edikasyon</a>
+ <a href="aide-internationale.html">Aide Internationale</a>
+ <a href="economie-informelle.html">Ekonomi Informelle</a>
+ </div>
+ </div>
+
+ <!-- Portail -->
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
+ <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
+ </div>
+ </div>
+
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang">
+            🇭🇹 Kreyòl ▾
+          </button>
+          <div class="lang-switcher__menu">
+            <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
+            <a href="#" class="lang-option active" data-lang="ht">🇭🇹 Kreyòl</a>
           </div>
-
-          <!-- Kilti -->
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti.html">Kilti &amp; Atizay</a>
-              <a href="vodou.html">Vodou</a>
-              <a href="lwa.html">Lwa yo</a>
-              <a href="gastronomy.html">Gastwonomi</a>
-              <a href="holidays.html">Joswa Ferye</a>
-              <a href="atiss.html">Atis Vizyèl</a>
-              <a href="mizik-istwa.html">Istwa Mizik</a>
-              <a href="litterature.html">Literati</a>
-              <a href="creole.html">Lang Kreyòl</a>
-              <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
-              <a href="glossaire-creole.html">Glosè Kreyòl</a>
-            </div>
-          </div>
-
-          <a href="tourism.html">Touris</a>
-
-          <!-- Jeyografi -->
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="departements.html">10 Depatman yo</a>
-              <a href="geographie.html">Jeyografi Fizik</a>
-              <a href="anviwonman.html">Anviwonman</a>
-              <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
-              <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
-            </div>
-          </div>
-
-          <!-- Sosyete -->
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti-vivante.html">Kilti Vivan</a>
-              <a href="creativite-populaire.html">Kreyativite Popilè</a>
-              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
-              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
-              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
-              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
-              <a href="fanm-haiti.html">Fanm d'Haïti</a>
-            </div>
-          </div>
-
-          <!-- Enjeux -->
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
-              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
-              <a href="instabilite-politik.html">Enstabilite Politik</a>
-              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
-              <a href="services-essentiels.html">Sèvis Esansyèl</a>
-              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
-              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
-              <a href="agrikilti.html">Agrikilti</a>
-              <a href="education-haiti.html">Edikasyon</a>
-              <a href="aide-internationale.html">Aide Internationale</a>
-              <a href="economie-informelle.html">Ekonomi Informelle</a>
-            </div>
-          </div>
-
-          <!-- Portail -->
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="encyclopedia.html">Ansiklopedi</a>
-              <a href="archives.html">Achiv</a>
-              <a href="bibliography.html">Bibliyografi</a>
-              <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
-              <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
-            </div>
-          </div>
-
-          <a href="contact.html">Kontak</a>
-        </nav>
+        </div>
         <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
 
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
-    <div class="search-overlay__inner">
-      <div class="search-overlay__header">
-        <div class="search-input-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : séisme, ouragan, inondations…" autocomplete="off" />
-        </div>
-        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
-      </div>
-      <div class="search-results" id="searchResults" aria-live="polite"></div>
-    </div>
-  </div>
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : séisme, ouragan, inondations…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
 
-  <!-- Page Hero -->
-  <section class="page-hero page-hero--about">
-    <div class="container">
-      <p class="page-hero__label">Jeyografi</p>
-      <h1 class="page-hero__title">Katastwòf Natirèl en Haïti</h1>
-      <p class="page-hero__desc">Haïti se l'yon nan peyi les plis vulnérables aux katastwòf natirèl nan mond : séismes, ouragans, inondations ak sécheresses frappent yon territoire fragilisé par nan décennies de déforestation ak de sous-développement. Mais à chak épreuve, pèp ayisyen an fè preuve d'yon résilience exceptionnelle.</p>
-    </div>
-  </section>
+ <!-- Page Hero -->
+ <section class="page-hero page-hero--about">
+ <div class="container">
+ <p class="page-hero__label">Jeyografi</p>
+ <h1 class="page-hero__title">Katastwòf Natirèl en Haïti</h1>
+ <p class="page-hero__desc">Haïti l'yon nan peyi plis vulnérables nan katastwòf natirèl nan mond : séismes, ouragans, inondations ak sécheresses frappent yon teritwa fragilisé pa nan décennies nan déforestation ak nan sous-développement. Mais à chak épreuve, pèp ayisyen an fè preuve d'yon résilience exceptionnelle.</p>
+ </div>
+ </section>
 
-  <!-- Breadcrumb -->
-  <div class="breadcrumb">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <a href="index.html">Akèy</a>
-        <span>/</span>
-        <a href="geographie.html">Jeyografi</a>
-        <span>/</span>
-        <span>Katastwòf Natirèl</span>
-      </nav>
-    </div>
-  </div>
+ <!-- Breadcrumb -->
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <a href="geographie.html">Jeyografi</a>
+ <span>/</span>
+ <span>Katastwòf Natirèl</span>
+ </nav>
+ </div>
+ </div>
 
-  <!-- Intro -->
-  <section class="section">
-    <div class="container">
-      <div class="text-block">
-        <p class="section-label">Contexte</p>
-        <h2>Un peyi en premye ligne nan risques naturels</h2>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          Haïti chita à l'intersection de plizyè soursa yo de danger naturel : yon position nan ceinture nan ouragans atlantiques, yon géologie dominée par nan failles actives, nan bassins versants largement déboisés qui amplifient les inondations, ak yon vulnérabilité socio-ekonomik qui transforme chak aléa naturel en catastrophe humanitaire. Le peyi se régulièrement cité parmi les cinq nations les plis exposées aux risques climatiques nan classements internasyonal établis par nan organismes tankoswa <strong>Germanwatch</strong> oswa le <strong>PNUD</strong>.
-        </p>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          Les katastwòf natirèl ne se pas seulement nan phénomènes géophysiques oswa météorologiques : elles révèlent ak amplifient les inégalités sociales. Les quartiers pauvres construits sur nan pentes instables oswa dans nan zones inondables, l'absence d'habitations parasismiques, le manque de systèmes d'alerte précoce, ak les insuffisansa yo nan gestion nan urgensa yo — tout sa yo facteurs fè qu'yon événement d'intensité comparable tue proportionnellement beaucoup plis de personnes en Haïti que nan yon peyi mieux préparé.
-        </p>
-      </div>
-    </div>
-  </section>
+ <!-- Intro -->
+ <section class="section">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Kontèks</p>
+ <h2>Yon peyi en premye ligne nan risques naturels</h2>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Haïti chita à l'intersection nan plizyè soursa yo nan danger naturel : yon position nan ceinture nan ouragans atlantiques, yon géologie dominée pa nan failles actives, nan bassins versants largement déboisés ki amplifient inondations, ak yon vulnérabilité socio-ekonomik ki transforme chak aléa naturel en katastwòf humanitaire. peyi régulièrement cité pami cinq nations plis exposées nan risques climatiques nan classements internasyonal établis pa nan organismes tankoswa <strong>Germanwatch</strong> oswa <strong>PNUD</strong>.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ katastwòf natirèl pa pa seulement nan phénomènes géophysiques oswa météorologiques : yo révèlent ak amplifient inégalités sosyals. quartiers pòvs construits sou nan pentes instables oswa nan nan zones inondables, l'absence d'habitations parasismiques, manque nan systèmes d'alerte précoce, ak insuffisansa yo nan gestion nan urgensa yo — tout li yo facteurs fè ke yon événement d'intensité comparable tue proportionnellement beaucoup plis nan personnes en Haïti ke nan yon peyi mieux préparé.
+ </p>
+ </div>
+ </div>
+ </section>
 
-  <!-- Séismes -->
-  <section class="section section--alt" id="seismes">
-    <div class="container">
-      <div class="text-block">
-        <p class="section-label">Séismes</p>
-        <h2>Les tremblements de tè</h2>
+ <!-- Séismes -->
+ <section class="section section--alt" id="seismes">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Séismes</p>
+ <h2>tremblements nan tè</h2>
 
-        <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;" id="seisme-2010">Le séisme nan 12 janvier 2010</h3>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          Le <strong>12 janvier 2010</strong>, à 16h53 heure locale, yon séisme de magnitude <strong>7,0</strong> a frappé la région de Port-au-Prince, avec yon épicentre à seulement 25 km à l'ouse nan capitale, à faible profondeur (environ 13 km). En kèk secondes, yon gran partie nan quartiers densément peuplés nan capitale s'se effondrée. Les estimations officielles fè état de <strong>220&nbsp;000 à 316&nbsp;000 morts</strong>, 300&nbsp;000 blessés ak 1,5 million de personnes déplacées — faisant de ce séisme l'yon nan katastwòf natirèl les plis meurtrières nan istwa moderne.
-        </p>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          L'ampleur nan destructions s'explique par plizyè facteurs cumulatifs : la proximité nan épicentre d'yon zone urbaine trè dense, la médiocrité nan constructions (beaucoup de bâtiments en béton armé sans normes parasismiques), la géologie nan sols de Port-au-Prince (argiles marines compressibles qui amplifient les onnan sismiques), ak l'extrême pauvreté nan habitants. Des bâtiments enstitisyonnels importants — le Palais National, le Parlement, la Cathédrale de Port-au-Prince — te détruits oswa gravement endommagés.
-        </p>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          La réponse entènasyonal te massive men souvan désorganisée. Plus de <strong>12 milliards de dollars</strong> de dons te promis lors d'yon conférence entènasyonal en mars 2010, men leur utilisation te largement critiquée pour son inefficacité, ses détournements ak le peu de contrôle laissé aux enstitisyons haïtiennes. Par ailleurs, nan soldats nan MINUSTAH (Mission nan Nasyon Zini poswa stabilisation en Haïti) ont introduit le choléra lors nan opérations de secours, déclenchant yon épidémie qui a tué plis de <strong>10&nbsp;000 personnes</strong> supplémentaires.
-        </p>
+ <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;" id="seisme-2010">séisme nan 12 janvier 2010</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ <strong>12 janvier 2010</strong>, à 16h53 heure locale, yon séisme nan magnitude <strong>7,0</strong> a frappé rejyon nan Port-au-Prince, ak yon épicentre à seulement 25 km à l'ouse nan kapital, à faible pwofonur (environ 13 km). En kèk secondes, yon gran pati nan quartiers densément peuplés nan kapital s'se effondrée. estimations officielles fè état nan <strong>220&nbsp;000 à 316&nbsp;000 morts</strong>, 300&nbsp;000 blessés ak 1,5 million nan personnes déplacées — faisant nan li a séisme l'yon nan katastwòf natirèl plis meurtrières nan istwa moderne.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ L'ampleur nan destructions s'explique pa plizyè facteurs cumulatifs : proximité nan épicentre d'yon zone iben trè dense, médiocrité nan constructions (beaucoup nan bâtiments en béton armé san normes parasismiques), géologie nan sols nan Port-au-Prince (argiles marines compressibles ki amplifient onnan sismiques), ak l'extrême pòvté nan habitants. Des bâtiments enstitisyonnels enpòtans — Palais National, Parlement, Cathédrale nan Port-au-Prince — te détruits oswa gravement endommagés.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ réponse entènasyonal te massive men souvan désorganisée. Plus nan <strong>12 milliards nan dollars</strong> nan dons te promis lors d'yon conférence entènasyonal en mars 2010, men yo utilisation te largement critiquée pou li inefficacité, li yo détournements ak peu nan contrôle laissé nan enstitisyons ayisyèns. Par ailleurs, nan sòlda nan MINUSTAH (Mission nan Nasyon Zini poswa stabilisation en Haïti) gen introduit choléra lors nan opérations nan secours, déclenchant yon épidémie ki a tué plis nan <strong>10&nbsp;000 personnes</strong> supplémentaires.
+ </p>
 
-        <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;" id="seisme-2021">Le séisme nan 14 août 2021</h3>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          Onze ans plis tard, le <strong>14 août 2021</strong>, yon nouvo séisme de magnitude <strong>7,2</strong> a frappé la péninsule sud, avec yon épicentre près de Petit-Trou-de-Nippes. Ce tranblemanntè a tué plis de <strong>2&nbsp;200 personnes</strong>, blessé 12&nbsp;000 lòt ak détruit oswa endommagé plis de 130&nbsp;000 menons nan depatmans nan Sud, nan Nippes ak nan Grand'Anse. Les vils de Les Cayes ak de Jérémie te an patikilye touchées. La catastrophe te aggravée pa passage nan tempête tropicale Grace kèk jours plis tard, qui a compliqué les opérations de secours.
-        </p>
-      </div>
-    </div>
-  </section>
+ <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;" id="seisme-2021">séisme nan 14 août 2021</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Onze ans plis tard, <strong>14 août 2021</strong>, yon nouvo séisme nan magnitude <strong>7,2</strong> a frappé péninsule sud, ak yon épicentre près nan Petit-Trou-de-Nippes. Ce tranblemanntè a tué plis nan <strong>2&nbsp;200 personnes</strong>, blessé 12&nbsp;000 lòt ak detwi oswa endommagé plis nan 130&nbsp;000 menons nan depatmans nan Sud, nan Nippes ak nan Grand'Anse. vils nan Cayes ak nan Jérémie te an patikilye touchées. katastwòf te aggravée pa passage nan tempête tropicale Grace kèk jou plis tard, ki a compliqué opérations nan secours.
+ </p>
+ </div>
+ </div>
+ </section>
 
-  <!-- Ouragans et Cyclones -->
-  <section class="section" id="ouragans">
-    <div class="container">
-      <div class="text-block">
-        <p class="section-label">Ouragans</p>
-        <h2>Les cyclones tropicaux</h2>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          Haïti se frappé par nan tempêtes tropicales ak nan ouragans presque chak ane. La saison cyclonique s'étend de juin à novembre, avec yon pic entre août ak octobre. Le peyi subit en moyenne deux à trois tempêtes tropicales par an, ak plizyè ouragans majeurs par décennie.
-        </p>
+ <!-- Ouragans et Cyclones -->
+ <section class="section" id="ouragans">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Ouragans</p>
+ <h2>cyclones tropicaux</h2>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Haïti frappé pa nan tempêtes tropicales ak nan ouragans presque chak ane. saison cyclonique s'étend nan juin à novembre, ak yon pic ant août ak octobre. peyi subit en moyenne deux à trois tempêtes tropicales pa an, ak plizyè ouragans gwos pa décennie.
+ </p>
 
-        <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">Ouragan Flora (1963)</h3>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          Le cyclone <strong>Flora</strong> (octobre 1963), de catégorie 4, se l'yon nan ouragans les plis meurtriers nan istwa caribéenne. Il a tué environ <strong>8&nbsp;000 personnes</strong> en Haïti, principalement nan sud nan peyi. Des inondations catastrophiques ont suivi les pluies torrentielles, engendrant nan glissements de terrain qui ont enseveli villages ak kiltis.
-        </p>
+ <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">Ouragan Flora (1963)</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ cyclone <strong>Flora</strong> (octobre 1963), nan catégorie 4, l'yon nan ouragans plis meurtriers nan istwa caribéenne. Il a tué anviwon <strong>8&nbsp;000 personnes</strong> en Haïti, prensipalman nan sid nan peyi. Des inondations catastrophiques gen suivi pluies torrentielles, engendrant nan glissements nan terrain ki gen enseveli villages ak kiltis.
+ </p>
 
-        <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">Ouragan Jeanne (2004)</h3>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          En septembre <strong>2004</strong>, siklòn nan Jeanne a causé nan inondations dévastatrisa yo à <strong>Gonaïves</strong>, chef-lieu nan depatman nan Artibonite. Plus de <strong>3&nbsp;000 personnes</strong> ont pernan lavi a, ensevelies sous la boue oswa emportées pa torrents. La vil te à l'époque entourée de collines pratiquement dénudées — la déforestation avait fè de Gonaïves yon piège à inondations. Cak événement a mis en lumière le lien fatal entre dégradation anviwonmanale ak risque de catastrophe.
-        </p>
+ <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">Ouragan Jeanne (2004)</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ En septembre <strong>2004</strong>, siklòn nan Jeanne a causé nan inondations dévastatrisa yo à <strong>Gonaïves</strong>, chèf-lye nan depatman nan Artibonite. Plus nan <strong>3&nbsp;000 personnes</strong> gen pernan lavi a, ensevelies anba boue oswa emportées pa torrents. vil te à l'époque entourée nan collines pratiquement dénudées — déforestation te gen fè nan Gonaïves yon piège à inondations. Cak événement a mis en lumière lien fatal ant dégradation anviwonmanale ak risque nan catastrophe.
+ </p>
 
-        <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">Ouragan Sandy (2012)</h3>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          L'ouragan <strong>Sandy</strong> te travèse Haïti en octobre 2012, tuant plis de <strong>50 personnes</strong> ak détruisant nan milliers de menons nan sud nan peyi. Sa trajectoire vers les États-Unis a concentré l'attention entènasyonal sur ses effets dévastateurs à New York, men les dégâts en Haïti, byenke mwens médiatisés, ont causé nan perturbations durables nan production agricole.
-        </p>
+ <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">Ouragan Sandy (2012)</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ L'ouragan <strong>Sandy</strong> te travèse Haïti en octobre 2012, tuant plis nan <strong>50 personnes</strong> ak détruisant nan milliers nan menons nan sid nan peyi. Sa trajectoire vè États-Unis a concentré l'attention entènasyonal sou li yo effets dévastateurs à New York, men dégâts en Haïti, byenke mwens médiatisés, gen causé nan perturbations durables nan production agricole.
+ </p>
 
-        <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">Ouragan Matthew (2016)</h3>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          L'ouragan <strong>Matthew</strong> (catégorie 4, octobre 2016) est l'un des ouragans les plus destructeurs qu'Haïti ait subis depuis des décennies. Avec des vents soutenus de 230 km/h, il a dévasté la péninsule sud, particulièrement les communes de Jérémie (Grand'Anse) et des Cayes (Sud). Plus de <strong>900 personnes</strong> te tuées ak nan centaines de milliers de personnes ont pernan leurs récoltes. La péninsule nan Grande-Anse, grenier en cacao ak bananes nan peyi, a vu 80 à 90 % de ses kiltis détruites. La reconstruction a pris nan anes.
-        </p>
-      </div>
-    </div>
-  </section>
+ <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">Ouragan Matthew (2016)</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ L'ouragan <strong>Matthew</strong> (catégorie 4, octobre 2016) l'un nan ouragans plis destructeurs ke Haïti ait subis depi nan décennies. Avec nan vents soutenus nan 230 km/h, li a dévasté péninsule sud, an patikilye communes nan Jérémie (Grand'Anse) ak nan Cayes (Sud). Plus nan <strong>900 personnes</strong> te tuées ak nan centaines nan milliers nan personnes gen pernan yo récoltes. péninsule nan Grande-Anse, grenier en cacao ak bananes nan peyi, a vu 80 à 90 % nan li yo kiltis détruites. rekonstriksyon a pris nan anes.
+ </p>
+ </div>
+ </div>
+ </section>
 
-  <!-- Inondations et Sécheresses -->
-  <section class="section section--alt" id="inondations">
-    <div class="container">
-      <div class="text-block">
-        <p class="section-label">Aléas climatiques</p>
-        <h2>Inondations, sécheresses ak glissements de terrain</h2>
+ <!-- Inondations et Sécheresses -->
+ <section class="section section--alt" id="inondations">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Aléas climatiques</p>
+ <h2>Inondations, sécheresses ak glissements nan terrain</h2>
 
-        <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">Les inondations récurrentes</h3>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          Indépendamment nan gran ouragans, Haïti se frappé chak ane par nan inondations liées aux pluies saisonnières, aggravées pa déforestation nan bassins versants. Les zones les plis touchées se les vils construites en plaine inondable — Gonaïves, Cabaret, Léogâne, Jacmel — ansanm ak les bidonvils de Port-au-Prince situés le long nan ravines. Les inondations nan plaine nan Cul-de-Sac se quasi annuelles ak affectent nan centaines de milliers de personnes.
-        </p>
+ <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">inondations récurrentes</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Indépendamment nan gran ouragans, Haïti frappé chak ane pa nan inondations liées nan pluies saisonnières, aggravées pa déforestation nan bassins versants. zones plis touchées vils construites en plèn inondable — Gonaïves, Cabaret, Léogâne, Jacmel — ansanm ak bidonvils nan Port-au-Prince sitiye long nan ravines. inondations nan plèn nan Cul-de-Sac quasi annuelles ak affectent nan centaines nan milliers nan personnes.
+ </p>
 
-        <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">Les glissements de terrain</h3>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          Les glissements de terrain constituent yon danger permanent nan zones mònuses peuplées. En mai 2004, nan glissements ont tué plis de <strong>1&nbsp;800 personnes</strong> nan depatman nan Sud-Est, à Mapou. En 2016, plizyè villages te engloutis par nan coulées de boue nan hauteurs nan Grand'Anse après le passage de Matthew. La destruction nan couvert végétal, en éliminant les racines qui retiennent les sols, fè de chak pluie intense yon menace potentielle.
-        </p>
+ <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">glissements nan terrain</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ glissements nan terrain constituent yon danger permanent nan zones mònuses peuplées. En mai 2004, nan glissements gen tué plis nan <strong>1&nbsp;800 personnes</strong> nan depatman nan Sud-Est, à Mapou. En 2016, plizyè villages te engloutis pa nan coulées nan boue nan hauteurs nan Grand'Anse apre passage nan Matthew. destruction nan couvert végétal, en éliminant racines ki retiennent sols, fè nan chak pluie intense yon menace potentielle.
+ </p>
 
-        <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">La sécheresse nan corridor sec</h3>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          Paradoxalement, sèten régions d'Haïti souffrent d'yon <strong>sécheresse chronique</strong>, sitoswa nan <strong>Nord-Ouest</strong> ak dans sèten zones nan Artibonite. Cette aridité se aggravée pa phénomène El Niño qui réduit les précipitations nan Karayib ak pa déforestation qui diminue les précipitations orographiques. La famine menace régulièrement sa yo zones, où les récoltes kapab être entièrement perdues plizyè anes consécutives.
-        </p>
-      </div>
-    </div>
-  </section>
+ <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">sécheresse nan corridor sec</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Paradoxalement, sèten rejyon d'Haïti souffrent d'yon <strong>sécheresse chronique</strong>, sitoswa nan <strong>Nord-Ouest</strong> ak nan sèten zones nan Artibonite. Cette aridité aggravée pa phénomène El Niño ki réduit précipitations nan Karayib ak pa déforestation ki diminue précipitations orographiques. famine menace régulièrement li yo zones, kote récoltes kapab être entièrement perdues plizyè anes consécutives.
+ </p>
+ </div>
+ </div>
+ </section>
 
-  <!-- Résilience -->
-  <section class="section" id="resilience">
-    <div class="container">
-      <div class="text-block">
-        <p class="section-label">Résilience</p>
-        <h2>La résilience ayisyèn face aux catastrophes</h2>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          Face à sa yo défis considérables, pèp ayisyen an fè preuve d'yon <strong>capacité de résilience</strong> remarquable, nourrie par nan syèks d'expérience face à l'adversité. Cette résilience n'se pas la résignation : c'se yon forme d'intelligence collective ak de solidarité ki pèmèt à nan millions de personnes de se reconstruire après chak catastrophe.
-        </p>
+ <!-- Résilience -->
+ <section class="section" id="resilience">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Résilience</p>
+ <h2>résilience ayisyèn face nan catastrophes</h2>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Face à li yo défis considérables, pèp ayisyen an fè preuve d'yon <strong>capacité nan résilience</strong> remarquable, nourrie pa nan syèks d'expérience face à l'adversité. Cette résilience pa se pa résignation : c'se yon fòm d'intelligence collective ak nan solidarité ki pèmèt à nan millions nan personnes nan reconstruire apre chak catastrophe.
+ </p>
 
-        <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">Les réseaux de solidarité communautaire</h3>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          Les structures tradisyonnelles ayisyèn de solidarité — le <em>konbit</em> (travail collectif), le <em>sòl</em> (tontine communautaire), ak les réseaux familiaux étendus — jouent yon rôle crucial dans rekonstriksyon an post-catastrophe. Après le séisme de 2010, nan millions d'Haïtiens te hébergés paur fanmi ak leurs voisins, souvan avant que l'èd entènasyonal n'arrive. La <strong>dyaspora haïtienne</strong> a toswa joué yon rôle fondamental, envoyant nan centaines de millions de dollars en transferts d'argent vers leurs fanmis restées au peyi.
-        </p>
+ <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">réseaux nan solidarité communautaire</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ structures tradisyonnelles ayisyèn nan solidarité — <em>konbit</em> (travail collectif), <em>sòl</em> (tontine communautaire), ak réseaux familiaux étendus — jouent yon wòl crucial nan rekonstriksyon an post-catastrophe. Après séisme nan 2010, nan millions d'Haïtiens te hébergés paur fanmi ak yo voisins, souvan anvan ke l'èd entènasyonal pa arrive. <strong>dyaspora ayisyèn</strong> a toswa joué yon wòl fondamantal, envoyant nan centaines nan millions nan dollars en transferts d'argent vè yo fanmis restées nan peyi.
+ </p>
 
-        <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">La gestion nan risques ak la prévention</h3>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          La <strong>Direction nan Protection Civile (DPC)</strong> se l'organe nasyonal chargé nan coordination nan réponses aux catastrophes. Des systèmes d'alerte précoce poswa cyclones te mis en place ak soutien nan NOAA ak nan Organisation météorologique mondiale. Des exercisa yo d'évacuation ste kondwis nan zones à risque. Cepandan, le manque chronique de financement, l'instabilité politik ak les insuffisansa yo d'infrastructure limitent l'efficacité de sa yo mécanismes.
-        </p>
+ <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">gestion nan risques ak prévention</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ <strong>Direction nan Protection Civile (DPC)</strong> l'organe nasyonal chargé nan coordination nan réponses nan catastrophes. Des systèmes d'alerte précoce poswa cyclones te mis en plas ak soutien nan NOAA ak nan Òganizasyon météorologique mondiale. Des exercisa yo d'évacuation ste kondwis nan zones à risque. Cepandan, manque chronique nan financement, l'instabilité politik ak insuffisansa yo d'infrastructure limitent l'efficacité nan li yo mécanismes.
+ </p>
 
-        <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">La construction parasismique ak les normes de construction</h3>
-        <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
-          Deapre sa le séisme de 2010, nan efforts te faits pour promouvoir la construction parasismique en Haïti. Des organisations tankoswa <strong>Build Change</strong> ak <strong>UNOSAT</strong> ont travaillé à former nan artisans locaux aux techniques de construction résistantes aux séismes. Des étunan de microzonage sismique te réalisées pour identifier les zones les plis exposées. Toutefois, la généralisation de sa yo pratiques se heurte à nan obstacles ekonomiks majeurs : la gran majorité nan ménages ayisyen ne kapab pas se permettre yon construction aux normes parasismiques.
-        </p>
-      </div>
-    </div>
-  </section>
+ <h3 style="font-size:1.25rem;color:var(--blue-dark,#001370);margin-bottom:0.8rem;">construction parasismique ak normes nan construction</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Deapre li séisme nan 2010, nan efforts te faits pou promouvoir construction parasismique en Haïti. Des òganizasyons tankoswa <strong>Build Change</strong> ak <strong>UNOSAT</strong> gen travaillé à former nan artisans locaux nan techniques nan construction résistantes nan séismes. Des étunan nan microzonage sismique te réalisées pou identifier zones plis exposées. Toutefois, généralisation nan li yo pratiques heurte à nan obstacles ekonomiks gwos : gran majorité nan ménages ayisyen pa kapab pa permettre yon construction nan normes parasismiques.
+ </p>
+ </div>
+ </div>
+ </section>
 
-  <!-- Kwonolouji -->
-  <section class="section section--alt" id="chronologie">
-    <div class="container">
-      <div class="text-block">
-        <p class="section-label">Kwonolouji</p>
-        <h2>Principales katastwòf natirèl (1954–2021)</h2>
-        <div style="overflow-x:auto;">
-          <table style="width:100%;border-collapse:collapse;font-size:15px;line-height:1.6;">
-            <thead>
-              <tr style="background:var(--blue-dark,#001370);color:#fff;">
-                <th style="padding:0.75rem 1rem;text-align:left;border-bottom:2px solid #dde2f0;">Année</th>
-                <th style="padding:0.75rem 1rem;text-align:left;border-bottom:2px solid #dde2f0;">Événement</th>
-                <th style="padding:0.75rem 1rem;text-align:left;border-bottom:2px solid #dde2f0;">Impact</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="border-bottom:1px solid #eee;">
-                <td style="padding:0.7rem 1rem;">1954</td>
-                <td style="padding:0.7rem 1rem;">Ouragan Hazel</td>
-                <td style="padding:0.7rem 1rem;">~1&nbsp;000 morts, dégâts agricoles considérables</td>
-              </tr>
-              <tr style="background:#f8f9ff;border-bottom:1px solid #eee;">
-                <td style="padding:0.7rem 1rem;">1963</td>
-                <td style="padding:0.7rem 1rem;">Ouragan Flora</td>
-                <td style="padding:0.7rem 1rem;">~8&nbsp;000 morts, destruction nan sud nan peyi</td>
-              </tr>
-              <tr style="border-bottom:1px solid #eee;">
-                <td style="padding:0.7rem 1rem;">1994</td>
-                <td style="padding:0.7rem 1rem;">Ouragan Gordon</td>
-                <td style="padding:0.7rem 1rem;">~1&nbsp;100 morts, inondations massives</td>
-              </tr>
-              <tr style="background:#f8f9ff;border-bottom:1px solid #eee;">
-                <td style="padding:0.7rem 1rem;">1998</td>
-                <td style="padding:0.7rem 1rem;">Ouragan Georges</td>
-                <td style="padding:0.7rem 1rem;">~400 morts, 180&nbsp;000 sans-abri</td>
-              </tr>
-              <tr style="border-bottom:1px solid #eee;">
-                <td style="padding:0.7rem 1rem;">2004</td>
-                <td style="padding:0.7rem 1rem;">Ouragan Jeanne + glissements de terrain</td>
-                <td style="padding:0.7rem 1rem;">~3&nbsp;000 morts à Gonaïves</td>
-              </tr>
-              <tr style="background:#f8f9ff;border-bottom:1px solid #eee;">
-                <td style="padding:0.7rem 1rem;">2008</td>
-                <td style="padding:0.7rem 1rem;">Saison cyclonique exceptionnelle (Fay, Gustav, Hanna, Ike)</td>
-                <td style="padding:0.7rem 1rem;">~800 morts, 15 % nan PIB de pertes</td>
-              </tr>
-              <tr style="border-bottom:1px solid #eee;">
-                <td style="padding:0.7rem 1rem;">2010</td>
-                <td style="padding:0.7rem 1rem;">Séisme nan 12 janvier (M 7,0)</td>
-                <td style="padding:0.7rem 1rem;">220&nbsp;000–316&nbsp;000 morts, 1,5 million déplacés</td>
-              </tr>
-              <tr style="background:#f8f9ff;border-bottom:1px solid #eee;">
-                <td style="padding:0.7rem 1rem;">2010–2019</td>
-                <td style="padding:0.7rem 1rem;">Épidémie de choléra (introduite pa Casques Bleus)</td>
-                <td style="padding:0.7rem 1rem;">&gt;10&nbsp;000 morts, 800&nbsp;000 cas</td>
-              </tr>
-              <tr style="border-bottom:1px solid #eee;">
-                <td style="padding:0.7rem 1rem;">2012</td>
-                <td style="padding:0.7rem 1rem;">Ouragan Sandy</td>
-                <td style="padding:0.7rem 1rem;">~50 morts, destruction agricole nan Sud</td>
-              </tr>
-              <tr style="background:#f8f9ff;border-bottom:1px solid #eee;">
-                <td style="padding:0.7rem 1rem;">2016</td>
-                <td style="padding:0.7rem 1rem;">Ouragan Matthew (catégorie 4)</td>
-                <td style="padding:0.7rem 1rem;">&gt;900 morts, péninsule sud ravagée</td>
-              </tr>
-              <tr style="border-bottom:1px solid #eee;">
-                <td style="padding:0.7rem 1rem;">2021</td>
-                <td style="padding:0.7rem 1rem;">Séisme nan 14 août (M 7,2)</td>
-                <td style="padding:0.7rem 1rem;">&gt;2&nbsp;200 morts, 130&nbsp;000 menons endommagées</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
+ <!-- Kwonolouji -->
+ <section class="section section--alt" id="chronologie">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Kwonolouji</p>
+ <h2>Prensipal katastwòf natirèl (1954–2021)</h2>
+ <div style="overflow-x:auto;">
+ <table style="width:100%;border-collapse:collapse;font-size:15px;line-height:1.6;">
+ <thead>
+ <tr style="background:var(--blue-dark,#001370);color:#fff;">
+ <th style="padding:0.75rem 1rem;text-align:left;border-bottom:2px solid #dde2f0;">Année</th>
+ <th style="padding:0.75rem 1rem;text-align:left;border-bottom:2px solid #dde2f0;">Événement</th>
+ <th style="padding:0.75rem 1rem;text-align:left;border-bottom:2px solid #dde2f0;">Impact</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr style="border-bottom:1px solid #eee;">
+ <td style="padding:0.7rem 1rem;">1954</td>
+ <td style="padding:0.7rem 1rem;">Ouragan Hazel</td>
+ <td style="padding:0.7rem 1rem;">~1&nbsp;000 morts, dégâts agricoles considérables</td>
+ </tr>
+ <tr style="background:#f8f9ff;border-bottom:1px solid #eee;">
+ <td style="padding:0.7rem 1rem;">1963</td>
+ <td style="padding:0.7rem 1rem;">Ouragan Flora</td>
+ <td style="padding:0.7rem 1rem;">~8&nbsp;000 morts, destruction nan sid nan peyi</td>
+ </tr>
+ <tr style="border-bottom:1px solid #eee;">
+ <td style="padding:0.7rem 1rem;">1994</td>
+ <td style="padding:0.7rem 1rem;">Ouragan Gordon</td>
+ <td style="padding:0.7rem 1rem;">~1&nbsp;100 morts, inondations massives</td>
+ </tr>
+ <tr style="background:#f8f9ff;border-bottom:1px solid #eee;">
+ <td style="padding:0.7rem 1rem;">1998</td>
+ <td style="padding:0.7rem 1rem;">Ouragan Georges</td>
+ <td style="padding:0.7rem 1rem;">~400 morts, 180&nbsp;000 sans-abri</td>
+ </tr>
+ <tr style="border-bottom:1px solid #eee;">
+ <td style="padding:0.7rem 1rem;">2004</td>
+ <td style="padding:0.7rem 1rem;">Ouragan Jeanne + glissements nan terrain</td>
+ <td style="padding:0.7rem 1rem;">~3&nbsp;000 morts à Gonaïves</td>
+ </tr>
+ <tr style="background:#f8f9ff;border-bottom:1px solid #eee;">
+ <td style="padding:0.7rem 1rem;">2008</td>
+ <td style="padding:0.7rem 1rem;">Saison cyclonique exceptionnelle (Fay, Gustav, Hanna, Ike)</td>
+ <td style="padding:0.7rem 1rem;">~800 morts, 15 % nan PIB nan pertes</td>
+ </tr>
+ <tr style="border-bottom:1px solid #eee;">
+ <td style="padding:0.7rem 1rem;">2010</td>
+ <td style="padding:0.7rem 1rem;">Séisme nan 12 janvier (M 7,0)</td>
+ <td style="padding:0.7rem 1rem;">220&nbsp;000–316&nbsp;000 morts, 1,5 million déplacés</td>
+ </tr>
+ <tr style="background:#f8f9ff;border-bottom:1px solid #eee;">
+ <td style="padding:0.7rem 1rem;">2010–2019</td>
+ <td style="padding:0.7rem 1rem;">Épidémie nan choléra (introduite pa Casques Bleus)</td>
+ <td style="padding:0.7rem 1rem;">&gt;10&nbsp;000 morts, 800&nbsp;000 cas</td>
+ </tr>
+ <tr style="border-bottom:1px solid #eee;">
+ <td style="padding:0.7rem 1rem;">2012</td>
+ <td style="padding:0.7rem 1rem;">Ouragan Sandy</td>
+ <td style="padding:0.7rem 1rem;">~50 morts, destruction agricole nan Sud</td>
+ </tr>
+ <tr style="background:#f8f9ff;border-bottom:1px solid #eee;">
+ <td style="padding:0.7rem 1rem;">2016</td>
+ <td style="padding:0.7rem 1rem;">Ouragan Matthew (catégorie 4)</td>
+ <td style="padding:0.7rem 1rem;">&gt;900 morts, péninsule sid ravagée</td>
+ </tr>
+ <tr style="border-bottom:1px solid #eee;">
+ <td style="padding:0.7rem 1rem;">2021</td>
+ <td style="padding:0.7rem 1rem;">Séisme nan 14 août (M 7,2)</td>
+ <td style="padding:0.7rem 1rem;">&gt;2&nbsp;200 morts, 130&nbsp;000 menons endommagées</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </div>
+ </div>
+ </section>
 
-  <!-- Navigation vers les pages jeyografi -->
-  <section class="section">
-    <div class="container">
-      <p class="section-label">Eksplore la Jeyografi</p>
-      <h2>Pages associées</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:1.5rem;">
-        <a href="geographie.html" style="display:block;background:#fff;border:1px solid #dde2f0;border-radius:10px;padding:1.25rem;text-decoration:none;color:inherit;transition:box-shadow .2s;">
-          <strong style="color:var(--blue-dark,#001370);display:block;margin-bottom:0.4rem;">Jeyografi Fizik</strong>
-          <span style="font-size:14px;color:#555;">Montagnes, plaines, côtes ak climat</span>
-        </a>
-        <a href="anviwonman.html" style="display:block;background:#fff;border:1px solid #dde2f0;border-radius:10px;padding:1.25rem;text-decoration:none;color:inherit;transition:box-shadow .2s;">
-          <strong style="color:var(--blue-dark,#001370);display:block;margin-bottom:0.4rem;">Anviwonman</strong>
-          <span style="font-size:14px;color:#555;">Forêts, biodiversité ak défis écologiques</span>
-        </a>
-        <a href="departements.html" style="display:block;background:#fff;border:1px solid #dde2f0;border-radius:10px;padding:1.25rem;text-decoration:none;color:inherit;transition:box-shadow .2s;">
-          <strong style="color:var(--blue-dark,#001370);display:block;margin-bottom:0.4rem;">10 Depatman yo</strong>
-          <span style="font-size:14px;color:#555;">Organisation administrative ak identités régionales</span>
-        </a>
-        <a href="frontiere-haiti-rd.html" style="display:block;background:#fff;border:1px solid #dde2f0;border-radius:10px;padding:1.25rem;text-decoration:none;color:inherit;transition:box-shadow .2s;">
-          <strong style="color:var(--blue-dark,#001370);display:block;margin-bottom:0.4rem;">Fwontyè Ayiti-RD</strong>
-          <span style="font-size:14px;color:#555;">Relations ak enjeux frontaliers</span>
-        </a>
-      </div>
-    </div>
-  </section>
+ <!-- Navigation vers les pages jeyografi -->
+ <section class="section">
+ <div class="container">
+ <p class="section-label">Eksplore Jeyografi</p>
+ <h2>Pages associées</h2>
+ <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:1.5rem;">
+ <a href="geographie.html" style="display:block;background:#fff;border:1px solid #dde2f0;border-radius:10px;padding:1.25rem;text-decoration:none;color:inherit;transition:box-shadow .2s;">
+ <strong style="color:var(--blue-dark,#001370);display:block;margin-bottom:0.4rem;">Jeyografi Fizik</strong>
+ <span style="font-size:14px;color:#555;">Montagnes, plaines, côtes ak climat</span>
+ </a>
+ <a href="anviwonman.html" style="display:block;background:#fff;border:1px solid #dde2f0;border-radius:10px;padding:1.25rem;text-decoration:none;color:inherit;transition:box-shadow .2s;">
+ <strong style="color:var(--blue-dark,#001370);display:block;margin-bottom:0.4rem;">Anviwonman</strong>
+ <span style="font-size:14px;color:#555;">Forêts, biodiversité ak défis écologiques</span>
+ </a>
+ <a href="departements.html" style="display:block;background:#fff;border:1px solid #dde2f0;border-radius:10px;padding:1.25rem;text-decoration:none;color:inherit;transition:box-shadow .2s;">
+ <strong style="color:var(--blue-dark,#001370);display:block;margin-bottom:0.4rem;">10 Depatman yo</strong>
+ <span style="font-size:14px;color:#555;">Òganizasyon administrative ak identités régionales</span>
+ </a>
+ <a href="frontiere-haiti-rd.html" style="display:block;background:#fff;border:1px solid #dde2f0;border-radius:10px;padding:1.25rem;text-decoration:none;color:inherit;transition:box-shadow .2s;">
+ <strong style="color:var(--blue-dark,#001370);display:block;margin-bottom:0.4rem;">Fwontyè Ayiti-RD</strong>
+ <span style="font-size:14px;color:#555;">Relations ak enjeux frontaliers</span>
+ </a>
+ </div>
+ </div>
+ </section>
 
-  <!-- Sources -->
-  <section class="section section--alt">
-    <div class="container">
-      <div class="text-block">
-        <p class="section-label">Référensa yo &amp; Sources</p>
-        <h2>Pour aller plis loin</h2>
-        <ul style="font-size:16px;line-height:2;padding-left:1.4rem;">
-          <li>USGS, <em>Magnitude 7.0 – Haiti region</em>, 12 janvier 2010</li>
-          <li>USGS, <em>Magnitude 7.2 – Haiti</em>, 14 août 2021</li>
-          <li>Gouvènman ayisyen / Ministère nan Intérieur, <em>Bilan nan séisme nan 12 janvier 2010</em></li>
-          <li>Paul Farmer, <em>Haiti After the Earthquake</em>, PublicAffairs, 2011</li>
-          <li>Jonathan Katz, <em>The Big Truck That Went By: How the World Came to Save Haiti and Left Behind a Disaster</em>, Palgrave Macmillan, 2013</li>
-          <li>National Hurricane Center (NOAA), <em>Hurricane Matthew Tropical Cyclone Report</em>, 2017</li>
-          <li>Germanwatch, <em>Global Climate Risk Index</em>, éditions annuelles 2011–2022</li>
-          <li>Direction nan Protection Civile (DPC), <em>Rapports d'évaluation nan catastrophes</em></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+ <!-- Sources -->
+ <section class="section section--alt">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Référensa yo &amp; Sources</p>
+ <h2>Pour aller plis loin</h2>
+ <ul style="font-size:16px;line-height:2;padding-left:1.4rem;">
+ <li>USGS, <em>Magnitude 7.0 – Haiti region</em>, 12 janvier 2010</li>
+ <li>USGS, <em>Magnitude 7.2 – Haiti</em>, 14 août 2021</li>
+ <li>Gouvènman ayisyen / Ministère nan Intérieur, <em>Bilan nan séisme nan 12 janvier 2010</em></li>
+ <li>Paul Farmer, <em>Haiti After the Earthquake</em>, PublicAffairs, 2011</li>
+ <li>Jonathan Katz, <em>The Big Truck That Went By: How the World Came to Save Haiti and Left Behind a Disaster</em>, Palgrave Macmillan, 2013</li>
+ <li>National Hurricane Center (NOAA), <em>Hurricane Matthew Tropical Cyclone Report</em>, 2017</li>
+ <li>Germanwatch, <em>Global Klimae Risk Index</em>, éditions annuelles 2011–2022</li>
+ <li>Direction nan Protection Civile (DPC), <em>Rapports d'évaluation nan catastrophes</em></li>
+ </ul>
+ </div>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-brand__logo">
-            Repiblik Ayiti
-          </div>
-          <p>
-            Une célébration nan extraordinaire istwa d'Haïti, de sa kilti
-            vibrante ak de son pèp remarquable. Dédié à partager l'istwa de
-            premye Repiblik nwa nan mond lan.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Eksplore</h4>
-          <ul>
-            <li><a href="index.html">Akèy</a></li>
-            <li><a href="about.html">Soswa Ayiti</a></li>
-            <li><a href="history.html">Istwa</a></li>
-            <li><a href="tourism.html">Touris</a></li>
-            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
-            <li><a href="archives.html">Achiv</a></li>
-            <li><a href="bibliography.html">Bibliyografi</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Kilti &amp; Sosyete</h4>
-          <ul>
-            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
-            <li><a href="vodou.html">Vodou</a></li>
-            <li><a href="gastronomy.html">Gastwonomi</a></li>
-            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
-            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
-            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
-            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Istwa &amp; Enstitisyon</h4>
-          <ul>
-            <li><a href="timeline.html">Kwonolouji</a></li>
-            <li><a href="heroes.html">Ewò Nasyonal</a></li>
-            <li><a href="lidès.html">Lidè</a></li>
-            <li><a href="konstitisyon.html">Konstitisyon</a></li>
-            <li><a href="enstitisyons.html">Enstitisyon</a></li>
-            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Pran Kontak</h4>
-          <ul>
-            <li><a href="contact.html">Kontakte Nou</a></li>
-            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
-            <li><a href="license.html">Mansyon Legal</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
-        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
-        <span class="footer-editorial">Ce projak se né d'yon frustration personnelle&#160;: trop d'ouvrages sur Haïti se écrits nan extérieur. J'ai voulu rassembler les soursa yo ayisyèn en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chèchè endepandan.</span>
-      </div>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mansyon Legal</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak né d'yon frustration personnelle&#160;: trop d'ouvrages sou Haïti écrits nan extérieur. J'ai voulu rassembler soursa yo ayisyèn en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chèchè endepandan.</span>
+ </div>
+ </div>
+ </footer>
 
-  <script src="../js/script.js"></script>
-  <script src="../js/premium.js"></script>
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){e.stopPropagation();sw.classList.toggle('open');});
+  document.addEventListener('click',function(){sw.classList.remove('open');});
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  // Auto-redirect based on stored preference
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
 </body>
 </html>

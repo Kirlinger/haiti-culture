@@ -1,288 +1,335 @@
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#00209F" />
-  <title>Haïti ak la Négritude | RepiblikHaïti.org</title>
-  <meta name="description" content="Les liens intellectuels entre Haïti ak les fondateurs nan Négritude — Aimé Césaire, Léopold Sédar Senghor, Frantz Fanon — ak tankount la revolisyon de 1804 a alimenté la philosophie de libération noire nan XXe syèk." />
-  <meta name="author" content="RepiblikHaïti.org" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/premium.css" />
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Haïti ak Négritude | RepiblikHaïti.org</title>
+ <meta name="description" content="Les liens intellectuels entre Haïti ak les fondateurs nan Négritude — Aimé Césaire, Léopold Sédar Senghor, Frantz Fanon — ak tankount la revolisyon de 1804 a alimenté la philosophie de libération noire nan XXe syèk." />
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher */
+.lang-switcher { position: relative; margin-left: 1rem; }
+.lang-switcher__btn { background: none; border: 1px solid rgba(255,255,255,0.3); color: inherit; padding: 0.35rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; white-space: nowrap; transition: border-color 0.2s; }
+.lang-switcher__btn:hover { border-color: rgba(255,255,255,0.7); }
+.lang-switcher__menu { display: none; position: absolute; top: 110%; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); min-width: 150px; z-index: 1000; overflow: hidden; }
+.lang-switcher.open .lang-switcher__menu { display: block; }
+.lang-option { display: block; padding: 0.6rem 1rem; color: #333; text-decoration: none; font-size: 0.9rem; transition: background 0.2s; }
+.lang-option:hover { background: #f0f4ff; }
+.lang-option.active { background: #e8f0fe; font-weight: 600; }
+@media (max-width: 768px) { .lang-switcher { margin-left: 0; margin-top: 0.5rem; } .lang-switcher__menu { right: auto; left: 0; } }
+</style>
 </head>
 <body>
 
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-  <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
 
-  <header class="site-header">
-    <div class="container">
-      <div class="navbar">
-        <a href="index.html" class="navbar__logo" aria-label="Akèy">Repiblik Ayiti</a>
-        <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="navbar__nav" aria-label="Navigasyon prensipal">
-          <a href="index.html">Akèy</a>
-          <a href="about.html">Soswa Nou</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="history.html">Istwa Jeneral</a>
-              <a href="timeline.html">Kwonolouji</a>
-              <a href="heroes.html">Ewò Nasyonal</a>
-              <a href="lidès.html">Lidè</a>
-              <a href="konstitisyon.html">Konstitisyon</a>
-              <a href="enstitisyons.html">Enstitisyon</a>
-            </div>
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">Repiblik Ayiti</a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang">
+            🇭🇹 Kreyòl ▾
+          </button>
+          <div class="lang-switcher__menu">
+            <a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a>
+            <a href="#" class="lang-option active" data-lang="ht">🇭🇹 Kreyòl</a>
           </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti.html">Kilti &amp; Atizay</a>
-              <a href="vodou.html">Vodou</a>
-              <a href="lwa.html">Lwa yo</a>
-              <a href="gastronomy.html">Gastwonomi</a>
-              <a href="holidays.html">Joswa Ferye</a>
-            </div>
-          </div>
-          <a href="tourism.html">Touris</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="kilti-vivante.html">Kilti Vivan</a>
-              <a href="creativite-populaire.html">Kreyativite Popilè</a>
-              <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
-              <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
-              <a href="memoire-universelle.html">Memwa Inivèsèl</a>
-              <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="fragilite-economique.html">Frajilite Ekonomik</a>
-              <a href="inegalites-sociales.html">Inegalite Sosyal</a>
-              <a href="instabilite-politik.html">Enstabilite Politik</a>
-              <a href="pressions-securitaires.html">Presyon Sekiritè</a>
-              <a href="services-essentiels.html">Sèvis Esansyèl</a>
-              <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
-              <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
-            </div>
-          </div>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
-            <div class="nav-dropdown__menu">
-              <a href="encyclopedia.html">Ansiklopedi</a>
-              <a href="archives.html">Achiv</a>
-              <a href="bibliography.html">Bibliyografi</a>
-            </div>
-          </div>
-          <a href="contact.html">Kontak</a>
-        </nav>
+        </div>
         <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
 
-  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
-    <div class="search-overlay__inner">
-      <div class="search-overlay__header">
-        <div class="search-input-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
-        </div>
-        <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
-      </div>
-      <div class="search-results" id="searchResults" aria-live="polite"></div>
-    </div>
-  </div>
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
 
-  <section class="page-hero page-hero--history">
-    <div class="container">
-      <p class="page-hero__label">Pensée &amp; Identité</p>
-      <h1 class="page-hero__title">Haïti ak la Négritude</h1>
-      <p class="page-hero__desc">Les liens intellectuels entre Haïti ak les fondateurs nan Négritude — Aimé Césaire, Léopold Sédar Senghor, Frantz Fanon — ak tankount la revolisyon de 1804 a alimenté la philosophie de libération noire nan XXe syèk.</p>
-    </div>
-  </section>
+ <section class="page-hero page-hero--history">
+ <div class="container">
+ <p class="page-hero__label">Pensée &amp; Identité</p>
+ <h1 class="page-hero__title">Haïti ak Négritude</h1>
+ <p class="page-hero__desc">liens intellectuels ant Haïti ak fondateurs nan Négritude — Aimé Césaire, Léopold Sédar Senghor, Frantz Fanon — ak tankount revolisyon nan 1804 a alimenté philosophie nan libération noire nan XXe syèk.</p>
+ </div>
+ </section>
 
-  <div class="breadcrumb">
-    <div class="container">
-      <nav aria-label="Breadcrumb">
-        <a href="index.html">Akèy</a>
-        <span>/</span>
-        <span>Haïti ak la Négritude</span>
-      </nav>
-    </div>
-  </div>
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <span>Haïti ak Négritude</span>
+ </nav>
+ </div>
+ </div>
 
-  <section class="section">
-    <div class="container">
-      <p class="section-label">Philosophie &amp; Libération</p>
-      <h2>1804 ak la pensée de libération noire</h2>
+ <section class="section">
+ <div class="container">
+ <p class="section-label">Philosophie &amp; Libération</p>
+ <h2>1804 ak pensée nan libération noire</h2>
 
-      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Qu'est-ce que la Négritude ?</h3>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        La Négritude naît à Paris nan anes 1930 parmi nan étudiants afriken ak caribéens de lang fransèz qui refusent l'assimilation kiltille imposée par kolon anialisme français. Les trois figures fondatrisa yo se Aimé Césaire (Martinique, 1913-2008), Léopold Sédar Senghor (Sénégal, 1906-2001) ak Léon-Gontran Damas (Guyane française, 1912-1978). Ils se rencontrent à Paris, lisent ensemble les Harlem Renaissance writers — Langston Hughes, Claude McKay — ak décident qu'il se temps de répondre à l'effacement kiltil kolonyal par yon affirmation radicale de idantite a noire africaine.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        Les textes fondateurs se succèdent : le journal <em>L'Étudiant noir</em> (1934), <em>Pigments</em> de Damas (1937), le <em>Cahier d'yon retour au peyi natal</em> de Césaire (1939), ak l'<em>Anthologie nan nouvo poésie nègre ak malgache</em> de Senghor (1948) ak préface célèbre de Jean-Paul Sartre intitulée « Orphée noir ». L'idée centrale se la revalorisation nan eritaj kiltirèl afriken contre l'assimilationnisme kolonyal fransè — qui exigeait que les sujets colonisés abandonnent leur kilti pour être rekonèt tankoswa « civilisés ». La Négritude di non : la kilti afriken n'se pas yon honte à dépasser, men yon richesse à revendiquer.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        La Négritude se an menm tan yon mouvement littéraire ak yon philosophie politik. Elle articule yon critique nan universalisme fransè qui, dans sa forme concrète, signifiait l'universalisation nan kilti européenne blanche aux dépens de tout les autres. Elle prépare intellectuellement les endepandanss afriken nan anes 1960 ak influence directement nan mouvements tankoswa le Black Power aux États-Unis ak le Black Consciousness en Afrique nan Sud.
-      </p>
+ <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Ke est-ce ke Négritude ?</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Négritude naît à Paris nan anes 1930 pami nan étudiants afriken ak caribéens nan lang fransèz ki refusent l'assimilation kiltille imposée pa kolon anialisme fransè. trois figures fondatrisa yo Aimé Césaire (Martinique, 1913-2008), Léopold Sédar Senghor (Sénégal, 1906-2001) ak Léon-Gontran Damas (Guyane fransèz, 1912-1978). Ils rencontrent à Paris, lisent ensemble Harlem Renaissance writers — Langston Hughes, Claude McKay — ak décident ke il tan nan répondre à l'effacement kiltil kolonyal pa yon affirmation radicale nan idantite a noire afriken.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ textes fondateurs succèdent : journal <em>L'Étudiant noir</em> (1934), <em>Pigments</em> nan Damas (1937), <em>Cahier d'yon retour nan peyi natal</em> nan Césaire (1939), ak l'<em>Anthologie nan nouvo poésie nègre ak malgache</em> nan Senghor (1948) ak préface selèb nan Jean-Paul Sartre intitulée « Orphée noir ». L'idée centrale revalorisation nan eritaj kiltirèl afriken kont l'assimilationnisme kolonyal fransè — ki exigeait ke sujets colonisés abandonnent yo kilti pou être rekonèt tankoswa « civilisés ». Négritude di non : kilti afriken pa se pa yon honte à dépasser, men yon richsse à revendiquer.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Négritude an menm tan yon mouvman littéraire ak yon philosophie politik. Elle articule yon critique nan universalisme fransè qui, nan li fòm concrète, signifiait l'universalisation nan kilti européenne blanche nan dépens nan tout autres. Elle prépare intellectuellement endepandanss afriken nan anes 1960 ak influence dirèkteman nan mouvements tankoswa Black Power nan États-Unis ak Black Consciousness en Afrique nan Sud.
+ </p>
 
-      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Jean Price-Mars : le précurseur haïtien</h3>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        <em>Ainsi parla l'oncle</em> (1928) de Jean Price-Mars (1876-1969) précède le mouvement nan Négritude parisienne de six ans ak en anticipe les arguments centraux. Price-Mars y soutient que l'élite ayisyèn souffre d'yon « bovarysme collectif » — yon terme emprunté à Jules de Gaultier ak appliqué à yon nation entière : yon aliénation structurelle, yon désir de se voir lòt que ce qu'on est, yon aspiration à être fransè qui se traduit pa mépris de sa pwòp kilti. Cette auto-négation est, pour Price-Mars, la source profonde nan crise d'identité haïtienne.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        Son argument se revolisyonnaire nan contexte ayisyen nan époque : il affirme que le Vodou, loin d'être la survivance honteuse d'yon barbarie afriken que les élites cultivées devraient aider à éradiquer, se au contraire le cœur vivant nan kilti popilè haïtienne, porteur d'yon philosophie, d'yon esthétique ak d'yon cosmologie dignes d'étude ak de respect. Cette réhabilitation nan Vodoswa tankoswa patrimwàn se yon acte intellectuel de dékolonizasyon avant la lettre.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        Césaire a rekonèt explicitement la dette intellectuelle nan Négritude envers Price-Mars. Le mouvement ayisyen nan Indigénisme — la revue <em>La Revue Indigène</em> (1927-1928), avec Carl Brouard, Emile Roumer, Philippe Thoby-Marcelin — constitue le pandan littéraire nan essai de Price-Mars. Ces jeunes ekrivens haïtiens, contemporains directs nan fondateurs parisiens nan Négritude, revendiquaient dwa a de célébrer la kilti popilè haïtienne, kreyòl la, le Vodou, les rythmes afriken — contre la tradisyon d'imitation nan classicisme fransè qui dominait les lettres ayisyèn depi l'endepandans.
-      </p>
+ <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Jean Price-Mars : précurseur ayisyen</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ <em>Ainsi parla l'oncle</em> (1928) nan Jean Price-Mars (1876-1969) précède mouvman nan Négritude parisienne nan six ans ak en anticipe arguments centraux. Price-Mars y soutient ke l'élite ayisyèn souffre d'yon « bovarysme collectif » — yon terme emprunté à Jules nan Gaultier ak appliqué à yon nasyon entière : yon aliénation structurelle, yon désir nan voir lòt ke li a ke on est, yon aspiration à être fransè ki traduit pa mépris nan li pwòp kilti. Cette auto-négation est, pou Price-Mars, anba pwofon nan crise d'identité ayisyèn.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Son argument revolisyonnaire nan kontèks ayisyen nan époque : li affirme ke Vodou, loin d'être survivance honteuse d'yon barbarie afriken ke élites cultivées devraient aider à éradiquer, nan contraire cœur vivant nan kilti popilè ayisyèn, porteur d'yon philosophie, d'yon esthétique ak d'yon cosmologie dignes d'étude ak nan respect. Cette réhabilitation nan Vodoswa tankoswa patrimwàn yon acte intellectuel nan dékolonizasyon anvan lettre.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Césaire a rekonèt explicitement dette intellectuelle nan Négritude envers Price-Mars. mouvman ayisyen nan Indigénisme — revue <em>Revue Indigène</em> (1927-1928), ak Carl Brouard, Emile Roumer, Philippe Thoby-Marcelin — konstitye pandan littéraire nan essai nan Price-Mars. Ces jeunes ekrivens ayisyens, contemporains directs nan fondateurs parisiens nan Négritude, revendiquaient dwa a nan célébrer kilti popilè ayisyèn, kreyòl la, Vodou, rythmes afriken — kont tradisyon d'imitation nan classicisme fransè ki dominait lettres ayisyèn depi l'endepandans.
+ </p>
 
-      <aside class="researcher-note" aria-label="Note de recherche">
-        <strong>Note de recherche — Pourquoi Price-Mars est-il si peu konnen hors d'Haïti ?</strong> Un intellectuel qui a anticipé l'yon nan mouvements philosophiques les plis importants nan XXe syèk mérite d'être konnen mondialement. Il ne l'se pas, oswa trè peu. Deux raisons structurelles expliquent sa a marginalisation. D'abord, la barrière linguistique : <em>Ainsi parla l'oncle</em> n'te traduit en anglais qu'en 1983 — cinquante-cinq ans après sa publication. Ensuite, la marginalisation systématique nan production intellectuelle ayisyèn nan circuits académiques internationaux, dominés pa enstitisyons européennes ak nord-américaines. Price-Mars se yon victime parmi d'lòt de ce que le philosophe jamaïcain Sylvia Wynter appellerait la « hiérarchie épistémologique » kolonyal : yon hiérarchie qui détermine qui a dwa a d'être rekonèt tankoswa penseur universel.
-      </aside>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ <strong>Note nan recherche — Pourquoi Price-Mars est-il si peu konnen hors d'Haïti ?</strong> Yon intellectuel ki a anticipé l'yon nan mouvements philosophiques plis enpòtans nan XXe syèk mérite d'être konnen mondialement. Il pa l'se pas, oswa trè peu. Deux raisons structurelles expliquent li a marginalisation. D'abord, barrière linguistique : <em>Ainsi parla l'oncle</em> pa te traduit en anglais ke en 1983 — cinquante-cinq ans apre li publication. Ensuite, marginalisation systématique nan production intellectuelle ayisyèn nan circuits académiques internationaux, dominés pa enstitisyons européennes ak nord-américaines. Price-Mars yon victime pami d'lòt nan li a ke philosophe jamaïcain Sylvia Wynter appellerait « hiérarchie épistémologique » kolonyal : yon hiérarchie ki détermine ki a dwa a d'être rekonèt tankoswa penseur universel.
+ </aside>
 
-      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Aimé Césaire ak Haïti</h3>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        La visite de Césaire en Haïti en 1944 se yon moment fondateur nan échanges intellectuels transatlantiques noirs. Il y rencontre Jacques Roumain — romancier, powèt, fondateur nan Parti communiste ayisyen ak anthropologue nan Vodou, mort sa a menm ane à 37 ans —, donne nan conférensa yo à l'Institut Haïtiano-Américain, ak se accueilli avec yon intensité ki temwaye nan importance que les intellectuels ayisyen accordaient à la Négritude tankoswa validation externe de leur pwòp indigénisme. Les deux mouvements se reconnaissent.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        <em>La Tragédie nan Roi Christophe</em> (1963) se la pièce de théâtre la plis enpòtan jamè écrite sur l'istwa ayisyèn post-endepandans par yon auteur non haïtien. Césaire utilise la figure d'Henri Christophe — wa a bâtisseur nan nord d'Haïti, qui se suicida lè ses soldats se mutinèrent en 1820 — tankoswa méditation soswa contradictions tragiques nan pouvoir noir libéré. Comment gouverner après la libération ? Comment construire yon nation lè les structures coloniales ont détruit les bases sosyal d'yon État ? Comment éviter que la libète reconquise reproduise les formes nan oppression ? Ces questions ne se pas seulement ayisyèn : au moment où Césaire écrit, les endepandanss afriken posent exactement les menm problèmes.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        <em>Toussaint Louverture : La Revolisyon fransèz ak le problème colonial</em> (1961) se écrit au cœur nan moment nan endepandanss africaines. Césaire y argue explicitement que revolisyon ayisyèn nan de 1804 préfigure les dékolonizasyons de 1960 — qu'elle se non pas yon exception men yon prototype. Cette relecture de 1804 à la lumière de 1960 se yon acte politik autant qu'istorik : elle inscrit Haïti tankoswa origine nan modernité noire, pas tankoswa sa curiosité exotique.
-      </p>
+ <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Aimé Césaire ak Haïti</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ visite nan Césaire en Haïti en 1944 yon moment fondateur nan échanges intellectuels transatlantiques noirs. Il y rencontre Jacques Roumain — romancier, powèt, fondateur nan Parti communiste ayisyen ak anthropologue nan Vodou, lanmò li a menm ane à 37 ans —, donne nan conférensa yo à l'Institut Haïtiano-Américain, ak accueilli ak yon intensité ki temwaye nan importance ke intellectuels ayisyen accordaient à Négritude tankoswa validation externe nan yo pwòp indigénisme. deux mouvements reconnaissent.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ <em>Tragédie nan Roi Christophe</em> (1963) pièce nan théâtre plis enpòtan jamè écrite sou l'istwa ayisyèn post-endepandans pa yon otè non ayisyen. Césaire utilise figure d'Henri Christophe — wa a bâtisseur nan nò d'Haïti, ki suicida lè li yo sòlda mutinèrent en 1820 — tankoswa méditation soswa contradictions tragiques nan pouvwa noir libéré. Comment gouverner apre libération ? Comment construire yon nasyon lè structures kolonyals gen detwi bases sosyal d'yon État ? Comment éviter ke libète reconquise reproduise fòm nan oppression ? Ces questions pa pa seulement ayisyèn : nan moment kote Césaire écrit, endepandanss afriken posent exactement menm problèmes.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ <em>Toussaint Louverture : Revolisyon fransèz ak problème kolonyal</em> (1961) écrit nan cœur nan moment nan endepandanss afrikens. Césaire y argue explicitement ke revolisyon ayisyèn nan nan 1804 préfigure dékolonizasyons nan 1960 — ke elle non pa yon exception men yon prototype. Cette relecture nan 1804 à lumière nan 1960 yon acte politik autant ke istorik : li inscrit Haïti tankoswa origine nan modernité noire, pa tankoswa li curiosité exotique.
+ </p>
 
-      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Léopold Sédar Senghor ak l'Afrique haïtienne</h3>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        Le concept senghorien de Négritude tankoswa récupération d'yon essence kiltille afriken — les valeurs de kominote, de rythme, d'émotion, de rapport cosmique au mond — dwe yon dette intellectuelle à Price-Mars, qui avait tracé les continuités kiltilles afriken en Haïti byen avant que Senghor ne théorise leurs équivalents dans l'Afrique subsaharienne. Price-Mars avait montré que sa yo continuités survivaient à l'arrachement nan esklavaj. Senghor argumentait qu'elles définissaient yon « civilisation nan universel » distincte ak complémentaire nan civilisation européenne.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        Son poème « Haïti » dans <em>Hosties noires</em> (1948) se yon hommage direct : <em>« Haïti, Haïti — je dis Haïti / Et les dieux du carrefour au carrefour tremblent / Et les dieux du carrefour au carrefour dressent leur tête et sourient. »</em> La référence aux « dieux nan carrefour » — les Lwa nan Vodoswa qui habitent les carrefours, les passages, les points de jonction ant mond nan vivants ak celui nan esprits — se yon signe de konesans précise ak de respect authentique. Senghor ne parle pas de magie oswa de sorcellerie ; il parle d'yon cosmologie.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        Senghor visita Haïti ak maintint yon correspondance avec nan intellectuels haïtiens, sitoswa le powèt Léon Laleau. Ces échanges confirment qu'entre l'Indigénisme ayisyen ak la Négritude sénégalaise existait non pas yon influence unidirectionnelle men yon dialogue véritable entre nan intellectuels qui partageaient yon condition kolonyal similaire ak cherchaient ensemble les outils conceptuels de leur libération kiltille.
-      </p>
+ <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Léopold Sédar Senghor ak l'Afrique ayisyèn</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ concept senghorien nan Négritude tankoswa récupération d'yon essence kiltille afriken — valeurs nan kominote, nan rythme, d'émotion, nan rapport cosmique nan mond — dwe yon dette intellectuelle à Price-Mars, ki te gen tracé continuités kiltilles afriken en Haïti byen anvan ke Senghor pa théorise yo équivalents nan l'Afrique subsaharienne. Price-Mars te gen montré ke li yo continuités survivaient à l'arrachement nan esklavaj. Senghor argumentait ke elles définissaient yon « civilisation nan universel » distincte ak complémentaire nan civilisation européenne.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Son poème « Haïti » nan <em>Hosties noires</em> (1948) yon hommage direct : <em>« Haïti, Haïti — je dis Haïti / Et bondye nan carrefour nan carrefour tremblent / Et bondye nan carrefour nan carrefour dressent yo tête ak sourient. »</em> référence nan « bondye nan carrefour » — Lwa nan Vodoswa ki habitent carrefours, passages, points nan jonction ant mond nan vivants ak celui nan lespri — yon signe nan konesans précise ak nan respect authentique. Senghor pa parle pa nan magie oswa nan sorcellerie ; li parle d'yon cosmologie.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Senghor visita Haïti ak maintint yon correspondance ak nan intellectuels ayisyens, sitoswa powèt Léon Laleau. Ces échanges confirment ke entre l'Indigénisme ayisyen ak Négritude sénégalaise existait non pa yon influence unidirectionnelle men yon dialogue vrè ant nan intellectuels ki partageaient yon condition kolonyal similaire ak cherchaient ensemble outils conceptuels nan yo libération kiltille.
+ </p>
 
-      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Frantz Fanon ak la tradisyon revolisyonnaire haïtienne</h3>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        Frantz Fanon (1925-1961, Martinique) se mwens directement connecté aux intellectuels ayisyen que Césaire oswa Senghor, men <em>Les Damnés nan Tè</em> (1961, préface de Sartre) s'inscrit nan menm lignée intellectuelle que la tradisyon haïtienne. Son analyse nan dommages psychologiques nan colonialisme — l'infériorité intégrée, le désir d'être blanc, la violence nan assimilation — se yon développement rigoureux de ce que Price-Mars avait nommé le « bovarysme collectif » nan contexte ayisyen spécifique.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        L'argument central de Fanon soswa violence antikolonyal tankoswa libération psychologique ne kapab se comprendre pleinement qu'en référence à 1804. C'se revolisyon ayisyèn nan qui a fourni la preuve empirique que ce qu'il theorisait te possible : nan hommes ak nan fanm réduits en esklavaj, décrits tankoswa naturellement inférieurs paurs oppresseurs, avaient pa sèlman défè les armées de Napoléon men fondé yon État. La revolisyon ayisyèn se la contre-preuve réelle à tout les théories nan infériorité raciale.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        Fanon cite revolisyon ayisyèn nan implicitement plutôt qu'explicitement dans <em>Les Damnés nan Tè</em>. Cette présence implicite — sa a référence sous-jacente à ce qui se deja arrivé yon fois — se peut-être plis pwisan que la citation directe. Elle suggère que 1804 se mwens yon événement istorik qu'yon horizon permanent, toujoswa disponible tankoswa référence pour ceux qui cherchent à comprendre la transformation revolisyonnaire.
-      </p>
+ <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Frantz Fanon ak tradisyon revolisyonnaire ayisyèn</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Frantz Fanon (1925-1961, Martinique) mwens dirèkteman connecté nan intellectuels ayisyen ke Césaire oswa Senghor, men <em>Damnés nan Tè</em> (1961, préface nan Sartre) s'inscrit nan menm lignée intellectuelle ke tradisyon ayisyèn. Son analyse nan dommages psychologiques nan kolonyalisme — l'infériorité intégrée, désir d'être blanc, violence nan assimilation — yon devlopman rigoureux nan li a ke Price-Mars te gen rele « bovarysme collectif » nan kontèks ayisyen spécifique.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ L'argument central nan Fanon soswa violence antikolonyal tankoswa libération psychologique pa kapab comprendre pleinement ke en référence à 1804. C'se revolisyon ayisyèn nan ki a fourni preuve empirique ke li a ke il theorisait te possible : nan gason ak nan fanm réduits en esklavaj, décrits tankoswa naturellement inférieurs paurs oppresseurs, te gen pa sèlman défè armées nan Napoléon men fonde yon État. revolisyon ayisyèn contre-preuve réelle à tout théories nan infériorité raciale.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Fanon cite revolisyon ayisyèn nan implicitement plutôt ke explicitement nan <em>Damnés nan Tè</em>. Cette présence implicite — li a référence sous-jacente à li a ki deja arrivé yon fwa — peut-être plis pwisan ke citation directe. Elle suggère ke 1804 mwens yon événement istorik ke yon horizon permanent, toujoswa disponible tankoswa référence pou ceux ki cherchent à comprendre transformation revolisyonnaire.
+ </p>
 
-      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">La Revue Indigène ak le pont Paris–Port-au-Prince</h3>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        La revue <em>La Revue Indigène</em> (Port-au-Prince, 1927-1928) se la premye publication ayisyèn à revendiquer explicitement la kilti popilè ayisyèn — le Vodou, la peyiannerie, kreyòl la — tankoswa matière digne de literati a sérieuse. Elle rassemble Carl Brouard, Jacques Roumain, Normil Sylvain ak Emile Roumer. Sa durée de vie se brève — six numéros — men son influence se durable : elle marque le début d'yon rupture ak tradisyon d'imitation classiciste ak ouvre la voie à la gran literati ayisyèn nan XXe syèk.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        À Paris, <em>La Revue nan Mond Noir</em> (1931-1932), éditée par Paulette Nardal de Martinique, se la premye revue véritablement transatlantique de literati a noire : elle publie simultanément nan ekrivens haïtiens, afriken ak afro-américains. Elle précède ak prépare la Négritude stricto sensu tout en montrant que la pensée noire de sa a époque te beaucoup plis diverse géographiquement ak intellectuellement que le nom « Négritude » — associé à Paris — ne le laisse croire.
-      </p>
+ <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">Revue Indigène ak pont Paris–Port-au-Prince</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ revue <em>Revue Indigène</em> (Port-au-Prince, 1927-1928) premye publication ayisyèn à revendiquer explicitement kilti popilè ayisyèn — Vodou, peyiannerie, kreyòl — tankoswa matière digne nan literati a sérieuse. Elle rassemble Carl Brouard, Jacques Roumain, Normil Sylvain ak Emile Roumer. Sa durée nan lavi brève — six numéros — men li influence durable : li make début d'yon rupture ak tradisyon d'imitation classiciste ak ouvre voie à gran literati ayisyèn nan XXe syèk.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ À Paris, <em>Revue nan Mond Noir</em> (1931-1932), éditée pa Paulette Nardal nan Martinique, premye revue vrèment transatlantique nan literati a noire : li publie simultanément nan ekrivens ayisyens, afriken ak afro-américains. Elle précède ak prépare Négritude stricto sensu tout en montrant ke pensée noire nan li a époque te beaucoup plis diverse géographiquement ak intellectuellement ke non « Négritude » — asosye à Paris — pa laisse croire.
+ </p>
 
-      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">L'héritage ak ses critiques</h3>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        Fanon lui-menm fut l'yon nan premiers critiques nan Négritude dans <em>Les Damnés nan Tè</em>. Il argua que la récupération nan fyète kiltille afriken te nécessaire men insuffisante : elle risquait de s'arrêter à la célébration kiltille sans aboutir à la transformation politik ak ekonomik qui te le véritable enjeu. L'affirmation identitaire, toswa légitime soit-elle, ne change pas les structures nan exploitation. Cette critique ne nie pas la valeur nan Négritude ; elle en définit les limites.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        Édouard Glissant (Martinique, 1928-2011) proposa nan anes 1980 le concept d'« Antillanité », apre sa de « créolisation » tankoswa alternative à la Négritude : plutôt que de retourner à yon Afrique originaire — geste qu'il jugeait impossible ak métaphysiquement problématique — il s'agissait d'embrasser la complexité mêlée, rhizomique, nan istwa caribéenne elle-même. La créolisation n'se pas yon retour ; c'se yon acceptation nan mélange irréductible tankoswa identité.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        Du point de vue haïtien, ce débat — Négritude contre créolisation — possède yon ironie particulière. Haïti avait <em>deja vécu</em> la Négritude tankoswa pratique politik en 1804, cent trente ans avant que Césaire ne la théorise. La revolisyon ayisyèn te exactement ce que la Négritude aspirait à être : non pas yon affirmation kiltille men yon transformation politik totale, accomplie par nan hommes ak nan fanm qui avaient affirmé leur humanité en défaisant ceux qui la niaient. Haïti n'avait pas besoin de théoriser ce qu'elle avait deja accompli.
-      </p>
+ <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">L'eritaj ak li yo critiques</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Fanon lui-menm te l'yon nan premyes critiques nan Négritude nan <em>Damnés nan Tè</em>. Il argua ke récupération nan fyète kiltille afriken te nécessaire men insuffisante : li risquait nan s'arrêter à célébration kiltille san aboutir à transformation politik ak ekonomik ki te vrè enjeu. L'affirmation identitaire, toswa légitime soit-elle, pa change pa structures nan exploitation. Cette critique pa nie pa valeur nan Négritude ; li en définit limites.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Édouard Glissant (Martinique, 1928-2011) proposa nan anes 1980 concept d'« Antillanité », apre li nan « créolisation » tankoswa alternative à Négritude : plutôt ke nan retourner à yon Afrique originaire — geste ke il jugeait impossible ak métaphysiquement problématique — li s'agissait d'embrasser complexité mêlée, rhizomique, nan istwa caribéenne elle-même. créolisation pa se pa yon retour ; c'se yon acceptation nan mélange irréductible tankoswa identité.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Du pwen nan vue ayisyen, li a débat — Négritude kont créolisation — possède yon ironie particulière. Haïti te gen <em>deja vécu</em> Négritude tankoswa pratique politik en 1804, cent trente ans anvan ke Césaire pa théorise. revolisyon ayisyèn te exactement li a ke Négritude aspirait à être : non pa yon affirmation kiltille men yon transformation politik totale, accomplie pa nan gason ak nan fanm ki te gen affirmé yo humanité en défaisant ceux ki niaient. Haïti pa avait pa besoin nan théoriser li a ke elle te gen deja accompli.
+ </p>
 
-      <aside class="researcher-note" aria-label="Note de recherche">
-        <strong>Note de recherche — La tension entre l'essence afriken ak le post-colonialisme :</strong> La Négritude senghorienne pose nan problèmes philosophiques que les critiques postkolonyal ont abordés frontalement depi les anes 1980. En affirmant yon « essence » kiltille afriken — émotion, rythme, kominote — Senghor risquait d'inverser les hiérarchies coloniales sans les déconstruire : là où kolon anialisme avait di que les Noirs te naturellement émotifs (donk inférieurs), Senghor disait qu'ils te naturellement émotifs (donk différemment précieux). Cette inversion laissait intacte la logique essentialiste. Homi Bhabha, Stuart Hall ak Achille Mbembe ont chacyon à leur manière proposé nan dépassements de sa a essentialisme, en insistant sur l'hybridité, la performativité ak la contextualité nan identités kiltilles. Du point de vue haïtien, Price-Mars se peut-être mwens vulnérable à sa a critique que Senghor : son argument te empirique autant qu'essentialiste — il décrivait nan pratiques kiltilles réelles, pas yon nature afriken abstraite.
-      </aside>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ <strong>Note nan recherche — tension ant l'essence afriken ak post-colonialisme :</strong> Négritude senghorienne pose nan problèmes philosophiques ke critiques postkolonyal gen abordés frontalement depi anes 1980. En affirmant yon « essence » kiltille afriken — émotion, rythme, kominote — Senghor risquait d'inverser hiérarchies kolonyals san déconstruire : là kote kolon anialisme te gen di ke Noirs te naturellement émotifs (donk inférieurs), Senghor disait ke ils te naturellement émotifs (donk différemment précieux). Cette inversion laissait intacte logique essentialiste. Homi Bhabha, Stuart Hall ak Achille Mbembe gen chacyon à yo manière proposé nan dépassements nan li a essentialisme, en insistant sou l'hybridité, performativité ak contextualité nan identités kiltilles. Du pwen nan vue ayisyen, Price-Mars peut-être mwens vulnérable à li a critique ke Senghor : li argument te empirique autant ke essentialiste — li décrivait nan pratiques kiltilles réelles, pa yon lanati afriken abstraite.
+ </aside>
 
-      <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">L'influence contemporaine</h3>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        Les intellectuels ayisyen post-Négritude ont développé leurs propres cadres conceptuels enracinés dans sa a tradisyon tout en la dépassant. Jean Casimir a forgé le concept nan « contre-plantation » pour désigner la kilti de rezistans que les peyians ayisyen ont construite après l'endepandans — yon civilisation alternative à la plantation qui a survécu à tout les États qui ont tenté de les soumettre depi 1804. Laënnec Hurbon a produit yon analyse philosophique nan Vodoswa tankoswa système de pensée ak de rezistans identitaire irréductible à toute folklorisation.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        Dans les étunan kiltilles anglophones, Paul Gilroy's <em>The Black Atlantic</em> (1993) reconnaît explicitement la tradisyon ayisyèn tankoswa constitutive nan modernité noire transatlantique. L'Afrofuturisme — mouvement kiltil ak artistique qui imagine nan futurs noirs depi yon perspective afriken ak diasporique — puise dans sa a menm tradisyon : revolisyon ayisyèn nan y apparaît régulièrement tankoswa prototype d'yon modernité alternative, qui a prouvé que l'istwa pouvait être faite autrement.
-      </p>
-      <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
-        L'héritage nan Négritude ayisyèn n'se pas épuisé. Dans yon contexte mondial où les questions de race, de dékolonizasyon, de mémoire ak de jistis istorik resoti au centre nan débats publics, la pensée de Price-Mars, les textes de Roumain, l'exemple de Césaire visitant Haïti en 1944, rete nan ressoursa yo intellectuelles vivantes — pas nan reliques d'yon passé révolu men nan outils pour penser le présent.
-      </p>
+ <h3 style="font-size:clamp(19px,2.3vw,26px);font-weight:800;color:var(--blue,#0038A8);margin-top:2.5rem;margin-bottom:0.8rem;">L'influence contemporaine</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ intellectuels ayisyen post-Négritude gen développé yo propres cadres conceptuels enracinés nan li a tradisyon tout en dépassant. Jean Casimir a forgé concept nan « contre-plantation » pou désigner kilti nan rezistans ke peyians ayisyen gen bati apre l'endepandans — yon civilisation alternative à plantation ki a survécu à tout États ki gen tenté nan soumettre depi 1804. Laënnec Hurbon a produit yon analyse philosophique nan Vodoswa tankoswa système nan pensée ak nan rezistans identitaire irréductible à toute folklorisation.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Dans étunan kiltilles anglophones, Paul Gilroy's <em>The Black Atlantic</em> (1993) reconnaît explicitement tradisyon ayisyèn tankoswa constitutive nan modernité noire transatlantique. L'Afrofuturisme — mouvman kiltil ak artistique ki imagine nan futurs noirs depi yon perspective afriken ak diasporique — puise nan li a menm tradisyon : revolisyon ayisyèn nan y parèt régulièrement tankoswa prototype d'yon modernité alternative, ki a prouvé ke l'istwa pouvait être faite autrement.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ L'eritaj nan Négritude ayisyèn pa se pa épuisé. Dans yon kontèks mondial kote questions nan race, nan dékolonizasyon, nan memwa ak nan jistis istorik resoti nan sant nan débats publics, pensée nan Price-Mars, textes nan Roumain, l'exemple nan Césaire visitant Haïti en 1944, rete nan ressoursa yo intellectuelles vivantes — pa nan reliques d'yon passé révolu men nan outils pou penser présent.
+ </p>
 
-      <aside class="researcher-note" aria-label="Note de recherche">
-        <strong>Note de recherche — Glissant, la créolisation ak l'exceptionnalisme ayisyen :</strong> Le concept glissantien de créolisation se d'yon part yon alternative à la Négritude ak d'lòt part yon dialogue avec elle. Mais dans son application à Haïti, il soulève yon question délicate. Haïti a été, depi l'endepandans, yon sosyete extraordinairement résistante à la créolisation au sens glissantien — résistante à l'hybridité imposée, à la mixité kiltille dominée par l'extérieur. Cette rezistans a nan raisons istorik profonnan : après avoir subi la violence nan plantation, les peyians ayisyen ont construit yon kilti de clôture relative, de préservation farouche, qui te elle-menm yon forme de survie. La créolisation tankoswa valeur positive suppose yon ouverture que l'istwa ayisyèn a souvan rendue dangereuse. Ce n'se pas yon critique de Glissant, dont la pensée se trop riche pour se réduire à yon injonction à l'hybridité ; c'se yon rappel que les concepts voyagent toujoswa dans nan contextes qui les transforment.
-      </aside>
-    </div>
-  </section>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ <strong>Note nan recherche — Glissant, créolisation ak l'exceptionnalisme ayisyen :</strong> concept glissantien nan créolisation d'yon part yon alternative à Négritude ak d'lòt part yon dialogue ak elle. Mais nan li application à Haïti, li soulève yon question délicate. Haïti a été, depi l'endepandans, yon sosyete extraordinairement résistante à créolisation nan sens glissantien — résistante à l'hybridité imposée, à mixité kiltille dominée pa l'extérieur. Cette rezistans a nan raisons istorik profonnan : apre avoir subi violence nan plantation, peyians ayisyen gen bati yon kilti nan clôture relative, nan préservation farouche, ki te elle-menm yon fòm nan survie. créolisation tankoswa valeur positive suppose yon ouverture ke l'istwa ayisyèn a souvan rendue dangereuse. Ce pa se pa yon critique nan Glissant, ke pensée trop rich pou réduire à yon injonction à l'hybridité ; c'se yon rappel ke concepts voyagent toujoswa nan nan kontèkss ki transforment.
+ </aside>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-brand__logo">Repiblik Ayiti</div>
-          <p>Yon selebrasyon istwa ekstraòdinè Ayiti, kilti vibran li ak pèp remakab li. Dedye poswa pataje istwa premye Repiblik nwa nan mond lan.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Eksplore</h4>
-          <ul>
-            <li><a href="index.html">Akèy</a></li>
-            <li><a href="about.html">Soswa Ayiti</a></li>
-            <li><a href="history.html">Istwa</a></li>
-            <li><a href="tourism.html">Touris</a></li>
-            <li><a href="encyclopedia.html">Ansiklopedi</a></li>
-            <li><a href="archives.html">Achiv</a></li>
-            <li><a href="bibliography.html">Bibliyografi</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Kilti &amp; Sosyete</h4>
-          <ul>
-            <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
-            <li><a href="vodou.html">Vodou</a></li>
-            <li><a href="gastronomy.html">Gastwonomi</a></li>
-            <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
-            <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
-            <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
-            <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Istwa &amp; Enstitisyon</h4>
-          <ul>
-            <li><a href="timeline.html">Kwonolouji</a></li>
-            <li><a href="heroes.html">Ewò Nasyonal</a></li>
-            <li><a href="lidès.html">Lidè</a></li>
-            <li><a href="konstitisyon.html">Konstitisyon</a></li>
-            <li><a href="enstitisyons.html">Enstitisyon</a></li>
-            <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Pran Kontak</h4>
-          <ul>
-            <li><a href="contact.html">Kontakte Nou</a></li>
-            <li><a href="contact.html#form">Voye yon Mesaj</a></li>
-            <li><a href="license.html">Mentions L&eacute;gales</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
-        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
-        <span class="footer-editorial">Ce projak se n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti se &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
-      </div>
-    </div>
-  </footer>
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">Repiblik Ayiti</div>
+ <p>Yon selebrasyon istwa ekstraòdinè Ayiti, kilti vibran li ak pèp remakab li. Dedye poswa pataje istwa premye Repiblik nwa nan mond lan.</p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mentions L&eacute;gales</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sou Ha&iuml;ti &eacute;crits nan l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
+ </div>
+ </div>
+ </footer>
 
-  <script src="../js/script.js"></script>
-  <script src="../js/premium.js"></script>
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){e.stopPropagation();sw.classList.toggle('open');});
+  document.addEventListener('click',function(){sw.classList.remove('open');});
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  // Auto-redirect based on stored preference
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
 </body>
 </html>
