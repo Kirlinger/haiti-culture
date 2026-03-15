@@ -926,15 +926,20 @@
   document.addEventListener('click',closeMenu);
   document.addEventListener('touchend',closeMenu);
   sw.querySelectorAll('.lang-option').forEach(function(a){
-    a.addEventListener('click',function(e){
+    var optTouched=false;
+    function handleLang(e){
       e.preventDefault();
       e.stopPropagation();
-      var lang=this.dataset.lang;
+      if(e.type==='touchend'){optTouched=true;}
+      else if(e.type==='click'&&optTouched){optTouched=false;return;}
+      var lang=a.dataset.lang;
       localStorage.setItem('preferred_lang',lang);
       var page=location.pathname.split('/').pop()||'index.html';
       if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
       else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
-    });
+    }
+    a.addEventListener('click',handleLang);
+    a.addEventListener('touchend',handleLang);
   });
   var pref=localStorage.getItem('preferred_lang');
   var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
