@@ -3104,11 +3104,14 @@ pre, code {
   .navbar {
     display: flex;
     align-items: center;
-    gap: 10px;
+    flex-wrap: nowrap;
+    gap: 8px;
     padding: 0 4px;
+    overflow: hidden;
   }
   .navbar__logo {
     flex: 1;
+    min-width: 0;
     font-size: 16px;
     white-space: nowrap;
     overflow: hidden;
@@ -3118,8 +3121,28 @@ pre, code {
     order: 2;
     flex-shrink: 0;
   }
-  .search-toggle {
+  /* Language selector — must stay compact in the mobile header bar */
+  .lang-switcher {
     order: 3;
+    flex-shrink: 0;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+  .lang-switcher__btn {
+    width: auto !important;
+    padding: 0.38rem 0.55rem !important;
+    font-size: 0.82rem !important;
+    gap: 0.25rem !important;
+  }
+  .lang-switcher__menu {
+    right: 0 !important;
+    left: auto !important;
+    width: auto !important;
+    min-width: 160px !important;
+  }
+  .search-toggle {
+    order: 4;
     flex-shrink: 0;
     width: 38px;
     height: 38px;
@@ -3128,6 +3151,30 @@ pre, code {
   /* Ensure mobile nav doesn't push content */
   .navbar__nav {
     z-index: 999;
+  }
+}
+
+/* ── Extra-small screens (iPhone SE, 390px, etc.) ────── */
+@media (max-width: 420px) {
+  .navbar {
+    gap: 6px;
+    padding: 0 2px;
+  }
+  .navbar__logo {
+    font-size: 14px;
+  }
+  .lang-switcher__btn {
+    padding: 0.32rem 0.45rem !important;
+    font-size: 0.78rem !important;
+  }
+  .search-toggle {
+    width: 34px;
+    height: 34px;
+  }
+  .navbar__toggle {
+    width: 36px;
+    height: 36px;
+    padding: 6px;
   }
 }
 
