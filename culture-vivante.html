@@ -19,19 +19,21 @@
 .lang-switcher__btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  justify-content: center;
   background: rgba(255,255,255,0.12);
   border: 2px solid rgba(255,255,255,0.5);
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.6rem;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1;
   white-space: nowrap;
   transition: all 0.25s ease;
-  letter-spacing: 0.02em;
   font-family: inherit;
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 .lang-switcher__btn:hover,
 .lang-switcher__btn:focus {
@@ -41,14 +43,8 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 .lang-switcher__btn .globe-icon {
-  font-size: 1.15rem;
-}
-.lang-switcher__btn .chevron {
-  font-size: 0.7rem;
-  transition: transform 0.2s;
-}
-.lang-switcher.open .lang-switcher__btn .chevron {
-  transform: rotate(180deg);
+  font-size: 1.3rem;
+  pointer-events: none;
 }
 .lang-switcher__menu {
   display: none;
@@ -101,25 +97,26 @@
 @media (max-width: 768px) {
   .lang-switcher {
     margin-left: 0;
-    margin-top: 0.5rem;
-    width: 100%;
+    margin-top: 0;
+    width: auto;
   }
   .lang-switcher__btn {
-    width: 100%;
+    width: auto;
     justify-content: center;
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.4rem 0.55rem;
+    font-size: 1.2rem;
   }
   .lang-switcher__menu {
-    right: auto;
-    left: 0;
-    width: 100%;
+    right: 0;
+    left: auto;
+    width: auto;
+    min-width: 170px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .lang-switcher__btn {
-    padding: 0.45rem 0.8rem;
-    font-size: 0.88rem;
+    padding: 0.4rem 0.6rem;
+    font-size: 1.25rem;
   }
 }
 </style>
@@ -222,7 +219,7 @@
         </nav>
         <div class="lang-switcher" id="langSwitcher">
           <button class="lang-switcher__btn" aria-label="Changer de langue" aria-expanded="false">
-            <span class="globe-icon">🌐</span> Lang <span class="chevron">▾</span>
+            <span class="globe-icon">🌎</span>
           </button>
           <div class="lang-switcher__menu" role="menu">
             <a href="#" class="lang-option" data-lang="ht" role="menuitem"><span class="flag-emoji">🇭🇹</span> Kreyòl</a>
@@ -406,18 +403,30 @@
   var sw=document.getElementById('langSwitcher');
   if(!sw)return;
   var btn=sw.querySelector('.lang-switcher__btn');
-  btn.addEventListener('click',function(e){
+  function toggleMenu(e){
+    e.preventDefault();
     e.stopPropagation();
     var isOpen=sw.classList.toggle('open');
-    btn.setAttribute('aria-expanded',isOpen);
+    btn.setAttribute('aria-expanded',String(isOpen));
+  }
+  btn.addEventListener('click',toggleMenu);
+  btn.addEventListener('touchend',toggleMenu);
+  document.addEventListener('click',function(e){
+    if(!sw.contains(e.target)){
+      sw.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    }
   });
-  document.addEventListener('click',function(){
-    sw.classList.remove('open');
-    btn.setAttribute('aria-expanded','false');
+  document.addEventListener('touchend',function(e){
+    if(!sw.contains(e.target)){
+      sw.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    }
   });
   sw.querySelectorAll('.lang-option').forEach(function(a){
     a.addEventListener('click',function(e){
       e.preventDefault();
+      e.stopPropagation();
       var lang=this.dataset.lang;
       localStorage.setItem('preferred_lang',lang);
       var page=location.pathname.split('/').pop()||'index.html';
