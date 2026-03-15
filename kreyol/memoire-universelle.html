@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Mémoire Historique Universelle d'Haïti | </title>
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher - Redesigned */
+.lang-switcher {
+  position: relative;
+  margin-left: 1rem;
+  z-index: 1100;
+}
+.lang-switcher__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.5);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+  font-family: inherit;
+}
+.lang-switcher__btn:hover,
+.lang-switcher__btn:focus {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.8);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.lang-switcher__btn .globe-icon {
+  font-size: 1.15rem;
+}
+.lang-switcher__btn .chevron {
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+}
+.lang-switcher.open .lang-switcher__btn .chevron {
+  transform: rotate(180deg);
+}
+.lang-switcher__menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  min-width: 180px;
+  z-index: 1100;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  animation: langDropIn 0.2s ease;
+}
+@keyframes langDropIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.lang-switcher.open .lang-switcher__menu {
+  display: block;
+}
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.1rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.15s;
+  border-bottom: 1px solid #f0f0f0;
+}
+.lang-option:last-child {
+  border-bottom: none;
+}
+.lang-option:hover {
+  background: #f0f5ff;
+  color: #1a56db;
+}
+.lang-option.active {
+  background: #e8f0fe;
+  font-weight: 700;
+  color: #1a56db;
+}
+.lang-option .flag-emoji {
+  font-size: 1.3rem;
+}
+@media (max-width: 768px) {
+  .lang-switcher {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+  .lang-switcher__btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  .lang-switcher__menu {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .lang-switcher__btn {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.88rem;
+  }
+}
+</style>
+</head>
+<body>
+
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ <a href="presidents.html">Pwofil Prezidan yo</a>
+ <a href="revolution-batays.html">Batay Revolisyon an</a>
+ <a href="relations-internationales.html">Relasyon Entènasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ <a href="atiss.html">Atis Vizyèl</a>
+ <a href="mizik-istwa.html">Istwa Mizik</a>
+ <a href="litterature.html">Literati</a>
+ <a href="creole.html">Lang Kreyòl</a>
+ <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
+ <a href="glossaire-creole.html">Glosè Kreyòl</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="departements.html">10 Depatman yo</a>
+ <a href="geographie.html">Jeyografi Fizik</a>
+ <a href="anviwonman.html">Anviwonman</a>
+ <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
+ <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
+ <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang" aria-expanded="false">
+            <span class="globe-icon">🌐</span> Lang <span class="chevron">▾</span>
+          </button>
+          <div class="lang-switcher__menu" role="menu">
+            <a href="#" class="lang-option active" data-lang="ht" role="menuitem"><span class="flag-emoji">🇭🇹</span> Kreyòl</a>
+            <a href="#" class="lang-option" data-lang="fr" role="menuitem"><span class="flag-emoji">🇫🇷</span> Français</a>
+          </div>
+        </div>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
+
+ <section class="page-hero page-hero--history">
+ <div class="container">
+ <p class="page-hero__label">Mémoire</p>
+ <h1 class="page-hero__title">Mémoire Historique Universelle</h1>
+ <p class="page-hero__desc">Revolisyon ayisyèn, premye nan li genre, te transfòme cours nan istwa mondiale.</p>
+ </div>
+ </section>
+
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <span>Memwa Inivèsèl</span>
+ </nav>
+ </div>
+ </div>
+
+ <section class="section">
+ <div class="container">
+ <div class="editorial-intro editorial-intro--tight">
+ <p class="section-label">Portée Universelle</p>
+ <p>En janvier 1804, Jean-Jacques Dessalines proclamait l'endepandans Ayiti. Ce geste — seul nan l'istwa moderne kote nan esklav en révolte gen défè yon puissance kolonyal ak fonde yon État souverain — a changé quelque chose nan géopolitik nan idées. Pas immédiatement, pa proprement, men irréversiblement.</p>
+ <p>contemporains l'ont compris anvan historiens. Thomas Jefferson, alò prezidan nan États-Unis, a imposé yon embargo tankourcial sou Haïti dès 1806 précisément paske l'exemple ayisyen te jugé trop dangereux poswa États esclavagistes nan Sud ameriken. Napoléon, humilié, a vennan Louisiane kèk mois apre defèt nan li yo troupes à Saint-Domingue — redimensionnant nan menm coup jeyografi nord-américaine. Ces réactions pa pa nan détails : yo prouvent ke Revolisyon ayisyèn nan te perçue pa li yo contemporains tankoswa yon événement d'yon portée ki dépassait largement Karayib.</p>
+ <p>connexion ak l'Amerik di Sid plis directe encore. Alexandre Pétion, prezidan d'Haïti nan 1807 à 1818, a accueilli Simón Bolívar en exil à deux reprises ak lui a fourni armes, munitions ak gason pou relancer li campagne d'endepandans — en échange d'yon seule condition : l'abolisyon nan esklavaj nan territoires libérés. Bolívar a honoré li a engagement. On mesure rarement li a ke cela signifie : san Haïti, chronologie nan endepandans sud-ameriken aurait été diferan.</p>
+ <p>Plus tard, mouvements panafriken nan XXe syèk — nan Marcus Garvey à Aimé Césaire — gen explicitement revendiqué filiation ayisyèn. Négritude pa s'se pa inventée nan yon vide : li s'se nourrie nan existence d'Haïti tankoswa preuve ke libération noire te possible ak te gen deja eu lieu. C'se li a dimension ke manuels scolaires occidentaux occultent systématiquement.</p>
+
+ <div class="researcher-note">
+ <p>L'oubli nan Revolisyon ayisyèn nan nan curricula internasyonal pa se pa accidentel. Pendant nan décennies, puissansa yo kolonyals ak esclavagistes te gen tout intérêt à li a ke li a événement rete peu konnen — ak habitunan éditoriales survivent longtemps nan motivations ki gen produites. Jounen jodi a encore, nan plupart nan lycées européens ak nord-américains, Haïti 1804 pa se pa enseigné ak menm centralité ke Revolisyon fransèz oswa Revolisyon ameriken. C'se yon angle lanmò ki di quelque chose soswa façon ke l'istwa universelle ankò écrite — ak pa qui.</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <section class="section">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Yon Eritaj Mondial</p>
+ <h2>Portée Universelle nan Revolisyon Haïtienne</h2>
+ <p>Revolisyon ayisyèn (1791-1804) seule révolte d'esclaves nan istwa à avoir abouti à fondasyon d'yon État indépandan. Son message nan libète ak d'égalité te enspire nan mouvements d'émancipation atravè mond entier, nan Amerik Latin à l'Afrique.</p>
+ </div>
+ </div>
+ </section>
+
+ <section class="section section--alt">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Rayonnement International</p>
+ <h2>Haïti nan l'Istwa Mondiale</h2>
+ <p>Haïti te jwe yon wòl déterminant nan plizyè événements gwos nan istwa nan Amériques. Alexandre Pétion a soutenu Simón Bolívar nan li lutte pou l'endepandans nan Amerik di Sid. idéaux ayisyen gen nourri mouvements abolisyonnistes nan États-Unis ak en Europe.</p>
+ </div>
+ </div>
+ </section>
+
+ <section class="section">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Dignité ak Souveraineté</p>
+ <h2>Mémoire, Dignité ak Souveraineté</h2>
+ <p>memwa nan Revolisyon ayisyèn nan intimement lye à dignité humaine ak à souvènte nan pèps. Elle raple ke libète pa donne pas, li conquiert, ak ke tout êtres humains égaux en droit ak en dignité.</p>
+ </div>
+ </div>
+ </section>
+
+ <section class="section section--alt">
+ <div class="container">
+ <div class="text-block">
+ <p class="section-label">Transmission</p>
+ <h2>Pourquoi Cette Mémoire Doit Être Mieux Transmise</h2>
+ <p>Malgré li importance istorik mondiale, Revolisyon ayisyèn nan rete peu enseignée nan curricula internationaux. Yon meilleure transmission nan li a memwa contribuerait à yon compréhension plis juste ak plis complète nan istwa nan humanité.</p>
+ </div>
+ </div>
+ </section>
+
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mentions L&eacute;gales</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sou Ha&iuml;ti &eacute;crits nan l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
+ </div>
+ </div>
+ </footer>
+
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var isOpen=sw.classList.toggle('open');
+    btn.setAttribute('aria-expanded',isOpen);
+  });
+  document.addEventListener('click',function(){
+    sw.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  });
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
+</body>
+</html>

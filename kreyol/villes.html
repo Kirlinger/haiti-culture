@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Vils d'Haïti | RepiblikHaïti.org</title>
+ <meta name="description" content="Un panorama nan vils ak communes ayisyèn — leur istwa, leur identité kiltille, leur rôle nan jeyografi nationale." />
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher - Redesigned */
+.lang-switcher {
+  position: relative;
+  margin-left: 1rem;
+  z-index: 1100;
+}
+.lang-switcher__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.5);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+  font-family: inherit;
+}
+.lang-switcher__btn:hover,
+.lang-switcher__btn:focus {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.8);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.lang-switcher__btn .globe-icon {
+  font-size: 1.15rem;
+}
+.lang-switcher__btn .chevron {
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+}
+.lang-switcher.open .lang-switcher__btn .chevron {
+  transform: rotate(180deg);
+}
+.lang-switcher__menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  min-width: 180px;
+  z-index: 1100;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  animation: langDropIn 0.2s ease;
+}
+@keyframes langDropIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.lang-switcher.open .lang-switcher__menu {
+  display: block;
+}
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.1rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.15s;
+  border-bottom: 1px solid #f0f0f0;
+}
+.lang-option:last-child {
+  border-bottom: none;
+}
+.lang-option:hover {
+  background: #f0f5ff;
+  color: #1a56db;
+}
+.lang-option.active {
+  background: #e8f0fe;
+  font-weight: 700;
+  color: #1a56db;
+}
+.lang-option .flag-emoji {
+  font-size: 1.3rem;
+}
+@media (max-width: 768px) {
+  .lang-switcher {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+  .lang-switcher__btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  .lang-switcher__menu {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .lang-switcher__btn {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.88rem;
+  }
+}
+</style>
+</head>
+<body>
+
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang" aria-expanded="false">
+            <span class="globe-icon">🌐</span> Lang <span class="chevron">▾</span>
+          </button>
+          <div class="lang-switcher__menu" role="menu">
+            <a href="#" class="lang-option active" data-lang="ht" role="menuitem"><span class="flag-emoji">🇭🇹</span> Kreyòl</a>
+            <a href="#" class="lang-option" data-lang="fr" role="menuitem"><span class="flag-emoji">🇫🇷</span> Français</a>
+          </div>
+        </div>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
+
+ <section class="page-hero page-hero--history">
+ <div class="container">
+ <p class="page-hero__label">Jeyografi</p>
+ <h1 class="page-hero__title">Vils d'Haïti</h1>
+ <p class="page-hero__desc">Yon panorama nan vils ak communes ayisyèn — yo istwa, yo idantite kiltille, yo wòl nan jeyografi nasyonal.</p>
+ </div>
+ </section>
+
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <span>Vils d'Haïti</span>
+ </nav>
+ </div>
+ </div>
+
+ <section class="section">
+ <div class="container">
+ <p class="section-label">Òganizasyon territoriale</p>
+ <h2>Jeyografi administrative ak iben</h2>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ Haïti òganize en dix depatmans géographiques — Artibonite, Centre, Grand'Anse, Nippes, Nord, Nord-Est, Nord-Ouest, Ouest, Sud ak Sud-Est — eux-menm subdivisés en arrondissements, apre li en communes. peyi compte anviwon 145 communes, ke sipèfisi ak popilasyon varient considérablement. Cette architecture administrative reflete en pati découpages kolonyal fransè, en pati reconfigurations nan État ayisyen nan XIXe syèk, ak en pati nan réalités géographiques — massifs mònux, péninsules, plaines irrigables — ki gen toujoswa conditionné équilib régionaux.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:2.5rem;">
+ contraste plis saillant nan jeyografi iben ayisyèn domination écrasante nan Port-au-Prince. Avec yon aire métropolitaine nan près nan 3,5 millions d'habitants — sou yon popilasyon nasyonal d'environ 11 millions — kapital concentre yon part disproportionnée nan enstitisyons publiques, nan universités, nan hôpitaux nan référence, nan aktivite tankourciales ak nan flux migratoires internes. Cette primauté iben pa se pa yon exception ayisyèn ; c'se yon phénomène courant nan peyi à devlopman inégal. Mais li atteint en Haïti yon intensité particulière, héritée nan syèks nan centralisation politik ak aggravée pa katastwòf yo successives ki gen dépeuplé rejyon ak grossi bidonvils nan kapital.
+
+ </p>
+
+ <aside class="researcher-note" aria-label="Note de recherche">
+ domination nan Port-au-Prince soswa lavi nasyonal ayisyèn an menm tan yon réalité démographique ak yon pathologie politik. prezidans te élus ak renversés nan kapital ; crises gen rarement eu d'écho nasyonal proportionnel à yo impact réel soswa provinces. vils secondaires — Cap-Haïtien, Gonaïves, Cayes — gen souvan eu nan dynamiques politiks propres ke récits centrés sou Port-au-Prince pa restituent pa fidèlement. Écrire yon istwa iben d'Haïti ki pa soit pa yon istwa nan kapital yon chantier historiographique à peine tankouncé.
+ </aside>
+
+ <!-- ==================== GRANDES VILLES ==================== -->
+ <p class="section-label" style="margin-top:3rem;">Grannan Vils</p>
+ <h2>Portraits ibens</h2>
+
+ <!-- Port-au-Prince -->
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Port-au-Prince</h3>
+ <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Fondée 1749 · Kapital · Depatman nan Ouest</p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Port-au-Prince te fonde en 1749 pa autorités kolonyals fransèzs soswa bords d'yon baie naturelle nan golfe nan Gonâve — yon site choisi pou li yo avantages portuaires plutôt ke pou li topographie, ki rendait difficile toute expansion iben rationalisée. vil devint rapidement sant administratif nan koloni an nan Saint-Domingue, rivalisant ak Cap-Français pou l'influence politik ak tankourciale. Après l'endepandans nan 1804, li te confirmée tankoswa kapital nan nouvo Repiblik Ayiti.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Au cours nan XXe syèk, Port-au-Prince connut yon expansion iben rapide ak largement non planifiée. Cité Soleil — jounen jodi a l'yon nan quartiers plis densément peuplés nan hémisphère occidental — s'se développée depis anes 1960. Pétionvil, nan hauteurs, vin tounene résidence nan classes supérieures ak nan kominote entènasyonal. Tabarre gen ladan li infrastructures diplomatiques ak onusiennes. Champ nan Mars constituait sant civique nan vil, ak Palais National — senbòl nan souvènte ayisyèn — juske au séisme nan 12 janvier 2010.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Ce séisme nan magnitude 7,0 tua ant 100 000 ak 300 000 personnes dapre estimations (les chiffres rete débattus), en détruisant Palais National, Cathédrale nan Port-au-Prince — ke ruines restées en plas tankoswa mémorial involontaire — ak nan quartiers entiers. Port-au-Prince anvan 2010 ak Port-au-Prince apre 2010 deux vils superposées nan menm topographie : l'yon nan archives photographiques ak mémoires personnelles, l'lòt en rekonstriksyon permanente.
+ </p>
+ <p style="font-size:14px;font-style:italic;color:var(--blue,#0038A8);margin-bottom:0.5rem;"><a href="port-au-prince.html">→ Page complète sou Port-au-Prince</a></p>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· Fondée 1749 pa Français</li>
+ <li>· Kapital depi l'endepandans (1804)</li>
+ <li>· ~3,5 millions d'hab. (aire métropolitaine)</li>
+ <li>· Depatman nan Ouest</li>
+ <li>· Séisme dévastateur : 12 janvier 2010</li>
+ <li>· Quartiers : Cité Soleil, Pétionvil, Tabarre</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+
+ <!-- Cap-Haïtien -->
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Cap-Haïtien</h3>
+ <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Fondée 1670 · Kapital kiltille nan Nord · Depatman nan Nord</p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Cap-Haïtien — fonde en 1670 anba non nan Cap-Français — te pandan l'ère kolonyal kapital administrative nan Saint-Domingue ak l'yon nan vils plis prospères nan Amériques. On surnommait « Paris nan Antilles » : li yo théâtres, li yo salons, li lavi intellectuelle ak tankourciale attiraient nan visiteurs nan toute l'Europe. C'se nan li plèn ke revolisyon ayisyèn nan éclata en août 1791, ak c'se en face nan li yo côtes ke lame a nan Napoléon, ravagée pa fièvre jayon ak combats, tankounça à désintégrer.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ C'se à Cap-Haïtien — oswa nan li yo environs immédiats — ke Dessalines proclama l'endepandans Ayiti 1er janvier 1804. vil conserve jounen jodi a yon architecture kolonyal partiellement préservée, notable nan kontèks caribéen kote destructions successives gen effacé plupart nan bâtiments d'époque. Elle prensipal pwen nan départ poswa visiteurs ki souhaitent accéder à Citadelle Laferrière ak nan Palais Sans-Souci, inscrits nan patrimwàn mondial nan UNESCO — deux monuments plis impressionnants nan patrimwàn bâti ayisyen.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Avec anviwon 300 000 habitants, Cap-Haïtien deuxième vil nan peyi. Elle revendique ak yon certaine fyète régionale li statut nan kapital kiltille ak istorik nan Nord — yon idantite ki ant pafwa en tension symbolique ak domination politik nan Port-au-Prince.
+ </p>
+ <p style="font-size:14px;font-style:italic;color:var(--blue,#0038A8);margin-bottom:0.5rem;"><a href="cap-haitien.html">→ Page complète sou Cap-Haïtien</a></p>
+ </div>
+ <div>
+ <div style="background:var(--red,#D21034);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:#fff;text-transform:uppercase;margin-bottom:1rem;opacity:0.8;">Repères</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· Fondée 1670 tankoswa Cap-Français</li>
+ <li>· « Paris nan Antilles » à l'époque kolonyal</li>
+ <li>· Berceau nan revolisyon ayisyèn nan (1791)</li>
+ <li>· Proclamation d'endepandans (1er jan. 1804)</li>
+ <li>· Accès à Citadelle Laferrière (UNESCO)</li>
+ <li>· ~300 000 habitants</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+
+ <!-- Gonaïves -->
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Gonaïves</h3>
+ <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Cité nan Endepandans · Depatman nan Artibonite</p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Gonaïves pote titre nan « Cité nan Endepandans » : c'se nan li a vil nan Artibonite ke Jean-Jacques Dessalines proclama ofisyèlman l'endepandans Ayiti 1er janvier 1804, mettant fin à deux syèks nan kolonizasyon fransè ak à près nan deux syèks d'esklavaj transatlantique sou zile a. Ce moment fondateur — ki fit d'Haïti premye Repiblik nwa nan mond lan ak seukolon anie à avoir obtenu li endepandans pa revolisyon nan esklav — raison pouquelle Gonaïves okipe yon plas symbolique san équivalent nan memwa a nasyonal.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Avec anviwon 300 000 habitants, Gonaïves troisième vil nan peyi. Sitiye nan yon plèn basse ak vulnérable nan inondations, li te frappée nan manière répétée pa nan katastwòf natirèl, ke siklòn yo nan 2004 (Jeanne) ak 2008 (Ike, Hanna, Gustav) ki causèrent nan milliers nan morts ak détruisirent nan infrastructures ke vil peine ankò à reconstruire. Cette vulnérabilité géographique aggravée pa déforestation nan arrière-peyi ak l'insuffisance chronique nan investissements publics nan région.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Malgré li yo difficultés ekonomiks ak anviwonmanales, li wòl nan memwa a nasyonal demeure intact. Chaque 1er janvier, Gonaïves sant nan commémorations nasyonals nan endepandans — yon moment nan fyète collective ki transcende divisions politiks ordinaires.
+ </p>
+ <p style="font-size:14px;font-style:italic;color:var(--blue,#0038A8);margin-bottom:0.5rem;"><a href="gonaives.html">→ Page complète sou Gonaïves</a></p>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· Proclamation nan endepandans, 1er jan. 1804</li>
+ <li>· « Cité nan Endepandans »</li>
+ <li>· ~300 000 habitants</li>
+ <li>· Depatman nan Artibonite</li>
+ <li>· Inondations gwos : 2004, 2008</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+
+ <!-- Les Cayes -->
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ <strong>Cayes</strong> — Kapital nan depatman nan Sud, Cayes yon vil portuaire fonde nan XVIIe syèk ke l'istwa ekonomik indissociable nan café ak nan cacao — deux kiltis ki gen longtemps fè nan rejyon l'yon nan plis productives nan peyi. vil ak li rejyon furent teyat nan soulèvement nan Piquets (1843-1848), mouvman peyian ak nan basse extraction sosyal mené pa Louis Jean-Jacques Acaau, ki contestait l'ordre politik mulâtre issu nan période post-revolisyonnaire. Massacre nan Cayes nan 1869, lors nan troubles politiks ki entourèrent présidence nan Nissage Saget, raple ke li a vil côtière pa a jamè été à l'écart nan convulsions nan istwa nasyonal. <a href="les-cayes.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sou Cayes</a>
+ </p>
+
+ <!-- Jacmel -->
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Jacmel</h3>
+ <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Fondée 1698 · Joyau kiltil nan Sud · Depatman nan Sud-Est</p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Jacmel peut-être vil ayisyèn ke caractère plis immédiatement saisissable pou yon visiteur extérieur. Ses menons à balcons nan fer forgé, héritées nan architecture victorienne nan XIXe syèk — sèten pami plis belles nan mond caribéen — lui confèrent yon physionomie inik. Fonde nan 1698, li te l'yon nan ports plis actifs nan zile pou l'exportation nan café, ak li prospérité kolonyal apre li post-revolisyonnaire lit ankò nan taille ak l'ornement nan li yo demeures bourgeoises.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ Jacmel toswa yon sant artistique reconnu. peintre naïf Préfète Duffaut, ke toiles représentent yon Jacmel imaginaire en colimaçons ak spirales, te kontribye à inscrire vil nan cartographie nan atizay ayisyen an. Kanaval nan Jacmel — òganize en février, kèk semaines anvan celui nan Port-au-Prince — konsidere pa beaucoup tankoswa plis élaboré ak plis authentiquement artisanal d'Haïti : li yo mascarons en papier mâché, li yo chars à thèmes istorik ak li yo processions nocturnes gen yon qualité théâtrale ke kanavals plis spectaculaires nan kapital pa égalent pa nécessairement.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+ séisme nan 2010 a touché Jacmel nan manière significative, détruisant plizyè nan bâtiments istorik nan centre-vil. Yon pati nan patrimwàn architectural te préservée oswa en cours nan restauration, men vulnérabilité nan li a tissu iben irremplaçable rete yon préoccupation constante poswa acteurs nan patrimwàn.
+ </p>
+ <p style="font-size:14px;font-style:italic;color:var(--blue,#0038A8);margin-bottom:0.5rem;"><a href="jacmel.html">→ Page complète sou Jacmel</a></p>
+ </div>
+ <div>
+ <div style="background:var(--red,#D21034);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:#fff;text-transform:uppercase;margin-bottom:1rem;opacity:0.8;">Repères</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+ <li>· Fondée 1698</li>
+ <li>· Architecture victorienne, balcons nan fer forgé</li>
+ <li>· Port caféier istorik</li>
+ <li>· Kanaval : plis artisanal d'Haïti</li>
+ <li>· Centre artistique (Préfète Duffaut)</li>
+ <li>· ~200 000 habitants</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+
+ <!-- Jérémie -->
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ <strong>Jérémie — Cité nan Powèts</strong> — Kapital nan depatman nan Grand'Anse, Jérémie pote surnom nan « Cité nan Powèts » ak yon légitimité ke peu nan vils caribéennes kapab revendiquer. C'se nan li a vil — oswa nan li yo environs — ke naquit père d'Alexandre Dumas, Thomas-Alexandre Davy nan Pailleterie, di Dumas père, ke fils Alexandre Dumas allait devenir l'yon nan romanciers plis lus nan XIXe syèk fransè. Cette ascendance ayisyèn nan Dumas ankò mal konnen nan gran public francophone. Jérémie accessible prensipalman pa avion oswa pa mer, li a ki l'a longtemps isolée ekonomikment tout en préservant li caractère distinct — yon vil nan lettres ak d'intériorité, à l'écart nan flux nan mondialisation. <a href="jeremie.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sou Jérémie</a>
+ </p>
+
+ <!-- Hinche -->
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ <strong>Hinche</strong> — Kapital nan depatman nan Centre, Hinche cœur nan plateau central ayisyen, yon rejyon agricole ak d'élevage ki te l'yon nan territoires plis affectés pa l'okipasyon ameriken nan 1915-1934. autorités d'okipasyon ameriken démantelèrent structures d'exploitation peyianne tradisyonnelles poswa remplacer pa nan domaines d'élevage extensif nan bénéfice nan HASCO ak d'lòt compagnies amerikens — expulsant nan peyians ayisyen nan yo tès pou nourrir nan marchés nord-américains. Cette spoliation l'yon nan soursa yo documentées nan rezistans peyianne ki culmina nan guérilla cacos, sitoswa anba commandement nan Charlemagne Péralte. <a href="hinche.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sou Hinche</a>
+ </p>
+
+ <!-- Saint-Marc -->
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ <strong>Saint-Marc</strong> — Vil portuaire nan Artibonite, Saint-Marc l'yon nan centres tankourciaux provinciaux plis actifs d'Haïti. Son port jwe yon wòl significatif nan distribution nan marchandises vè vils nan intérieur. Historiquement, li te l'yon nan vils plis prospères nan province nan XIXe syèk, ak teyat nan affaire Bagabosse nan 1908 — yon épisode nan violence politik révélateur nan tensions ant factions régionales ki structuraient lavi a politik ayisyèn nan époque. <a href="saint-marc.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sou Saint-Marc</a>
+ </p>
+
+ <!-- Miragoâne -->
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ <strong>Miragoâne</strong> — Kapital nan depatman nan Nippes, Miragoâne yon port nan péninsule méridionale ke l'istwa ekonomik lye à l'exportation nan café ak nan bois. Historiquement enpòtan nan circuits tankourciaux nan côte sud, li jounen jodi a l'yon nan vils moyennes ayisyèn confrontées nan défis communs nan enclavement relatif, nan manque d'investissements infrastructurels ak nan fragmentation administrative. <a href="miragoane.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sou Miragoâne</a>
+ </p>
+
+ <!-- Fort-Libète -->
+ <p style="font-size:17px;line-height:1.85;margin-bottom:2.5rem;">
+ <strong>Fort-Libète</strong> — Fonde nan 1731 anba non nan Fort-Dauphin, li a vil nan Nord-Est l'yon nan cités ayisyèn ki conserve mieux trasa yo nan li architecture kolonyal fortifiée. Elle te teyat nan combats significatifs pandan Revolisyon ayisyèn nan, ak lieu nan plizyè épisonan nan brutalité documentée — ke massacre òganize pa Dessalines en 1805, événement complexe ak controversé ke l'historiographie ayisyèn pa a pa ankò pleinement intégré. Sa baie naturelle l'yon nan mieux préservées nan peyi. <a href="fort-liberte.html" style="font-style:italic;color:var(--blue,#0038A8);">→ Page complète sou Fort-Libète</a>
+ </p>
+
+ <!-- ==================== VILLES ET MÉMOIRE ==================== -->
+ <p class="section-label" style="margin-top:2rem;">Jeyografi nan memwa a</p>
+ <h2>Vils ak Mémoire nasyonal</h2>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ vils ayisyèn pa pa seulement nan entités administratives oswa nan centres ekonomiks : yo nan lieux nan memwa nan sens ke Pierre Nora a donné à li a expression — nan espasa yo kote nasyon sousoti d'elle-même, négocie li passé, fabrique li yo mythes fondateurs. Chaque gran vil ayisyèn encode yon moment oswa yon registre particulier nan idantite nasyonal.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ <strong>Cap-Haïtien</strong> memwa a nan kolonizasyon ak nan revolisyon — vil ki a vu naître ak s'effondrer l'ordre kolonyal fransè, ak nanquelle l'endepandans te proclamée. Elle an menm tan senbòl nan li a ke Haïti te detwi pou naître ak nan li a ke li a naissance a coûté. Citadelle Laferrière, visible depi li yo environs, yon monument an menm tan à libète ak à paranoïa nan pouvwa : Henri Christophe fit construire pou défendre yon endepandans deja acquise kont yon reconquête ki pa vint jamen.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ <strong>Gonaïves</strong> memwa a nan rupture fondatrice — 1er janvier 1804, moment kote yon pèp ansyenment réduit en esklavaj déclara li libète nan mond. Chaque seremoni nasyonal ayisyèn resoti à Gonaïves tankoswa à yon pwen d'origine irréductible. Dans périonan nan crise politik, lidès ki rendent à Gonaïves fè yon geste symbolique nan retour nan soursa yo — légitime oswa instrumentalisé dapre circonstances.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ <strong>Jacmel</strong> memwa a nan kilti ak nan atizay — vil ki a su préserver yon continuité esthétique nan yon peyi traversé pa nan discontinuités politiks violentes. Son kanaval, li architecture, li yo peintres naïfs représentent yon lòt façon d'être ayisyen : plis contemplatif, plis artisanal, mwens épique. C'se yon contre-mémoire nan yon peyi ke mémoires officielles presque toujoswa milites.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+ <strong>Jérémie</strong> memwa a nan literati a ak nan intériorité — vil ki a produit nan ekrivens ak nan powèts, ki a maintenu yon tradisyon intellectuelle indépandane malgre li isolement géographique. Dans yon peyi kote l'écriture a souvan été yon acte politik, vocation littéraire nan Jérémie toswa yon fòm nan rezistans — rezistans nan ceux ki choisissent mo plutôt ke armes pou dire li a ke se Haïti.
+ </p>
+
+ <aside class="researcher-note" aria-label="Note de recherche">
+ Écrire l'istwa iben d'Haïti heurte à yon obstacle documentaire considérable : destruction répétée nan archives municipales. gran incendie nan Cap-Français en 1793, lors nan Revolisyon, détruisit yon part irremplaçable nan registres kolonyal nan Nord. séisme nan 12 janvier 2010 détruisit oswa dispersa nan décennies d'archives nan Port-au-Prince, nan Jacmel ak d'lòt vils nan Sud ak nan Ouest. Entre deux, troubles politiks répétés — incendies, pillages, destructions délibérées lors nan changements nan régime — gen fragmenté tissu documentaire nan pratiquement tout vils ayisyèns. Écrire l'istwa locale d'Haïti oblige donk à yon archéologie nan soursa yo dispersées : presse ansyen conservée à l'étranger (Bibliothèque nasyonal nan France, Library of Congress), mémoires personnelles, archives notariales partiellement conservées, enquêtes orales. C'se yon travail nécessaire ak ankò largement à faire.
+ </aside>
+
+ </div>
+ </section>
+
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mentions L&eacute;gales</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sou Ha&iuml;ti &eacute;crits nan l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
+ </div>
+ </div>
+ </footer>
+
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var isOpen=sw.classList.toggle('open');
+    btn.setAttribute('aria-expanded',isOpen);
+  });
+  document.addEventListener('click',function(){
+    sw.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  });
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
+</body>
+</html>

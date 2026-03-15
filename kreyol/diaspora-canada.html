@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Dyaspora Haïtienne nan Canada | RepiblikHaïti.org</title>
+ <meta name="description" content="Montréal abrite la plis gran kominote ayisyèn francophone hors d'Haïti — yon dyaspora intellectuelle ak kiltille qui a pwofondman marqué lavi a littéraire ak sosyal nan Québec." />
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher - Redesigned */
+.lang-switcher {
+  position: relative;
+  margin-left: 1rem;
+  z-index: 1100;
+}
+.lang-switcher__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.5);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+  font-family: inherit;
+}
+.lang-switcher__btn:hover,
+.lang-switcher__btn:focus {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.8);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.lang-switcher__btn .globe-icon {
+  font-size: 1.15rem;
+}
+.lang-switcher__btn .chevron {
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+}
+.lang-switcher.open .lang-switcher__btn .chevron {
+  transform: rotate(180deg);
+}
+.lang-switcher__menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  min-width: 180px;
+  z-index: 1100;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  animation: langDropIn 0.2s ease;
+}
+@keyframes langDropIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.lang-switcher.open .lang-switcher__menu {
+  display: block;
+}
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.1rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.15s;
+  border-bottom: 1px solid #f0f0f0;
+}
+.lang-option:last-child {
+  border-bottom: none;
+}
+.lang-option:hover {
+  background: #f0f5ff;
+  color: #1a56db;
+}
+.lang-option.active {
+  background: #e8f0fe;
+  font-weight: 700;
+  color: #1a56db;
+}
+.lang-option .flag-emoji {
+  font-size: 1.3rem;
+}
+@media (max-width: 768px) {
+  .lang-switcher {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+  .lang-switcher__btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  .lang-switcher__menu {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .lang-switcher__btn {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.88rem;
+  }
+}
+</style>
+</head>
+<body>
+
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang" aria-expanded="false">
+            <span class="globe-icon">🌐</span> Lang <span class="chevron">▾</span>
+          </button>
+          <div class="lang-switcher__menu" role="menu">
+            <a href="#" class="lang-option active" data-lang="ht" role="menuitem"><span class="flag-emoji">🇭🇹</span> Kreyòl</a>
+            <a href="#" class="lang-option" data-lang="fr" role="menuitem"><span class="flag-emoji">🇫🇷</span> Français</a>
+          </div>
+        </div>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
+
+ <section class="page-hero page-hero--history">
+ <div class="container">
+ <p class="page-hero__label">Dyaspora Haïtienne</p>
+ <h1 class="page-hero__title">Dyaspora Haïtienne nan Canada</h1>
+ <p class="page-hero__desc">Montréal gen ladan li plis gran kominote ayisyèn francophone hors d'Haïti — yon dyaspora intellectuelle ak kiltille ki a pwofondman make lavi a littéraire ak sosyal nan Québec.</p>
+ </div>
+ </section>
+
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <span>/</span>
+ <span>Canada</span>
+ </nav>
+ </div>
+ </div>
+
+ <section class="section">
+ <div class="container">
+ <p class="section-label">Kominote &amp; Literati</p>
+ <h2>Dyaspora Haïtienne nan Canada</h2>
+
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Historique nan migration</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ premye vague d'immigration ayisyèn nan Canada yon vague intellectuelle. Dans anes 1960, répression duvalieriste décime professions libérales ayisyèn : médecins, enseignants, avocats, fonctionnaires, ingénieurs persécutés, exilés oswa assassinés. Simultanément, Québec, en pleine Revolisyon tranquille, a yon besoin urgent nan professionnels francophones pou li sistèm sante en expansion ak li yo nouvo universités. Yon convergence istorik s'opère : Québec recrute activement en Haïti, ak Haïtiens francophones qualifiés y jwenn yon refuge ak yon opportunité. On estime ke environ <strong>30 000 Haïtiens</strong> arrivent nan Québec ant 1960 ak 1980, formant noyau d'yon kominote ki portera apre li nan générations nan Canadiens d'origine ayisyèn.
+ </p>
+
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Montréal ayisyen</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ kominote ayisyèn nan Montréal s'se concentrée nan plizyè quartiers nan nò ak nan nan zile : <strong>Montréal-Nord</strong>, <strong>Saint-Michel</strong> ak <strong>Rivière-des-Prairies</strong> cœurs istorik nan li a présence. Ces quartiers, d'abord ouvriers ak à majorité blanche, te progressivement transformés pa l'arrivée nan fanmis ayisyèns, apre li antillaises ak afrikens, créant yon jeyografi sosyal distincte.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ enstitisyons communautaires ayisyèn à Montréal te jwe yon wòl crucial. <strong>Maison d'Haïti</strong>, fonde en 1972 ak toujoswa active, l'yon nan òganizasyons plis durables nan dyaspora ayisyèn nan nan mond : sant d'accueil, d'alphabétisation, nan défense nan droits, d'aktivite kiltilles. <strong>Regroupement nan organismes canado-haïtiens</strong> fédère associations nan kominote. journaux communautaires <em>Haïti-Observateur</em> ak <em>Nouvelliste nan Canada</em> gen maintenu pandan nan décennies yon lien ak l'actualité ayisyèn ak diasporique.
+ </p>
+
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Contribution kiltille ak intellectuelle</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ dyaspora ayisyèn nan Montréal a engendré li a ke critique littéraire québécoise reconnaît tankoswa yon catégorie pwòp : literati a <strong>haïtiano-québécoise</strong>. À li tête, <strong>Dany Laferrière</strong> — membre nan Académie fransèz depi 2013, lauréat nan Prix Médicis pou <em>L'Énigme nan retour</em> (2009) — l'ekriven ayisyen plis lu nan mond francophone. Arrivé à Montréal en 1976 apre lanmò a suspecte d'yon ami journaliste à Port-au-Prince, li y vécut vingt ans anvan nan s'installer à Miami apre li nan revenir régulièrement en Haïti. Son zèv navigue ant Haïti ak Québec ak yon légèreté ki cache yon pwofonur considérable.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ <strong>Émile Ollivier</strong> (1940–2002) yon lòt voix esansyèl : professeur à l'Université nan Montréal, otè nan <em>Mère-Solitude</em> (1983) ak <em>Passages</em> (1991), li a théorisé condition nan exilé ak yon précision ki situe pami gran ekrivens nan dyaspora afriken francophone. <strong>Stanley Péan</strong>, romancier nan polars, ak <strong>Marie-Célie Agnant</strong>, ke l'œuvre explore condition nan fanm noires en exil, complètent yon constellation d'auteurs ki gen transfòme lettres québécoises.
+ </p>
+
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Popilasyon</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Selon recensement canadien nan 2021, Canada compte anviwon <strong>175 000 personnes</strong> d'origine ayisyèn. Québec en rasanble gran majorité ak quelque <strong>140 000</strong> personnes, ke plupart à Montréal. L'Ontario — prensipalman Toronto — en accueille anviwon <strong>25 000</strong>. troisième génération nan Haïtiano-Canadiens jounen jodi a active nan tout secteurs : médecine, arts, politik, enseignement, droit.
+ </p>
+
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Contribution à sosyete québécoise</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ médecins ayisyen arrivés nan anes 1960–1970 gen littéralement bati yon pati nan sistèm sante québécois, s'installant nan nan rejyon éloignées kote peu nan médecins québécois voulaient exercer. Dans l'edikasyon, nan centaines d'enseignants ayisyen gen traversé système scolaire québécois pandan nan décennies. Sur piste d'athlétisme, <strong>Bruny Surin</strong> — né à Cap-Haïtien, etabli nan Québec — a reprezante Canada nan Jeux olympiques ak remporté l'or nan relais 4×100 m à Sydney en 2000. En politik fédérale, <strong>Emmanuel Dubourg</strong>, né à Port-au-Prince, siège tankoswa député libéral à Chambre nan communes depi 2014.
+ </p>
+
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.6rem;margin-top:2.5rem;">Tensions identitaires</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Être Haïtien nan Québec, c'se naviguer nan yon espace identitaire complexe : francophone men pa Québécois nan souche, Noir nan yon sosyete majoritairement blanche, caribéen nan yon peyi nordique. profilage racial pa forsa yo nan ordre à Montréal-Nord a cristallisé li yo tensions. En août 2008, l'affaire <strong>Fredy Villanueva</strong> — yon jeyon nan 18 ans tué pa balle pa yon policier nan Montréal-Nord — déclenche nan émeutes ak yon enquête publique. Elle révèle fractures profonnan ant yon kominote noire nan plis en plis présente ak yon police ki pa compran pas. relation ant idantite ayisyèn ak nasyonalisme québécois toswa complexe : kominote a soutenu nan l'ensemble projak souverainiste, partageant lang ak pafwa revendications kiltilles, men li rete trop souvan absente nan récits nan nasyon québécoise.
+ </p>
+ </div>
+ </section>
+
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mentions L&eacute;gales</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sou Ha&iuml;ti &eacute;crits nan l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
+ </div>
+ </div>
+ </footer>
+
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var isOpen=sw.classList.toggle('open');
+    btn.setAttribute('aria-expanded',isOpen);
+  });
+  document.addEventListener('click',function(){
+    sw.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  });
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Kwonolouji Générale d'Haïti | Repiblik Ayiti</title>
+ <meta name="description" content="Des premiers habitants (~5 000 av. J.-C.) à nos jours — tout les gran événements qui ont façonné la nation haïtienne." />
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher - Redesigned */
+.lang-switcher {
+  position: relative;
+  margin-left: 1rem;
+  z-index: 1100;
+}
+.lang-switcher__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.5);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+  font-family: inherit;
+}
+.lang-switcher__btn:hover,
+.lang-switcher__btn:focus {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.8);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.lang-switcher__btn .globe-icon {
+  font-size: 1.15rem;
+}
+.lang-switcher__btn .chevron {
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+}
+.lang-switcher.open .lang-switcher__btn .chevron {
+  transform: rotate(180deg);
+}
+.lang-switcher__menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  min-width: 180px;
+  z-index: 1100;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  animation: langDropIn 0.2s ease;
+}
+@keyframes langDropIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.lang-switcher.open .lang-switcher__menu {
+  display: block;
+}
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.1rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.15s;
+  border-bottom: 1px solid #f0f0f0;
+}
+.lang-option:last-child {
+  border-bottom: none;
+}
+.lang-option:hover {
+  background: #f0f5ff;
+  color: #1a56db;
+}
+.lang-option.active {
+  background: #e8f0fe;
+  font-weight: 700;
+  color: #1a56db;
+}
+.lang-option .flag-emoji {
+  font-size: 1.3rem;
+}
+@media (max-width: 768px) {
+  .lang-switcher {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+  .lang-switcher__btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  .lang-switcher__menu {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .lang-switcher__btn {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.88rem;
+  }
+}
+</style>
+</head>
+<body>
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ <a href="presidents.html">Pwofil Prezidan yo</a>
+ <a href="revolution-batays.html">Batay Revolisyon an</a>
+ <a href="relations-internationales.html">Relasyon Entènasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ <a href="atiss.html">Atis Vizyèl</a>
+ <a href="mizik-istwa.html">Istwa Mizik</a>
+ <a href="litterature.html">Literati</a>
+ <a href="creole.html">Lang Kreyòl</a>
+ <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
+ <a href="glossaire-creole.html">Glosè Kreyòl</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="departements.html">10 Depatman yo</a>
+ <a href="geographie.html">Jeyografi Fizik</a>
+ <a href="anviwonman.html">Anviwonman</a>
+ <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
+ <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
+ <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang" aria-expanded="false">
+            <span class="globe-icon">🌐</span> Lang <span class="chevron">▾</span>
+          </button>
+          <div class="lang-switcher__menu" role="menu">
+            <a href="#" class="lang-option active" data-lang="ht" role="menuitem"><span class="flag-emoji">🇭🇹</span> Kreyòl</a>
+            <a href="#" class="lang-option" data-lang="fr" role="menuitem"><span class="flag-emoji">🇫🇷</span> Français</a>
+          </div>
+        </div>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
+
+ <section class="page-hero page-hero--history">
+ <div class="container">
+ <p class="page-hero__label">Istwa</p>
+ <h1 class="page-hero__title">Kwonolouji Générale d'Haïti</h1>
+ <p class="page-hero__desc">Des premyes abitan nan zile (~5 000 av. J.-C.) à nou jours, eksplore tout gran événements ki gen façonné nasyon ayisyèn.</p>
+ </div>
+ </section>
+
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <a href="history.html">Istwa</a>
+ <span>/</span>
+ <a href="timeline.html">Kwonolouji</a>
+ <span>/</span>
+ <span>Kwonolouji Générale</span>
+ </nav>
+ </div>
+ </div>
+
+ <div class="container" style="padding-top:1rem;">
+ <a href="timeline.html" class="btn btn-outline" style="font-size:0.9rem;">← Retour à Kwonolouji</a>
+ </div>
+
+ <section class="section" id="chronologie">
+ <div class="container">
+ <p class="section-label text-center">Des Origines à Nos Jours</p>
+ <h2 class="section-title text-center">Grands Moments nan Istwa Haïtienne</h2>
+ <p class="section-subtitle text-center">Cette chronologie retrace événements fondateurs ki gen façonné nasyon ayisyèn depi li yo origines préistorik jiska l'époque contemporaine.</p>
+ <div class="timeline">
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">~5 000 av. J.-C.</p>
+ <h3 class="timeline-card__title">Premiers Habitants</h3>
+ <p class="timeline-card__desc">premyes abitan nan zile Ispayola s'installent. Ces pèps venus d'Amérique centrale ak nan continent sud-ameriken vivaient nan chasse, nan pêche ak nan cueillette, ak formaient racines profonnan nan popilasyons indigènes ki allaient prospérer pandan nan millénaires.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">~700 apr. J.-C.</p>
+ <h3 class="timeline-card__title">Civilisation Taïno</h3>
+ <p class="timeline-card__desc">civilisation taïno s'épanouit sou zile a, ke ils appellent "Ayiti" (tè nan hautes mòns) oswa "Kiskeya". Organisés en cacicats dirigés pa nan caciques, Taïnos cultivent manioc ak maïs, pratiquent pêche ak développent yon atizay ak yon spiritualité richs. Leur popilasyon estimée ant 300 000 ak yon million nan moment nan arrivée nan Européens.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">5 décembre 1492</p>
+ <h3 class="timeline-card__title">Arrivée nan Christophe Colomb</h3>
+ <p class="timeline-card__desc">Christophe Colomb arrive sou zile a 5 décembre 1492 ak baptise Hispaniola. cacique Guacanagarix accueille Espagnols ak hospitalité. Avec naufrage nan Santa María, Colomb fonde Fort Navidad, premye établissement européen nan Amériques. Cette rencontre make début nan kolonizasyon ak début nan déclin nan popilasyon taïno.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1495 – 1510</p>
+ <h3 class="timeline-card__title">Extermination nan Taïnos</h3>
+ <p class="timeline-card__desc">conquérants espagnols réduisent Taïnos en esklavaj nan mines d'or. maladies européennes auxquelles yo pa ont aucyon immunité, massacres ak conditions nan travail inhumaines déciment popilasyon en mwens nan trente ans. De plizyè centaines nan milliers, Taïnos réduits à kèk milliers dès 1510, apre li pratiquement exterminés anvan 1540.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1503 – 1600</p>
+ <h3 class="timeline-card__title">Début nan Traite nan Esclaves</h3>
+ <p class="timeline-card__desc">Pour remplacer main-d'oeuvre indigène disparue, Espagnols fè venir premyes personnes réduites en esklavaj depi l'Afrique subsaharienne. Ce trafic humain brutal s'intensifie tout nan long nan XVIe syèk. Des millions d'Africains, arrachés à yo fanmis, à yo langs ak à yo kiltis, déportés vè Amériques nan nan conditions nan traversée effroyables.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1697</p>
+ <h3 class="timeline-card__title">Traité nan Ryswick : Naissance nan Saint-Domingue</h3>
+ <p class="timeline-card__desc">L'Espagne cède tiers occidental nan zile à France pa Traité nan Ryswick. koloni fransèz nan Saint-Domingue vin "Pèl Antiy yo" ak koloni an plis profitable nan mond. Elle produit plis nan moitié nan sucre ak nan café consommés en Europe, entièrement grâce nan travail forcé nan centaines nan milliers d'esclaves afriken vivant nan nan conditions d'yon cruauté extrême.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">XVIIIe syèk</p>
+ <h3 class="timeline-card__title">L'Ekonomi nan Plantation ak l'Esklavaj</h3>
+ <p class="timeline-card__desc">Au sommete nan li richsse, Saint-Domingue compte anviwon 500 000 esklav afriken kont seulement 40 000 kolon blancs ak 30 000 "affranchis" (personnes lib nan couleur). esklav travaillent nan nan conditions déshumanisantes nan plantations nan sucre, café, indigo ak coton. rezistans constante, ke il s'agisse nan mawonaj (fuite nan mòns), d'empoisonnements oswa d'insurrections locales. <sup><a href="bibliography.html#historiens-haitiens" title="Ardouin, Études sur l'Istwa d'Haïti">[1]</a></sup></p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">14 août 1791</p>
+ <h3 class="timeline-card__title">Cérémonie nan Bois Caïman</h3>
+ <p class="timeline-card__desc">Dans forè nan Bois Caïman, nan nwit nan 14 août 1791, yon seremoni vodoswa réunit nan centaines d'esclaves. Dirigée pa houngan Dutty Boukman ak yon mambo, li a seremoni scelle yon pacte nan rezistans. Des jou plis tard, nan milliers d'esclaves soulèvent simultanément nan toute plèn nan Nord, incendiant plantations ak marquant début nan seule revolisyon d'esclaves réussie nan istwa mondiale. <sup><a href="bibliography.html#historiens-haitiens" title="Madiou, Istwa d'Haïti, tome II">[2]</a></sup></p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1791 – 1798</p>
+ <h3 class="timeline-card__title">Revolisyon Haïtienne</h3>
+ <p class="timeline-card__desc">Revolisyon ayisyèn voit nan coalitions complexes former ak défaire. Toussaint Louverture, d'abord allié nan Espagnols apre li nan Français apre l'abolisyon nan esklavaj en 1794, bat armées britanniques ki tentaient d'annexer koloni an ant 1793 ak 1798. France abolit ofisyèlman l'esklavaj nan tout li yo koloni en 1794, premye abolisyon nan l'istwa moderne, men Napoléon tentera nan rétablir en 1802.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1801</p>
+ <h3 class="timeline-card__title">Konstitisyon nan Toussaint</h3>
+ <p class="timeline-card__desc">Toussaint Louverture promulgue premye konstitisyon nan Saint-Domingue, ki abolit définitivement l'esklavaj ak nomme gouverneur à vie. Ce texte revolisyonnaire déclare "Il pa kapab exister d'esclaves sou li a territoire" ak accornan égalité civile à tous. Napoléon voit tankoswa yon affront inacceptable ak envoie yon expédition milite commandée pa li beau-frère Leclerc pou reprendre contrôle nan koloni an. <sup><a href="bibliography.html#historiens-haitiens" title="Ardouin, Études sur l'Istwa d'Haïti, tome V">[1]</a></sup></p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1802 – 1803</p>
+ <h3 class="timeline-card__title">Rezistans à l'Armée Napoléonienne</h3>
+ <p class="timeline-card__desc">Toussaint Louverture capturé pa traîtrise en juin 1802 ak déporté en France kote li mourra nan prison nan Fort nan Joux en avril 1803. Mais rezistans poursuit ak ankò plis nan vigueur. fièvre jayon décime lame a fransèz. Jean-Jacques Dessalines, Henri Christophe ak Alexandre Pétion unissent yo forsa yo ak anéantissent dènyes troupes napoléoniennes.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">18 novembre 1803</p>
+ <h3 class="timeline-card__title">Bataille nan Vertières</h3>
+ <p class="timeline-card__desc">batay nan Vertières, près nan Cap-Haïtien, viktwa décisive ak définitive nan forsa yo ayisyèn kont troupes napoléoniennes. Dessalines commannan assaut général, ak jeneral Capois-la-Mort distingue pa yon bravoure légendaire, chargeant lignes ennemies malgre li yo blessures. Français capitulent ak quittent zile a. Cette batay scelle l'endepandans Ayiti ak make fin nan empire kolonyal napoléonien en Amérique. <sup><a href="bibliography.html#historiens-haitiens" title="Ardouin, Études sur l'Istwa d'Haïti, tome VI">[1]</a></sup></p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1er janvier 1804</p>
+ <h3 class="timeline-card__title">Endepandans d'Haïti</h3>
+ <p class="timeline-card__desc">A Gonaïves, Jean-Jacques Dessalines déclare l'endepandans Ayiti ak redonne à nasyon li non taïno d'origine. Haïti vin premye Repiblik nwa nan mond lan ak deuxième nasyon nan Amériques à obtenir li endepandans apre États-Unis. Cak événement bouleverse l'ordre mondial ak inspire mouvements abolisyonnistes nan mond entier, tout en terrifiant puissansa yo kolonyals esclavagistes. <sup><a href="bibliography.html#documents-officiels" title="Acte de l'Endepandans, Achiv Nationales d'Haïti">[3]</a></sup></p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1805</p>
+ <h3 class="timeline-card__title">Konstitisyon nan Empire</h3>
+ <p class="timeline-card__desc">L'Empereur Dessalines promulgue Konstitisyon nan 1805, texte fondateur d'yon rare audace. Elle déclare ke tout Haïtiens, quelle ke soit yo couleur nan peau, juridiquement "noirs", rejetant radicalement hiérarchies raciales kolonyals. Elle interdi nan blancs nan posséder nan tès en Haïti. Ce texte visionnaire te l'yon nan premyes à proclamer l'égalité raciale absolue nan mond moderne.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">17 octobre 1806</p>
+ <h3 class="timeline-card__title">Assassinat nan Dessalines</h3>
+ <p class="timeline-card__desc">Jean-Jacques Dessalines assassiné lors d'yon embuscade nan Pont-Rouge, à l'entrée nan Port-au-Prince. Son corps mutilé. Sa lanmò provoque yon fracture durable: nò d'Haïti passe anba l'autorité d'Henri Christophe pandan ke sid dirije pa Alexandre Pétion. Cette division affaiblit durablement jeyon nasyon ak inaugure yon syèk nan turbulensa yo politiks.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1811 – 1820</p>
+ <h3 class="timeline-card__title">Royaume nan Nord</h3>
+ <p class="timeline-card__desc">Henri Christophe proclame Roi Henri I ak dirige nò d'Haïti tankoswa yon royaume. Il fè construire Citadelle Laferrière, forteresse monumentale perchée sou yon mòn, ak Palais Sans-Souci, résidence royale d'yon splendeur comparable nan plis gran palais européens. Ces monuments, classés nan patrimwàn mondial nan UNESCO, témoignent nan granur ak nan ambition nan jeyon nasyon ayisyèn.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1820</p>
+ <h3 class="timeline-card__title">Réunification d'Haïti</h3>
+ <p class="timeline-card__desc">Henri Christophe, frappé d'apoplexie ak affaibli, fè face à yon révolte nan li yo généraux. Il suicide nan li palais en octobre 1820. Son successeur Jean-Pierre Boyer réunifie nò ak sid d'Haïti. Deux ans plis tard, en 1822, Boyer annexe pati orientale nan île, plaçant toute Hispaniola anba contrôle ayisyen pandan 22 ans, jiska l'endepandans dominicaine nan 1844.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1825</p>
+ <h3 class="timeline-card__title">Dette nan Endepandans envers France</h3>
+ <p class="timeline-card__desc">Sous menace d'yon flotte nan lagè fransèz nan 14 navires nan ligne, prezidan Boyer accepte nan payer 150 millions nan francs-or à France en échange nan rekonesans officielle nan endepandans ayisyèn. Cette somme colossale, représentant l'indemnisation nan ansyen kolon esclavagistes, ap remboursée pandan plis nan 122 ans ak pa ap définitivement soldée ke en 1947. Cette dette a pwofondman compromis devlopman an ekonomik d'Haïti.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1844</p>
+ <h3 class="timeline-card__title">Endepandans Dominicaine</h3>
+ <p class="timeline-card__desc">pati orientale nan zile soulève ak proclame li endepandans en tant ke Repiblik Dominicaine 27 février 1844. Haïti tente à plizyè reprises nan reconquérir li a territoire, men échoue. Cette séparation make division définitive d'Hispaniola en deux nations nan destins distincts, ki partagent menm zile men développeront nan identités nasyonals pwofondman diferans.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1879 – 1911</p>
+ <h3 class="timeline-card__title">Enstabilite Politik Chronique</h3>
+ <p class="timeline-card__desc">XIXe syèk finissant ak début nan XXe syèk ste makes pa yon succession rapide nan prezidans, plupart renversés pa nan coups d'État oswa nan insurrections armées. Entre 1843 ak 1915, Haïti connait plis nan 20 chefs d'État, ke beaucoup pa rete nan pouvwa ke kèk mois. Ces troubles politiks chroniques appauvrissent peyi ak fragilisent li yo enstitisyons, ouvrant voie à l'ingérence étrangère.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1915 – 1934</p>
+ <h3 class="timeline-card__title">Occupation Américaine</h3>
+ <p class="timeline-card__desc">A suite nan massacre nan prisonniers politiks ak nan lynchage nan prezidan Guillaume Sam, États-Unis débarquent yo marines ak occupent militement Haïti. Pendant 19 ans, Washington contrôle finansa yo nan peyi, dirige li gendarmerie ak impose li yo priorités politiks. Yon rezistans lame menée pa Charlemagne Péralte (tué en 1919) ak Benoît Batravil s'oppose à li a okipasyon ki laisse nan séquelles durables soswa souvènte nasyonal.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1937</p>
+ <h3 class="timeline-card__title">Massacre nan Persil</h3>
+ <p class="timeline-card__desc">Du 2 nan 8 octobre 1937, nan sòlda dominicains massacrent ant 15 000 ak 35 000 Haïtiens vivant nan rejyon frontalière, sou ordre nan dictateur Rafael Trujillo. Ce génocide, tristement bay non "El Corte" (la coupe) oswa Massacre nan Persil paske sòlda yo testaient prononciation nan mo "perejil" pou identifier Haïtiens, demeure l'yon nan pages plis sombres nan istwa caribéenne. réponse ayisyèn nan gouvènman Vincent te jugée scandaleusement timide.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1957</p>
+ <h3 class="timeline-card__title">Accession nan Pouvoir nan Duvalier</h3>
+ <p class="timeline-card__desc">François Duvalier, médecin nan campagne konnen pou li travail kont pian (yaws), élu prezidan ak soutien nan milieux noirs ak popilès. Rapidement, li transforme li mandat en diktatè. Ses Tonton Macoutes, milice paramilite opérant en toute impunité, sèment tèur. opposants assassinés, torturés oswa contraints à l'exil. Des milliers d'intellectuels, médecins, enseignants quittent Haïti pou toujours.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1964</p>
+ <h3 class="timeline-card__title">Duvalier Prezidan à Vie</h3>
+ <p class="timeline-card__desc">François Duvalier proclame Prezidan à Vie pa référendum. Son régime nan tèur écrase toute opposition, detwi lame a en tant ke contrepouvoir, contrôle l'Église catholique ak s'assure loyauté nan élites locales. L'exode nan cerveaux ayisyen vè États-Unis, Canada ak l'Europe s'accélère. À li lanmò en 1971, li deziye li fils Jean-Claude, alò âgé nan 19 ans, tankoswa successeur.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1971 – 1986</p>
+ <h3 class="timeline-card__title">Régime nan Baby Doc</h3>
+ <p class="timeline-card__desc">Jean-Claude Duvalier "Baby Doc" maintient diktatè héritée nan li père, men ak mwens nan violence ouverte. Il ouvre peyi nan investissements étrangers ak nan touris tout en préservant corruption systémique. Son mariage en 1980 ak Michèle Bennett, yon mulâtresse fortunée, provoque yon tollé. crise ekonomik, inégalités criantes ak yon soulèvement popilè "Dechoukaj" l'obligent à fuir en France 7 février 1986.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">29 mars 1987</p>
+ <h3 class="timeline-card__title">Nouvelle Konstitisyon Démocratique</h3>
+ <p class="timeline-card__desc">Approuvée pa référendum popilè ak yon majorité écrasante, Konstitisyon nan 1987 yon texte démocratique ambitieux. Elle établit séparation nan pouvoirs, garantit dwa fondamantal, interdi à quiconque d'exercer plis nan deux mandats prezidaniels, décentralise l'administration ak reconnaît kreyòl ayisyen tankoswa lang officielle nan côtés nan fransè. Cette konstitisyon, byenke souvan violée, rete lalwa a fondamantal nan peyi.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">16 décembre 1990</p>
+ <h3 class="timeline-card__title">Élection d'Aristide</h3>
+ <p class="timeline-card__desc">Jean-Bertrand Aristide, prêtre nan théologie nan libération, élu prezidan lors nan premyes eleksyon lib ak équitables nan istwa Ayiti, ak plis nan 67 % nan suffrages dès premye tour. Son eleksyon suscite yon espwa immense nan quartiers popilès. Représentant déshérités kont élites tradisyonnelles, li enkane pou beaucoup promesse d'yon Haïti plis juste.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1991</p>
+ <h3 class="timeline-card__title">Coup d'État Militaire</h3>
+ <p class="timeline-card__desc">Seulement sept mois apre li prise nan fonctions, Aristide renversé pa yon koudeta milite dirije pa jeneral Raoul Cédras. kominote entènasyonal condamne putsch ak impose yon embargo tankourcial. Sous junte, nan milliers nan partisans d'Aristide assassinés. peyi s'enfonce nan répression ak misère. Aristide réfugie nan États-Unis.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1994</p>
+ <h3 class="timeline-card__title">Retour d'Aristide</h3>
+ <p class="timeline-card__desc">Après trois ans d'exil, Aristide rétabli nan li yo fonctions ak l'appui d'yon fòs milite entènasyonal nan 20 000 sòlda conduite pa États-Unis. junte abandonne pouvwa a. C'se premye fwa nan l'istwa nan Karayib ke yon fòs entènasyonal itilize pou rétablir yon prezidan démocratiquement élu. Aristide démobilise lame a ayisyèn, yon décision ki aura nan conséquensa yo durables soswa sécurité nan peyi.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">2000 – 2004</p>
+ <h3 class="timeline-card__title">Crise Politik ak Second Exil d'Aristide</h3>
+ <p class="timeline-card__desc">Réélu en 2000 lors d'eleksyon boycottées pa l'opposition, Aristide gouverne nan yon kontèks nan paralysie politik croissante. L'èd entènasyonal suspendue. En 2004, à l'approche nan bicentenaire nan endepandans, yon rébellion lame progresse depi nò nan peyi. Dans nan circonstansa yo toujoswa disputées, Aristide quitte Haïti 29 février 2004 à bord d'yon avion ameriken. Il di avoir été forcé à partir; Washington dément.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">2006 – 2011</p>
+ <h3 class="timeline-card__title">Second Mandat nan René Préval</h3>
+ <p class="timeline-card__desc">René Préval, seul prezidan ayisyen à avoir accompli deux mandats complets, réélu en 2006. Son second mandat vise stabilisation ak devlopman an. Il dwe sepandan gérer crise alimentaire nan 2008 (émeutes nan faim), nan ouragans dévastateurs ak séisme nan 2010. Son calme ak li discrétion contrastent ak tempêtes politiks ki secouent peyi, men li gestion nan katastwòf nan 2010 souvan critiquée pou li lenteur.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">1er janvier 2004</p>
+ <h3 class="timeline-card__title">Bicentenaire nan Endepandans</h3>
+ <p class="timeline-card__desc">Haïti selèb bicentenaire nan li endepandans. Des seremoni officielles organisées à Gonaïves malgre crise politik. Cette date l'occasion nan réflexions mondiales sou l'eritaj nan Revolisyon ayisyèn nan ak sou l'impact ke dette imposée pa France a eu sou devlopman an nan peyi. Des demannan nan restitution nan li yo sommes pa France émergent nan débat entènasyonal.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">2011 – 2016</p>
+ <h3 class="timeline-card__title">Présidence Martelly</h3>
+ <p class="timeline-card__desc">Michel Martelly, chanteur popilè nan kompa bay non "Sweak Micky", remporte présidence en 2011 ak soutien ameriken. Son mandat voit nan investissements nan écoles ak logement post-séisme, men toswa nan accusations nan corruption, l'incapacité à organiser nan eleksyon législatives ak yon crise konstitisyonnelle grave. À fin nan li mandat en 2016, l'absence d'eleksyon laisse yon vide enstitisyonnel dangereux.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">2017 – 2021</p>
+ <h3 class="timeline-card__title">Présidence Jovenel Moïse</h3>
+ <p class="timeline-card__desc">Jovenel Moïse, entrepreneur agricole bay non "Nèg Bannann", élu en 2016 ak pran li yo fonctions en 2017. Son mandat make pa manifestations massives nan mouvman "PetroCaribe Challenge" (2018-2019) dénonçant corruption nan gestion nan fonds vénézuéliens. sécurité détériore, gangs armés étendent yo emprise territoriale ak peyi s'enfonce nan yon crise multidimensionnelle.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">7 juillak 2021</p>
+ <h3 class="timeline-card__title">Assassinat nan Prezidan Moïse</h3>
+ <p class="timeline-card__desc">Dans nwit nan 6 nan 7 juillak 2021, prezidan Jovenel Moïse assassiné à li domicile nan Pèlerin 5, nan hauteurs nan Port-au-Prince. Yon commando armé d'yon douzaine d'hommes fè irruption nan li résidence ak l'abat d'yon douzaine nan balles. Sa fanm Martine grièvement blessée. Ce meurtre brutal plonge Haïti nan yon nouvo spirale d'incertitude politik ak d'anarchie sécuritaire. otè intellectuels nan crime pa ont jamè été clairement établis.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">2021 – 2024</p>
+ <h3 class="timeline-card__title">Gouvernance nan facto d'Ariel Henry</h3>
+ <p class="timeline-card__desc">Après l'assassinat nan Jovenel Moïse, Premye Minis Ariel Henry pran nan facto rênes nan peyi. Nommé pa Moïse deux jou anvan li assassinat, li pa a jamè été élu ak dirige Haïti nan yon vide konstitisyonnel total. L'instabilité politik s'aggrave, l'autorité nan État s'effondre progressivement ak gangs armés étendent yo emprise sou Port-au-Prince. Sous pression entènasyonal croissante pou yon transition politik, Henry finalement contraint nan démissionner en mars 2024, bloqué à l'étranger pa nan gangs ki contrôlent l'aéroport.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">2022 – 2024</p>
+ <h3 class="timeline-card__title">Domination nan Gangs ak Crise Humanitaire</h3>
+ <p class="timeline-card__desc">Après l'assassinat nan Moïse, gangs armés étendent yo contrôle sou yon gran pati nan territoire. En 2024, coalition nan gangs "Viv Ansanm" (Vivre Ensemble), dirije pa chef nan gang Jimmy "Barbecue" Chérizier, attaque prisons nasyonals ak libère nan milliers nan détenus, apre li assiège l'aéroport nan Port-au-Prince. Des centaines nan milliers nan personnes déplacées. famine menace nan zones entières nan kapital.</p>
+ </div>
+ </div>
+
+ <div class="timeline-item">
+ <div class="timeline-card">
+ <p class="timeline-card__year">2024 – 2025</p>
+ <h3 class="timeline-card__title">Transition ak Mission Internationale</h3>
+ <p class="timeline-card__desc">Sous pression entènasyonal, Premye Minis Ariel Henry démissionne en mars 2024. Yon Conseil Prezidaniel nan Transition mis en plas regroupant plizyè partis politiks. Mission Multinasyonal nan Soutien à Sécurité (MMSHS), menée pa Kenya ak approuvée pa l'ONU, tankounce à déployer nan forsa yo pou aider Police Nationale d'Haïti. peyi cherche, nan yon kontèks extrêmement difficile, à retrouver yon chemin vè nan eleksyon ak stabilité.</p>
+ </div>
+ </div>
+
+ </div>
+ </div>
+ </section>
+
+
+ <section class="section section--alt" id="chronologie-complete">
+ <div class="container">
+ <p class="section-label text-center">1804 – Présent</p>
+ <h2 class="section-title text-center">Kwonolouji complète nan événements gwos nan istwa Ayiti (1804 – présent)</h2>
+ <p class="section-subtitle text-center">Cliquez sou yon événement pou afficher yon explication détaillée. Cette chronologie couvre gran étapes politiks, sosyal ak humanitaires nan istwa ayisyèn depi l'endepandans jiska nou jours.</p>
+
+ <div class="evt-timeline" role="list">
+
+ <!-- 1804 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1804" aria-expanded="false">
+ <span class="evt-year">1804</span>
+ <span class="evt-title">Proclamation nan endepandans Ayiti</span>
+ <span class="evt-short">1er janvier 1804, Jean-Jacques Dessalines proclame l'endepandans Ayiti, premye repiblik noire nan mond.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1804">
+ 1er janvier 1804, jeneral Jean-Jacques Dessalines proclame ofisyèlman l'endepandans Ayiti à Gonaïves, à l'issue nan lagè nan Endepandans (1791–1803). L'ansyen non kolonyal nan Saint-Domingue abandonné nan profit nan non taïno « Ayiti ». Haïti vin konsa premye nasyon née d'yon révolte d'esclaves, premye État noir indépandan nan mond ak deuxième repiblik nan hémisphère occidental apre États-Unis. Cette date rete fèt nasyonal ayisyèn ak l'yon nan événements plis marquants nan istwa mondiale.
+ </div>
+ </div>
+
+ <!-- 1806 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1806" aria-expanded="false">
+ <span class="evt-year">1806</span>
+ <span class="evt-title">Assassinat nan Jean-Jacques Dessalines</span>
+ <span class="evt-short">17 octobre 1806, l'Empereur Dessalines assassiné nan yon embuscade à Pont-Rouge, Port-au-Prince.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1806">
+ 17 octobre 1806, l'Empereur Jacques Ier (Jean-Jacques Dessalines), père fondateur nan nasyon ayisyèn, tombe nan yon embuscade tendue pa li yo propres officiers nan Pont-Rouge, nan portes nan Port-au-Prince. Son corps mutilé pa foule. Son assassinat lye à nan tensions ant élites mulâtres nan Sud ak généraux noirs, mécontents nan li politik nan redistribution nan tès ak nan li autoritarisme. Cak événement ouvre yon période nan division politik pwofon ki makera Haïti pandan nan décennies.
+ </div>
+ </div>
+
+ <!-- 1807 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1807" aria-expanded="false">
+ <span class="evt-year">1807</span>
+ <span class="evt-title">Division politik ant Nord ak Sud</span>
+ <span class="evt-short">Après l'assassinat nan Dessalines, Haïti scinde en deux États distincts : Royaume nan Nord (Christophe) ak Repiblik nan Sud (Pétion).</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1807">
+ À suite nan assassinat nan Dessalines, Haïti fracture en deux entités rivales. Dans Nord, Henri Christophe établit yon État autoritaire, d'abord en tant ke prezidan apre li tankoswa roi. Dans Sud ak l'Ouest, Alexandre Pétion fonde yon repiblik plis libérale, accordant nan tès nan ansyen soldats. Cette division reflete nan tensions raciales ak nan classe profonnan ant l'élite mulâtre ak popilasyon noire. deux régimes coexisteront en rivalité jiska réunification nan 1820.
+ </div>
+ </div>
+
+ <!-- 1811 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1811" aria-expanded="false">
+ <span class="evt-year">1811</span>
+ <span class="evt-title">Henri Christophe vin wa nan Nord</span>
+ <span class="evt-short">Henri Christophe proclame Roi Henri Ier nan Royaume d'Haïti ak entrepran nan gran travaux, sitoswa Citadelle Laferrière.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1811">
+ En 1811, Henri Christophe proclame Roi Henri Ier nan Royaume d'Haïti nan Nord nan peyi. Son règne caractérisé pa yon autoritarisme sévère, men toswa pa nan réalisations monumentales. Il fè construire Citadelle Laferrière (l'yon nan plis gran forteresses nan Amériques, inscrite nan patrimwàn mondial nan UNESCO) ak Palais Sans-Souci pou affirmer granur ak souvènte d'Haïti face nan puissansa yo kolonyals. Son régime impose yon travail forcé soswa plantations, anba nan tensions croissantes.
+ </div>
+ </div>
+
+ <!-- 1820 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1820" aria-expanded="false">
+ <span class="evt-year">1820</span>
+ <span class="evt-title">Réunification d'Haïti apre chute nan Royaume nan Nord</span>
+ <span class="evt-short">Après suicide nan wa Christophe, Jean-Pierre Boyer réunifie Nord ak Sud anba yon seule Repiblik Ayiti.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1820">
+ En 1820, yon révolte milite éclate kont wa a Henri Ier, affaibli pa yon attaque cérébrale. Christophe suicide 8 octobre 1820. prezidan Jean-Pierre Boyer, successeur nan Pétion nan Sud, marche vè Nord ak réunifie zile a anba Repiblik Ayiti. En 1822, li annexe toswa pati orientale nan zile (future Repiblik dominicaine), réalisant yon unification totale d'Hispaniola ki durera 22 ans.
+ </div>
+ </div>
+
+ <!-- 1825 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1825" aria-expanded="false">
+ <span class="evt-year">1825</span>
+ <span class="evt-title">Dette imposée pa France</span>
+ <span class="evt-short">France impose à Haïti yon indemnité nan 150 millions nan francs-or pou reconnaître li endepandans, endettant peyi pou plis d'yon syèk.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1825">
+ En 1825, anba menace nan navires nan lagè fransè, prezidan Boyer accepte nan payer à France yon indemnité nan 150 millions nan francs-or (réduite à 90 millions en 1838) en échange nan rekonesans diplomatique nan endepandans ayisyèn. Cette « dette nan endepandans » — destinée à compenser ansyen kolon esclavagistes — représentait dix fwa revenus annuels d'Haïti. Pour financer, Haïti s'endette auprès nan banques fransèzs ak amerikens. Des étunan récentes estiment ke li a dette a coûté à Haïti l'équivalent nan dizaines nan milliards nan dollars modernes sou plis d'yon syèk.
+ </div>
+ </div>
+
+ <!-- 1843 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1843" aria-expanded="false">
+ <span class="evt-year">1843</span>
+ <span class="evt-title">Révolte kont Jean-Pierre Boyer</span>
+ <span class="evt-short">Yon revolisyon peyianne ak milite fòs prezidan Boyer à l'exil apre 25 ans nan pouvoir.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1843">
+ Après 25 ans nan pouvoir, prezidan Jean-Pierre Boyer renversé pa yon insurrection ki combine mécontentement peyian (lié nan Code Rural oppressif) ak opposition politik nan élites. révolte, konnen anba non nan « Piquak » nan Sud, donne lieu à yon période d'instabilité intense. Boyer s'exile à Jamaïque. Sa chute make début d'yon période nan gran instabilité politik, ak yon succession rapide nan prezidans ak nan conflits internes.
+ </div>
+ </div>
+
+ <!-- 1844 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1844" aria-expanded="false">
+ <span class="evt-year">1844</span>
+ <span class="evt-title">Séparation nan Repiblik dominicaine</span>
+ <span class="evt-short">27 février 1844, pati orientale nan zile proclame li endepandans, créant Repiblik dominicaine.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1844">
+ 27 février 1844, nan indépandanistes nan pati orientale nan zile — anba domination ayisyèn depi 1822 — proclament Repiblik dominicaine. Cette sécession mete fin à 22 ans d'unification nan zile Ispayola. Haïti tentera plizyè reprises milite pou reconquérir li a teritwa nan anes suivantes, san succès durable. fwontyè tracée ant deux nations restera yon ligne nan tensions géopolitiks jiska nou jours.
+ </div>
+ </div>
+
+ <!-- 1849 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1849" aria-expanded="false">
+ <span class="evt-year">1849</span>
+ <span class="evt-title">Faustin Soulouque vin Empereur Faustin Ier</span>
+ <span class="evt-short">Élu prezidan en 1847, Faustin Soulouque proclame Empereur Faustin Ier ak instaure yon régime autoritaire.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1849">
+ Faustin Soulouque, ansyen esklav vin tounen général, élu prezidan en 1847. En 1849, li dissout l'Assemblée nasyonal, élimine li yo opposants ak proclame Empereur Faustin Ier nan Second Empire ayisyen. Son règne make pa yon cour impériale fastueuse, nan répressions politiks violentes ak deux tentatives infructueuses nan reconquête nan pati orientale nan île. Son empire konstitye dènye régime monarchique nan istwa ayisyèn.
+ </div>
+ </div>
+
+ <!-- 1859 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1859" aria-expanded="false">
+ <span class="evt-year">1859</span>
+ <span class="evt-title">Chute nan Empire nan Faustin Ier</span>
+ <span class="evt-short">Yon insurrection milite fòs Faustin Ier à abdiquer ak à s'exiler, mettant fin nan Second Empire ayisyen.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1859">
+ En janvier 1859, jeneral Fabre Geffrard mène yon insurrection kont l'Empereur Faustin Ier. Face à défection nan li yo troupes, Faustin abdique 15 janvier 1859 ak s'exile en Jamaïque apre li en Angletè. Geffrard pwoklame prezidan ak restaure Repiblik. chute nan Empire mete fin à toute fòm nan monarchie en Haïti. Geffrard gouvernera juske en 1867, inaugurant yon période d'ouverture modérée, sitoswa ak signature d'yon concordat ak Vatican.
+ </div>
+ </div>
+
+ <!-- 1867 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1867" aria-expanded="false">
+ <span class="evt-year">1867</span>
+ <span class="evt-title">Lagè civile en Haïti</span>
+ <span class="evt-short">Yon insurrection milite renverse prezidan Geffrard, inaugurant yon longue période d'instabilité ak nan fréquents changements nan pouvoir.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1867">
+ En 1867, apre yon série d'insurrections régionales, prezidan Geffrard contraint à l'exil. Cette chute make début d'yon période dite nan « l'ère nan revolisyons », pandan laquelle Haïti connaît yon succession rapide nan prezidans, plupart renversés pa nan coups d'État oswa nan insurrections milites. Entre 1867 ak 1915, Haïti comptera plis nan vingt chefs d'État, ke plizyè meurent violemment oswa contraints à l'exil.
+ </div>
+ </div>
+
+ <!-- 1889 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1889" aria-expanded="false">
+ <span class="evt-year">1889</span>
+ <span class="evt-title">Revolisyon kont prezidan Salomon</span>
+ <span class="evt-short">prezidan Lysius Salomon renversé apre yon série nan révoltes régionales, illustrant l'instabilité chronique nan période.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1889">
+ prezidan Lysius Salomon, nan pouvwa depi 1879, te gen tenté nan moderniser l'administration ayisyèn ak fonde Banque nasyonal d'Haïti. Mais nan révoltes successives nan diferans rejyon nan peyi affaiblissent li régime. En 1888, yon insurrection éclate nan Nord, apre li nan l'Artibonite. En 1889, Salomon contraint nan démissionner ak s'exile. Son départ plonge Haïti nan yon nouvo période nan troubles, illustrant fragilité récurrente nan pouvwa politik nan peyi.
+ </div>
+ </div>
+
+ <!-- 1897 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1897" aria-expanded="false">
+ <span class="evt-year">1897</span>
+ <span class="evt-title">Affaire Lüders — crise diplomatique ak l'Allemagne</span>
+ <span class="evt-short">L'arrestation d'yon ressortissant germano-ayisyen provoque yon grave crise ant Haïti ak l'Allemagne, ki envoie nan navires nan lagè.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1897">
+ En 1897, Émile Lüders, yon ressortissant ayisyen d'origine allemande, arrêté ak condamné pa jistis ayisyèn. L'Allemagne, ki revendique li protection diplomatique, envoie deux navires nan lagè nan port nan Port-au-Prince ak exige nan excuses officielles, libération nan Lüders ak yon indemnité nan 30 000 dollars. Face à menace milite, prezidan Tirésias Simon Sam cède à tout exigences. Cette humiliation nasyonal mete en lumière vulnérabilité d'Haïti face nan puissansa yo impériales ak contribue à justifier l'intervention ameriken nan 1915.
+ </div>
+ </div>
+
+ <!-- 1915 – Sam -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1915-sam" aria-expanded="false">
+ <span class="evt-year">1915</span>
+ <span class="evt-title">Assassinat nan prezidan Vilbryon Guillaume Sam</span>
+ <span class="evt-short">prezidan Sam, apre avoir fè massacrer nan prisonniers politiks, lynché pa foule à Port-au-Prince 28 juillak 1915.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1915-sam">
+ 27 juillak 1915, prezidan Vilbryon Guillaume Sam ordonne l'exécution nan près nan 167 opposants politiks emprisonnés, ke yon ansyen prezidan. lendemain, 28 juillak 1915, yon foule en colère investit l'ambassade nan France kote li s'te réfugié, traîne dehors ak lynche. Son corps démembré ak exposé nan rues nan Port-au-Prince. Cak événement sanglant servira nan prétexte immédiat à okipasyon an milite ameriken, ki débutera soir même.
+ </div>
+ </div>
+
+ <!-- 1915 – Occupation -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1915-occ" aria-expanded="false">
+ <span class="evt-year">1915</span>
+ <span class="evt-title">Début nan okipasyon ameriken</span>
+ <span class="evt-short">Marines amerikens débarquent à Port-au-Prince 28 juillak 1915 ak occupent peyi pandan 19 ans.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1915-occ">
+ 28 juillak 1915, Marines nan États-Unis débarquent à Port-au-Prince. Invoquant protection nan yo intérêts ekonomiks ak stabilisation d'yon peyi jugé chaotique, États-Unis imposent yon traité ki yo confère contrôle nan finances, nan douanes ak nan forsa yo nan sécurité ayisyèns. L'occupation, ki durera juske en 1934, make pa rezistans lame nan Cacos (peyians rebelles), mise en plas d'yon travail forcé (corvée), ak nan discriminations raciales imposées pa officiers amerikens. Elle moderniap sèten infrastructures tout en portant atteinte à souvènte nasyonal.
+ </div>
+ </div>
+
+ <!-- 1929 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1929" aria-expanded="false">
+ <span class="evt-year">1929</span>
+ <span class="evt-title">Révolte nan Cayes kont okipasyon an</span>
+ <span class="evt-short">Des peyians ayisyen marchent soswa vil nan Cayes pou protester kont l'okipasyon ameriken ; Marines ouvrent feu soswa foule.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1929">
+ En décembre 1929, nan grèves d'étudiants ak nan manifestations peyiannes éclatent atravè peyi kont l'okipasyon ameriken. 6 décembre, nan centaines nan peyians marchent soswa vil nan Cayes. Marines amerikens ouvrent feu soswa foule, tuant ant 12 ak 24 personnes ak en blessant nan dizaines d'autres. Ce « Massacre nan Cayes » suscite yon indignation entènasyonal ak accélère débat nan États-Unis soswa retrait nan yo forces. Congrès ameriken diligente yon commission d'enquête — Commission Forbes — ki conclut à nécessité nan retirer troupes.
+ </div>
+ </div>
+
+ <!-- 1934 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1934" aria-expanded="false">
+ <span class="evt-year">1934</span>
+ <span class="evt-title">Fin nan okipasyon ameriken</span>
+ <span class="evt-short">21 août 1934, dènye contingent nan Marines amerikens quitte Haïti, apre 19 ans d'occupation.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1934">
+ En application nan politik nan « Bon Voisinage » nan prezidan ameriken Franklin D. Roosevelt, dènyes Marines quittent Haïti 21 août 1934. L'occupation a laissé yon bilan contrasté : construction nan routes, hôpitaux ak écoles d'yon côté ; suppression nan konstitisyon nan 1918 (permettant nan étrangers nan posséder nan tès), travail forcé, répression nan rezistanss, ak affaiblissement nan enstitisyons politiks ayisyèn nan autre. États-Unis conservent kanmenm contrôle nan finansa yo ayisyèn juske en 1947.
+ </div>
+ </div>
+
+ <!-- 1937 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1937" aria-expanded="false">
+ <span class="evt-year">1937</span>
+ <span class="evt-title">Massacre nan Persil — génocide nan Haïtiens en Repiblik dominicaine</span>
+ <span class="evt-short">dictateur dominicain Rafael Trujillo ordonne massacre nan milliers d'Haïtiens vivant à fwontyè a, en octobre 1937.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1937">
+ Du 2 nan 8 octobre 1937, sou l'ordre nan dictateur Rafael Trujillo, lame a dominicaine massacre nan milliers d'Haïtiens (ak nan Dominicains à peau foncée) nan zone frontalière. terme « Parsley massacre » (Massacre nan Persil) soti nan fè ke sòlda yo utilisaient mo espagnol « perejil » (persil) pou identifier victimes, Haïtiens ayant nan mal à prononcer « r » roulé hispanique. estimations nan victimes varient ant 10 000 ak 35 000 personnes. kominote entènasyonal réagit peu. Haïti reçoit yon indemnité symbolique nan 525 000 dollars.
+ </div>
+ </div>
+
+ <!-- 1946 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1946" aria-expanded="false">
+ <span class="evt-year">1946</span>
+ <span class="evt-title">Revolisyon ak chute nan prezidan Lescot</span>
+ <span class="evt-short">Yon revolisyon popilè ak milite renverse Élie Lescot, inaugurant yon période nan gouvènmans noirs apre nan décennies nan domination mulâtre.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1946">
+ En janvier 1946, yon grève générale nan étudiants ak travailleurs, soutenue pa presse ak finalement lame a, contraint prezidan Élie Lescot à démissionner. Ce mouvement, enspire en pati pa idéaux nan mouvman « Noirisme » ak nan Négritude, exprime yon revendication d'égalité raciale ak sosyal. Dumarsais Estimé élu prezidan pa l'Assemblée nasyonal — li premye prezidan noir depi nan décennies. Cette revolisyon nan 1946 make yon tournant nan l'affirmation nan idantite a kiltille ak politik noire en Haïti.
+ </div>
+ </div>
+
+ <!-- 1957 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1957" aria-expanded="false">
+ <span class="evt-year">1957</span>
+ <span class="evt-title">François Duvalier élu prezidan</span>
+ <span class="evt-short">médecin riral François « Papa Doc » Duvalier remporte eleksyon prezidanielles ak installe progressivement yon régime totalitaire.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1957">
+ 22 septembre 1957, François Duvalier, médecin riral ak défenseur nan kilti noire, élu prezidan nan nan conditions contestées apre yon koudeta milite. Surnommé « Papa Doc », li s'appuie d'abord sou yon discours noiriste ak anti-élite mulâtre pou consolider li pouvoir. Il crée rapidement yon milice paramilite — Volontaires nan Sécurité Nationale (VSN), popilèment rele « Tonton Macoutes » — ki réprime toute opposition pa tèur. Des milliers d'opposants, intellectuels, journalistes ak membres nan clergé emprisonnés, torturés, tués oswa contraints à l'exil.
+ </div>
+ </div>
+
+ <!-- 1964 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1964" aria-expanded="false">
+ <span class="evt-year">1964</span>
+ <span class="evt-title">Duvalier proclame prezidan à vie</span>
+ <span class="evt-short">Par yon référendum frauduleux, François Duvalier proclame Prezidan à lavi ak concentre tout pouvwa yo ant li yo mains.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1964">
+ En 1964, pa yon référendum ke rezilta officiels affichent 99,9 % nan oui, François Duvalier proclame Prezidan à vie. Il révise Konstitisyon pou concentrer tout pouvwa yo exécutif, législatif ak judiciaire en li personne. Son régime atteint li paroxysme nan tèur : Tonton Macoutes omniprésents, syndicats ak partis politiks interdits, presse muselée, ak Haïtiens plis instruits fuient massivement à l'étranger. On estime ke régime Duvalier cauap lanmò a nan 20 000 à 60 000 personnes.
+ </div>
+ </div>
+
+ <!-- 1971 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1971" aria-expanded="false">
+ <span class="evt-year">1971</span>
+ <span class="evt-title">Jean-Claude Duvalier pran pouvwa a</span>
+ <span class="evt-short">À lanmò a nan François Duvalier, li fils Jean-Claude « Baby Doc » lui succède à 19 ans, perpétuant diktatè familiale.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1971">
+ 21 avril 1971, François Duvalier meurt en exercice. Son fils Jean-Claude, âgé nan seulement 19 ans ak bay non « Baby Doc », lui succède conformément à yon révision konstitisyonnelle faite à li a effet. Comparé à li père, Jean-Claude Duvalier libéralise légèrement régime anba pression entènasyonal, permettant yon devlopman partiel nan endistri a d'assemblage ak nan touris. Cepandan, corruption généralise, atteignant plis hautes sphères nan État. droits humains rete bafoués, ak pòvté s'aggrave malgre l'èd entènasyonal.
+ </div>
+ </div>
+
+ <!-- 1986 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1986" aria-expanded="false">
+ <span class="evt-year">1986</span>
+ <span class="evt-title">Chute nan régime Duvalier</span>
+ <span class="evt-short">Des soulèvements popilè massifs forcent Jean-Claude Duvalier à fuir en France 7 février 1986, mettant fin à 29 ans nan diktatè duvalieriste.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1986">
+ À partir nan 1985, nan manifestations popilè éclatent atravè tout peyi, amplifiées pa misère croissante ak abus nan régime. Des lycéens nan Gonaïves tués pa Tonton Macoutes lors d'yon manifestation en novembre 1985, embrasant colère popilè. 7 février 1986, Jean-Claude Duvalier quitte Haïti à bord d'yon avion ameriken pou s'exiler en France. foule selèb nan rues. Yon Conseil nasyonal nan gouvènman (CNG) milite pran provisoirement pouvwa a, men transition vè demokrasi révèle longue ak difficile.
+ </div>
+ </div>
+
+ <!-- 1987 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1987" aria-expanded="false">
+ <span class="evt-year">1987</span>
+ <span class="evt-title">Nouvelle Konstitisyon d'Haïti</span>
+ <span class="evt-short">Yon nouvo Konstitisyon démocratique adopte pa référendum popilè 29 mars 1987.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1987">
+ 29 mars 1987, Haïtiens adoptent pa référendum yon nouvo Konstitisyon ki garantit dwa fondamantal, séparation nan pouvoirs, ak interdi explicitement toute présidence à vie. Elle kreye yon Conseil électoral permanent ak reconnaît kreyòl ayisyen tankoswa lang officielle nan côtés nan fransè. Approuvée à plis nan 99 % nan votants, li reprezante yon espwa démocratique immense. Cepandan, li mise en application ap entravée pa coups d'État, crises enstitisyonnelles ak l'instabilité chronique nan décennies suivantes.
+ </div>
+ </div>
+
+ <!-- 1990 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1990" aria-expanded="false">
+ <span class="evt-year">1990</span>
+ <span class="evt-title">Élection nan Jean-Bertrand Aristide</span>
+ <span class="evt-short">prêtre nan pòvs Jean-Bertrand Aristide remporte l'eleksyon prezidanielle ak 67 % nan voix 16 décembre 1990.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1990">
+ 16 décembre 1990, lors nan premyes eleksyon lib ak démocratiques nan istwa ayisyèn, père Jean-Bertrand Aristide, prêtre salésien défenseur nan théologie nan libération ak nan pòvs, élu prezidan ak 67 % nan voix. Sa viktwa écrasante exprime l'aspiration nan pèp ayisyen à jistis sosyal apre nan décennies nan diktatè. Aristide reprezante yon espwa istorik poswa classes popilès. Mais li mandat ap brutalement interrompu mwens nan huit mois apre li investiture.
+ </div>
+ </div>
+
+ <!-- 1991 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1991" aria-expanded="false">
+ <span class="evt-year">1991</span>
+ <span class="evt-title">Coup d'État milite kont Aristide</span>
+ <span class="evt-short">30 septembre 1991, yon koudeta milite dirije pa jeneral Raoul Cédras renverse prezidan Aristide, ki s'exile nan États-Unis.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1991">
+ 30 septembre 1991, jeneral Raoul Cédras renverse prezidan Aristide lors d'yon koudeta milite. Aristide s'exile nan États-Unis. junte milite impose yon régime nan tèur pandan trois ans : òganizasyons popilè violemment réprimées, nan milliers nan militants tués pame a ak paramilite FRAPH, ak nan milliers nan réfugiés ayisyen tentent nan fuir pa mer. L'OEA ak l'ONU imposent yon embargo ekonomik kont junte, men violations nan droits humains poursuivent.
+ </div>
+ </div>
+
+ <!-- 1994 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-1994" aria-expanded="false">
+ <span class="evt-year">1994</span>
+ <span class="evt-title">Intervention entènasyonal ak retour d'Aristide</span>
+ <span class="evt-short">Yon intervention milite ameriken (Opération Uphold Democracy) restaure Aristide nan pouvwa en octobre 1994.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-1994">
+ En septembre 1994, États-Unis lancent l'Opération Uphold Democracy pou restaurer l'ordre konstitisyonnel en Haïti. Sous menace d'yon invasion milite imminente, jeneral Cédras accepte nan quitter pouvwa a suite à yon négociation menée pa l'ansyen prezidan ameriken Jimmy Carter. Aristide rentre à Port-au-Prince 15 octobre 1994 anba acclamations nan foule. Yon mission nan lapè nan ONU (UNMIH) pran relais pou maintenir stabilité. Aristide termine li mandat en 1996 ak cède pouvwa a à li successeur élu, René Préval.
+ </div>
+ </div>
+
+ <!-- 2004 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2004" aria-expanded="false">
+ <span class="evt-year">2004</span>
+ <span class="evt-title">Départ d'Aristide ak crise politik</span>
+ <span class="evt-short">29 février 2004, Aristide quitte Haïti nan nan circonstansa yo controversées, nan milieu d'yon insurrection lame ak nan pressions entènasyonals.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2004">
+ En février 2004, yon insurrection lame combinant d'ansyen milite ak d'ex-paramilite progresse rapidement atravè peyi. 29 février 2004, Aristide quitte Haïti à bord d'yon avion ameriken — li camp affirme ke il te forcé, Washington parle nan départ volontaire. Il s'exile en Afrique nan Sud. Yon mission multinasyonal dirije pa États-Unis apre li MINUSTAH (Mission nan Nasyon Zini poswa stabilisation en Haïti) pran position. Haïti ant nan yon longue période nan crise enstitisyonnelle ak sécuritaire.
+ </div>
+ </div>
+
+ <!-- 2008 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2008" aria-expanded="false">
+ <span class="evt-year">2008</span>
+ <span class="evt-title">Émeutes nan faim</span>
+ <span class="evt-short">En avril 2008, flambée mondiale nan prix alimentaires provoque nan émeutes violentes atravè Haïti, forçant Premier ministre à démissionner.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2008">
+ En avril 2008, crise mondiale nan prix alimentaires frappe nan plein fouak Haïti, deja peyi plis pòv nan Amériques. riz, maïs ak huiles alimentaires vin inabordables poswa fanmis plis démunies. Des émeutes violentes éclatent atravè peyi, sitoswa à Port-au-Prince ak nan Sud. Des personnes tuées lors nan affrontements. Premier ministre Jacques-Édouard Alexis contraint nan démissionner. Ces événements illustrent dépendance alimentaire structurelle d'Haïti ak li vulnérabilité nan chocs ekonomiks mondiaux.
+ </div>
+ </div>
+
+ <!-- 2010 – Séisme -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2010-seisme" aria-expanded="false">
+ <span class="evt-year">2010</span>
+ <span class="evt-title">Séisme dévastateur — 12 janvier 2010</span>
+ <span class="evt-short">Yon tranblemanntè nan magnitude 7,0 dévaste Port-au-Prince ak li yo environs, faisant plis nan 220 000 morts ak 1,5 million nan sans-abri.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2010-seisme">
+ 12 janvier 2010 à 16h53, yon séisme nan magnitude 7,0 frappe Haïti à 25 km à l'ouse nan Port-au-Prince. En kèk secondes, nan quartiers entiers s'effondrent. Plus nan 220 000 personnes perdent lavi a, 300 000 blessées ak 1,5 million rejwenn san abri. Palais nasyonal, cathédrale, nan hôpitaux ak nan ministères détruits. kominote entènasyonal mobilise yon aide san précédent, men rekonstriksyon an révèle extrêmement lente ak problématique. Dix ans plis tard, nan milliers nan personnes vivaient ankò nan nan conditions précaires.
+ </div>
+ </div>
+
+ <!-- 2010 – Choléra -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2010-cholera" aria-expanded="false">
+ <span class="evt-year">2010</span>
+ <span class="evt-title">Épidémie nan choléra</span>
+ <span class="evt-short">En octobre 2010, yon épidémie nan choléra éclate nan l'Artibonite, lye à nan sòlda nan MINUSTAH, tuant anviwon 10 000 Haïtiens.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2010-cholera">
+ En octobre 2010, kèk mois apre séisme, yon épidémie nan choléra éclate nan depatman nan Artibonite. Des enquêtes scientifiques établissent ke souche prosoti nan sòlda népalais nan mission nan lapè nan ONU (MINUSTAH). L'épidémie répand rapidement nan tout peyi : plis nan 820 000 personnes contaminées ak anviwon 10 000 meurent. L'ONU reconnaît li responsabilité morale en 2016 men pa verse pa nan réparations directes nan victimes. Cette crise sanitaire s'ajoute nan traumatismes nan séisme nan yon peyi à bout nan ressources.
+ </div>
+ </div>
+
+ <!-- 2011 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2011" aria-expanded="false">
+ <span class="evt-year">2011</span>
+ <span class="evt-title">Élection nan Michel Martelly</span>
+ <span class="evt-short">Michel Martelly, chanteur popilè bay non « Sweak Micky », élu prezidan en mars 2011 apre yon campagne électorale controversée.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2011">
+ En mars 2011, Michel Martelly, popilè chanteur nan compas bay non « Sweak Micky », remporte second tour nan eleksyon prezidanielle ak anviwon 68 % nan voix. Sa viktwa surpran l'establishment politik tradisyonnel. Son mandat make pa nan efforts nan rekonstriksyon post-séisme, lancement nan programme d'edikasyon gratuite « Ti Manman Chéri », men toswa pa nan nombreuses accusations nan corruption, yon gouvernance chaotique ak yon incapacité à organiser nan eleksyon régulières. Il quitte pouvwa a en février 2016 san successeur élu.
+ </div>
+ </div>
+
+ <!-- 2015 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2015" aria-expanded="false">
+ <span class="evt-year">2015</span>
+ <span class="evt-title">Crise électorale</span>
+ <span class="evt-short">eleksyon nan 2015 annulées apre nan graves accusations nan fraude, plongeant Haïti nan yon nouvo crise enstitisyonnelle.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2015">
+ eleksyon prezidanielles d'octobre 2015 entachées d'allégations massives nan fraude, nan bourrage d'urnes ak nan violence. candidat pro-gouvènmanal Jovenel Moïse deklare vainqueur nan premye tour, men rezilta contestés pa lòt candidats ak pa yon commission d'évaluation indépandane. Face à pression, gouvènman annule eleksyon. Haïti rejwenn san gouvènman élu pandan plis d'yon an, géré pa yon gouvènman nan transition anba Jocelerme Privert, aggravant crise enstitisyonnelle chronique.
+ </div>
+ </div>
+
+ <!-- 2016 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2016" aria-expanded="false">
+ <span class="evt-year">2016</span>
+ <span class="evt-title">Ouragan Matthew</span>
+ <span class="evt-short">4 octobre 2016, l'ouragan Matthew frappe sid d'Haïti ak nan vents nan 230 km/h, causant plis nan 546 morts ak dévastant Péninsule nan Sud.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2016">
+ 4 octobre 2016, l'ouragan Matthew, l'un nan plis pwisans nan l'istwa nan l'Atlantique, frappe sid d'Haïti ak nan vents nan 230 km/h. vils nan Jérémie ak Cayes en gran pati détruites. Plus nan 546 personnes meurent, nan centaines nan milliers déplacées ak infrastructures agricoles anéanties. rekonstriksyon entravée pa l'instabilité politik chronique, pandémie nan choléra ki rebondit ak l'incapacité nan gouvènmans successifs à coordonner yon réponse efficace. katastwòf met en évidence vulnérabilité climatique extrême d'Haïti.
+ </div>
+ </div>
+
+ <!-- 2017 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2017" aria-expanded="false">
+ <span class="evt-year">2017</span>
+ <span class="evt-title">Investiture nan prezidan Jovenel Moïse</span>
+ <span class="evt-short">Jovenel Moïse, entrepreneur agricole, pran li yo fonctions 7 février 2017 apre avoir remporté l'eleksyon prezidanielle nan novembre 2016.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2017">
+ 7 février 2017, Jovenel Moïse, entrepreneur agricole ak candidat nan parti PHTK, pran li yo fonctions nan prezidan apre avoir remporté l'eleksyon prezidanielle nan novembre 2016 — scrutin reporté apre l'annulation nan 2015. Son mandat tankounce nan yon kontèks difficile : ekonomi affaiblie, rekonstriksyon post-Matthew inachevée, enstitisyons fragilisées. Malgré kèk projets d'infrastructures, li gouvènman rapidement confronté à nan crises successives : scandale PetroCaribe, manifestations massives, montée nan gangs ak blocage enstitisyonnel.
+ </div>
+ </div>
+
+ <!-- 2018 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2018" aria-expanded="false">
+ <span class="evt-year">2018</span>
+ <span class="evt-title">Manifestations PetroCaribe</span>
+ <span class="evt-short">Des centaines nan milliers d'Haïtiens manifestent pou demander nan comptes soswa gestion nan fonds PetroCaribe, estimés à plis nan 3,8 milliards nan dollars.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2018">
+ En 2018, yon rapport nan Cour supérieure nan comptes ayisyèn révèle nan détournements massifs nan gestion nan fonds PetroCaribe, yon programme nan coopération pétrolière vénézuélien ki te gen accordé à Haïti nan pétrole à prix réduit ak nan remboursements différés, générant nan fonds pou devlopman an. Sur 3,8 milliards nan dollars reçus, nan milliards semblent avoir été détournés pa nan responsables gouvènmanaux ak nan proches nan pouvwa anba plizyè présidences. mouvman #PetroCaribChallenge soswa réseaux sosyal mobilise nan centaines nan milliers d'Haïtiens nan rues.
+ </div>
+ </div>
+
+ <!-- 2019 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2019" aria-expanded="false">
+ <span class="evt-year">2019</span>
+ <span class="evt-title">Manifestations nasyonals kont gouvènman</span>
+ <span class="evt-short">Des manifestations san précédent paralysent Haïti pandan nan semaines en 2019, réclamant démission nan prezidan Jovenel Moïse.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2019">
+ Tout nan long nan ane 2019, ak plis an patikilye en juillak ak en septembre-octobre, nan manifestations massives ak nan opérations « peyi lòk » (« peyi verrouillé ») paralysent Haïti. Des barricanan bloquent routes, tankoursa yo ferment ak l'activité ekonomik suspendue pandan nan semaines. manifestants réclament démission nan Jovenel Moïse, nan comptes soswa fonds PetroCaribe ak yon amélioration nan conditions nan vie. Plusieurs personnes tuées lors nan affrontements. mouvman popilè pa parsoti pa à renverser prezidan, men affaiblit durablement li légitimité.
+ </div>
+ </div>
+
+ <!-- 2020 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2020" aria-expanded="false">
+ <span class="evt-year">2020</span>
+ <span class="evt-title">Crise enstitisyonnelle</span>
+ <span class="evt-short">En janvier 2020, Parlement ayisyen cesse nan fonctionner faute d'eleksyon. Moïse gouverne pa décrets prezidaniels.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2020">
+ 13 janvier 2020, mandat nan quasi-totalité nan parlementaires ayisyen expire san ke aucyon eleksyon pa ait été òganize poswa renouveler. Haïti rejwenn san Parlement fonctionnel. prezidan Moïse gouverne seul pa décrets, concentrant konsa tout pouvwa yo nan li yo mains. Il dissout plizyè enstitisyons indépandanes, ke Conseil électoral permanent ak Cour supérieure nan comptes. Cette concentration nan pouvoir, couplée à l'aggravation nan crise sécuritaire, radicalise l'opposition ak approfondi crise enstitisyonnelle.
+ </div>
+ </div>
+
+ <!-- 2021 – Assassinat -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2021-moise" aria-expanded="false">
+ <span class="evt-year">2021</span>
+ <span class="evt-title">Assassinat nan prezidan Jovenel Moïse</span>
+ <span class="evt-short">7 juillak 2021, prezidan Jovenel Moïse assassiné à li domicile à Port-au-Prince pa yon commando armé.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2021-moise">
+ Dans nwit nan 6 nan 7 juillak 2021, prezidan Jovenel Moïse assassiné à li domicile nan Pèlerin 5, nan hauteurs nan Port-au-Prince. Sa fanm, Martine Moïse, grièvement blessée. commando d'yon trentaine d'hommes, konpoze prensipalman d'ansyen milite colombiens ak nan ressortissants haïtiano-américains, s'te présenté tankoswa nan agents nan DEA. Plusieurs suspects arrêtés nan jou suivants. enquêtes judiciaires ayisyèn ak amerikens s'enlisent. L'identité nan commanditaires rete largement obscure ak contestée.
+ </div>
+ </div>
+
+ <!-- 2021 – Transition -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2021-henry" aria-expanded="false">
+ <span class="evt-year">2021</span>
+ <span class="evt-title">Gouvènman nan transition dirije pa Ariel Henry</span>
+ <span class="evt-short">Après l'assassinat nan Moïse, Ariel Henry pran direction nan gouvènman ayisyen nan yon kontèks nan vide enstitisyonnel pwofon.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2021-henry">
+ Après l'assassinat nan Jovenel Moïse, yon lutte nan pouvwa éclate ant Premier ministre pa intérim Claude Joseph ak Ariel Henry, rele Premier ministre deux jou anvan l'assassinat men pa ayant pa ankò prêté serment. Avec soutien nan kominote entènasyonal, Ariel Henry pran tête nan gouvènman. Neurochirurgien ak technocrate, Henry gouverne san mandat électif nan yon kontèks nan chaos sécuritaire croissant, nan séisme nan Sud (14 août 2021) ak d'impasse politik totale. Son gouvènman peine à organiser nan eleksyon ak à rétablir l'ordre.
+ </div>
+ </div>
+
+ <!-- 2022 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2022" aria-expanded="false">
+ <span class="evt-year">2022</span>
+ <span class="evt-title">Aggravation nan crise sécuritaire ak expansion nan gangs</span>
+ <span class="evt-short">En 2022, nan coalitions nan gangs armés étendent yo contrôle sou Port-au-Prince ak paralysent progressivement tout peyi.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2022">
+ En 2022, coalition nan gangs « G9 an Fanmi » dirije pa Jimmy « Barbecue » Chérizier ak d'lòt groupes armés étendent massivement yo contrôle sou Port-au-Prince ak li yo environs. En octobre 2022, nan gangs bloquent terminal pétrolier nan Varreux, privant peyi nan carburant pandan nan semaines ak paralysant hôpitaux, transports ak l'eau potable. Premier ministre Henry demande formellement yon intervention entènasyonal. enlèvements kont rançon atteignent nan records. Des centaines nan milliers nan personnes déplacées à l'intérieur nan peyi.
+ </div>
+ </div>
+
+ <!-- 2023 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2023" aria-expanded="false">
+ <span class="evt-year">2023</span>
+ <span class="evt-title">Intervention entènasyonal discutée pou stabiliser Haïti</span>
+ <span class="evt-short">Conseil nan sécurité nan ONU autorise en octobre 2023 déploiement d'yon Mission multinasyonal nan soutien à sécurité, dirije pa Kenya.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2023">
+ Face à l'effondrement sécuritaire, Kenya annonce li disposition à diriger yon fòs multinasyonal pou soutenir Police nasyonal d'Haïti (PNH). 2 octobre 2023, Conseil nan sécurité nan ONU adopte résolution 2699, autorisant déploiement d'yon Mission multinasyonal nan soutien à sécurité (MSS) pou yon durée initiale d'yon an. Mais nan obstacles juridiques internes kenyans retardent déploiement. situation sécuritaire continue nan détériorer : gangs contrôlent désormen majorité nan Port-au-Prince ak routes prensipals nan peyi.
+ </div>
+ </div>
+
+ <!-- 2024 – Transition -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2024-transition" aria-expanded="false">
+ <span class="evt-year">2024</span>
+ <span class="evt-title">Transition politik ak gouvènman intérimaire</span>
+ <span class="evt-short">En 2024, anba pression nan gangs ak nan kominote entènasyonal, Ariel Henry démissionne, ouvrant voie à yon transition politik.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2024-transition">
+ En février-mars 2024, yon coalition nan gangs mène nan attaques coordonnées d'yon ampleur san précédent kont Port-au-Prince, prenant d'assaut deux prensipals prisons nan peyi. Plus nan 4 000 détenus s'évadent. Premier ministre Ariel Henry, bloqué hors nan peyi lors d'yon visite nan Kenya, rejwenn incapable nan rentrer. Sous pression nan CARICOM, nan États-Unis ak nan kominote entènasyonal, Henry annonce li démission en mars 2024. Yon gouvènman nan transition mis en plas pou gérer crise.
+ </div>
+ </div>
+
+ <!-- 2024 – CPT -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2024-cpt" aria-expanded="false">
+ <span class="evt-year">2024</span>
+ <span class="evt-title">Conseil prezidaniel nan transition</span>
+ <span class="evt-short">Yon Conseil prezidaniel nan transition (CPT) konpoze nan représentants nan diferan partis politiks mis en plas pou diriger Haïti vè nan eleksyon.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2024-cpt">
+ En mai 2024, yon Conseil prezidaniel nan transition (CPT) konpoze nan sept membres votants représentant diferan secteurs politiks ak nan sosyete sivil ofisyèlman installé. Edgard Leblanc Fils en pran présidence. Garry Conille rele Premier ministre en juin 2024, apre li remplacé pa Alix Didier Fils-Aimé en novembre 2024. CPT opère nan yon kontèks extrêmement difficile : insécurité persistante, enstitisyons fragilisées ak aide humanitaire insuffisante. Il chargé d'organiser nan eleksyon ak nan préparer transition vè yon gouvènman élu.
+ </div>
+ </div>
+
+ <!-- 2025 -->
+ <div class="evt-item" role="listitem">
+ <div class="evt-header" aria-controls="evt-2025" aria-expanded="false">
+ <span class="evt-year">2025</span>
+ <span class="evt-title">Crise sécuritaire persistante ak rekonstriksyon enstitisyonnelle</span>
+ <span class="evt-short">En 2025, Haïti poursuit li transition anba direction nan CPT, pandan ke Mission multinasyonal nan sécurité tente nan rétablir l'ordre face nan gangs.</span>
+ <svg class="evt-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+ </div>
+ <div class="evt-details" id="evt-2025">
+ En 2025, Haïti rete confronté à yon crise multidimensionnelle d'yon gravité exceptionnelle. Mission multinasyonal nan soutien à sécurité (MSS) menée pa Kenya opère nan peyi men fè face à nan ressoursa yo insuffisantes ak à yon rezistans farouche nan gangs. Des centaines nan milliers nan personnes rete déplacées. Conseil prezidaniel nan transition tente nan maintenir enstitisyons ak nan préparer conditions d'eleksyon futures, men l'insécurité, pòvté ak délitement nan État demeurent nan défis colossaux. résilience nan pèp ayisyen rete moteur d'yon espwa persistant.
+ </div>
+ </div>
+
+ </div><!-- /.evt-timeline -->
+ </div>
+ </section>
+
+
+ <section class="section" id="sources-chronologie" style="background:#f9f9fb;">
+ <div class="container">
+ <p class="section-label text-center">Documentation</p>
+ <h2 class="section-title text-center">Soursa yo nan Kwonolouji</h2>
+ <p class="section-subtitle text-center">marqueurs nan citation [1] [2] [3] nan texte renvoient nan référensa yo suivantes.</p>
+ <div style="max-width:800px;margin:1.5rem auto 0;line-height:2;">
+ <ol style="padding-left:1.5rem;">
+ <li id="tg-ref1">Ardouin, Beaubrun. <em>Étunan sou l'Istwa d'Haïti</em>, 11 tomes. Paris : Dezobry ak Magdeleine, 1853–1860.</li>
+ <li id="tg-ref2">Madiou, Thomas. <em>Istwa d'Haïti</em>, 8 tomes. Port-au-Prince : Imprimerie J. Courtois, 1847–1848.</li>
+ <li id="tg-ref3">Acte nan Endepandans d'Haïti, 1er janvier 1804. Rédigé pa Louis Félix Boisrond-Tonnerre. Achiv Nationales d'Haïti, Port-au-Prince.</li>
+ <li id="tg-ref4">Trouillot, Michel-Rolph. <em>Silencing the Past: Power and the Production of History</em>. Boston : Beacon Press, 1995.</li>
+ <li id="tg-ref5">Fouchard, Jean. <em>Marrons nan Libète</em>. Paris : L'École, 1972.</li>
+ </ol>
+ <p style="margin-top:1rem;">→ <a href="bibliography.html" style="color:#00209F;font-weight:600;">Bibliyografi complète nan projet</a></p>
+ </div>
+ </div>
+ </section>
+
+ <section class="cta-section">
+ <div class="container">
+ <h2>Dekouvri Chefs d'État Haïtiens</h2>
+ <p>De Dessalines nan Conseil Prezidaniel nan Transition, retracez liste complète nan dirigeants d'Haïti.</p>
+ <a href="timeline-presidents.html" class="btn btn-cta-white">Découvrir Chefs d'État →</a>
+ </div>
+ </section>
+
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mentions L&eacute;gales</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sou Ha&iuml;ti &eacute;crits nan l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
+ </div>
+ </div>
+ </footer>
+
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var isOpen=sw.classList.toggle('open');
+    btn.setAttribute('aria-expanded',isOpen);
+  });
+  document.addEventListener('click',function(){
+    sw.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  });
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
+</body>
+</html>

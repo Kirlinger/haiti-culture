@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Glossaire nan Créole Haïtien | RepiblikHaïti.org</title>
+ <meta name="description" content="Glossaire nan créole ayisyen — mots ak expressions essentiels akurs traductions en fransè ak en anglais." />
+ <meta name="author" content="RepiblikHaïti.org" />
+ <meta property="og:url" content="https://republiquehaiti.org/glossaire-creole.html" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+ <style>
+ /* ── Glossary search & filter bar ── */
+ .gloss-controls {
+ max-width: 820px;
+ margin: 0 auto 2rem;
+ }
+ .gloss-search-wrap {
+ position: relative;
+ margin-bottom: 1rem;
+ }
+ .gloss-search-wrap svg {
+ position: absolute;
+ left: 14px;
+ top: 50%;
+ transform: translateY(-50%);
+ color: #9ca3af;
+ pointer-events: none;
+ }
+ .gloss-search-input {
+ width: 100%;
+ padding: .75rem 1rem .75rem 2.75rem;
+ border: 2px solid var(--border, #e5e7eb);
+ border-radius: 10px;
+ font-size: 15px;
+ color: var(--text, #111827);
+ background: #fff;
+ outline: none;
+ transition: border-color .2s;
+ box-sizing: border-box;
+ }
+ .gloss-search-input:focus {
+ border-color: var(--blue, #00209F);
+ }
+ .gloss-filter-row {
+ display: flex;
+ flex-wrap: wrap;
+ gap: .5rem;
+ }
+ .gloss-filter-btn {
+ padding: .45rem 1.1rem;
+ border: 2px solid var(--border, #e5e7eb);
+ border-radius: 99px;
+ background: #fff;
+ font-size: 13px;
+ font-weight: 600;
+ cursor: pointer;
+ color: #6b7280;
+ transition: border-color .2s, background .2s, color .2s;
+ }
+ .gloss-filter-btn:hover,
+ .gloss-filter-btn.active {
+ border-color: var(--blue, #00209F);
+ background: var(--blue, #00209F);
+ color: #fff;
+ }
+
+ /* ── Category heading ── */
+ .gloss-section {
+ max-width: 820px;
+ margin: 0 auto 3rem;
+ }
+ .gloss-section[data-cat].hidden {
+ display: none;
+ }
+ .gloss-heading {
+ font-size: 1rem;
+ font-weight: 800;
+ text-transform: uppercase;
+ letter-spacing: .07em;
+ color: var(--blue, #00209F);
+ margin-bottom: 1rem;
+ padding-bottom: .5rem;
+ border-bottom: 2px solid var(--blue, #00209F);
+ }
+ .gloss-count {
+ font-size: 12px;
+ font-weight: 600;
+ color: #9ca3af;
+ margin-left: .5rem;
+ text-transform: none;
+ letter-spacing: 0;
+ }
+
+ /* ── Entry list ── */
+ .gloss-list {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ }
+ .gloss-entry {
+ display: flex;
+ flex-wrap: wrap;
+ align-items: baseline;
+ gap: .35rem .6rem;
+ padding: .7rem 0;
+ border-bottom: 1px solid var(--border, #e5e7eb);
+ transition: background .15s;
+ }
+ .gloss-entry:last-child {
+ border-bottom: none;
+ }
+ .gloss-entry.hidden {
+ display: none;
+ }
+ .gloss-creole {
+ font-weight: 800;
+ font-size: 15.5px;
+ color: var(--blue, #00209F);
+ min-width: 180px;
+ }
+ .gloss-arrow {
+ color: #d1d5db;
+ font-size: 14px;
+ }
+ .gloss-fr {
+ font-size: 15px;
+ color: var(--text, #111827);
+ font-style: italic;
+ }
+ .gloss-sep {
+ color: #d1d5db;
+ font-size: 14px;
+ }
+ .gloss-en {
+ font-size: 14px;
+ color: #6b7280;
+ }
+ .gloss-note {
+ font-size: 12.5px;
+ color: #9ca3af;
+ font-style: italic;
+ width: 100%;
+ padding-left: calc(180px + 1.2rem);
+ }
+
+ /* no-results message */
+ .gloss-no-results {
+ display: none;
+ text-align: center;
+ padding: 2.5rem 1rem;
+ color: #6b7280;
+ font-size: 15px;
+ }
+ .gloss-no-results.visible {
+ display: block;
+ }
+
+ /* Orthography note box */
+ .gloss-intro-box {
+ background: #f0f4ff;
+ border-left: 4px solid var(--blue, #00209F);
+ border-radius: 0 10px 10px 0;
+ padding: 1.1rem 1.3rem;
+ font-size: 14.5px;
+ line-height: 1.75;
+ color: #1e3a5f;
+ max-width: 820px;
+ margin: 0 auto 2.5rem;
+ }
+ .gloss-intro-box strong {
+ color: var(--blue, #00209F);
+ }
+
+ @media (max-width: 600px) {
+ .gloss-creole {
+ min-width: 100%;
+ }
+ .gloss-note {
+ padding-left: 0;
+ }
+ }
+ </style>
+<style>
+/* Language Switcher - Redesigned */
+.lang-switcher {
+  position: relative;
+  margin-left: 1rem;
+  z-index: 1100;
+}
+.lang-switcher__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.5);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+  font-family: inherit;
+}
+.lang-switcher__btn:hover,
+.lang-switcher__btn:focus {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.8);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.lang-switcher__btn .globe-icon {
+  font-size: 1.15rem;
+}
+.lang-switcher__btn .chevron {
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+}
+.lang-switcher.open .lang-switcher__btn .chevron {
+  transform: rotate(180deg);
+}
+.lang-switcher__menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  min-width: 180px;
+  z-index: 1100;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  animation: langDropIn 0.2s ease;
+}
+@keyframes langDropIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.lang-switcher.open .lang-switcher__menu {
+  display: block;
+}
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.1rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.15s;
+  border-bottom: 1px solid #f0f0f0;
+}
+.lang-option:last-child {
+  border-bottom: none;
+}
+.lang-option:hover {
+  background: #f0f5ff;
+  color: #1a56db;
+}
+.lang-option.active {
+  background: #e8f0fe;
+  font-weight: 700;
+  color: #1a56db;
+}
+.lang-option .flag-emoji {
+  font-size: 1.3rem;
+}
+@media (max-width: 768px) {
+  .lang-switcher {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+  .lang-switcher__btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  .lang-switcher__menu {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .lang-switcher__btn {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.88rem;
+  }
+}
+</style>
+</head>
+<body>
+
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ <a href="presidents.html">Pwofil Prezidan yo</a>
+ <a href="revolution-batays.html">Batay Revolisyon an</a>
+ <a href="relations-internationales.html">Relasyon Entènasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ <a href="atiss.html">Atis Vizyèl</a>
+ <a href="mizik-istwa.html">Istwa Mizik</a>
+ <a href="litterature.html">Literati</a>
+ <a href="creole.html">Lang Kreyòl</a>
+ <a href="senbòls-nationaux.html">Senbòl Nasyonal</a>
+ <a href="glossaire-creole.html">Glosè Kreyòl</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Jeyografi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="departements.html">10 Depatman yo</a>
+ <a href="geographie.html">Jeyografi Fizik</a>
+ <a href="anviwonman.html">Anviwonman</a>
+ <a href="catastrophes-naturelles.html">Katastwòf Natirèl</a>
+ <a href="frontiere-haiti-rd.html">Fwontyè Ayiti-RD</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ <a href="fanm-haiti.html">Fanm d'Haïti</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ <a href="agrikilti.html">Agrikilti</a>
+ <a href="education-haiti.html">Edikasyon</a>
+ <a href="aide-internationale.html">Aide Internationale</a>
+ <a href="economie-informelle.html">Ekonomi Informelle</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ <a href="quiz.html">Quiz : Èske oswa konnen Ayiti ?</a>
+ <a href="faits-meconnus.html">Bagay Moyon Pa Konnen</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang" aria-expanded="false">
+            <span class="globe-icon">🌐</span> Lang <span class="chevron">▾</span>
+          </button>
+          <div class="lang-switcher__menu" role="menu">
+            <a href="#" class="lang-option active" data-lang="ht" role="menuitem"><span class="flag-emoji">🇭🇹</span> Kreyòl</a>
+            <a href="#" class="lang-option" data-lang="fr" role="menuitem"><span class="flag-emoji">🇫🇷</span> Français</a>
+          </div>
+        </div>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechèch : Lwa, seremoni, vèvè…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
+
+ <section class="page-hero page-hero--history">
+ <div class="container">
+ <p class="page-hero__label">Lang &amp; Kilti</p>
+ <h1 class="page-hero__title">Glossaire nan Créole Haïtien</h1>
+ <p class="page-hero__desc">Du vocabulaire quotidien nan expressions idiomatiques, li a glossaire oswa introduit à lang maternelle nan tout Haïtiens — kreyòl ayisyen.</p>
+ </div>
+ </section>
+
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <a href="kilti.html">Kilti</a>
+ <span>/</span>
+ <span>Glosè Kreyòl</span>
+ </nav>
+ </div>
+ </div>
+
+ <!-- Entwodiksyon -->
+ <section class="section">
+ <div class="container">
+ <p class="section-label text-center">Kreyòl Ayisyen</p>
+ <h2 class="section-title text-center">100 Mots &amp; Expressions Essentiels</h2>
+ <p class="section-subtitle text-center">Quatre catégories thématiques pou explorer richsse nan créole ayisyen — nan politesse nan expressions idiomatiques.</p>
+
+ <div class="gloss-intro-box">
+ <p>Ce glossaire présente nan mo ak expressions clés nan <strong>kreyòl ayisyen</strong> (créole ayisyen) akurs équivalents en fransè ak en anglais. Il suit l'<strong>orthographe officielle etabli pa l'IPN en 1979</strong>, adopte nan Konstitisyon ayisyèn nan 1987. créole ayisyen yon lang à <strong>phonologie régulière</strong> : chak lettre correspond à yon seul son, san exception. « oswa » prononce [u], « j » prononce [dj] oswa [j] dapre kontèks, « w » semi-voyelle [w] ak « an », « yo », « en » représentent nan voyelles nasales. C'se yon lang indo-afriken née à Saint-Domingue nan XVII<sup>e</sup> syèk, à base lexicale fransèz men à grammaire pwofondman enfliyanse pa langs ouest-africaines.</p>
+ </div>
+
+ <!-- Search & filter controls -->
+ <div class="gloss-controls">
+ <div class="gloss-search-wrap">
+ <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="glossSearch" class="gloss-search-input" placeholder="Rechercher un mot en créole, français ou anglais…" autocomplete="off" aria-label="Rechercher dans le glossaire" />
+ </div>
+ <div class="gloss-filter-row" role="group" aria-label="Filtrer par catégorie">
+ <button class="gloss-filter-btn active" data-filter="all">Tous</button>
+ <button class="gloss-filter-btn" data-filter="salutations">Salutations &amp; Politesse</button>
+ <button class="gloss-filter-btn" data-filter="quotidien">Vie Quotidienne</button>
+ <button class="gloss-filter-btn" data-filter="kilti">Kilti &amp; Sosyete</button>
+ <button class="gloss-filter-btn" data-filter="expressions">Expressions Idiomatiques</button>
+ </div>
+ </div>
+
+ <p class="gloss-no-results" id="glossNoResults" aria-live="polite">Aucyon résultat trouvé pou li a recherche. Essayez yon lòt mot.</p>
+
+ <!-- CATEGORY 1: Salutations et politesse -->
+ <div class="gloss-section" data-cat="salutations">
+ <h3 class="gloss-heading">Salutations &amp; Politesse <span class="gloss-count">25 entrées</span></h3>
+ <ul class="gloss-list">
+ <li class="gloss-entry" data-search="bonjou bonjour good morning">
+ <span class="gloss-creole">Bonjou</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Bonjour</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Good morning</span>
+ </li>
+ <li class="gloss-entry" data-search="bonswa bonsoir good evening">
+ <span class="gloss-creole">Bonswa</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Bonsoir</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Good evening</span>
+ </li>
+ <li class="gloss-entry" data-search="bònn nwit bonne nuit good night">
+ <span class="gloss-creole">Bònn nwit</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Bonne nuit</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Good night</span>
+ </li>
+ <li class="gloss-entry" data-search="kijan ou rele comment vous appelez-vous what is your name">
+ <span class="gloss-creole">Kijan oswa rele ?</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Comment oswa appelez-vous ?</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">What is your name?</span>
+ </li>
+ <li class="gloss-entry" data-search="mwen rele je m'appelle my name is">
+ <span class="gloss-creole">Mwen rele…</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Je m'appelle…</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">My name is…</span>
+ </li>
+ <li class="gloss-entry" data-search="koman ou ye comment allez-vous how are you">
+ <span class="gloss-creole">Koman oswa ye ?</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Comment allez-vous ?</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">How are you?</span>
+ </li>
+ <li class="gloss-entry" data-search="m'ap boule ça va i'm getting by burning">
+ <span class="gloss-creole">M'ap boule</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Ça va</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">I'm getting by</span>
+ <span class="gloss-note">Littéralement : « Je brûle » — expression popilè signifiant ke l'on s'en sort.</span>
+ </li>
+ <li class="gloss-entry" data-search="m'ap kenbe je me maintiens i'm holding on">
+ <span class="gloss-creole">M'ap kenbe</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Je me maintiens</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">I'm holding on</span>
+ </li>
+ <li class="gloss-entry" data-search="mèsi merci thank you">
+ <span class="gloss-creole">Mèsi</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Merci</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Thank you</span>
+ </li>
+ <li class="gloss-entry" data-search="tanpri s'il vous plaît please">
+ <span class="gloss-creole">Tanpri</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">S'il oswa plaît</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Please</span>
+ </li>
+ <li class="gloss-entry" data-search="padkwa de rien you're welcome">
+ <span class="gloss-creole">Padkwa</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">De rien</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">You're welcome</span>
+ </li>
+ <li class="gloss-entry" data-search="eskize m excusez-moi excuse me">
+ <span class="gloss-creole">Eskize m</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Excusez-moi</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Excuse me</span>
+ </li>
+ <li class="gloss-entry" data-search="orevwa au revoir goodbye">
+ <span class="gloss-creole">Orevwa</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Au revoir</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Goodbye</span>
+ </li>
+ <li class="gloss-entry" data-search="byenvini bienvenue welcome">
+ <span class="gloss-creole">Byenvini</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Bienvenue</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Welcome</span>
+ </li>
+ <li class="gloss-entry" data-search="wi oui yes">
+ <span class="gloss-creole">Wi</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Oui</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Yes</span>
+ </li>
+ <li class="gloss-entry" data-search="non no">
+ <span class="gloss-creole">Non</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Non</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">No</span>
+ </li>
+ <li class="gloss-entry" data-search="dakò d'accord ok agreed">
+ <span class="gloss-creole">Dakò</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">D'accord</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">OK / Agreed</span>
+ </li>
+ <li class="gloss-entry" data-search="souple s'il vous plaît please imploring">
+ <span class="gloss-creole">Souple</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">S'il oswa plaît (suppliant)</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Please (imploring)</span>
+ </li>
+ <li class="gloss-entry" data-search="lanmou amour love">
+ <span class="gloss-creole">Lanmou</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Amour</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Love</span>
+ </li>
+ <li class="gloss-entry" data-search="zanmi ami friend">
+ <span class="gloss-creole">Zanmi</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Ami(e)</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Friend</span>
+ </li>
+ <li class="gloss-entry" data-search="frè frère brother">
+ <span class="gloss-creole">Frè</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Frère</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Brother</span>
+ </li>
+ <li class="gloss-entry" data-search="sè sœur sister">
+ <span class="gloss-creole">Sè</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Sœur</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Sister</span>
+ </li>
+ <li class="gloss-entry" data-search="manman maman mother">
+ <span class="gloss-creole">Manman</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Maman</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Mother</span>
+ </li>
+ <li class="gloss-entry" data-search="papa père father">
+ <span class="gloss-creole">Papa</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Papa</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Father</span>
+ </li>
+ <li class="gloss-entry" data-search="timoun timoun child">
+ <span class="gloss-creole">Timoun</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Enfant</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Child</span>
+ </li>
+ </ul>
+ </div>
+
+ <!-- CATEGORY 2: Vie quotidienne -->
+ <div class="gloss-section" data-cat="quotidien">
+ <h3 class="gloss-heading">Vie Quotidienne <span class="gloss-count">30 entrées</span></h3>
+ <ul class="gloss-list">
+ <li class="gloss-entry" data-search="kay maison house home">
+ <span class="gloss-creole">Kay</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Maison</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">House / Home</span>
+ </li>
+ <li class="gloss-entry" data-search="manje nourriture food manger">
+ <span class="gloss-creole">Manje</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Nourriture / Manger</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Food / To eat</span>
+ </li>
+ <li class="gloss-entry" data-search="dlo eau water">
+ <span class="gloss-creole">Dlo</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Eau</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Water</span>
+ </li>
+ <li class="gloss-entry" data-search="dife feu fire">
+ <span class="gloss-creole">Dife</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Feu</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Fire</span>
+ </li>
+ <li class="gloss-entry" data-search="solèy soleil sun">
+ <span class="gloss-creole">Solèy</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Soleil</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Sun</span>
+ </li>
+ <li class="gloss-entry" data-search="lapli pluie rain">
+ <span class="gloss-creole">Lapli</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Pluie</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Rain</span>
+ </li>
+ <li class="gloss-entry" data-search="mòn mòn mountain">
+ <span class="gloss-creole">Mòn</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Montagne</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Mountain</span>
+ </li>
+ <li class="gloss-entry" data-search="lanmè mer sea">
+ <span class="gloss-creole">Lanmè</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Mer</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Sea</span>
+ </li>
+ <li class="gloss-entry" data-search="rivyè rivyè river">
+ <span class="gloss-creole">Rivyè</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Rivière</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">River</span>
+ </li>
+ <li class="gloss-entry" data-search="wout route road">
+ <span class="gloss-creole">Wout</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Route</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Road</span>
+ </li>
+ <li class="gloss-entry" data-search="machin voiture car">
+ <span class="gloss-creole">Machin</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Voiture</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Car</span>
+ </li>
+ <li class="gloss-entry" data-search="tap-tap minibus transport coloré">
+ <span class="gloss-creole">Tap-tap</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Minibus coloré</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Colorful minibus</span>
+ <span class="gloss-note">Transport en commyon emblématique d'Haïti, souvan peint nan scènes relijyes ak nan pwovèb kreyòl.</span>
+ </li>
+ <li class="gloss-entry" data-search="lakay chez soi at home homeland">
+ <span class="gloss-creole">Lakay</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Chez soi</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">At home / The homeland</span>
+ <span class="gloss-note">Mot chargé d'affection — dyaspora ayisyèn nan l'utilise pou désigner Haïti elle-même.</span>
+ </li>
+ <li class="gloss-entry" data-search="peyi peyi country">
+ <span class="gloss-creole">Peyi</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Peyi</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Country</span>
+ </li>
+ <li class="gloss-entry" data-search="vil vil city">
+ <span class="gloss-creole">Vil</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Vil</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">City</span>
+ </li>
+ <li class="gloss-entry" data-search="mache marché market">
+ <span class="gloss-creole">Mache</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Marché</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Market</span>
+ </li>
+ <li class="gloss-entry" data-search="lajan argent money">
+ <span class="gloss-creole">Lajan</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Argent</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Money</span>
+ </li>
+ <li class="gloss-entry" data-search="travay travail work">
+ <span class="gloss-creole">Travay</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Travail</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Work</span>
+ </li>
+ <li class="gloss-entry" data-search="lekòl école school">
+ <span class="gloss-creole">Lekòl</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">École</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">School</span>
+ </li>
+ <li class="gloss-entry" data-search="lopital hôpital hospital">
+ <span class="gloss-creole">Lopital</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Hôpital</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Hospital</span>
+ </li>
+ <li class="gloss-entry" data-search="doktè médecin doctor">
+ <span class="gloss-creole">Doktè</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Médecin</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Doctor</span>
+ </li>
+ <li class="gloss-entry" data-search="pwofesè professeur teacher">
+ <span class="gloss-creole">Pwofesè</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Professeur</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Teacher</span>
+ </li>
+ <li class="gloss-entry" data-search="elèv élève student">
+ <span class="gloss-creole">Elèv</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Élève</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Student</span>
+ </li>
+ <li class="gloss-entry" data-search="liv livre book">
+ <span class="gloss-creole">Liv</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Livre</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Book</span>
+ </li>
+ <li class="gloss-entry" data-search="jimnaz exercice physique exercise">
+ <span class="gloss-creole">Jimnaz</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Exercice physique</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Exercise</span>
+ </li>
+ <li class="gloss-entry" data-search="dòmi dormir sleep">
+ <span class="gloss-creole">Dòmi</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Dormir</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Sleep</span>
+ </li>
+ <li class="gloss-entry" data-search="leve se lever wake up rise">
+ <span class="gloss-creole">Leve</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Se lever</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Wake up / Rise</span>
+ </li>
+ <li class="gloss-entry" data-search="fè bagay faire quelque chose to do something">
+ <span class="gloss-creole">Fè bagay</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Faire quelque chose</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">To do something</span>
+ </li>
+ <li class="gloss-entry" data-search="pale parler to speak">
+ <span class="gloss-creole">Pale</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Parler</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">To speak</span>
+ </li>
+ <li class="gloss-entry" data-search="koute écouter to listen">
+ <span class="gloss-creole">Koute</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Écouter</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">To listen</span>
+ </li>
+ </ul>
+ </div>
+ </div>
+ </section>
+
+ <!-- CULTURE section -->
+ <section class="section--alt">
+ <div class="container">
+ <div class="gloss-section" data-cat="kilti" style="max-width:820px;margin:0 auto 3rem;">
+ <h3 class="gloss-heading">Kilti &amp; Sosyete <span class="gloss-count">25 entrées</span></h3>
+ <ul class="gloss-list">
+ <li class="gloss-entry" data-search="vodou voodoo haitian relijyon">
+ <span class="gloss-creole">Vodou</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Vodou</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Voodoo</span>
+ <span class="gloss-note">Relijyon ayisyèn d'origine afriken, rekonnen ofisyèlman en 2003, mêlant croyansa yo animistes ak syncrétisme catholique.</span>
+ </li>
+ <li class="gloss-entry" data-search="lwa esprit spirit vodou">
+ <span class="gloss-creole">Lwa</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Esprit</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Spirit (in Vodou)</span>
+ <span class="gloss-note">Divinités intermédiaires nan vodoswa ayisyen, chacyon gouvernant yon domaine nan lavi humaine ak naturelle.</span>
+ </li>
+ <li class="gloss-entry" data-search="houngan prêtre vodou vodou priest">
+ <span class="gloss-creole">Houngan</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Prêtre vodou</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Vodoswa priest</span>
+ </li>
+ <li class="gloss-entry" data-search="mambo prêtresse vodou vodou priestess">
+ <span class="gloss-creole">Mambo</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Prêtresse vodou</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Vodoswa priestess</span>
+ </li>
+ <li class="gloss-entry" data-search="peristil temple vodou vodou temple">
+ <span class="gloss-creole">Peristil</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Tempvodoswa a</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Vodoswa temple</span>
+ </li>
+ <li class="gloss-entry" data-search="vèvè senbòl sacré vodou sacred vodou symbol">
+ <span class="gloss-creole">Vèvè</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Senbòl sakre vodou</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Sacred Vodoswa symbol</span>
+ <span class="gloss-note">Dessin rityèl représentant yon lwa, tracé à farine oswa à cendre lors nan cérémonies.</span>
+ </li>
+ <li class="gloss-entry" data-search="kompa mizik dans haïtienne haitian dance music">
+ <span class="gloss-creole">Kompa</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Mizik nan nan ayisyèn</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Haitian dance music</span>
+ </li>
+ <li class="gloss-entry" data-search="rara processions musicales rue street music">
+ <span class="gloss-creole">Rara</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Processions musicales nan rue</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Streak music processions</span>
+ <span class="gloss-note">Tradisyon musicale nan kanaval selebre prensipalman pandan période nan Carême.</span>
+ </li>
+ <li class="gloss-entry" data-search="rasin mizik racines roots music">
+ <span class="gloss-creole">Rasin</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Mizik racines</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Roots music</span>
+ </li>
+ <li class="gloss-entry" data-search="twoubadou troubadour singer">
+ <span class="gloss-creole">Twoubadou</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Troubadour</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Troubadour singer</span>
+ </li>
+ <li class="gloss-entry" data-search="kanaval kanaval carnival">
+ <span class="gloss-creole">Kanaval</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Kanaval</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Carnival</span>
+ </li>
+ <li class="gloss-entry" data-search="drapo drapo flag">
+ <span class="gloss-creole">Drapo</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Drapo</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Flag</span>
+ </li>
+ <li class="gloss-entry" data-search="ayiti haïti taíno land of high mountains">
+ <span class="gloss-creole">Ayiti</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Haïti</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Haiti</span>
+ <span class="gloss-note">Nom taïno signifiant « tè nan hautes mòns », adopte à l'endepandans en remplacement nan non kolonyal Saint-Domingue.</span>
+ </li>
+ <li class="gloss-entry" data-search="ayisyen haïtien haitian">
+ <span class="gloss-creole">Ayisyen</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Haïtien(ne)</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Haitian</span>
+ </li>
+ <li class="gloss-entry" data-search="kreyòl créole creole language">
+ <span class="gloss-creole">Kreyòl</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Créole</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Creole (the language)</span>
+ </li>
+ <li class="gloss-entry" data-search="peyi a le peyi the country affectionate">
+ <span class="gloss-creole">Peyi a</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">peyi</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">The country (affectionate)</span>
+ </li>
+ <li class="gloss-entry" data-search="neg homme man colloquial familier">
+ <span class="gloss-creole">Nèg</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Homme (familier)</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Man (colloquial)</span>
+ <span class="gloss-note">Terme issu nan istwa kolonyal, réapproprié pa Haïtiens ak dépourvu nan toute connotation péjorative nan kreyòl contemporain.</span>
+ </li>
+ <li class="gloss-entry" data-search="fanm fanm woman">
+ <span class="gloss-creole">Fanm</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Fanm</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Woman</span>
+ </li>
+ <li class="gloss-entry" data-search="pitit timoun fils fille child son daughter">
+ <span class="gloss-creole">Pitit</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Enfant / fils / fille</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Child / li / daughter</span>
+ </li>
+ <li class="gloss-entry" data-search="granmoun personne âgée elder adult">
+ <span class="gloss-creole">Granmoun</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Personne âgée / adulte</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Elder / adult</span>
+ </li>
+ <li class="gloss-entry" data-search="konbit travail collectif communautaire community collective work">
+ <span class="gloss-creole">Konbit</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Travail collectif communautaire</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Community collective work</span>
+ <span class="gloss-note">Pratique ancestrale d'entraide kote membres d'yon kominote riral réunissent pou travailler ensemble nan champs.</span>
+ </li>
+ <li class="gloss-entry" data-search="sòl tontine épargne collective collective savings">
+ <span class="gloss-creole">Sòl</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Tontine / épargne collective</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Collective savings system</span>
+ <span class="gloss-note">Système d'épargne informel kote yon groupe nan personnes cotise régulièrement ak chacyon reçoit à tour nan wòl somme totale.</span>
+ </li>
+ <li class="gloss-entry" data-search="lakou cour familiale family compound courtyard">
+ <span class="gloss-creole">Lakou</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Cour familiale</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Family compound / courtyard</span>
+ <span class="gloss-note">Unité sosyal nan base nan zones rirals ayisyèn — yon espace partagé otou duquel vivent plizyè fanmis liées.</span>
+ </li>
+ <li class="gloss-entry" data-search="madan sara commerçante itinérante itinerant female trader">
+ <span class="gloss-creole">Madan Sara</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Commerçante itinérante</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Itinerant female trader</span>
+ <span class="gloss-note">Piliers nan ekonomi informelle ayisyèn, li yo fanm assurent distribution alimentaire ant campagnes ak vils.</span>
+ </li>
+ <li class="gloss-entry" data-search="dyaspora kominote haïtienne à l'étranger haitian community abroad">
+ <span class="gloss-creole">Dyaspora</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Kominote ayisyèn à l'étranger</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Haitian community abroad</span>
+ <span class="gloss-note">dyaspora ayisyèn, forte nan plizyè millions nan personnes, souvan rele « 11e depatman » d'Haïti.</span>
+ </li>
+ </ul>
+ </div>
+ </div>
+ </section>
+
+ <!-- Expressions idiomatiques -->
+ <section class="section">
+ <div class="container">
+ <div class="gloss-section" data-cat="expressions" style="max-width:820px;margin:0 auto 3rem;">
+ <h3 class="gloss-heading">Expressions Idiomatiques <span class="gloss-count">20 entrées</span></h3>
+ <ul class="gloss-list">
+ <li class="gloss-entry" data-search="pitit la pi mal pase papa l l'timoun est pire que son père apple doesn't fall far tree">
+ <span class="gloss-creole">Pitit pi mal pase papa l</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">L'timoyon pire ke li père</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">The apple doesn't fall far from the tree</span>
+ </li>
+ <li class="gloss-entry" data-search="raché manyòk ou ranje fèy li il faut s'adapter you must adapt">
+ <span class="gloss-creole">Raché manyòk oswa ranje fèy li</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Il faut s'adapter nan circonstances</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Yoswa must adapt to circumstances</span>
+ <span class="gloss-note">Littéralement : « Arrachez manioc ak remettez feuilles en plas ».</span>
+ </li>
+ <li class="gloss-entry" data-search="wè pa vle di kwè voir ne signifie pas croire seeing isn't believing">
+ <span class="gloss-creole">Wè pa vle di kwè</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Voir pa signifie pa croire</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Seeing isn't always believing</span>
+ </li>
+ <li class="gloss-entry" data-search="pran do l lui tourner le dos betray">
+ <span class="gloss-creole">Pran do l</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Lui tourner dos</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">To betray someone</span>
+ </li>
+ <li class="gloss-entry" data-search="bat fè pandan li cho battre le fer pendant qu'il est chaud strike while the iron is hot">
+ <span class="gloss-creole">Bat fè pandan li cho</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Battre fer pandan ke il chaud</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Strike while the iron is hot</span>
+ </li>
+ <li class="gloss-entry" data-search="fè yon wòch de kout faire d'une pierre deux coups kill two birds one stone">
+ <span class="gloss-creole">Fè yon wòch nan kout</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Faire d'yon pierre deux coups</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">To kill two birds with one stone</span>
+ </li>
+ <li class="gloss-entry" data-search="mete dlo nan diven ou mettre de l'eau dans son vin tone it down">
+ <span class="gloss-creole">Mete dlo nan diven ou</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Mettre nan dlo nan li vin</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">To tone it down / make concessions</span>
+ </li>
+ <li class="gloss-entry" data-search="kouri pou lapli tonbe nan larivyè fuir la pluie tomber dans la rivyè out of the frying pan into the fire">
+ <span class="gloss-creole">Kouri poswa lapli, tonbe nan larivyè</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Fuir pluie, tomber nan rivyè</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Out of the frying pan, into the fire</span>
+ </li>
+ <li class="gloss-entry" data-search="pye poud avoir les pieds légers good dancer flee quickly">
+ <span class="gloss-creole">Pye poud</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Avoir pieds légers</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">To be a good dancer / to flee quickly</span>
+ <span class="gloss-note">Littéralement : « Des pieds nan poudre ».</span>
+ </li>
+ <li class="gloss-entry" data-search="kase kò l se casser en deux de rire laugh heartily">
+ <span class="gloss-creole">Kase kò l</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Se casser en deux nan rire</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">To laugh heartily</span>
+ <span class="gloss-note">Littéralement : « Se casser corps » — expression trè courante pou décrire yon foswa rire.</span>
+ </li>
+ <li class="gloss-entry" data-search="dèyè mòn gen mòn derrière les mòns il y a d'autres mòns behind every mountain lies another">
+ <span class="gloss-creole">Dèyè mòn gen mòn</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Derrière mòns, li y a d'lòt mòns</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Beyond every challenge lies another</span>
+ <span class="gloss-note">proverbe ayisyen plis selèb — yon philosophie nan persévérance face nan obstacles.</span>
+ </li>
+ <li class="gloss-entry" data-search="tout moun se moun tout le mond est une personne every person deserves respect">
+ <span class="gloss-creole">Tout moyon moun</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Tout mond yon personne</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Every person is a person</span>
+ <span class="gloss-note">Affirmation fondamantal nan dignité humaine universelle, pwofondman ancrée nan philosophie ayisyèn.</span>
+ </li>
+ <li class="gloss-entry" data-search="lè chat pa la rat bat tab quand le chat est absent les rats dansnt when the cat's away mice will play">
+ <span class="gloss-creole">Lè chat pa la, rat bat tab</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Quand chat pa se pa là, rats dansnt soswa table</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">When the cat's away, the mice will play</span>
+ </li>
+ <li class="gloss-entry" data-search="kochon konnen ki bwa l fwote le cochon sait à quel arbre se frotte everyone knows their own business">
+ <span class="gloss-creole">Kochon konnen ki bwa l fwote</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">cochon sait à quel arbre li frotte</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Everyone knows their own business best</span>
+ </li>
+ <li class="gloss-entry" data-search="nèg ki pa gen chwal montan bourik li qui n'a pas de cheval monte son âne make do with what you have">
+ <span class="gloss-creole">Nèg ki pa gen chwal, montan bourik li</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Qui pa a pa nan cheval monte li âne</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Make do with what yoswa have</span>
+ </li>
+ <li class="gloss-entry" data-search="men anpil chay pa lou plusieurs mains la charge est légère many hands make light work">
+ <span class="gloss-creole">Men anpil, chay pa lou</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Plusieurs mains, charge légère</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Many hands make light work</span>
+ </li>
+ <li class="gloss-entry" data-search="chak koukouy klere pou je pa l chaque luciole brille pour ses propres yeux charity begins at home">
+ <span class="gloss-creole">Chak koukouy klere poswa je pa l</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Chaque luciole brille pou li yo propres yeux</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Charity begins at home</span>
+ </li>
+ <li class="gloss-entry" data-search="fòk ou mouye pou ou konn naje il faut se mouiller pour apprendre à nager you must take risks to learn">
+ <span class="gloss-creole">Fòk oswa mouye poswa oswa konn naje</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Il faut mouiller pou apprendre à nager</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Yoswa must take risks to learn</span>
+ </li>
+ <li class="gloss-entry" data-search="bouki fè laviwonn faire le tour du quartier beat around the bush">
+ <span class="gloss-creole">Bouki fè laviwonn</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Faire tour nan quartier san but</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">To beat around the bush</span>
+ <span class="gloss-note">Bouki yon personnage nan tradisyon oral ayisyèn, toujoswa naïf face nan malin Ti Malice.</span>
+ </li>
+ <li class="gloss-entry" data-search="bèl fanm pa manje poul une belle fanm ne mange pas de poulet appearances can be deceiving">
+ <span class="gloss-creole">Bèl fanm pa manje poul</span><span class="gloss-arrow">→</span>
+ <span class="gloss-fr">Yon belle fanm pa mange pa nan poulet</span><span class="gloss-sep">/</span>
+ <span class="gloss-en">Appearansa yo can be deceiving</span>
+ <span class="gloss-note">Proverbe ironique soulignant ke apparensa yo extérieures pa reflètent pa toujoswa réalité.</span>
+ </li>
+ </ul>
+ </div>
+
+ <!-- "Explore more" links -->
+ <div style="max-width:820px;margin:0 auto;padding-top:1rem;">
+ <p class="section-label text-center">Aller plis loin</p>
+ <h2 class="section-title text-center">Approfondir Lang Kreyòl</h2>
+ <p class="section-subtitle text-center">créole ayisyen byen plis ke yon glossaire. Dekouvri li istwa, li grammaire ak li wòl nan kilti nasyonal.</p>
+ <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:1.5rem;">
+ <a href="creole.html" style="display:inline-block;background:var(--blue,#00209F);color:#fff;border-radius:10px;padding:.65rem 1.4rem;font-size:14px;font-weight:700;text-decoration:none;">Lang Kreyòl</a>
+ <a href="kilti.html" style="display:inline-block;background:var(--blue,#00209F);color:#fff;border-radius:10px;padding:.65rem 1.4rem;font-size:14px;font-weight:700;text-decoration:none;">Kilti &amp; Atizay</a>
+ <a href="vodou.html" style="display:inline-block;background:var(--blue,#00209F);color:#fff;border-radius:10px;padding:.65rem 1.4rem;font-size:14px;font-weight:700;text-decoration:none;">Vodou</a>
+ <a href="lwa.html" style="display:inline-block;background:var(--blue,#00209F);color:#fff;border-radius:10px;padding:.65rem 1.4rem;font-size:14px;font-weight:700;text-decoration:none;">Lwa yo</a>
+ <a href="quiz.html" style="display:inline-block;background:var(--red,#D21034);color:#fff;border-radius:10px;padding:.65rem 1.4rem;font-size:14px;font-weight:700;text-decoration:none;">Testez-vous ak Quiz →</a>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mentions L&eacute;gales</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak n&eacute; d&apos;yon frustration personnelle&#160;: trop d&apos;ouvrages sou Ha&iuml;ti &eacute;crits nan l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler soursa yo ha&iuml;tiennes en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pandan.</span>
+ </div>
+ </div>
+ </footer>
+
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+ <script>
+ (function () {
+ 'use strict';
+
+ var searchInput = document.getElementById('glossSearch');
+ var filterBtns = document.querySelectorAll('.gloss-filter-btn');
+ var allSections = document.querySelectorAll('.gloss-section[data-cat]');
+ var allEntries = document.querySelectorAll('.gloss-entry');
+ var noResults = document.getElementById('glossNoResults');
+
+ var activeFilter = 'all';
+ var searchTerm = '';
+
+ function applyFilters() {
+ var visibleCount = 0;
+
+ /* Show/hide category section headings */
+ allSections.forEach(function (sec) {
+ var cat = sec.getAttribute('data-cat');
+ var sectionVisible = (activeFilter === 'all' || activeFilter === cat);
+ sec.classList.toggle('hidden', !sectionVisible);
+ });
+
+ /* Show/hide individual entries based yo search */
+ allEntries.forEach(function (entry) {
+ var entrySection = entry.closest('.gloss-section[data-cat]');
+ var entryCat = entrySection ? entrySection.getAttribute('data-cat') : '';
+ var catMatch = (activeFilter === 'all' || activeFilter === entryCat);
+
+ var termMatch = true;
+ if (searchTerm) {
+ var haystack = (entry.getAttribute('data-search') || '') +
+ ' ' + (entry.textContent || '');
+ termMatch = haystack.toLowerCase().indexOf(searchTerm) !== -1;
+ }
+
+ var show = catMatch && termMatch;
+ entry.classList.toggle('hidden', !show);
+ if (show) visibleCount++;
+ });
+
+ /* Re-evaluate section visibility: hide section if all its visible entries are hidden */
+ allSections.forEach(function (sec) {
+ if (sec.classList.contains('hidden')) return;
+ var anyVisible = Array.from(sec.querySelectorAll('.gloss-entry')).some(function (e) {
+ return !e.classList.contains('hidden');
+ });
+ sec.classList.toggle('hidden', !anyVisible);
+ });
+
+ noResults.classList.toggle('visible', visibleCount === 0);
+ }
+
+ /* Filter buttons */
+ filterBtns.forEach(function (btn) {
+ btn.addEventListener('click', function () {
+ filterBtns.forEach(function (b) { b.classList.remove('active'); });
+ btn.classList.add('active');
+ activeFilter = btn.getAttribute('data-filter');
+ applyFilters();
+ });
+ });
+
+ /* Search input */
+ searchInput.addEventListener('input', function () {
+ searchTerm = searchInput.value.trim().toLowerCase();
+ /* When typing, reset category filter to all for broader results */
+ if (searchTerm) {
+ activeFilter = 'all';
+ filterBtns.forEach(function (b) { b.classList.remove('active'); });
+ var allBtn = document.querySelector('.gloss-filter-btn[data-filter="all"]');
+ if (allBtn) allBtn.classList.add('active');
+ }
+ applyFilters();
+ });
+
+ }());
+ </script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var isOpen=sw.classList.toggle('open');
+    btn.setAttribute('aria-expanded',isOpen);
+  });
+  document.addEventListener('click',function(){
+    sw.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  });
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
+</body>
+</html>

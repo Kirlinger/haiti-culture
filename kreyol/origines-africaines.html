@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="theme-color" content="#00209F" />
+ <title>Orijin Afriken d'Haïti | Repiblik Ayiti</title>
+ <meta name="description" content="Les origines ethniques afriken nan population ayisyèn — nan pèps Fon, Kongolais, Yoruba, Wolof ak Igbo qui ont forgé la lang, la relijyon ak idantite a d'Haïti atravè la Traversée nan Milieu." />
+ <meta name="author" content="RepiblikHaïti.org" />
+ <link rel="stylesheet" href="../css/style.css" />
+ <link rel="stylesheet" href="../css/premium.css" />
+<style>
+/* Language Switcher - Redesigned */
+.lang-switcher {
+  position: relative;
+  margin-left: 1rem;
+  z-index: 1100;
+}
+.lang-switcher__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.5);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+  font-family: inherit;
+}
+.lang-switcher__btn:hover,
+.lang-switcher__btn:focus {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.8);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.lang-switcher__btn .globe-icon {
+  font-size: 1.15rem;
+}
+.lang-switcher__btn .chevron {
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+}
+.lang-switcher.open .lang-switcher__btn .chevron {
+  transform: rotate(180deg);
+}
+.lang-switcher__menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  min-width: 180px;
+  z-index: 1100;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  animation: langDropIn 0.2s ease;
+}
+@keyframes langDropIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.lang-switcher.open .lang-switcher__menu {
+  display: block;
+}
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.1rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.15s;
+  border-bottom: 1px solid #f0f0f0;
+}
+.lang-option:last-child {
+  border-bottom: none;
+}
+.lang-option:hover {
+  background: #f0f5ff;
+  color: #1a56db;
+}
+.lang-option.active {
+  background: #e8f0fe;
+  font-weight: 700;
+  color: #1a56db;
+}
+.lang-option .flag-emoji {
+  font-size: 1.3rem;
+}
+@media (max-width: 768px) {
+  .lang-switcher {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+  .lang-switcher__btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  .lang-switcher__menu {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .lang-switcher__btn {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.88rem;
+  }
+}
+</style>
+</head>
+<body>
+
+ <!-- Scroll progress bar -->
+ <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+ <!-- Back to top -->
+ <button class="back-to-top" id="backToTop" aria-label="Retounen anwo paj la">↑</button>
+
+ <header class="site-header">
+ <div class="container">
+ <div class="navbar">
+ <a href="index.html" class="navbar__logo" aria-label="Akèy">
+ Repiblik Ayiti
+ </a>
+ <button class="navbar__toggle" aria-label="Chanje meni an" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ <nav class="navbar__nav" aria-label="Navigasyon prensipal">
+ <a href="index.html">Akèy</a>
+ <a href="about.html">Soswa Nou</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Istwa ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="history.html">Istwa Jeneral</a>
+ <a href="timeline.html">Kwonolouji</a>
+ <a href="heroes.html">Ewò Nasyonal</a>
+ <a href="lidès.html">Lidè</a>
+ <a href="konstitisyon.html">Konstitisyon</a>
+ <a href="enstitisyons.html">Enstitisyon</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Kilti ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti.html">Kilti &amp; Atizay</a>
+ <a href="vodou.html">Vodou</a>
+ <a href="lwa.html">Lwa yo</a>
+ <a href="gastronomy.html">Gastwonomi</a>
+ <a href="holidays.html">Joswa Ferye</a>
+ </div>
+ </div>
+ <a href="tourism.html">Touris</a>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Sosyete ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="kilti-vivante.html">Kilti Vivan</a>
+ <a href="creativite-populaire.html">Kreyativite Popilè</a>
+ <a href="dyaspora-engagee.html">Dyaspora Angaje</a>
+ <a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a>
+ <a href="memoire-universelle.html">Memwa Inivèsèl</a>
+ <a href="patrimwàn-national.html">Patrimwàn Nasyonal</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Defi ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="fragilite-economique.html">Frajilite Ekonomik</a>
+ <a href="inegalites-sociales.html">Inegalite Sosyal</a>
+ <a href="instabilite-politik.html">Enstabilite Politik</a>
+ <a href="pressions-securitaires.html">Presyon Sekiritè</a>
+ <a href="services-essentiels.html">Sèvis Esansyèl</a>
+ <a href="capacite-adaptation.html">Kapasite Adaptasyon</a>
+ <a href="reconstruction-durable.html">Rekonstriksyon Dirab</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown__btn" aria-expanded="false">Pòtay ▾</button>
+ <div class="nav-dropdown__menu">
+ <a href="encyclopedia.html">Ansiklopedi</a>
+ <a href="archives.html">Achiv</a>
+ <a href="bibliography.html">Bibliyografi</a>
+ </div>
+ </div>
+ <a href="contact.html">Kontak</a>
+ </nav>
+ <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Chanje lang" aria-expanded="false">
+            <span class="globe-icon">🌐</span> Lang <span class="chevron">▾</span>
+          </button>
+          <div class="lang-switcher__menu" role="menu">
+            <a href="#" class="lang-option active" data-lang="ht" role="menuitem"><span class="flag-emoji">🇭🇹</span> Kreyòl</a>
+            <a href="#" class="lang-option" data-lang="fr" role="menuitem"><span class="flag-emoji">🇫🇷</span> Français</a>
+          </div>
+        </div>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechèch sou sit la">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+ <div class="search-overlay__inner">
+ <div class="search-overlay__header">
+ <div class="search-input-wrapper">
+ <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+ <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : istwa, kilti, vils…" autocomplete="off" />
+ </div>
+ <button class="search-close" aria-label="Fèmen rechèch la">&#x2715;</button>
+ </div>
+ <div class="search-results" id="searchResults" aria-live="polite"></div>
+ </div>
+ </div>
+
+ <section class="page-hero page-hero--history">
+ <div class="container">
+ <p class="page-hero__label">Racines ak Identité</p>
+ <h1 class="page-hero__title">Orijin Afriken d'Haïti</h1>
+ <p class="page-hero__desc">De l'Afrique nan Karayib — retrace pèps spécifiques ke descendants gen bati Haïti : Fon, Kongolais, Yoruba, Wolof, Igbo, ak byen d'autres, chacyon apportant li lang, li cosmologie ak li rezistans.</p>
+ </div>
+ </section>
+
+ <div class="breadcrumb">
+ <div class="container">
+ <nav aria-label="Breadcrumb">
+ <a href="index.html">Akèy</a>
+ <span>/</span>
+ <a href="history.html">Istwa</a>
+ <span>/</span>
+ <span>Orijin Afriken</span>
+ </nav>
+ </div>
+ </div>
+
+ <section class="section">
+ <div class="container">
+ <p class="section-label">De l'Afrique nan Karayib</p>
+ <h2>Yon pèp nan pèps — reconstruire origines</h2>
+
+ <!-- ═══════════════════════════════════════════════
+ 1. INTRODUCTION
+ ════════════════════════════════════════════════ -->
+ <div class="two-col--wide-left" style="margin-bottom:3rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Entre 1625 ak 1804, anviwon 800 000 Africains survivants nan Traversée nan Milieu furent débarqués à Saint-Domingue — koloni an fransèz ki deviendrait Haïti. L'imaginaire popilè a souvan traité li yo déportés tankoswa yon masse indifférenciée, yon main-d'œuvre déshumanisée arrachée à yon continent générique. L'istwa savante raconte quelque chose nan byen plis précis ak nan byen plis digne : li a furent nan Fon nan royaume nan Dahomey, nan Kongolais catholiques nan embouchure nan rivyè Congo, nan Yoruba nan empire d'Oyo, nan Wolof nan Sénégal, nan Igbo nan forès nigérianes, nan Mandé nan Guinée — nan gason ak nan fanm ke noms, langs ak bondye survécurent à plantation, transformèrent, créolisèrent, ak forgèrent yon civilisation nouvo.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ travaux pionniers nan historien John Thornton (<em>Africa and Africans in the Making of the Atlantic World</em>, 1992), nan Sidney Mintz ak Richard Price (<em>The Birth of African-American Kilti</em>, 1976), nan chercheur ayisyen Jean Fouchard (<em>Marrons nan libète</em>, 1972), ak nan archéologue Gérald Alexis gen tankouncé à reconstituer li yo origines depi soursa yo dispersées. Ce pa se pa yon tâche facile. esclavagistes te gen tout intérêt à briser identités, à mélanger origines, à effacer noms. Pourtant, kilti ayisyèn nan — li relijyon, li lang, li mizik, li philosophie nan mond — pote en elle, inscrit en filigrane, témoignage vivant nan li yo pèps.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Paj li a tente nan nommer li yo origines ak précision, nan rendre à chak pèp li contribution spécifique à li a ke l'on appelle jounen jodi a kilti ayisyèn nan. Elle pa prétend pa à l'exhaustivité — l'istwa nan traite yon istwa nan lacunes otan ke nan preuves. Mais li pran nan sérieux l'idée ke dèyè chak <em>lwa</em>, chak mo créole à consonance afriken, chak rythme nan tambour, li y a yon lieu, yon pèp, yon mémoire.
+ </p>
+
+ <aside class="researcher-note" aria-label="Note de recherche">
+ estimations varient dapre sources. Trans-Atlantic Slave Trade Database (slavevoyages.org), base nan données nan référence mondiale bati sou trente ans pa nan dizaines nan chercheurs, recense plis nan 36 000 expéditions négrières ak estime à près nan 12,5 millions nombre d'Africains embarqués nan fòs ant 1500 ak 1900. Pour Saint-Domingue spécifiquement, base identifie nan origines géographiques précises pou plizyè milliers nan voyages — yon mine d'informations ki pa existait pa anvan anes 1990.
+ </aside>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Principaux groupes afriken à Saint-Domingue</p>
+ <table style="width:100%;font-size:13px;line-height:1.9;border-collapse:collapse;">
+ <thead>
+ <tr style="border-bottom:1px solid rgba(255,255,255,0.2);">
+ <th style="text-align:left;padding-bottom:6px;color:var(--gold,#FFD166);">Pèp / Région</th>
+ <th style="text-align:left;padding-bottom:6px;color:var(--gold,#FFD166);">Trace en Haïti</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+ <td style="padding:5px 0;">Fon &amp; Ewe (Dahomey/Bénin)</td>
+ <td style="padding:5px 0;">Nation Rada, mo « Vodoswa »</td>
+ </tr>
+ <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+ <td style="padding:5px 0;">Kongolais &amp; Bantoswa (RDC/Angola)</td>
+ <td style="padding:5px 0;">Nation Kongo, rythmes, <em>nzambi</em></td>
+ </tr>
+ <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+ <td style="padding:5px 0;">Yoruba (Nigeria/Bénin)</td>
+ <td style="padding:5px 0;">Nation Nago, lwa Ogou</td>
+ </tr>
+ <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+ <td style="padding:5px 0;">Wolof &amp; Mandé (Sénégambie)</td>
+ <td style="padding:5px 0;">Concept nan Ginen/Guinée</td>
+ </tr>
+ <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
+ <td style="padding:5px 0;">Igbo (Nigeria)</td>
+ <td style="padding:5px 0;">Nation Ibo, légende nan vol</td>
+ </tr>
+ <tr>
+ <td style="padding:5px 0;">Akan (Ghana/Côte d'Ivoire)</td>
+ <td style="padding:5px 0;">Noms, jou nan naissance</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Référensa yo clés</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:13px;line-height:2.1;">
+ <li>· Thornton, J. — <em>Africa and Africans…</em> (1992)</li>
+ <li>· Fouchard, J. — <em>Marrons nan libète</em> (1972)</li>
+ <li>· Mintz &amp; Price — <em>Birth of African-American Kilti</em> (1976)</li>
+ <li>· Lefebvre, C. — <em>Relexification in Creole Genesis</em> (1998)</li>
+ <li>· slavevoyages.org — Trans-Atlantic Slave Trade Database</li>
+ <li>· Métraux, A. — <em>Vaudoswa ayisyen</em> (1958)</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+
+ <!-- ═══════════════════════════════════════════════
+ 2. LES SOURCES HISTORIQUES
+ ════════════════════════════════════════════════ -->
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">soursa yo istorik — tankount sait-on ?</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Reconstituer origines afriken nan popilasyon nan Saint-Domingue yon travail d'archéologue autant d'historien : li faut creuser nan couches d'effacement délibéré pou trouver nan fragments nan vérité. soursa yo multiples men chacyon a li yo biais ak li yo limites. <strong>manifestes nan navires négriens</strong> consignaient ports d'embarquement afriken — non pa origines ethniques précises, men rejyon côtières kote négriers s'approvisionnaient. On sait ansanm ak navires à destination nan Saint-Domingue partaient sitou d'Ouidah (actuel Bénin), nan Loango (Congo), nan Bonny ak nan Calabar (Nigeria), nan Côte-de-l'Or (Ghana) ak nan Sénégambie. <strong>actes notariaux ak inventaires nan plantations</strong> kolonyal utilisaient nan termes d'origine (<em>nação</em> nan koloni yo portugaises, <em>nation</em> en fransè) pou désigner esklav yo : « Congo », « Arada », « Mina », « Nago », « Ibo », « Wolof ». Ces termes pa te pa toujoswa précis — yo correspondaient pafwa à nan ports d'embarquement plutôt ke à nan ethnies — men yo constituent yon témoignage précieux.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ L'<strong>analyse linguistique</strong> offre yon lòt piste. mo d'origine afriken conservés nan kreyòl ayisyen permete d'identifier langs sources. travail nan linguiste Claire Lefebvre a montré ke structure grammaticale nan créole ayisyen — an patikilye li système nan marqueurs temporels ak aspectuels — reflete trè étroitement grammaire fon, renforçant l'hypothèse nan prédominance dahométenne nan formation nan lang. L'<strong>analyse nan pratiques relijyes</strong> fournit toswa nan indisa yo : panthéons, liturgies, non nan <em>lwa</em>, rythmes nan tanbou traçables jiska nan tradisyons précises d'Afrique nan Ouse ak Centrale. Enfin, nan <strong>étunan génétiques récentes</strong>, sitoswa celles publiées nan <em>Cell</em> ak <em>Current Biology</em> pandan dènye décennie, gen tankouncé à cartographier l'ascendance afriken nan popilasyons caribéennes, confirmant prédominance nan apports d'Afrique nan Ouse ak d'Afrique Centrale.
+ </p>
+
+ <aside class="researcher-note" aria-label="Note de recherche">
+ non afriken te systématiquement remplacés à l'arrivée en plantation. Yon Kossoswa devenait Jean-Baptiste ; yon Abeni devenait Marie. Ces rebaptêmes pa te pa yon accident administratif men yon stratégie délibérée nan déracinement identitaire. archives kolonyals ayisyèn conservées à Bibliothèque nasyonal nan France (Paris) ak nan Achiv nasyonals d'Haïti contiennent nan milliers d'inventaires nan plantation kote individus listés inikment pa prénom chrétien, âge approximatif, nasyon d'origine présumée ak valeur marchande. Retrouver non afriken dèyè li yo documents nécessite yon travail nan recoupement painstaking.
+ </aside>
+
+ <!-- ═══════════════════════════════════════════════
+ 3. LES PEUPLES FON ET EWE (DAHOMEY)
+ ════════════════════════════════════════════════ -->
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin:2.5rem 0 0.8rem;">pèps Fon ak Ewe — cœur nan Dahomey</h3>
+
+ <div class="two-col--wide-left" style="margin-bottom:2.5rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ plis gran anba inik d'Africains déportés vè Saint-Domingue te côte nan esklav — bande littorale otou nan l'actuel Bénin, contrôlée en gran pati pa pwisan royaume nan Dahomey. pèps Fon ak Ewe nan cette rejyon — désignés nan documents coloniaux anba terme « Arada » oswa « Rada », nan non nan vil d'Allada/Arada — constituent li a ke plupart nan historiens reconnaissent tankou groupe plis influent nan formation nan kilti ayisyèn nan. port d'Ouidah (Whydah en anglais), pwen nan départ nan centaines nan milliers nan déportés, jounen jodi a site nan yon nan commémorations plis poignantes nan memwa nan traite : Route nan Esclaves, classée pa l'UNESCO.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ L'influence Fon soswa Vodoswa ayisyen fondamantal. mo <em>vodou</em> lui-menm — souvan orthographié <em>vodu</em> oswa <em>vodon</em> en lang fon — deziye yon principe espirityèl, yon fòs sakre ki anime mond. Ce pa se pa yon terme kolonyal, ni yon invention synchrétique ; c'se yon mo fon ki te travèse l'Atlantique nan bouche nan déportés ak s'se installé nan cœur nan cosmologie ayisyèn. nasyon <em>Rada</em> nan Vodoswa — konsidere tankoswa plis « douce », plis ansyen, plis proche nan ancêtres — tire dirèkteman li non d'Arada. <em>lwa</em> Rada — Ayizan, Loko, Damballah, Agwe, Erzulie Fréda — portent nan non ak nan attributs traçables juske aux panthéons fon ak ewe. Damballah, gran serpent blanc, l'équivalent ayisyen nan <em>Dan</em> fon, serpent arc-en-ciel cosmique.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ L'historien John Thornton a documenté présence massive d'esclaves dahométens nan périonan précédant Revolisyon ayisyèn nan, soulignant ke guerriers capturés lors nan lagès nan Dahomey kont li yo voisins constituaient yon fraction significative nan ceux exportés. Certains d'entre eux te gen été nan soldats, nan prêtres, nan nobles. Ils arrivèrent en Haïti ak yon formation milite ak yon konesans rituelle ki allaient s'avérer décisives nan construction nan rezistans. cérémonial nan Bwa Kayiman en 1791 — l'événement ki make symboliquement début nan Revolisyon — impliquait nan pratiques relijyes dirèkteman issues nan tradisyon fon.
+ </p>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Eritaj Fon en Haïti</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+ <li>· Mot « Vodoswa » — origine Fon (<em>vodu</em>)</li>
+ <li>· Nation Rada — d'Arada/Allada (Bénin)</li>
+ <li>· Lwa Damballah — nan Dan fon</li>
+ <li>· Erzulie Fréda — nan panthéon Ewe</li>
+ <li>· Port d'embarquement : Ouidah</li>
+ <li>· Structure grammaticale nan créole</li>
+ <li>· Rôle à Bwa Kayiman (1791)</li>
+ </ul>
+ </div>
+ <aside class="researcher-note" aria-label="Note de recherche">
+ royaume nan Dahomey maintenait lui-menm yon tankource esclavagiste actif, vendant à nan négriers européens nan prisonniers nan lagè issus nan pèps voisins. Cette réalité complexe pa diminue pa responsabilité nan puissansa yo kolonyals européennes nan système nan traite, men li invite à yon lecture nuancée nan Afrique nan li a période, ni victime passive ni complice monolithique — men yon ensemble nan sosyetes nan dynamiques propres, piégées nan yon système atlantique ki dépassait.
+ </aside>
+ </div>
+ </div>
+
+ <!-- ═══════════════════════════════════════════════
+ 4. LES PEUPLES CONGO ET BANTOU
+ ════════════════════════════════════════════════ -->
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">pèps Congo ak Bantoswa — l'Afrique Centrale</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ deuxième groupe plis enpòtan celui nan pèps d'Afrique Centrale, désignés collectivement anba terme « Congo » nan archives kolonyals. Cette désignation recouvre en réalité plizyè pèps — Bakongo, Mbundu, Loango, Vili, Teke — issus nan rejyon correspondant jounen jodi a à Repiblik démocratique nan Congo, Repiblik nan Congo, l'Angola ak Gabon. Ils embarquaient prensipalman depi ports nan Loango, Malimba ak Cabinda, soswa côte atlantique d'Afrique Centrale.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ nasyon <em>Kongo</em> nan Vodoswa ayisyen pote dirèkteman yo nom. <em>lwa</em> Kongo souvan considérés tankoswa plis « chauds », plis dirèkteman lye nan forsa yo nan lanati a ak à magie pratique. L'historien John Thornton a mis en évidence yon fè souvan négligé : yon pati significative nan Kongolais déportés nan XVIIIe syèk te <em>deja chrétiens</em>. royaume nan Kongo te gen adopte catholicisme dès 1491, ak li a christianisation, byenke sipèfisille pa endroits, te pwofondman enracinée nan sèten couches nan sosyete. Ces Kongolais catholiques apportèrent ak eux yon aisance nan maniement nan senbòls chrétiens — croix, saints, liturgies — ki facilita syncrétisme caractéristique nan Vodoswa ayisyen.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ concept nan <em>nzambi</em> — l'être suprême nan cosmologie Kongo — résonne ak notion ayisyèn nan « Bon Dieu » oswa <em>Bondye</em>, yon bondye inaccessible men omniprésent, pi lwen pase l'intervention directe nan <em>lwa</em>. L'influence musicale Kongo tout toswa pwofon : rythme <em>Kongo</em> l'yon nan matrisa yo rythmiques fondamantals nan mizik ayisyèn nan, reconnaissable à li yo syncopes karakteristik. Là kote Cuba a développé <em>Palo Monte</em> depis tradisyons Kongo, Haïti a intégré li yo apports nan yon synthèse plis large ki Vodou.
+ </p>
+
+ <aside class="researcher-note" aria-label="Note de recherche">
+ Thornton a toswa documenté participation nan sòlda Kongolais catholiques nan Revolisyon ayisyèn nan, sitoswa lors nan batay nan Vertières (1803). Ces hommes, ki te gen combattu pou nan royaumes afriken anvan d'être réduits en esklavaj, apportèrent yo techniques milite — tactiques nan guérilla, òganizasyon en unités mobiles — à lutte revolisyonnaire. L'armée indigène nan Jean-Jacques Dessalines te yon lame afriken autant ke yon lame ayisyèn.
+ </aside>
+
+ <!-- ═══════════════════════════════════════════════
+ 5. LES PEUPLES YORUBA
+ ════════════════════════════════════════════════ -->
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin:2.5rem 0 0.8rem;">pèps Yoruba — Nago, Ogyon ak l'Empire d'Oyo</h3>
+
+ <div class="two-col--wide-left" style="margin-bottom:2.5rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Yoruba — désignés « Nago » nan koloni yo fransèzs, terme dérivé d'yon terme péjoratif itilize paurs voisins — originaires nan li a ki jounen jodi a Nigeria occidental ak Bénin. Au XVIIIe syèk, l'empire d'Oyo te l'yon nan puissansa yo gwos d'Afrique nan Ouest. Sa décomposition politik nan début nan XIXe syèk, accompagnée nan lagès civiles intenses, provoqua yon vague massive nan déportations. Bien ke Yoruba soient souvan associés nan l'imaginaire à Cuba (<em>Lucumí</em>) oswa nan Brésil (<em>Candomblé</em>), yo présence ak yo influence en Haïti réelles ak identifiables.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ nasyon <em>Nago</em> nan Vodoswa ayisyen temwaye nan yo présence. <em>lwa</em> <strong>Ogou</strong> — l'yon nan plis enpòtans nan panthéon ayisyen, bondye nan lagè, nan fer, nan sòlda ak nan politik — dérive dirèkteman nan <em>Ogun</em> yoruba, divenité nan fer ak nan forge. Dans li manifestation ayisyèn, Ogoswa a absorbé nan karakteristik supplémentaires liées à Revolisyon : li guerrier ki bat poswa jistis, l'ancêtre nan sòlda nan endepandans, celui ki brise chaînes. Ce transfert d'yon divenité afriken vè yon wòl revolisyonnaire ayisyen montre parfaitement mécanisme nan créolisation : non pa simple conservation, men transformation créatrice.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ trasa yo linguistiques yoruba nan kreyòl ayisyen documentées, byenke mwens nombreuses ke apports fon. Certains termes rityèl nan Vodoswa — utilisés nan seremoni yo, priyè yo, invocations — d'origine yoruba identifiable. formule <em>Ache</em> (force vitale sakre en yoruba, vin tounen <em>ashe</em> nan relijyons afro-américaines) a li équivalent nan sèten rityèl ayisyen anba fòm <em>aché</em>. L'étude comparative nan relijyons afro-atlantiques — Vodou, Candomblé, Santería — révèle à quel pwen menm divenités yoruba gen voyagé nan façon parallèle vè nan destinations diferans, s'y transformant différemment dapre kontèkss kolonyal spécifiques.
+ </p>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Ogoswa / Ogyon — Traversée nan Atlantique</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+ <li>· <strong>Yoruba (Nigeria)</strong> : Ogyon — bondye nan fer</li>
+ <li>· <strong>Haïti</strong> : Ogoswa — guerrier revolisyonnaire</li>
+ <li>· <strong>Cuba</strong> : Ogún — Santería (Lucumí)</li>
+ <li>· <strong>Brésil</strong> : Ogum — Candomblé</li>
+ <li>· <strong>Trinidad</strong> : Ogyon — Shango faith</li>
+ </ul>
+ <p style="font-size:13px;margin-top:1rem;color:rgba(255,255,255,0.75);">menm divenité, cinq trajectoires distinctes — yon leçon soswa créolisation.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- ═══════════════════════════════════════════════
+ 6. LES PEUPLES WOLOF ET MANDÉ (SÉNÉGAMBIE)
+ ════════════════════════════════════════════════ -->
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">pèps Wolof ak Mandé — Sénégambie</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ pèps Wolof, Mandé (Bambara, Malinké, Soninke), Sereer ak Peul nan rejyon sénégambienne — correspondant jounen jodi a nan Sénégal, à Gambie ak à Guinée-Bissau — furent pami premyes Africains déportés vè Amériques. Dès XVIe syèk, zile yo à sucre nan Karayib recevaient nan captifs sénégambiens, souvan issus nan fanmis nobles oswa nan castes artisanales. archives portugaises ak fransèzs nan XVIIe ak XVIIIe syèks mentionnent régulièrement nan esklav « Wolof » oswa « Mandingue » à Saint-Domingue, souvan décrits tankoswa an patikilye « instruits » oswa « récalcitrants » — li a ki nan langage kolonyal désignait nan individus cultivés ak yon forte conscience nan yo statut.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ L'empreinte sénégambienne nan kilti ayisyèn nan plis diffuse ke celle nan Fon oswa nan Kongolais, en pati paske Sénégambiens arrivèrent plis tôt ak fondirent plis pwofondman nan popilasyon créole naissante. Mais terme <em>Guinée</em> — itilize ankò jounen jodi a en Haïti pou désigner l'Afrique ancestrale, tè nan origines — reflete en pati li a memwa sénégambienne. Historiquement, « Guinée » nan vocabulaire européen désignait côte ouest-africaine, men c'se nan sens fort ke mo vit nan spiritualité ayisyèn : li deziye yon espace espirityèl, yon jeyografi sakre.
+ </p>
+
+ <aside class="researcher-note" aria-label="Note de recherche">
+ Plusieurs historiens gen noté présence nan musulmans d'origine Mandé ak Wolof pami esklav yo nan Saint-Domingue. Des documents découverts nan nan archives kolonyals montrent ke sèten esklav savaient écrire en arabe. Des piti morceaux nan papier portant nan versets coraniques — utilisés tankoswa gris-gris protecteurs — te retrouvés nan nan kontèkss archéologiques nan plantation. Cette présence islamique, minoritaire men réelle, raple ke l'Afrique exportée vè Haïti pa te pa yon Afrique monolithique : li te animiste, chrétienne ak musulmane an menm tan.
+ </aside>
+
+ <!-- ═══════════════════════════════════════════════
+ 7. LES PEUPLES IGBO
+ ════════════════════════════════════════════════ -->
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin:2.5rem 0 0.8rem;">pèps Igbo — nasyon Ibo ak légende nan vol</h3>
+
+ <div class="two-col--wide-left" style="margin-bottom:2.5rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Igbo (toswa écrits Ibo nan soursa yo kolonyals) originaires nan forès nan sud-se nan Nigeria actuel. À Saint-Domingue, yo furent déportés en nombre significatif depi ports nan Bonny ak nan Calabar, nan delta nan Niger. archives kolonyals fransèzs décrivent nan façon récurrente ak yon certaine perplexité : Igbo te gen réputation d'être mélancoliques, nan résister à servitude d'yon manière particulière — non pa pa violence ouverte, men pa suicide collectif oswa fuite vè l'intérieur. Cette réputation, byen sûr, te forgée pa nan maîtres ki interprte dignité tankoswa yon défaut nan caractère.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ nasyon <em>Ibo</em> nan Vodoswa ayisyen konsidere tankoswa l'yon nan plis mystérieuses ak nan plis pwisans. <em>lwa</em> Ibo associés nan abysses, à lanmò a ak à transformation. légende nan Igbo ki s'envolent vè l'Afrique konnen nan deux côtés nan Atlantique noir : nan zile Sea Islands nan Géorgie ak nan Caroline nan Sud (l'istwa d'« Igbo Landing », kote yon groupe d'Igbo enchaînés aurait marché nan lanmè plutôt ke d'accepter l'esklavaj, ak aurait volé juske en Afrique), ak en Haïti, kote croyance ke morts — ak sèten vivants — kapab traverser l'eau pou rejoindre l'Afrique pwofondman ancrée nan cosmologie Vodou.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Cette légende nan vol pa se pa à comprendre tankoswa yon croyance naïve en yon capacité physique, men tankoswa yon métaphore espirityèl d'yon puissance résistante : refuser l'assimilation totale, maintenir yon fil tennan vè origines, affirmer ke l'âme pa appartient pa nan maître. C'se nan li a sens ke légende Igbo rejoint philosophie nan <em>Ginen</em> — l'Afrique tankoswa horizon espirityèl inaliénable.
+ </p>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Igbo Landing — deux versions</p>
+ <p style="font-size:14px;line-height:1.8;color:rgba(255,255,255,0.9);">
+ <strong>Sea Islands (Géorgie, 1803)</strong> — Des Igbo enchaînés refusent nan débarquer ak marchent nan dlo nan Dunbar Creek. Mort collective oswa envol espirityèl dapre témoignages.
+ </p>
+ <p style="font-size:14px;line-height:1.8;color:rgba(255,255,255,0.9);margin-top:0.8rem;">
+ <strong>Haïti (version vodou)</strong> — nasyon Ibo kapab « retourner en Guinée » — l'âme nan Igbo esclavagisés pa appartient jamè entièrement à li a mond. lanmò yon retour.
+ </p>
+ <p style="font-size:13px;margin-top:1rem;color:rgba(255,255,255,0.65);">deux récits traversent l'Atlantique tankoswa yon écho.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- ═══════════════════════════════════════════════
+ 8. L'AFRIQUE DANS LA LANGUE CRÉOLE
+ ════════════════════════════════════════════════ -->
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">L'Afrique nanng kreyòl la</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ créole ayisyen souvan présenté tankoswa yon lang à base lexicale fransèz. Cette deskripsyon exacte men incomplète : si l'essentiel nan vocabulaire courant dérive nan fransè kolonyal, grammaire, phonologie, ak yon corpus significatif nan vocabulaire rityèl ak quotidien soti d'Afrique. linguiste Claire Lefebvre, nan li yo travaux soswa « relexification » tankoswa mécanisme nan genèse créole, a défennan l'hypothèse ke locuteurs Fon gen en gran pati fourni structure grammaticale nan créole ayisyen en y substituant nan vocabulaire fransè à yo mo fon — conservant konsa règles nan yo lang maternelle tout en adoptant lexique dominant.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ système nan marqueurs <strong>TMA</strong> (Temps-Mode-Aspect) nan créole ayisyen an patikilye révélateur. En créole, marqueurs pré-verbaux <em>te</em> (passé), <em>ap</em> (progressif), <em>va/a</em> (futur) fonctionnent dapre yon logique aspectuelle trè proche nan langs Fon ak Ewe. Cette structure — placer nan marqueurs aspectuels anvan verbe plutôt ke nan conjuguer verbe lui-menm — typique nan langs d'Afrique nan Ouse ak pa existe pa en fransè. Sa présence en créole yon empreinte afriken indélébile nan lang plis quotidienne.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Des mo afriken identifiables subsistent nan vocabulaire créole ayisyen. Du Fon : <em>houngan</em> (prêtre Vodou) nan <em>hun</em> (esprit) + <em>gan</em> (chef) ; <em>zin</em> (marmite nan cérémonie) nan <em>zan</em> en Fon. Du Kikongo : <em>zombi</em>, mo ki en créole ayisyen pa deziye pa yon mort-vivant hollywoodien men yon nanm captive, arrachée à li corps — yon métaphore nan esklavaj lui-même. Du Yoruba : <em>govi</em> (jarre rituelle contenant yon lespri ancêtre). Du Wolof : sèten chercheurs gen proposé ke kreyòl <em>deg</em> (entendre, comprendre) dérive nan wolof.
+ </p>
+
+ <aside class="researcher-note" aria-label="Note de recherche">
+ question nan origine nan créole ayisyen rete yon champ académique actif ak pafwa disputé. thèse nan Lefebvre soswa relexification influente men contestée pa d'lòt linguistes ki privilégient nan modèles nan contact plis symétriques. Ce ki fè consensus : kreyòl ayisyen pa se pa nan « fransè mal parlé » — c'se yon lang à part entière, ak yon grammaire autonome, yon phonologie distincte, ak yon istwa pwòp ki reflete rencontre forcée nan dizaines nan langs afriken ak fransè nan kontèks brutal nan plantation.
+ </aside>
+
+ <!-- ═══════════════════════════════════════════════
+ 9. LE CONCEPT DE GINEN — L'AFRIQUE SPIRITUELLE
+ ════════════════════════════════════════════════ -->
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin:2.5rem 0 0.8rem;">concept nan Ginen — l'Afrique tankoswa patri métaphysique</h3>
+
+ <div class="two-col--wide-left" style="margin-bottom:2.5rem;">
+ <div>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Dans Vodoswa ayisyen, <em>Ginen</em> — dérivé nan terme « Guinée » itilize pa Européens pou désigner côte nan Afrique nan Ouse — byen plis ke yon souvenir géographique. C'se patri nan ancêtres, lieu d'origine nan tout forsa yo espirityèls, l'horizon vè lequel nanm retournent apre lanmò a. On di ke après décès, l'âme (<em>ti bon ange</em>) descend anba dlo ak rejoint Ginen — localisé symboliquement nan fond nan mer, an menm tan sous-marin ak afriken, accessible lors nan seremoni vodoswa kote <em>lwa</em> remontent nan Ginen pou visiter vivants.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ L'anthropologue Karen McCarthy Brown, nan li étude <em>Mama Lola : A Vodoswa Priestess in Brooklyn</em> (1991), a analysé Ginen tankoswa yon construction philosophique sophistiquée : li a pa se pa nan nostalgie men yon ontologie. Dans yon mond kote tout — noms, langs, fanmis, tès — te gen été arraché nan déportés, Ginen représentait li a ki pa pouvait pa être confisqué : l'origine sakre nan être, connexion nan ancêtres, dignité ki précède ak transcennan esklavaj. Ginen réponse espirityèl à dépossession.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ L'expression ayisyèn <em>sèvi lwa Ginen</em> — servir <em>lwa</em> nan Ginen — deziye pratique orthodoxe nan Vodou, pa opposition nan pratiques considérées tankoswa déviantes. Être « nan Ginen » signifie être authentique, ancré nan tradisyon, fidèle nan origines. Ce langage pa se pa nostalgique nan sens passif nan terme : li fondateur d'yon idantite collective ki pèmèttait, nan pires conditions nan esklavaj ak apre l'endepandans, nan maintenir yon continuité ant générations, ant morts ak vivants, ant l'Afrique ak Karayib.
+ </p>
+ </div>
+ <div>
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;margin-bottom:1.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Ginen — anatomie d'yon concept</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2.1;">
+ <li>· Étymologie : « Guinée » (côte W.-africaine)</li>
+ <li>· Localisation : fond nan mer, anba eaux</li>
+ <li>· Fonction : demeure nan nanm apre lanmò a</li>
+ <li>· Sens rityèl : anba nan <em>lwa</em> ancestraux</li>
+ <li>· Sens identitaire : authenticité, tradisyon</li>
+ <li>· Expression : <em>sèvi lwa Ginen</em></li>
+ <li>· Philosophie : l'origine tankoswa inaliénable</li>
+ </ul>
+ </div>
+ <div style="background:#f5f5f0;border-radius:10px;padding:1.4rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#555;margin-bottom:0.8rem;">Connexions comparatives</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:13px;line-height:2.1;">
+ <li>· Brésil : <em>Aruanda</em> (Congo/Angola)</li>
+ <li>· Cuba : <em>Arará</em> (Dahomey/Fon)</li>
+ <li>· Trinité : concept nan « nasyon afriken »</li>
+ <li>· Afrique-Amér. : « homeland » in spirituals</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+
+ <!-- ═══════════════════════════════════════════════
+ 10. LA DIASPORA ET LES CONNEXIONS CONTEMPORAINES
+ ════════════════════════════════════════════════ -->
+ <h3 style="font-size:clamp(18px,2.2vw,24px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.8rem;">dyaspora ayisyèn ak connexions contemporaines</h3>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ étunan génétiques menées pandans vingt dènyes anes gen tankouncé à offrir yon cartographie moléculaire nan eritaj afriken nan Haïtiens. Yon étude publiée nan <em>Current Biology</em> (2020) portant sou nan popilasyons caribéennes a confirmé ke Haïtiens modernes présentent yon ascendance afriken prédominante (entre 85 ak 95 % dapre individus), ak nan apports prensipal d'Afrique nan Ouse (Nigéria, Bénin, Ghana, Sénégal) ak d'Afrique Centrale (RDC, Angola) — corroborant données istorik nan manifestes négriens. Des trasa yo d'ascendance européenne (issues nan kolon ak nan violensa yo sexuelles nan plantation) ak taïno (les pèps autochtones nan zile anvan kolonizasyon) complètent li a portrait génétique.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ Dans Bénin contemporain, vil d'Ouidah commémore chak ane en janvier <em>Fête nan Vodoun</em>, selebre 10 janvier depi ke gouvènman béninois en a fè yon fèt nasyonal en 1996. Des délégations ayisyèn participent régulièrement à li yo cérémonies, reconnectant, pafwa poswa premye fois, nan pratiques ki gen évolué en parallèle sou deux continents séparés pa l'Atlantique. Ces rencontres souvan émotionnellement pwisans : nan vodouisants ayisyen reconnaissent nan liturgies béninoises nan formules ke ils gen entendues toute yo lavi san en comprendre sens, ak fidèles béninois reconnaissent nan seremoni yo ayisyèn nan fòm oubliées nan yo pwòp tradisyon.
+ </p>
+ <p style="font-size:17px;line-height:1.85;margin-bottom:1.4rem;">
+ question nan « retour » complexe. Certains Haïtiens nan dyaspora, confrontés nan racisme nan États-Unis oswa en France, cherchent à revendiquer yon idantite afriken ak visitent Ghana, Sénégal oswa Bénin nan cadre nan voyages nan racines. Mais l'Afrique vè laquelle yo « retournent » pa se pa celle nan yo ancêtres : c'se yon Afrique contemporaine, transformée pa li yo propres istwas kolonyals ak postcoloniales. notion nan retour pose question nan li a ke signifie « lakay soi » pou yon pèp ke idantite a s'se formée nan rupture ak rekonstriksyon an. réponse ayisyèn, depi Bois Caïman juske aux seremoni Vodoswa d'jounen jodi a, a toujoswa été : yo pa retourne pas, yo <em>relie</em>.
+ </p>
+
+ <aside class="researcher-note" aria-label="Note de recherche">
+ programme « Year of Return » lancé pa Ghana en 2019 — commémorant 400 ans nan premye arrivée d'esclaves afriken en Amerik di Nò — a suscité yon intérêt considérable nan dyaspora ayisyèn nan. Plusieurs atiss, intellectuels ak entrepreneurs ayisyen gen participé nan seremoni ak festivals organisés à Accra. question nan citoyenneté ghanéenne poswa membres nan dyaspora afriken nan Amériques te soulevée — yon forme, symbolique otan ke juridique, nan réparation nan rupture transatlantique.
+ </aside>
+
+ <!-- ═══════════════════════════════════════════════
+ VOIR AUSSI
+ ════════════════════════════════════════════════ -->
+ <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:2rem;margin-top:3rem;margin-bottom:2.5rem;">
+ <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Gade tou</p>
+ <ul style="list-style:none;padding:0;margin:0;font-size:15px;line-height:2.2;">
+ <li>→ <a href="vodou.html" style="color:#fff;">Vodoswa ayisyen — relijyon ak philosophie</a></li>
+ <li>→ <a href="history.html" style="color:#fff;">Istwa Jeneral d'Haïti</a></li>
+ <li>→ <a href="lwa.html" style="color:#fff;">Lwa yo — lespri yo nan Vodou</a></li>
+ <li>→ <a href="negritude.html" style="color:#fff;">Négritude ak l'eritaj ayisyen</a></li>
+ <li>→ <a href="mawonaj.html" style="color:#fff;">Mawonaj — rezistans à l'esklavaj</a></li>
+ </ul>
+ </div>
+ </div>
+ </section>
+
+ <footer class="site-footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="footer-brand__logo">
+ Repiblik Ayiti
+ </div>
+ <p>
+ Yon célébration nan extraordinaire istwa d'Haïti, nan li kilti
+ vibrante ak nan li pèp remarquable. Dédié à partager l'istwa de
+ premye Repiblik nwa nan mond lan.
+ </p>
+ </div>
+ <div class="footer-col">
+ <h4>Eksplore</h4>
+ <ul>
+ <li><a href="index.html">Akèy</a></li>
+ <li><a href="about.html">Soswa Ayiti</a></li>
+ <li><a href="history.html">Istwa</a></li>
+ <li><a href="tourism.html">Touris</a></li>
+ <li><a href="encyclopedia.html">Ansiklopedi</a></li>
+ <li><a href="archives.html">Achiv</a></li>
+ <li><a href="bibliography.html">Bibliyografi</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Kilti &amp; Sosyete</h4>
+ <ul>
+ <li><a href="kilti.html">Kilti &amp; Atizay</a></li>
+ <li><a href="vodou.html">Vodou</a></li>
+ <li><a href="gastronomy.html">Gastwonomi</a></li>
+ <li><a href="kilti-vivante.html">Kilti Vivan</a></li>
+ <li><a href="creativite-populaire.html">Kreyativite Popilè</a></li>
+ <li><a href="dyaspora-engagee.html">Dyaspora Angaje</a></li>
+ <li><a href="jenès-potentiel.html">Jenès &amp; Potansyèl</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Istwa &amp; Enstitisyon</h4>
+ <ul>
+ <li><a href="timeline.html">Kwonolouji</a></li>
+ <li><a href="heroes.html">Ewò Nasyonal</a></li>
+ <li><a href="lidès.html">Lidè</a></li>
+ <li><a href="konstitisyon.html">Konstitisyon</a></li>
+ <li><a href="enstitisyons.html">Enstitisyon</a></li>
+ <li><a href="patrimwàn-national.html">Patrimwàn Nasyonal</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Pran Kontak</h4>
+ <ul>
+ <li><a href="contact.html">Kontakte Nou</a></li>
+ <li><a href="contact.html#form">Voye yon Mesaj</a></li>
+ <li><a href="license.html">Mansyon Legal</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; 2026 Kirlinger Jeyon &mdash; Haiti Digital Infrastructure Project</span>
+ <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+ <span class="footer-editorial">Ce projak né d'yon frustration personnelle&#160;: trop d'ouvrages sou Haïti écrits nan extérieur. J'ai voulu rassembler soursa yo ayisyèn en yon seul endroit. &mdash;&nbsp;Kirlinger Jeune, chèchè endepandan.</span>
+ </div>
+ </div>
+ </footer>
+
+ <script src="../js/script.js"></script>
+ <script src="../js/premium.js"></script>
+
+<script>
+(function(){
+  var sw=document.getElementById('langSwitcher');
+  if(!sw)return;
+  var btn=sw.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var isOpen=sw.classList.toggle('open');
+    btn.setAttribute('aria-expanded',isOpen);
+  });
+  document.addEventListener('click',function(){
+    sw.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  });
+  sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var lang=this.dataset.lang;
+      localStorage.setItem('preferred_lang',lang);
+      var page=location.pathname.split('/').pop()||'index.html';
+      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
+      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+    });
+  });
+  var pref=localStorage.getItem('preferred_lang');
+  var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+  if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
+  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+})();
+</script>
+
+</body>
+</html>
