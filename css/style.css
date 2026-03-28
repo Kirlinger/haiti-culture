@@ -3145,9 +3145,8 @@ pre, code {
   }
   .lang-switcher__btn {
     width: auto !important;
-    padding: 0.4rem 0.7rem !important;
-    font-size: 0.85rem !important;
-    gap: 0.3rem !important;
+    padding: 0.4rem 0.6rem !important;
+    font-size: 1.2rem !important;
   }
   .lang-switcher__menu {
     position: absolute !important;
@@ -3169,9 +3168,8 @@ pre, code {
 /* ── Small mobile screens (< 768px) ─────────────────── */
 @media (max-width: 768px) {
   .lang-switcher__btn {
-    padding: 0.38rem 0.55rem !important;
-    font-size: 0.82rem !important;
-    gap: 0.25rem !important;
+    padding: 0.36rem 0.52rem !important;
+    font-size: 1.15rem !important;
   }
 }
 
@@ -3185,8 +3183,8 @@ pre, code {
     font-size: 14px;
   }
   .lang-switcher__btn {
-    padding: 0.32rem 0.45rem !important;
-    font-size: 0.78rem !important;
+    padding: 0.3rem 0.44rem !important;
+    font-size: 1.1rem !important;
   }
   .search-toggle {
     width: 34px;
