@@ -207,6 +207,7 @@
           <div class="lang-switcher__menu" role="menu">
             <a href="#" class="lang-option" data-lang="ht" role="menuitem"><span class="flag-emoji">🇭🇹</span> Kreyòl</a>
             <a href="#" class="lang-option active" data-lang="fr" role="menuitem"><span class="flag-emoji">🇫🇷</span> Français</a>
+            <a href="#" class="lang-option" data-lang="en" role="menuitem"><span class="flag-emoji">🇺🇸</span> English</a>
           </div>
         </div>
         <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
@@ -627,8 +628,16 @@
   var sw=document.getElementById('langSwitcher');
   if(!sw)return;
   var btn=sw.querySelector('.lang-switcher__btn');
+  var touched=false,optTouched=false;
+  btn.addEventListener('touchend',function(e){
+    e.preventDefault();
+    touched=true;
+    var isOpen=sw.classList.toggle('open');
+    btn.setAttribute('aria-expanded',isOpen);
+  });
   btn.addEventListener('click',function(e){
     e.stopPropagation();
+    if(touched){touched=false;return;}
     var isOpen=sw.classList.toggle('open');
     btn.setAttribute('aria-expanded',isOpen);
   });
@@ -637,19 +646,33 @@
     btn.setAttribute('aria-expanded','false');
   });
   sw.querySelectorAll('.lang-option').forEach(function(a){
+    a.addEventListener('touchend',function(e){
+      e.preventDefault();
+      optTouched=true;
+      doLang(this);
+    });
     a.addEventListener('click',function(e){
       e.preventDefault();
-      var lang=this.dataset.lang;
-      localStorage.setItem('preferred_lang',lang);
-      var page=location.pathname.split('/').pop()||'index.html';
-      if(lang==='ht'){location.href=(location.pathname.indexOf('/kreyol/')>=0?'':'/kreyol/')+page;}
-      else{location.href=(location.pathname.indexOf('/kreyol/')>=0?'../':'')+page;}
+      if(optTouched){optTouched=false;return;}
+      doLang(this);
     });
   });
+  function doLang(el){
+    var lang=el.dataset.lang;
+    localStorage.setItem('preferred_lang',lang);
+    var page=location.pathname.split('/').pop()||'index.html';
+    var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
+    if(lang==='ht'){location.href=(inKreyol?'':'/kreyol/')+page;}
+    else if(lang==='fr'){location.href=(inKreyol?'../':'')+page;}
+    else if(lang==='en'){
+      var frUrl=(location.origin||(location.protocol+'//'+location.host))+'/'+(inKreyol?page:location.pathname.replace(/^\//,''));
+      location.href='https://translate.google.com/translate?sl=fr&tl=en&u='+encodeURIComponent(frUrl);
+    }
+  }
   var pref=localStorage.getItem('preferred_lang');
   var inKreyol=location.pathname.indexOf('/kreyol/')>=0;
   if(pref==='ht'&&!inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='/kreyol/'+p;}
-  if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
+  else if(pref==='fr'&&inKreyol){var p=location.pathname.split('/').pop()||'index.html';location.href='../'+p;}
 })();
 </script>
 
