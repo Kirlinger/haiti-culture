@@ -436,6 +436,31 @@
     });
 
     /* ── English UI translations ── */
+    /* Pages that have a full static /en/ translation.
+       All other pages fall back to in-place nav/footer EN translation. */
+    var EN_STATIC_PAGES = [
+      '','404','about','agriculture','aide-internationale','archives',
+      'artistes','bibliographie-annotee','bibliography','cap-haitien',
+      'capacite-adaptation','catastrophes-naturelles','constitution',
+      'contact','creativite-populaire','creole','culture','culture-vivante',
+      'declaration-independance','departements','diaspora-bresil',
+      'diaspora-canada','diaspora-engagee','diaspora-florida','diaspora-france',
+      'dictionnaire-biographique','drapo-vodou','economie-informelle',
+      'education-haiti','encyclopedia','environnement','faits-meconnus',
+      'femmes-haiti','femmes-histoire','fort-liberte','fragilite-economique',
+      'frontiere-haiti-rd','gastronomy','geographie','glossaire-creole',
+      'gonaives','heroes','hinche','history','holidays','index',
+      'inegalites-sociales','influence-mondiale','instabilite-politique',
+      'institutions','jacmel','jeremie','jeunesse-potentiel','leaders',
+      'les-cayes','license','litterature','lwa','marronnage',
+      'memoire-universelle','miragoane','musique-histoire','negritude',
+      'origines-africaines','patrimoine-national','port-au-prince',
+      'presidents','pressions-securitaires','quiz','reconstruction-durable',
+      'regard-etranger','relations-internationales','revolution-batailles',
+      'saint-marc','services-essentiels','symboles-nationaux','tap-tap',
+      'timeline','timeline-constitutions','timeline-crises','timeline-general',
+      'timeline-presidents','tourism','villes','vodou'
+    ];
     var EN_TRANS = {
       'Accueil': 'Home', 'À propos': 'About', 'Histoire': 'History',
       'Culture': 'Culture', 'Tourisme': 'Tourism', 'Géographie': 'Geography',
