@@ -518,31 +518,28 @@
       lsSet('preferred_lang', lang);
       sw.classList.remove('open');
       btn.setAttribute('aria-expanded', 'false');
-      /* /\/kreyol(\/|$)/ matches /kreyol, /kreyol/, and /kreyol/page —
-         needed because Vercel cleanUrls serves kreyol/index.html at /kreyol
-         (no trailing slash), so the old indexOf('/kreyol/') check failed. */
+      /* Detect which language subdirectory we are currently in.
+         /\/kreyol(\/|$)/ and /\/en(\/|$)/ match both the bare index path
+         (/kreyol, /en) and paths with a trailing slash or page name,
+         because Vercel cleanUrls serves index.html without a trailing slash. */
       var inKreyol = /\/kreyol(\/|$)/.test(location.pathname);
-      var rawPop = location.pathname.split('/').pop();
-      /* When at /kreyol (directory index without trailing slash), rawPop is
-         'kreyol' — not a page filename.  Treat it as '' so that forward
-         navigation builds 'kreyol/' and back-navigation builds '../'. */
-      var page = (inKreyol && rawPop === 'kreyol') ? '' : rawPop;
+      var inEn     = /\/en(\/|$)/.test(location.pathname);
+      var rawPop   = location.pathname.split('/').pop();
+      /* When at the directory index (no trailing slash), rawPop equals the
+         directory name rather than a page filename — treat it as '' so that
+         sibling-directory navigation ('../kreyol/' etc.) lands on the index. */
+      var page = ((inKreyol && rawPop === 'kreyol') ||
+                  (inEn     && rawPop === 'en'))     ? '' : rawPop;
+
       if (lang === 'ht') {
-        /* Use relative path — works on any server root or subdirectory */
-        if (!inKreyol) location.href = 'kreyol/' + page;
+        if (inKreyol) return; /* already here */
+        location.href = (inEn ? '../kreyol/' : 'kreyol/') + page;
       } else if (lang === 'fr') {
-        if (inKreyol) {
-          location.href = '../' + page;
-        } else {
-          applyLang('fr');
-        }
+        if (!inKreyol && !inEn) { applyLang('fr'); return; }
+        location.href = '../' + page;
       } else if (lang === 'en') {
-        if (inKreyol) {
-          /* Navigate to French equivalent first; EN applied on load */
-          location.href = '../' + page;
-        } else {
-          applyLang('en');
-        }
+        if (inEn) return; /* already here */
+        location.href = (inKreyol ? '../en/' : 'en/') + page;
       }
       /* Reset touch flag after in-place translations (no page navigation) */
       optTouched = false;
@@ -559,21 +556,28 @@
       : !!(window.performance && performance.navigation && performance.navigation.type === 2);
 
     if (!isBackForward) {
-      var pref = lsGet('preferred_lang');
+      var pref     = lsGet('preferred_lang');
       var inKreyol = /\/kreyol(\/|$)/.test(location.pathname);
-      var _rawPop = location.pathname.split('/').pop();
-      var curPage = (inKreyol && _rawPop === 'kreyol') ? '' : _rawPop;
+      var inEn     = /\/en(\/|$)/.test(location.pathname);
+      var _rawPop  = location.pathname.split('/').pop();
+      var curPage  = ((inKreyol && _rawPop === 'kreyol') ||
+                      (inEn     && _rawPop === 'en'))     ? '' : _rawPop;
+
       if (pref === 'ht' && !inKreyol) {
-        location.href = 'kreyol/' + curPage;
-      } else if ((pref === 'fr' || pref === 'en') && inKreyol) {
+        location.href = (inEn ? '../kreyol/' : 'kreyol/') + curPage;
+      } else if (pref === 'en' && !inEn) {
+        location.href = (inKreyol ? '../en/' : 'en/') + curPage;
+      } else if (pref === 'fr' && (inKreyol || inEn)) {
         location.href = '../' + curPage;
-      } else if (pref === 'en') {
-        applyLang('en');
-      } else if (pref === 'fr') {
-        /* Already on French page — just ensure active state is correct */
+      } else {
+        /* Already on the correct language page — just set the active indicator */
+        var activeLang = inKreyol ? 'ht' : (inEn ? 'en' : 'fr');
         sw.querySelectorAll('.lang-option').forEach(function (opt) {
-          opt.classList.toggle('active', opt.dataset.lang === 'fr');
+          opt.classList.toggle('active', opt.dataset.lang === activeLang);
         });
+        if (pref === 'fr' && !inKreyol && !inEn) {
+          applyLang('fr'); /* restore in-place FR active state */
+        }
       }
     }
   }
