@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Legal &amp; License | Republic of Haiti</title>
+  <meta name="description" content="Legal notice and license information for R&#xe9;publiqueHa&#xef;ti.org. Source code is licensed under the MIT License. Website content is protected by full copyright &mdash; all rights reserved." />
+  <meta name="author" content="Kirlinger Jeune" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/premium.css" />
+  <style>
+    .legal-card {
+      background: #fff;
+      border: 1px solid var(--border, #e2e8f0);
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .legal-card--blue {
+      border-top: 4px solid var(--blue, #00209F);
+    }
+    .legal-card--red {
+      border-top: 4px solid var(--red, #D21034);
+    }
+    .legal-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1.35rem;
+      color: var(--text, #0f172a);
+    }
+    .legal-card .card-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+    .legal-card--blue .card-label { color: var(--blue, #00209F); }
+    .legal-card--red  .card-label { color: var(--red,  #D21034); }
+    .legal-card p {
+      color: var(--text-muted, #475569);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .legal-card p:last-child { margin-bottom: 0; }
+    .legal-badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      margin-bottom: 1.2rem;
+    }
+    .legal-badge--mit  { background: #e0f2fe; color: #0369a1; }
+    .legal-badge--cr   { background: #fee2e2; color: #991b1b; }
+    .license-preformatted {
+      background: #f8fafc;
+      border: 1px solid var(--border, #e2e8f0);
+      border-radius: 8px;
+      padding: 1.4rem 1.6rem;
+      font-family: monospace;
+      font-size: 0.875rem;
+      line-height: 1.85;
+      color: var(--text, #0f172a);
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin-top: 1rem;
+    }
+    .copyright-box {
+      background: #0a0f2e;
+      color: rgba(255,255,255,0.9);
+      border-radius: 10px;
+      padding: 1.6rem 2rem;
+      line-height: 1.8;
+      margin-top: 1rem;
+    }
+    .copyright-box strong { color: #fff; }
+    .copyright-box .warning {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      color: #fca5a5;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .scope-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .scope-item {
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      border: 1px solid var(--border, #e2e8f0);
+    }
+    .scope-item .scope-icon { font-size: 1.3rem; margin-bottom: 0.3rem; display: block; }
+    .scope-item strong { font-size: 0.9rem; color: var(--text, #0f172a); display: block; margin-bottom: 0.2rem; }
+    .scope-item span { font-size: 0.83rem; color: var(--text-muted, #475569); }
+    @media (max-width: 600px) { .scope-grid { grid-template-columns: 1fr; } }
+  </style>
+<style>
+/* Language Switcher - Redesigned */
+.lang-switcher {
+  position: relative;
+  margin-left: 1rem;
+  z-index: 1100;
+}
+.lang-switcher__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.5);
+  color: #fff;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+.lang-switcher__btn:hover,
+.lang-switcher__btn:focus {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.8);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.lang-switcher__btn .globe-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.lang-switcher__menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  min-width: 180px;
+  z-index: 1100;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  animation: langDropIn 0.2s ease;
+}
+@keyframes langDropIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.lang-switcher.open .lang-switcher__menu {
+  display: block;
+}
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.1rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.15s;
+  border-bottom: 1px solid #f0f0f0;
+}
+.lang-option:last-child {
+  border-bottom: none;
+}
+.lang-option:hover {
+  background: #f0f5ff;
+  color: #1a56db;
+}
+.lang-option.active {
+  background: #e8f0fe;
+  font-weight: 700;
+  color: #1a56db;
+}
+.lang-option .flag-emoji {
+  font-size: 1.3rem;
+}
+@media (max-width: 768px) {
+  .lang-switcher {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+  .lang-switcher__btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  .lang-switcher__menu {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .lang-switcher__btn {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.88rem;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#x2191;</button>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Home">
+          Republic of Haiti
+        </a>
+        <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">History &#x25be;</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">General History</a>
+              <a href="timeline.html">Timeline</a>
+              <a href="heroes.html">National Heroes</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+              <a href="institutions.html">Institutions</a>
+              <a href="presidents.html">President Profiles</a>
+              <a href="revolution-batailles.html">Revolution Battles</a>
+              <a href="relations-internationales.html">International Relations</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture &#x25be;</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">The Lwa</a>
+              <a href="gastronomy.html">Gastronomy</a>
+              <a href="holidays.html">Holidays</a>
+              <a href="artistes.html">Visual Artists</a>
+              <a href="musique-histoire.html">History of Music</a>
+              <a href="litterature.html">Literature</a>
+              <a href="creole.html">Creole Language</a>
+              <a href="symboles-nationaux.html">National Symbols</a>
+              <a href="glossaire-creole.html">Creole Glossary</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourism</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Geography &#x25be;</button>
+            <div class="nav-dropdown__menu">
+              <a href="departements.html">The 10 Departments</a>
+              <a href="geographie.html">Physical Geography</a>
+              <a href="environnement.html">Environment</a>
+              <a href="catastrophes-naturelles.html">Natural Disasters</a>
+              <a href="frontiere-haiti-rd.html">Haiti-DR Border</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Society &#x25be;</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture-vivante.html">Living Culture</a>
+              <a href="creativite-populaire.html">Popular Creativity</a>
+              <a href="diaspora-engagee.html">Engaged Diaspora</a>
+              <a href="jeunesse-potentiel.html">Youth &amp; Potential</a>
+              <a href="memoire-universelle.html">Universal Memory</a>
+              <a href="patrimoine-national.html">National Heritage</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Challenges &#x25be;</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Economic Fragility</a>
+              <a href="inegalites-sociales.html">Social Inequalities</a>
+              <a href="instabilite-politique.html">Political Instability</a>
+              <a href="pressions-securitaires.html">Security Pressures</a>
+              <a href="services-essentiels.html">Essential Services</a>
+              <a href="capacite-adaptation.html">Adaptive Capacity</a>
+              <a href="reconstruction-durable.html">Sustainable Reconstruction</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portal &#x25be;</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopedia</a>
+              <a href="archives.html">Archives</a>
+              <a href="bibliography.html">Bibliography</a>
+              <a href="quiz.html">Quiz: Do You Know Haiti?</a>
+              <a href="faits-meconnus.html">Little-Known Facts</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Change language" aria-expanded="false">
+            <span class="globe-icon">&#x1F30D;</span>
+          </button>
+          <div class="lang-switcher__menu" role="menu">
+            <a href="#" class="lang-option" data-lang="ht" role="menuitem"><span class="flag-emoji">&#x1F1ED;&#x1F1F9;</span> Krey&#xF2;l</a>
+            <a href="#" class="lang-option" data-lang="fr" role="menuitem"><span class="flag-emoji">&#x1F1EB;&#x1F1F7;</span> Fran&#xe7;ais</a>
+            <a href="#" class="lang-option active" data-lang="en" role="menuitem"><span class="flag-emoji">&#x1F1FA;&#x1F1F8;</span> English</a>
+          </div>
+        </div>
+        <button class="search-toggle" aria-label="Search" title="Search the site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Search: Lwa, ceremonies, v&#xe8;v&#xe8;&#x2026;" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Close search">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Legal Information</p>
+      <h1 class="page-hero__title">License &amp; Legal Notice</h1>
+      <p class="page-hero__desc">
+        This page describes the legal terms governing the use of this website&#x2019;s source code
+        and content. Please read carefully before reproducing, adapting, or distributing
+        any part of this project.
+      </p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Legal &amp; License</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- ── OVERVIEW ─────────────────────────────────── -->
+      <p class="section-label">Overview</p>
+      <h2 class="section-title">Two-Tier Legal Framework</h2>
+      <p class="section-subtitle">
+        This project distinguishes between its <strong>source code</strong> and its <strong>website content</strong>.
+        Each is governed by separate and distinct legal terms.
+      </p>
+
+      <div class="scope-grid" style="margin-bottom:3rem;">
+        <div class="scope-item">
+          <span class="scope-icon">&#x1F4BB;</span>
+          <strong>Source Code</strong>
+          <span>HTML, CSS &amp; JavaScript &mdash; MIT License</span>
+        </div>
+        <div class="scope-item">
+          <span class="scope-icon">&#x1F4C4;</span>
+          <strong>Website Content</strong>
+          <span>Text, data, maps, visuals &mdash; All Rights Reserved</span>
+        </div>
+      </div>
+
+      <!-- ── MIT LICENSE ────────────────────────────────── -->
+      <div class="legal-card legal-card--blue">
+        <span class="card-label">Source Code</span>
+        <h2>MIT License</h2>
+        <span class="legal-badge legal-badge--mit">Open Source &mdash; MIT</span>
+        <p>
+          The source code of this website &mdash; including its HTML structure, CSS stylesheets,
+          and JavaScript files &mdash; is released as open-source software under the
+          <strong>MIT License</strong>. You are free to use, copy, modify, merge, publish,
+          distribute, sublicense, and/or sell copies of the code, subject to the conditions below.
+        </p>
+        <div class="license-preformatted">MIT License
+
+Copyright (c) 2026 Kirlinger Jeune
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</div>
+        <p style="margin-top:1rem;font-size:0.9rem;">
+          A copy of this license is also available in the
+          <a href="https://github.com/Kirlinger/haiti-culture/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">LICENSE file</a>
+          in the project repository.
+        </p>
+      </div>
+
+      <!-- ── ALL RIGHTS RESERVED ───────────────────────── -->
+      <div class="legal-card legal-card--red">
+        <span class="card-label">Website Content</span>
+        <h2>Copyright &mdash; All Rights Reserved</h2>
+        <span class="legal-badge legal-badge--cr">All Rights Reserved</span>
+        <p>
+          All original content published on this website &mdash; including historical research,
+          written articles, data, maps, visualizations, graphics, and design &mdash; is the
+          exclusive intellectual property of <strong>Kirlinger Jeune</strong> and is
+          fully protected by copyright law.
+        </p>
+        <div class="copyright-box">
+          <strong>Copyright &copy; 2026 Kirlinger Jeune<br>All rights reserved.</strong>
+          <p style="color:rgba(255,255,255,0.8);margin:0.8rem 0 0;">
+            No part of this website&#x2019;s content &mdash; including its maps, data, visualizations,
+            graphics, or written content &mdash; may be copied, reproduced, redistributed, modified,
+            or used for commercial purposes without prior written permission from the author.
+          </p>
+          <p class="warning">&#x26A0; Unauthorized use may result in legal action.</p>
+        </div>
+        <p style="margin-top:1.2rem;">
+          This copyright notice applies regardless of the medium or format in which content
+          is reproduced, whether in print, online, or in any other form. If you wish to
+          quote, cite, or adapt any content, please <a href="contact.html">contact the author</a>
+          to request permission.
+        </p>
+      </div>
+
+      <!-- ── SCOPE TABLE ────────────────────────────────── -->
+      <p class="section-label" style="margin-top:1rem;">Clarification</p>
+      <h2 class="section-title">What Is &mdash; and Is Not &mdash; Covered</h2>
+
+      <div class="scope-grid">
+        <div class="scope-item">
+          <span class="scope-icon" style="color:#0369a1;">&#x2714;</span>
+          <strong>Free to use (MIT &mdash; code only)</strong>
+          <span>HTML templates, CSS stylesheets, JavaScript logic</span>
+        </div>
+        <div class="scope-item">
+          <span class="scope-icon" style="color:#991b1b;">&#x2718;</span>
+          <strong>Not free to reproduce (All Rights Reserved)</strong>
+          <span>Historical articles, research, maps, data &amp; visuals</span>
+        </div>
+        <div class="scope-item">
+          <span class="scope-icon" style="color:#991b1b;">&#x2718;</span>
+          <strong>Prohibited without permission</strong>
+          <span>Commercial use of any content from this website</span>
+        </div>
+        <div class="scope-item">
+          <span class="scope-icon" style="color:#991b1b;">&#x2718;</span>
+          <strong>Prohibited without permission</strong>
+          <span>Redistribution of written content or graphics in any medium</span>
+        </div>
+      </div>
+
+      <!-- ── CONTACT ────────────────────────────────────── -->
+      <div class="legal-card" style="margin-top:2.5rem;border-top:4px solid var(--gold,#FFD166);">
+        <span class="card-label" style="color:#92620e;">Permissions &amp; Contact</span>
+        <h2>Requesting Permission</h2>
+        <p>
+          For enquiries regarding reproduction, citation, adaptation, or any other use of
+          content from this website, please reach out directly. We welcome requests from
+          educators, researchers, journalists, and non-profit organisations.
+        </p>
+        <a href="contact.html" class="btn btn--primary">Contact the Author &#x2192;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            Republic of Haiti
+          </div>
+          <p>
+            A celebration of Haiti&#x2019;s extraordinary history, vibrant culture and remarkable people. Dedicated to sharing the story of the world&#x2019;s first Black republic.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Haiti</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="tourism.html">Tourism</a></li>
+            <li><a href="encyclopedia.html">Encyclopedia</a></li>
+            <li><a href="archives.html">Archives</a></li>
+            <li><a href="bibliography.html">Bibliography</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Culture &amp; Society</h4>
+          <ul>
+            <li><a href="culture.html">Culture &amp; Arts</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastronomy</a></li>
+            <li><a href="culture-vivante.html">Living Culture</a></li>
+            <li><a href="creativite-populaire.html">Popular Creativity</a></li>
+            <li><a href="diaspora-engagee.html">Engaged Diaspora</a></li>
+            <li><a href="jeunesse-potentiel.html">Youth &amp; Potential</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>History &amp; Institutions</h4>
+          <ul>
+            <li><a href="timeline.html">Timeline</a></li>
+            <li><a href="heroes.html">National Heroes</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="constitution.html">Constitution</a></li>
+            <li><a href="institutions.html">Institutions</a></li>
+            <li><a href="patrimoine-national.html">National Heritage</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html#form">Send a Message</a></li>
+            <li><a href="license.html">Legal Notices</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">This project was born out of personal frustration: too many books about Haiti are written from the outside. I wanted to bring Haitian sources together in one place. &mdash;&nbsp;Kirlinger Jeune, independent researcher.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/premium.js"></script>
+
+
+</body>
+</html>
