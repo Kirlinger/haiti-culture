@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#00209F" />
+  <title>Femmes qui ont changé l'Histoire d'Haïti | RépubliqueHaïti.org</title>
+  <meta name="description" content="De Bois Caïman aux salons politiques du XIXe siècle, des combats révolutionnaires aux luttes contemporaines — les femmes haïtiennes ont toujours été au cœur de l'histoire nationale." />
+  <meta name="author" content="RépubliqueHaïti.org" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+<style>
+/* Language Switcher - Redesigned */
+.lang-switcher {
+  position: relative;
+  margin-left: 1rem;
+  z-index: 1100;
+}
+.lang-switcher__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.5);
+  color: #fff;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+.lang-switcher__btn:hover,
+.lang-switcher__btn:focus {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.8);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.lang-switcher__btn .globe-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.lang-switcher__menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  min-width: 180px;
+  z-index: 1100;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  animation: langDropIn 0.2s ease;
+}
+@keyframes langDropIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.lang-switcher.open .lang-switcher__menu {
+  display: block;
+}
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.1rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.15s;
+  border-bottom: 1px solid #f0f0f0;
+}
+.lang-option:last-child {
+  border-bottom: none;
+}
+.lang-option:hover {
+  background: #f0f5ff;
+  color: #1a56db;
+}
+.lang-option.active {
+  background: #e8f0fe;
+  font-weight: 700;
+  color: #1a56db;
+}
+.lang-option .flag-emoji {
+  font-size: 1.3rem;
+}
+@media (max-width: 768px) {
+  .lang-switcher {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+  .lang-switcher__btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  .lang-switcher__menu {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .lang-switcher__btn {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.88rem;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
+        </a>
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="leaders.html">Leaders</a>
+              <a href="constitution.html">Constitution</a>
+              <a href="institutions.html">Institutions</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="vodou.html">Vodou</a>
+              <a href="lwa.html">Les Lwa</a>
+              <a href="gastronomy.html">Gastronomie</a>
+              <a href="holidays.html">Jours Fériés</a>
+            </div>
+          </div>
+          <a href="tourism.html">Tourisme</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Société ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="culture-vivante.html">Culture Vivante</a>
+              <a href="creativite-populaire.html">Créativité Populaire</a>
+              <a href="diaspora-engagee.html">Diaspora Engagée</a>
+              <a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a>
+              <a href="memoire-universelle.html">Mémoire Universelle</a>
+              <a href="patrimoine-national.html">Patrimoine National</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Enjeux ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="fragilite-economique.html">Fragilité Économique</a>
+              <a href="inegalites-sociales.html">Inégalités Sociales</a>
+              <a href="instabilite-politique.html">Instabilité Politique</a>
+              <a href="pressions-securitaires.html">Pressions Sécuritaires</a>
+              <a href="services-essentiels.html">Services Essentiels</a>
+              <a href="capacite-adaptation.html">Capacité d'Adaptation</a>
+              <a href="reconstruction-durable.html">Reconstruction Durable</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Portail ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="encyclopedia.html">Encyclopédie</a>
+              <a href="archives.html">Archives</a>
+              <a href="bibliography.html">Bibliographie</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Changer de langue" aria-expanded="false">
+            <span class="globe-icon">🌍</span>
+          </button>
+          <div class="lang-switcher__menu" role="menu">
+            <a href="#" class="lang-option" data-lang="ht" role="menuitem"><span class="flag-emoji">🇭🇹</span> Kreyòl</a>
+            <a href="#" class="lang-option active" data-lang="fr" role="menuitem"><span class="flag-emoji">🇫🇷</span> Français</a>
+            <a href="#" class="lang-option" data-lang="en" role="menuitem"><span class="flag-emoji">🇺🇸</span> English</a>
+          </div>
+        </div>
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : Lwa, cérémonies, vèvè…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="page-hero page-hero--history">
+    <div class="container">
+      <p class="page-hero__label">Mémoire &amp; Résistance</p>
+      <h1 class="page-hero__title">Femmes qui ont changé l'Histoire d'Haïti</h1>
+      <p class="page-hero__desc">De Bois Caïman aux salons politiques du XIXe siècle, des combats révolutionnaires aux luttes contemporaines — les femmes haïtiennes ont toujours été au cœur de l'histoire nationale, même quand les livres ne les mentionnaient pas.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <span>Femmes dans l'Histoire</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Figures Oubliées &amp; Redécouvertes</p>
+      <h2>Des femmes au cœur de l'histoire nationale</h2>
+      <p style="font-size:17px;line-height:1.85;margin-bottom:2rem;">
+        L'histoire officielle d'Haïti a longtemps été écrite au masculin. Les généraux, les présidents, les fondateurs ont occupé le devant de la scène — et derrière eux, dans les marges des rapports militaires, dans les journaux littéraires de province, dans les mémoires orales transmises de génération en génération, vivaient des femmes qui avaient combattu, créé, organisé, résisté. Ce qui suit est une tentative de rendre à quelques-unes d'entre elles la place qu'elles n'auraient jamais dû perdre.
+      </p>
+
+      <!-- Cécile Fatiman -->
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Cécile Fatiman</h3>
+          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Active 1791 · Mambo, co-officiant de Bois Caïman</p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Dans la nuit du 14 août 1791 (certaines sources indiquent le 21 août — la date exacte reste débattue), dans une clairière de la plaine du Nord, se déroula la cérémonie de Bois Caïman — l'événement fondateur qui précède de quelques jours le début de l'insurrection généralisée de Saint-Domingue. Cécile Fatiman, mambo vodou, était à la tête de la cérémonie aux côtés de l'officiant Dutty Boukman. Les sources la décrivent comme la fille d'une princesse africaine et d'un colon français, aux longs cheveux noirs — portrait ambivalent qui reflète autant les projections de l'époque que les réalités biographiques.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Selon les récits les plus répandus, c'est elle qui sacrifia un porc noir et distribua le sang aux hommes et femmes assemblés — un acte rituel destiné à sceller le pacte collectif de résistance. La dimension spirituelle de Bois Caïman n'est pas séparable de sa dimension politique : dans un contexte où les esclaves n'avaient aucun espace d'organisation légale, le rituel vodou constituait le seul cadre capable de rassembler des centaines de personnes de langues et d'origines diverses autour d'un engagement commun.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Cécile Fatiman épousa par la suite Louis Michel Pierrot, qui devint président d'Haïti en 1845-1846. Elle aurait vécu jusqu'à plus de 112 ans, traversant la quasi-totalité du XIXe siècle haïtien — si les dates sont exactes, elle fut contemporaine à la fois de l'esclavage colonial et de la première abolition de l'esclavage aux États-Unis.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            L'historiographie de Bois Caïman est complexe. La cérémonie a été longtemps contestée ou minimisée par des historiens sceptiques quant à ses détails, voire par des milieux religieux haïtiens qui ont cherché à effacer la dimension vodou des origines nationales. Elle a été redécouverte et réhabilitée au cours du XXe siècle, et Cécile Fatiman avec elle — bien que son nom reste moins connu que celui de Boukman, dont la prière est entrée dans le canon scolaire haïtien.
+          </p>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Mambo vodou, plaine du Nord</li>
+              <li>· Co-officiant de Bois Caïman, août 1791</li>
+              <li>· Sacrifice du porc noir, distribution du sang</li>
+              <li>· Épouse de Louis Michel Pierrot (président 1845)</li>
+              <li>· Aurait vécu plus de 112 ans</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marie-Jeanne Lamartinière -->
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Marie-Jeanne Lamartinière</h3>
+          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">Active 1803 · Combattante à Crête-à-Pierrot</p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            La bataille de Crête-à-Pierrot, livrée en mars 1802, est l'une des plus dramatiques de la Révolution haïtienne. Une poignée de soldats révolutionnaires sous les ordres du général Louis Daure Lamartinière résista pendant plusieurs semaines aux forces expéditionnaires de Leclerc, envoyées par Napoléon pour rétablir l'ordre colonial. C'est dans ce contexte que le nom de Marie-Jeanne Lamartinière entre dans l'histoire — et presque aussitôt en disparaît.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Elle combattit déguisée en soldat aux côtés de la garnison. Quand son mari fut blessé, elle continua à se battre. Les officiers français, dans leurs propres rapports, notèrent avec étonnement la présence de femmes armées parmi les défenseurs — une consécration involontaire, d'autant plus significative qu'elle émane de l'ennemi. Être citée par ses adversaires est souvent la seule forme de reconnaissance disponible pour ceux que l'histoire dominante n'a pas de raison d'enregistrer.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            On ne sait presque rien de Marie-Jeanne Lamartinière avant cette bataille ni après. Elle n'a pas laissé de mémoires, de lettres, de postérité politique. Son nom survit parce qu'un rapport militaire français, daté de 1802, a mentionné une femme qui se battait dans les rangs ennemis avec suffisamment de bravoure pour mériter une note. C'est peu, et c'est beaucoup.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            Le cas Lamartinière illustre un phénomène récurrent dans l'historiographie des femmes combattantes : elles entrent dans les archives par accident — un rapport militaire ennemi, un récit de témoin surprise, une note marginale — et n'en ressortent que si quelqu'un décide de chercher. L'absence de mention dans les sources haïtiennes n'indique pas l'absence dans les faits ; elle indique qui a écrit l'histoire et dans quel but. Les femmes qui combattaient « comme des hommes » ne rentraient pas dans les catégories narratives disponibles et disparaissaient donc de la mémoire institutionnelle.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--red,#D21034);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:#fff;text-transform:uppercase;margin-bottom:1rem;opacity:0.8;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Combattante à Crête-à-Pierrot, mars 1802</li>
+              <li>· Épouse du général Louis Daure Lamartinière</li>
+              <li>· Citée dans des rapports militaires français</li>
+              <li>· Combattit déguisée en soldat</li>
+              <li>· Biographie avant/après : inconnue</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sanité Bélair -->
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Sanité (Suzanne) Bélair</h3>
+          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1781 – 1802 · Officière révolutionnaire</p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Née à Verrettes en 1781, Suzanne — connue sous le nom de Sanité — Bélair était une femme libre de couleur qui rejoignit les forces révolutionnaires et obtint le grade de lieutenant. Ce détail mérite d'être souligné : dans l'ensemble du monde atlantique de la fin du XVIIIe siècle, les femmes ne détenaient pratiquement jamais de grades militaires officiels. Sanité Bélair fut une exception documentée, dans une révolution qui multipliait les exceptions.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Elle combattit aux côtés de son mari Charles Bélair, neveu de Toussaint Louverture. Capturés ensemble par les forces françaises de Leclerc en 1802, tous deux furent condamnés à mort. À l'heure de son exécution par fusillade, Sanité Bélair refusa le bandeau que l'on offrait aux condamnés. Elle était âgée de vingt et un ans. Son exécution avait été orchestrée comme un spectacle public destiné à démoraliser les rebelles — en montrant qu'une femme, une officière, n'était pas à l'abri de la répression française.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            L'effet fut inverse. Le courage de Sanité Bélair face au peloton d'exécution devint un récit de résistance transmis dans les rangs révolutionnaires. Elle est aujourd'hui représentée sur le billet de cinquante gourdes haïtien — l'une des rares femmes à figurer sur la monnaie nationale — bien que cette consécration tardive ne compense pas des siècles d'effacement dans les manuels scolaires.
+          </p>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Née à Verrettes, 1781</li>
+              <li>· Grade de lieutenant dans l'armée révolutionnaire</li>
+              <li>· Épouse de Charles Bélair, neveu de Toussaint</li>
+              <li>· Refusa le bandeau devant le peloton d'exécution</li>
+              <li>· Exécutée à 21 ans, 1802</li>
+              <li>· Figure sur le billet de 50 gourdes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marie-Claire Heureuse -->
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Marie-Claire Heureuse Félicité Bonheur</h3>
+          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1758 – 1858 · Impératrice consort, figure révolutionnaire</p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Marie-Claire Heureuse Félicité Bonheur est entrée dans la mémoire nationale principalement comme l'épouse de Jean-Jacques Dessalines, l'Impératrice d'Haïti. Cette définition relationnelle — connue à travers son mari — a largement occulté ce que les sources contemporaines révèlent de son action propre. Pendant les années révolutionnaires, elle était connue pour soigner les blessés des deux camps — révolutionnaires et soldats français — un acte d'humanité suffisamment remarquable pour que des témoins français le documentent dans leurs correspondances.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Après l'assassinat de Dessalines en octobre 1806, elle continua à vivre en Haïti, traversant toute l'histoire politique du XIXe siècle — les présidences de Pétion, Boyer, Soulouque, les crises constitutionnelles, les occupations étrangères, les révolutions de palais. Si les dates rapportées sont exactes, elle mourut en 1858 à l'âge de cent ans, ayant vécu depuis l'époque de l'esclavage colonial jusqu'aux prémices des débats qui allaient mener à la guerre de Sécession américaine.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Sa mémoire a été instrumentalisée par les gouvernements successifs haïtiens sous le titre de « Mère de la Nation » — un hommage qui, en la cantonnant au registre maternel et domestique, a simultanément célébré et contenu son héritage. Ce mécanisme — élever une femme pour mieux la circonscrire — est l'un des traits récurrents de la mémoire nationale haïtienne à l'égard de ses figures féminines.
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            L'archétype de la « mère de la nation » est un dispositif mémoriel ambigu. Il honore une femme tout en la déplaçant hors du champ politique vers le champ affectif. Marie-Claire Heureuse devient une figure de douceur et de miséricorde, contrepoint nécessaire à la brutalité perçue de Dessalines — et dans ce rôle, elle n'a plus d'agency propre, seulement une fonction symbolique. Ce type de récupération mémorielle a affecté d'autres figures féminines haïtiennes du XIXe siècle et mérite une lecture critique systématique. La célébration peut être une forme d'enfermement.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--red,#D21034);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:#fff;text-transform:uppercase;margin-bottom:1rem;opacity:0.8;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Née ca. 1758, morte ca. 1858</li>
+              <li>· Impératrice consort, épouse de Dessalines</li>
+              <li>· Soignait les blessés des deux camps</li>
+              <li>· Survécut 52 ans à l'assassinat de Dessalines</li>
+              <li>· Instrumentalisée comme « Mère de la Nation »</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Célimène Labasterre -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Célimène Labasterre (1828 – 1902)</strong> — Poétesse et journaliste, Célimène Labasterre fut l'une des premières femmes à publier régulièrement dans les journaux littéraires haïtiens du XIXe siècle. Directrice de <em>L'Album littéraire</em> dans les années 1840, elle publia une poésie résolument politique, défendant la souveraineté haïtienne dans une période marquée par les pressions extérieures — la question de la reconnaissance française, les dettes coloniales, les ingérences américaines naissantes. Sa voix publique dans un espace intellectuel dominé par les hommes constituait déjà, en soi, un acte de résistance ; ses positions politiques l'amplifient. Elle est aujourd'hui peu connue en dehors des cercles spécialisés en littérature haïtienne du XIXe siècle.
+      </p>
+
+      <!-- Adèle Métellus -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Adèle Métellus (active années 1820)</strong> — Figure moins connue de l'histoire politique post-révolutionnaire, Adèle Métellus dirigea un groupe de femmes à Jérémie dans la période turbulente qui suivit la mort d'Alexandre Pétion. Dans un contexte de fragmentation politique et d'incertitude sur le leadership national, elle organisa des réseaux d'approvisionnement alimentaire pour les forces locales de résistance — une forme d'organisation logistique et communautaire qui ne laisse pas de traces dans les chroniques militaires mais sans laquelle aucune résistance n'aurait pu se maintenir. Son histoire est transmise principalement par tradition orale dans la région de la Grand'Anse.
+      </p>
+
+      <!-- Marie Vieux-Chauvet -->
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Marie Vieux-Chauvet</h3>
+          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1916 – 1973 · Romancière, exilée</p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Marie Vieux-Chauvet est probablement la plus grande romancière qu'Haïti ait produite — et l'une des voix littéraires les plus importantes du XXe siècle caribéen. Son œuvre, largement ignorée pendant des décennies, est aujourd'hui redécouverte comme un monument de la littérature mondiale. Née à Port-au-Prince en 1916, elle publie plusieurs romans avant de signer, en 1968, le livre qui faillit la détruire.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            <em>Amour, Colère et Folie</em> (1968) est un triptyque de nouvelles qui décrit avec une précision clinique et une violence littéraire sans précédent la terreur d'État sous le régime Duvalier — la violence sexuelle exercée par les Tontons Macoutes, la délation, la complicité des élites, la lente désintégration de l'âme sous la dictature. Le livre fut publié à Paris. À Port-au-Prince, la réaction fut immédiate : la famille Chauvet racheta l'intégralité du tirage disponible en Haïti pour éviter les représailles du régime. Marie Vieux-Chauvet s'exila à New York, où elle mourut en 1973 dans un relatif anonymat.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Le livre fut redécouvert à partir des années 1980 et réédité en 2005. Il est aujourd'hui enseigné dans les universités francophones et anglophones, traduit en plusieurs langues, et reconnu comme l'un des textes fondateurs de la littérature caribéenne contemporaine. La question qui demeure est celle-ci : qu'avons-nous perdu pendant les quarante ans où il était introuvable ?
+          </p>
+
+          <aside class="researcher-note" aria-label="Note de recherche">
+            Le cas de Marie Vieux-Chauvet illustre comment la censure littéraire sous Duvalier a fonctionné non pas principalement par l'interdiction officielle — trop voyante — mais par la menace implicite, la pression familiale, l'autocensure et l'exil. Le rachat du tirage par la propre famille de l'auteure n'est pas une trahison : c'est une décision prise sous contrainte dans un contexte où la vie de Chauvet était en danger réel. Ce mécanisme a effacé des dizaines d'œuvres haïtiennes de la période 1957-1986, dont beaucoup ne seront jamais retrouvées. <em>Amour, Colère et Folie</em> a survécu parce qu'il avait été publié à Paris. Les textes restés en Haïti n'ont souvent pas eu cette chance.
+          </aside>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Née à Port-au-Prince, 1916</li>
+              <li>· <em>Amour, Colère et Folie</em>, Paris, 1968</li>
+              <li>· Tirage racheté par sa famille sous pression du régime</li>
+              <li>· Exil à New York, mort en 1973</li>
+              <li>· Redécouverte et réédition à partir des années 1980</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Madeleine Sylvain Bouchereau -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Madeleine Sylvain Bouchereau (1905 – 1970)</strong> — Juriste, sociologue et militante féministe, Madeleine Sylvain Bouchereau fut la première femme haïtienne à obtenir un doctorat en droit. Elle fonda la <em>Liga Femina Haïti</em> et consacra une large partie de sa carrière à la campagne pour le droit de vote des femmes haïtiennes — un combat qui aboutit en 1950, date à laquelle Haïti accorda enfin le suffrage féminin. Ses travaux sociologiques sur la condition des femmes en Haïti anticipent de plusieurs décennies les questionnements du féminisme académique contemporain, bien qu'ils restent largement ignorés dans les bibliographies des études de genre internationales — un effacement supplémentaire, cette fois disciplinaire.
+      </p>
+
+      <!-- Paulette Poujol-Oriol -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Paulette Poujol-Oriol (1926 – 2011)</strong> — Écrivaine, enseignante et militante, Paulette Poujol-Oriol a occupé une place centrale dans la vie culturelle et féministe haïtienne pendant plus de cinquante ans. Son roman <em>Le creuset</em> (1980) est le premier grand roman haïtien à placer au centre de la narration les expériences des femmes pauvres des milieux urbains — invisibles dans la littérature haïtienne classique qui s'était principalement intéressée aux élites. Longtemps présidente de la Ligue Féminine d'Action Sociale, elle a incarné la continuité entre le féminisme des pionnières de 1950 et les générations suivantes.
+      </p>
+
+      <!-- Florette Nicolas -->
+      <p style="font-size:17px;line-height:1.85;margin-bottom:1.8rem;">
+        <strong>Florette Nicolas (1935 – 2010)</strong> — Éducatrice et leader de la société civile, Florette Nicolas a créé dans les années 1970, à travers le FONHEP (Fonds National d'Éducation à la Population), les premiers programmes d'alphabétisation fonctionnelle destinés aux femmes des zones rurales haïtiennes. Dans un pays où le taux d'analphabétisme des femmes en milieu rural dépassait encore 70 % à la fin des années 1960, ce travail représentait une intervention concrète et durable — moins spectaculaire qu'un discours politique, mais d'une portée transformatrice bien plus profonde sur les conditions de vie quotidienne des bénéficiaires.
+      </p>
+
+      <!-- Mirlande Manigat -->
+      <div class="two-col--wide-left" style="margin-bottom:3rem;">
+        <div>
+          <h3 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;color:var(--blue,#0038A8);margin-bottom:0.5rem;">Mirlande Manigat</h3>
+          <p style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold,#FFD166);margin-bottom:1.2rem;">1940 – · Professeure de droit constitutionnel, candidate présidentielle</p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Mirlande Manigat représente la synthèse de plusieurs des trajectoires décrites dans cette page : intellectuelle, militante institutionnelle, figure politique majeure. Professeure de droit constitutionnel, auteure de travaux de référence sur la constitution haïtienne, ancienne Première Dame pendant la présidence de Leslie Manigat (1988), elle s'est présentée à l'élection présidentielle de 2010-2011 — dans un contexte de catastrophe nationale post-séisme — et est devenue la première femme dans l'histoire d'Haïti à atteindre le second tour d'une élection présidentielle.
+          </p>
+          <p style="font-size:17px;line-height:1.85;margin-bottom:1.2rem;">
+            Sa candidature a été à la fois un événement historique et un révélateur des résistances persistantes à l'accès des femmes aux plus hautes fonctions de l'État haïtien. Elle n'a pas remporté l'élection, mais elle a ouvert une possibilité que l'histoire politique haïtienne n'avait jamais encore formulée. La portée symbolique de ce franchissement du seuil n'est pas moindre parce que le résultat final a été négatif.
+          </p>
+        </div>
+        <div>
+          <div style="background:var(--blue-dark,#001370);color:#fff;border-radius:10px;padding:1.6rem;min-height:200px;display:flex;flex-direction:column;justify-content:center;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gold,#FFD166);text-transform:uppercase;margin-bottom:1rem;">Repères</p>
+            <ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:2;">
+              <li>· Née en 1940</li>
+              <li>· Docteure en droit constitutionnel</li>
+              <li>· Ancienne Première Dame (1988)</li>
+              <li>· Candidate présidentielle, 2010-2011</li>
+              <li>· 1re femme au second tour d'une présidentielle haïtienne</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            République d'Haïti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos d'Haïti</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+            <li><a href="encyclopedia.html">Encyclopédie</a></li>
+            <li><a href="archives.html">Archives</a></li>
+            <li><a href="bibliography.html">Bibliographie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Culture &amp; Société</h4>
+          <ul>
+            <li><a href="culture.html">Culture &amp; Arts</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastronomie</a></li>
+            <li><a href="culture-vivante.html">Culture Vivante</a></li>
+            <li><a href="creativite-populaire.html">Créativité Populaire</a></li>
+            <li><a href="diaspora-engagee.html">Diaspora Engagée</a></li>
+            <li><a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Histoire &amp; Institutions</h4>
+          <ul>
+            <li><a href="timeline.html">Chronologie</a></li>
+            <li><a href="heroes.html">Héros Nationaux</a></li>
+            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="constitution.html">Constitution</a></li>
+            <li><a href="institutions.html">Institutions</a></li>
+            <li><a href="patrimoine-national.html">Patrimoine National</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+            <li><a href="license.html">Mentions L&eacute;gales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+        <span class="footer-editorial">Ce projet est n&eacute; d&apos;une frustration personnelle&#160;: trop d&apos;ouvrages sur Ha&iuml;ti sont &eacute;crits de l&apos;ext&eacute;rieur. J&apos;ai voulu rassembler les sources ha&iuml;tiennes en un seul endroit. &mdash;&nbsp;Kirlinger Jeune, chercheur ind&eacute;pendant.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
+
+
+</body>
+</html>

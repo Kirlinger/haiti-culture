@@ -255,6 +255,17 @@
     { title: 'Les Origines Africaines d\'Haïti', url: 'origines-africaines.html', section: 'Histoire', keywords: 'origines africaines fon ewe yoruba kongo bantou igbo wolof dahomey bénin nigeria angola sénégal ginen vodou créole thornton fouchard traite négrière' },
     { title: 'Les Drapo Vodou — Art Sacré', url: 'drapo-vodou.html', section: 'Culture', keywords: 'drapo vodou drapeaux vodou sequins perles vèvè lwa reine drapo bazile jean-louis oleyant art sacré cérémonie brooklyn smithsonian' },
     { title: 'Jacmel — Capitale Culturelle du Sud', url: 'jacmel.html', section: 'Culture', keywords: 'jacmel ville art carnaval papier-mâché préfète duffaut gingerbread architecture café jaficine festival film cinéma bolívar pétion sud-est' },
+    // Nouvelles pages — créées pour corriger liens manquants
+    { title: 'Les Artistes Visuels Haïtiens', url: 'artistes.html', section: 'Culture', keywords: 'artistes visuels peinture sculpture hyppolite obin bigaud benoit bazile liautaud croix-des-bouquets metal centre art naïf vodou' },
+    { title: 'La Littérature Haïtienne', url: 'litterature.html', section: 'Culture', keywords: 'littérature haïtienne roumain gouverneurs rosée frankétienne danticat durand price-mars indigénistes négritude créole spiralisme diaspora' },
+    { title: 'Faits Méconnus sur Haïti', url: 'faits-meconnus.html', section: 'Portail', keywords: 'faits méconnus haïti dette indépendance france bolívar occupation américaine drapeau déforestation pic la selle révolution esclave' },
+    { title: 'L\'Agriculture en Haïti', url: 'agriculture.html', section: 'Enjeux', keywords: 'agriculture haïti café mango francisque cacao canne clairin madan sara paysans morcellement foncier déforestation' },
+    { title: 'L\'Aide Internationale en Haïti', url: 'aide-internationale.html', section: 'Enjeux', keywords: 'aide internationale haïti ong séisme 2010 reconstruction croix-rouge diaspora transferts dépendance collier' },
+    { title: 'L\'Économie Informelle en Haïti', url: 'economie-informelle.html', section: 'Enjeux', keywords: 'économie informelle haïti madan sara sol tontine marchés transferts diaspora remittances formalisation' },
+    { title: 'L\'Éducation en Haïti', url: 'education-haiti.html', section: 'Société', keywords: 'éducation haïti écoles privées réforme bernard créole lycée pétion université analphabétisme diaspora bourses' },
+    { title: 'Femmes d\'Haïti', url: 'femmes-haiti.html', section: 'Société', keywords: 'femmes haïti histoire rôle révolution paysannes madan sara politique droit égalité' },
+    { title: 'Fort-Liberté — Cité Coloniale du Nord-Est', url: 'fort-liberte.html', section: 'Tourisme', keywords: 'fort-liberté fort-dauphin nord-est architecture coloniale fortification baie mangrove révolution dessalines massacre' },
+    { title: 'Miragoâne — Capitale des Nippes', url: 'miragoane.html', section: 'Tourisme', keywords: 'miragoâne nippes péninsule méridionale café bois port déforestation séisme 2021 cacao' },
   ];
 
   function initSearch() {
