@@ -126,6 +126,7 @@ Le site est actuellement maintenu en **français uniquement** (racine du projet)
 2. Make your changes in a feature branch
 3. Keep the same HTML structure and CSS class conventions as existing pages
 4. Lors de l’ajout d’une nouvelle page, maintenir la cohérence du contenu en français (navigation, ton éditorial, et terminologie)
+5. Supprimer toute référence obsolète à des chemins multilingues (`/en/`, `/kreyol/`) dans la documentation et les commentaires
 5. Open a pull request with a clear description of your changes
 
 ---
