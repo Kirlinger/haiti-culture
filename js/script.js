@@ -518,8 +518,15 @@
       lsSet('preferred_lang', lang);
       sw.classList.remove('open');
       btn.setAttribute('aria-expanded', 'false');
-      var page = location.pathname.split('/').pop() || 'index.html';
-      var inKreyol = location.pathname.indexOf('/kreyol/') >= 0;
+      /* /\/kreyol(\/|$)/ matches /kreyol, /kreyol/, and /kreyol/page —
+         needed because Vercel cleanUrls serves kreyol/index.html at /kreyol
+         (no trailing slash), so the old indexOf('/kreyol/') check failed. */
+      var inKreyol = /\/kreyol(\/|$)/.test(location.pathname);
+      var rawPop = location.pathname.split('/').pop();
+      /* When at /kreyol (directory index without trailing slash), rawPop is
+         'kreyol' — not a page filename.  Treat it as '' so that forward
+         navigation builds 'kreyol/' and back-navigation builds '../'. */
+      var page = (inKreyol && rawPop === 'kreyol') ? '' : rawPop;
       if (lang === 'ht') {
         /* Use relative path — works on any server root or subdirectory */
         if (!inKreyol) location.href = 'kreyol/' + page;
@@ -553,8 +560,9 @@
 
     if (!isBackForward) {
       var pref = lsGet('preferred_lang');
-      var inKreyol = location.pathname.indexOf('/kreyol/') >= 0;
-      var curPage = location.pathname.split('/').pop() || 'index.html';
+      var inKreyol = /\/kreyol(\/|$)/.test(location.pathname);
+      var _rawPop = location.pathname.split('/').pop();
+      var curPage = (inKreyol && _rawPop === 'kreyol') ? '' : _rawPop;
       if (pref === 'ht' && !inKreyol) {
         location.href = 'kreyol/' + curPage;
       } else if ((pref === 'fr' || pref === 'en') && inKreyol) {
