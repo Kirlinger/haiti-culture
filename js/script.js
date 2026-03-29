@@ -385,6 +385,14 @@
     var btn = sw.querySelector('.lang-switcher__btn');
     var touched = false, optTouched = false;
 
+    /* Safe localStorage helpers — unavailable in some private-browsing modes */
+    function lsGet(key) {
+      try { return localStorage.getItem(key); } catch (e) { return null; }
+    }
+    function lsSet(key, val) {
+      try { localStorage.setItem(key, val); } catch (e) { /* ignore */ }
+    }
+
     btn.addEventListener('touchend', function (e) {
       e.preventDefault();
       touched = true;
@@ -458,8 +466,7 @@
     /* Translate nav and footer UI elements in-place. */
     var NAV_FOOTER_SEL = '.navbar__nav a, .navbar__nav .nav-dropdown__btn, .site-footer h4, .site-footer a';
     function applyLang(lang) {
-      var sel = NAV_FOOTER_SEL;
-      document.querySelectorAll(sel).forEach(function (el) {
+      document.querySelectorAll(NAV_FOOTER_SEL).forEach(function (el) {
         if (!el.dataset.langOrig) el.dataset.langOrig = el.textContent.trim();
         if (lang === 'fr') {
           el.textContent = el.dataset.langOrig;
@@ -497,39 +504,58 @@
 
     function doLang(el) {
       var lang = el.dataset.lang;
-      localStorage.setItem('preferred_lang', lang);
+      lsSet('preferred_lang', lang);
       sw.classList.remove('open');
       btn.setAttribute('aria-expanded', 'false');
       var page = location.pathname.split('/').pop() || 'index.html';
       var inKreyol = location.pathname.indexOf('/kreyol/') >= 0;
       if (lang === 'ht') {
-        if (!inKreyol) location.href = '/kreyol/' + page;
+        /* Use relative path — works on any server root or subdirectory */
+        if (!inKreyol) location.href = 'kreyol/' + page;
       } else if (lang === 'fr') {
         if (inKreyol) {
-          location.href = '/' + page;
+          location.href = '../' + page;
         } else {
           applyLang('fr');
         }
       } else if (lang === 'en') {
         if (inKreyol) {
-          /* Navigate to French equivalent first; EN will be applied on load */
-          location.href = '/' + page;
+          /* Navigate to French equivalent first; EN applied on load */
+          location.href = '../' + page;
         } else {
           applyLang('en');
         }
       }
+      /* Reset touch flag after in-place translations (no page navigation) */
+      optTouched = false;
     }
 
-    /* Apply language preference on every page load */
-    var pref = localStorage.getItem('preferred_lang');
-    var inKreyol = location.pathname.indexOf('/kreyol/') >= 0;
-    var curPage = location.pathname.split('/').pop() || 'index.html';
-    if (pref === 'ht' && !inKreyol) {
-      location.href = '/kreyol/' + curPage;
-    } else if ((pref === 'fr' || pref === 'en') && inKreyol) {
-      location.href = '/' + curPage;
-    } else if (pref === 'en') {
-      applyLang('en');
+    /* ── Apply language preference on every page load ────────
+       Skip on back/forward navigation to avoid trapping the
+       browser history when pref is 'ht'.                    */
+    var navEntry = window.performance &&
+      typeof performance.getEntriesByType === 'function' &&
+      performance.getEntriesByType('navigation')[0];
+    var isBackForward = navEntry
+      ? navEntry.type === 'back_forward'
+      : !!(window.performance && performance.navigation && performance.navigation.type === 2);
+
+    if (!isBackForward) {
+      var pref = lsGet('preferred_lang');
+      var inKreyol = location.pathname.indexOf('/kreyol/') >= 0;
+      var curPage = location.pathname.split('/').pop() || 'index.html';
+      if (pref === 'ht' && !inKreyol) {
+        location.href = 'kreyol/' + curPage;
+      } else if ((pref === 'fr' || pref === 'en') && inKreyol) {
+        location.href = '../' + curPage;
+      } else if (pref === 'en') {
+        applyLang('en');
+      } else if (pref === 'fr') {
+        /* Already on French page — just ensure active state is correct */
+        sw.querySelectorAll('.lang-option').forEach(function (opt) {
+          opt.classList.toggle('active', opt.dataset.lang === 'fr');
+        });
+      }
     }
   }
 
