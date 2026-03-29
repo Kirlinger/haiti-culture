@@ -416,30 +416,120 @@
       });
     });
 
+    /* ── English UI translations ── */
+    var EN_TRANS = {
+      'Accueil': 'Home', 'À propos': 'About', 'Histoire': 'History',
+      'Culture': 'Culture', 'Tourisme': 'Tourism', 'Géographie': 'Geography',
+      'Société': 'Society', 'Enjeux': 'Issues', 'Portail': 'Portal', 'Contact': 'Contact',
+      'Histoire Générale': 'General History', 'Chronologie': 'Timeline',
+      'Héros Nationaux': 'National Heroes', 'Leaders': 'Leaders',
+      'Constitution': 'Constitution', 'Institutions': 'Institutions',
+      'Profils des Présidents': 'President Profiles',
+      'Batailles de la Révolution': 'Revolution Battles',
+      'Relations Internationales': 'International Relations',
+      'Culture & Arts': 'Culture & Arts', 'Vodou': 'Vodou', 'Les Lwa': 'The Lwa',
+      'Gastronomie': 'Gastronomy', 'Jours Fériés': 'Public Holidays',
+      'Artistes Visuels': 'Visual Artists', 'Histoire de la Musique': 'Music History',
+      'Littérature': 'Literature', 'Langue Créole': 'Creole Language',
+      'Symboles Nationaux': 'National Symbols', 'Glossaire Créole': 'Creole Glossary',
+      'Les 10 Départements': 'The 10 Departments',
+      'Géographie Physique': 'Physical Geography', 'Environnement': 'Environment',
+      'Catastrophes Naturelles': 'Natural Disasters',
+      'Frontière Haïti-RD': 'Haiti–DR Border', 'Culture Vivante': 'Living Culture',
+      'Créativité Populaire': 'Popular Creativity', 'Diaspora Engagée': 'Engaged Diaspora',
+      'Jeunesse & Potentiel': 'Youth & Potential',
+      'Mémoire Universelle': 'Universal Memory', 'Patrimoine National': 'National Heritage',
+      'Fragilité Économique': 'Economic Fragility', 'Inégalités Sociales': 'Social Inequalities',
+      'Instabilité Politique': 'Political Instability',
+      'Pressions Sécuritaires': 'Security Pressures', 'Services Essentiels': 'Essential Services',
+      "Capacité d'Adaptation": 'Capacity for Adaptation',
+      'Reconstruction Durable': 'Sustainable Reconstruction',
+      'Encyclopédie': 'Encyclopedia', 'Archives': 'Archives',
+      'Bibliographie': 'Bibliography',
+      'Quiz : Connaissez-vous Haïti ?': 'Quiz: Do you know Haiti?',
+      'Faits Méconnus': 'Little-Known Facts',
+      'Explorer': 'Explore', "À propos d'Haïti": 'About Haiti',
+      'Culture & Société': 'Culture & Society',
+      'Histoire & Institutions': 'History & Institutions',
+      'Prendre Contact': 'Get in Touch', 'Nous Contacter': 'Contact Us',
+      'Envoyer un Message': 'Send a Message', 'Mentions Légales': 'Legal Notice'
+    };
+
+    /* Translate nav and footer UI elements in-place. */
+    var NAV_FOOTER_SEL = '.navbar__nav a, .navbar__nav .nav-dropdown__btn, .site-footer h4, .site-footer a';
+    function applyLang(lang) {
+      var sel = NAV_FOOTER_SEL;
+      document.querySelectorAll(sel).forEach(function (el) {
+        if (!el.dataset.langOrig) el.dataset.langOrig = el.textContent.trim();
+        if (lang === 'fr') {
+          el.textContent = el.dataset.langOrig;
+        } else if (lang === 'en') {
+          var orig = el.dataset.langOrig || el.textContent.trim();
+          var hasCaret = /\s▾$/.test(orig);
+          var key = hasCaret ? orig.replace(/\s▾$/, '') : orig;
+          var trans = EN_TRANS[key];
+          if (trans) el.textContent = trans + (hasCaret ? ' ▾' : '');
+        }
+      });
+      /* Translate special long-form text blocks */
+      var specials = [
+        {
+          sel: '.footer-brand p',
+          en: "A celebration of Haiti's extraordinary history, its vibrant culture, and its remarkable people. Dedicated to sharing the story of the first Black Republic in the world."
+        },
+        {
+          sel: '.footer-editorial',
+          en: 'This project was born from a personal frustration: too many books about Haiti are written from the outside. I wanted to gather Haitian sources in one place. —\u00a0Kirlinger Jeune, independent researcher.'
+        }
+      ];
+      specials.forEach(function (s) {
+        var el = document.querySelector(s.sel);
+        if (!el) return;
+        if (!el.dataset.langOrig) el.dataset.langOrig = el.textContent.trim();
+        el.textContent = (lang === 'en') ? s.en : el.dataset.langOrig;
+      });
+      /* Update active language indicator */
+      sw.querySelectorAll('.lang-option').forEach(function (opt) {
+        opt.classList.toggle('active', opt.dataset.lang === lang);
+      });
+      document.documentElement.lang = lang === 'en' ? 'en' : (lang === 'ht' ? 'ht' : 'fr');
+    }
+
     function doLang(el) {
       var lang = el.dataset.lang;
       localStorage.setItem('preferred_lang', lang);
+      sw.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
       var page = location.pathname.split('/').pop() || 'index.html';
       var inKreyol = location.pathname.indexOf('/kreyol/') >= 0;
       if (lang === 'ht') {
-        location.href = (inKreyol ? '' : '/kreyol/') + page;
+        if (!inKreyol) location.href = '/kreyol/' + page;
       } else if (lang === 'fr') {
-        location.href = (inKreyol ? '../' : '') + page;
+        if (inKreyol) {
+          location.href = '/' + page;
+        } else {
+          applyLang('fr');
+        }
       } else if (lang === 'en') {
-        var frUrl = location.origin + '/' + (inKreyol ? page : location.pathname.replace(/^\//, ''));
-        location.href = 'https://translate.google.com/translate?sl=fr&tl=en&u=' + encodeURIComponent(frUrl);
+        if (inKreyol) {
+          /* Navigate to French equivalent first; EN will be applied on load */
+          location.href = '/' + page;
+        } else {
+          applyLang('en');
+        }
       }
     }
 
-    // Auto-redirect based on stored preference
+    /* Apply language preference on every page load */
     var pref = localStorage.getItem('preferred_lang');
     var inKreyol = location.pathname.indexOf('/kreyol/') >= 0;
+    var curPage = location.pathname.split('/').pop() || 'index.html';
     if (pref === 'ht' && !inKreyol) {
-      var p = location.pathname.split('/').pop() || 'index.html';
-      location.href = '/kreyol/' + p;
-    } else if (pref === 'fr' && inKreyol) {
-      var p = location.pathname.split('/').pop() || 'index.html';
-      location.href = '../' + p;
+      location.href = '/kreyol/' + curPage;
+    } else if ((pref === 'fr' || pref === 'en') && inKreyol) {
+      location.href = '/' + curPage;
+    } else if (pref === 'en') {
+      applyLang('en');
     }
   }
 
