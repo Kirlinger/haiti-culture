@@ -52,11 +52,6 @@ haiti-culture/
 ├── reconstruction-durable.html # Sustainable reconstruction
 ├── services-essentiels.html    # Essential services
 │
-├── en/                         # English translations (29 pages)
-├── fr/                         # French translations (29 pages)
-├── es/                         # Spanish translations (29 pages)
-├── ht/                         # Haitian Kreyòl translations (29 pages)
-│
 ├── css/
 │   └── style.css               # Main stylesheet (~2,700 lines)
 ├── js/
@@ -99,18 +94,9 @@ Install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ri
 
 ---
 
-## 🌍 Languages
+## 🌍 Langue
 
-The site supports four languages. Each language has its own subdirectory with complete translations of all pages:
-
-| Language | Code | Folder | Entry point |
-|----------|------|--------|-------------|
-| Français | `fr` | `/fr/` | `index.html` (root default) |
-| English | `en` | `/en/` | `/en/index.html` |
-| Español | `es` | `/es/` | `/es/index.html` |
-| Kreyòl Ayisyen | `ht` | `/ht/` | `/ht/index.html` |
-
-The root `index.html` detects the browser language and automatically redirects to the appropriate subdirectory.
+Le site est actuellement maintenu en **français uniquement** (racine du projet).
 
 ---
 
@@ -139,7 +125,7 @@ The root `index.html` detects the browser language and automatically redirects t
 1. Fork the repository
 2. Make your changes in a feature branch
 3. Keep the same HTML structure and CSS class conventions as existing pages
-4. When adding a new page, create translated versions in `/en/`, `/fr/`, `/es/`, and `/ht/`
+4. Lors de l’ajout d’une nouvelle page, maintenir la cohérence du contenu en français (navigation, ton éditorial, et terminologie)
 5. Open a pull request with a clear description of your changes
 
 ---
