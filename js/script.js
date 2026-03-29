@@ -273,7 +273,7 @@
     var overlay = document.getElementById('searchOverlay');
     var input = document.getElementById('searchInput');
     var results = document.getElementById('searchResults');
-    var closeBtn = document.querySelector('.search-close');
+    var closeBtn = document.querySelector('.search-close') || document.getElementById('searchClose');
 
     if (!toggle || !overlay || !input || !results) return;
 
@@ -291,7 +291,9 @@
     }
 
     toggle.addEventListener('click', openSearch);
-    closeBtn.addEventListener('click', closeSearch);
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeSearch);
+    }
 
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) closeSearch();
