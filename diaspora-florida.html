@@ -10,112 +10,6 @@
   <meta name="author" content="RépubliqueHaïti.org" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/premium.css" />
-<style>
-/* Language Switcher - Redesigned */
-.lang-switcher {
-  position: relative;
-  margin-left: 1rem;
-  z-index: 1100;
-}
-.lang-switcher__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255,255,255,0.12);
-  border: 2px solid rgba(255,255,255,0.5);
-  color: #fff;
-  padding: 0.4rem 0.6rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1.25rem;
-  line-height: 1;
-  transition: all 0.25s ease;
-  font-family: inherit;
-}
-.lang-switcher__btn:hover,
-.lang-switcher__btn:focus {
-  background: rgba(255,255,255,0.22);
-  border-color: rgba(255,255,255,0.8);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-.lang-switcher__btn .globe-icon {
-  font-size: 1.25rem;
-  line-height: 1;
-}
-.lang-switcher__menu {
-  display: none;
-  position: absolute;
-  top: calc(100% + 6px);
-  right: 0;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
-  min-width: 180px;
-  z-index: 1100;
-  overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.08);
-  animation: langDropIn 0.2s ease;
-}
-@keyframes langDropIn {
-  from { opacity: 0; transform: translateY(-8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.lang-switcher.open .lang-switcher__menu {
-  display: block;
-}
-.lang-option {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.75rem 1.1rem;
-  color: #333;
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: background 0.15s;
-  border-bottom: 1px solid #f0f0f0;
-}
-.lang-option:last-child {
-  border-bottom: none;
-}
-.lang-option:hover {
-  background: #f0f5ff;
-  color: #1a56db;
-}
-.lang-option.active {
-  background: #e8f0fe;
-  font-weight: 700;
-  color: #1a56db;
-}
-.lang-option .flag-emoji {
-  font-size: 1.3rem;
-}
-@media (max-width: 768px) {
-  .lang-switcher {
-    margin-left: 0;
-    margin-top: 0.5rem;
-    width: 100%;
-  }
-  .lang-switcher__btn {
-    width: 100%;
-    justify-content: center;
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-  }
-  .lang-switcher__menu {
-    right: auto;
-    left: 0;
-    width: 100%;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  .lang-switcher__btn {
-    padding: 0.45rem 0.8rem;
-    font-size: 0.88rem;
-  }
-}
-</style>
 </head>
 <body>
 
@@ -140,7 +34,7 @@
               <a href="history.html">Histoire Générale</a>
               <a href="timeline.html">Chronologie</a>
               <a href="heroes.html">Héros Nationaux</a>
-              <a href="leaders.html">Leaders</a>
+              <a href="leaders.html">Dirigeants</a>
               <a href="constitution.html">Constitution</a>
               <a href="institutions.html">Institutions</a>
             </div>
@@ -148,7 +42,7 @@
           <div class="nav-dropdown">
             <button class="nav-dropdown__btn" aria-expanded="false">Culture ▾</button>
             <div class="nav-dropdown__menu">
-              <a href="culture.html">Culture &amp; Arts</a>
+              <a href="culture.html">Culture et Arts</a>
               <a href="vodou.html">Vodou</a>
               <a href="lwa.html">Les Lwa</a>
               <a href="gastronomy.html">Gastronomie</a>
@@ -189,16 +83,6 @@
           </div>
           <a href="contact.html">Contact</a>
         </nav>
-        <div class="lang-switcher" id="langSwitcher">
-          <button class="lang-switcher__btn" aria-label="Changer de langue" aria-expanded="false">
-            <span class="globe-icon">🌍</span>
-          </button>
-          <div class="lang-switcher__menu" role="menu">
-            <a href="#" class="lang-option" data-lang="ht" role="menuitem"><span class="flag-emoji">🇭🇹</span> Kreyòl</a>
-            <a href="#" class="lang-option active" data-lang="fr" role="menuitem"><span class="flag-emoji">🇫🇷</span> Français</a>
-            <a href="#" class="lang-option" data-lang="en" role="menuitem"><span class="flag-emoji">🇺🇸</span> English</a>
-          </div>
-        </div>
         <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </button>
@@ -322,7 +206,7 @@
         <div class="footer-col">
           <h4>Culture &amp; Société</h4>
           <ul>
-            <li><a href="culture.html">Culture &amp; Arts</a></li>
+            <li><a href="culture.html">Culture et Arts</a></li>
             <li><a href="vodou.html">Vodou</a></li>
             <li><a href="gastronomy.html">Gastronomie</a></li>
             <li><a href="culture-vivante.html">Culture Vivante</a></li>
@@ -336,7 +220,7 @@
           <ul>
             <li><a href="timeline.html">Chronologie</a></li>
             <li><a href="heroes.html">Héros Nationaux</a></li>
-            <li><a href="leaders.html">Leaders</a></li>
+            <li><a href="leaders.html">Dirigeants</a></li>
             <li><a href="constitution.html">Constitution</a></li>
             <li><a href="institutions.html">Institutions</a></li>
             <li><a href="patrimoine-national.html">Patrimoine National</a></li>
