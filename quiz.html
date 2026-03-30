@@ -427,7 +427,7 @@
     <div class="container">
       <p class="page-hero__label">Éducation Interactive</p>
       <h1 class="page-hero__title">Connaissez-vous Haïti ?</h1>
-      <p class="page-hero__desc">Testez vos connaissances sur l'histoire, la culture, la géographie et la société de la première République noire du monde. Trente questions, une expérience complète et interactive.</p>
+      <p class="page-hero__desc">Testez vos connaissances sur l'histoire, la culture, la géographie et la société de la première République noire du monde, avec trente questions dans une expérience complète et interactive.</p>
     </div>
   </section>
 
@@ -446,7 +446,7 @@
   <section class="section">
     <div class="container">
       <p class="section-label text-center">Quiz Interactif</p>
-      <h2 class="section-title text-center">30 Questions sur Haïti</h2>
+      <h2 class="section-title text-center"><span id="quizTotalTitle">30</span> Questions sur Haïti</h2>
       <p class="section-subtitle text-center">Histoire • Culture • Géographie • Société — une question à la fois.</p>
 
       <div class="quiz-shell" id="quizShell">
@@ -826,11 +826,13 @@
     const quizIntro    = document.getElementById('quizIntro');
     const startQuizBtn = document.getElementById('startQuizBtn');
     const finalTotal   = document.getElementById('finalTotal');
+    const quizTotalTitle = document.getElementById('quizTotalTitle');
     const totalQuestions = QUESTIONS.length;
     const categoryTotals = QUESTIONS.reduce(function (acc, q) {
       acc[q.category] = (acc[q.category] || 0) + 1;
       return acc;
-    }, { Histoire: 0, Culture: 0, Géographie: 0, Société: 0 });
+    }, {});
+    if (quizTotalTitle) quizTotalTitle.textContent = totalQuestions;
 
     function enterStartState() {
       quizIntro.style.display = '';
