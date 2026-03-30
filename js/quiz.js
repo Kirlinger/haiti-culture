@@ -1,7 +1,9 @@
 (function () {
   'use strict';
 
-  var QUESTIONS = [
+  var DEFAULT_LANG = 'fr';
+
+  var QUESTION_META = [
     { category: 'history', key: 'q1', correct: 2 },
     { category: 'history', key: 'q2', correct: 1 },
     { category: 'history', key: 'q3', correct: 1 },
@@ -286,7 +288,7 @@
     }
   };
 
-  var currentLang = 'fr';
+  var currentLang = DEFAULT_LANG;
   var currentIndex = 0;
   var score = 0;
   var selectedChoice = null;
@@ -337,8 +339,8 @@
     return;
   }
 
-  var totalQuestions = QUESTIONS.length;
-  var categoryTotals = QUESTIONS.reduce(function (acc, q) {
+  var totalQuestions = QUESTION_META.length;
+  var categoryTotals = QUESTION_META.reduce(function (acc, q) {
     acc[q.category] = (acc[q.category] || 0) + 1;
     return acc;
   }, {});
@@ -352,12 +354,12 @@
   }
 
   function t() {
-    return UI_TEXT[currentLang] || UI_TEXT.fr;
+    return UI_TEXT[currentLang] || UI_TEXT[DEFAULT_LANG];
   }
 
   function getQuestionData(questionKey) {
     var item = QUESTION_BANK[questionKey] || {};
-    return item[currentLang] || item.fr;
+    return item[currentLang] || item[DEFAULT_LANG];
   }
 
   function updateLanguageUI() {
@@ -433,7 +435,7 @@
   function renderQuestion() {
     answered = false;
     selectedChoice = null;
-    var q = QUESTIONS[currentIndex];
+    var q = QUESTION_META[currentIndex];
     if (!q) {
       showResults();
       return;
@@ -453,7 +455,6 @@
       var btn = document.createElement('button');
       btn.className = 'quiz-choice-btn';
       btn.type = 'button';
-      btn.setAttribute('data-choice-index', String(idx));
       btn.textContent = letter + ') ' + qData.choices[idx];
       btn.addEventListener('click', function () {
         if (answered) return;
@@ -478,7 +479,7 @@
   function submitAnswer() {
     if (answered || selectedChoice === null) return;
     answered = true;
-    var q = QUESTIONS[currentIndex];
+    var q = QUESTION_META[currentIndex];
     var text = t();
     var qData = getQuestionData(q.key);
     var allBtns = choicesList.querySelectorAll('.quiz-choice-btn');
@@ -497,7 +498,14 @@
       allBtns[selectedChoice].classList.add('wrong');
       allBtns[q.correct].classList.add('correct');
       explanationBox.className = 'quiz-explanation wrong-explain visible';
-      explanationBox.innerHTML = text.feedbackWrongPrefix + '<strong>' + ['A', 'B', 'C', 'D'][q.correct] + ') ' + escapeHtml(qData.choices[q.correct]) + '</strong>' + text.feedbackSep + escapeHtml(qData.explanation);
+      explanationBox.textContent = '';
+      var wrongPrefixNode = document.createTextNode(text.feedbackWrongPrefix);
+      var strongNode = document.createElement('strong');
+      strongNode.textContent = ['A', 'B', 'C', 'D'][q.correct] + ') ' + qData.choices[q.correct];
+      var sepNode = document.createTextNode(text.feedbackSep + qData.explanation);
+      explanationBox.appendChild(wrongPrefixNode);
+      explanationBox.appendChild(strongNode);
+      explanationBox.appendChild(sepNode);
     }
 
     updateMeta();
@@ -551,7 +559,11 @@
   function setLanguage(lang) {
     if (!UI_TEXT[lang] || currentLang === lang) return;
     currentLang = lang;
-    try { window.localStorage.setItem('quizLang', lang); } catch (e) {}
+    try {
+      window.localStorage.setItem('quizLang', lang);
+    } catch (e) {
+      window.quizLangStorageFailed = true;
+    }
     updateLanguageUI();
     if (quizIntro.style.display !== 'none') return;
     if (resultsScreen.classList.contains('visible')) {
@@ -563,7 +575,11 @@
 
   function initLanguageFromStorage() {
     var stored = null;
-    try { stored = window.localStorage.getItem('quizLang'); } catch (e) {}
+    try {
+      stored = window.localStorage.getItem('quizLang');
+    } catch (e) {
+      window.quizLangStorageFailed = true;
+    }
     if (stored && UI_TEXT[stored]) currentLang = stored;
   }
 
