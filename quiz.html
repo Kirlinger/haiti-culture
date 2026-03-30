@@ -75,6 +75,37 @@
       padding: 2rem 2.2rem;
       box-shadow: 0 2px 12px rgba(0,0,0,.06);
     }
+    .quiz-intro {
+      text-align: center;
+      margin-bottom: 1.2rem;
+    }
+    .quiz-intro__title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--blue, #00209F);
+      margin: 0 0 .65rem;
+    }
+    .quiz-intro__text {
+      font-size: 15px;
+      color: #4b5563;
+      line-height: 1.65;
+      margin: 0 0 1.2rem;
+    }
+    .quiz-start-btn {
+      background: var(--blue, #00209F);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: .85rem 2.4rem;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background .2s, transform .1s;
+    }
+    .quiz-start-btn:hover {
+      background: #001a80;
+      transform: translateY(-1px);
+    }
     .quiz-question {
       font-size: 1.15rem;
       font-weight: 700;
@@ -396,7 +427,7 @@
     <div class="container">
       <p class="page-hero__label">Éducation Interactive</p>
       <h1 class="page-hero__title">Connaissez-vous Haïti ?</h1>
-      <p class="page-hero__desc">Testez vos connaissances sur l'histoire, la culture, la géographie et la société de la première République noire du monde. Vingt questions, quatre niveaux de difficulté.</p>
+      <p class="page-hero__desc">Testez vos connaissances sur l'histoire, la culture, la géographie et la société de la première République noire du monde, avec trente questions dans une expérience complète et interactive.</p>
     </div>
   </section>
 
@@ -415,17 +446,24 @@
   <section class="section">
     <div class="container">
       <p class="section-label text-center">Quiz Interactif</p>
-      <h2 class="section-title text-center">20 Questions sur Haïti</h2>
+      <h2 class="section-title text-center"><span id="quizTotalTitle">30</span> Questions sur Haïti</h2>
       <p class="section-subtitle text-center">Histoire • Culture • Géographie • Société — une question à la fois.</p>
 
       <div class="quiz-shell" id="quizShell">
+
+        <!-- Intro / start -->
+        <div class="quiz-intro quiz-card" id="quizIntro">
+          <p class="quiz-intro__title">Prêt(e) à commencer ?</p>
+          <p class="quiz-intro__text">Cliquez sur le bouton ci-dessous pour lancer le quiz et afficher la première question.</p>
+          <button class="quiz-start-btn" id="startQuizBtn">Commencer le quiz</button>
+        </div>
 
         <!-- Progress + meta -->
         <div class="quiz-progress-wrap" id="progressWrap">
           <div class="quiz-progress-bar" id="progressBar" style="width:5%"></div>
         </div>
         <div class="quiz-meta" id="quizMeta">
-          <span id="questionCounter">Question 1 / 20</span>
+          <span id="questionCounter">Question 1 / 30</span>
           <span class="quiz-score-badge" id="scoreBadge">Score : 0</span>
         </div>
 
@@ -442,16 +480,16 @@
         <div class="quiz-results quiz-card" id="resultsScreen">
           <div class="quiz-results__score-ring">
             <span class="big" id="finalScore">0</span>
-            <span class="small">/ 20</span>
+            <span class="small" id="finalTotal">/ 30</span>
           </div>
           <p class="quiz-results__msg" id="resultMessage"></p>
           <p class="quiz-results__sub" id="resultSub"></p>
           <div class="quiz-breakdown" id="breakdownBox">
             <h4>Résultats par catégorie</h4>
-            <div class="quiz-breakdown-row"><span class="cat-label">Histoire</span><span class="cat-score" id="scoreHistoire">0 / 5</span></div>
-            <div class="quiz-breakdown-row"><span class="cat-label">Culture</span><span class="cat-score" id="scoreCulture">0 / 5</span></div>
-            <div class="quiz-breakdown-row"><span class="cat-label">Géographie</span><span class="cat-score" id="scoreGeographie">0 / 5</span></div>
-            <div class="quiz-breakdown-row"><span class="cat-label">Société</span><span class="cat-score" id="scoreSociete">0 / 5</span></div>
+            <div class="quiz-breakdown-row"><span class="cat-label">Histoire</span><span class="cat-score" id="scoreHistoire">0 / 0</span></div>
+            <div class="quiz-breakdown-row"><span class="cat-label">Culture</span><span class="cat-score" id="scoreCulture">0 / 0</span></div>
+            <div class="quiz-breakdown-row"><span class="cat-label">Géographie</span><span class="cat-score" id="scoreGeographie">0 / 0</span></div>
+            <div class="quiz-breakdown-row"><span class="cat-label">Société</span><span class="cat-score" id="scoreSociete">0 / 0</span></div>
           </div>
           <br>
           <button class="quiz-restart-btn" id="restartBtn">↺ Recommencer</button>
@@ -549,252 +587,222 @@
     'use strict';
 
     const QUESTIONS = [
-      /* ── HISTOIRE (1-5) ── */
+      /* ── HISTOIRE (1-8) ── */
       {
         category: 'Histoire',
-        question: 'Quelle date Haïti a-t-elle proclamé son indépendance ?',
-        choices: [
-          '1er janvier 1803',
-          '1er janvier 1804',
-          '4 juillet 1804',
-          '18 mai 1803'
-        ],
-        correct: 1,
-        explanation: 'Haïti a proclamé son indépendance le 1er janvier 1804 à Gonaïves, devenant ainsi la première République noire libre du monde et la deuxième nation indépendante des Amériques.'
-      },
-      {
-        category: 'Histoire',
-        question: 'Qui a proclamé l'indépendance d'Haïti ?',
-        choices: [
-          'Toussaint Louverture',
-          'Henri Christophe',
-          'Jean-Jacques Dessalines',
-          'Alexandre Pétion'
-        ],
+        question: 'Qui a proclamé l\'indépendance d\'Haïti à Gonaïves ?',
+        choices: ['Toussaint Louverture', 'Henri Christophe', 'Jean-Jacques Dessalines', 'Alexandre Pétion'],
         correct: 2,
-        explanation: 'Jean-Jacques Dessalines, après la victoire décisive de Vertières en novembre 1803, proclama l'indépendance d'Haïti et devint son premier chef d'État sous le nom de Jacques I.'
+        explanation: 'Jean-Jacques Dessalines proclame l\'indépendance le 1er janvier 1804 à Gonaïves.'
       },
       {
         category: 'Histoire',
-        question: 'Quelle cérémonie a marqué le début de la Révolution haïtienne en 1791 ?',
-        choices: [
-          'La bataille de Vertières',
-          'La cérémonie du Bois Caïman',
-          'Le Congrès d\'Arcahaie',
-          'La prise de Cap-Français'
-        ],
+        question: 'Quelle cérémonie de 1791 est présentée comme le déclencheur de la Révolution haïtienne ?',
+        choices: ['Le Congrès d\'Arcahaie', 'La cérémonie du Bois Caïman', 'Le traité de Bâle', 'Le serment du Jeu de Paume'],
         correct: 1,
-        explanation: 'La cérémonie du Bwa Kayiman, le 14 août 1791, réunit des esclaves sous la direction de Boukman Dutty et d'une prêtresse vodou, donnant le signal spirituel et politique du soulèvement général.'
+        explanation: 'La cérémonie du Bois Caïman (Bwa Kayiman) est indiquée comme l\'acte fondateur du soulèvement de 1791.'
       },
       {
         category: 'Histoire',
-        question: 'Quel président haïtien a accepté de payer à la France 150 millions de francs pour la reconnaissance de l'indépendance ?',
-        choices: [
-          'Henri Christophe',
-          'Jean-Jacques Dessalines',
-          'Alexandre Pétion',
-          'Jean-Pierre Boyer'
-        ],
+        question: 'Quelle bataille est décrite comme la victoire finale de la guerre d\'indépendance ?',
+        choices: ['Crête-à-Pierrot', 'Vertières', 'Ravine-à-Couleuvres', 'Péligre'],
+        correct: 1,
+        explanation: 'La bataille de Vertières (novembre 1803), près de Cap-Haïtien, est présentée comme la victoire décisive.'
+      },
+      {
+        category: 'Histoire',
+        question: 'Quel dirigeant a signé en 1825 l\'ordonnance imposant l\'indemnité à la France ?',
+        choices: ['Henri Christophe', 'Alexandre Pétion', 'Jean-Pierre Boyer', 'Faustin Soulouque'],
+        correct: 2,
+        explanation: 'Jean-Pierre Boyer accepte l\'ordonnance de Charles X en 1825.'
+      },
+      {
+        category: 'Histoire',
+        question: 'Quel montant initial de l\'indemnité est mentionné pour 1825 ?',
+        choices: ['50 millions de francs-or', '90 millions de francs-or', '120 millions de francs-or', '150 millions de francs-or'],
         correct: 3,
-        explanation: 'Jean-Pierre Boyer signa en 1825 l'ordonnance de Charles X conditionnant la reconnaissance française au paiement de 150 millions de francs — une dette coloniale qui pesa sur l'économie haïtienne pendant plus d'un siècle.'
+        explanation: 'Le montant initial cité est 150 millions de francs-or, réduit ensuite à 90 millions en 1838.'
       },
       {
         category: 'Histoire',
-        question: 'En quelle année les États-Unis ont-ils occupé Haïti ?',
-        choices: [
-          '1905',
-          '1910',
-          '1915',
-          '1920'
-        ],
+        question: 'Quelle période correspond à l\'occupation américaine d\'Haïti ?',
+        choices: ['1898–1912', '1915–1934', '1939–1945', '1957–1971'],
+        correct: 1,
+        explanation: 'Le site situe l\'occupation américaine de 1915 à 1934.'
+      },
+      {
+        category: 'Histoire',
+        question: 'En quelle année la dette liée à l\'indemnité d\'indépendance est-elle indiquée comme entièrement remboursée ?',
+        choices: ['1904', '1915', '1947', '1964'],
         correct: 2,
-        explanation: 'Les États-Unis ont occupé Haïti de 1915 à 1934, invoquant l'instabilité politique après l'assassinat du président Vilbrun Guillaume Sam, mais poursuivant des intérêts stratégiques et économiques dans les Caraïbes.'
+        explanation: 'La page Histoire précise un remboursement achevé en 1947.'
+      },
+      {
+        category: 'Histoire',
+        question: 'Quelles deux grandes constructions sont associées à Henri Christophe ?',
+        choices: ['Palais National et MUPANAH', 'Citadelle Laferrière et Palais Sans-Souci', 'Fort Jacques et Fort Alexandre', 'Cathédrale de Cap-Haïtien et Môle Saint-Nicolas'],
+        correct: 1,
+        explanation: 'Henri Christophe est lié à la Citadelle Laferrière et au Palais Sans-Souci.'
       },
 
-      /* ── CULTURE (6-10) ── */
+      /* ── CULTURE (9-16) ── */
       {
         category: 'Culture',
-        question: 'Quel est le nom de la cérémonie lors de laquelle fut créé le premier drapeau haïtien ?',
-        choices: [
-          'La Conférence de Gonaïves',
-          'Le Congrès d\'Arcahaie',
-          'L\'Assemblée de Vertières',
-          'Le Conseil de Léogâne'
-        ],
+        question: 'Dans quel cadre est né le premier drapeau haïtien (bleu et rouge) selon le site ?',
+        choices: ['Le Congrès d\'Arcahaie', 'La bataille de Vertières', 'Le traité de Paris', 'Le Code Henri'],
+        correct: 0,
+        explanation: 'Le site associe la création du drapeau au Congrès d\'Arcahaie (1803).'
+      },
+      {
+        category: 'Culture',
+        question: 'Quel est l\'hymne national d\'Haïti ?',
+        choices: ['La Dessalinienne', 'L\'Indépendance', 'La Gonaïvienne', 'La République'],
+        correct: 0,
+        explanation: 'L\'hymne national présenté est La Dessalinienne.'
+      },
+      {
+        category: 'Culture',
+        question: 'Le Vodou haïtien est décrit comme :',
+        choices: ['Une religion fondée par un seul prophète', 'Une synthèse de traditions africaines recréée à Saint-Domingue', 'Une invention du XIXe siècle en Europe', 'Une branche officielle du catholicisme romain'],
         correct: 1,
-        explanation: 'C'est lors du Congrès d'Arcahaie en mai 1803 que Dessalines arracha le blanc de la bannière tricolore française pour n'en conserver que le bleu et le rouge, cousus ensemble par Catherine Flon.'
+        explanation: 'Le site décrit le Vodou comme une synthèse de traditions africaines transformées en Haïti.'
       },
       {
         category: 'Culture',
-        question: 'Quelle est la signification de la couleur bleue dans le drapeau haïtien ?',
-        choices: [
-          'La mer des Caraïbes',
-          'Le ciel d\'Haïti',
-          'La population africaine haïtienne',
-          'La liberté'
-        ],
+        question: 'Quelle nation est présentée comme la plus ancienne et fondamentale du panthéon Vodou ?',
+        choices: ['Petro', 'Ibo', 'Rada', 'Gede'],
         correct: 2,
-        explanation: 'Le bleu du drapeau haïtien représente la population d'origine africaine, tandis que le rouge symbolise les mulâtres — les deux groupes qui, ensemble, ont combattu pour l'indépendance de la nation.'
+        explanation: 'La nation Rada est explicitement décrite comme la base historique du panthéon.'
       },
       {
         category: 'Culture',
-        question: 'Comment s'appelle l'hymne national haïtien ?',
-        choices: [
-          'La Haïtienne',
-          'L\'Indépendance',
-          'La Dessalinienne',
-          'La Liberté'
-        ],
-        correct: 2,
-        explanation: 'La Dessalinienne, dont les paroles sont de Justin Lhérisson et la musique de Nicolas Geffrard, est l'hymne national d'Haïti depuis 1904 — cent ans après l'indépendance.'
-      },
-      {
-        category: 'Culture',
-        question: 'Quel genre musical haïtien est reconnu comme la danse nationale d'Haïti ?',
-        choices: [
-          'Rara',
-          'Kompa',
-          'Rasin',
-          'Méringue'
-        ],
+        question: 'Quelle nation Vodou est dite « née en Haïti » et associée aux Lwa « chauds » ?',
+        choices: ['Nago', 'Petro', 'Kongo', 'Ibo'],
         correct: 1,
-        explanation: 'Le kompa (ou compas direct), créé dans les années 1950 par Nemours Jean-Baptiste, est à la fois un genre musical et une danse nationale haïtienne, célébré par la diaspora dans le monde entier.'
+        explanation: 'La page Vodou présente la nation Petro comme née en Haïti.'
       },
       {
         category: 'Culture',
-        question: 'Quelle est l'origine du vodou haïtien ?',
-        choices: [
-          'Il a été fondé par Boukman',
-          'Il a été fondé par Toussaint Louverture',
-          'Il a été fondé par Jean-Baptiste Pointe du Sable',
-          'Aucun fondateur unique — le vodou vient d\'Afrique'
-        ],
-        correct: 3,
-        explanation: 'Le vodou haïtien est né de la synthèse des traditions religieuses de nombreux peuples africains déportés comme esclaves à Saint-Domingue, principalement des Fon, Ewe et Yoruba d'Afrique de l'Ouest.'
+        question: 'Quel est le premier niveau d\'initiation mentionné dans le Kanzo ?',
+        choices: ['Asogwe', 'Lave Tèt', 'Hounsi Bossal', 'Dessounin'],
+        correct: 1,
+        explanation: 'Le Kanzo inclut d\'abord Lave Tèt, puis Hounsi Bossal, puis Houngan/Mambo Asogwe.'
+      },
+      {
+        category: 'Culture',
+        question: 'À quoi servent principalement les vèvè dans une cérémonie Vodou ?',
+        choices: ['Décorer les murs du temple', 'Mesurer le temps rituel', 'Invoquer et appeler un Lwa précis', 'Noter les chants sacrés'],
+        correct: 2,
+        explanation: 'Les vèvè sont des symboles d\'invocation, tracés pour appeler le Lwa concerné.'
+      },
+      {
+        category: 'Culture',
+        question: 'Quelle description correspond au vèvè de Damballah ?',
+        choices: ['Un bateau et une ancre', 'Deux serpents entrelacés', 'Un cercueil et une tête de mort', 'Un cœur couronné et une épée'],
+        correct: 1,
+        explanation: 'Le site donne pour Damballah le motif de deux serpents entrelacés.'
       },
 
-      /* ── GÉOGRAPHIE (11-15) ── */
+      /* ── GÉOGRAPHIE (17-23) ── */
       {
         category: 'Géographie',
-        question: 'Quelle est la capitale d'Haïti ?',
-        choices: [
-          'Cap-Haïtien',
-          'Gonaïves',
-          'Jacmel',
-          'Port-au-Prince'
-        ],
-        correct: 3,
-        explanation: 'Port-au-Prince, fondée en 1749, est la capitale et le principal centre économique, politique et culturel d'Haïti, abritant environ trois millions d'habitants dans son aire métropolitaine.'
-      },
-      {
-        category: 'Géographie',
-        question: 'Combien de départements compte Haïti ?',
-        choices: [
-          '8',
-          '9',
-          '10',
-          '12'
-        ],
-        correct: 2,
-        explanation: 'Haïti est divisée en 10 départements : Ouest, Nord, Nord-Est, Nord-Ouest, Artibonite, Centre, Sud, Grand'Anse, Nippes et Sud-Est — chacun subdivisé en arrondissements et communes.'
-      },
-      {
-        category: 'Géographie',
-        question: 'Dans quel département se trouve la Citadelle Laferrière, classée au patrimoine mondial de l'UNESCO ?',
-        choices: [
-          'Ouest',
-          'Artibonite',
-          'Nord',
-          'Sud'
-        ],
-        correct: 2,
-        explanation: 'La Citadelle Laferrière, forteresse colossale construite par Henri Christophe après l'indépendance pour protéger la nation d'une reconquête française, est située dans le département du Nord, près de Cap-Haïtien.'
-      },
-      {
-        category: 'Géographie',
-        question: 'Quel est le plus long fleuve d'Haïti ?',
-        choices: [
-          'La rivière Massacre',
-          'La rivière Artibonite',
-          'La rivière Péligre',
-          'Le fleuve des Cayes'
-        ],
+        question: 'Quelle ville est la capitale d\'Haïti ?',
+        choices: ['Cap-Haïtien', 'Port-au-Prince', 'Gonaïves', 'Jacmel'],
         correct: 1,
-        explanation: 'L'Artibonite, d'une longueur d'environ 280 km, est le plus long fleuve d'Haïti et le grenier à riz du pays — sa plaine alluviale nourrit une grande partie de la population haïtienne.'
+        explanation: 'Port-au-Prince est la capitale politique et économique du pays.'
       },
       {
         category: 'Géographie',
-        question: 'Quelle ville haïtienne est surnommée la « Cité des Poètes » ?',
-        choices: [
-          'Cap-Haïtien',
-          'Jacmel',
-          'Les Cayes',
-          'Jérémie'
-        ],
-        correct: 3,
-        explanation: 'Jérémie, dans le département de la Grand'Anse, est surnommée la « Cité des Poètes » pour avoir donné naissance à de nombreux écrivains et intellectuels, dont Alexandre Dumas père dont les ancêtres étaient haïtiens.'
+        question: 'Combien de départements compte Haïti selon son découpage actuel ?',
+        choices: ['8', '9', '10', '12'],
+        correct: 2,
+        explanation: 'Le pays est présenté comme divisé en 10 départements.'
+      },
+      {
+        category: 'Géographie',
+        question: 'Dans quel département se trouve la Citadelle Laferrière ?',
+        choices: ['Nord', 'Ouest', 'Sud-Est', 'Centre'],
+        correct: 0,
+        explanation: 'La Citadelle Laferrière se situe dans le département du Nord.'
+      },
+      {
+        category: 'Géographie',
+        question: 'Quel est le plus long fleuve d\'Haïti d\'après la page des départements ?',
+        choices: ['Massacre', 'Artibonite', 'Grise', 'Momance'],
+        correct: 1,
+        explanation: 'La rivière Artibonite est indiquée comme le plus long cours d\'eau du pays.'
+      },
+      {
+        category: 'Géographie',
+        question: 'Quel est le chef-lieu du Nord-Ouest ?',
+        choices: ['Port-de-Paix', 'Saint-Marc', 'Fort-Liberté', 'Môle Saint-Nicolas'],
+        correct: 0,
+        explanation: 'Le chef-lieu du Nord-Ouest est Port-de-Paix.'
+      },
+      {
+        category: 'Géographie',
+        question: 'Quel est le chef-lieu du département du Centre ?',
+        choices: ['Mirebalais', 'Belladère', 'Hinche', 'Thomonde'],
+        correct: 2,
+        explanation: 'Le département du Centre a pour chef-lieu Hinche.'
+      },
+      {
+        category: 'Géographie',
+        question: 'Quel est le chef-lieu du Sud-Est ?',
+        choices: ['Jacmel', 'Marigot', 'Les Cayes', 'Jérémie'],
+        correct: 0,
+        explanation: 'Jacmel est le chef-lieu du département du Sud-Est.'
       },
 
-      /* ── SOCIÉTÉ (16-20) ── */
+      /* ── SOCIÉTÉ (24-30) ── */
       {
         category: 'Société',
-        question: 'Quelle proportion de la population haïtienne parle le créole comme seule langue ?',
-        choices: [
-          '50 %',
-          '70 %',
-          '80 %',
-          'Environ 90–95 %'
-        ],
-        correct: 3,
-        explanation: 'Entre 90 et 95 % des Haïtiens sont monolingues créolophones ; le français, co-langue officielle depuis la Constitution de 1987, n'est maîtrisé que par une minorité scolarisée, ce qui fait du kreyòl la vraie langue maternelle de la nation.'
-      },
-      {
-        category: 'Société',
-        question: 'Qui fut la première femme à diriger Haïti comme chef d'État ?',
-        choices: [
-          'Marie-Claire Heureuse',
-          'Ertha Pascal-Trouillot',
-          'Mireille Durocher Bertin',
-          'Magalie Marcelin'
-        ],
-        correct: 1,
-        explanation: 'Ertha Pascal-Trouillot, première femme à siéger à la Cour de cassation d'Haïti, fut présidente provisoire de 1990 à 1991, supervisant les élections historiques qui portèrent Jean-Bertrand Aristide au pouvoir.'
-      },
-      {
-        category: 'Société',
-        question: 'Quel est le surnom donné au réseau de commerçantes qui assurent la distribution alimentaire dans tout le pays ?',
-        choices: [
-          'Machann yo',
-          'Madan Sara',
-          'Fanm Ayiti',
-          'Gwoupman Fanm'
-        ],
-        correct: 1,
-        explanation: 'Les Madan Sara sont des commerçantes itinérantes dont le réseau informe constitue l'épine dorsale de la distribution alimentaire entre régions rurales et urbaines d'Haïti, souvent sans crédit bancaire ni soutien étatique.'
-      },
-      {
-        category: 'Société',
-        question: 'En quelle année le séisme dévastateur a-t-il frappé Haïti, faisant plus de 200 000 morts ?',
-        choices: [
-          '2008',
-          '2010',
-          '2012',
-          '2016'
-        ],
-        correct: 1,
-        explanation: 'Le séisme du 12 janvier 2010, d'une magnitude de 7,0, détruisit une grande partie de l'agglomération de Port-au-Prince, fit plus de 200 000 morts et 1,5 million de sans-abri, déclenchant une réponse humanitaire internationale massive.'
-      },
-      {
-        category: 'Société',
-        question: 'Quel auteur haïtien a écrit « Gouverneurs de la rosée » (1944), chef-d'œuvre de la littérature caribéenne ?',
-        choices: [
-          'René Depestre',
-          'Edwidge Danticat',
-          'Jacques Roumain',
-          'Frankétienne'
-        ],
+        question: 'Quelle constitution reconnaît officiellement le créole comme langue de la République au même titre que le français ?',
+        choices: ['Constitution de 1805', 'Constitution de 1843', 'Constitution de 1987', 'Constitution de 2012'],
         correct: 2,
-        explanation: 'Jacques Roumain, écrivain, anthropologue et militant haïtien, écrivit « Gouverneurs de la rosée » en 1944, un roman qui célèbre la paysannerie haïtienne et la solidarité communautaire, traduit en plus de vingt langues.'
+        explanation: 'La Constitution de 1987 marque ce tournant linguistique majeur.'
+      },
+      {
+        category: 'Société',
+        question: 'Quelle proportion de la population est indiquée comme ne parlant que le créole pendant longtemps ?',
+        choices: ['Environ 30 %', 'Environ 55 %', 'Environ 75 %', 'Environ 95 %'],
+        correct: 3,
+        explanation: 'La page Créole évoque environ 95 % de créolophones monolingues.'
+      },
+      {
+        category: 'Société',
+        question: 'En quelle année l\'orthographe standardisée du créole est-elle officiellement adoptée par l\'IPN ?',
+        choices: ['1968', '1979', '1987', '1995'],
+        correct: 1,
+        explanation: 'La normalisation orthographique est datée de 1979 par l\'Institut Pédagogique National.'
+      },
+      {
+        category: 'Société',
+        question: 'Quelle station est citée comme pionnière de l\'information en créole ?',
+        choices: ['Radio Caraïbes', 'Radio Kiskeya', 'Signal FM', 'Radio Haïti-Inter'],
+        correct: 3,
+        explanation: 'Radio Haïti-Inter est mentionnée comme pionnière dans l\'usage médiatique du créole.'
+      },
+      {
+        category: 'Société',
+        question: 'Qui est identifié comme première femme cheffe d\'État en Haïti ?',
+        choices: ['Michaëlle Jean', 'Ertha Pascal-Trouillot', 'Suzy Castor', 'Myrlande Manigat'],
+        correct: 1,
+        explanation: 'Ertha Pascal-Trouillot a dirigé la transition présidentielle en 1990-1991.'
+      },
+      {
+        category: 'Société',
+        question: 'Comment appelle-t-on le réseau de commerçantes itinérantes essentiel à la distribution alimentaire ?',
+        choices: ['Madan Sara', 'Fanm Solèy', 'Ti Machann Leta', 'Mache Nasyonal'],
+        correct: 0,
+        explanation: 'Le réseau des Madan Sara relie marchés ruraux et urbains à travers le pays.'
+      },
+      {
+        category: 'Société',
+        question: 'Quel écrivain haïtien a écrit « Gouverneurs de la rosée » ?',
+        choices: ['Jacques Roumain', 'Frankétienne', 'René Depestre', 'Jean Price-Mars'],
+        correct: 0,
+        explanation: '« Gouverneurs de la rosée » (1944) est de Jacques Roumain.'
       }
     ];
 
@@ -815,10 +823,46 @@
     const resultsScreen = document.getElementById('resultsScreen');
     const progressWrap = document.getElementById('progressWrap');
     const quizMeta     = document.getElementById('quizMeta');
+    const quizIntro    = document.getElementById('quizIntro');
+    const startQuizBtn = document.getElementById('startQuizBtn');
+    const finalTotal   = document.getElementById('finalTotal');
+    const quizTotalTitle = document.getElementById('quizTotalTitle');
+    const totalQuestions = QUESTIONS.length;
+    const categoryTotals = QUESTIONS.reduce(function (acc, q) {
+      acc[q.category] = (acc[q.category] || 0) + 1;
+      return acc;
+    }, {});
+    if (quizTotalTitle) quizTotalTitle.textContent = totalQuestions;
+
+    function enterStartState() {
+      quizIntro.style.display = '';
+      progressWrap.style.display = 'none';
+      quizMeta.style.display = 'none';
+      quizCard.style.display = 'none';
+    }
+
+    function startQuiz() {
+      currentIndex = 0;
+      score = 0;
+      answered = false;
+      Object.keys(catScores).forEach(function (k) { catScores[k] = 0; });
+      scoreBadge.textContent = 'Score : 0';
+      if (finalTotal) finalTotal.textContent = '/ ' + totalQuestions;
+      quizIntro.style.display = 'none';
+      progressWrap.style.display = '';
+      quizMeta.style.display = '';
+      quizCard.style.display = '';
+      resultsScreen.className = 'quiz-results quiz-card';
+      renderQuestion();
+    }
 
     function renderQuestion() {
       answered = false;
       const q = QUESTIONS[currentIndex];
+      if (!q) {
+        showResults();
+        return;
+      }
 
       /* progress */
       const pct = Math.round(((currentIndex) / QUESTIONS.length) * 100);
@@ -879,31 +923,33 @@
       quizMeta.style.display = 'none';
 
       document.getElementById('finalScore').textContent = score;
+      if (finalTotal) finalTotal.textContent = '/ ' + totalQuestions;
 
       let msg, sub;
-      if (score >= 18) {
-        msg = 'Félicitations ! Vous êtes un(e) véritable expert(e) d'Haïti !';
-        sub = 'Un score exceptionnel ! Votre connaissance de l'histoire, de la culture et de la société haïtiennes est remarquable.';
-      } else if (score >= 14) {
+      const pct = score / totalQuestions;
+      if (pct >= 0.9) {
+        msg = 'Félicitations ! Vous êtes un(e) véritable expert(e) d\'Haïti !';
+        sub = 'Un score exceptionnel ! Votre connaissance de l\'histoire, de la culture, de la géographie et de la société haïtiennes est remarquable.';
+      } else if (pct >= 0.7) {
         msg = 'Très bien ! Vous connaissez bien Haïti.';
-        sub = 'Excellent résultat ! Quelques pages de ce site vous permettront d'atteindre la maîtrise complète.';
-      } else if (score >= 10) {
+        sub = 'Excellent résultat ! Quelques pages de ce site vous permettront d\'atteindre la maîtrise complète.';
+      } else if (pct >= 0.5) {
         msg = 'Pas mal ! Continuez à explorer ce site pour en apprendre davantage.';
         sub = 'Bonne base de connaissances ! Plongez dans nos sections Histoire, Culture et Géographie pour progresser encore.';
-      } else if (score >= 5) {
+      } else if (pct >= 0.3) {
         msg = 'Vous avez encore beaucoup à découvrir sur Haïti. Ce site est là pour vous !';
         sub = 'Ne vous découragez pas — chaque page de ce site est une invitation à mieux connaître la première République noire du monde.';
       } else {
         msg = 'Ne vous découragez pas — explorez nos pages pour tout apprendre sur Haïti !';
-        sub = 'Le voyage commence ici ! Ce site rassemble des centaines de pages sur l'histoire, la culture et la société haïtiennes.';
+        sub = 'Le voyage commence ici ! Ce site rassemble des centaines de pages sur l\'histoire, la culture et la société haïtiennes.';
       }
 
       document.getElementById('resultMessage').textContent = msg;
       document.getElementById('resultSub').textContent = sub;
-      document.getElementById('scoreHistoire').textContent = catScores['Histoire'] + ' / 5';
-      document.getElementById('scoreCulture').textContent = catScores['Culture'] + ' / 5';
-      document.getElementById('scoreGeographie').textContent = catScores['Géographie'] + ' / 5';
-      document.getElementById('scoreSociete').textContent = catScores['Société'] + ' / 5';
+      document.getElementById('scoreHistoire').textContent = catScores['Histoire'] + ' / ' + categoryTotals['Histoire'];
+      document.getElementById('scoreCulture').textContent = catScores['Culture'] + ' / ' + categoryTotals['Culture'];
+      document.getElementById('scoreGeographie').textContent = catScores['Géographie'] + ' / ' + categoryTotals['Géographie'];
+      document.getElementById('scoreSociete').textContent = catScores['Société'] + ' / ' + categoryTotals['Société'];
 
       resultsScreen.className = 'quiz-results quiz-card visible';
     }
@@ -917,22 +963,11 @@
       }
     });
 
-    document.getElementById('restartBtn').addEventListener('click', function () {
-      currentIndex = 0;
-      score = 0;
-      Object.keys(catScores).forEach(function (k) { catScores[k] = 0; });
-      scoreBadge.textContent = 'Score : 0';
+    startQuizBtn.addEventListener('click', startQuiz);
+    document.getElementById('restartBtn').addEventListener('click', startQuiz);
 
-      resultsScreen.className = 'quiz-results quiz-card';
-      quizCard.style.display = '';
-      progressWrap.style.display = '';
-      quizMeta.style.display = '';
-
-      renderQuestion();
-    });
-
-    /* Start */
-    renderQuestion();
+    /* Start screen */
+    enterStartState();
   }());
   </script>
 
