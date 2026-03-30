@@ -853,6 +853,11 @@
       quizMeta.style.display = '';
       quizCard.style.display = '';
       resultsScreen.className = 'quiz-results quiz-card';
+      explanationBox.textContent = '';
+      explanationBox.className = 'quiz-explanation';
+      choicesList.innerHTML = '';
+      nextBtn.className = 'quiz-next-btn';
+      nextBtn.disabled = true;
       renderQuestion();
     }
 
@@ -890,6 +895,7 @@
       explanationBox.textContent = '';
       explanationBox.className = 'quiz-explanation';
       nextBtn.className = 'quiz-next-btn';
+      nextBtn.disabled = true;
     }
 
     function handleChoice(index, clickedBtn) {
@@ -915,12 +921,16 @@
 
       scoreBadge.textContent = 'Score : ' + score;
       nextBtn.className = 'quiz-next-btn visible';
+      nextBtn.disabled = false;
     }
 
     function showResults() {
       quizCard.style.display = 'none';
       progressWrap.style.display = 'none';
       quizMeta.style.display = 'none';
+      choicesList.innerHTML = '';
+      nextBtn.className = 'quiz-next-btn';
+      nextBtn.disabled = true;
 
       document.getElementById('finalScore').textContent = score;
       if (finalTotal) finalTotal.textContent = '/ ' + totalQuestions;
@@ -955,6 +965,7 @@
     }
 
     nextBtn.addEventListener('click', function () {
+      if (!answered) return;
       currentIndex++;
       if (currentIndex < QUESTIONS.length) {
         renderQuestion();
