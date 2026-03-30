@@ -17,6 +17,33 @@
       max-width: 760px;
       margin: 0 auto;
     }
+    .quiz-lang {
+      display: flex;
+      justify-content: center;
+      gap: .5rem;
+      margin-bottom: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .quiz-lang__btn {
+      border: 1px solid var(--border, #e5e7eb);
+      background: #fff;
+      color: var(--text, #111827);
+      border-radius: 999px;
+      padding: .35rem .9rem;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .2s ease;
+    }
+    .quiz-lang__btn:hover {
+      border-color: var(--blue, #00209F);
+      color: var(--blue, #00209F);
+    }
+    .quiz-lang__btn.active {
+      background: var(--blue, #00209F);
+      border-color: var(--blue, #00209F);
+      color: #fff;
+    }
 
     /* Progress bar */
     .quiz-progress-wrap {
@@ -147,6 +174,11 @@
       border-color: #059669;
       color: #065f46;
     }
+    .quiz-choice-btn.selected:not(.correct):not(.wrong) {
+      border-color: var(--blue, #00209F);
+      background: #eff2ff;
+      color: #1f2937;
+    }
     .quiz-choice-btn.wrong {
       background: #fee2e2;
       border-color: #dc2626;
@@ -178,8 +210,13 @@
     }
 
     /* Next button */
+    .quiz-actions {
+      display: flex;
+      gap: .6rem;
+      flex-wrap: wrap;
+    }
+    .quiz-submit-btn,
     .quiz-next-btn {
-      display: none;
       background: var(--blue, #00209F);
       color: #fff;
       border: none;
@@ -190,9 +227,19 @@
       cursor: pointer;
       transition: background .2s, transform .1s;
     }
-    .quiz-next-btn:hover {
+    .quiz-submit-btn:hover:not(:disabled),
+    .quiz-next-btn:hover:not(:disabled) {
       background: #001a80;
       transform: translateY(-1px);
+    }
+    .quiz-submit-btn:disabled,
+    .quiz-next-btn:disabled {
+      opacity: .45;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .quiz-next-btn {
+      display: none;
     }
     .quiz-next-btn.visible {
       display: inline-block;
@@ -241,6 +288,36 @@
       line-height: 1.7;
       max-width: 520px;
       margin: 0 auto 2rem;
+    }
+    .quiz-results__percent {
+      margin: -1rem 0 1rem;
+      font-size: 15px;
+      font-weight: 700;
+      color: #1f2937;
+    }
+    .quiz-results__stats {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.3rem;
+    }
+    .quiz-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      border-radius: 999px;
+      padding: .3rem .85rem;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .quiz-pill--ok {
+      background: #dcfce7;
+      color: #166534;
+    }
+    .quiz-pill--ko {
+      background: #fee2e2;
+      color: #991b1b;
     }
     .quiz-restart-btn {
       background: var(--red, #D21034);
@@ -298,6 +375,13 @@
       }
       .quiz-question {
         font-size: 1.05rem;
+      }
+      .quiz-actions {
+        flex-direction: column;
+      }
+      .quiz-submit-btn,
+      .quiz-next-btn {
+        width: 100%;
       }
     }
   </style>
@@ -450,11 +534,16 @@
       <p class="section-subtitle text-center">Histoire • Culture • Géographie • Société — une question à la fois.</p>
 
       <div class="quiz-shell" id="quizShell">
+        <div class="quiz-lang" id="quizLangSwitcher" role="group" aria-label="Choix de langue du quiz">
+          <button class="quiz-lang__btn active" type="button" data-quiz-lang="fr">Français</button>
+          <button class="quiz-lang__btn" type="button" data-quiz-lang="en">English</button>
+          <button class="quiz-lang__btn" type="button" data-quiz-lang="ht">Kreyòl Ayisyen</button>
+        </div>
 
         <!-- Intro / start -->
         <div class="quiz-intro quiz-card" id="quizIntro">
-          <p class="quiz-intro__title">Prêt(e) à commencer ?</p>
-          <p class="quiz-intro__text">Cliquez sur le bouton ci-dessous pour lancer le quiz et afficher la première question.</p>
+          <p class="quiz-intro__title" id="introTitle">Prêt(e) à commencer ?</p>
+          <p class="quiz-intro__text" id="introText">Cliquez sur le bouton ci-dessous pour lancer le quiz et afficher la première question.</p>
           <button class="quiz-start-btn" id="startQuizBtn">Commencer le quiz</button>
         </div>
 
@@ -473,7 +562,10 @@
           <p class="quiz-question" id="questionText"></p>
           <ul class="quiz-choices" id="choicesList"></ul>
           <div class="quiz-explanation" id="explanationBox"></div>
-          <button class="quiz-next-btn" id="nextBtn">Question suivante →</button>
+          <div class="quiz-actions">
+            <button class="quiz-submit-btn" id="submitBtn" disabled>Valider</button>
+            <button class="quiz-next-btn" id="nextBtn">Question suivante →</button>
+          </div>
         </div>
 
         <!-- Results screen (hidden initially) -->
@@ -482,10 +574,15 @@
             <span class="big" id="finalScore">0</span>
             <span class="small" id="finalTotal">/ 30</span>
           </div>
+          <p class="quiz-results__percent" id="finalPercent">0%</p>
           <p class="quiz-results__msg" id="resultMessage"></p>
           <p class="quiz-results__sub" id="resultSub"></p>
+          <div class="quiz-results__stats">
+            <span class="quiz-pill quiz-pill--ok"><span id="correctLabel">Correctes</span>: <span id="correctCount">0</span></span>
+            <span class="quiz-pill quiz-pill--ko"><span id="wrongLabel">Incorrectes</span>: <span id="wrongCount">0</span></span>
+          </div>
           <div class="quiz-breakdown" id="breakdownBox">
-            <h4>Résultats par catégorie</h4>
+            <h4 id="breakdownTitle">Résultats par catégorie</h4>
             <div class="quiz-breakdown-row"><span class="cat-label">Histoire</span><span class="cat-score" id="scoreHistoire">0 / 0</span></div>
             <div class="quiz-breakdown-row"><span class="cat-label">Culture</span><span class="cat-score" id="scoreCulture">0 / 0</span></div>
             <div class="quiz-breakdown-row"><span class="cat-label">Géographie</span><span class="cat-score" id="scoreGeographie">0 / 0</span></div>
