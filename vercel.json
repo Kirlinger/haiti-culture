@@ -1,4 +1,26 @@
 {
+  "redirects": [
+    {
+      "source": "/en/quiz",
+      "destination": "/quiz.html",
+      "permanent": true
+    },
+    {
+      "source": "/en/quiz.html",
+      "destination": "/quiz.html",
+      "permanent": true
+    },
+    {
+      "source": "/kreyol/quiz",
+      "destination": "/quiz.html",
+      "permanent": true
+    },
+    {
+      "source": "/kreyol/quiz.html",
+      "destination": "/quiz.html",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
