@@ -322,14 +322,19 @@
 
   var totalQuestions = Math.min(QUESTIONS_PER_RUN, QUESTION_BANK.length);
   if (quizTotalTitle) quizTotalTitle.textContent = totalQuestions;
-  if (sectionTitle) sectionTitle.innerHTML = '<span id="quizTotalTitle">' + totalQuestions + '</span> Questions sur Haïti';
 
   function randomInt(maxExclusive) {
+    if (!maxExclusive || maxExclusive < 1) return 0;
     var cryptoObj = window.crypto || window.msCrypto;
     if (cryptoObj && cryptoObj.getRandomValues) {
       var arr = new Uint32Array(1);
-      cryptoObj.getRandomValues(arr);
-      return arr[0] % maxExclusive;
+      var limit = Math.floor(4294967296 / maxExclusive) * maxExclusive;
+      var value;
+      do {
+        cryptoObj.getRandomValues(arr);
+        value = arr[0];
+      } while (value >= limit);
+      return value % maxExclusive;
     }
     return Math.floor(Math.random() * maxExclusive);
   }
@@ -362,19 +367,39 @@
     };
   }
 
-  function buildRunQuestions() {
-    var selected = shuffle(QUESTION_BANK).slice(0, totalQuestions).map(makeQuestionVariant);
-    var signature = selected.map(function (q) {
-      return q.question + '|' + q.choices.join('||');
+  function getRunSignature(items) {
+    return items.map(function (q) {
+      return q.question;
     }).join('###');
-    if (lastRunSignature && signature === lastRunSignature) {
-      selected = shuffle(QUESTION_BANK).slice(0, totalQuestions).map(makeQuestionVariant);
-      signature = selected.map(function (q) {
-        return q.question + '|' + q.choices.join('||');
-      }).join('###');
+  }
+
+  function pickRandomIndices(poolSize, take) {
+    var idx = [];
+    for (var i = 0; i < poolSize; i++) idx.push(i);
+    for (var j = idx.length - 1; j > 0; j--) {
+      var k = randomInt(j + 1);
+      var tmp = idx[j];
+      idx[j] = idx[k];
+      idx[k] = tmp;
     }
+    return idx.slice(0, take);
+  }
+
+  function buildRunQuestions() {
+    var selectedIndices;
+    var selectedBase;
+    var signature = '';
+    var attempts = 0;
+    do {
+      selectedIndices = pickRandomIndices(QUESTION_BANK.length, totalQuestions);
+      selectedBase = selectedIndices.map(function (index) {
+        return QUESTION_BANK[index];
+      });
+      signature = getRunSignature(selectedBase);
+      attempts += 1;
+    } while (lastRunSignature && signature === lastRunSignature && attempts < 5);
     lastRunSignature = signature;
-    return selected;
+    return selectedBase.map(makeQuestionVariant);
   }
 
   function updateMeta() {
@@ -480,7 +505,11 @@
       allBtns[selectedChoice].classList.remove('selected');
       allBtns[selectedChoice].classList.add('correct');
       explanationBox.className = 'quiz-explanation visible';
-      explanationBox.textContent = '✓ ' + q.explanation;
+      explanationBox.textContent = '';
+      var okPrefix = document.createTextNode('✓ ');
+      var okText = document.createTextNode(q.explanation);
+      explanationBox.appendChild(okPrefix);
+      explanationBox.appendChild(okText);
     } else {
       allBtns[selectedChoice].classList.remove('selected');
       allBtns[selectedChoice].classList.add('wrong');
