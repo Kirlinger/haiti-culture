@@ -75,6 +75,37 @@
       padding: 2rem 2.2rem;
       box-shadow: 0 2px 12px rgba(0,0,0,.06);
     }
+    .quiz-intro {
+      text-align: center;
+      margin-bottom: 1.2rem;
+    }
+    .quiz-intro__title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--blue, #00209F);
+      margin: 0 0 .65rem;
+    }
+    .quiz-intro__text {
+      font-size: 15px;
+      color: #4b5563;
+      line-height: 1.65;
+      margin: 0 0 1.2rem;
+    }
+    .quiz-start-btn {
+      background: var(--blue, #00209F);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: .85rem 2.4rem;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background .2s, transform .1s;
+    }
+    .quiz-start-btn:hover {
+      background: #001a80;
+      transform: translateY(-1px);
+    }
     .quiz-question {
       font-size: 1.15rem;
       font-weight: 700;
@@ -419,6 +450,13 @@
       <p class="section-subtitle text-center">Histoire • Culture • Géographie • Société — une question à la fois.</p>
 
       <div class="quiz-shell" id="quizShell">
+
+        <!-- Intro / start -->
+        <div class="quiz-intro quiz-card" id="quizIntro">
+          <p class="quiz-intro__title">Prêt(e) à commencer ?</p>
+          <p class="quiz-intro__text">Cliquez sur le bouton ci-dessous pour lancer le quiz et afficher la première question.</p>
+          <button class="quiz-start-btn" id="startQuizBtn">Commencer le quiz</button>
+        </div>
 
         <!-- Progress + meta -->
         <div class="quiz-progress-wrap" id="progressWrap">
@@ -815,6 +853,30 @@
     const resultsScreen = document.getElementById('resultsScreen');
     const progressWrap = document.getElementById('progressWrap');
     const quizMeta     = document.getElementById('quizMeta');
+    const quizIntro    = document.getElementById('quizIntro');
+    const startQuizBtn = document.getElementById('startQuizBtn');
+
+    function enterStartState() {
+      quizIntro.style.display = '';
+      progressWrap.style.display = 'none';
+      quizMeta.style.display = 'none';
+      quizCard.style.display = 'none';
+      resultsScreen.className = 'quiz-results quiz-card';
+    }
+
+    function startQuiz() {
+      currentIndex = 0;
+      score = 0;
+      answered = false;
+      Object.keys(catScores).forEach(function (k) { catScores[k] = 0; });
+      scoreBadge.textContent = 'Score : 0';
+      quizIntro.style.display = 'none';
+      progressWrap.style.display = '';
+      quizMeta.style.display = '';
+      quizCard.style.display = '';
+      resultsScreen.className = 'quiz-results quiz-card';
+      renderQuestion();
+    }
 
     function renderQuestion() {
       answered = false;
@@ -917,22 +979,11 @@
       }
     });
 
-    document.getElementById('restartBtn').addEventListener('click', function () {
-      currentIndex = 0;
-      score = 0;
-      Object.keys(catScores).forEach(function (k) { catScores[k] = 0; });
-      scoreBadge.textContent = 'Score : 0';
+    startQuizBtn.addEventListener('click', startQuiz);
+    document.getElementById('restartBtn').addEventListener('click', startQuiz);
 
-      resultsScreen.className = 'quiz-results quiz-card';
-      quizCard.style.display = '';
-      progressWrap.style.display = '';
-      quizMeta.style.display = '';
-
-      renderQuestion();
-    });
-
-    /* Start */
-    renderQuestion();
+    /* Start screen */
+    enterStartState();
   }());
   </script>
 
