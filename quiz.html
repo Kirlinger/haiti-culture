@@ -17,34 +17,6 @@
       max-width: 760px;
       margin: 0 auto;
     }
-    .quiz-lang {
-      display: flex;
-      justify-content: center;
-      gap: .5rem;
-      margin-bottom: 1.2rem;
-      flex-wrap: wrap;
-    }
-    .quiz-lang__btn {
-      border: 1px solid var(--border, #e5e7eb);
-      background: #fff;
-      color: var(--text, #111827);
-      border-radius: 999px;
-      padding: .35rem .9rem;
-      font-size: 13px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all .2s ease;
-    }
-    .quiz-lang__btn:hover {
-      border-color: var(--blue, #00209F);
-      color: var(--blue, #00209F);
-    }
-    .quiz-lang__btn.active {
-      background: var(--blue, #00209F);
-      border-color: var(--blue, #00209F);
-      color: #fff;
-    }
-
     /* Progress bar */
     .quiz-progress-wrap {
       background: var(--border, #e5e7eb);
@@ -530,16 +502,10 @@
   <section class="section">
     <div class="container">
       <p class="section-label text-center">Quiz Interactif</p>
-      <h2 class="section-title text-center"><span id="quizTotalTitle">30</span> Questions sur Haïti</h2>
-      <p class="section-subtitle text-center">Histoire • Culture • Géographie • Société — une question à la fois.</p>
+      <h2 class="section-title text-center"><span id="quizTotalTitle">20</span> Questions sur Haïti</h2>
+      <p class="section-subtitle text-center">Histoire • Culture • Géographie • Société — une question à la fois, tirée aléatoirement d’une base plus large.</p>
 
       <div class="quiz-shell" id="quizShell">
-        <div class="quiz-lang" id="quizLangSwitcher" role="group" aria-label="Choix de langue du quiz">
-          <button class="quiz-lang__btn active" type="button" data-quiz-lang="fr">Français</button>
-          <button class="quiz-lang__btn" type="button" data-quiz-lang="en">English</button>
-          <button class="quiz-lang__btn" type="button" data-quiz-lang="ht">Kreyòl Ayisyen</button>
-        </div>
-
         <!-- Intro / start -->
         <div class="quiz-intro quiz-card" id="quizIntro">
           <p class="quiz-intro__title" id="introTitle">Prêt(e) à commencer ?</p>
@@ -552,7 +518,7 @@
           <div class="quiz-progress-bar" id="progressBar" style="width:5%"></div>
         </div>
         <div class="quiz-meta" id="quizMeta">
-          <span id="questionCounter">Question 1 / 30</span>
+          <span id="questionCounter">Question 1 / 20</span>
           <span class="quiz-score-badge" id="scoreBadge">Score : 0</span>
         </div>
 
@@ -572,7 +538,7 @@
         <div class="quiz-results quiz-card" id="resultsScreen">
           <div class="quiz-results__score-ring">
             <span class="big" id="finalScore">0</span>
-            <span class="small" id="finalTotal">/ 30</span>
+            <span class="small" id="finalTotal">/ 20</span>
           </div>
           <p class="quiz-results__percent" id="finalPercent">0%</p>
           <p class="quiz-results__msg" id="resultMessage"></p>
