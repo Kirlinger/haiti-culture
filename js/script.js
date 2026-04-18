@@ -51,7 +51,7 @@
   /* ── Scroll-reveal animation ─────────────────────────── */
   function initScrollReveal() {
     const elements = document.querySelectorAll(
-      '.card, .feature-card, .destination-card, .timeline-card, .person-card, .stat-item, .nation-card, .lwa-preview-card, .lwa-nav-item'
+      '.card, .feature-card, .destination-card, .person-card, .stat-item, .nation-card, .lwa-preview-card, .lwa-nav-item'
     );
 
     if (!('IntersectionObserver' in window)) return;

@@ -1696,7 +1696,7 @@ h1, h2, h3, h4 {
     transparent 100%);
 }
 
-.timeline-item {
+.timeline-track .timeline-item {
   display: flex;
   align-items: flex-start;
   gap: 0;
@@ -1705,17 +1705,17 @@ h1, h2, h3, h4 {
   position: relative;
 }
 
-.timeline-item:last-child { padding-bottom: 0; }
+.timeline-track .timeline-item:last-child { padding-bottom: 0; }
 
 /* Reset style.css even-item left-padding on mobile so layout stays single-column */
-.timeline-item:nth-child(even) {
+.timeline-track .timeline-item:nth-child(even) {
   padding-left: 0;
   padding-right: 0;
   justify-content: flex-start;
 }
 
 /* Dot sits in the left rail */
-.timeline-item__dot {
+.timeline-track .timeline-item__dot {
   position: absolute;
   left: -56px;
   top: 10px;
@@ -1733,18 +1733,18 @@ h1, h2, h3, h4 {
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
-.timeline-item--highlight .timeline-item__dot {
+.timeline-track .timeline-item--highlight .timeline-item__dot {
   background: linear-gradient(135deg, #0a1640, #00209F);
   border-color: rgba(0,32,159,0.5);
 }
 
-.timeline-item--gold .timeline-item__dot {
+.timeline-track .timeline-item--gold .timeline-item__dot {
   background: linear-gradient(135deg, #4a2800, var(--gold));
   border-color: rgba(196,146,42,0.7);
   box-shadow: 0 0 20px rgba(196,146,42,0.3);
 }
 
-.timeline-item__icon {
+.timeline-track .timeline-item__icon {
   width: 18px;
   height: 18px;
   display: flex;
@@ -1754,14 +1754,14 @@ h1, h2, h3, h4 {
   color: var(--navy);
 }
 
-.timeline-item--highlight .timeline-item__icon,
-.timeline-item--gold .timeline-item__icon { color: rgba(255,255,255,0.90); }
+.timeline-track .timeline-item--highlight .timeline-item__icon,
+.timeline-track .timeline-item--gold .timeline-item__icon { color: rgba(255,255,255,0.90); }
 
 /* Ensure SVG icons fill their containers consistently across all icon types */
 .card__icon-emoji svg,
 .feature-card__icon svg,
 .enjeu-card__icon svg,
-.timeline-item__icon svg,
+.timeline-track .timeline-item__icon svg,
 .memory-card__icon svg,
 .map-info-panel__icon svg,
 .map-info__icon svg,
@@ -1771,7 +1771,7 @@ h1, h2, h3, h4 {
   display: block;
 }
 
-.timeline-item__content {
+.timeline-track .timeline-item__content {
   background: var(--ivory);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -1785,7 +1785,7 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 
-.timeline-item__content::before {
+.timeline-track .timeline-item__content::before {
   content: '';
   position: absolute;
   left: 0; top: 0; bottom: 0;
@@ -1794,21 +1794,21 @@ h1, h2, h3, h4 {
   transition: background 0.3s ease;
 }
 
-.timeline-item--highlight .timeline-item__content::before { background: var(--blue); }
-.timeline-item--gold .timeline-item__content::before     { background: var(--gold); }
+.timeline-track .timeline-item--highlight .timeline-item__content::before { background: var(--blue); }
+.timeline-track .timeline-item--gold .timeline-item__content::before     { background: var(--gold); }
 
-.timeline-item:hover .timeline-item__content {
+.timeline-track .timeline-item:hover .timeline-item__content {
   transform: translateX(4px);
   box-shadow: var(--shadow-md);
   border-color: rgba(196,146,42,0.25);
 }
 
-.timeline-item:hover .timeline-item__dot {
+.timeline-track .timeline-item:hover .timeline-item__dot {
   transform: scale(1.15);
   box-shadow: 0 0 18px rgba(196,146,42,0.25);
 }
 
-.timeline-item__year {
+.timeline-track .timeline-item__year {
   font-family: var(--font-sans);
   font-size: 11px;
   font-weight: 700;
@@ -1818,7 +1818,7 @@ h1, h2, h3, h4 {
   margin-bottom: 6px;
 }
 
-.timeline-item__title {
+.timeline-track .timeline-item__title {
   font-family: var(--font-serif);
   font-size: 17px;
   font-weight: 700;
@@ -1827,16 +1827,16 @@ h1, h2, h3, h4 {
   letter-spacing: -0.01em;
 }
 
-.timeline-item--gold .timeline-item__year  { color: var(--gold); }
-.timeline-item--gold .timeline-item__title { color: var(--blue); }
+.timeline-track .timeline-item--gold .timeline-item__year  { color: var(--gold); }
+.timeline-track .timeline-item--gold .timeline-item__title { color: var(--blue); }
 
-.timeline-item__desc {
+.timeline-track .timeline-item__desc {
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.72;
 }
 
-.timeline-item__desc em {
+.timeline-track .timeline-item__desc em {
   font-style: italic;
   color: var(--text-mid);
 }
@@ -1860,15 +1860,15 @@ h1, h2, h3, h4 {
   100% { box-shadow: 0 0 0 0   rgba(196,146,42,0),   0 0 20px rgba(196,146,42,0.3); }
 }
 
-.timeline-item__dot {
+.timeline-track .timeline-item__dot {
   animation: timeline-dot-pulse 2.8s ease-in-out infinite;
 }
 
-.timeline-item--highlight .timeline-item__dot {
+.timeline-track .timeline-item--highlight .timeline-item__dot {
   animation: timeline-dot-pulse-blue 2.8s ease-in-out infinite;
 }
 
-.timeline-item--gold .timeline-item__dot {
+.timeline-track .timeline-item--gold .timeline-item__dot {
   animation: timeline-dot-pulse-gold 2.2s ease-in-out infinite;
 }
 
@@ -1890,7 +1890,7 @@ h1, h2, h3, h4 {
   }
 
   /* Odd items (1st, 3rd…) → content on LEFT side */
-  .timeline-item {
+  .timeline-track .timeline-item {
     display: flex;
     justify-content: flex-end;
     padding-right: calc(50% + 36px);
@@ -1901,51 +1901,51 @@ h1, h2, h3, h4 {
   }
 
   /* Even items (2nd, 4th…) → content on RIGHT side */
-  .timeline-item:nth-child(even) {
+  .timeline-track .timeline-item:nth-child(even) {
     justify-content: flex-start;
     padding-right: 0;
     padding-left: calc(50% + 36px);
   }
 
   /* Dot: pinned to the center line via absolute positioning (out of flex flow) */
-  .timeline-item__dot {
+  .timeline-track .timeline-item__dot {
     position: absolute;
     left: calc(50% - 18px);
     top: 10px;
   }
 
   /* Content fills the available flex space (constrained by parent padding) */
-  .timeline-item__content {
+  .timeline-track .timeline-item__content {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
 
   /* Left-side accent line: stays on left for odd items */
-  .timeline-item:nth-child(odd) .timeline-item__content::before {
+  .timeline-track .timeline-item:nth-child(odd) .timeline-item__content::before {
     left: 0;
     right: auto;
   }
 
   /* Right-side accent line for even items */
-  .timeline-item:nth-child(even) .timeline-item__content::before {
+  .timeline-track .timeline-item:nth-child(even) .timeline-item__content::before {
     left: auto;
     right: 0;
   }
 
   /* Hover slide effects */
-  .timeline-item:nth-child(odd):hover .timeline-item__content {
+  .timeline-track .timeline-item:nth-child(odd):hover .timeline-item__content {
     transform: translateX(-5px);
   }
 
-  .timeline-item:nth-child(even):hover .timeline-item__content {
+  .timeline-track .timeline-item:nth-child(even):hover .timeline-item__content {
     transform: translateX(5px);
   }
 
   /* Right-side items: mirror text alignment */
-  .timeline-item:nth-child(even) .timeline-item__content { text-align: right; }
-  .timeline-item:nth-child(even) .timeline-item__desc    { text-align: right; }
-  .timeline-item:nth-child(even) .timeline-item__year    { text-align: right; }
+  .timeline-track .timeline-item:nth-child(even) .timeline-item__content { text-align: right; }
+  .timeline-track .timeline-item:nth-child(even) .timeline-item__desc    { text-align: right; }
+  .timeline-track .timeline-item:nth-child(even) .timeline-item__year    { text-align: right; }
 }
 
 .btn-outline-dark {
@@ -2531,10 +2531,10 @@ h1, h2, h3, h4 {
    ══════════════════════════════════════════════════════ */
 @media (prefers-color-scheme: dark) {
   .figure-card { background: rgba(255,255,255,0.04); }
-  .timeline-item__content { background: #0E1420; border-color: rgba(255,255,255,0.07); }
-  .timeline-item__dot { background: #0E1420; }
-  .timeline-item__title { color: #E2E8F0; }
-  .timeline-item__desc { color: #7A8FA8; }
+  .timeline-track .timeline-item__content { background: #0E1420; border-color: rgba(255,255,255,0.07); }
+  .timeline-track .timeline-item__dot { background: #0E1420; }
+  .timeline-track .timeline-item__title { color: #E2E8F0; }
+  .timeline-track .timeline-item__desc { color: #7A8FA8; }
   .btn-outline-dark { color: rgba(255,255,255,0.75); border-color: rgba(255,255,255,0.18); }
   .btn-outline-dark:hover { background: rgba(255,255,255,0.08); }
 }
