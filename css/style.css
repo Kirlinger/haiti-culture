@@ -2891,7 +2891,6 @@ ul {
   border: 1px solid var(--border, #e2e8f0);
 }
 .researcher-bio__avatar {
-  --researcher-avatar-focus-y: 28%;
   aspect-ratio: 1;
   max-width: 220px;
   width: 100%;
@@ -2904,7 +2903,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center var(--researcher-avatar-focus-y);
+  object-position: center 28%; /* Keeps the face centered in the square crop */
   display: block;
   transform: translateZ(0);
 }
