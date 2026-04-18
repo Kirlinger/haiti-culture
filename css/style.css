@@ -2899,7 +2899,6 @@ ul {
   overflow: hidden;
   background: transparent;
   box-shadow: var(--shadow-sm);
-  transition: transform 0.35s ease, filter 0.35s ease;
 }
 .researcher-bio__avatar img {
   width: 100%;
@@ -2908,12 +2907,16 @@ ul {
   object-position: center var(--researcher-avatar-focus-y);
   display: block;
   transform: translateZ(0);
-  transition: transform 0.35s ease, filter 0.35s ease;
 }
-.researcher-bio__avatar:hover img,
-.researcher-bio__avatar:focus-within img {
-  transform: scale(1.03);
-  filter: brightness(1.03);
+@media (prefers-reduced-motion: no-preference) {
+  .researcher-bio__avatar img {
+    transition: transform 0.35s ease, filter 0.35s ease;
+  }
+  .researcher-bio__avatar:hover img,
+  .researcher-bio__avatar:focus-within img {
+    transform: scale(1.03);
+    filter: brightness(1.03);
+  }
 }
 .researcher-bio__text {}
 .researcher-bio__text h2 {
