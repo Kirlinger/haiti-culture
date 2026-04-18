@@ -1,7 +1,10 @@
 (function () {
   'use strict';
 
-  var QUESTIONS_PER_RUN = 20;
+  var QUESTIONS_PER_RUN = 30;
+  var BASE_POINTS = 10;
+  var STREAK_MULTIPLIER = 2;
+  var MAX_STREAK_BONUS = 20;
 
   var QUESTION_BANK = [
     {
@@ -276,6 +279,9 @@
 
   var currentIndex = 0;
   var score = 0;
+  var points = 0;
+  var streak = 0;
+  var bestStreakValue = 0;
   var selectedChoice = null;
   var answered = false;
   var runQuestions = [];
@@ -286,11 +292,16 @@
 
   var sectionTitle = document.querySelector('.section-title');
   var progressBar = document.getElementById('progressBar');
+  var progressPercent = document.getElementById('progressPercent');
   var questionCounter = document.getElementById('questionCounter');
   var scoreBadge = document.getElementById('scoreBadge');
+  var pointsBadge = document.getElementById('pointsBadge');
+  var streakBadge = document.getElementById('streakBadge');
   var questionCategory = document.getElementById('questionCategory');
   var questionText = document.getElementById('questionText');
   var choicesList = document.getElementById('choicesList');
+  var selectionHint = document.getElementById('selectionHint');
+  var feedbackBadge = document.getElementById('feedbackBadge');
   var explanationBox = document.getElementById('explanationBox');
   var submitBtn = document.getElementById('submitBtn');
   var nextBtn = document.getElementById('nextBtn');
@@ -308,6 +319,7 @@
   var resultSub = document.getElementById('resultSub');
   var correctCount = document.getElementById('correctCount');
   var wrongCount = document.getElementById('wrongCount');
+  var bestStreak = document.getElementById('bestStreak');
   var restartBtn = document.getElementById('restartBtn');
   var scoreEls = {
     Histoire: document.getElementById('scoreHistoire'),
@@ -315,8 +327,14 @@
     Géographie: document.getElementById('scoreGeographie'),
     Société: document.getElementById('scoreSociete')
   };
+  var fillEls = {
+    Histoire: document.getElementById('fillHistoire'),
+    Culture: document.getElementById('fillCulture'),
+    Géographie: document.getElementById('fillGeographie'),
+    Société: document.getElementById('fillSociete')
+  };
 
-  if (!progressBar || !questionCounter || !scoreBadge || !questionCategory || !questionText || !choicesList || !explanationBox || !submitBtn || !nextBtn || !quizCard || !resultsScreen || !progressWrap || !quizMeta || !quizIntro || !startQuizBtn || !restartBtn) {
+  if (!progressBar || !progressPercent || !questionCounter || !scoreBadge || !pointsBadge || !streakBadge || !questionCategory || !questionText || !choicesList || !selectionHint || !feedbackBadge || !explanationBox || !submitBtn || !nextBtn || !quizCard || !resultsScreen || !progressWrap || !quizMeta || !quizIntro || !startQuizBtn || !restartBtn) {
     return;
   }
 
@@ -404,14 +422,48 @@
 
   function updateMeta() {
     scoreBadge.textContent = 'Score : ' + score;
+    pointsBadge.textContent = 'Points : ' + points;
+    streakBadge.textContent = 'Série : ' + streak;
     questionCounter.textContent = 'Question ' + (currentIndex + 1) + ' / ' + totalQuestions;
+  }
+
+  function calculatePercentage(completed, total) {
+    if (total <= 0) return 0;
+    return Math.round((completed / total) * 100);
+  }
+
+  function computeEarnedPoints(currentStreak) {
+    return BASE_POINTS + Math.min(currentStreak * STREAK_MULTIPLIER, MAX_STREAK_BONUS);
+  }
+
+  function updateProgress(completedCount) {
+    var clampedCount = Math.max(0, Math.min(completedCount || 0, totalQuestions));
+    var pct = calculatePercentage(clampedCount, totalQuestions);
+    progressBar.style.width = pct + '%';
+    progressPercent.textContent = pct + '%';
+    progressBar.setAttribute('aria-valuenow', String(pct));
+    progressBar.setAttribute('aria-valuetext', pct + '% (' + clampedCount + ' sur ' + totalQuestions + ' questions)');
   }
 
   function updateCategoryRows() {
     categoryKeys.forEach(function (key) {
       if (!scoreEls[key]) return;
       scoreEls[key].textContent = catScores[key] + ' / ' + categoryTotals[key];
+      if (fillEls[key]) {
+        var total = categoryTotals[key];
+        var ratio = calculatePercentage(catScores[key], total);
+        fillEls[key].style.width = ratio + '%';
+      }
     });
+  }
+
+  function setFeedback(type, text) {
+    if (!feedbackBadge) return;
+    var hasContent = Boolean(type && text);
+    feedbackBadge.className = hasContent
+      ? 'quiz-feedback visible quiz-feedback--' + (type === 'ok' ? 'ok' : 'ko')
+      : 'quiz-feedback';
+    feedbackBadge.textContent = hasContent ? text : '';
   }
 
   function setStartState() {
@@ -424,12 +476,16 @@
     submitBtn.style.display = '';
     nextBtn.className = 'quiz-next-btn';
     nextBtn.disabled = true;
+    setFeedback('', '');
   }
 
   function startQuiz() {
     runQuestions = buildRunQuestions();
     currentIndex = 0;
     score = 0;
+    points = 0;
+    streak = 0;
+    bestStreakValue = 0;
     selectedChoice = null;
     answered = false;
     categoryKeys.forEach(function (k) {
@@ -448,6 +504,7 @@
   }
 
   function renderQuestion() {
+    quizCard.classList.add('is-transitioning');
     answered = false;
     selectedChoice = null;
     var q = runQuestions[currentIndex];
@@ -456,8 +513,7 @@
       return;
     }
 
-    var pct = Math.round((currentIndex / totalQuestions) * 100);
-    progressBar.style.width = Math.max(pct, 5) + '%';
+    updateProgress(currentIndex);
     updateMeta();
 
     questionCategory.textContent = q.category;
@@ -476,18 +532,25 @@
         choicesList.querySelectorAll('.quiz-choice-btn').forEach(function (b) { b.classList.remove('selected'); });
         btn.classList.add('selected');
         submitBtn.disabled = false;
+        selectionHint.textContent = 'Réponse ' + letter + ' sélectionnée. Cliquez sur le bouton de validation.';
+        setFeedback('', '');
       });
       li.appendChild(btn);
       choicesList.appendChild(li);
     });
 
+    setFeedback('', '');
+    selectionHint.textContent = '';
     explanationBox.textContent = '';
     explanationBox.className = 'quiz-explanation';
     submitBtn.disabled = true;
     submitBtn.style.display = '';
     nextBtn.className = 'quiz-next-btn';
     nextBtn.disabled = true;
-    nextBtn.textContent = (currentIndex === totalQuestions - 1) ? 'Soumettre le quiz' : 'Question suivante →';
+    nextBtn.textContent = (currentIndex === totalQuestions - 1) ? 'Voir mes résultats →' : 'Question suivante →';
+    window.requestAnimationFrame(function () {
+      quizCard.classList.remove('is-transitioning');
+    });
   }
 
   function submitAnswer() {
@@ -498,9 +561,14 @@
     var allBtns = choicesList.querySelectorAll('.quiz-choice-btn');
     allBtns.forEach(function (btn) { btn.disabled = true; });
     submitBtn.style.display = 'none';
+    selectionHint.textContent = '';
 
     if (selectedChoice === q.correct) {
       score += 1;
+      streak += 1;
+      bestStreakValue = Math.max(bestStreakValue, streak);
+      var earnedPoints = computeEarnedPoints(streak);
+      points += earnedPoints;
       catScores[q.category] += 1;
       allBtns[selectedChoice].classList.remove('selected');
       allBtns[selectedChoice].classList.add('correct');
@@ -510,7 +578,9 @@
       var okText = document.createTextNode(q.explanation);
       explanationBox.appendChild(okPrefix);
       explanationBox.appendChild(okText);
+      setFeedback('ok', 'Bonne réponse ! +' + earnedPoints + ' points');
     } else {
+      streak = 0;
       allBtns[selectedChoice].classList.remove('selected');
       allBtns[selectedChoice].classList.add('wrong');
       allBtns[q.correct].classList.add('correct');
@@ -523,8 +593,10 @@
       explanationBox.appendChild(prefix);
       explanationBox.appendChild(strongNode);
       explanationBox.appendChild(suffix);
+      setFeedback('ko', 'Réponse incorrecte. La série repart à 0.');
     }
 
+    updateProgress(currentIndex + 1);
     updateMeta();
     updateCategoryRows();
     nextBtn.className = 'quiz-next-btn visible';
@@ -558,8 +630,10 @@
     if (resultSub) resultSub.textContent = copy.sub;
     if (correctCount) correctCount.textContent = String(score);
     if (wrongCount) wrongCount.textContent = String(wrong);
+    if (bestStreak) bestStreak.textContent = String(bestStreakValue);
 
     updateCategoryRows();
+    setFeedback('', '');
     resultsScreen.className = 'quiz-results quiz-card visible';
   }
 

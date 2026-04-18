@@ -11,352 +11,8 @@
   <meta property="og:url" content="https://republiquehaiti.org/quiz.html" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/premium.css" />
-  <style>
-    /* ── Quiz engine styles ── */
-    .quiz-shell {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-    /* Progress bar */
-    .quiz-progress-wrap {
-      background: var(--border, #e5e7eb);
-      border-radius: 99px;
-      height: 8px;
-      margin-bottom: 1.5rem;
-      overflow: hidden;
-    }
-    .quiz-progress-bar {
-      height: 100%;
-      background: var(--blue, #00209F);
-      border-radius: 99px;
-      transition: width .4s ease;
-    }
+    <link rel="stylesheet" href="css/quiz.css" />
 
-    /* Meta row */
-    .quiz-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.4rem;
-      font-size: 14px;
-      font-weight: 600;
-      color: #6b7280;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-    }
-    .quiz-score-badge {
-      background: var(--blue, #00209F);
-      color: #fff;
-      border-radius: 99px;
-      padding: 2px 14px;
-      font-size: 13px;
-    }
-
-    /* Category chip */
-    .quiz-category {
-      display: inline-block;
-      background: #f3f4f6;
-      color: var(--blue, #00209F);
-      border-radius: 6px;
-      padding: 3px 12px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .07em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
-    /* Question card */
-    .quiz-card {
-      background: #fff;
-      border: 1px solid var(--border, #e5e7eb);
-      border-radius: 16px;
-      padding: 2rem 2.2rem;
-      box-shadow: 0 2px 12px rgba(0,0,0,.06);
-    }
-    .quiz-intro {
-      text-align: center;
-      margin-bottom: 1.2rem;
-    }
-    .quiz-intro__title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: var(--blue, #00209F);
-      margin: 0 0 .65rem;
-    }
-    .quiz-intro__text {
-      font-size: 15px;
-      color: #4b5563;
-      line-height: 1.65;
-      margin: 0 0 1.2rem;
-    }
-    .quiz-start-btn {
-      background: var(--blue, #00209F);
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      padding: .85rem 2.4rem;
-      font-size: 16px;
-      font-weight: 800;
-      cursor: pointer;
-      transition: background .2s, transform .1s;
-    }
-    .quiz-start-btn:hover {
-      background: #001a80;
-      transform: translateY(-1px);
-    }
-    .quiz-question {
-      font-size: 1.15rem;
-      font-weight: 700;
-      line-height: 1.55;
-      margin-bottom: 1.6rem;
-      color: var(--text, #111827);
-    }
-
-    /* Choices */
-    .quiz-choices {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 1.4rem;
-      display: flex;
-      flex-direction: column;
-      gap: .7rem;
-    }
-    .quiz-choice-btn {
-      width: 100%;
-      text-align: left;
-      background: #f9fafb;
-      border: 2px solid var(--border, #e5e7eb);
-      border-radius: 10px;
-      padding: .75rem 1.1rem;
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: border-color .2s, background .2s, transform .1s;
-      line-height: 1.45;
-      color: var(--text, #111827);
-    }
-    .quiz-choice-btn:hover:not(:disabled) {
-      border-color: var(--blue, #00209F);
-      background: #eff2ff;
-      transform: translateX(3px);
-    }
-    .quiz-choice-btn.correct {
-      background: #d1fae5;
-      border-color: #059669;
-      color: #065f46;
-    }
-    .quiz-choice-btn.selected:not(.correct):not(.wrong) {
-      border-color: var(--blue, #00209F);
-      background: #eff2ff;
-      color: #1f2937;
-    }
-    .quiz-choice-btn.wrong {
-      background: #fee2e2;
-      border-color: #dc2626;
-      color: #991b1b;
-    }
-    .quiz-choice-btn:disabled {
-      cursor: default;
-    }
-
-    /* Explanation box */
-    .quiz-explanation {
-      display: none;
-      background: #f0fdf4;
-      border-left: 4px solid #059669;
-      border-radius: 0 8px 8px 0;
-      padding: .8rem 1rem;
-      font-size: 14px;
-      line-height: 1.7;
-      color: #1a3c2b;
-      margin-bottom: 1.2rem;
-    }
-    .quiz-explanation.wrong-explain {
-      background: #fff7ed;
-      border-color: #d97706;
-      color: #451a03;
-    }
-    .quiz-explanation.visible {
-      display: block;
-    }
-
-    /* Next button */
-    .quiz-actions {
-      display: flex;
-      gap: .6rem;
-      flex-wrap: wrap;
-    }
-    .quiz-submit-btn,
-    .quiz-next-btn {
-      background: var(--blue, #00209F);
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      padding: .75rem 2rem;
-      font-size: 15px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background .2s, transform .1s;
-    }
-    .quiz-submit-btn:hover:not(:disabled),
-    .quiz-next-btn:hover:not(:disabled) {
-      background: #001a80;
-      transform: translateY(-1px);
-    }
-    .quiz-submit-btn:disabled,
-    .quiz-next-btn:disabled {
-      opacity: .45;
-      cursor: not-allowed;
-      transform: none;
-    }
-    .quiz-next-btn {
-      display: none;
-    }
-    .quiz-next-btn.visible {
-      display: inline-block;
-    }
-
-    /* Results screen */
-    .quiz-results {
-      display: none;
-      text-align: center;
-      padding: 2.5rem 2rem;
-    }
-    .quiz-results.visible {
-      display: block;
-    }
-    .quiz-results__score-ring {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      background: var(--blue, #00209F);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem;
-      box-shadow: 0 4px 24px rgba(0,32,159,.25);
-    }
-    .quiz-results__score-ring .big {
-      font-size: 2.8rem;
-      font-weight: 900;
-      line-height: 1;
-    }
-    .quiz-results__score-ring .small {
-      font-size: 1rem;
-      opacity: .75;
-    }
-    .quiz-results__msg {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--blue, #00209F);
-      margin-bottom: .75rem;
-    }
-    .quiz-results__sub {
-      font-size: 15px;
-      color: #4b5563;
-      line-height: 1.7;
-      max-width: 520px;
-      margin: 0 auto 2rem;
-    }
-    .quiz-results__percent {
-      margin: -1rem 0 1rem;
-      font-size: 15px;
-      font-weight: 700;
-      color: #1f2937;
-    }
-    .quiz-results__stats {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.3rem;
-    }
-    .quiz-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: .4rem;
-      border-radius: 999px;
-      padding: .3rem .85rem;
-      font-size: 13px;
-      font-weight: 700;
-    }
-    .quiz-pill--ok {
-      background: #dcfce7;
-      color: #166534;
-    }
-    .quiz-pill--ko {
-      background: #fee2e2;
-      color: #991b1b;
-    }
-    .quiz-restart-btn {
-      background: var(--red, #D21034);
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      padding: .85rem 2.5rem;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background .2s, transform .1s;
-    }
-    .quiz-restart-btn:hover {
-      background: #a80d28;
-      transform: translateY(-1px);
-    }
-
-    /* Category breakdown */
-    .quiz-breakdown {
-      margin: 1.5rem auto 0;
-      max-width: 400px;
-      text-align: left;
-    }
-    .quiz-breakdown h4 {
-      font-size: .8rem;
-      text-transform: uppercase;
-      letter-spacing: .07em;
-      color: #6b7280;
-      margin-bottom: .75rem;
-      text-align: center;
-    }
-    .quiz-breakdown-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 14px;
-      padding: .4rem 0;
-      border-bottom: 1px solid #f3f4f6;
-    }
-    .quiz-breakdown-row:last-child {
-      border-bottom: none;
-    }
-    .quiz-breakdown-row .cat-label {
-      font-weight: 600;
-      color: var(--text, #111827);
-    }
-    .quiz-breakdown-row .cat-score {
-      font-weight: 700;
-      color: var(--blue, #00209F);
-    }
-
-    @media (max-width: 600px) {
-      .quiz-card {
-        padding: 1.4rem 1.2rem;
-      }
-      .quiz-question {
-        font-size: 1.05rem;
-      }
-      .quiz-actions {
-        flex-direction: column;
-      }
-      .quiz-submit-btn,
-      .quiz-next-btn {
-        width: 100%;
-      }
-    }
-  </style>
 </head>
 <body>
 
@@ -502,6 +158,7 @@
   <section class="section">
     <div class="container">
       <p class="section-label text-center">Quiz Interactif</p>
+      <p class="quiz-version-note text-center">Nouvelle version quiz • Avril 2026</p>
       <h2 class="section-title text-center"><span id="quizTotalTitle"></span> Questions sur Haïti</h2>
       <p class="section-subtitle text-center">Histoire • Culture • Géographie • Société — une question à la fois, tirée aléatoirement d’une base plus large.</p>
 
@@ -515,21 +172,30 @@
 
         <!-- Progress + meta -->
         <div class="quiz-progress-wrap" id="progressWrap">
-          <div class="quiz-progress-bar" id="progressBar" style="width:5%"></div>
+          <div class="quiz-progress-head">
+            <span id="questionCounter"></span>
+            <span id="progressPercent">0%</span>
+          </div>
+          <div class="quiz-progress-track" id="progressTrack">
+            <div class="quiz-progress-bar" id="progressBar" role="progressbar" aria-label="Progression du quiz" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0% (aucune question traitée)" style="width:0%"></div>
+          </div>
         </div>
         <div class="quiz-meta" id="quizMeta">
-          <span id="questionCounter"></span>
           <span class="quiz-score-badge" id="scoreBadge">Score : 0</span>
+          <span class="quiz-points-badge" id="pointsBadge">Points : 0</span>
+          <span class="quiz-streak-badge" id="streakBadge" aria-live="polite">Série : 0</span>
         </div>
 
         <!-- Question card -->
-        <div class="quiz-card" id="quizCard">
+        <div class="quiz-card quiz-card--question" id="quizCard">
           <span class="quiz-category" id="questionCategory">Histoire</span>
           <p class="quiz-question" id="questionText"></p>
           <ul class="quiz-choices" id="choicesList"></ul>
+          <p class="quiz-selection-hint" id="selectionHint" aria-live="polite"></p>
+          <div class="quiz-feedback" id="feedbackBadge" role="status" aria-live="polite"></div>
           <div class="quiz-explanation" id="explanationBox"></div>
           <div class="quiz-actions">
-            <button class="quiz-submit-btn" id="submitBtn" disabled>Valider</button>
+            <button class="quiz-submit-btn" id="submitBtn" disabled>Valider la réponse</button>
             <button class="quiz-next-btn" id="nextBtn">Question suivante →</button>
           </div>
         </div>
@@ -546,13 +212,26 @@
           <div class="quiz-results__stats">
             <span class="quiz-pill quiz-pill--ok"><span id="correctLabel">Correctes</span>: <span id="correctCount">0</span></span>
             <span class="quiz-pill quiz-pill--ko"><span id="wrongLabel">Incorrectes</span>: <span id="wrongCount">0</span></span>
+            <span class="quiz-pill quiz-pill--streak">Meilleure série: <span id="bestStreak">0</span></span>
           </div>
           <div class="quiz-breakdown" id="breakdownBox">
             <h4 id="breakdownTitle">Résultats par catégorie</h4>
-            <div class="quiz-breakdown-row"><span class="cat-label">Histoire</span><span class="cat-score" id="scoreHistoire">0 / 0</span></div>
-            <div class="quiz-breakdown-row"><span class="cat-label">Culture</span><span class="cat-score" id="scoreCulture">0 / 0</span></div>
-            <div class="quiz-breakdown-row"><span class="cat-label">Géographie</span><span class="cat-score" id="scoreGeographie">0 / 0</span></div>
-            <div class="quiz-breakdown-row"><span class="cat-label">Société</span><span class="cat-score" id="scoreSociete">0 / 0</span></div>
+            <div class="quiz-breakdown-row">
+              <div class="row-top"><span class="cat-label">Histoire</span><span class="cat-score" id="scoreHistoire">0 / 0</span></div>
+              <div class="cat-track"><div class="cat-fill" id="fillHistoire"></div></div>
+            </div>
+            <div class="quiz-breakdown-row">
+              <div class="row-top"><span class="cat-label">Culture</span><span class="cat-score" id="scoreCulture">0 / 0</span></div>
+              <div class="cat-track"><div class="cat-fill" id="fillCulture"></div></div>
+            </div>
+            <div class="quiz-breakdown-row">
+              <div class="row-top"><span class="cat-label">Géographie</span><span class="cat-score" id="scoreGeographie">0 / 0</span></div>
+              <div class="cat-track"><div class="cat-fill" id="fillGeographie"></div></div>
+            </div>
+            <div class="quiz-breakdown-row">
+              <div class="row-top"><span class="cat-label">Société</span><span class="cat-score" id="scoreSociete">0 / 0</span></div>
+              <div class="cat-track"><div class="cat-fill" id="fillSociete"></div></div>
+            </div>
           </div>
           <br>
           <button class="quiz-restart-btn" id="restartBtn">↺ Recommencer</button>
@@ -645,7 +324,7 @@
 
   <script src="js/script.js"></script>
   <script src="js/premium.js"></script>
-  <script src="js/quiz.js"></script>
+  <script src="js/quiz.js?v=20260418-quiz-ui-ux-2"></script>
 
 
 </body>
