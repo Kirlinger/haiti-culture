@@ -2871,7 +2871,7 @@ ul {
   font-style: italic;
 }
 .researcher-note::before {
-  content: "Note du chercheur — ";
+  content: "Note du chercheur : ";
   font-weight: 700;
   font-style: normal;
 }

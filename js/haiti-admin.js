@@ -270,7 +270,7 @@ var HAITI_ADMIN = [
             department: 'Nord', arrondissement: 'Cap-Haïtien',
             chefLieuDepartement: false, chefLieuArrondissement: false,
             population: '~48 000 hab.',
-            description: 'Commune côtière au nord-est de Cap-Haïtien, site de fouilles archéologiques de La Navidad — première colonie européenne en Amérique (1492).',
+            description: 'Commune côtière au nord-est de Cap-Haïtien, site de fouilles archéologiques de La Navidad, première colonie européenne en Amérique (1492).',
             characteristics: 'Site archéologique de La Navidad, Université Roi Henri Christophe, parc industriel, plages.',
             sections: ['Limonade-Centre', 'Bord-de-Mer', 'Haut-Limonade', '3ème Section']
           },
@@ -1313,7 +1313,7 @@ var HAITI_ADMIN = [
             department: 'Grande-Anse', arrondissement: 'Jérémie',
             chefLieuDepartement: true, chefLieuArrondissement: true,
             population: '~180 000 hab.',
-            description: '« Cité des Poètes » — a donné naissance à de nombreux écrivains haïtiens célèbres (Georges Sylvain, Émile Roumer). Ville à l\'extrémité ouest de la péninsule.',
+            description: '« Cité des Poètes », a donné naissance à de nombreux écrivains haïtiens célèbres (Georges Sylvain, Émile Roumer). Ville à l\'extrémité ouest de la péninsule.',
             characteristics: 'Littérature, culture, plages sauvages, forêts tropicales, aéroport.',
             sections: ['Jérémie-Centre', 'Bord-de-Mer', 'Nan-Morin', '3ème Section', '4ème Section', '5ème Section']
           },

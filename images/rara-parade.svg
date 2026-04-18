@@ -44,6 +44,6 @@
   <rect x="100" y="170" width="8" height="15" fill="#FF6B35" transform="rotate(-30,100,170)"/>
   <!-- Text -->
   <rect x="100" y="420" width="600" height="60" rx="8" fill="rgba(0,0,0,0.7)"/>
-  <text x="400" y="447" font-family="Georgia, serif" font-size="22" fill="#FFD700" text-anchor="middle" font-weight="bold">Rara — Musique et Parade Haïtienne</text>
+  <text x="400" y="447" font-family="Georgia, serif" font-size="22" fill="#FFD700" text-anchor="middle" font-weight="bold">Rara, Musique et Parade Haïtienne</text>
   <text x="400" y="470" font-family="Georgia, serif" font-size="13" fill="#cccccc" text-anchor="middle">Célébration Culturelle Traditionnelle</text>
 </svg>
