@@ -499,10 +499,11 @@
 
     nextEpisodeBtn.addEventListener('click', function () {
       var nextIndex = (selectedEpisodeIndex + 1) % episodes.length;
-      if (nextIndex === 0 && selectedEpisodeIndex === episodes.length - 1) {
+      var isWrapAround = nextIndex === 0 && selectedEpisodeIndex === episodes.length - 1;
+      openEpisode(nextIndex, true, true);
+      if (isWrapAround) {
         videoNowPlaying.textContent = 'On recommence depuis le début de la série.';
       }
-      openEpisode(nextIndex, true, true);
     });
 
     kidsVideoPlayer.addEventListener('ended', function () {
