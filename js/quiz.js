@@ -530,7 +530,7 @@
         choicesList.querySelectorAll('.quiz-choice-btn').forEach(function (b) { b.classList.remove('selected'); });
         btn.classList.add('selected');
         submitBtn.disabled = false;
-        selectionHint.textContent = 'Réponse ' + letter + ' sélectionnée. Cliquez sur « Valider la réponse ».';
+        selectionHint.textContent = 'Réponse ' + letter + ' sélectionnée. Cliquez sur le bouton de validation.';
         setFeedback('', '');
       });
       li.appendChild(btn);
