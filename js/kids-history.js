@@ -422,10 +422,9 @@
 
     function playCurrentVideo() {
       if (!kidsVideoPlayer) return;
-      if (
-        (!kidsVideoPlayer.currentSrc && !kidsVideoPlayer.src) ||
-        (kidsVideoPlayer.src && !kidsVideoPlayer.src.trim())
-      ) {
+      var currentSrc = (kidsVideoPlayer.currentSrc || '').trim();
+      var fallbackSrc = (kidsVideoPlayer.src || '').trim();
+      if (!currentSrc && !fallbackSrc) {
         videoNowPlaying.textContent = 'Oups ! Cette vidéo n’est pas prête.';
         return;
       }
