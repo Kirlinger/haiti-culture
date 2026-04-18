@@ -2,6 +2,9 @@
   'use strict';
 
   var QUESTIONS_PER_RUN = 20;
+  var BASE_POINTS = 10;
+  var STREAK_MULTIPLIER = 2;
+  var MAX_STREAK_BONUS = 20;
 
   var QUESTION_BANK = [
     {
@@ -289,7 +292,6 @@
 
   var sectionTitle = document.querySelector('.section-title');
   var progressBar = document.getElementById('progressBar');
-  var progressTrack = document.getElementById('progressTrack');
   var progressPercent = document.getElementById('progressPercent');
   var questionCounter = document.getElementById('questionCounter');
   var scoreBadge = document.getElementById('scoreBadge');
@@ -332,7 +334,7 @@
     Société: document.getElementById('fillSociete')
   };
 
-  if (!progressBar || !progressTrack || !progressPercent || !questionCounter || !scoreBadge || !pointsBadge || !streakBadge || !questionCategory || !questionText || !choicesList || !selectionHint || !feedbackBadge || !explanationBox || !submitBtn || !nextBtn || !quizCard || !resultsScreen || !progressWrap || !quizMeta || !quizIntro || !startQuizBtn || !restartBtn) {
+  if (!progressBar || !progressPercent || !questionCounter || !scoreBadge || !pointsBadge || !streakBadge || !questionCategory || !questionText || !choicesList || !selectionHint || !feedbackBadge || !explanationBox || !submitBtn || !nextBtn || !quizCard || !resultsScreen || !progressWrap || !quizMeta || !quizIntro || !startQuizBtn || !restartBtn) {
     return;
   }
 
@@ -431,7 +433,7 @@
   }
 
   function computeEarnedPoints(currentStreak) {
-    return 10 + Math.min(currentStreak * 2, 20);
+    return BASE_POINTS + Math.min(currentStreak * STREAK_MULTIPLIER, MAX_STREAK_BONUS);
   }
 
   function updateProgress(completedCount) {
@@ -439,8 +441,8 @@
     var pct = calculatePercentage(clampedCount, totalQuestions);
     progressBar.style.width = pct + '%';
     progressPercent.textContent = pct + '%';
-    progressTrack.setAttribute('aria-valuenow', String(pct));
-    progressTrack.setAttribute('aria-valuetext', pct + '% (' + clampedCount + ' sur ' + totalQuestions + ' questions)');
+    progressBar.setAttribute('aria-valuenow', String(pct));
+    progressBar.setAttribute('aria-valuetext', pct + '% (' + clampedCount + ' sur ' + totalQuestions + ' questions)');
   }
 
   function updateCategoryRows() {
