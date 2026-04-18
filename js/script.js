@@ -410,15 +410,13 @@
         .filter(Boolean);
 
       if (!fallbackSrcs.length) return;
-      var fallbackIndex = 0;
 
       function handleError() {
-        if (fallbackIndex >= fallbackSrcs.length) {
+        var nextSrc = fallbackSrcs.shift();
+        if (!nextSrc) {
           img.removeEventListener('error', handleError);
           return;
         }
-        var nextSrc = fallbackSrcs[fallbackIndex];
-        fallbackIndex += 1;
         img.src = nextSrc;
       }
 
