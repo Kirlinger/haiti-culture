@@ -459,7 +459,7 @@
     if (!feedbackBadge) return;
     var hasContent = Boolean(type && text);
     feedbackBadge.className = hasContent
-      ? 'quiz-feedback visible' + (type === 'ok' ? ' quiz-feedback--ok' : ' quiz-feedback--ko')
+      ? 'quiz-feedback visible quiz-feedback--' + (type === 'ok' ? 'ok' : 'ko')
       : 'quiz-feedback';
     feedbackBadge.textContent = hasContent ? text : '';
   }
