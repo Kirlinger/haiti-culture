@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var QUESTIONS_PER_RUN = 20;
+  var QUESTIONS_PER_RUN = 30;
   var BASE_POINTS = 10;
   var STREAK_MULTIPLIER = 2;
   var MAX_STREAK_BONUS = 20;
