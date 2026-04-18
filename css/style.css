@@ -2851,6 +2851,10 @@ ul {
 .cards-staggered .card:first-child {
   grid-row: 1 / 3;
 }
+/* Prevent oversized empty gaps inside featured cards when grid rows stretch */
+.cards-staggered .card__desc {
+  flex: 0 1 auto;
+}
 @media (max-width: 900px) {
   .cards-staggered { grid-template-columns: 1fr 1fr; }
   .cards-staggered .card:first-child { grid-row: auto; }
