@@ -1,40 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Update the base URL below to match your deployed domain -->
-  <url><loc>https://kirlinger.github.io/haiti-culture/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/history.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/timeline.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/timeline-general.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/timeline-presidents.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/timeline-crises.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/timeline-constitutions.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/heroes.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/leaders.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/constitution.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/institutions.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/geographie.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/culture.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/vodou.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/lwa.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/gastronomy.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/holidays.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/tourism.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/encyclopedia.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/archives.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/culture-vivante.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/creativite-populaire.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/diaspora-engagee.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/jeunesse-potentiel.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/memoire-universelle.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/patrimoine-national.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/fragilite-economique.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/inegalites-sociales.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/instabilite-politique.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/pressions-securitaires.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/services-essentiels.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/capacite-adaptation.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/reconstruction-durable.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/bibliography.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kirlinger.github.io/haiti-culture/contact.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://republiquehaiti.org/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://republiquehaiti.org/about.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://republiquehaiti.org/movement.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://republiquehaiti.org/blog.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://republiquehaiti.org/join.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://republiquehaiti.org/contact.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
