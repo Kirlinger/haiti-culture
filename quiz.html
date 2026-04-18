@@ -90,7 +90,7 @@
       overflow: hidden;
     }
     .quiz-progress-bar {
-      width: 5%;
+      width: 0;
       height: 100%;
       border-radius: 999px;
       background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 35%, #3b82f6 100%);
@@ -636,13 +636,13 @@
             <span id="progressPercent">0%</span>
           </div>
           <div class="quiz-progress-track">
-            <div class="quiz-progress-bar" id="progressBar" style="width:5%"></div>
+            <div class="quiz-progress-bar" id="progressBar" style="width:0%"></div>
           </div>
         </div>
         <div class="quiz-meta" id="quizMeta">
           <span class="quiz-score-badge" id="scoreBadge">Score : 0</span>
           <span class="quiz-points-badge" id="pointsBadge">Points : 0</span>
-          <span class="quiz-streak-badge" id="streakBadge">Série : 0 🔥</span>
+          <span class="quiz-streak-badge" id="streakBadge" aria-live="polite">Série : 0</span>
         </div>
 
         <!-- Question card -->
@@ -650,11 +650,11 @@
           <span class="quiz-category" id="questionCategory">Histoire</span>
           <p class="quiz-question" id="questionText"></p>
           <ul class="quiz-choices" id="choicesList"></ul>
-          <div class="quiz-feedback" id="feedbackBadge"></div>
+          <div class="quiz-feedback" id="feedbackBadge" role="status" aria-live="polite"></div>
           <div class="quiz-explanation" id="explanationBox"></div>
           <div class="quiz-actions">
             <button class="quiz-submit-btn" id="submitBtn" disabled>Valider la réponse</button>
-            <button class="quiz-next-btn" id="nextBtn">Continuer →</button>
+            <button class="quiz-next-btn" id="nextBtn">Question suivante →</button>
           </div>
         </div>
 

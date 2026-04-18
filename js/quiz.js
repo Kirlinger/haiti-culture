@@ -419,14 +419,23 @@
   function updateMeta() {
     scoreBadge.textContent = 'Score : ' + score;
     pointsBadge.textContent = 'Points : ' + points;
-    streakBadge.textContent = 'Série : ' + streak + ' 🔥';
+    streakBadge.textContent = 'Série : ' + streak;
     questionCounter.textContent = 'Question ' + (currentIndex + 1) + ' / ' + totalQuestions;
   }
 
+  function calculatePercentage(completed, total) {
+    if (total <= 0) return 0;
+    return Math.round((completed / total) * 100);
+  }
+
+  function computeEarnedPoints(currentStreak) {
+    return 10 + Math.min(currentStreak * 2, 20);
+  }
+
   function updateProgress(completedCount) {
-    var safeCompleted = Math.max(0, Math.min(completedCount, totalQuestions));
-    var pct = Math.round((safeCompleted / totalQuestions) * 100);
-    progressBar.style.width = Math.max(pct, 5) + '%';
+    var clampedCount = Math.max(0, Math.min(completedCount || 0, totalQuestions));
+    var pct = calculatePercentage(clampedCount, totalQuestions);
+    progressBar.style.width = pct + '%';
     progressPercent.textContent = pct + '%';
   }
 
@@ -436,7 +445,7 @@
       scoreEls[key].textContent = catScores[key] + ' / ' + categoryTotals[key];
       if (fillEls[key]) {
         var total = categoryTotals[key];
-        var ratio = total > 0 ? Math.round((catScores[key] / total) * 100) : 0;
+        var ratio = calculatePercentage(catScores[key], total);
         fillEls[key].style.width = ratio + '%';
       }
     });
@@ -444,13 +453,11 @@
 
   function setFeedback(type, text) {
     if (!feedbackBadge) return;
-    feedbackBadge.className = 'quiz-feedback';
-    if (!type || !text) {
-      feedbackBadge.textContent = '';
-      return;
-    }
-    feedbackBadge.className = 'quiz-feedback visible ' + (type === 'ok' ? 'quiz-feedback--ok' : 'quiz-feedback--ko');
-    feedbackBadge.textContent = text;
+    var hasContent = Boolean(type && text);
+    feedbackBadge.className = hasContent
+      ? 'quiz-feedback visible ' + (type === 'ok' ? 'quiz-feedback--ok' : 'quiz-feedback--ko')
+      : 'quiz-feedback';
+    feedbackBadge.textContent = hasContent ? text : '';
   }
 
   function setStartState() {
@@ -551,7 +558,7 @@
       score += 1;
       streak += 1;
       bestStreakValue = Math.max(bestStreakValue, streak);
-      var earnedPoints = 10 + Math.min(streak * 2, 20);
+      var earnedPoints = computeEarnedPoints(streak);
       points += earnedPoints;
       catScores[q.category] += 1;
       allBtns[selectedChoice].classList.remove('selected');
@@ -562,7 +569,7 @@
       var okText = document.createTextNode(q.explanation);
       explanationBox.appendChild(okPrefix);
       explanationBox.appendChild(okText);
-      setFeedback('ok', '✅ Bonne réponse ! +' + earnedPoints + ' points');
+      setFeedback('ok', 'Bonne réponse ! +' + earnedPoints + ' points');
     } else {
       streak = 0;
       allBtns[selectedChoice].classList.remove('selected');
@@ -577,7 +584,7 @@
       explanationBox.appendChild(prefix);
       explanationBox.appendChild(strongNode);
       explanationBox.appendChild(suffix);
-      setFeedback('ko', '❌ Réponse incorrecte. La série repart à 0.');
+      setFeedback('ko', 'Réponse incorrecte. La série repart à 0.');
     }
 
     updateProgress(currentIndex + 1);
