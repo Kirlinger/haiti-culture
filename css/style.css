@@ -3314,8 +3314,7 @@ pre, code {
 @media (max-width: 600px) {
   .timeline::before { left: 14px; }
   .timeline-item { padding-left: 44px; }
-  .timeline-item::after,
-  .timeline-item:nth-child(even)::after {
+  .timeline-item::after {
     left: 14px;
     width: 16px;
     height: 16px;
