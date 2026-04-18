@@ -24,6 +24,7 @@ A multilingual website dedicated to celebrating the extraordinary history, vibra
 haiti-culture/
 ├── index.html                  # Homepage with language detection
 ├── about.html                  # About Haiti
+├── auteur.html                 # Dedicated author page
 ├── history.html                # General history
 ├── timeline.html               # Chronology of major events
 ├── heroes.html                 # National heroes of the Revolution

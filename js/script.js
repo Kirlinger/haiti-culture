@@ -191,8 +191,8 @@
     { title: 'Révolution Haïtienne', url: 'history.html#revolution', section: 'Histoire', keywords: 'révolution haïtienne 1791 1804 liberté esclavage toussaint dessalines' },
     { title: 'Indépendance 1804', url: 'history.html#independence', section: 'Histoire', keywords: 'indépendance 1804 première république noire janvier' },
     // Culture
-    { title: 'Musique Haïtienne', url: 'about.html', section: 'Culture', keywords: 'kompa rara rasin musique haïti tambours folklore' },
-    { title: 'Art Haïtien', url: 'about.html', section: 'Culture', keywords: 'art haïtien naïf peinture sculpture vèvè drapo vodou' },
+    { title: 'Musique Haïtienne', url: 'musique-histoire.html', section: 'Culture', keywords: 'kompa rara rasin musique haïti tambours folklore' },
+    { title: 'Art Haïtien', url: 'artistes.html', section: 'Culture', keywords: 'art haïtien naïf peinture sculpture vèvè drapo vodou' },
     // Nouvelles pages
     { title: 'Constitution d\'Haïti', url: 'constitution.html', section: 'Histoire', keywords: 'constitution haïti loi droits libertés état démocratie 1987 toussaint dessalines' },
     { title: 'Chronologie d\'Haïti', url: 'timeline.html', section: 'Histoire', keywords: 'chronologie haïti histoire dates événements taïno 1804 indépendance révolution duvalier occupation américaine' },
