@@ -7,6 +7,7 @@ A multilingual website dedicated to celebrating the extraordinary history, vibra
 ## ✨ Features
 
 - **28 content pages** covering Haitian history, culture, Vodou spirituality, gastronomy, tourism, and more
+- **Section enfants vidéo** — `histoire-enfants.html` (Histoire pour Enfants, 3–7 ans)
 - **4 languages** — Français, English, Español, Kreyòl Ayisyen
 - Fully **responsive design** — works on mobile, tablet, and desktop
 - **Dark mode** CSS support
@@ -25,6 +26,7 @@ haiti-culture/
 ├── index.html                  # Homepage with language detection
 ├── about.html                  # About Haiti
 ├── history.html                # General history
+├── histoire-enfants.html       # Interactive children history videos (French)
 ├── timeline.html               # Chronology of major events
 ├── heroes.html                 # National heroes of the Revolution
 ├── leaders.html                # Political leaders

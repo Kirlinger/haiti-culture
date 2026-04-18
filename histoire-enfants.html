@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#6a5cff" />
+  <title>Histoire pour Enfants — Vidéos Douces sur Haïti | République d'Haïti</title>
+  <meta name="description" content="Un espace vidéo éducatif pour les tout-petits : l'histoire d'Haïti racontée avec des mots simples, des scènes visuelles et des épisodes doux et inspirants." />
+  <meta name="author" content="RépubliqueHaïti.org" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="RépubliqueHaïti.org" />
+  <meta property="og:title" content="Histoire pour Enfants — Petits Héros d'Haïti" />
+  <meta property="og:description" content="Une section vidéo interactive pour aider les jeunes enfants à découvrir l'histoire d'Haïti simplement." />
+  <meta property="og:url" content="https://republiquehaiti.org/histoire-enfants.html" />
+  <meta property="og:locale" content="fr_HT" />
+  <link rel="canonical" href="https://republiquehaiti.org/histoire-enfants.html" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/premium.css" />
+</head>
+<body class="kids-history-page">
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut de la page">↑</button>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="navbar__logo" aria-label="Accueil">
+          République d'Haïti
+        </a>
+
+        <button class="navbar__toggle" aria-label="Basculer le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="navbar__nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown__btn" aria-expanded="false">Histoire ▾</button>
+            <div class="nav-dropdown__menu">
+              <a href="history.html">Histoire Générale</a>
+              <a href="histoire-enfants.html">Histoire pour Enfants</a>
+              <a href="timeline.html">Chronologie</a>
+              <a href="heroes.html">Héros Nationaux</a>
+              <a href="leaders.html">Dirigeants</a>
+              <a href="constitution.html">Constitution</a>
+              <a href="institutions.html">Institutions</a>
+              <a href="presidents.html">Profils des Présidents</a>
+              <a href="revolution-batailles.html">Batailles de la Révolution</a>
+              <a href="relations-internationales.html">Relations Internationales</a>
+            </div>
+          </div>
+          <a href="culture.html">Culture</a>
+          <a href="tourism.html">Tourisme</a>
+          <a href="encyclopedia.html">Encyclopédie</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <button class="search-toggle" aria-label="Rechercher" title="Rechercher sur le site">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Recherche">
+    <div class="search-overlay__inner">
+      <div class="search-overlay__header">
+        <div class="search-input-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Rechercher : épisode, héros, liberté…" autocomplete="off" />
+        </div>
+        <button class="search-close" aria-label="Fermer la recherche">&#x2715;</button>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section class="kids-hero">
+    <div class="container kids-hero__grid">
+      <div>
+        <p class="kids-hero__badge">Nouveau · 3–7 ans</p>
+        <h1>Histoire pour Enfants<br><span>Petits Héros d'Haïti</span></h1>
+        <p>
+          Bienvenue, petit explorateur.<br>
+          Ici, l'histoire d'Haïti devient une aventure douce.<br>
+          Tu regardes, tu écoutes et tu apprends pas à pas.
+        </p>
+        <div class="kids-hero__actions">
+          <a href="#episodes" class="btn kids-btn-primary">Voir les épisodes</a>
+          <a href="#player" class="btn kids-btn-secondary">Commencer l'aventure</a>
+        </div>
+      </div>
+      <div class="kids-hero__illustration" aria-hidden="true">
+        <div class="kids-cloud">☁️</div>
+        <div class="kids-sun">🌞</div>
+        <div class="kids-hill">⛰️</div>
+        <div class="kids-flag">��🇹</div>
+        <div class="kids-book">📖</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span>/</span>
+        <span>Histoire pour Enfants</span>
+      </nav>
+    </div>
+  </div>
+
+  <main id="kidsHistoryApp">
+    <section class="section kids-flow-section">
+      <div class="container">
+        <p class="section-label text-center">Parcours simple</p>
+        <h2 class="section-title text-center">Comment ça marche ?</h2>
+        <div class="kids-flow" aria-label="Parcours d'apprentissage">
+          <div class="kids-flow__item">1. Choisis un épisode</div>
+          <div class="kids-flow__arrow" aria-hidden="true">➜</div>
+          <div class="kids-flow__item">2. Clique sur lire</div>
+          <div class="kids-flow__arrow" aria-hidden="true">➜</div>
+          <div class="kids-flow__item">3. Regarde l'histoire</div>
+          <div class="kids-flow__arrow" aria-hidden="true">➜</div>
+          <div class="kids-flow__item">4. Passe au suivant</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="episodes">
+      <div class="container">
+        <p class="section-label text-center">Épisodes de départ</p>
+        <h2 class="section-title text-center">Épisodes vedettes</h2>
+        <p class="section-subtitle text-center">
+          Commence avec ces trois histoires importantes.
+        </p>
+        <div class="kids-episodes-grid" id="featuredEpisodes" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="section-label text-center">Bibliothèque vidéo</p>
+        <h2 class="section-title text-center">Toute la série</h2>
+        <p class="section-subtitle text-center">
+          De nouveaux épisodes peuvent être ajoutés facilement.
+        </p>
+        <div class="kids-episodes-grid" id="allEpisodes" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="player">
+      <div class="container">
+        <p class="section-label text-center">Regarder</p>
+        <h2 class="section-title text-center">Lecteur d'histoire</h2>
+
+        <div class="kids-player-wrap">
+          <div class="kids-player" aria-live="polite">
+            <div class="kids-player__top">
+              <span id="episodeBadge" class="kids-player__badge">Épisode</span>
+              <h3 id="episodeTitle">Choisis un épisode</h3>
+              <p id="episodeSummary">Clique sur une carte pour lancer l'histoire.</p>
+            </div>
+
+            <div class="kids-scene-player" aria-label="Scène de l'épisode">
+              <div class="kids-scene-player__visual" id="sceneVisual">🎬</div>
+              <div class="kids-scene-player__text">
+                <p class="kids-scene-player__meta" id="sceneMeta">Scène 1</p>
+                <h4 id="sceneTitle">Prêt pour l'aventure</h4>
+                <p id="sceneNarration">Appuie sur « Lire la scène » pour commencer.</p>
+              </div>
+            </div>
+
+            <div class="kids-player-controls">
+              <button id="playSceneBtn" class="btn kids-btn-primary" type="button">▶ Lire la scène</button>
+              <button id="prevSceneBtn" class="btn kids-btn-soft" type="button">⟵ Scène avant</button>
+              <button id="nextSceneBtn" class="btn kids-btn-soft" type="button">Scène suivante ⟶</button>
+            </div>
+
+            <div class="kids-next-episode">
+              <p>Prêt pour la suite ?</p>
+              <button id="nextEpisodeBtn" class="btn kids-btn-secondary" type="button">Voir l'épisode suivant</button>
+            </div>
+          </div>
+
+          <aside class="kids-details" aria-live="polite">
+            <h3>Atelier vidéo</h3>
+
+            <div class="kids-detail-card">
+              <h4>Plan de narration (maternelle)</h4>
+              <ul id="scriptOutlineList"></ul>
+            </div>
+
+            <div class="kids-detail-card">
+              <h4>Script complet à narrer</h4>
+              <div id="fullNarration"></div>
+            </div>
+
+            <div class="kids-detail-card">
+              <h4>Découpage scène par scène</h4>
+              <div id="sceneBreakdown"></div>
+            </div>
+
+            <div class="kids-detail-card">
+              <h4>Prompts visuels / illustrations</h4>
+              <ul id="imagePromptsList"></ul>
+            </div>
+
+            <div class="kids-detail-card">
+              <h4>Conseils de narration</h4>
+              <ul id="narrationTipsList"></ul>
+            </div>
+
+            <div class="kids-detail-card kids-detail-card--closing">
+              <h4>Message final pour les enfants</h4>
+              <p id="closingMessage"></p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Une histoire qui donne confiance</h2>
+      <p>
+        Chaque épisode montre le courage, la solidarité et l'espoir du peuple haïtien.
+      </p>
+      <a href="#episodes" class="btn btn-cta-white">Choisir un épisode →</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            République d'Haïti
+          </div>
+          <p>
+            Une célébration de l'extraordinaire histoire d'Haïti, de sa culture
+            vibrante et de son peuple remarquable. Dédié à partager l'histoire de
+            la première République noire du monde.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explorer</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="history.html">Histoire</a></li>
+            <li><a href="histoire-enfants.html">Histoire pour Enfants</a></li>
+            <li><a href="tourism.html">Tourisme</a></li>
+            <li><a href="encyclopedia.html">Encyclopédie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Culture &amp; Société</h4>
+          <ul>
+            <li><a href="culture.html">Culture et Arts</a></li>
+            <li><a href="vodou.html">Vodou</a></li>
+            <li><a href="gastronomy.html">Gastronomie</a></li>
+            <li><a href="culture-vivante.html">Culture Vivante</a></li>
+            <li><a href="jeunesse-potentiel.html">Jeunesse &amp; Potentiel</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Prendre Contact</h4>
+          <ul>
+            <li><a href="contact.html">Nous Contacter</a></li>
+            <li><a href="contact.html#form">Envoyer un Message</a></li>
+            <li><a href="license.html">Mentions L&eacute;gales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Kirlinger Jeune &mdash; Haiti Digital Infrastructure Project</span>
+        <span>Licensed under <a href="license.html" style="color:inherit;text-decoration:underline;">MIT License</a>. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/premium.js"></script>
+  <script src="js/kids-history.js"></script>
+
+</body>
+</html>

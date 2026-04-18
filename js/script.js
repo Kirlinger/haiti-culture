@@ -158,6 +158,7 @@
     { title: 'Accueil', url: 'index.html', section: '', keywords: 'haïti accueil haiti perle antilles' },
     { title: 'À propos d\'Haïti', url: 'about.html', section: '', keywords: 'haïti culture peuple identité langue créole musique art cuisine' },
     { title: 'Histoire d\'Haïti', url: 'history.html', section: '', keywords: 'histoire haïti révolution indépendance 1804 taïno' },
+    { title: 'Histoire pour Enfants', url: 'histoire-enfants.html', section: 'Histoire', keywords: 'enfants maternelle histoire vidéos haïti toussaint liberté bois caïman dessalines' },
     { title: 'Tourisme', url: 'tourism.html', section: '', keywords: 'tourisme haïti plages citadelle labadée voyage' },
     { title: 'Vodou Haïtien', url: 'vodou.html', section: '', keywords: 'vodou voodoo haïti religion spiritualité afrique lwa spirits' },
     { title: 'Les Lwa', url: 'lwa.html', section: '', keywords: 'lwa loa esprits vodou haïti spirits dieux' },
