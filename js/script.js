@@ -417,8 +417,9 @@
           img.removeEventListener('error', handleError);
           return;
         }
-        img.src = fallbackSrcs[fallbackIndex];
+        var nextSrc = fallbackSrcs[fallbackIndex];
         fallbackIndex += 1;
+        img.src = nextSrc;
       }
 
       img.addEventListener('error', handleError);

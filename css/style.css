@@ -2903,7 +2903,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 28%; /* Keeps the face centered in the square crop */
+  object-position: center 28%; /* Keeps the face in the upper-center of the square crop */
   display: block;
   transform: translateZ(0);
 }
