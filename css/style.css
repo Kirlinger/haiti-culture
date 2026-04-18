@@ -755,6 +755,10 @@ ul {
   gap: 18px;
 }
 
+.section-media-grid--4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .section-media-grid .section-media__figure img {
   aspect-ratio: 4 / 5;
 }
@@ -1053,19 +1057,19 @@ ul {
 .page-hero--about {
   background:
     linear-gradient(rgba(0,20,100,0.75), rgba(100,0,20,0.75)),
-    url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Haitian_woman_in_traditional_dress.jpg/1280px-Haitian_woman_in_traditional_dress.jpg') center/cover no-repeat;
+    url('../images/haitian-woman.svg') center/cover no-repeat;
 }
 
 .page-hero--history {
   background:
     linear-gradient(rgba(0,10,60,0.78), rgba(80,0,10,0.78)),
-    url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Citadelle_Laferri%C3%A8re.jpg/1280px-Citadelle_Laferri%C3%A8re.jpg') center/cover no-repeat;
+    url('../images/citadelle.svg') center/cover no-repeat;
 }
 
 .page-hero--tourism {
   background:
     linear-gradient(rgba(0,15,80,0.72), rgba(0,80,100,0.72)),
-    url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Citadelle_Laferri%C3%A8re.jpg/1280px-Citadelle_Laferri%C3%A8re.jpg') center/cover no-repeat;
+    url('../images/citadelle.svg') center/cover no-repeat;
 }
 
 .page-hero__label {
@@ -2466,6 +2470,10 @@ ul {
   .section-media-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
+  }
+
+  .section-media-grid--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .img-block {
