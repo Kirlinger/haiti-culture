@@ -320,25 +320,38 @@
     ];
   }
 
+  function escapeHtml(value) {
+    return String(value == null ? '' : value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
   function createEpisodeCard(episode, isFeatured) {
     var card = document.createElement('article');
     card.className = 'kids-episode-card';
     card.setAttribute('data-episode-id', episode.id);
 
     var featuredBadge = isFeatured ? '<span class="kids-episode-card__featured">Épisode vedette</span>' : '';
-    var thumb = episode.poster ? ('style="background-image:url(\'' + episode.poster + '\')"') : '';
 
     card.innerHTML = ''
-      + '<div class="kids-episode-card__thumb kids-episode-card__thumb--image" ' + thumb + ' aria-hidden="true">'
-      + '  <span>' + (episode.icon || '🎬') + '</span>'
+      + '<div class="kids-episode-card__thumb kids-episode-card__thumb--image" aria-hidden="true">'
+      + '  <span>' + escapeHtml(episode.icon || '🎬') + '</span>'
       + '</div>'
       + '<div class="kids-episode-card__content">'
       + featuredBadge
-      + '  <p class="kids-episode-card__question">' + episode.question + '</p>'
-      + '  <h3>' + episode.cardTitle + '</h3>'
-      + '  <p>' + episode.summary + '</p>'
+      + '  <p class="kids-episode-card__question">' + escapeHtml(episode.question) + '</p>'
+      + '  <h3>' + escapeHtml(episode.cardTitle) + '</h3>'
+      + '  <p>' + escapeHtml(episode.summary) + '</p>'
       + '  <button type="button" class="btn kids-btn-primary kids-play-episode">▶ Regarder</button>'
       + '</div>';
+
+    if (episode.poster) {
+      var thumbEl = card.querySelector('.kids-episode-card__thumb--image');
+      if (thumbEl) thumbEl.style.backgroundImage = 'url(\"' + episode.poster.replace(/\"/g, '\\"') + '\")';
+    }
 
     return card;
   }
@@ -384,11 +397,11 @@
       videoNowPlaying.textContent = 'Vidéo active : ' + episode.cardTitle;
 
       scriptOutlineList.innerHTML = outline
-        .map(function (item) { return '<li>' + item + '</li>'; })
+        .map(function (item) { return '<li>' + escapeHtml(item) + '</li>'; })
         .join('');
 
       fullNarration.innerHTML = narration
-        .map(function (line) { return '<p>' + line + '</p>'; })
+        .map(function (line) { return '<p>' + escapeHtml(line) + '</p>'; })
         .join('');
 
       sceneBreakdown.innerHTML = scenes
@@ -396,19 +409,19 @@
           return ''
             + '<article class="kids-scene-breakdown-card">'
             + '  <p class="kids-scene-breakdown-card__meta">Scène ' + (index + 1) + '</p>'
-            + '  <h5>' + scene.title + '</h5>'
-            + '  <p><strong>Narration :</strong> ' + scene.narration + '</p>'
-            + '  <p><strong>Visuel :</strong> ' + scene.visual + ' Illustration enfantine.</p>'
+            + '  <h5>' + escapeHtml(scene.title) + '</h5>'
+            + '  <p><strong>Narration :</strong> ' + escapeHtml(scene.narration) + '</p>'
+            + '  <p><strong>Visuel :</strong> ' + escapeHtml(scene.visual) + ' Illustration enfantine.</p>'
             + '</article>';
         })
         .join('');
 
       imagePromptsList.innerHTML = scenes
-        .map(function (scene) { return '<li>' + scene.imagePrompt + '</li>'; })
+        .map(function (scene) { return '<li>' + escapeHtml(scene.imagePrompt) + '</li>'; })
         .join('');
 
       narrationTipsList.innerHTML = narrationTips
-        .map(function (tip) { return '<li>' + tip + '</li>'; })
+        .map(function (tip) { return '<li>' + escapeHtml(tip) + '</li>'; })
         .join('');
 
       closingMessage.textContent = episode.closing || 'Bravo, petit héros. Continue à apprendre avec joie.';
