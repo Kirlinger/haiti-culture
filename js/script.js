@@ -156,7 +156,8 @@
   var SEARCH_INDEX = [
     // Pages principales
     { title: 'Accueil', url: 'index.html', section: '', keywords: 'haïti accueil haiti perle antilles' },
-    { title: 'À propos d\'Haïti', url: 'about.html', section: '', keywords: 'haïti culture peuple identité langue créole musique art cuisine' },
+    { title: 'À propos de l\'auteur', url: 'about.html', section: 'Projet', keywords: 'auteur kirlinger jeune projet recherche méthodologie sources haïtiennes' },
+    { title: 'Culture & Identité', url: 'culture-identite.html', section: 'Culture', keywords: 'haïti peuple identité culture langue créole musique art cuisine vodou' },
     { title: 'Histoire d\'Haïti', url: 'history.html', section: '', keywords: 'histoire haïti révolution indépendance 1804 taïno' },
     { title: 'Tourisme', url: 'tourism.html', section: '', keywords: 'tourisme haïti plages citadelle labadée voyage' },
     { title: 'Vodou Haïtien', url: 'vodou.html', section: '', keywords: 'vodou voodoo haïti religion spiritualité afrique lwa spirits' },
@@ -191,8 +192,8 @@
     { title: 'Révolution Haïtienne', url: 'history.html#revolution', section: 'Histoire', keywords: 'révolution haïtienne 1791 1804 liberté esclavage toussaint dessalines' },
     { title: 'Indépendance 1804', url: 'history.html#independence', section: 'Histoire', keywords: 'indépendance 1804 première république noire janvier' },
     // Culture
-    { title: 'Musique Haïtienne', url: 'about.html', section: 'Culture', keywords: 'kompa rara rasin musique haïti tambours folklore' },
-    { title: 'Art Haïtien', url: 'about.html', section: 'Culture', keywords: 'art haïtien naïf peinture sculpture vèvè drapo vodou' },
+    { title: 'Musique Haïtienne', url: 'musique-histoire.html', section: 'Culture', keywords: 'kompa rara rasin musique haïti tambours folklore' },
+    { title: 'Art Haïtien', url: 'artistes.html', section: 'Culture', keywords: 'art haïtien naïf peinture sculpture vèvè drapo vodou' },
     // Nouvelles pages
     { title: 'Constitution d\'Haïti', url: 'constitution.html', section: 'Histoire', keywords: 'constitution haïti loi droits libertés état démocratie 1987 toussaint dessalines' },
     { title: 'Chronologie d\'Haïti', url: 'timeline.html', section: 'Histoire', keywords: 'chronologie haïti histoire dates événements taïno 1804 indépendance révolution duvalier occupation américaine' },
