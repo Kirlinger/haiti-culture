@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait stylisé de Kirlinger Jeune</title>
+  <desc id="desc">Avatar vectoriel avec les initiales KJ</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#001f6b"/>
+      <stop offset="100%" stop-color="#8b0a2b"/>
+    </linearGradient>
+    <linearGradient id="face" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4d3b1"/>
+      <stop offset="100%" stop-color="#d8a57b"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <circle cx="256" cy="185" r="96" fill="url(#face)"/>
+  <path d="M136 366c24-62 76-96 120-96s96 34 120 96v146H136V366z" fill="#1a1f3f"/>
+  <circle cx="221" cy="176" r="8" fill="#40281f"/>
+  <circle cx="291" cy="176" r="8" fill="#40281f"/>
+  <path d="M222 220c10 12 22 18 34 18s24-6 34-18" fill="none" stroke="#8a4f3c" stroke-width="8" stroke-linecap="round"/>
+  <text x="256" y="470" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="54" font-weight="700" fill="#ffffff" letter-spacing="4">KJ</text>
+</svg>
