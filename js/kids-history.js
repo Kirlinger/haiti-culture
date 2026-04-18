@@ -329,6 +329,12 @@
       .replace(/'/g, '&#39;');
   }
 
+  function sanitizePosterUrl(value) {
+    var url = String(value == null ? '' : value).trim();
+    if (!url.startsWith('/')) return '';
+    return url.replace(/[\\\"\n\r\f\0]/g, '');
+  }
+
   function createEpisodeCard(episode, isFeatured) {
     var card = document.createElement('article');
     card.className = 'kids-episode-card';
@@ -350,7 +356,8 @@
 
     if (episode.poster) {
       var thumbEl = card.querySelector('.kids-episode-card__thumb--image');
-      if (thumbEl) thumbEl.style.backgroundImage = 'url(\"' + episode.poster.replace(/\"/g, '\\"') + '\")';
+      var safePosterUrl = sanitizePosterUrl(episode.poster);
+      if (thumbEl && safePosterUrl) thumbEl.style.backgroundImage = 'url(\"' + safePosterUrl + '\")';
     }
 
     return card;
@@ -438,7 +445,7 @@
       var currentSrc = (kidsVideoPlayer.currentSrc || '').trim();
       var fallbackSrc = (kidsVideoPlayer.src || '').trim();
       if (!currentSrc && !fallbackSrc) {
-        videoNowPlaying.textContent = 'Oups ! Cette vidéo n’est pas prête.';
+        videoNowPlaying.textContent = 'Oups ! Cette vidéo n’est pas disponible.';
         return;
       }
       kidsVideoPlayer.muted = false;
