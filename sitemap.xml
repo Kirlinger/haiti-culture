@@ -38,4 +38,10 @@
   <url><loc>https://kirlinger.github.io/haiti-culture/reconstruction-durable.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kirlinger.github.io/haiti-culture/bibliography.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://kirlinger.github.io/haiti-culture/contact.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url>
+    <loc>https://republiquehaiti.org/culture-identite.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

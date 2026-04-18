@@ -156,7 +156,8 @@
   var SEARCH_INDEX = [
     // Pages principales
     { title: 'Accueil', url: 'index.html', section: '', keywords: 'haïti accueil haiti perle antilles' },
-    { title: 'À propos d\'Haïti', url: 'about.html', section: '', keywords: 'haïti culture peuple identité langue créole musique art cuisine' },
+    { title: 'À propos de l\'auteur', url: 'about.html', section: 'Projet', keywords: 'auteur kirlinger jeune projet recherche méthodologie sources haïtiennes' },
+    { title: 'Culture & Identité', url: 'culture-identite.html', section: 'Culture', keywords: 'haïti peuple identité culture langue créole musique art cuisine vodou' },
     { title: 'Histoire d\'Haïti', url: 'history.html', section: '', keywords: 'histoire haïti révolution indépendance 1804 taïno' },
     { title: 'Tourisme', url: 'tourism.html', section: '', keywords: 'tourisme haïti plages citadelle labadée voyage' },
     { title: 'Vodou Haïtien', url: 'vodou.html', section: '', keywords: 'vodou voodoo haïti religion spiritualité afrique lwa spirits' },
