@@ -56,6 +56,7 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -406,6 +407,11 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #dbe2f1;
 }
 
 .card__img--placeholder {
@@ -425,12 +431,36 @@ ul {
   border-bottom: 2px dashed rgba(255,255,255,0.2);
 }
 
-.card__img--blue    { background: linear-gradient(135deg, var(--blue), #2244d4); }
-.card__img--red     { background: linear-gradient(135deg, var(--red), #ff4060); }
-.card__img--gold    { background: linear-gradient(135deg, #c08000, var(--gold)); }
-.card__img--green   { background: linear-gradient(135deg, #056835, #0aa050); }
-.card__img--purple  { background: linear-gradient(135deg, #5b21b6, #8b5cf6); }
-.card__img--teal    { background: linear-gradient(135deg, #0e7490, #22d3ee); }
+.card__img--blue {
+  background-image:
+    linear-gradient(135deg, rgba(0,32,159,0.42), rgba(0,19,112,0.28)),
+    url('../images/haiti-landscape.svg');
+}
+.card__img--red {
+  background-image:
+    linear-gradient(135deg, rgba(210,16,52,0.4), rgba(255,64,96,0.24)),
+    url('../images/rara-parade.svg');
+}
+.card__img--gold {
+  background-image:
+    linear-gradient(135deg, rgba(192,128,0,0.36), rgba(255,209,102,0.18)),
+    url('../images/haitian-art.svg');
+}
+.card__img--green {
+  background-image:
+    linear-gradient(135deg, rgba(5,104,53,0.36), rgba(10,160,80,0.22)),
+    url('../images/ile-a-vache.svg');
+}
+.card__img--purple {
+  background-image:
+    linear-gradient(135deg, rgba(91,33,182,0.38), rgba(139,92,246,0.24)),
+    url('../images/vodou-ceremony.svg');
+}
+.card__img--teal {
+  background-image:
+    linear-gradient(135deg, rgba(14,116,144,0.34), rgba(34,211,238,0.2)),
+    url('../images/jacmel.svg');
+}
 
 .card__body {
   padding: 24px;
@@ -718,6 +748,16 @@ ul {
   align-items: center;
   justify-content: center;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #dbe2f1;
+}
+
+.img-block--compact {
+  margin-bottom: 16px;
+  min-height: 180px;
+  border-radius: var(--radius-sm);
 }
 
 .text-block h2 {
@@ -819,6 +859,10 @@ ul {
   position: relative;
   overflow: hidden;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #dbe2f1;
 }
 
 .destination-card__badge {
@@ -1140,6 +1184,10 @@ ul {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-color: #dbe2f1;
 }
 
 .person-card__body {
@@ -2239,10 +2287,26 @@ ul {
 .lwa-profile--agwe .lwa-profile__chant h3 { color: #c0e0f8; }
 
 /* Per-lwa image placeholder colors */
-.card__img--legba         { background: linear-gradient(135deg, #1a0000, #6a0000); }
-.card__img--damballah     { background: linear-gradient(135deg, #080a10, #1a2038); }
-.card__img--erzulie-freda { background: linear-gradient(135deg, #3a0818, #882040); }
-.card__img--baron         { background: linear-gradient(135deg, #000000, #180030); }
+.card__img--legba {
+  background-image:
+    linear-gradient(135deg, rgba(26,0,0,0.58), rgba(106,0,0,0.38)),
+    url('../images/vodou-ceremony.svg');
+}
+.card__img--damballah {
+  background-image:
+    linear-gradient(135deg, rgba(8,10,16,0.58), rgba(26,32,56,0.38)),
+    url('../images/haiti-landscape.svg');
+}
+.card__img--erzulie-freda {
+  background-image:
+    linear-gradient(135deg, rgba(58,8,24,0.56), rgba(136,32,64,0.34)),
+    url('../images/haitian-woman.svg');
+}
+.card__img--baron {
+  background-image:
+    linear-gradient(135deg, rgba(0,0,0,0.62), rgba(24,0,48,0.4)),
+    url('../images/sans-souci.svg');
+}
 
 /* ── Lwa Navigation Grid ─────────────────────────────── */
 .lwa-nav-grid {
@@ -2410,6 +2474,12 @@ ul {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
+}
+
+img.is-image-fallback {
+  object-fit: contain !important;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
 }
 
 /* ── Additional mobile improvements ─────────────────── */

@@ -1614,11 +1614,22 @@ h1, h2, h3, h4 {
   margin-bottom: 20px;
   border: 2px solid rgba(196,146,42,0.25);
   box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255,255,255,0.08);
 }
 
 .figure-card__avatar--all {
   background: linear-gradient(145deg, #1a1030, #2a2050) !important;
 }
+
+.figure-card__avatar--louverture { background-image: url('../images/toussaint-louverture.svg'); }
+.figure-card__avatar--dessalines { background-image: url('../images/citadelle.svg'); }
+.figure-card__avatar--christophe { background-image: url('../images/sans-souci.svg'); }
+.figure-card__avatar--petion { background-image: url('../images/port-au-prince.svg'); }
+.figure-card__avatar--flon { background-image: url('../images/haitian-woman.svg'); }
 
 .figure-card__initial {
   color: rgba(255,255,255,0.85);
