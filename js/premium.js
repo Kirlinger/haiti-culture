@@ -550,7 +550,8 @@
   function initTimelineAnimation() {
     if (!('IntersectionObserver' in window)) return;
 
-    var items = document.querySelectorAll('.timeline-item');
+    /* Scope to premium interactive timeline only, avoid hiding classic page timelines */
+    var items = document.querySelectorAll('.timeline-track .timeline-item');
     if (!items.length) return;
 
     var obs = new IntersectionObserver(function (entries) {
@@ -570,7 +571,7 @@
 
     /* Inject a style rule to reset the visible state */
     var styleEl = document.createElement('style');
-    styleEl.textContent = '.timeline-item--visible { opacity: 1 !important; transform: translateY(0) !important; }';
+    styleEl.textContent = '.timeline-track .timeline-item--visible { opacity: 1 !important; transform: translateY(0) !important; }';
     document.head.appendChild(styleEl);
   }
 
