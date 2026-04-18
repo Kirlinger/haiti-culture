@@ -440,7 +440,7 @@
     progressBar.style.width = pct + '%';
     progressPercent.textContent = pct + '%';
     progressTrack.setAttribute('aria-valuenow', String(pct));
-    progressTrack.setAttribute('aria-valuetext', pct + '%');
+    progressTrack.setAttribute('aria-valuetext', pct + '% (' + clampedCount + ' sur ' + totalQuestions + ' questions)');
   }
 
   function updateCategoryRows() {
@@ -459,7 +459,7 @@
     if (!feedbackBadge) return;
     var hasContent = Boolean(type && text);
     feedbackBadge.className = hasContent
-      ? 'quiz-feedback visible ' + (type === 'ok' ? 'quiz-feedback--ok' : 'quiz-feedback--ko')
+      ? 'quiz-feedback visible' + (type === 'ok' ? ' quiz-feedback--ok' : ' quiz-feedback--ko')
       : 'quiz-feedback';
     feedbackBadge.textContent = hasContent ? text : '';
   }
