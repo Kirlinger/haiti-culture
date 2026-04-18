@@ -289,6 +289,7 @@
 
   var sectionTitle = document.querySelector('.section-title');
   var progressBar = document.getElementById('progressBar');
+  var progressTrack = document.getElementById('progressTrack');
   var progressPercent = document.getElementById('progressPercent');
   var questionCounter = document.getElementById('questionCounter');
   var scoreBadge = document.getElementById('scoreBadge');
@@ -297,6 +298,7 @@
   var questionCategory = document.getElementById('questionCategory');
   var questionText = document.getElementById('questionText');
   var choicesList = document.getElementById('choicesList');
+  var selectionHint = document.getElementById('selectionHint');
   var feedbackBadge = document.getElementById('feedbackBadge');
   var explanationBox = document.getElementById('explanationBox');
   var submitBtn = document.getElementById('submitBtn');
@@ -330,7 +332,7 @@
     Société: document.getElementById('fillSociete')
   };
 
-  if (!progressBar || !progressPercent || !questionCounter || !scoreBadge || !pointsBadge || !streakBadge || !questionCategory || !questionText || !choicesList || !feedbackBadge || !explanationBox || !submitBtn || !nextBtn || !quizCard || !resultsScreen || !progressWrap || !quizMeta || !quizIntro || !startQuizBtn || !restartBtn) {
+  if (!progressBar || !progressTrack || !progressPercent || !questionCounter || !scoreBadge || !pointsBadge || !streakBadge || !questionCategory || !questionText || !choicesList || !selectionHint || !feedbackBadge || !explanationBox || !submitBtn || !nextBtn || !quizCard || !resultsScreen || !progressWrap || !quizMeta || !quizIntro || !startQuizBtn || !restartBtn) {
     return;
   }
 
@@ -437,6 +439,8 @@
     var pct = calculatePercentage(clampedCount, totalQuestions);
     progressBar.style.width = pct + '%';
     progressPercent.textContent = pct + '%';
+    progressTrack.setAttribute('aria-valuenow', String(pct));
+    progressTrack.setAttribute('aria-valuetext', pct + '%');
   }
 
   function updateCategoryRows() {
@@ -526,6 +530,7 @@
         choicesList.querySelectorAll('.quiz-choice-btn').forEach(function (b) { b.classList.remove('selected'); });
         btn.classList.add('selected');
         submitBtn.disabled = false;
+        selectionHint.textContent = 'Réponse ' + letter + ' sélectionnée. Cliquez sur « Valider la réponse ».';
         setFeedback('', '');
       });
       li.appendChild(btn);
@@ -533,6 +538,7 @@
     });
 
     setFeedback('', '');
+    selectionHint.textContent = '';
     explanationBox.textContent = '';
     explanationBox.className = 'quiz-explanation';
     submitBtn.disabled = true;
@@ -553,6 +559,7 @@
     var allBtns = choicesList.querySelectorAll('.quiz-choice-btn');
     allBtns.forEach(function (btn) { btn.disabled = true; });
     submitBtn.style.display = 'none';
+    selectionHint.textContent = '';
 
     if (selectedChoice === q.correct) {
       score += 1;

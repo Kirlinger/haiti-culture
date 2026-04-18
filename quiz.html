@@ -185,6 +185,10 @@
       box-shadow: 0 7px 20px rgba(30, 64, 175, .09);
       background: #f2f7ff;
     }
+    .quiz-choice-btn:focus-visible {
+      outline: 3px solid rgba(37, 99, 235, .35);
+      outline-offset: 2px;
+    }
     .quiz-choice-btn.selected {
       border-color: #2563eb;
       background: #e6efff;
@@ -205,6 +209,13 @@
     }
     .quiz-choice-btn:disabled {
       cursor: default;
+    }
+    .quiz-selection-hint {
+      min-height: 1.2rem;
+      margin: -.2rem 0 .75rem;
+      color: #475569;
+      font-size: .84rem;
+      font-weight: 600;
     }
 
     .quiz-feedback {
@@ -285,6 +296,13 @@
     .quiz-next-btn:hover:not(:disabled) {
       transform: translateY(-1px);
       background: #e0e7ff;
+    }
+    .quiz-submit-btn:focus-visible,
+    .quiz-next-btn:focus-visible,
+    .quiz-restart-btn:focus-visible,
+    .quiz-start-btn:focus-visible {
+      outline: 3px solid rgba(37, 99, 235, .35);
+      outline-offset: 2px;
     }
     .quiz-submit-btn:disabled,
     .quiz-next-btn:disabled {
@@ -635,7 +653,7 @@
             <span id="questionCounter"></span>
             <span id="progressPercent">0%</span>
           </div>
-          <div class="quiz-progress-track">
+          <div class="quiz-progress-track" id="progressTrack" role="progressbar" aria-label="Progression du quiz" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0%">
             <div class="quiz-progress-bar" id="progressBar" style="width:0%"></div>
           </div>
         </div>
@@ -650,6 +668,7 @@
           <span class="quiz-category" id="questionCategory">Histoire</span>
           <p class="quiz-question" id="questionText"></p>
           <ul class="quiz-choices" id="choicesList"></ul>
+          <p class="quiz-selection-hint" id="selectionHint" aria-live="polite"></p>
           <div class="quiz-feedback" id="feedbackBadge" role="status" aria-live="polite"></div>
           <div class="quiz-explanation" id="explanationBox"></div>
           <div class="quiz-actions">
