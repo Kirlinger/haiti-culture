@@ -1,0 +1,100 @@
+{
+  "episodes": [
+    {
+      "id": "toussaint-louverture",
+      "episodeNumber": 1,
+      "title": "Toussaint Louverture, un guide courageux",
+      "summary": "Toussaint était un homme très courageux. Il a aidé son peuple à marcher vers la liberté.",
+      "videoSrc": "media/kids/videos/toussaint-louverture.mp4",
+      "poster": "media/kids/posters/toussaint-louverture.jpg"
+    },
+    {
+      "id": "haiti-liberte",
+      "episodeNumber": 2,
+      "title": "La liberté d'Haïti",
+      "summary": "Le peuple d'Haïti s'est levé ensemble. Avec courage, il a gagné sa liberté.",
+      "videoSrc": "media/kids/videos/haiti-liberte.mp4",
+      "poster": "media/kids/posters/haiti-liberte.jpg"
+    },
+    {
+      "id": "bois-caiman",
+      "episodeNumber": 3,
+      "title": "Bois Caïman, un moment d'union",
+      "summary": "À Bois Caïman, des personnes se sont réunies et ont promis de rester unies.",
+      "videoSrc": "media/kids/videos/bois-caiman.mp4",
+      "poster": "media/kids/posters/bois-caiman.jpg"
+    },
+    {
+      "id": "dessalines",
+      "episodeNumber": 4,
+      "title": "Dessalines, protecteur de la liberté",
+      "summary": "Jean-Jacques Dessalines a aidé Haïti à devenir un pays libre.",
+      "videoSrc": "media/kids/videos/dessalines.mp4",
+      "poster": "media/kids/posters/dessalines.jpg"
+    },
+    {
+      "id": "haiti-monde",
+      "episodeNumber": 5,
+      "title": "Pourquoi Haïti compte pour le monde",
+      "summary": "Haïti a montré au monde que la liberté est possible.",
+      "videoSrc": "media/kids/videos/haiti-monde.mp4",
+      "poster": "media/kids/posters/haiti-monde.jpg"
+    },
+    {
+      "id": "anacaona",
+      "episodeNumber": 6,
+      "title": "Anacaona, une reine brave",
+      "summary": "Anacaona était une reine taïno courageuse et respectée.",
+      "videoSrc": "media/kids/videos/anacaona.mp4",
+      "poster": "media/kids/posters/anacaona.jpg"
+    },
+    {
+      "id": "capois",
+      "episodeNumber": 7,
+      "title": "Capois-la-Mort, le courage en action",
+      "summary": "Capois-la-Mort est connu pour son très grand courage.",
+      "videoSrc": "media/kids/videos/capois.mp4",
+      "poster": "media/kids/posters/capois.jpg"
+    },
+    {
+      "id": "catherine-flon",
+      "episodeNumber": 8,
+      "title": "Catherine Flon et le drapeau",
+      "summary": "Catherine Flon a cousu un drapeau symbole d'union.",
+      "videoSrc": "media/kids/videos/catherine-flon.mp4",
+      "poster": "media/kids/posters/catherine-flon.jpg"
+    },
+    {
+      "id": "petion-bolivar",
+      "episodeNumber": 9,
+      "title": "Haïti aide Bolívar",
+      "summary": "Haïti a aidé Simón Bolívar dans son combat pour la liberté.",
+      "videoSrc": "media/kids/videos/petion-bolivar.mp4",
+      "poster": "media/kids/posters/petion-bolivar.jpg"
+    },
+    {
+      "id": "citadelle",
+      "episodeNumber": 10,
+      "title": "La Citadelle, grand château d'Haïti",
+      "summary": "La Citadelle est un grand symbole de protection et de fierté.",
+      "videoSrc": "media/kids/videos/citadelle.mp4",
+      "poster": "media/kids/posters/citadelle.jpg"
+    },
+    {
+      "id": "culture-rara",
+      "episodeNumber": 11,
+      "title": "Rara, musique du cœur",
+      "summary": "Le rara est une musique joyeuse qui rassemble les gens.",
+      "videoSrc": "media/kids/videos/culture-rara.mp4",
+      "poster": "media/kids/posters/culture-rara.jpg"
+    },
+    {
+      "id": "kreyol",
+      "episodeNumber": 12,
+      "title": "Le créole, langue de tous",
+      "summary": "Le créole haïtien aide tout le monde à se comprendre.",
+      "videoSrc": "media/kids/videos/kreyol.mp4",
+      "poster": "media/kids/posters/kreyol.jpg"
+    }
+  ]
+}

@@ -165,19 +165,20 @@
               <p id="episodeSummary">Clique sur une carte pour lancer l'histoire.</p>
             </div>
 
-            <div class="kids-scene-player" aria-label="Scène de l'épisode">
-              <div class="kids-scene-player__visual" id="sceneVisual">🎬</div>
-              <div class="kids-scene-player__text">
-                <p class="kids-scene-player__meta" id="sceneMeta">Scène 1</p>
-                <h4 id="sceneTitle">Prêt pour l'aventure</h4>
-                <p id="sceneNarration">Appuie sur « Lire la scène » pour commencer.</p>
+            <div class="kids-video-shell" aria-label="Lecteur vidéo réel">
+              <video id="kidsVideoPlayer" class="kids-video-player" controls preload="metadata" playsinline poster="">
+                Votre navigateur ne supporte pas la lecture vidéo.
+              </video>
+              <div class="kids-video-meta">
+                <p class="kids-video-meta__line" id="videoNowPlaying">Aucune vidéo chargée</p>
+                <p class="kids-video-meta__hint">Astuce : clique sur « Regarder » pour lancer la vidéo avec narration audio.</p>
               </div>
             </div>
 
             <div class="kids-player-controls">
-              <button id="playSceneBtn" class="btn kids-btn-primary" type="button">▶ Lire la scène</button>
-              <button id="prevSceneBtn" class="btn kids-btn-soft" type="button">⟵ Scène avant</button>
-              <button id="nextSceneBtn" class="btn kids-btn-soft" type="button">Scène suivante ⟶</button>
+              <button id="playVideoBtn" class="btn kids-btn-primary" type="button">▶ Lire la vidéo</button>
+              <button id="replayVideoBtn" class="btn kids-btn-soft" type="button">↺ Rejouer</button>
+              <button id="pauseVideoBtn" class="btn kids-btn-soft" type="button">⏸ Pause</button>
             </div>
 
             <div class="kids-next-episode">
