@@ -2764,6 +2764,30 @@ ul {
   align-items: start;
 }
 
+.tourism-destination-grid {
+  margin-bottom: 2.5rem;
+}
+
+.tourism-destination-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.tourism-destination-entry {
+  display: flex;
+  flex-direction: column;
+}
+
+.tourism-destination-entry p {
+  margin: 0;
+}
+
+.tourism-destination-entry__cta {
+  margin-top: 0.8rem;
+  align-self: flex-start;
+}
+
 /* Full-bleed editorial intro — no card border, just prose */
 .editorial-intro {
   max-width: 820px;
