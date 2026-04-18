@@ -36,8 +36,7 @@
         <a href="contact.html" data-i18n="navContact">Contact</a>
       </nav>
       <div class="header-actions">
-        <label class="visually-hidden" for="languageSwitcher">Langue</label>
-        <select id="languageSwitcher" class="lang-switcher" aria-label="Sélectionner la langue">
+        <select id="languageSwitcher" class="lang-switcher" aria-label="Langue">
           <option value="fr">FR</option>
           <option value="en">EN</option>
           <option value="ht">HT</option>
@@ -54,9 +53,9 @@
         <h1>Bâtissons une Haïti forte, digne et souveraine.</h1>
         <p>Un espace moderne pour unir les citoyens, mobiliser la diaspora et accélérer des initiatives à impact : éducation, institutions, innovation et solidarité durable.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="join.html">Join</a>
-          <a class="button button-secondary" href="about.html">Learn More</a>
-          <a class="button button-accent" href="movement.html">Support</a>
+          <a class="button button-primary" href="join.html" data-i18n="heroJoin">Nous rejoindre</a>
+          <a class="button button-secondary" href="about.html" data-i18n="heroLearn">En savoir plus</a>
+          <a class="button button-accent" href="movement.html" data-i18n="heroSupport">Soutenir</a>
         </div>
       </div>
     </section>
@@ -150,7 +149,7 @@
                 <input type="email" name="email" autocomplete="email" required />
               </label>
               <input type="hidden" name="recaptchaToken" value="" />
-              <div class="full"><div class="g-recaptcha" data-sitekey="REPLACE_WITH_RECAPTCHA_SITE_KEY"></div></div>
+              <div class="full"><div class="recaptcha-slot" data-recaptcha></div></div>
             </div>
             <button type="submit" class="button button-primary" data-i18n="newsletterBtn">S'abonner</button>
             <p class="form-status" aria-live="polite"></p>
@@ -173,6 +172,5 @@
 
   <script src="js/movement.js" defer></script>
   <script src="js/structured-data.js" defer></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>

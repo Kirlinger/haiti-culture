@@ -13,6 +13,9 @@
       navJoin: 'Nous Rejoindre',
       navContact: 'Contact',
       support: 'Soutenir',
+      heroJoin: 'Nous rejoindre',
+      heroLearn: 'En savoir plus',
+      heroSupport: 'Soutenir',
       newsletterLabel: 'Recevez les dernières nouvelles',
       newsletterBtn: 'S\'abonner'
     },
@@ -24,6 +27,9 @@
       navJoin: 'Join Us',
       navContact: 'Contact',
       support: 'Support',
+      heroJoin: 'Join',
+      heroLearn: 'Learn More',
+      heroSupport: 'Support',
       newsletterLabel: 'Get latest movement updates',
       newsletterBtn: 'Subscribe'
     },
@@ -35,10 +41,15 @@
       navJoin: 'Antre Avèk Nou',
       navContact: 'Kontak',
       support: 'Sipòte',
+      heroJoin: 'Antre Avèk Nou',
+      heroLearn: 'Aprann plis',
+      heroSupport: 'Sipòte',
       newsletterLabel: 'Resevwa dènye nouvèl mouvman an',
       newsletterBtn: 'Abòne'
     }
   };
+
+  var recaptchaReady = false;
 
   function qs(sel, parent) { return (parent || document).querySelector(sel); }
   function qsa(sel, parent) { return Array.prototype.slice.call((parent || document).querySelectorAll(sel)); }
@@ -104,6 +115,50 @@
     qsa('.reveal').forEach(function (el) { io.observe(el); });
   }
 
+  function loadRecaptcha(siteKey) {
+    return new Promise(function (resolve) {
+      if (!siteKey) return resolve(false);
+      if (window.grecaptcha && typeof window.grecaptcha.render === 'function') {
+        recaptchaReady = true;
+        return resolve(true);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
+      script.async = true;
+      script.defer = true;
+      script.onload = function () {
+        recaptchaReady = true;
+        resolve(true);
+      };
+      script.onerror = function () { resolve(false); };
+      document.head.appendChild(script);
+    });
+  }
+
+  async function initRecaptcha() {
+    var slots = qsa('[data-recaptcha]');
+    if (!slots.length) return;
+
+    try {
+      var res = await fetch('/api/recaptcha-config');
+      if (!res.ok) return;
+      var data = await res.json();
+      if (!data || !data.siteKey) return;
+
+      var ok = await loadRecaptcha(data.siteKey);
+      if (!ok || !window.grecaptcha) return;
+
+      slots.forEach(function (slot) {
+        var form = slot.closest('form');
+        if (!form) return;
+        var id = window.grecaptcha.render(slot, { sitekey: data.siteKey });
+        form.setAttribute('data-recaptcha-widget-id', String(id));
+      });
+    } catch (_) {
+      return;
+    }
+  }
+
   function initForms() {
     qsa('[data-api-form]').forEach(function (form) {
       form.addEventListener('submit', async function (event) {
@@ -124,11 +179,18 @@
           return;
         }
 
-        if (window.grecaptcha && form.querySelector('.g-recaptcha')) {
-          var tokenInput = form.querySelector('input[name="recaptchaToken"]');
-          var token = window.grecaptcha.getResponse();
-          if (tokenInput) tokenInput.value = token;
-          payload.recaptchaToken = token;
+        var recaptchaSlot = qs('[data-recaptcha]', form);
+        if (recaptchaSlot) {
+          var widgetIdRaw = form.getAttribute('data-recaptcha-widget-id');
+          if (!recaptchaReady || widgetIdRaw == null || !window.grecaptcha) {
+            if (status) {
+              status.textContent = 'reCAPTCHA non configuré. Définissez RECAPTCHA_SITE_KEY côté serveur.';
+              status.classList.add('error');
+            }
+            return;
+          }
+          var widgetId = Number(widgetIdRaw);
+          var token = window.grecaptcha.getResponse(widgetId);
           if (!token) {
             if (status) {
               status.textContent = 'Veuillez valider le reCAPTCHA avant envoi.';
@@ -136,6 +198,7 @@
             }
             return;
           }
+          payload.recaptchaToken = token;
         }
 
         try {
@@ -146,19 +209,18 @@
             body: JSON.stringify(payload)
           });
 
-          if (!res.ok) {
-            throw new Error('Échec de la requête');
-          }
+          if (!res.ok) throw new Error('Échec de la requête');
 
           form.reset();
-          if (window.grecaptcha && form.querySelector('.g-recaptcha')) {
-            window.grecaptcha.reset();
+          var widgetIdReset = form.getAttribute('data-recaptcha-widget-id');
+          if (widgetIdReset && window.grecaptcha) {
+            window.grecaptcha.reset(Number(widgetIdReset));
           }
           if (status) {
             status.textContent = 'Merci. Votre message a été transmis avec succès.';
             status.classList.add('success');
           }
-        } catch (error) {
+        } catch (_) {
           if (status) {
             status.textContent = 'Une erreur est survenue. Veuillez réessayer.';
             status.classList.add('error');
@@ -176,5 +238,6 @@
     initLanguage();
     initReveal();
     initForms();
+    initRecaptcha();
   });
 })();
