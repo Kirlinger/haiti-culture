@@ -494,7 +494,19 @@
 
       /* Clone the image block into the lightbox */
       if (imgWrap) {
-        imgWrap.innerHTML = '<div class="' + imgClass + '" style="width:100%;min-height:400px;max-height:68vh;display:flex;align-items:center;justify-content:center;border-radius:12px;"></div>';
+        while (imgWrap.firstChild) {
+          imgWrap.removeChild(imgWrap.firstChild);
+        }
+        var safeImg = document.createElement('div');
+        safeImg.className = imgClass;
+        safeImg.style.width = '100%';
+        safeImg.style.minHeight = '400px';
+        safeImg.style.maxHeight = '68vh';
+        safeImg.style.display = 'flex';
+        safeImg.style.alignItems = 'center';
+        safeImg.style.justifyContent = 'center';
+        safeImg.style.borderRadius = '12px';
+        imgWrap.appendChild(safeImg);
       }
       if (captionEl) captionEl.textContent = caption;
 
