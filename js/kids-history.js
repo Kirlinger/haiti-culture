@@ -13,8 +13,8 @@
       cardTitle: 'Toussaint Louverture, un guide courageux',
       question: 'Qui était Toussaint Louverture ?',
       summary: 'Toussaint était un homme très courageux. Il a aidé son peuple à marcher vers la liberté.',
-      videoSrc: 'media/kids/videos/toussaint-louverture.mp4',
-      poster: 'media/kids/posters/toussaint-louverture.jpg',
+      videoSrc: '/media/kids/videos/toussaint-louverture.mp4',
+      poster: '/media/kids/posters/toussaint-louverture.jpg',
       scriptOutline: [
         'Présenter Toussaint avec des mots doux.',
         'Montrer son courage pour la liberté.',
@@ -42,8 +42,8 @@
       cardTitle: 'La liberté d\'Haïti',
       question: 'Comment Haïti est devenue libre ?',
       summary: 'Le peuple d\'Haïti s\'est levé ensemble. Avec courage, il a gagné sa liberté.',
-      videoSrc: 'media/kids/videos/haiti-liberte.mp4',
-      poster: 'media/kids/posters/haiti-liberte.jpg',
+      videoSrc: '/media/kids/videos/haiti-liberte.mp4',
+      poster: '/media/kids/posters/haiti-liberte.jpg',
       scriptOutline: ['Le rêve de liberté.', 'Le courage du peuple.', 'Le grand jour de 1804.', 'La joie partagée.'],
       narrationScript: [
         'Des familles en Haïti rêvaient d\'une vie libre.',
@@ -65,8 +65,8 @@
       cardTitle: 'Bois Caïman, un moment d\'union',
       question: 'Que s\'est-il passé à Bois Caïman ?',
       summary: 'À Bois Caïman, des personnes se sont réunies et ont promis de rester unies.',
-      videoSrc: 'media/kids/videos/bois-caiman.mp4',
-      poster: 'media/kids/posters/bois-caiman.jpg',
+      videoSrc: '/media/kids/videos/bois-caiman.mp4',
+      poster: '/media/kids/posters/bois-caiman.jpg',
       scriptOutline: ['Présenter le lieu.', 'Montrer la réunion.', 'Expliquer la promesse.', 'Conclure avec l\'union.'],
       narrationScript: ['Une nuit, des personnes se sont réunies à Bois Caïman.', 'Elles ont promis de rester unies pour la liberté.'],
       scenes: [
@@ -84,8 +84,8 @@
       cardTitle: 'Dessalines, protecteur de la liberté',
       question: 'Qui était Jean-Jacques Dessalines ?',
       summary: 'Jean-Jacques Dessalines a aidé Haïti à devenir un pays libre.',
-      videoSrc: 'media/kids/videos/dessalines.mp4',
-      poster: 'media/kids/posters/dessalines.jpg'
+      videoSrc: '/media/kids/videos/dessalines.mp4',
+      poster: '/media/kids/posters/dessalines.jpg'
     },
     {
       id: 'haiti-monde',
@@ -94,8 +94,8 @@
       cardTitle: 'Pourquoi Haïti compte pour le monde',
       question: 'Pourquoi Haïti est importante dans l\'histoire du monde ?',
       summary: 'Haïti a montré au monde que la liberté est possible.',
-      videoSrc: 'media/kids/videos/haiti-monde.mp4',
-      poster: 'media/kids/posters/haiti-monde.jpg'
+      videoSrc: '/media/kids/videos/haiti-monde.mp4',
+      poster: '/media/kids/posters/haiti-monde.jpg'
     },
     {
       id: 'anacaona',
@@ -104,8 +104,8 @@
       cardTitle: 'Anacaona, une reine brave',
       question: 'Qui était Anacaona ?',
       summary: 'Anacaona était une reine taïno courageuse et respectée.',
-      videoSrc: 'media/kids/videos/anacaona.mp4',
-      poster: 'media/kids/posters/anacaona.jpg'
+      videoSrc: '/media/kids/videos/anacaona.mp4',
+      poster: '/media/kids/posters/anacaona.jpg'
     },
     {
       id: 'capois',
@@ -114,8 +114,8 @@
       cardTitle: 'Capois-la-Mort, le courage en action',
       question: 'Pourquoi Capois est connu ?',
       summary: 'Capois-la-Mort est connu pour son très grand courage.',
-      videoSrc: 'media/kids/videos/capois.mp4',
-      poster: 'media/kids/posters/capois.jpg'
+      videoSrc: '/media/kids/videos/capois.mp4',
+      poster: '/media/kids/posters/capois.jpg'
     },
     {
       id: 'catherine-flon',
@@ -124,8 +124,8 @@
       cardTitle: 'Catherine Flon et le drapeau',
       question: 'Qui a cousu un drapeau symbole d\'union ?',
       summary: 'Catherine Flon a cousu un drapeau symbole d\'union.',
-      videoSrc: 'media/kids/videos/catherine-flon.mp4',
-      poster: 'media/kids/posters/catherine-flon.jpg'
+      videoSrc: '/media/kids/videos/catherine-flon.mp4',
+      poster: '/media/kids/posters/catherine-flon.jpg'
     },
     {
       id: 'petion-bolivar',
@@ -134,8 +134,8 @@
       cardTitle: 'Haïti aide Bolívar',
       question: 'Comment Haïti a aidé d\'autres peuples ?',
       summary: 'Haïti a aidé Simón Bolívar dans son combat pour la liberté.',
-      videoSrc: 'media/kids/videos/petion-bolivar.mp4',
-      poster: 'media/kids/posters/petion-bolivar.jpg'
+      videoSrc: '/media/kids/videos/petion-bolivar.mp4',
+      poster: '/media/kids/posters/petion-bolivar.jpg'
     },
     {
       id: 'citadelle',
@@ -144,8 +144,8 @@
       cardTitle: 'La Citadelle, grand château d\'Haïti',
       question: 'Qu\'est-ce que la Citadelle ?',
       summary: 'La Citadelle est un grand symbole de protection et de fierté.',
-      videoSrc: 'media/kids/videos/citadelle.mp4',
-      poster: 'media/kids/posters/citadelle.jpg'
+      videoSrc: '/media/kids/videos/citadelle.mp4',
+      poster: '/media/kids/posters/citadelle.jpg'
     },
     {
       id: 'culture-rara',
@@ -154,8 +154,8 @@
       cardTitle: 'Rara, musique du cœur',
       question: 'Qu\'est-ce que le rara ?',
       summary: 'Le rara est une musique joyeuse qui rassemble les gens.',
-      videoSrc: 'media/kids/videos/culture-rara.mp4',
-      poster: 'media/kids/posters/culture-rara.jpg'
+      videoSrc: '/media/kids/videos/culture-rara.mp4',
+      poster: '/media/kids/posters/culture-rara.jpg'
     },
     {
       id: 'kreyol',
@@ -164,8 +164,8 @@
       cardTitle: 'Le créole, langue de tous',
       question: 'Pourquoi le créole est important ?',
       summary: 'Le créole haïtien aide tout le monde à se comprendre.',
-      videoSrc: 'media/kids/videos/kreyol.mp4',
-      poster: 'media/kids/posters/kreyol.jpg'
+      videoSrc: '/media/kids/videos/kreyol.mp4',
+      poster: '/media/kids/posters/kreyol.jpg'
     }
   ];
 
@@ -286,18 +286,30 @@
     }
 
     function playCurrentVideo() {
-      if (!kidsVideoPlayer || !kidsVideoPlayer.src) return;
+      if (!kidsVideoPlayer) return;
+      if (
+        (!kidsVideoPlayer.currentSrc && !kidsVideoPlayer.src) ||
+        (kidsVideoPlayer.src && !kidsVideoPlayer.src.trim())
+      ) {
+        videoNowPlaying.textContent = 'Oups ! Cette vidéo n’est pas prête.';
+        return;
+      }
       kidsVideoPlayer.muted = false;
       var promise = kidsVideoPlayer.play();
       if (promise && typeof promise.catch === 'function') {
-        promise.catch(function () {
-          videoNowPlaying.textContent = 'Clique sur ▶ Lire la vidéo pour lancer le son.';
+        promise.catch(function (error) {
+          console.error('Lecture vidéo impossible:', error);
+          videoNowPlaying.textContent = 'Oups ! Demande de l’aide à un adulte pour lancer la vidéo.';
         });
       }
     }
 
     function loadEpisodeVideo(autoplay) {
       var episode = episodes[selectedEpisodeIndex];
+      if (!episode.videoSrc || !episode.videoSrc.trim()) {
+        videoNowPlaying.textContent = 'Oups ! Cette vidéo n’est pas disponible.';
+        return;
+      }
       kidsVideoPlayer.pause();
       kidsVideoPlayer.src = episode.videoSrc;
       kidsVideoPlayer.poster = episode.poster || '';
@@ -329,7 +341,12 @@
       card.querySelector('.kids-play-episode').addEventListener('click', function () {
         var id = card.getAttribute('data-episode-id');
         var index = episodes.findIndex(function (episode) { return episode.id === id; });
-        if (index !== -1) openEpisode(index, true, true);
+        if (index !== -1) {
+          openEpisode(index, true, true);
+        } else {
+          console.warn('Épisode introuvable:', id);
+          videoNowPlaying.textContent = 'Oups ! Cette vidéo n’est pas disponible. Essaie une autre histoire.';
+        }
       });
     });
 
@@ -348,6 +365,9 @@
 
     nextEpisodeBtn.addEventListener('click', function () {
       var nextIndex = (selectedEpisodeIndex + 1) % episodes.length;
+      if (nextIndex === 0 && selectedEpisodeIndex === episodes.length - 1) {
+        videoNowPlaying.textContent = 'On recommence depuis le début de la série.';
+      }
       openEpisode(nextIndex, true, true);
     });
 
@@ -356,7 +376,9 @@
     });
 
     kidsVideoPlayer.addEventListener('error', function () {
-      videoNowPlaying.textContent = 'Erreur de lecture vidéo. Vérifie les fichiers média.';
+      var mediaError = kidsVideoPlayer.error;
+      console.error('Erreur média HTML5:', mediaError);
+      videoNowPlaying.textContent = 'Oups ! Cette vidéo ne fonctionne pas. Demande de l’aide à un adulte.';
     });
 
     openEpisode(0, false, false);
