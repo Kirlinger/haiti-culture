@@ -33,7 +33,7 @@
     state.dept = state.arrond = state.commune = null;
     panel.style.display = '';
 
-    panelTitle.textContent = '10 Départements — cliquez pour explorer';
+    panelTitle.textContent = '10 Départements, cliquez pour explorer';
 
     var html = '';
     HAITI_ADMIN.forEach(function (dept, idx) {
@@ -64,7 +64,7 @@
     state.arrond = state.commune = null;
     panel.style.display = '';
 
-    panelTitle.textContent = 'Arrondissements du département ' + dept.name + ' — cliquez pour voir les communes';
+    panelTitle.textContent = 'Arrondissements du département ' + dept.name + ', cliquez pour voir les communes';
 
     var html = '';
     dept.arrondissements.forEach(function (arr) {

@@ -607,8 +607,8 @@
     if (percent >= 90) return { msg: 'Félicitations ! Vous êtes un(e) véritable expert(e) d\'Haïti !', sub: 'Un score exceptionnel ! Votre connaissance de l\'histoire, de la culture, de la géographie et de la société haïtiennes est remarquable.' };
     if (percent >= 70) return { msg: 'Très bien ! Vous connaissez bien Haïti.', sub: 'Excellent résultat ! Continuez à explorer les pages thématiques pour aller encore plus loin.' };
     if (percent >= 50) return { msg: 'Pas mal ! Continuez à explorer ce site pour en apprendre davantage.', sub: 'Bonne base de connaissances ! Plongez dans nos sections Histoire, Culture et Géographie pour progresser encore.' };
-    if (percent >= 30) return { msg: 'Vous avez encore beaucoup à découvrir sur Haïti. Ce site est là pour vous !', sub: 'Ne vous découragez pas — chaque page de ce site est une invitation à mieux connaître la première République noire du monde.' };
-    return { msg: 'Ne vous découragez pas — explorez nos pages pour tout apprendre sur Haïti !', sub: 'Le voyage commence ici ! Ce site rassemble des centaines de pages sur l\'histoire, la culture et la société haïtiennes.' };
+    if (percent >= 30) return { msg: 'Vous avez encore beaucoup à découvrir sur Haïti. Ce site est là pour vous !', sub: 'Ne vous découragez pas, chaque page de ce site est une invitation à mieux connaître la première République noire du monde.' };
+    return { msg: 'Ne vous découragez pas, explorez nos pages pour tout apprendre sur Haïti !', sub: 'Le voyage commence ici ! Ce site rassemble des centaines de pages sur l\'histoire, la culture et la société haïtiennes.' };
   }
 
   function showResults() {

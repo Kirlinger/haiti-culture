@@ -163,7 +163,7 @@
     { title: 'Les Lwa', url: 'lwa.html', section: '', keywords: 'lwa loa esprits vodou haïti spirits dieux' },
     // Vodou sections
     { title: 'Origines Africaines du Vodou', url: 'vodou.html#origines', section: 'Vodou', keywords: 'origines afrique fon yoruba kongo dahomey nigeria vodou esclavage saint-domingue' },
-    { title: 'Bondye — Le Créateur', url: 'vodou.html#bondye', section: 'Vodou', keywords: 'bondye dieu créateur suprême vodou cosmologie' },
+    { title: 'Bondye : Le Créateur', url: 'vodou.html#bondye', section: 'Vodou', keywords: 'bondye dieu créateur suprême vodou cosmologie' },
     { title: 'Les Nations du Vodou', url: 'vodou.html#nations', section: 'Vodou', keywords: 'nations rada petro gede nago ibo kongo vodou' },
     { title: 'Nation Rada', url: 'vodou.html#nations', section: 'Vodou', keywords: 'rada lwa doux bienveillant fon dahomey blanc bleu' },
     { title: 'Nation Petro', url: 'vodou.html#nations', section: 'Vodou', keywords: 'petro lwa ardent feu résistance esclavage rouge noir don pedro' },
@@ -172,10 +172,10 @@
     { title: 'Nation Ibo', url: 'vodou.html#nations', section: 'Vodou', keywords: 'ibo igbo mystérieux mélancolique eau résistance' },
     { title: 'Nation Kongo', url: 'vodou.html#nations', section: 'Vodou', keywords: 'kongo simbi magie transformation eau bakongo afrique centrale' },
     { title: 'Cérémonies Vodou', url: 'vodou.html#ceremonies', section: 'Vodou', keywords: 'cérémonies fête kanzo initiation possession transe monte bain rituel' },
-    { title: 'Les Vèvè — Symboles Sacrés', url: 'vodou.html#veve', section: 'Vodou', keywords: 'vèvè veve symboles sacrés vodou art géométrie rituel farine' },
+    { title: 'Les Vèvè : Symboles Sacrés', url: 'vodou.html#veve', section: 'Vodou', keywords: 'vèvè veve symboles sacrés vodou art géométrie rituel farine' },
     { title: 'Tambours et Musique Sacrée', url: 'vodou.html#musique', section: 'Vodou', keywords: 'tambours musique sacrée rada petro rara danse chants cantiques ason' },
     { title: 'Houngan et Mambo', url: 'vodou.html#pretres', section: 'Vodou', keywords: 'houngan mambo prêtre prêtresse hounfor temple ason initiation guérisseur' },
-    { title: 'Bwa Kayiman — La Révolution', url: 'vodou.html#origines', section: 'Vodou', keywords: 'bwa kayiman boukman révolution 1791 liberté cérémonie' },
+    { title: 'Bwa Kayiman : La Révolution', url: 'vodou.html#origines', section: 'Vodou', keywords: 'bwa kayiman boukman révolution 1791 liberté cérémonie' },
     // Lwa individuels
     { title: 'Papa Legba', url: 'lwa.html#legba', section: 'Les Lwa', keywords: 'legba papa carrefour portes communications saint pierre rada bâton vieux' },
     { title: 'Damballah Wedo', url: 'lwa.html#damballah', section: 'Les Lwa', keywords: 'damballah wedo serpent céleste blanc pureté sagesse père rada saint patrick' },
@@ -235,7 +235,7 @@
     { title: 'Département du Nord', url: 'departements.html#nord', section: 'Géographie', keywords: 'nord cap-haïtien citadelle laferrière sans-souci bois caïman milot labadée' },
     { title: 'Département de la Grande-Anse', url: 'departements.html#grande-anse', section: 'Géographie', keywords: 'grande-anse jérémie poètes alexandre dumas cacao hurrican matthew' },
     { title: 'Géographie Physique d\'Haïti', url: 'geographie.html', section: 'Géographie', keywords: 'géographie physique haïti montagnes massif selle hotte nord relief plaines artibonite cul-de-sac côtes golfe gonâve péninsules rivières lacs climat cyclones géologie failles tectoniques' },
-    { title: 'Massif de la Selle — Point Culminant', url: 'geographie.html#massif-de-la-selle', section: 'Géographie', keywords: 'massif selle pic la selle 2680 mètres sommet altitude forêt pins haïti' },
+    { title: 'Massif de la Selle : Point Culminant', url: 'geographie.html#massif-de-la-selle', section: 'Géographie', keywords: 'massif selle pic la selle 2680 mètres sommet altitude forêt pins haïti' },
     { title: 'Environnement d\'Haïti', url: 'environnement.html', section: 'Géographie', keywords: 'environnement haïti déforestation forêts biodiversité reboisement charbon bois erosion sols eau parc macaya mangroves étang saumâtre espèces endémiques conservation écologie' },
     { title: 'Catastrophes Naturelles en Haïti', url: 'catastrophes-naturelles.html', section: 'Géographie', keywords: 'catastrophes naturelles haïti séisme 2010 2021 ouragan matthew flora jeanne sandy inondations glissements terrain sécheresse résilience protection civile konbit solidarité' },
     { title: 'Séisme du 12 janvier 2010', url: 'catastrophes-naturelles.html#seisme-2010', section: 'Géographie', keywords: 'séisme 2010 port-au-prince magnitude 7.0 220000 morts reconstruction choléra MINUSTAH faille enriquillo' },
@@ -244,17 +244,17 @@
     { title: 'La Langue Créole Haïtienne', url: 'creole.html', section: 'Culture', keywords: 'créole kreyòl haïtien langue formation africaine grammaire tma marqueurs proverbes degraf valdman ipa phonologie' },
     { title: 'Proverbes Haïtiens', url: 'creole.html#proverbes', section: 'Culture', keywords: 'proverbes haïtiens dèyè mòn gen mòn sak vid pa kanpe bay kou bliye konstitisyon se papye' },
     { title: 'Les Symboles Nationaux d\'Haïti', url: 'symboles-nationaux.html', section: 'Culture', keywords: 'symboles nationaux drapeau armoiries hymne dessalinienne catherine flon arcahaie bleu rouge liberté lhérisson geffrard palmiste' },
-    { title: 'La Dessalinienne — Hymne National', url: 'symboles-nationaux.html#hymne', section: 'Culture', keywords: 'dessalinienne hymne national lhérisson geffrard ancêtres pays marchons unis' },
+    { title: 'La Dessalinienne : Hymne National', url: 'symboles-nationaux.html#hymne', section: 'Culture', keywords: 'dessalinienne hymne national lhérisson geffrard ancêtres pays marchons unis' },
     { title: 'Glossaire du Créole Haïtien', url: 'glossaire-creole.html', section: 'Culture', keywords: 'glossaire créole vocabulaire mots expressions traduction français anglais salutations bonjou mèsi madan sara konbit sòl lakou' },
     // Nouvelles pages — Portail
-    { title: 'Quiz — Connaissez-vous Haïti ?', url: 'quiz.html', section: 'Portail', keywords: 'quiz haïti connaissances questions histoire culture géographie société test éducation interactif' },
+    { title: 'Quiz : Connaissez-vous Haïti ?', url: 'quiz.html', section: 'Portail', keywords: 'quiz haïti connaissances questions histoire culture géographie société test éducation interactif' },
     // Nouvelles pages — Batch 3
     { title: 'La Déclaration d\'Indépendance de 1804', url: 'declaration-independance.html', section: 'Histoire', keywords: 'déclaration indépendance 1804 gonaïves boisrond-tonnerre dessalines texte intégral analyse document fondateur liberté haïti' },
     { title: 'Le Marronnage en Haïti', url: 'marronnage.html', section: 'Histoire', keywords: 'marronnage marrons esclaves fugitifs résistance makandal montagnes communautés liberté révolution fouchard fick bois caïman' },
-    { title: 'Le Tap-Tap — L\'Art Mobile d\'Haïti', url: 'tap-tap.html', section: 'Culture', keywords: 'tap-tap transport art mobile peinture bus camion couleurs religion vodou créativité populaire haïti brooklyn smithsonian' },
+    { title: 'Le Tap-Tap : L\'Art Mobile d\'Haïti', url: 'tap-tap.html', section: 'Culture', keywords: 'tap-tap transport art mobile peinture bus camion couleurs religion vodou créativité populaire haïti brooklyn smithsonian' },
     { title: 'Les Origines Africaines d\'Haïti', url: 'origines-africaines.html', section: 'Histoire', keywords: 'origines africaines fon ewe yoruba kongo bantou igbo wolof dahomey bénin nigeria angola sénégal ginen vodou créole thornton fouchard traite négrière' },
-    { title: 'Les Drapo Vodou — Art Sacré', url: 'drapo-vodou.html', section: 'Culture', keywords: 'drapo vodou drapeaux vodou sequins perles vèvè lwa reine drapo bazile jean-louis oleyant art sacré cérémonie brooklyn smithsonian' },
-    { title: 'Jacmel — Capitale Culturelle du Sud', url: 'jacmel.html', section: 'Culture', keywords: 'jacmel ville art carnaval papier-mâché préfète duffaut gingerbread architecture café jaficine festival film cinéma bolívar pétion sud-est' },
+    { title: 'Les Drapo Vodou : Art Sacré', url: 'drapo-vodou.html', section: 'Culture', keywords: 'drapo vodou drapeaux vodou sequins perles vèvè lwa reine drapo bazile jean-louis oleyant art sacré cérémonie brooklyn smithsonian' },
+    { title: 'Jacmel : Capitale Culturelle du Sud', url: 'jacmel.html', section: 'Culture', keywords: 'jacmel ville art carnaval papier-mâché préfète duffaut gingerbread architecture café jaficine festival film cinéma bolívar pétion sud-est' },
     // Nouvelles pages — créées pour corriger liens manquants
     { title: 'Les Artistes Visuels Haïtiens', url: 'artistes.html', section: 'Culture', keywords: 'artistes visuels peinture sculpture hyppolite obin bigaud benoit bazile liautaud croix-des-bouquets metal centre art naïf vodou' },
     { title: 'La Littérature Haïtienne', url: 'litterature.html', section: 'Culture', keywords: 'littérature haïtienne roumain gouverneurs rosée frankétienne danticat durand price-mars indigénistes négritude créole spiralisme diaspora' },
@@ -264,8 +264,8 @@
     { title: 'L\'Économie Informelle en Haïti', url: 'economie-informelle.html', section: 'Enjeux', keywords: 'économie informelle haïti madan sara sol tontine marchés transferts diaspora remittances formalisation' },
     { title: 'L\'Éducation en Haïti', url: 'education-haiti.html', section: 'Société', keywords: 'éducation haïti écoles privées réforme bernard créole lycée pétion université analphabétisme diaspora bourses' },
     { title: 'Femmes d\'Haïti', url: 'femmes-haiti.html', section: 'Société', keywords: 'femmes haïti histoire rôle révolution paysannes madan sara politique droit égalité' },
-    { title: 'Fort-Liberté — Cité Coloniale du Nord-Est', url: 'fort-liberte.html', section: 'Tourisme', keywords: 'fort-liberté fort-dauphin nord-est architecture coloniale fortification baie mangrove révolution dessalines massacre' },
-    { title: 'Miragoâne — Capitale des Nippes', url: 'miragoane.html', section: 'Tourisme', keywords: 'miragoâne nippes péninsule méridionale café bois port déforestation séisme 2021 cacao' },
+    { title: 'Fort-Liberté : Cité Coloniale du Nord-Est', url: 'fort-liberte.html', section: 'Tourisme', keywords: 'fort-liberté fort-dauphin nord-est architecture coloniale fortification baie mangrove révolution dessalines massacre' },
+    { title: 'Miragoâne : Capitale des Nippes', url: 'miragoane.html', section: 'Tourisme', keywords: 'miragoâne nippes péninsule méridionale café bois port déforestation séisme 2021 cacao' },
   ];
 
   function initSearch() {
