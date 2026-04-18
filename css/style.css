@@ -171,6 +171,18 @@ ul {
   font-size: 14px;
 }
 
+.btn-outline-blue {
+  background: transparent;
+  color: var(--blue);
+  border-color: var(--blue);
+  padding: 10px 22px;
+}
+
+.btn-outline-blue:hover {
+  background: rgba(0, 32, 159, 0.08);
+  transform: translateY(-2px);
+}
+
 /* ── Header / Navbar ────────────────────────────────── */
 .site-header {
   position: sticky;
