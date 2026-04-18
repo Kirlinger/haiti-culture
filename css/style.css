@@ -3314,6 +3314,7 @@ pre, code {
 @media (max-width: 600px) {
   .timeline::before { left: 14px; }
   .timeline-item { padding-left: 44px; }
+  /* Marker dot is defined on .timeline-item::after in base timeline styles. */
   .timeline-item::after {
     left: 14px;
     width: 16px;
