@@ -398,6 +398,33 @@
     sw.remove();
   }
 
+  /* ── Image fallback sources ──────────────────────────── */
+  function initImageFallbacks() {
+    var images = document.querySelectorAll('img[data-fallback-srcs]');
+    if (!images.length) return;
+
+    images.forEach(function (img) {
+      var fallbackSrcs = (img.dataset.fallbackSrcs || '')
+        .split(',')
+        .map(function (src) { return src.trim(); })
+        .filter(Boolean);
+
+      if (!fallbackSrcs.length) return;
+      var fallbackIndex = 0;
+
+      function handleError() {
+        if (fallbackIndex >= fallbackSrcs.length) {
+          img.removeEventListener('error', handleError);
+          return;
+        }
+        img.src = fallbackSrcs[fallbackIndex];
+        fallbackIndex += 1;
+      }
+
+      img.addEventListener('error', handleError);
+    });
+  }
+
   /* ── Init ───────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', function () {
     initMobileNav();
@@ -410,5 +437,6 @@
     initSmoothScroll();
     initDropdowns();
     initLangSwitcher();
+    initImageFallbacks();
   });
 })();
